@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nije-kori-7.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}@media (max-width:768px){section.chapters-section .row{margin-left:0px !important;margin-right:0px !important}.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>বৃত্তস্থ কোণ ও কেন্দ্রস্থ কোণের প্রাথমিক ধারণা:</strong><br>
+        ১) <strong>বৃত্তস্থ কোণ (Inscribed Angle):</strong> বৃত্তের পরিধির ওপর যেকোনো বিন্দুতে একটি বৃত্তচাপ দ্বারা উৎপন্ন কোণ।<br>
+        ২) <strong>কেন্দ্রস্থ কোণ (Central Angle):</strong> বৃত্তের কেন্দ্রে একটি বৃত্তচাপ দ্বারা উৎপন্ন কোণ।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমি একটি বৃত্ত আঁকি এবং ওই বৃত্তে দুটি বৃত্তস্থ কোণ আঁকি যারা (a) একই বৃত্তচাপের দ্বারা গঠিত (b) একই বৃত্তচাপের দ্বারা গঠিত নয়।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">চিত্র ও ব্যাখ্যা</span>
+            
+            <div class="row text-center mt-3">
+                <div class="col-md-6 mb-4">
+                    <p class="fw-bold mb-2">(a) একই বৃত্তচাপের দ্বারা গঠিত বৃত্তস্থ কোণ</p>
+                    <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+                       <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+                       <!-- Arc AB at bottom -->
+                       <circle cx="80" cy="80" r="70" stroke="#E11D48" stroke-width="3" fill="none" stroke-dasharray="80 300" stroke-dashoffset="130"></circle>
+                       <!-- Points A, B, C, D -->
+                       <line x1="30" y1="130" x2="60" y2="15" stroke="#10B981" stroke-width="1.5"></line> <!-- AC -->
+                       <line x1="130" y1="130" x2="60" y2="15" stroke="#10B981" stroke-width="1.5"></line> <!-- BC -->
+                       
+                       <line x1="30" y1="130" x2="110" y2="15" stroke="#F59E0B" stroke-width="1.5"></line> <!-- AD -->
+                       <line x1="130" y1="130" x2="110" y2="15" stroke="#F59E0B" stroke-width="1.5"></line> <!-- BD -->
+                       
+                       <circle cx="30" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="130" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="60" cy="15" r="3" fill="#1F2937"></circle>
+                       <circle cx="110" cy="15" r="3" fill="#1F2937"></circle>
+                       
+                       <text x="15" y="145" font-size="14" font-weight="bold">A</text>
+                       <text x="135" y="145" font-size="14" font-weight="bold">B</text>
+                       <text x="45" y="25" font-size="14" font-weight="bold">C</text>
+                       <text x="120" y="25" font-size="14" font-weight="bold">D</text>
+                    </svg>
+                    <p class="small text-muted mt-2">উপরের চিত্রে $\angle ACB$ এবং $\angle ADB$ হলো দুটি বৃত্তস্থ কোণ, যারা একই বৃত্তচাপ AB-এর দ্বারা গঠিত।</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p class="fw-bold mb-2">(b) একই বৃত্তচাপের দ্বারা গঠিত নয় এমন বৃত্তস্থ কোণ</p>
+                    <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+                       <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+                       <!-- Arc AB and Arc PQ -->
+                       <circle cx="80" cy="80" r="70" stroke="#E11D48" stroke-width="3" fill="none" stroke-dasharray="60 300" stroke-dashoffset="130"></circle>
+                       <circle cx="80" cy="80" r="70" stroke="#0EA5E9" stroke-width="3" fill="none" stroke-dasharray="60 300" stroke-dashoffset="-30"></circle>
+                       
+                       <line x1="30" y1="130" x2="80" y2="10" stroke="#10B981" stroke-width="1.5"></line> <!-- AC -->
+                       <line x1="95" y1="148" x2="80" y2="10" stroke="#10B981" stroke-width="1.5"></line> <!-- BC -->
+                       
+                       <line x1="140" y1="40" x2="20" y2="40" stroke="#F59E0B" stroke-width="1.5"></line> <!-- PR -->
+                       <line x1="140" y1="115" x2="20" y2="40" stroke="#F59E0B" stroke-width="1.5"></line> <!-- QR -->
+                       
+                       <circle cx="30" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="95" cy="148" r="3" fill="#1F2937"></circle>
+                       <circle cx="80" cy="10" r="3" fill="#1F2937"></circle>
+                       <circle cx="140" cy="40" r="3" fill="#1F2937"></circle>
+                       <circle cx="140" cy="115" r="3" fill="#1F2937"></circle>
+                       <circle cx="20" cy="40" r="3" fill="#1F2937"></circle>
+                       
+                       <text x="15" y="145" font-size="12" font-weight="bold">A</text>
+                       <text x="105" y="155" font-size="12" font-weight="bold">B</text>
+                       <text x="85" y="20" font-size="12" font-weight="bold">C</text>
+                       <text x="150" y="35" font-size="12" font-weight="bold">P</text>
+                       <text x="150" y="130" font-size="12" font-weight="bold">Q</text>
+                       <text x="5" y="35" font-size="12" font-weight="bold">R</text>
+                    </svg>
+                    <p class="small text-muted mt-2">উপরের চিত্রে $\angle ACB$ কোণটি AB বৃত্তচাপের ওপর এবং $\angle PRQ$ কোণটি PQ বৃত্তচাপের ওপর অবস্থিত। এরা একই বৃত্তচাপের দ্বারা গঠিত নয়।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. আমি O কেন্দ্রীয় বৃত্তে একটি বৃত্তস্থ কোণ ও একটি কেন্দ্রস্থ কোণ আঁকি যারা (a) একই বৃত্তচাপের দ্বারা গঠিত (b) একই বৃত্তচাপের দ্বারা গঠিত নয়।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">চিত্র ও ব্যাখ্যা</span>
+            
+            <div class="row text-center mt-3">
+                <div class="col-md-6 mb-4">
+                    <p class="fw-bold mb-2">(a) একই বৃত্তচাপের দ্বারা গঠিত</p>
+                    <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+                       <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+                       <circle cx="80" cy="80" r="70" stroke="#E11D48" stroke-width="3" fill="none" stroke-dasharray="80 300" stroke-dashoffset="130"></circle>
+                       
+                       <line x1="30" y1="130" x2="80" y2="80" stroke="#3B82F6" stroke-width="1.5"></line> <!-- OA -->
+                       <line x1="130" y1="130" x2="80" y2="80" stroke="#3B82F6" stroke-width="1.5"></line> <!-- OB -->
+                       <line x1="30" y1="130" x2="80" y2="10" stroke="#10B981" stroke-width="1.5"></line> <!-- AC -->
+                       <line x1="130" y1="130" x2="80" y2="10" stroke="#10B981" stroke-width="1.5"></line> <!-- BC -->
+                       
+                       <circle cx="80" cy="80" r="3" fill="#1F2937"></circle>
+                       <circle cx="30" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="130" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="80" cy="10" r="3" fill="#1F2937"></circle>
+                       
+                       <text x="75" y="95" font-size="14" font-weight="bold">O</text>
+                       <text x="15" y="145" font-size="14" font-weight="bold">A</text>
+                       <text x="135" y="145" font-size="14" font-weight="bold">B</text>
+                       <text x="85" y="25" font-size="14" font-weight="bold">C</text>
+                    </svg>
+                    <p class="small text-muted mt-2">AB বৃত্তচাপের দ্বারা গঠিত কেন্দ্রস্থ কোণ $\angle AOB$ এবং পরিধিস্থ (বৃত্তস্থ) কোণ $\angle ACB$।</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p class="fw-bold mb-2">(b) একই বৃত্তচাপের দ্বারা গঠিত নয়</p>
+                    <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+                       <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+                       <circle cx="80" cy="80" r="70" stroke="#E11D48" stroke-width="3" fill="none" stroke-dasharray="60 300" stroke-dashoffset="130"></circle>
+                       <circle cx="80" cy="80" r="70" stroke="#0EA5E9" stroke-width="3" fill="none" stroke-dasharray="60 300" stroke-dashoffset="-30"></circle>
+                       
+                       <!-- Central Angle AOB on arc AB -->
+                       <line x1="30" y1="130" x2="80" y2="80" stroke="#3B82F6" stroke-width="1.5"></line>
+                       <line x1="95" y1="148" x2="80" y2="80" stroke="#3B82F6" stroke-width="1.5"></line>
+                       
+                       <!-- Inscribed Angle PRQ on arc PQ -->
+                       <line x1="140" y1="40" x2="20" y2="40" stroke="#10B981" stroke-width="1.5"></line>
+                       <line x1="140" y1="115" x2="20" y2="40" stroke="#10B981" stroke-width="1.5"></line>
+                       
+                       <circle cx="80" cy="80" r="3" fill="#1F2937"></circle>
+                       <circle cx="30" cy="130" r="3" fill="#1F2937"></circle>
+                       <circle cx="95" cy="148" r="3" fill="#1F2937"></circle>
+                       <circle cx="140" cy="40" r="3" fill="#1F2937"></circle>
+                       <circle cx="140" cy="115" r="3" fill="#1F2937"></circle>
+                       <circle cx="20" cy="40" r="3" fill="#1F2937"></circle>
+                       
+                       <text x="75" y="95" font-size="12" font-weight="bold">O</text>
+                       <text x="15" y="145" font-size="12" font-weight="bold">A</text>
+                       <text x="105" y="155" font-size="12" font-weight="bold">B</text>
+                       <text x="150" y="35" font-size="12" font-weight="bold">P</text>
+                       <text x="150" y="130" font-size="12" font-weight="bold">Q</text>
+                       <text x="5" y="35" font-size="12" font-weight="bold">R</text>
+                    </svg>
+                    <p class="small text-muted mt-2">এখানে কেন্দ্রস্থ কোণ $\angle AOB$ গঠিত হয়েছে AB বৃত্তচাপের ওপর এবং বৃত্তস্থ কোণ $\angle PRQ$ গঠিত হয়েছে PQ বৃত্তচাপের ওপর।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. ছবিগুলি দেখে উত্তর দিই : (O বৃত্তের কেন্দ্র)</h4>
+        
+        <h5 class="sub-question text-primary">(a) নিচের শূন্যস্থানগুলি পূরণ করি:</h5>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (i)</span>
+            <p>(i) নং চিত্রে $\angle AOB$ কোণটি APB বৃত্তচাপের দ্বারা গঠিত <span class="blank-fill">কেন্দ্রস্থ</span> কোণ।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> $\angle AOB$ কোণটির শীর্ষবিন্দু বৃত্তের কেন্দ্রে (O) অবস্থিত।</p>
+        </div>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (ii)</span>
+            <p>(ii) নং চিত্রে <span class="blank-fill">$\angle APB$</span> কোণটি AQB বৃত্তচাপের দ্বারা গঠিত বৃত্তস্থ কোণ।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> AQB বৃত্তচাপের দুই প্রান্তবিন্দু A ও B থেকে পরিধির ওপর P বিন্দুতে $\angle APB$ কোণটি তৈরি হয়েছে।</p>
+        </div>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (iii)</span>
+            <p>(iii) নং চিত্রে $\angle AQB$ (বইয়ে $\angle ADB$ লেখা আছে যা ভুল) কোণটি <span class="blank-fill">ADB</span> বৃত্তচাপের দ্বারা গঠিত <span class="blank-fill">বৃত্তস্থ</span> কোণ।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> চিত্রে পরিধির ওপর Q বিন্দুতে $\angle AQB$ উৎপন্ন হয়েছে, যা নিচের ADB বৃত্তচাপের দ্বারা গঠিত।</p>
+        </div>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (iv)</span>
+            <p>(iv) নং চিত্রে $\angle ACB$ কোণটি <span class="blank-fill">APB</span> বৃত্তচাপের দ্বারা গঠিত বৃত্তস্থ কোণ <span class="blank-fill">বটে</span>।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> C বিন্দুটি বৃত্তের পরিধির ওপর অবস্থিত হওয়ায় $\angle ACB$ নিশ্চিতভাবে একটি বৃত্তস্থ কোণ।</p>
+        </div>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (v)</span>
+            <p>(v) নং চিত্রে <span class="blank-fill">$\angle ADB$</span> কোণটি <span class="blank-fill">APB</span> বৃত্তচাপের দ্বারা গঠিত বৃত্তস্থ কোণ নয়।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> D বিন্দুটি বৃত্তের পরিধির ওপর অবস্থিত নয়, বরং বৃত্তের ভেতরে অবস্থিত। তাই এটি বৃত্তস্থ কোণ হতে পারে না।</p>
+        </div>
+
+        <hr class="my-4">
+
+        <h5 class="sub-question text-primary">(b) দুই ছাত্রীর মন্তব্য যাচাই:</h5>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (i)</span>
+            <p>(i) নং চিত্রের কোণদুটি <span class="blank-fill">$\angle ADB$</span> এবং <span class="blank-fill">$\angle ACB$</span> একই বৃত্তাংশস্থ কোণ। এরা ADCB বৃত্তাংশে অবস্থিত।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> দুটি কোণই একই বৃত্তচাপ AB-এর ওপর দণ্ডায়মান এবং পরিধির ওপর অবস্থিত।</p>
+        </div>
+
+        <div class="solution-box mb-3">
+            <span class="sol-badge">সমাধান (ii)</span>
+            <p>(ii) নং চিত্রের <span class="blank-fill">$\angle ADB$</span> ও <span class="blank-fill">$\angle AOB$</span> কোণদুটি বৃত্তাংশস্থ কোণ <span class="blank-fill">নয়</span>।</p>
+            <p class="small text-muted"><strong>কারণ:</strong> $\angle AOB$ হলো কেন্দ্রস্থ কোণ (Central angle), কারণ এর শীর্ষবিন্দু কেন্দ্রে। আর $\angle ADB$ হলো বৃত্তস্থ কোণ। এরা একই বৃত্তাংশস্থ কোণ নয়।</p>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

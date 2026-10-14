@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-9.3</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মান নির্ণয়ের প্রয়োজনীয় সূত্র (Important Formulas):</strong><br>
+        ১) $a^2 + b^2 = (a+b)^2 - 2ab$<br>
+        ২) $a^3 + b^3 = (a+b)^3 - 3ab(a+b)$<br>
+        ৩) $a^3 - b^3 = (a-b)^3 + 3ab(a-b)$<br>
+        ৪) $x = \frac{\sqrt{a}+\sqrt{b}}{\sqrt{a}-\sqrt{b}}$ এবং $y = \frac{\sqrt{a}-\sqrt{b}}{\sqrt{a}+\sqrt{b}}$ হলে $x+y = \frac{2(a+b)}{a-b}$ এবং $xy = 1$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. মান নির্ণয় ও প্রমাণ করি:</h4>
+        
+        <span class="sub-question">(a) $m + \displaystyle\frac{1}{m} = \sqrt{3}$ হলে, (i) $m^2 + \displaystyle\frac{1}{m^2}$ এবং (ii) $m^3 + \displaystyle\frac{1}{m^3}$ -এদের সরলতম মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (i)</span>
+            <p>প্রদত্ত, $m + \displaystyle\frac{1}{m} = \sqrt{3}$</p>
+            \[
+\begin{array}{l}
+m^2 + \frac{1}{m^2} = \left(m + \frac{1}{m}\right)^2 - 2 \cdot m \cdot \frac{1}{m} \\
+= (\sqrt{3})^2 - 2 \\
+= 3 - 2 \\
+= 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 1</div>
+            
+            <hr>
+            
+            <span class="sol-badge">সমাধান (ii)</span>
+            \[
+\begin{array}{l}
+m^3 + \frac{1}{m^3} = \left(m + \frac{1}{m}\right)^3 - 3 \cdot m \cdot \frac{1}{m} \left(m + \frac{1}{m}\right) \\
+= (\sqrt{3})^3 - 3(\sqrt{3}) \\
+= 3\sqrt{3} - 3\sqrt{3} \\
+= 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+
+        <span class="sub-question">(b) দেখাই যে, $\displaystyle\frac{\sqrt{5}+\sqrt{3}}{\sqrt{5}-\sqrt{3}} - \frac{\sqrt{5}-\sqrt{3}}{\sqrt{5}+\sqrt{3}} = 2\sqrt{15}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            <p>লসাগু করে বিয়োগ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(\sqrt{5}+\sqrt{3})^2 - (\sqrt{5}-\sqrt{3})^2}{(\sqrt{5}-\sqrt{3})(\sqrt{5}+\sqrt{3})}
+\end{array}
+\]
+            <p>আমরা জানি, $(a+b)^2 - (a-b)^2 = 4ab$ এবং হরে $a^2 - b^2$ সূত্র প্রয়োগ হবে:</p>
+            \[
+\begin{array}{l}
+= \frac{4 \cdot \sqrt{5} \cdot \sqrt{3}}{(\sqrt{5})^2 - (\sqrt{3})^2} \\
+= \frac{4\sqrt{15}}{5 - 3} \\
+= \frac{4\sqrt{15}}{2} \\
+= 2\sqrt{15}
+\end{array}
+\]
+            <p>যেহেতু বামপক্ষ = ডানপক্ষ ($2\sqrt{15}$), তাই প্রমাণিত।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. সরল করি :</h4>
+
+        <span class="sub-question">(a) $\displaystyle\frac{\sqrt{2}(2+\sqrt{3})}{\sqrt{3}(\sqrt{3}+1)} - \frac{\sqrt{2}(2-\sqrt{3})}{\sqrt{3}(\sqrt{3}-1)}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পদ দুটি থেকে $\displaystyle\frac{\sqrt{2}}{\sqrt{3}}$ কমন নিই:</p>
+            \[
+\begin{array}{l}
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{2+\sqrt{3}}{\sqrt{3}+1} - \frac{2-\sqrt{3}}{\sqrt{3}-1} \right]
+\end{array}
+\]
+            <p>বন্ধনী অংশের লসাগু করি:</p>
+            \[
+\begin{array}{l}
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{(2+\sqrt{3})(\sqrt{3}-1) - (2-\sqrt{3})(\sqrt{3}+1)}{(\sqrt{3}+1)(\sqrt{3}-1)} \right] \\
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{(2\sqrt{3}-2+3-\sqrt{3}) - (2\sqrt{3}+2-3-\sqrt{3})}{(\sqrt{3})^2 - 1^2} \right] \\
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{(\sqrt{3}+1) - (\sqrt{3}-1)}{3 - 1} \right] \\
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{\sqrt{3}+1-\sqrt{3}+1}{2} \right] \\
+= \frac{\sqrt{2}}{\sqrt{3}} \left[ \frac{2}{2} \right] \\
+= \frac{\sqrt{2}}{\sqrt{3}}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করতে লব ও হরকে $\sqrt{3}$ দিয়ে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{\sqrt{2} \times \sqrt{3}}{\sqrt{3} \times \sqrt{3}} = \frac{\sqrt{6}}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{\sqrt{6}}{3}$</div>
+        </div>
+
+        <span class="sub-question">(b) $\displaystyle\frac{3\sqrt{7}}{\sqrt{5}+\sqrt{2}} - \frac{5\sqrt{5}}{\sqrt{2}+\sqrt{7}} + \frac{2\sqrt{2}}{\sqrt{7}+\sqrt{5}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রতিটি পদের আলাদাভাবে হরের করণী নিরসন করি:</p>
+            <p>১ম পদ: $\displaystyle \frac{3\sqrt{7}(\sqrt{5}-\sqrt{2})}{(\sqrt{5}+\sqrt{2})(\sqrt{5}-\sqrt{2})} = \frac{3\sqrt{7}(\sqrt{5}-\sqrt{2})}{5 - 2} = \frac{3(\sqrt{35}-\sqrt{14})}{3} = \sqrt{35} - \sqrt{14}$</p>
+            
+            <p>২য় পদ: $\displaystyle \frac{5\sqrt{5}(\sqrt{7}-\sqrt{2})}{(\sqrt{7}+\sqrt{2})(\sqrt{7}-\sqrt{2})} = \frac{5\sqrt{5}(\sqrt{7}-\sqrt{2})}{7 - 2} = \frac{5(\sqrt{35}-\sqrt{10})}{5} = \sqrt{35} - \sqrt{10}$</p>
+            
+            <p>৩য় পদ: $\displaystyle \frac{2\sqrt{2}(\sqrt{7}-\sqrt{5})}{(\sqrt{7}+\sqrt{5})(\sqrt{7}-\sqrt{5})} = \frac{2\sqrt{2}(\sqrt{7}-\sqrt{5})}{7 - 5} = \frac{2(\sqrt{14}-\sqrt{10})}{2} = \sqrt{14} - \sqrt{10}$</p>
+            
+            <p>মানগুলি বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= (\sqrt{35} - \sqrt{14}) - (\sqrt{35} - \sqrt{10}) + (\sqrt{14} - \sqrt{10}) \\
+= \sqrt{35} - \sqrt{14} - \sqrt{35} + \sqrt{10} + \sqrt{14} - \sqrt{10} \\
+= 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+
+        <span class="sub-question">(c) $\displaystyle\frac{4\sqrt{3}}{2-\sqrt{2}} - \frac{30}{4\sqrt{3}-\sqrt{18}} - \frac{\sqrt{18}}{3-\sqrt{12}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে করণীগুলিকে সরল করি: $\sqrt{18} = 3\sqrt{2}$ এবং $\sqrt{12} = 2\sqrt{3}$।</p>
+            <p>প্রতিটি পদের হরের করণী নিরসন করি:</p>
+            
+            <p>১ম পদ: $\displaystyle \frac{4\sqrt{3}(2+\sqrt{2})}{(2-\sqrt{2})(2+\sqrt{2})} = \frac{8\sqrt{3}+4\sqrt{6}}{4 - 2} = \frac{2(4\sqrt{3}+2\sqrt{6})}{2} = 4\sqrt{3} + 2\sqrt{6}$</p>
+            
+            <p>২য় পদ: $\displaystyle \frac{30}{4\sqrt{3}-3\sqrt{2}} = \frac{30(4\sqrt{3}+3\sqrt{2})}{(4\sqrt{3})^2 - (3\sqrt{2})^2} = \frac{30(4\sqrt{3}+3\sqrt{2})}{48 - 18} = \frac{30(4\sqrt{3}+3\sqrt{2})}{30} = 4\sqrt{3} + 3\sqrt{2}$</p>
+            
+            <p>৩য় পদ: $\displaystyle \frac{3\sqrt{2}}{3-2\sqrt{3}} = \frac{3\sqrt{2}(3+2\sqrt{3})}{3^2 - (2\sqrt{3})^2} = \frac{3\sqrt{2}(3+2\sqrt{3})}{9 - 12} = \frac{9\sqrt{2}+6\sqrt{6}}{-3} = -3\sqrt{2} - 2\sqrt{6}$</p>
+            
+            <p>মানগুলি বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= (4\sqrt{3} + 2\sqrt{6}) - (4\sqrt{3} + 3\sqrt{2}) - (-3\sqrt{2} - 2\sqrt{6}) \\
+= 4\sqrt{3} + 2\sqrt{6} - 4\sqrt{3} - 3\sqrt{2} + 3\sqrt{2} + 2\sqrt{6} \\
+= 4\sqrt{6}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $4\sqrt{6}$</div>
+        </div>
+
+        <span class="sub-question">(d) $\displaystyle\frac{3\sqrt{2}}{\sqrt{3}+\sqrt{6}} - \frac{4\sqrt{3}}{\sqrt{6}+\sqrt{2}} + \frac{\sqrt{6}}{\sqrt{2}+\sqrt{3}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রতিটি পদের হরের করণী নিরসন করি (বড়ো করণীটিকে আগে রেখে সুবিধা হয়, যেমন $\sqrt{6}+\sqrt{3}$):</p>
+            
+            <p>১ম পদ: $\displaystyle \frac{3\sqrt{2}(\sqrt{6}-\sqrt{3})}{(\sqrt{6}+\sqrt{3})(\sqrt{6}-\sqrt{3})} = \frac{3\sqrt{12}-3\sqrt{6}}{6-3} = \frac{3(2\sqrt{3}-\sqrt{6})}{3} = 2\sqrt{3} - \sqrt{6}$</p>
+            
+            <p>২য় পদ: $\displaystyle \frac{4\sqrt{3}(\sqrt{6}-\sqrt{2})}{(\sqrt{6}+\sqrt{2})(\sqrt{6}-\sqrt{2})} = \frac{4\sqrt{18}-4\sqrt{6}}{6-2} = \frac{4(3\sqrt{2}-\sqrt{6})}{4} = 3\sqrt{2} - \sqrt{6}$</p>
+            
+            <p>৩য় পদ: $\displaystyle \frac{\sqrt{6}(\sqrt{3}-\sqrt{2})}{(\sqrt{3}+\sqrt{2})(\sqrt{3}-\sqrt{2})} = \frac{\sqrt{18}-\sqrt{12}}{3-2} = \frac{3\sqrt{2}-2\sqrt{3}}{1} = 3\sqrt{2} - 2\sqrt{3}$</p>
+            
+            <p>মানগুলি বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= (2\sqrt{3} - \sqrt{6}) - (3\sqrt{2} - \sqrt{6}) + (3\sqrt{2} - 2\sqrt{3}) \\
+= 2\sqrt{3} - \sqrt{6} - 3\sqrt{2} + \sqrt{6} + 3\sqrt{2} - 2\sqrt{3} \\
+= 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. যদি $x=2, y=3$ এবং $z=6$ হয় তবে, $\displaystyle\frac{3\sqrt{x}}{\sqrt{y}+\sqrt{z}} - \frac{4\sqrt{y}}{\sqrt{z}+\sqrt{x}} + \frac{\sqrt{z}}{\sqrt{x}+\sqrt{y}}$ -এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x, y, z$ এর মান প্রদত্ত রাশিতে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{3\sqrt{2}}{\sqrt{3}+\sqrt{6}} - \frac{4\sqrt{3}}{\sqrt{6}+\sqrt{2}} + \frac{\sqrt{6}}{\sqrt{2}+\sqrt{3}}
+\end{array}
+\]
+            <p>এই রাশিটি সম্পূর্ণভাবে 2(d) প্রশ্নের অনুরূপ। তাই এর সরলীকরণও হুবহু এক হবে।</p>
+            <p>১ম পদ = $2\sqrt{3} - \sqrt{6}$</p>
+            <p>২য় পদ = $3\sqrt{2} - \sqrt{6}$</p>
+            <p>৩য় পদ = $3\sqrt{2} - 2\sqrt{3}$</p>
+            \[
+\begin{array}{l}
+= (2\sqrt{3} - \sqrt{6}) - (3\sqrt{2} - \sqrt{6}) + (3\sqrt{2} - 2\sqrt{3}) \\
+= 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. $x=\sqrt{7}+\sqrt{6}$ হলে, এদের সরলতম মান নির্ণয় করি:</h4>
+        <p class="mb-3 text-muted"><strong>প্রস্তুতি:</strong> $x = \sqrt{7}+\sqrt{6}$ হলে, $\displaystyle \frac{1}{x} = \frac{1}{\sqrt{7}+\sqrt{6}} = \frac{\sqrt{7}-\sqrt{6}}{(\sqrt{7}+\sqrt{6})(\sqrt{7}-\sqrt{6})} = \frac{\sqrt{7}-\sqrt{6}}{7-6} = \sqrt{7}-\sqrt{6}$</p>
+
+        <span class="sub-question">(i) $x - \displaystyle\frac{1}{x}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x - \frac{1}{x} = (\sqrt{7} + \sqrt{6}) - (\sqrt{7} - \sqrt{6}) \\
+= \sqrt{7} + \sqrt{6} - \sqrt{7} + \sqrt{6} \\
+= 2\sqrt{6}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $2\sqrt{6}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $x + \displaystyle\frac{1}{x}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x + \frac{1}{x} = (\sqrt{7} + \sqrt{6}) + (\sqrt{7} - \sqrt{6}) \\
+= 2\sqrt{7}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $2\sqrt{7}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $x^2 + \displaystyle\frac{1}{x^2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x^2 + \frac{1}{x^2} = \left(x + \frac{1}{x}\right)^2 - 2 \cdot x \cdot \frac{1}{x} \\
+= (2\sqrt{7})^2 - 2 \\
+= (4 \times 7) - 2 \\
+= 28 - 2 \\
+= 26
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 26</div>
+        </div>
+
+        <span class="sub-question">(iv) $x^3 + \displaystyle\frac{1}{x^3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x^3 + \frac{1}{x^3} = \left(x + \frac{1}{x}\right)^3 - 3 \cdot x \cdot \frac{1}{x} \left(x + \frac{1}{x}\right) \\
+= (2\sqrt{7})^3 - 3(2\sqrt{7}) \\
+= (8 \times 7\sqrt{7}) - 6\sqrt{7} \\
+= 56\sqrt{7} - 6\sqrt{7} \\
+= 50\sqrt{7}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $50\sqrt{7}$</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. সরল করি : $\displaystyle\frac{x+\sqrt{x^2-1}}{x-\sqrt{x^2-1}} + \frac{x-\sqrt{x^2-1}}{x+\sqrt{x^2-1}}$ <br>সরলফল 14 হলে, x-এর মান কী কী হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে রাশিটিকে সরল করি। লসাগু করে যোগ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(x+\sqrt{x^2-1})^2 + (x-\sqrt{x^2-1})^2}{(x-\sqrt{x^2-1})(x+\sqrt{x^2-1})}
+\end{array}
+\]
+            <p>লবে $(a+b)^2 + (a-b)^2 = 2(a^2+b^2)$ সূত্র এবং হরে $(a-b)(a+b) = a^2-b^2$ সূত্র প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{2[x^2 + (\sqrt{x^2-1})^2]}{x^2 - (\sqrt{x^2-1})^2} \\
+= \frac{2[x^2 + x^2 - 1]}{x^2 - (x^2 - 1)} \\
+= \frac{2(2x^2 - 1)}{x^2 - x^2 + 1} \\
+= \frac{2(2x^2 - 1)}{1} \\
+= 4x^2 - 2
+\end{array}
+\]
+            <p>শর্তানুসারে, এই সরলফলটি 14 এর সমান:</p>
+            \[
+\begin{array}{l}
+4x^2 - 2 = 14 \\
+4x^2 = 14 + 2 \\
+4x^2 = 16 \\
+x^2 = \frac{16}{4} = 4 \\
+x = \pm\sqrt{4} \\
+x = \pm 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সরলফল $4x^2 - 2$ এবং x-এর মান $\pm 2$</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. যদি $\displaystyle a = \frac{\sqrt{5}+1}{\sqrt{5}-1}$ ও $\displaystyle b = \frac{\sqrt{5}-1}{\sqrt{5}+1}$ হয়, তবে নীচের মানগুলি নির্ণয় করি।</h4>
+        <p class="mb-3 text-muted"><strong>প্রস্তুতি:</strong> প্রথমে $a+b$ এবং $ab$ এর মান বের করে নিই।<br>
+        $\displaystyle a+b = \frac{\sqrt{5}+1}{\sqrt{5}-1} + \frac{\sqrt{5}-1}{\sqrt{5}+1} = \frac{(\sqrt{5}+1)^2 + (\sqrt{5}-1)^2}{(\sqrt{5}-1)(\sqrt{5}+1)} = \frac{2(5+1)}{5-1} = \frac{12}{4} = 3$<br>
+        $\displaystyle a-b = \frac{(\sqrt{5}+1)^2 - (\sqrt{5}-1)^2}{4} = \frac{4 \cdot \sqrt{5} \cdot 1}{4} = \sqrt{5}$<br>
+        $\displaystyle ab = \frac{\sqrt{5}+1}{\sqrt{5}-1} \times \frac{\sqrt{5}-1}{\sqrt{5}+1} = 1$
+        </p>
+
+        <span class="sub-question">(i) $\displaystyle\frac{a^2+ab+b^2}{a^2-ab+b^2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{a^2+ab+b^2}{a^2-ab+b^2} = \frac{(a^2+b^2)+ab}{(a^2+b^2)-ab} \\
+= \frac{(a+b)^2 - 2ab + ab}{(a+b)^2 - 2ab - ab} \\
+= \frac{(a+b)^2 - ab}{(a+b)^2 - 3ab}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{3^2 - 1}{3^2 - 3(1)} \\
+= \frac{9 - 1}{9 - 3} \\
+= \frac{8}{6} = \frac{4}{3} = 1\frac{1}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{4}{3}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $\displaystyle\frac{(a-b)^3}{(a+b)^3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{(\sqrt{5})^3}{3^3} = \frac{5\sqrt{5}}{27}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{5\sqrt{5}}{27}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $\displaystyle\frac{3a^2+5ab+3b^2}{3a^2-5ab+3b^2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{3(a^2+b^2)+5ab}{3(a^2+b^2)-5ab} = \frac{3[(a+b)^2 - 2ab] + 5ab}{3[(a+b)^2 - 2ab] - 5ab} \\
+= \frac{3(a+b)^2 - 6ab + 5ab}{3(a+b)^2 - 6ab - 5ab} \\
+= \frac{3(a+b)^2 - ab}{3(a+b)^2 - 11ab}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{3(3^2) - 1}{3(3^2) - 11(1)} \\
+= \frac{3(9) - 1}{3(9) - 11} \\
+= \frac{27 - 1}{27 - 11} \\
+= \frac{26}{16} = \frac{13}{8} = 1\frac{5}{8}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{13}{8}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $\displaystyle\frac{a^3+b^3}{a^3-b^3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{a^3+b^3}{a^3-b^3} = \frac{(a+b)(a^2-ab+b^2)}{(a-b)(a^2+ab+b^2)} \\
+= \frac{(a+b)[(a+b)^2 - 3ab]}{(a-b)[(a+b)^2 - ab]}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{3[3^2 - 3(1)]}{\sqrt{5}[3^2 - 1]} \\
+= \frac{3[9 - 3]}{\sqrt{5}[9 - 1]} \\
+= \frac{3 \times 6}{\sqrt{5} \times 8} \\
+= \frac{18}{8\sqrt{5}} = \frac{9}{4\sqrt{5}}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করতে লব ও হরকে $\sqrt{5}$ দিয়ে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{9\sqrt{5}}{4 \times 5} = \frac{9\sqrt{5}}{20}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{9\sqrt{5}}{20}$</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. যদি $x=2+\sqrt{3}, y=2-\sqrt{3}$ হয়, তবে নিম্নলিখিতগুলির সরলতম মান নির্ণয় করি।</h4>
+        <p class="mb-3 text-muted"><strong>প্রস্তুতি:</strong><br>
+        $x+y = (2+\sqrt{3}) + (2-\sqrt{3}) = 4$<br>
+        $x-y = (2+\sqrt{3}) - (2-\sqrt{3}) = 2\sqrt{3}$<br>
+        $xy = (2+\sqrt{3})(2-\sqrt{3}) = 2^2 - (\sqrt{3})^2 = 4 - 3 = 1$
+        </p>
+
+        <span class="sub-question">(a) (i) $x - \displaystyle\frac{1}{x}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $xy = 1$, তাই $\displaystyle\frac{1}{x} = y$।</p>
+            \[
+\begin{array}{l}
+x - \frac{1}{x} = x - y \\
+= 2\sqrt{3} \quad [\text{আগে হিসাব করা আছে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $2\sqrt{3}$</div>
+        </div>
+
+        <span class="sub-question">(a) (ii) $y^2 + \displaystyle\frac{1}{y^2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $\displaystyle\frac{1}{y} = x$, তাই এটি $y^2 + x^2$ বা $x^2 + y^2$-এর সমান।</p>
+            \[
+\begin{array}{l}
+x^2 + y^2 = (x+y)^2 - 2xy \\
+= 4^2 - 2(1) \\
+= 16 - 2 = 14
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 14</div>
+        </div>
+
+        <span class="sub-question">(a) (iii) $x^3 - \displaystyle\frac{1}{x^3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $\displaystyle\frac{1}{x} = y$, তাই এটি $x^3 - y^3$-এর সমান।</p>
+            \[
+\begin{array}{l}
+x^3 - y^3 = (x-y)^3 + 3xy(x-y) \\
+= (2\sqrt{3})^3 + 3(1)(2\sqrt{3}) \\
+= 8 \times 3\sqrt{3} + 6\sqrt{3} \\
+= 24\sqrt{3} + 6\sqrt{3} \\
+= 30\sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $30\sqrt{3}$</div>
+        </div>
+
+        <span class="sub-question">(a) (iv) $xy + \displaystyle\frac{1}{xy}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+xy + \frac{1}{xy} = 1 + \frac{1}{1} \\
+= 1 + 1 = 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2</div>
+        </div>
+
+        <span class="sub-question">(b) $3x^2 - 5xy + 3y^2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+= 3x^2 + 3y^2 - 5xy \\
+= 3(x^2 + y^2) - 5xy
+\end{array}
+\]
+            <p>আগে আমরা $x^2 + y^2 = 14$ পেয়েছি।</p>
+            \[
+\begin{array}{l}
+= 3(14) - 5(1) \\
+= 42 - 5 \\
+= 37
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 37</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. $\displaystyle x = \frac{\sqrt{7}+\sqrt{3}}{\sqrt{7}-\sqrt{3}}$ এবং $xy=1$ হলে, দেখাই যে $\displaystyle\frac{x^2+xy+y^2}{x^2-xy+y^2} = \frac{12}{11}$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $xy = 1$, তাই $\displaystyle y = \frac{1}{x} = \frac{\sqrt{7}-\sqrt{3}}{\sqrt{7}+\sqrt{3}}$</p>
+            <p>প্রথমে $x+y$ এর মান বের করি:</p>
+            \[
+\begin{array}{l}
+x+y = \frac{\sqrt{7}+\sqrt{3}}{\sqrt{7}-\sqrt{3}} + \frac{\sqrt{7}-\sqrt{3}}{\sqrt{7}+\sqrt{3}} \\
+= \frac{(\sqrt{7}+\sqrt{3})^2 + (\sqrt{7}-\sqrt{3})^2}{(\sqrt{7}-\sqrt{3})(\sqrt{7}+\sqrt{3})} \\
+= \frac{2[(\sqrt{7})^2 + (\sqrt{3})^2]}{(\sqrt{7})^2 - (\sqrt{3})^2} \\
+= \frac{2(7 + 3)}{7 - 3} \\
+= \frac{2(10)}{4} = \frac{20}{4} = 5
+\end{array}
+\]
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\frac{x^2+xy+y^2}{x^2-xy+y^2} = \frac{(x^2+y^2)+xy}{(x^2+y^2)-xy} \\
+= \frac{(x+y)^2 - 2xy + xy}{(x+y)^2 - 2xy - xy} \\
+= \frac{(x+y)^2 - xy}{(x+y)^2 - 3xy}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{5^2 - 1}{5^2 - 3(1)} \\
+= \frac{25 - 1}{25 - 3} \\
+= \frac{24}{22} \\
+= \frac{12}{11}
+\end{array}
+\]
+            <p>যেহেতু বামপক্ষ = ডানপক্ষ ($\frac{12}{11}$), তাই প্রমাণিত।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. $(\sqrt{7} + 1)$ এবং $(\sqrt{5} + \sqrt{3})$ -এর মধ্যে কোনটি বড়ো লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি করণীর মান তুলনা করতে হলে তাদের বর্গ (square) করে দেখতে হয়।</p>
+            <p>প্রথম করণীর বর্গ:</p>
+            \[
+\begin{array}{l}
+(\sqrt{7} + 1)^2 = (\sqrt{7})^2 + 2\cdot\sqrt{7}\cdot 1 + 1^2 \\
+= 7 + 2\sqrt{7} + 1 \\
+= 8 + 2\sqrt{7}
+\end{array}
+\]
+            <p>দ্বিতীয় করণীর বর্গ:</p>
+            \[
+\begin{array}{l}
+(\sqrt{5} + \sqrt{3})^2 = (\sqrt{5})^2 + 2\cdot\sqrt{5}\cdot\sqrt{3} + (\sqrt{3})^2 \\
+= 5 + 2\sqrt{15} + 3 \\
+= 8 + 2\sqrt{15}
+\end{array}
+\]
+            <p>এখন, উভয় বর্গের মূলদ অংশ (8) সমান। কিন্তু অমূলদ অংশে $2\sqrt{15}$ স্পষ্টতই $2\sqrt{7}$ এর থেকে বড়ো (যেহেতু $15 &gt; 7$)।</p>
+            <p>সুতরাং, $8 + 2\sqrt{15} &gt; 8 + 2\sqrt{7}$</p>
+            <p>$\implies (\sqrt{5} + \sqrt{3})^2 &gt; (\sqrt{7} + 1)^2$</p>
+            <p>$\implies \sqrt{5} + \sqrt{3} &gt; \sqrt{7} + 1$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $(\sqrt{5} + \sqrt{3})$ বড়ো।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) $x = 2 + \sqrt{3}$ হলে, $x + \displaystyle\frac{1}{x}$ -এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = 2 + \sqrt{3}$ হলে, $\frac{1}{x} = 2 - \sqrt{3}$ (করণী নিরসন করে)।</p>
+            <p>$x + \frac{1}{x} = (2 + \sqrt{3}) + (2 - \sqrt{3}) = 4$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 4</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $p+q = \sqrt{13}$ এবং $p-q = \sqrt{5}$ হয়, তাহলে pq-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $4pq = (p+q)^2 - (p-q)^2$</p>
+            <p>$4pq = (\sqrt{13})^2 - (\sqrt{5})^2 = 13 - 5 = 8$</p>
+            <p>$pq = \frac{8}{4} = 2$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 2</div>
+        </div>
+
+        <span class="sub-question">(iii) যদি $a+b = \sqrt{5}$ এবং $a-b = \sqrt{3}$ হয়, তাহলে $(a^2+b^2)$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $2(a^2+b^2) = (a+b)^2 + (a-b)^2$</p>
+            <p>$2(a^2+b^2) = (\sqrt{5})^2 + (\sqrt{3})^2 = 5 + 3 = 8$</p>
+            <p>$a^2+b^2 = \frac{8}{2} = 4$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 4</div>
+        </div>
+
+        <span class="sub-question">(iv) $\sqrt{125}$ থেকে $\sqrt{5}$ বিয়োগ করলে বিয়োগফল হবে:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\sqrt{125} - \sqrt{5} = \sqrt{25 \times 5} - \sqrt{5} = 5\sqrt{5} - \sqrt{5} = 4\sqrt{5}$</p>
+            <p>অপশনে $4\sqrt{5}$ নেই, তাই রুটের ভেতরে নিলে: $\sqrt{4^2 \times 5} = \sqrt{16 \times 5} = \sqrt{80}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) $\sqrt{80}$</div>
+        </div>
+
+        <span class="sub-question">(v) $(5-\sqrt{3})(\sqrt{3}-1)(5+\sqrt{3})(\sqrt{3}+1)$ -এর গুণফল:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সাজিয়ে লিখি: $(5-\sqrt{3})(5+\sqrt{3}) \times (\sqrt{3}-1)(\sqrt{3}+1)$</p>
+            <p>$= (5^2 - (\sqrt{3})^2) \times ((\sqrt{3})^2 - 1^2)$</p>
+            <p>$= (25 - 3) \times (3 - 1) = 22 \times 2 = 44$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 44</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) $\sqrt{75}$ এবং $\sqrt{147}$ সদৃশ করণী।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $\sqrt{75} = \sqrt{25 \times 3} = 5\sqrt{3}$ এবং $\sqrt{147} = \sqrt{49 \times 3} = 7\sqrt{3}$। উভয়েরই করণী অংশ $\sqrt{3}$, তাই এরা সদৃশ।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) $\sqrt{\pi}$ একটি দ্বিঘাত করণী।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $\pi$ একটি অমূলদ সংখ্যা (transcendental number)। দ্বিঘাত করণী হতে হলে রুটের ভিতরের সংখ্যাকে অবশ্যই মূলদ সংখ্যা (rational number) হতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) $5\sqrt{11}$ একটি _________ সংখ্যা। (মূলদ/অমূলদ)</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> অমূলদ (যেহেতু $\sqrt{11}$ অমূলদ)</p>
+        </div>
+
+        <span class="sub-question">(ii) $(\sqrt{3} - 5)$ -এর অনুবন্ধী করণী _________।</span>
+        <div class="solution-box">
+            <p>করণীটিকে সাজালে হয় $-5 + \sqrt{3}$। এর অনুবন্ধী হলো $-5 - \sqrt{3}$ বা $-\sqrt{3} - 5$।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $-\sqrt{3} - 5$</p>
+        </div>
+
+        <span class="sub-question">(iii) দুটি দ্বিঘাত করণীর যোগফল ও গুণফল একটি মূলদ সংখ্যা হলে করণীদ্বয় _________ করণী।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> অনুবন্ধী (Conjugate)</p>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) $x = 3 + 2\sqrt{2}$ হলে, $x + \displaystyle\frac{1}{x}$ -এর মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\displaystyle\frac{1}{x} = \frac{1}{3+2\sqrt{2}} = \frac{3-2\sqrt{2}}{(3+2\sqrt{2})(3-2\sqrt{2})} = \frac{3-2\sqrt{2}}{9-8} = 3-2\sqrt{2}$</p>
+            <p>অতএব, $x + \frac{1}{x} = (3+2\sqrt{2}) + (3-2\sqrt{2}) = 6$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 6</div>
+        </div>
+
+        <span class="sub-question">(ii) $(\sqrt{15} + \sqrt{3})$ এবং $(\sqrt{10} + \sqrt{8})$ -এর মধ্যে কোনটি বড়ো লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি করণীর বর্গ করি:</p>
+            <p>$(\sqrt{15} + \sqrt{3})^2 = 15 + 3 + 2\sqrt{45} = 18 + 2\sqrt{45}$</p>
+            <p>$(\sqrt{10} + \sqrt{8})^2 = 10 + 8 + 2\sqrt{80} = 18 + 2\sqrt{80}$</p>
+            <p>যেহেতু $80 &gt; 45$, তাই $\sqrt{80} &gt; \sqrt{45}$।</p>
+            <p>সুতরাং, $18 + 2\sqrt{80} &gt; 18 + 2\sqrt{45}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $(\sqrt{10} + \sqrt{8})$ বড়ো।</div>
+        </div>
+
+        <span class="sub-question">(iii) দুটি মিশ্র দ্বিঘাত করণী লিখি যাদের গুণফল একটি মূলদ সংখ্যা।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যে কোনো দুটি অনুবন্ধী করণী নিলেই তাদের গুণফল মূলদ হবে।</p>
+            <p>যেমন: $(2 + \sqrt{3})$ এবং $(2 - \sqrt{3})$</p>
+            <p>যাচাই: $(2 + \sqrt{3})(2 - \sqrt{3}) = 4 - 3 = 1$ (মূলদ)।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $(2 + \sqrt{3})$ এবং $(2 - \sqrt{3})$</div>
+        </div>
+
+        <span class="sub-question">(iv) $\sqrt{72}$ থেকে কত বিয়োগ করলে $\sqrt{32}$ হবে তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $x$ বিয়োগ করতে হবে।</p>
+            \[
+\begin{array}{l}
+\sqrt{72} - x = \sqrt{32} \\
+x = \sqrt{72} - \sqrt{32} \\
+x = \sqrt{36 \times 2} - \sqrt{16 \times 2} \\
+x = 6\sqrt{2} - 4\sqrt{2} \\
+x = 2\sqrt{2} = \sqrt{4 \times 2} = \sqrt{8}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $2\sqrt{2}$ বা $\sqrt{8}$ বিয়োগ করতে হবে।</div>
+        </div>
+
+        <span class="sub-question">(v) $\displaystyle \frac{1}{\sqrt{2}+1} + \frac{1}{\sqrt{3}+\sqrt{2}} + \frac{1}{\sqrt{4}+\sqrt{3}}$ -এর সরলতম মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রতিটি পদের আলাদাভাবে হরের করণী নিরসন করি (বড়ো করণী আগে লিখলে হিসাব সহজ হয়):</p>
+            <p>১ম পদ: $\displaystyle \frac{1}{\sqrt{2}+1} \times \frac{\sqrt{2}-1}{\sqrt{2}-1} = \frac{\sqrt{2}-1}{2-1} = \sqrt{2} - 1$</p>
+            <p>২য় পদ: $\displaystyle \frac{1}{\sqrt{3}+\sqrt{2}} \times \frac{\sqrt{3}-\sqrt{2}}{\sqrt{3}-\sqrt{2}} = \frac{\sqrt{3}-\sqrt{2}}{3-2} = \sqrt{3} - \sqrt{2}$</p>
+            <p>৩য় পদ: $\displaystyle \frac{1}{\sqrt{4}+\sqrt{3}} \times \frac{\sqrt{4}-\sqrt{3}}{\sqrt{4}-\sqrt{3}} = \frac{\sqrt{4}-\sqrt{3}}{4-3} = \sqrt{4} - \sqrt{3}$</p>
+            <p>মানগুলি যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+= (\sqrt{2} - 1) + (\sqrt{3} - \sqrt{2}) + (\sqrt{4} - \sqrt{3}) \\
+= -1 + \sqrt{4} \\
+= -1 + 2 = 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সরলতম মান 1</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

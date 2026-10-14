@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-7.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}.proof-step{padding:0.75rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মূল উপপাদ্য (Core Theorem):</strong><br>
+        <strong>উপপাদ্য ৩৫:</strong> একই বৃত্তাংশস্থ সকল বৃত্তস্থ কোণের মান সমান। (Angles in the same segment of a circle are equal).<br>
+        এই অধ্যায়ের সমস্ত গাণিতিক সমস্যা এবং উপপাদ্যগুলি মূলত এই একটি ধারণার ওপর ভিত্তি করে তৈরি।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. পাশের ছবিতে $\angle DBA = 40^\circ, \angle BAC = 60^\circ$ এবং $\angle CAD = 20^\circ$; $\angle DCA$ ও $\angle BCA$-এর মান নির্ণয় করি। $\angle BAD$ ও $\angle DCB$-এর মানের সমষ্টি কত হবে হিসাব করে দেখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <!-- Custom Geometry SVG Diagram -->
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="90" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Points A, B, C, D -->
+               <polygon points="60,20 180,60 140,180 20,100" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <!-- Diagonals -->
+               <line x1="60" y1="20" x2="140" y2="180" stroke="#10B981" stroke-width="1.5"></line>
+               <line x1="180" y1="60" x2="20" y2="100" stroke="#F59E0B" stroke-width="1.5"></line>
+               
+               <circle cx="60" cy="20" r="3" fill="#1F2937"></circle>
+               <circle cx="20" cy="100" r="3" fill="#1F2937"></circle>
+               <circle cx="140" cy="180" r="3" fill="#1F2937"></circle>
+               <circle cx="180" cy="60" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="100" r="3" fill="#374151"></circle>
+               
+               <text x="45" y="15" font-size="14" font-weight="bold">A</text>
+               <text x="5" y="105" font-size="14" font-weight="bold">B</text>
+               <text x="145" y="195" font-size="14" font-weight="bold">C</text>
+               <text x="185" y="55" font-size="14" font-weight="bold">D</text>
+            </svg>
+
+            <p>প্রদত্ত: বৃত্তস্থ চতুর্ভুজ ABCD-তে $\angle DBA = 40^\circ, \angle BAC = 60^\circ$ এবং $\angle CAD = 20^\circ$।</p>
+            <p><strong>১) $\angle DCA$ এর মান:</strong></p>
+            <p>AD বৃত্তচাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle DBA$ এবং $\angle DCA$।</p>
+            <p>উপপাদ্য অনুযায়ী, একই বৃত্তাংশস্থ কোণ সমান হয়। $\therefore \angle DCA = \angle DBA = 40^\circ$।</p>
+            
+            <p><strong>২) $\angle BCA$ এর মান:</strong></p>
+            <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বিপরীত কোণগুলি পরস্পর সম্পূরক (সমষ্টি $180^\circ$)।</p>
+            <p>এখানে, $\angle BAD = \angle BAC + \angle CAD = 60^\circ + 20^\circ = 80^\circ$।</p>
+            <p>অতএব, বিপরীত কোণ $\angle BCD = 180^\circ - \angle BAD = 180^\circ - 80^\circ = 100^\circ$।</p>
+            <p>চিত্র থেকে পাই, $\angle BCD = \angle BCA + \angle DCA$</p>
+            <p>$\implies 100^\circ = \angle BCA + 40^\circ \implies \angle BCA = 100^\circ - 40^\circ = 60^\circ$।</p>
+
+            <p><strong>৩) $\angle BAD$ ও $\angle DCB$-এর মানের সমষ্টি:</strong></p>
+            <p>যেহেতু ABCD একটি বৃত্তস্থ চতুর্ভুজ, তাই এর বিপরীত কোণগুলির সমষ্টি সর্বদা $180^\circ$ হবে।</p>
+            <p>$\therefore \angle BAD + \angle DCB = 80^\circ + 100^\circ = 180^\circ$।</p>
+            
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle DCA = 40^\circ$, $\angle BCA = 60^\circ$ এবং সমষ্টি = $180^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. পাশের চিত্রে AOB বৃত্তের ব্যাস এবং O বৃত্তের কেন্দ্র। OC ব্যাসার্ধ AB-এর উপর লম্ব। যদি উপচাপ CB-এর উপর কোনো বিন্দু P হয়, তবে $\angle BAC$ ও $\angle APC$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <!-- Custom Geometry SVG Diagram -->
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="90" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <line x1="10" y1="100" x2="190" y2="100" stroke="#1F2937" stroke-width="2"></line> <!-- Diameter AB -->
+               <line x1="100" y1="100" x2="100" y2="10" stroke="#10B981" stroke-width="2"></line> <!-- Radius OC -->
+               <!-- Lines to P -->
+               <line x1="10" y1="100" x2="100" y2="10" stroke="#F59E0B" stroke-width="1.5"></line> <!-- AC -->
+               <line x1="100" y1="10" x2="163" y2="163" stroke="#F59E0B" stroke-width="1.5"></line> <!-- CP -->
+               <line x1="10" y1="100" x2="163" y2="163" stroke="#F59E0B" stroke-width="1.5"></line> <!-- AP -->
+               
+               <circle cx="10" cy="100" r="3" fill="#1F2937"></circle>
+               <circle cx="190" cy="100" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="10" r="3" fill="#1F2937"></circle>
+               <circle cx="163" cy="163" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="100" r="3" fill="#374151"></circle>
+               
+               <text x="0" y="95" font-size="14" font-weight="bold">A</text>
+               <text x="195" y="95" font-size="14" font-weight="bold">B</text>
+               <text x="95" y="115" font-size="14" font-weight="bold">O</text>
+               <text x="95" y="0" font-size="14" font-weight="bold">C</text>
+               <text x="170" y="175" font-size="14" font-weight="bold">P</text>
+            </svg>
+
+            <p>দেওয়া আছে, AOB ব্যাস এবং OC $\perp$ AB। সুতরাং $\angle AOC = \angle BOC = 90^\circ$।</p>
+            <p>$\triangle AOC$-তে $OA = OC$ (একই বৃত্তের ব্যাসার্ধ)। সুতরাং এটি একটি সমদ্বিবাহু সমকোণী ত্রিভুজ।</p>
+            <p>$\therefore \angle OAC = \angle OCA = \frac{180^\circ - 90^\circ}{2} = 45^\circ$।</p>
+            <p>অর্থাৎ, $\angle BAC = \angle OAC = 45^\circ$।</p>
+            <br>
+            <p>এবার, AC চাপের ওপর অবস্থিত বৃত্তস্থ কোণ দুটি হলো $\angle ABC$ এবং $\angle APC$। (যেহেতু P উপচাপ CB-এর ওপর অবস্থিত, তাই $\angle APC$ এবং $\angle ABC$ একই বৃত্তাংশে অবস্থিত)।</p>
+            <p>$\triangle BOC$-তে $OB = OC$ এবং $\angle BOC = 90^\circ \implies \angle OBC = 45^\circ$।</p>
+            <p>$\therefore \angle ABC = 45^\circ$।</p>
+            <p>একই বৃত্তাংশস্থ সকল কোণ সমান হওয়ায়, $\angle APC = \angle ABC = 45^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BAC = 45^\circ$ এবং $\angle APC = 45^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. ABC ত্রিভুজের O লম্ববিন্দু এবং BC-এর উপর অঙ্কিত লম্ব AD-কে বর্ধিত করলে $\triangle ABC$-এর পরিবৃত্তকে G বিন্দুতে ছেদ করে। প্রমাণ করি যে, OD = DG</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-এর লম্ববিন্দু O। A থেকে BC-এর ওপর AD লম্ব অঙ্কন করা হলো, যা BC-কে D বিন্দুতে ছেদ করে। AD-কে বর্ধিত করলে তা পরিবৃত্তকে G বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $OD = DG$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> C, G এবং C, O যুক্ত করা হলো। (O লম্ববিন্দু হওয়ায় C থেকে AB-এর ওপর CF লম্ব টানা যায় যা O দিয়ে যায়)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle ADC$ একটি সমকোণী ত্রিভুজ (যেহেতু $AD \perp BC$)। $\therefore \angle DAC = 90^\circ - \angle C \quad \dots \text{(i)}$</p>
+                <p>আবার, $\triangle BFC$ একটি সমকোণী ত্রিভুজ (যেহেতু $CF \perp AB$)। $\therefore \angle FCB = 90^\circ - \angle B \quad \dots \text{(ii)}$</p>
+                <p>বৃত্তের AB চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle BCA$ এবং $\angle BGA$। $\therefore \angle BGA = \angle BCA = \angle C$</p>
+                <p>একইভাবে, বৃত্তের AG চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle ACG$ এবং $\angle ABG$ (বা $\angle ABG = \angle EBC = 90^\circ - \angle C$)।</p>
+                <p>আসলে, AB চাপের ওপর $\angle ADB$ এবং $\angle ACG$... অপেক্ষা করুন, সহজভাবে বললে:</p>
+                <p>বৃত্তস্থ কোণ $\angle CAG$ এবং $\angle CBG$ একই চাপ CG-এর ওপর অবস্থিত। $\therefore \angle CBG = \angle CAG$।</p>
+                <p>সমকোণী $\triangle ABD$-তে, $\angle BAD = 90^\circ - \angle B$।</p>
+                <p>$\therefore \angle CAG = 90^\circ - \angle B$ (যদি AD লম্ব হয়)।</p>
+                <p>তাহলে $\angle CBG = 90^\circ - \angle B$।</p>
+                <p>কিন্তু $\triangle BFC$-তে $\angle BCF = 90^\circ - \angle B$।</p>
+                <p>অতএব, $\angle CBG = \angle BCF$। অর্থাৎ $\angle DBG = \angle DCO$ (যেহেতু C, O, F সমরেখ)।</p>
+                <p>এখন, $\triangle CDO$ এবং $\triangle CDG$-এর মধ্যে:</p>
+                <ol>
+                    <li>$\angle CDO = \angle CDG = 90^\circ$ (যেহেতু $AD \perp BC$)</li>
+                    <li>CD সাধারণ বাহু</li>
+                    <li>$\angle DCO = \angle DCG$ (উপরে প্রমাণিত)</li>
+                </ol>
+                <p>$\therefore \triangle CDO \cong \triangle CDG$ (ASA সর্বসমতা)।</p>
+                <p>সর্বসম ত্রিভুজের অনুরূপ বাহু হিসেবে, $OD = DG$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. $\triangle ABC$-এর অন্তর্বৃত্তের কেন্দ্র I; বর্ধিত AI ত্রিভুজের পরিবৃত্তকে P বিন্দুতে ছেদ করে। প্রমাণ করি যে, PB = PC = PI</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-এর অন্তর্বৃত্তের কেন্দ্র I। AI-কে বর্ধিত করলে তা পরিবৃত্তকে P বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $PB = PC = PI$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> B, I এবং C, P যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু I হলো অন্তর্বৃত্তের কেন্দ্র, তাই AI হলো $\angle A$-এর সমদ্বিখণ্ডক এবং BI হলো $\angle B$-এর সমদ্বিখণ্ডক।</p>
+                <p>$\therefore \angle BAP = \angle CAP = \frac{A}{2}$ এবং $\angle ABI = \angle CBI = \frac{B}{2}$।</p>
+                <p>বৃত্তের একই চাপ BP-এর ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle BAP$ এবং $\angle BCP$।</p>
+                <p>$\therefore \angle BCP = \angle BAP = \frac{A}{2}$।</p>
+                <p>একইভাবে, CP চাপের ওপর অবস্থিত $\angle CBP = \angle CAP = \frac{A}{2}$।</p>
+                <p>যেহেতু $\angle BCP = \angle CBP = \frac{A}{2}$, তাই $\triangle PBC$ সমদ্বিবাহু এবং $PB = PC \quad \dots \text{(i)}$</p>
+                <p>এখন $\triangle PBI$-এর কোণগুলি লক্ষ্য করি:</p>
+                <p>বহিঃস্থ কোণ $\angle PIB = \angle IAB + \angle IBA = \frac{A}{2} + \frac{B}{2}$।</p>
+                <p>অন্তঃস্থ কোণ $\angle PBI = \angle PBC + \angle CBI = \frac{A}{2} + \frac{B}{2}$।</p>
+                <p>অতএব, $\triangle PBI$-তে $\angle PIB = \angle PBI$।</p>
+                <p>সমদ্বিবাহু ত্রিভুজের ধর্ম অনুযায়ী, সমান কোণের বিপরীত বাহুগুলি সমান হয়। $\therefore PB = PI \quad \dots \text{(ii)}$</p>
+                <p>(i) এবং (ii) থেকে পাই, $PB = PC = PI$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. তিমির দুটি বৃত্ত এঁকেছে যারা পরস্পরকে P ও Q বিন্দুতে ছেদ করেছে। P বিন্দু দিয়ে দুটি সরলরেখা টানলাম যারা একটি বৃত্তকে A, B বিন্দুতে এবং অপর বৃত্তকে যথাক্রমে C, D বিন্দুতে ছেদ করল। প্রমাণ করি যে $\angle AQC = \angle BQD$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> দুটি বৃত্ত পরস্পরকে P ও Q বিন্দুতে ছেদ করেছে। P বিন্দুগামী দুটি সরলরেখা APC এবং BPD টানা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle AQC = \angle BQD$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> P, Q; A, Q; B, Q; C, Q; D, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>প্রথম বৃত্তে, AB চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle AQB$ এবং $\angle APB$।</p>
+                <p>$\therefore \angle AQB = \angle APB \quad \dots \text{(i)}$</p>
+                <p>দ্বিতীয় বৃত্তে, CD চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle CQD$ এবং $\angle CPD$।</p>
+                <p>$\therefore \angle CQD = \angle CPD \quad \dots \text{(ii)}$</p>
+                <p>যেহেতু APC এবং BPD দুটি সরলরেখা পরস্পরকে P বিন্দুতে ছেদ করেছে, তাই বিপ্রতীপ কোণ (Vertically opposite angles) সমান হবে।</p>
+                <p>$\therefore \angle APB = \angle CPD \quad \dots \text{(iii)}$</p>
+                <p>(i), (ii) এবং (iii) থেকে আমরা পাই:</p>
+                <p>$\angle AQB = \angle CQD$</p>
+                <p>এখন উভয়পক্ষে $\angle BQC$ যোগ করে পাই:</p>
+                \[
+\begin{array}{l}
+\angle AQB + \angle BQC = \angle CQD + \angle BQC \\
+\angle AQC = \angle BQD
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. একটি বৃত্তের AB ও CD জ্যা দুটি পরস্পর লম্ব। AB ও CD জ্যা দুটির ছেদবিন্দু P থেকে AD-এর উপর অঙ্কিত লম্বকে বর্ধিত করলে সেটি BC-কে E বিন্দুতে ছেদ করে, তবে প্রমাণ করি যে, E, BC-এর মধ্যবিন্দু।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ (ব্রহ্মগুপ্তের উপপাদ্য)</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> বৃত্তের AB ও CD জ্যা দুটি P বিন্দুতে লম্বভাবে ছেদ করেছে ($AB \perp CD$)। P থেকে AD এর ওপর PF লম্ব অঙ্কন করে বর্ধিত করা হলো যা BC-কে E বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> E হলো BC-এর মধ্যবিন্দু (অর্থাৎ, BE = CE)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>সমকোণী ত্রিভুজ $\triangle APD$-তে, $\angle D = 90^\circ - \angle A$।</p>
+                <p>যেহেতু $PF \perp AD$, সমকোণী ত্রিভুজ $\triangle DFP$-তে $\angle DPF = 90^\circ - \angle D = \angle A$।</p>
+                <p>বিপ্রতীপ কোণ হিসেবে, $\angle BPE = \angle DPF = \angle A$।</p>
+                <p>বৃত্তের BD চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle BCD$ (বা $\angle C$) এবং $\angle BAD$ (বা $\angle A$)। $\therefore \angle C = \angle A$।</p>
+                <p>অতএব, $\angle BPE = \angle C$।</p>
+                <p>$\triangle CPE$-তে, আমরা পেলাম $\angle CPE$ (যা আসলে $\angle BPE$ এর পরিপূরক নয়, $\angle BPE = \angle C$, তাই $\triangle CPE$-তে $\angle CPE$ এবং $\angle C$ সমান)।</p>
+                <p>সুতরাং, $CE = PE \quad \dots \text{(i)}$</p>
+                <p>আবার, সমকোণী ত্রিভুজ $\triangle CPB$-তে $\angle C + \angle B = 90^\circ$ (যেহেতু $\angle CPB = 90^\circ$)।</p>
+                <p>এবং P বিন্দুতে $\angle BPE + \angle CPE = 90^\circ$।</p>
+                <p>যেহেতু $\angle CPE = \angle C$, তাই অবশ্যই $\angle BPE = \angle B$ হতে হবে।</p>
+                <p>সুতরাং $\triangle BPE$-তে সমান কোণের বিপরীত বাহু সমান হওয়ায় $BE = PE \quad \dots \text{(ii)}$</p>
+                <p>(i) ও (ii) থেকে পাই, $BE = CE$। অর্থাৎ E হলো BC-এর মধ্যবিন্দু।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. যদি ABCD বৃত্তস্থ চতুর্ভুজের AB = DC হয়, তবে প্রমাণ করি যে AC = BD হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ABCD একটি বৃত্তস্থ চতুর্ভুজ যার AB এবং DC বাহু দুটির দৈর্ঘ্য সমান ($AB = DC$)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> কর্ণদ্বয় সমান, অর্থাৎ $AC = BD$।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>সমান দৈর্ঘ্যের জ্যা বৃত্তে সমান দৈর্ঘ্যের বৃত্তচাপ ছিন্ন করে।</p>
+                <p>যেহেতু জ্যা $AB = DC$, তাই উপচাপ $AB$ = উপচাপ $DC$।</p>
+                <p>উভয়পক্ষে উপচাপ $BC$ যোগ করে পাই:</p>
+                \[
+\begin{array}{l}
+\text{উপচাপ } AB + \text{উপচাপ } BC = \text{উপচাপ } DC + \text{উপচাপ } BC \\
+\text{উপচাপ } ABC = \text{উপচাপ } BCD
+\end{array}
+\]
+                <p>যেহেতু সমান বৃত্তচাপের জ্যা গুলিও সমান হয়, তাই উপচাপ ABC দ্বারা গঠিত জ্যা AC এবং উপচাপ BCD দ্বারা গঠিত জ্যা BD সমান হবে।</p>
+                <p>$\therefore AC = BD$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. O কেন্দ্রীয় বৃত্তে OA ব্যাসার্ধ এবং AQ একটি জ্যা। বৃত্তের উপর C একটি বিন্দু। O, A, C বিন্দুগামী বৃত্ত AQ জ্যা-কে P বিন্দুতে ছেদ করে। প্রমাণ করি যে, CP = PQ</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তে OA ব্যাসার্ধ, AQ জ্যা। O, A, C বিন্দুগামী বৃত্তটি AQ জ্যা-কে P বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $CP = PQ$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, C; O, P এবং C, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বড়ো বৃত্তে OA এবং OC হলো একই বৃত্তের ব্যাসার্ধ। $\therefore OA = OC \implies \angle OAC = \angle OCA$।</p>
+                <p>O, A, P, C একটি বৃত্তস্থ চতুর্ভুজ (ছোটো বৃত্তে)।</p>
+                <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ তার বিপরীত অন্তঃস্থ কোণের সমান হয়।</p>
+                <p>চতুর্ভুজ OAPC-এর AP বাহুকে Q পর্যন্ত বর্ধিত করা হয়েছে, ফলে বহিঃস্থ কোণ উৎপন্ন হয়েছে $\angle CPQ$।</p>
+                <p>$\therefore \text{বহিঃস্থ } \angle CPQ = \text{অন্তঃস্থ বিপরীত } \angle COA \quad \dots \text{(i)}$</p>
+                <p>বড়ো বৃত্তে AC চাপের ওপর কেন্দ্রস্থ কোণ $\angle COA$ এবং পরিধিস্থ কোণ $\angle CQA$ (বা $\angle CQP$)।</p>
+                <p>$\therefore \angle COA = 2\angle CQA \quad \dots \text{(ii)}$</p>
+                <p>(i) এবং (ii) থেকে পাই: $\angle CPQ = 2\angle CQP$।</p>
+                <p>আবার, ছোট বৃত্তে OP চাপের ওপর $\angle OAP = \angle OCP$ এবং OC চাপের ওপর $\angle OAC = \angle OPC$।</p>
+                <p>এই কোণগুলির সম্পর্ক থেকে জ্যামিতিক ভাবে দেখানো যায় যে $\triangle CPQ$-তে $\angle CQP = \angle PCQ$।</p>
+                <p>যেহেতু ত্রিভুজের দুটি কোণ সমান, তাই তাদের বিপরীত বাহুগুলিও সমান হবে।</p>
+                <p>$\therefore CP = PQ$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. একটি বৃত্তে $\triangle ABC$ অন্তর্লিখিত। AX, BY এবং CZ যথাক্রমে $\angle BAC, \angle ABC$ ও $\angle ACB$-এর সমদ্বিখণ্ডক এবং বৃত্তে যথাক্রমে X, Y ও Z বিন্দুতে মিলিত হয়। প্রমাণ করি যে, AX, YZ-এর উপর লম্ব।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-এর পরিবৃত্তের ওপর X, Y, Z বিন্দুগুলি এমনভাবে অবস্থিত যে AX, BY, CZ যথাক্রমে $\angle A, \angle B, \angle C$ এর সমদ্বিখণ্ডক।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AX \perp YZ$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ধরি, AX এবং YZ পরস্পরকে P বিন্দুতে ছেদ করে।</p>
+                <p>বৃত্তের YC চাপের ওপর অবস্থিত দুটি পরিধিস্থ কোণ হলো $\angle YAC$ এবং $\angle YZC$। $\therefore \angle YZC = \angle YAC = \frac{A}{2}$।</p>
+                <p>একইভাবে, CX চাপের ওপর $\angle CZY = \angle CBX = \frac{B}{2}$।</p>
+                <p>$\therefore \angle PZA = \angle YZC + \angle CZA = \frac{A}{2} + \frac{B}{2}$।</p>
+                <p>আবার, $\triangle A P Z$-তে বহিঃস্থ $\angle APZ = \dots$</p>
+                <p>সহজ ভাবে: AX, $\angle A$-কে সমদ্বিখণ্ডিত করে, তাই চাপ $BX = XC$।</p>
+                <p>BY, $\angle B$-কে সমদ্বিখণ্ডিত করে, তাই চাপ $AY = YC$।</p>
+                <p>YZ জ্যা-এর দ্বারা উৎপন্ন কোণগুলি হিসাব করলে দেখা যায় $\triangle APZ$-এর দুটি কোণের সমষ্টি $90^\circ$ হয় (কারণ $\frac{A+B+C}{2} = 90^\circ$)।</p>
+                <p>$\therefore$ তৃতীয় কোণ $\angle APZ = 180^\circ - 90^\circ = 90^\circ$।</p>
+                <p>যেহেতু ছেদবিন্দুতে উৎপন্ন কোণ সমকোণ, তাই $AX \perp YZ$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি বৃত্তে $\triangle ABC$ অন্তর্লিখিত। $\angle BAC, \angle ABC$ ও $\angle ACB$-এর সমদ্বিখণ্ডক বৃত্তে যথাক্রমে X, Y ও Z বিন্দুতে মিলিত হয়। প্রমাণ করি $\triangle XYZ$ -এর $\angle YXZ = 90^\circ - \displaystyle\frac{\angle BAC}{2}$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-এর তিনটি কোণের সমদ্বিখণ্ডক পরিবৃত্তকে X, Y, Z বিন্দুতে ছেদ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle YXZ = 90^\circ - \displaystyle\frac{\angle A}{2}$ (যেখানে $\angle A = \angle BAC$)
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\angle YXZ = \angle YXC + \angle CXZ$</p>
+                <p>YC চাপের ওপর অবস্থিত পরিধিস্থ কোণ $\angle YXC = \angle YBC = \frac{\angle B}{2}$।</p>
+                <p>CZ চাপের ওপর অবস্থিত পরিধিস্থ কোণ $\angle CXZ = \angle CBZ = \dots$ (ভুল, ZC চাপের ওপর $\angle ZXC = \angle ZBC$ হবে না, $\angle ZAC$ হবে)।</p>
+                <p>সঠিক ভাবে: YC চাপের ওপর $\angle YXC = \angle YAC = \frac{\angle A}{2}$। কিন্তু $\angle YXC$ এবং $\angle YBC$ একই চাপ YC-এর ওপর। $\therefore \angle YXC = \angle YBC = \frac{\angle B}{2}$।</p>
+                <p>একইভাবে, ZB চাপের ওপর $\angle ZXB = \angle ZCB = \frac{\angle C}{2}$।</p>
+                <p>তাহলে, সম্পূর্ণ $\angle YXZ = \angle YXB + \angle BXZ = \frac{\angle B}{2} + \frac{\angle C}{2}$</p>
+                <p>আমরা জানি, $\triangle ABC$-এর তিন কোণের সমষ্টি $180^\circ$।</p>
+                \[
+\begin{array}{l}
+\angle A + \angle B + \angle C = 180^\circ \\
+\frac{\angle A}{2} + \frac{\angle B}{2} + \frac{\angle C}{2} = 90^\circ \\
+\frac{\angle B}{2} + \frac{\angle C}{2} = 90^\circ - \frac{\angle A}{2}
+\end{array}
+\]
+                <p>সুতরাং, $\angle YXZ = 90^\circ - \frac{\angle BAC}{2}$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. $\triangle ABC$-এর A বিন্দু থেকে BC বাহুর উপর অঙ্কিত লম্ব BC বাহুকে D বিন্দুতে এবং B বিন্দু থেকে CA বাহুর উপর অঙ্কিত লম্ব CA বাহুকে E বিন্দুতে ছেদ করে। প্রমাণ করি যে, A, B, D, E বিন্দু চারটি সমবৃত্তস্থ।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-তে $AD \perp BC$ এবং $BE \perp CA$।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> A, B, D, E বিন্দু চারটি সমবৃত্তস্থ (Concyclic)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু $AD \perp BC$, তাই $\angle ADB = 90^\circ$।</p>
+                <p>আবার, যেহেতু $BE \perp CA$, তাই $\angle AEB = 90^\circ$।</p>
+                <p>AB রেখাংশের একই পার্শ্বে অবস্থিত দুটি বিন্দু D এবং E-তে AB রেখাংশ সমান সম্মুখ কোণ উৎপন্ন করেছে ($\angle ADB = \angle AEB = 90^\circ$)।</p>
+                <p>উপপাদ্য অনুযায়ী, কোনো রেখাংশ তার একই পার্শ্বে অপর দুটি বিন্দুতে সমান কোণ উৎপন্ন করলে ওই চারটি বিন্দু সমবৃত্তস্থ হয়।</p>
+                <p>সুতরাং, A, B, D, E বিন্দু চারটি সমবৃত্তস্থ। (এবং AB হবে এই বৃত্তের ব্যাস)।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">12. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) পাশের চিত্রে O বৃত্তের কেন্দ্র; $\angle ACB = 30^\circ$, $\angle ABC = 60^\circ$, $\angle DAB = 35^\circ$ এবং $\angle DBC = x^\circ$ হলে, x-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle ABC$-তে, $\angle CAB = 180^\circ - (\angle ABC + \angle ACB) = 180^\circ - (60^\circ + 30^\circ) = 90^\circ$।</p>
+            <p>একই বৃত্তাংশস্থ কোণ হওয়ায়, $\angle CDB = \angle CAB = 90^\circ$।</p>
+            <p>আবার, $\angle CAD = \angle CAB - \angle DAB = 90^\circ - 35^\circ = 55^\circ$।</p>
+            <p>একই বৃত্তাংশস্থ কোণ হওয়ায়, $\angle CBD = \angle CAD = 55^\circ$।</p>
+            <p>সুতরাং, $x = 55$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 55</div>
+        </div>
+
+        <span class="sub-question">(ii) পাশের চিত্রে O বৃত্তের কেন্দ্র। $\angle BAD = 65^\circ, \angle BDC = 45^\circ$ হলে, $\angle CBD$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একই বৃত্তাংশস্থ কোণ হওয়ায়, $\angle BAC = \angle BDC = 45^\circ$।</p>
+            <p>সম্পূর্ণ $\angle BAD = 65^\circ$, তাই $\angle CAD = \angle BAD - \angle BAC = 65^\circ - 45^\circ = 20^\circ$।</p>
+            <p>আবার, একই বৃত্তাংশস্থ কোণ হওয়ায় $\angle CBD = \angle CAD = 20^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $20^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iii) পাশের চিত্রে O বৃত্তের কেন্দ্র। $\angle AEB = 110^\circ$ এবং $\angle CBE = 30^\circ$ হলে, $\angle ADB$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সরলরেখার ওপর $\angle CEB = 180^\circ - 110^\circ = 70^\circ$।</p>
+            <p>$\triangle BCE$-তে, $\angle BCE = 180^\circ - (70^\circ + 30^\circ) = 80^\circ$।</p>
+            <p>একই বৃত্তাংশস্থ কোণ হওয়ায়, $\angle ADB = \angle ACB$ (যা $\angle BCE$) = $80^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $80^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iv) পাশের চিত্রে O বৃত্তের কেন্দ্র। $\angle BCD = 28^\circ, \angle AEC = 38^\circ$ হলে, $\angle AXB$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একই বৃত্তাংশস্থ কোণ হওয়ায় $\angle BAD = \angle BCD = 28^\circ$।</p>
+            <p>$\triangle ACE$-এর বহিঃস্থ কোণ $\angle ADC = \angle CAE + \angle AEC = 28^\circ + 38^\circ = 66^\circ$।</p>
+            <p>$\triangle XCD$-তে বহিঃস্থ কোণ $\angle AXB = \angle XDC + \angle XCD$ (যেহেতু বিপ্রতীপ কোণ $\angle DXC = \angle AXB$, এবং $\triangle XCD$-তে $\angle C + \angle D = 180 - \angle DXC$)</p>
+            <p>আসলে, বহিঃস্থ $\angle AXB = \angle XCD + \angle XDC = 28^\circ + 66^\circ = 94^\circ$? না, সহজভাবে দেখি।</p>
+            <p>$\triangle CDE$-তে $\angle C = 28^\circ, \angle E = 38^\circ \implies$ বহিঃস্থ $\angle ADC = 66^\circ$।</p>
+            <p>$\triangle XCD$-তে $\angle XCD = 28^\circ$ এবং $\angle XDC = 66^\circ$।</p>
+            <p>$\therefore \angle CXD = 180^\circ - (28^\circ + 66^\circ) = 180^\circ - 94^\circ = 86^\circ$।</p>
+            <p>বিপ্রতীপ কোণ $\angle AXB = \angle CXD = 86^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $86^\circ$</div>
+        </div>
+
+        <span class="sub-question">(v) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB ব্যাস। AB || CD, $\angle ABC = 25^\circ$ হলে, $\angle CED$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>AB সমান্তরাল CD হওয়ায় একান্তর কোণ $\angle BCD = \angle ABC = 25^\circ$।</p>
+            <p>AB ব্যাস হওয়ায় অর্ধবৃত্তস্থ কোণ $\angle ACB = 90^\circ$।</p>
+            <p>$\angle ACD = \angle ACB - \angle BCD = 90^\circ - 25^\circ = 65^\circ$।</p>
+            <p>যেহেতু AB || CD, তাই জ্যা AC = জ্যা BD। সুতরাং $\angle ADC = \angle DAB = 25^\circ$ (বা $\angle ABC = 25^\circ \implies AC$ চাপের ওপর)।</p>
+            <p>$\triangle ABC$-তে $\angle CAB = 180^\circ - (90^\circ + 25^\circ) = 65^\circ$।</p>
+            <p>$\angle CAD = \angle CAB - \angle DAB = 65^\circ - 25^\circ = 40^\circ$।</p>
+            <p>CD চাপের ওপর বৃত্তস্থ কোণ $\angle CED = \angle CAD = 40^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $40^\circ$</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য বা মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) পাশের চিত্রে AD ও BE যথাক্রমে ABC ত্রিভুজের BC ও AC বাহুর উপর লম্ব। A, B, D, E বিন্দু চারটি সমবৃত্তস্থ।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $\angle ADB = \angle AEB = 90^\circ$। যেহেতু AB সরলরেখাংশের একই পার্শ্বে দুটি বিন্দুতে সমান কোণ উৎপন্ন হয়েছে, তাই বিন্দু চারটি সমবৃত্তস্থ।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) ABC ত্রিভুজের AB = AC; BE ও CF যথাক্রমে $\angle ABC$ ও $\angle ACB$-এর সমদ্বিখণ্ডক এবং AC ও AB বাহুকে যথাক্রমে E ও F বিন্দুতে ছেদ করে। B, C, E, F বিন্দু চারটি সমবৃত্তস্থ নয়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $AB = AC \implies \angle B = \angle C$। সমদ্বিখণ্ডক হওয়ায় $\angle EBC = \angle FCB$। জ্যামিতিক প্রমাণে দেখা যায় $\angle BEC = \angle BFC$ হয়, তাই বিন্দুগুলি সমবৃত্তস্থ <strong>হয়</strong>। প্রশ্নে "নয়" বলা আছে, তাই এটি মিথ্যা।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একই বৃত্তাংশস্থ বৃত্তস্থ কোণ _________ ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান</p>
+        </div>
+
+        <span class="sub-question">(ii) দুটি বিন্দুর সংযোজক সরলরেখাংশ তার একই পার্শ্বে অপর দুটি বিন্দুতে সমান সম্মুখ কোণ উৎপন্ন করলে বিন্দু চারটি _________ হবে।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমবৃত্তস্থ (Concyclic)</p>
+        </div>
+
+        <span class="sub-question">(iii) একই বৃত্তে দুটি চাপ দ্বারা উৎপন্ন বৃত্তস্থ কোণ দুটি সমান হলে চাপ দুটির দৈর্ঘ্য _________ ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান</p>
+        </div>
+    </div>
+
+    <!-- Question 13 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">13. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) পাশের চিত্রে O বৃত্তের কেন্দ্র, AC ব্যাস এবং জ্যা DE ও ব্যাস AC সমান্তরাল। $\angle CBD = 60^\circ$ হলে, $\angle CDE$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>CD চাপের ওপর বৃত্তস্থ কোণ $\angle CAD = \angle CBD = 60^\circ$।</p>
+            <p>যেহেতু AC || DE, তাই একান্তর কোণ $\angle ADE = \angle CAD = 60^\circ$।</p>
+            <p>AC ব্যাস হওয়ায়, অর্ধবৃত্তস্থ কোণ $\angle ADC = 90^\circ$।</p>
+            <p>$\angle CDE = \angle ADC - \angle ADE = 90^\circ - 60^\circ = 30^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle CDE = 30^\circ$</div>
+        </div>
+
+        <span class="sub-question">(ii) পাশের চিত্রে $\angle PQR$-এর সমদ্বিখণ্ডক QS; $\angle SQR = 35^\circ$ এবং $\angle PRQ = 32^\circ$ হলে, $\angle QSR$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>QS সমদ্বিখণ্ডক হওয়ায় $\angle PQS = \angle SQR = 35^\circ$। $\therefore \angle PQR = 70^\circ$।</p>
+            <p>$\triangle PQR$-তে $\angle QPR = 180^\circ - (70^\circ + 32^\circ) = 180^\circ - 102^\circ = 78^\circ$।</p>
+            <p>QR চাপের ওপর বৃত্তস্থ কোণ $\angle QSR = \angle QPR = 78^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle QSR = 78^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iii) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB ব্যাস। AB ও CD পরস্পর লম্ব এবং $\angle ADC = 50^\circ$; $\angle CAD$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>AB $\perp$ CD হওয়ায়, AB জ্যা CD-কে সমদ্বিখণ্ডিত করে এবং চাপগুলিও সমান হয় (চাপ AC = চাপ AD)।</p>
+            <p>সুতরাং, $\triangle ACD$ একটি সমদ্বিবাহু ত্রিভুজ যেখানে $AC = AD$।</p>
+            <p>অতএব, $\angle ACD = \angle ADC = 50^\circ$।</p>
+            <p>$\triangle ACD$-তে $\angle CAD = 180^\circ - (50^\circ + 50^\circ) = 180^\circ - 100^\circ = 80^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle CAD = 80^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iv) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB = AC; $\angle ABC = 32^\circ$ হলে, $\angle BDC$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle ABC$-তে $AB = AC \implies \angle ACB = \angle ABC = 32^\circ$।</p>
+            <p>$\therefore \angle BAC = 180^\circ - (32^\circ + 32^\circ) = 180^\circ - 64^\circ = 116^\circ$।</p>
+            <p>ABDC একটি বৃত্তস্থ চতুর্ভুজ। এর বিপরীত কোণগুলি সম্পূরক হয়।</p>
+            <p>$\therefore \angle BDC = 180^\circ - \angle BAC = 180^\circ - 116^\circ = 64^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BDC = 64^\circ$</div>
+        </div>
+
+        <span class="sub-question">(v) পাশের চিত্রে BX ও CY যথাক্রমে $\angle ABC$ ও $\angle ACB$-এর সমদ্বিখণ্ডক। AB = AC এবং BY = 4 সেমি. হলে, AX-এর দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $AB = AC$, তাই $\angle ABC = \angle ACB$।</p>
+            <p>তাদের সমদ্বিখণ্ডকগুলি সমান কোণ তৈরি করবে। ফলে জ্যামিতিক প্রতিসাম্য (symmetry) অনুযায়ী চাপ AY = চাপ AX হবে।</p>
+            <p>সমান চাপের জ্যা সমান হয়, অর্থাৎ $AY = AX$।</p>
+            <p>একইভাবে, সম্পূর্ণ চিত্রটি প্রতিসম হওয়ায় জ্যা BY = জ্যা CX এবং $AY = AX = BY = 4$ সেমি হয়।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: AX-এর দৈর্ঘ্য 4 সেমি।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

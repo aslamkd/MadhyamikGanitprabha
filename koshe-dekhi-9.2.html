@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-9.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>অনুবন্ধী করণী (Conjugate Surd) ও করণী নিরসন:</strong><br>
+        ১) কোনো মিশ্র দ্বিঘাত করণীর করণী নিরসক উৎপাদকের সঙ্গে ওই করণীর যোগফল ও গুণফল উভয়ই যদি মূলদ সংখ্যা হয়, তবে তাকে <strong>অনুবন্ধী করণী</strong> বলে। যেমন $a + \sqrt{b}$ এর অনুবন্ধী করণী $a - \sqrt{b}$।<br>
+        ২) হরের করণী নিরসন করতে হলে হর ও লব উভয়কে হরের করণী নিরসক উৎপাদক দিয়ে গুণ করতে হয়।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. সমাধান করি:</h4>
+        
+        <span class="sub-question">(a) $3^{\frac{1}{2}}$ ও $\sqrt{3}$ -এর গুণফল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $3^{\frac{1}{2}}$ মানেই হলো $\sqrt{3}$।</p>
+            \[
+\begin{array}{l}
+3^{\frac{1}{2}} \times \sqrt{3} = \sqrt{3} \times \sqrt{3} \\
+= 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: গুণফল 3</div>
+        </div>
+
+        <span class="sub-question">(b) $2\sqrt{2}$ -কে কত দিয়ে গুণ করলে 4 পাব লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $x$ দিয়ে গুণ করতে হবে।</p>
+            \[
+\begin{array}{l}
+2\sqrt{2} \times x = 4 \\
+x = \frac{4}{2\sqrt{2}} \\
+x = \frac{2}{\sqrt{2}} \\
+x = \frac{\sqrt{2} \times \sqrt{2}}{\sqrt{2}} \\
+x = \sqrt{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\sqrt{2}$ দিয়ে গুণ করতে হবে।</div>
+        </div>
+
+        <span class="sub-question">(c) $3\sqrt{5}$ এবং $5\sqrt{3}$ -এর গুণফল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+3\sqrt{5} \times 5\sqrt{3} = (3 \times 5) \times (\sqrt{5} \times \sqrt{3}) \\
+= 15\sqrt{15}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: গুণফল $15\sqrt{15}$</div>
+        </div>
+
+        <span class="sub-question">(d) $\sqrt{6} \times \sqrt{15} = x\sqrt{10}$ হলে, x-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\sqrt{6} \times \sqrt{15} = x\sqrt{10} \\
+\sqrt{90} = x\sqrt{10} \\
+\sqrt{9 \times 10} = x\sqrt{10} \\
+3\sqrt{10} = x\sqrt{10} \\
+x = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: x-এর মান 3</div>
+        </div>
+
+        <span class="sub-question">(e) $(\sqrt{5} + \sqrt{3})(\sqrt{5} - \sqrt{3}) = 25 - x^2$ একটি সমীকরণ হলে, x-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বামপক্ষে $(a+b)(a-b) = a^2 - b^2$ সূত্র প্রয়োগ করি:</p>
+            \[
+\begin{array}{l}
+(\sqrt{5})^2 - (\sqrt{3})^2 = 25 - x^2 \\
+5 - 3 = 25 - x^2 \\
+2 = 25 - x^2 \\
+x^2 = 25 - 2 \\
+x^2 = 23 \\
+x = \pm\sqrt{23}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: x-এর মান $\pm\sqrt{23}$</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. গুণফল নির্ণয় করি :</h4>
+
+        <span class="sub-question">(a) $\sqrt{7} \times \sqrt{14}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\sqrt{7} \times \sqrt{14} = \sqrt{7 \times 14} \\
+= \sqrt{7 \times 7 \times 2} \\
+= 7\sqrt{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $7\sqrt{2}$</div>
+        </div>
+
+        <span class="sub-question">(b) $\sqrt{12} \times 2\sqrt{3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\sqrt{12} \times 2\sqrt{3} = \sqrt{4 \times 3} \times 2\sqrt{3} \\
+= 2\sqrt{3} \times 2\sqrt{3} \\
+= 4 \times 3 \\
+= 12
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 12</div>
+        </div>
+
+        <span class="sub-question">(c) $\sqrt{5} \times \sqrt{15} \times \sqrt{3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\sqrt{5} \times \sqrt{15} \times \sqrt{3} = \sqrt{5 \times 15 \times 3} \\
+= \sqrt{5 \times (5 \times 3) \times 3} \\
+= \sqrt{5^2 \times 3^2} \\
+= 5 \times 3 \\
+= 15
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 15</div>
+        </div>
+
+        <span class="sub-question">(d) $\sqrt{2}(3 + \sqrt{5})$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\sqrt{2}(3 + \sqrt{5}) = \sqrt{2} \times 3 + \sqrt{2} \times \sqrt{5} \\
+= 3\sqrt{2} + \sqrt{10}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $3\sqrt{2} + \sqrt{10}$</div>
+        </div>
+
+        <span class="sub-question">(e) $(\sqrt{2} + \sqrt{3})(\sqrt{2} - \sqrt{3})$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$(a+b)(a-b) = a^2 - b^2$ সূত্র প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(\sqrt{2} + \sqrt{3})(\sqrt{2} - \sqrt{3}) = (\sqrt{2})^2 - (\sqrt{3})^2 \\
+= 2 - 3 \\
+= -1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: -1</div>
+        </div>
+
+        <span class="sub-question">(f) $(2\sqrt{3} + 3\sqrt{2})(4\sqrt{2} + \sqrt{5})$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সরাসরি গুণ করে পাই:</p>
+            \[
+\begin{array}{l}
+= 2\sqrt{3}(4\sqrt{2} + \sqrt{5}) + 3\sqrt{2}(4\sqrt{2} + \sqrt{5}) \\
+= 8\sqrt{6} + 2\sqrt{15} + 12(\sqrt{2}\cdot\sqrt{2}) + 3\sqrt{10} \\
+= 8\sqrt{6} + 2\sqrt{15} + 12(2) + 3\sqrt{10} \\
+= 8\sqrt{6} + 2\sqrt{15} + 24 + 3\sqrt{10} \\
+= 24 + 8\sqrt{6} + 3\sqrt{10} + 2\sqrt{15}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $24 + 8\sqrt{6} + 3\sqrt{10} + 2\sqrt{15}$</div>
+        </div>
+
+        <span class="sub-question">(g) $(\sqrt{3} + 1)(\sqrt{3} - 1)(2 - \sqrt{3})(4 + 2\sqrt{3})$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম দুটি পদ গুণ করি:</p>
+            <p>$(\sqrt{3} + 1)(\sqrt{3} - 1) = (\sqrt{3})^2 - 1^2 = 3 - 1 = 2$</p>
+            <p>শেষ দুটি পদ গুণ করি:</p>
+            <p>$(2 - \sqrt{3})(4 + 2\sqrt{3}) = (2 - \sqrt{3}) \times 2(2 + \sqrt{3})$</p>
+            <p>$= 2[(2 - \sqrt{3})(2 + \sqrt{3})] = 2[2^2 - (\sqrt{3})^2] = 2(4 - 3) = 2 \times 1 = 2$</p>
+            <p>এখন সম্পূর্ণ গুণফল:</p>
+            <p>$= 2 \times 2 = 4$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 4</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. বিভিন্ন করণী সংক্রান্ত সমস্যা সমাধান:</h4>
+
+        <span class="sub-question">(a) $\sqrt{5}$ -এর করণী নিরসক উৎপাদক $\sqrt{x}$ হলে, x-এর ক্ষুদ্রতম মান কত হবে তা হিসাব করে লিখি। [যেখানে x একটি পূর্ণসংখ্যা]</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\sqrt{5}$ -এর করণী নিরসন করতে হলে একে এমন কিছু দিয়ে গুণ করতে হবে যাতে গুণফল মূলদ সংখ্যা হয়।</p>
+            <p>$\sqrt{5} \times \sqrt{x} = \sqrt{5x}$</p>
+            <p>এটি মূলদ হতে হলে $5x$-কে একটি পূর্ণবর্গ সংখ্যা হতে হবে। $x$-এর ক্ষুদ্রতম পূর্ণসংখ্যা মান 5 হলে $5 \times 5 = 25$, যার বর্গমূল 5।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: x-এর ক্ষুদ্রতম মান 5।</div>
+        </div>
+
+        <span class="sub-question">(b) $3\sqrt{2} \div 3$ -এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+3\sqrt{2} \div 3 = \frac{3\sqrt{2}}{3} \\
+= \sqrt{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\sqrt{2}$</div>
+        </div>
+
+        <span class="sub-question">(c) $7 \div \sqrt{48}$ -এর হরের করণী নিরসন করতে হরকে ন্যূনতম কত দিয়ে গুণ করতে হবে তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{7}{\sqrt{48}} = \frac{7}{\sqrt{16 \times 3}} \\
+= \frac{7}{4\sqrt{3}}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করতে হলে $\sqrt{3}$-কে তাড়াতে হবে। তাই ন্যূনতম $\sqrt{3}$ দিয়ে হরকে (ও লবকে) গুণ করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: ন্যূনতম $\sqrt{3}$ দিয়ে গুণ করতে হবে।</div>
+        </div>
+
+        <span class="sub-question">(d) $(\sqrt{5} + 2)$ -এর করণী নিরসক উৎপাদক নির্ণয় করি যা করণীটির অনুবন্ধী করণী।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মিশ্র দ্বিঘাত করণীকে সাধারণত $a + \sqrt{b}$ (যেখানে $a$ মূলদ এবং $\sqrt{b}$ অমূলদ) আকারে সাজানো হয়।</p>
+            <p>তাই $\sqrt{5} + 2$ কে আমরা লিখব $2 + \sqrt{5}$।</p>
+            <p>কোনো করণীর অনুবন্ধী (Conjugate) করণী হলো সেই উৎপাদক, যার সাথে মূল করণীর যোগফল এবং গুণফল উভয়ই মূলদ সংখ্যা হয়।</p>
+            <p>$(2 + \sqrt{5})$-এর অনুবন্ধী করণী হলো $(2 - \sqrt{5})$।</p>
+            <p><em>(বি.দ্র: শুধু চিহ্নের অদল-বদল অমূলদ অংশের আগে হয়।)</em></p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: অনুবন্ধী করণীটি হলো $(2 - \sqrt{5})$।</div>
+        </div>
+
+        <span class="sub-question">(e) $(\sqrt{5} + \sqrt{2}) \div \sqrt{7} = \frac{1}{7}(\sqrt{35} + a)$ হলে, a-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বামপক্ষকে হরের করণী নিরসন করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{\sqrt{5} + \sqrt{2}}{\sqrt{7}} = \frac{(\sqrt{5} + \sqrt{2}) \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} \\
+= \frac{\sqrt{35} + \sqrt{14}}{7} \\
+= \frac{1}{7}(\sqrt{35} + \sqrt{14})
+\end{array}
+\]
+            <p>ডানপক্ষের সাথে তুলনা করে পাই: $\frac{1}{7}(\sqrt{35} + \sqrt{14}) = \frac{1}{7}(\sqrt{35} + a)$</p>
+            <p>$\therefore a = \sqrt{14}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: a-এর মান $\sqrt{14}$</div>
+        </div>
+
+        <span class="sub-question">(f) $\displaystyle\frac{5}{\sqrt{3}-2}$ -এর হরের একটি করণী নিরসক উৎপাদক লিখি যা অনুবন্ধী করণী নয়।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে হরটিকে সাজিয়ে লিখি: $-2 + \sqrt{3}$।</p>
+            <p>এর <strong>অনুবন্ধী করণী</strong> হলো $-2 - \sqrt{3}$ (অমূলদ অংশের চিহ্ন পরিবর্তন)।</p>
+            <p>অন্য একটি <strong>করণী নিরসক উৎপাদক</strong> (যা অনুবন্ধী নয়) পেতে চাইলে মূলদ অংশের চিহ্ন পরিবর্তন করতে হয়।</p>
+            <p>অর্থাৎ, $-(-2) + \sqrt{3} = 2 + \sqrt{3}$ বা $\sqrt{3} + 2$।</p>
+            <p>যাচাই: $(\sqrt{3} - 2)(\sqrt{3} + 2) = (\sqrt{3})^2 - 2^2 = 3 - 4 = -1$ (মূলদ সংখ্যা, কিন্তু যোগফল অমূলদ, তাই অনুবন্ধী নয়)।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: উৎপাদকটি হলো $\sqrt{3} + 2$ বা $2 + \sqrt{3}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. $(9 - 4\sqrt{5})$ ও $(-2 - \sqrt{7})$ মিশ্র দ্বিঘাত করণীদ্বয়ের অনুবন্ধী করণীদ্বয় লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>অনুবন্ধী করণী (Conjugate Surd) নির্ণয় করতে হলে মিশ্র দ্বিঘাত করণীর অমূলদ অংশের (রুট যুক্ত অংশের) চিহ্ন পরিবর্তন করতে হয়।</p>
+            <p>১) $(9 - 4\sqrt{5})$ -এর অনুবন্ধী করণী হলো: $9 + 4\sqrt{5}$</p>
+            <p>২) $(-2 - \sqrt{7})$ -এর অনুবন্ধী করণী হলো: $-2 + \sqrt{7}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $9 + 4\sqrt{5}$ এবং $-2 + \sqrt{7}$</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. নীচের মিশ্র দ্বিঘাত করণীর 2 টি করে করণী নিরসক উৎপাদক লিখি:</h4>
+        <p class="mb-3 text-muted"><i class="fas fa-info-circle text-info me-2"></i><strong>নিয়ম:</strong> একটি মিশ্র দ্বিঘাত করণী $a + \sqrt{b}$ এর দুটি করণী নিরসক উৎপাদক হলো: ১) $a - \sqrt{b}$ এবং ২) $-a + \sqrt{b}$</p>
+
+        <span class="sub-question">(i) $\sqrt{5} + \sqrt{2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি উৎপাদক হলো: $\sqrt{5} - \sqrt{2}$ এবং $-\sqrt{5} + \sqrt{2}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\sqrt{5} - \sqrt{2}, -\sqrt{5} + \sqrt{2}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $13 + \sqrt{6}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি উৎপাদক হলো: $13 - \sqrt{6}$ এবং $-13 + \sqrt{6}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $13 - \sqrt{6}, -13 + \sqrt{6}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $\sqrt{8} - 3$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সাজিয়ে লিখলে: $-3 + \sqrt{8}$</p>
+            <p>দুটি উৎপাদক হলো: $-3 - \sqrt{8}$ এবং $3 + \sqrt{8}$</p>
+            <p>(বা $\sqrt{8} + 3$ এবং $-\sqrt{8} - 3$)</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $-3 - \sqrt{8}, 3 + \sqrt{8}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $\sqrt{17} - \sqrt{15}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি উৎপাদক হলো: $\sqrt{17} + \sqrt{15}$ এবং $-\sqrt{17} - \sqrt{15}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\sqrt{17} + \sqrt{15}, -\sqrt{17} - \sqrt{15}$</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. হরের করণী নিরসন করি:</h4>
+
+        <span class="sub-question">(i) $\displaystyle\frac{2\sqrt{3} + 3\sqrt{2}}{\sqrt{6}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লব ও হরকে $\sqrt{6}$ দিয়ে গুণ করে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{(2\sqrt{3} + 3\sqrt{2}) \times \sqrt{6}}{\sqrt{6} \times \sqrt{6}} \\
+= \frac{2\sqrt{18} + 3\sqrt{12}}{6} \\
+= \frac{2\sqrt{9 \times 2} + 3\sqrt{4 \times 3}}{6} \\
+= \frac{2(3\sqrt{2}) + 3(2\sqrt{3})}{6} \\
+= \frac{6\sqrt{2} + 6\sqrt{3}}{6} \\
+= \frac{6(\sqrt{2} + \sqrt{3})}{6} \\
+= \sqrt{2} + \sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sqrt{2} + \sqrt{3}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $\displaystyle\frac{\sqrt{2} - 1 + \sqrt{6}}{\sqrt{5}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লব ও হরকে $\sqrt{5}$ দিয়ে গুণ করে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{(\sqrt{2} - 1 + \sqrt{6}) \times \sqrt{5}}{\sqrt{5} \times \sqrt{5}} \\
+= \frac{\sqrt{10} - \sqrt{5} + \sqrt{30}}{5}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{\sqrt{10} - \sqrt{5} + \sqrt{30}}{5}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $\displaystyle\frac{\sqrt{3} + 1}{\sqrt{3} - 1}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>হরের অনুবন্ধী করণী $(\sqrt{3} + 1)$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(\sqrt{3} + 1)(\sqrt{3} + 1)}{(\sqrt{3} - 1)(\sqrt{3} + 1)} \\
+= \frac{(\sqrt{3} + 1)^2}{(\sqrt{3})^2 - 1^2} \\
+= \frac{(\sqrt{3})^2 + 2\sqrt{3}(1) + 1^2}{3 - 1} \\
+= \frac{3 + 2\sqrt{3} + 1}{2} \\
+= \frac{4 + 2\sqrt{3}}{2} \\
+= \frac{2(2 + \sqrt{3})}{2} \\
+= 2 + \sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $2 + \sqrt{3}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $\displaystyle\frac{3 + \sqrt{5}}{\sqrt{7} - \sqrt{3}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>হরের অনুবন্ধী করণী $(\sqrt{7} + \sqrt{3})$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(3 + \sqrt{5})(\sqrt{7} + \sqrt{3})}{(\sqrt{7} - \sqrt{3})(\sqrt{7} + \sqrt{3})} \\
+= \frac{3\sqrt{7} + 3\sqrt{3} + \sqrt{35} + \sqrt{15}}{(\sqrt{7})^2 - (\sqrt{3})^2} \\
+= \frac{3\sqrt{7} + 3\sqrt{3} + \sqrt{35} + \sqrt{15}}{7 - 3} \\
+= \frac{3\sqrt{7} + 3\sqrt{3} + \sqrt{35} + \sqrt{15}}{4}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{3\sqrt{7} + 3\sqrt{3} + \sqrt{35} + \sqrt{15}}{4}$</div>
+        </div>
+
+        <span class="sub-question">(v) $\displaystyle\frac{3\sqrt{2} + 1}{2\sqrt{5} - 1}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>হরের অনুবন্ধী করণী $(2\sqrt{5} + 1)$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(3\sqrt{2} + 1)(2\sqrt{5} + 1)}{(2\sqrt{5} - 1)(2\sqrt{5} + 1)} \\
+= \frac{6\sqrt{10} + 3\sqrt{2} + 2\sqrt{5} + 1}{(2\sqrt{5})^2 - 1^2} \\
+= \frac{6\sqrt{10} + 3\sqrt{2} + 2\sqrt{5} + 1}{20 - 1} \\
+= \frac{6\sqrt{10} + 3\sqrt{2} + 2\sqrt{5} + 1}{19}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{6\sqrt{10} + 3\sqrt{2} + 2\sqrt{5} + 1}{19}$</div>
+        </div>
+
+        <span class="sub-question">(vi) $\displaystyle\frac{3\sqrt{2} + 2\sqrt{3}}{3\sqrt{2} - 2\sqrt{3}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>হরের অনুবন্ধী করণী $(3\sqrt{2} + 2\sqrt{3})$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(3\sqrt{2} + 2\sqrt{3})^2}{(3\sqrt{2} - 2\sqrt{3})(3\sqrt{2} + 2\sqrt{3})} \\
+= \frac{(3\sqrt{2})^2 + 2(3\sqrt{2})(2\sqrt{3}) + (2\sqrt{3})^2}{(3\sqrt{2})^2 - (2\sqrt{3})^2} \\
+= \frac{18 + 12\sqrt{6} + 12}{18 - 12} \\
+= \frac{30 + 12\sqrt{6}}{6} \\
+= \frac{6(5 + 2\sqrt{6})}{6} \\
+= 5 + 2\sqrt{6}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $5 + 2\sqrt{6}$</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. প্রথমটিকে দ্বিতীয়টি দিয়ে ভাগ করে ভাজককে মূলদ সংখ্যায় পরিণত করি।</h4>
+
+        <span class="sub-question">(i) $3\sqrt{2} + \sqrt{5}, \quad \sqrt{2} + 1$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ভাগফল = $\displaystyle\frac{3\sqrt{2} + \sqrt{5}}{\sqrt{2} + 1}$</p>
+            <p>হরের অনুবন্ধী করণী $(\sqrt{2} - 1)$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(3\sqrt{2} + \sqrt{5})(\sqrt{2} - 1)}{(\sqrt{2} + 1)(\sqrt{2} - 1)} \\
+= \frac{3(\sqrt{2})^2 - 3\sqrt{2} + \sqrt{10} - \sqrt{5}}{(\sqrt{2})^2 - 1^2} \\
+= \frac{6 - 3\sqrt{2} + \sqrt{10} - \sqrt{5}}{2 - 1} \\
+= 6 - 3\sqrt{2} + \sqrt{10} - \sqrt{5}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $6 - 3\sqrt{2} + \sqrt{10} - \sqrt{5}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $2\sqrt{3} - \sqrt{2}, \quad \sqrt{2} - \sqrt{3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ভাগফল = $\displaystyle\frac{2\sqrt{3} - \sqrt{2}}{\sqrt{2} - \sqrt{3}}$</p>
+            <p>হরের করণী নিরসক $(\sqrt{2} + \sqrt{3})$ দিয়ে লব ও হরকে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{(2\sqrt{3} - \sqrt{2})(\sqrt{2} + \sqrt{3})}{(\sqrt{2} - \sqrt{3})(\sqrt{2} + \sqrt{3})} \\
+= \frac{2\sqrt{6} + 2(\sqrt{3})^2 - (\sqrt{2})^2 - \sqrt{6}}{(\sqrt{2})^2 - (\sqrt{3})^2} \\
+= \frac{2\sqrt{6} + 6 - 2 - \sqrt{6}}{2 - 3} \\
+= \frac{\sqrt{6} + 4}{-1} \\
+= -4 - \sqrt{6}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $-4 - \sqrt{6}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $3 + \sqrt{6}, \quad \sqrt{3} + \sqrt{2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ভাগফল = $\displaystyle\frac{3 + \sqrt{6}}{\sqrt{3} + \sqrt{2}}$</p>
+            <p>লব থেকে $\sqrt{3}$ কমন নিই:</p>
+            \[
+\begin{array}{l}
+= \frac{\sqrt{3}(\sqrt{3} + \sqrt{2})}{\sqrt{3} + \sqrt{2}} \\
+= \sqrt{3} \quad [\text{উপর-নীচ কেটে যায়}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\sqrt{3}$</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. মান নির্ণয় করি :</h4>
+
+        <span class="sub-question">(i) $\displaystyle\frac{2\sqrt{5} + 1}{\sqrt{5} + 1} - \frac{4\sqrt{5} - 1}{\sqrt{5} - 1}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রতিটি পদের আলাদাভাবে হরের করণী নিরসন করি।</p>
+            <p>প্রথম পদ:</p>
+            \[
+\begin{array}{l}
+\frac{2\sqrt{5} + 1}{\sqrt{5} + 1} = \frac{(2\sqrt{5} + 1)(\sqrt{5} - 1)}{(\sqrt{5} + 1)(\sqrt{5} - 1)} \\
+= \frac{10 - 2\sqrt{5} + \sqrt{5} - 1}{5 - 1} \\
+= \frac{9 - \sqrt{5}}{4}
+\end{array}
+\]
+            <p>দ্বিতীয় পদ:</p>
+            \[
+\begin{array}{l}
+\frac{4\sqrt{5} - 1}{\sqrt{5} - 1} = \frac{(4\sqrt{5} - 1)(\sqrt{5} + 1)}{(\sqrt{5} - 1)(\sqrt{5} + 1)} \\
+= \frac{20 + 4\sqrt{5} - \sqrt{5} - 1}{5 - 1} \\
+= \frac{19 + 3\sqrt{5}}{4}
+\end{array}
+\]
+            <p>এবার বিয়োগ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{9 - \sqrt{5}}{4} - \frac{19 + 3\sqrt{5}}{4} \\
+= \frac{9 - \sqrt{5} - 19 - 3\sqrt{5}}{4} \\
+= \frac{-10 - 4\sqrt{5}}{4} \\
+= \frac{2(-5 - 2\sqrt{5})}{4} \\
+= \frac{-5 - 2\sqrt{5}}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{-5 - 2\sqrt{5}}{2}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $\displaystyle\frac{8 + 3\sqrt{2}}{3 + \sqrt{5}} - \frac{8 - 3\sqrt{2}}{3 - \sqrt{5}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি ভগ্নাংশের ল.সা.গু. (LCM) নিয়ে বিয়োগ করি। ল.সা.গু. = $(3+\sqrt{5})(3-\sqrt{5}) = 3^2 - (\sqrt{5})^2 = 9 - 5 = 4$</p>
+            \[
+\begin{array}{l}
+= \frac{(8 + 3\sqrt{2})(3 - \sqrt{5}) - (8 - 3\sqrt{2})(3 + \sqrt{5})}{4}
+\end{array}
+\]
+            <p>লবকে গুণ করে সরল করি:</p>
+            <p>প্রথম অংশ = $24 - 8\sqrt{5} + 9\sqrt{2} - 3\sqrt{10}$</p>
+            <p>দ্বিতীয় অংশ = $24 + 8\sqrt{5} - 9\sqrt{2} - 3\sqrt{10}$</p>
+            \[
+\begin{array}{l}
+= \frac{(24 - 8\sqrt{5} + 9\sqrt{2} - 3\sqrt{10}) - (24 + 8\sqrt{5} - 9\sqrt{2} - 3\sqrt{10})}{4} \\
+= \frac{24 - 8\sqrt{5} + 9\sqrt{2} - 3\sqrt{10} - 24 - 8\sqrt{5} + 9\sqrt{2} + 3\sqrt{10}}{4} \\
+= \frac{-16\sqrt{5} + 18\sqrt{2}}{4} \\
+= \frac{2(9\sqrt{2} - 8\sqrt{5})}{4} \\
+= \frac{9\sqrt{2} - 8\sqrt{5}}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{9\sqrt{2} - 8\sqrt{5}}{2}$</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

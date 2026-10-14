@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-6.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>সমহার বৃদ্ধি বা হ্রাস সূত্র (Uniform Growth/Decay):</strong><br>
+        যদি বর্তমান মান $P$, বার্ষিক হার $r\%$ এবং সময় $n$ বছর হয়, তবে $n$ বছর পরে মান ($A$) হবে:<br>
+        ১) সমহার বৃদ্ধির ক্ষেত্রে: $A = \displaystyle P\left(1 + \frac{r}{100}\right)^n$<br>
+        ২) সমহার হ্রাসের ক্ষেত্রে: $A = \displaystyle P\left(1 - \frac{r}{100}\right)^n$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. পহলমপুর গ্রামের বর্তমান জনসংখ্যা 10000; ওই গ্রামে প্রতি বছর জনসংখ্যা বৃদ্ধির হার 3% হলে, 2 বছর পরে ওই গ্রামের জনসংখ্যা কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে,</p>
+            <p>বর্তমান জনসংখ্যা ($P$) = 10000</p>
+            <p>বার্ষিক জনসংখ্যা বৃদ্ধির হার ($r$) = 3%</p>
+            <p>সময় ($n$) = 2 বছর</p>
+            <p>যেহেতু জনসংখ্যা বৃদ্ধি পাচ্ছে, তাই সমহার বৃদ্ধির সূত্র প্রয়োগ করে পাই: $A = \displaystyle P\left(1 + \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 10000 \left(1 + \frac{3}{100}\right)^2 \\
+= 10000 \left(\frac{103}{100}\right)^2 \\
+= 10000 \times \frac{103}{100} \times \frac{103}{100} \\
+= 103 \times 103 \\
+= 10609
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছর পরে ওই গ্রামের জনসংখ্যা 10609 জন হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. কোনো একটি রাজ্যের প্রতি বছর জনসংখ্যা বৃদ্ধির হার 2%; বর্তমান জনসংখ্যা 80000000 হলে, 3 বছর পরে ওই রাজ্যের জনসংখ্যা কত হবে, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে,</p>
+            <p>বর্তমান জনসংখ্যা ($P$) = 80000000</p>
+            <p>বৃদ্ধির হার ($r$) = 2%</p>
+            <p>সময় ($n$) = 3 বছর</p>
+            <p>সমহার বৃদ্ধির সূত্রানুযায়ী: $A = \displaystyle P\left(1 + \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 80000000 \left(1 + \frac{2}{100}\right)^3 \\
+= 80000000 \left(\frac{102}{100}\right)^3 \\
+= 80000000 \left(\frac{51}{50}\right)^3 \quad [\text{2 দিয়ে কেটে}] \\
+= 80000000 \times \frac{51}{50} \times \frac{51}{50} \times \frac{51}{50} \\
+= 80000000 \times \frac{132651}{125000} \\
+= 640 \times 132651 \\
+= 84896640
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পরে ওই রাজ্যের জনসংখ্যা 84896640 জন হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. পাড়ার একটি লেদ কারখানার একটি মেশিনের মূল্য প্রতি বছর 10% হ্রাস প্রাপ্ত হয়। মেশিনটির বর্তমান মূল্য 100000 টাকা হলে, 3 বছর পরে ওই মেশিনটির মূল্য কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে বর্তমান মূল্য ($P$) = 100000 টাকা।</p>
+            <p>হ্রাসের হার ($r$) = 10%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>যেহেতু মূল্য হ্রাস পাচ্ছে, তাই সমহার হ্রাসের সূত্র প্রয়োগ করে পাই: $A = \displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 100000 \left(1 - \frac{10}{100}\right)^3 \\
+= 100000 \left(\frac{90}{100}\right)^3 \\
+= 100000 \left(\frac{9}{10}\right)^3 \\
+= 100000 \times \frac{729}{1000} \\
+= 100 \times 729 \\
+= 72900
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পরে ওই মেশিনটির মূল্য 72900 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. সর্বশিক্ষা অভিযানের ফলে বিদ্যালয় ছেড়ে চলে যাওয়া শিক্ষার্থীদের পুনরায় বিদ্যালয়ে ভর্তির ব্যবস্থা করা হয়েছে। এরূপ শিক্ষার্থীদের ভর্তির হার প্রতি বছর তার পূর্ববর্তী বছর অপেক্ষা 5% বৃদ্ধি পেয়েছে। কোনো এক জেলায় বর্তমান বছরে যদি 3528 জন এরূপ শিক্ষার্থী নতুন করে ভর্তি হয়ে থাকে, তবে 2 বছর পূর্বে এরূপ কত জন শিক্ষার্থী ভর্তি হয়েছিল, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, 2 বছর পূর্বে শিক্ষার্থীর সংখ্যা ছিল $P$ জন।</p>
+            <p>বৃদ্ধির হার ($r$) = 5%</p>
+            <p>সময় ($n$) = 2 বছর</p>
+            <p>বর্তমান জনসংখ্যা ($A$) = 3528 জন।</p>
+            <p>সমহার বৃদ্ধির সূত্রানুযায়ী: $A = \displaystyle P\left(1 + \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+3528 = P\left(1 + \frac{5}{100}\right)^2 \\
+3528 = P\left(1 + \frac{1}{20}\right)^2 \\
+3528 = P\left(\frac{21}{20}\right)^2 \\
+3528 = P \times \frac{441}{400} \\
+P = \frac{3528 \times 400}{441} \\
+P = 8 \times 400 \\
+P = 3200
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছর পূর্বে 3200 জন শিক্ষার্থী ভর্তি হয়েছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. পুরুলিয়া জেলায় পথ নিরাপত্তা সংক্রান্ত প্রচার অভিযানের মাধ্যমে পথ দুর্ঘটনা প্রতি বছর তার পূর্ব বছরের তুলনায় 10% হ্রাস পেয়েছে। বর্তমান বছরে ওই জেলায় 8748 টি পথ দুর্ঘটনা ঘটে থাকলে, 3 বছর আগে পথ দুর্ঘটনার সংখ্যা কত ছিল, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, 3 বছর আগে পথ দুর্ঘটনার সংখ্যা ছিল $P$ টি।</p>
+            <p>হ্রাসের হার ($r$) = 10%</p>
+            <p>সময় ($n$) = 3 বছর</p>
+            <p>বর্তমান দুর্ঘটনা ($A$) = 8748 টি।</p>
+            <p>সমহার হ্রাসের সূত্রানুযায়ী: $A = \displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+8748 = P\left(1 - \frac{10}{100}\right)^3 \\
+8748 = P\left(\frac{9}{10}\right)^3 \\
+8748 = P \times \frac{729}{1000} \\
+P = \frac{8748 \times 1000}{729} \\
+P = 12 \times 1000 \\
+P = 12000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর আগে পথ দুর্ঘটনার সংখ্যা ছিল 12000 টি।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. একটি মৎস্যজীবী সমবায় সমিতি উন্নত প্রথায় মাছ চাষ করার জন্য এরূপ একটি পরিকল্পনা গ্রহণ করেছে যে কোনো বছরের মাছের উৎপাদন পূর্ববর্তী বছরের তুলনায় 10% বৃদ্ধি করবে। বর্তমান বছরে যদি ওই সমবায় সমিতি 400 কুইন্টাল মাছ উৎপাদন করে, তবে 3 বছর পরে সমবায় সমিতির মাছের উৎপাদন কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বর্তমান উৎপাদন ($P$) = 400 কুইন্টাল।</p>
+            <p>বৃদ্ধির হার ($r$) = 10%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>সমহার বৃদ্ধির সূত্রানুযায়ী: $A = \displaystyle P\left(1 + \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 400 \left(1 + \frac{10}{100}\right)^3 \\
+= 400 \left(\frac{11}{10}\right)^3 \\
+= 400 \times \frac{1331}{1000} \\
+= 4 \times \frac{1331}{10} \\
+= \frac{5324}{10} \\
+= 532.4
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পরে মাছের উৎপাদন 532.4 কুইন্টাল হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি গাছের উচ্চতা প্রতি বছর 20% হারে বৃদ্ধি পায়। গাছটির বর্তমান উচ্চতা 28.8 মিটার হলে, 2 বছর আগে গাছটির উচ্চতা কত ছিল, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, 2 বছর আগে গাছটির উচ্চতা ছিল $P$ মিটার।</p>
+            <p>বৃদ্ধির হার ($r$) = 20%</p>
+            <p>সময় ($n$) = 2 বছর</p>
+            <p>বর্তমান উচ্চতা ($A$) = 28.8 মিটার।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{20}{100}\right)^2 = 28.8 \\
+P\left(1 + \frac{1}{5}\right)^2 = 28.8 \\
+P\left(\frac{6}{5}\right)^2 = 28.8 \\
+P \times \frac{36}{25} = 28.8 \\
+P = \frac{28.8 \times 25}{36} \\
+P = 0.8 \times 25 \\
+P = 20
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছর আগে গাছটির উচ্চতা ছিল 20 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. কোনো একটি পরিবার আজ থেকে 3 বছর পূর্বে বিদ্যুৎ অপচয় বন্ধ করতে ইলেকট্রিক বিলের খরচ পূর্ববর্তী বছরের তুলনায় 5% হ্রাস করার পরিকল্পনা গ্রহণ করে। 3 বছর পূর্বে ওই পরিবারকে বছরে 4000 টাকার ইলেকট্রিক বিল দিতে হয়েছিল। বর্তমান বছরে ইলেকট্রিক বিলে বিদ্যুৎ খরচ কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>3 বছর পূর্বের বিল ($P$) = 4000 টাকা।</p>
+            <p>হ্রাসের হার ($r$) = 5%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>বর্তমান বছরের বিল ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 4000 \left(1 - \frac{5}{100}\right)^3 \\
+= 4000 \left(1 - \frac{1}{20}\right)^3 \\
+= 4000 \left(\frac{19}{20}\right)^3 \\
+= 4000 \times \frac{6859}{8000} \\
+= \frac{6859}{2} \\
+= 3429.50
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বর্তমান বছরে ইলেকট্রিক বিল 3429.50 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. শোভনবাবুর ওজন 80 কিগ্রা.। ওজন কমানোর জন্য তিনি নিয়মিত হাঁটা শুরু করলেন। তিনি ঠিক করলেন যে প্রতি বছরের প্রারম্ভে যা ওজন থাকবে তার 10% হ্রাস করবেন। 3 বছর পরে শোভনবাবুর ওজন কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বর্তমান ওজন ($P$) = 80 কিগ্রা.</p>
+            <p>হ্রাসের হার ($r$) = 10%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>3 বছর পরের ওজন ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 80 \left(1 - \frac{10}{100}\right)^3 \\
+= 80 \left(\frac{9}{10}\right)^3 \\
+= 80 \times \frac{729}{1000} \\
+= \frac{8 \times 729}{100} \\
+= \frac{5832}{100} \\
+= 58.32
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পরে শোভনবাবুর ওজন 58.32 কিগ্রা. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. কোনো এক জেলার সমস্ত মাধ্যমিক শিক্ষাকেন্দ্রের (M.S.K) বর্তমান শিক্ষার্থীর সংখ্যা 3993 জন। প্রতি বছর বিগত বছরের তুলনায় যদি 10% শিক্ষার্থী বৃদ্ধি পেয়ে থাকে, তবে 3 বছর পূর্বে ওই জেলার সকল মাধ্যমিক শিক্ষাকেন্দ্রের শিক্ষার্থীর সংখ্যা কত ছিল, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, 3 বছর পূর্বে শিক্ষার্থীর সংখ্যা ছিল $P$ জন।</p>
+            <p>বৃদ্ধির হার ($r$) = 10%</p>
+            <p>বর্তমান শিক্ষার্থীর সংখ্যা ($A$) = 3993 জন।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{10}{100}\right)^3 = 3993 \\
+P\left(\frac{11}{10}\right)^3 = 3993 \\
+P \times \frac{1331}{1000} = 3993 \\
+P = \frac{3993 \times 1000}{1331} \\
+P = 3 \times 1000 \\
+P = 3000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পূর্বে শিক্ষার্থীর সংখ্যা ছিল 3000 জন।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. কৃষিজমিতে কেবলমাত্র রাসায়নিক সার ও কীটনাশক ব্যবহারের কুফল সম্পর্কে সচেতনতা বৃদ্ধির ফলে রসুলপুর গ্রামে কেবলমাত্র রাসায়নিক সার ও কীটনাশক ব্যবহারকারী কৃষকের সংখ্যা পূর্ববর্তী বছরের তুলনায় 20% হ্রাস পায়। 3 বছর পূর্বে রসুলপুর গ্রামের ওরকম কৃষকের সংখ্যা 3000 জন হলে, বর্তমানে ওই গ্রামে ওরকম কৃষকের সংখ্যা কত হবে, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>3 বছর পূর্বের সংখ্যা ($P$) = 3000 জন।</p>
+            <p>হ্রাসের হার ($r$) = 20%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>বর্তমান সংখ্যা ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 3000 \left(1 - \frac{20}{100}\right)^3 \\
+= 3000 \left(1 - \frac{1}{5}\right)^3 \\
+= 3000 \left(\frac{4}{5}\right)^3 \\
+= 3000 \times \frac{64}{125} \\
+= 24 \times 64 \\
+= 1536
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বর্তমানে ওই গ্রামে কৃষকের সংখ্যা 1536 জন হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. একটি কারখানার একটি মেশিনের মূল্য 180000 টাকা। মেশিনটির মূল্য প্রতি বছর 10% হ্রাস প্রাপ্ত হয়। 3 বছর পরে ওই মেশিনের মূল্য কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বর্তমান মূল্য ($P$) = 180000 টাকা।</p>
+            <p>হ্রাসের হার ($r$) = 10%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>3 বছর পরের মূল্য ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 180000 \left(1 - \frac{10}{100}\right)^3 \\
+= 180000 \left(\frac{9}{10}\right)^3 \\
+= 180000 \times \frac{729}{1000} \\
+= 180 \times 729 \\
+= 131220
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পরে মেশিনটির মূল্য 131220 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. বকুলতলা গ্রামের পঞ্চায়েত সমিতি যেসব পরিবারে বিদ্যুৎ সংযোগ নেই তাদের বাড়িতে বিদ্যুৎ পৌঁছানোর পরিকল্পনা গ্রহণ করে। এই গ্রামে 1200 পরিবারের বিদ্যুৎ সংযোগ নেই। প্রতি বছর যদি পূর্ব বছরের তুলনায় 75% বিদ্যুৎহীন পরিবারে বিদ্যুৎ পৌঁছানোর ব্যবস্থা করা হয়, তবে 2 বছর পরে বকুলতলা গ্রামে বিদ্যুৎহীন পরিবারের সংখ্যা কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বর্তমান বিদ্যুৎহীন পরিবার ($P$) = 1200 টি।</p>
+            <p>প্রতি বছর 75% পরিবারে বিদ্যুৎ পৌঁছানোর অর্থ হলো বিদ্যুৎহীন পরিবারের সংখ্যা 75% হারে হ্রাস পাচ্ছে।</p>
+            <p>হ্রাসের হার ($r$) = 75%</p>
+            <p>সময় ($n$) = 2 বছর।</p>
+            <p>2 বছর পরের বিদ্যুৎহীন পরিবার ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 1200 \left(1 - \frac{75}{100}\right)^2 \\
+= 1200 \left(1 - \frac{3}{4}\right)^2 \\
+= 1200 \left(\frac{1}{4}\right)^2 \\
+= 1200 \times \frac{1}{16} \\
+= 75
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছর পরে 75 টি বিদ্যুৎহীন পরিবার থাকবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. বোতল ভর্তি ঠান্ডা পানীয় ব্যবহারের উপর বিরূপ প্রতিক্রিয়া প্রচারের ফলে প্রতি বছর তার পূর্ববর্তী বছরের তুলনায় ওই ঠান্ডা পানীয় ব্যবহারকারীর সংখ্যা 25% হ্রাস পায়। 3 বছর পূর্বে কোনো শহরে ঠান্ডা পানীয় ব্যবহারকারীর সংখ্যা 80000 হলে, বর্তমান বছরে ঠান্ডা পানীয় ব্যবহারকারীর সংখ্যা কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>3 বছর পূর্বের ব্যবহারকারী ($P$) = 80000 জন।</p>
+            <p>হ্রাসের হার ($r$) = 25%</p>
+            <p>সময় ($n$) = 3 বছর।</p>
+            <p>বর্তমান ব্যবহারকারী ($A$) = $\displaystyle P\left(1 - \frac{r}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 80000 \left(1 - \frac{25}{100}\right)^3 \\
+= 80000 \left(1 - \frac{1}{4}\right)^3 \\
+= 80000 \left(\frac{3}{4}\right)^3 \\
+= 80000 \times \frac{27}{64} \\
+= 1250 \times 27 \\
+= 33750
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বর্তমানে ব্যবহারকারীর সংখ্যা 33750 জন হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. ধূমপান বিরোধী প্রচারের ফলে প্রতি বছর ধূমপায়ীর সংখ্যা $6\frac{1}{4}\%$ হারে হ্রাস পায়। বর্তমানে কোনো শহরে 33750 জন ধূমপায়ী থাকলে, 3 বছর পূর্বে ওই শহরে কত জন ধূমপায়ী ছিল, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, 3 বছর পূর্বে ধূমপায়ীর সংখ্যা ছিল $P$ জন।</p>
+            <p>হ্রাসের হার ($r$) = $6\frac{1}{4}\% = \displaystyle\frac{25}{4}\%$</p>
+            <p>বর্তমান ধূমপায়ী ($A$) = 33750 জন।</p>
+            <p>সমহার হ্রাসের সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+P\left(1 - \frac{\frac{25}{4}}{100}\right)^3 = 33750 \\
+P\left(1 - \frac{25}{400}\right)^3 = 33750 \\
+P\left(1 - \frac{1}{16}\right)^3 = 33750 \\
+P\left(\frac{15}{16}\right)^3 = 33750 \\
+P \times \frac{3375}{4096} = 33750 \\
+P = \frac{33750 \times 4096}{3375} \\
+P = 10 \times 4096 = 40960
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছর পূর্বে ধূমপায়ীর সংখ্যা 40960 জন ছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) চক্রবৃদ্ধি সুদের ক্ষেত্রে প্রতি বছর বার্ষিক চক্রবৃদ্ধি সুদের হার</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চক্রবৃদ্ধি সুদের ক্ষেত্রে বিভিন্ন বছরে সুদের হার সমান হতে পারে (যেমন 10% প্রতি বছর) অথবা অসমানও হতে পারে (যেমন ১ম বছরে 5%, ২য় বছরে 6%)।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) সমান অথবা অসমান উভয়েই</div>
+        </div>
+
+        <span class="sub-question">(ii) চক্রবৃদ্ধি সুদের ক্ষেত্রে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চক্রবৃদ্ধি সুদের ক্ষেত্রে প্রতি বছর শেষে প্রাপ্ত সুদ আসলের সঙ্গে যোগ হয়ে নতুন আসল তৈরি করে। তাই প্রতি বছর আসল পরিবর্তিত হয়।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) প্রতি বছর আসল পরিবর্তিত হয়</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি গ্রামের বর্তমান জনসংখ্যা p এবং প্রতি বছর জনসংখ্যা বৃদ্ধির হার 2r% হলে, n বছর পর জনসংখ্যা হবে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সূত্রানুযায়ী, $A = \displaystyle p\left(1 + \frac{2r}{100}\right)^n = p\left(1 + \frac{r}{50}\right)^n$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $\displaystyle p\left(1 + \frac{r}{50}\right)^n$</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি মেশিনের বর্তমান মূল্য 2p টাকা এবং প্রতি বছর মেশিনটির দাম 2r% হ্রাস হলে 2n বছর পরে মেশিনের দাম হবে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>হ্রাসের সূত্রানুযায়ী, $A = \displaystyle 2p\left(1 - \frac{2r}{100}\right)^{2n} = 2p\left(1 - \frac{r}{50}\right)^{2n}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $\displaystyle 2p\left(1 - \frac{r}{50}\right)^{2n}$ টাকা</div>
+        </div>
+
+        <span class="sub-question">(v) এক ব্যক্তি একটি ব্যাংকে 100 টাকা জমা রেখে, 2 বছর পর সমূল চক্রবৃদ্ধি পেলেন 121 টাকা। বার্ষিক চক্রবৃদ্ধি সুদের হার</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি হার = r%। $100(1 + \displaystyle\frac{r}{100})^2 = 121 \implies (1 + \frac{r}{100})^2 = \frac{121}{100} = \left(\frac{11}{10}\right)^2$</p>
+            <p>$1 + \displaystyle\frac{r}{100} = \frac{11}{10} \implies \frac{r}{100} = \frac{1}{10} \implies r = 10$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 10%</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি :</h5>
+        
+        <span class="sub-question">(i) নির্দিষ্ট পরিমাণ টাকার বার্ষিক নির্দিষ্ট শতকরা হার সুদে নির্দিষ্ট সময়ের জন্য চক্রবৃদ্ধি সুদ সরল সুদের থেকে কম হবে।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> প্রথম বছরের পর চক্রবৃদ্ধি সুদের পরিমাণ সর্বদা সরল সুদের থেকে বেশি হয়, কম নয়। (প্রথম বছরে সমান হয়)।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) চক্রবৃদ্ধি সুদের ক্ষেত্রে নির্দিষ্ট সময় অন্তর সুদ আসলের সঙ্গে যোগ হয়। সেই কারণে আসলের পরিমাণ ক্রমাগত বাড়তে থাকে।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> এটিই চক্রবৃদ্ধি সুদের মূল সংজ্ঞা ও বৈশিষ্ট্য।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি :</h5>
+
+        <span class="sub-question">(i) নির্দিষ্ট পরিমাণ টাকার বার্ষিক নির্দিষ্ট শতকরা হার সুদে 1 বছরে চক্রবৃদ্ধি সুদের পরিমাণ এবং সরল সুদের পরিমাণ _________ ।</span>
+        <div class="solution-box">
+            <p>যেহেতু 1 বছর শেষে প্রথমবার সুদ আসলের সাথে যোগ হয়, তাই প্রথম বছরের জন্য উভয় সুদই সমান হয়।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান</p>
+        </div>
+
+        <span class="sub-question">(ii) সময়ের সঙ্গে কোনো কিছুর নির্দিষ্ট হারে বৃদ্ধি হলে সেটি _________ বৃদ্ধি।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমহার</p>
+        </div>
+
+        <span class="sub-question">(iii) সময়ের সঙ্গে কোনো কিছুর নির্দিষ্ট হারে হ্রাস হলে সেটি সমহার _________ ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> হ্রাস</p>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) 400 টাকার 2 বছরে সমূল চক্রবৃদ্ধি 441 টাকা হলে, বার্ষিক শতকরা চক্রবৃদ্ধি সুদের হার কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি সুদের হার = $r\%$।</p>
+            \[
+\begin{array}{l}
+400 \left(1 + \frac{r}{100}\right)^2 = 441 \\
+\left(1 + \frac{r}{100}\right)^2 = \frac{441}{400} \\
+\left(1 + \frac{r}{100}\right)^2 = \left(\frac{21}{20}\right)^2 \\
+1 + \frac{r}{100} = \frac{21}{20} \\
+\frac{r}{100} = \frac{21}{20} - 1 = \frac{1}{20} \\
+r = \frac{100}{20} = 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক চক্রবৃদ্ধি সুদের হার 5%।</div>
+        </div>
+
+        <span class="sub-question">(ii) বার্ষিক নির্দিষ্ট শতকরা চক্রবৃদ্ধি হার সুদে কিছু টাকা n বছরে দ্বিগুণ হলে, কত বছরে 4 গুণ হবে তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি আসল = $P$। n বছরে দ্বিগুণ হয়, অর্থাৎ $A = 2P$।</p>
+            <p>$\displaystyle P\left(1 + \frac{r}{100}\right)^n = 2P \implies \left(1 + \frac{r}{100}\right)^n = 2$</p>
+            <p>ধরি $t$ বছরে 4 গুণ হবে। অর্থাৎ $A = 4P$।</p>
+            <p>$\displaystyle \left(1 + \frac{r}{100}\right)^t = 4 = 2^2$</p>
+            <p>এখন $2$-এর মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\left(1 + \frac{r}{100}\right)^t = \left[ \left(1 + \frac{r}{100}\right)^n \right]^2 \\
+\left(1 + \frac{r}{100}\right)^t = \left(1 + \frac{r}{100}\right)^{2n}
+\end{array}
+\]
+            <p>সূচক তুলনা করে পাই, $t = 2n$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2n বছরে 4 গুণ হবে।</div>
+        </div>
+
+        <span class="sub-question">(iii) বার্ষিক 5% চক্রবৃদ্ধি হার সুদে কিছু টাকার 2 বছরে চক্রবৃদ্ধি সুদ 615 টাকা হলে, আসল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি আসল = $P$ টাকা। $r = 5$, $n = 2$, CI = 615।</p>
+            \[
+\begin{array}{l}
+P\left[ \left(1 + \frac{5}{100}\right)^2 - 1 \right] = 615 \\
+P\left[ \left(\frac{105}{100}\right)^2 - 1 \right] = 615 \\
+P\left[ \left(\frac{21}{20}\right)^2 - 1 \right] = 615 \\
+P\left[ \frac{441}{400} - 1 \right] = 615 \\
+P\left( \frac{41}{400} \right) = 615 \\
+P = \frac{615 \times 400}{41} \\
+P = 15 \times 400 = 6000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আসল 6000 টাকা।</div>
+        </div>
+
+        <span class="sub-question">(iv) প্রতি বছর r% হ্রাসপ্রাপ্ত হলে, n বছর পর একটি মেশিনের মূল্য হয় V টাকা। n বছর পূর্বে মেশিনটির মূল্য কত ছিল তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, n বছর পূর্বে মেশিনটির মূল্য ছিল $P$ টাকা।</p>
+            <p>হ্রাসের সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+P\left(1 - \frac{r}{100}\right)^n = V \\
+P = \frac{V}{\left(1 - \frac{r}{100}\right)^n} \\
+P = V\left(1 - \frac{r}{100}\right)^{-n}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: n বছর পূর্বে মূল্য ছিল $\displaystyle \frac{V}{\left(1 - \frac{r}{100}\right)^n}$ বা $\displaystyle V\left(1 - \frac{r}{100}\right)^{-n}$ টাকা।</div>
+        </div>
+
+        <span class="sub-question">(v) প্রতি বছর জনসংখ্যা r% বৃদ্ধি হলে n বছর পর জনসংখ্যা হয় p; n বছর পূর্বে জনসংখ্যা কত ছিল তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, n বছর পূর্বে জনসংখ্যা ছিল $x$ জন।</p>
+            <p>বৃদ্ধির সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x\left(1 + \frac{r}{100}\right)^n = p \\
+x = \frac{p}{\left(1 + \frac{r}{100}\right)^n} \\
+x = p\left(1 + \frac{r}{100}\right)^{-n}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: n বছর পূর্বে জনসংখ্যা ছিল $\displaystyle \frac{p}{\left(1 + \frac{r}{100}\right)^n}$ বা $\displaystyle p\left(1 + \frac{r}{100}\right)^{-n}$ জন।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

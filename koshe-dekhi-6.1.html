@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-6.1</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>চক্রবৃদ্ধি সুদের মূল সূত্র (Formula):</strong><br>
+        সমূল চক্রবৃদ্ধি বা সুদ-আসল ($A$) = $\displaystyle P\left(1 + \frac{R}{100}\right)^n$<br>
+        যেখানে, $P$ = আসল বা মূলধন (Principal), $R$ = বার্ষিক চক্রবৃদ্ধি সুদের হার (Rate of Interest), $n$ = সময় বছরে (Time in years)।<br>
+        চক্রবৃদ্ধি সুদ (C.I.) = সমূল চক্রবৃদ্ধি ($A$) - আসল ($P$)
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমার কাছে 5000 টাকা আছে। আমি ওই টাকা একটি ব্যাংকে বার্ষিক 8.5% চক্রবৃদ্ধি সুদের হারে জমা রাখলাম। 2 বছরের শেষে সুদে-আসলে মোট কত টাকা পাব হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে,</p>
+            <p>আসল ($P$) = 5000 টাকা</p>
+            <p>বার্ষিক চক্রবৃদ্ধি সুদের হার ($R$) = 8.5%</p>
+            <p>সময় ($n$) = 2 বছর</p>
+            <p>আমরা জানি, সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 5000 \left(1 + \frac{8.5}{100}\right)^2 \\
+= 5000 \left(1 + \frac{85}{1000}\right)^2 \\
+= 5000 \left(\frac{1085}{1000}\right)^2 \\
+= 5000 \times \frac{1085}{1000} \times \frac{1085}{1000} \\
+= 5000 \times 1.085 \times 1.085 \\
+= 5886.125
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছরের শেষে সুদে-আসলে 5886.125 টাকা পাওয়া যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. 5000 টাকার বার্ষিক 8% চক্রবৃদ্ধি সুদের হারে 3 বছরের সমূল চক্রবৃদ্ধি কত হবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে,</p>
+            <p>আসল ($P$) = 5000 টাকা</p>
+            <p>বার্ষিক চক্রবৃদ্ধি সুদের হার ($R$) = 8%</p>
+            <p>সময় ($n$) = 3 বছর</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R}{100}\right)^n$</p>
+            \[
+\begin{array}{l}
+A = 5000 \left(1 + \frac{8}{100}\right)^3 \\
+= 5000 \left(\frac{108}{100}\right)^3 \\
+= 5000 \times 1.08 \times 1.08 \times 1.08 \\
+= 5000 \times 1.259712 \\
+= 6298.56
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছরের সমূল চক্রবৃদ্ধি 6298.56 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. গৌতমবাবু 2000 টাকা বার্ষিক 6% চক্রবৃদ্ধি সুদের হারে 2 বছরের জন্য ধার নিয়েছেন। 2 বছর পরে তিনি কত টাকা চক্রবৃদ্ধি সুদ দেবেন তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 2000 টাকা, সুদের হার ($R$) = 6%, সময় ($n$) = 2 বছর।</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle 2000 \left(1 + \frac{6}{100}\right)^2$</p>
+            \[
+\begin{array}{l}
+A = 2000 \left(\frac{106}{100}\right)^2 \\
+= 2000 \times \frac{106}{100} \times \frac{106}{100} \\
+= 2 \times 106 \times 10.6 \\
+= 212 \times 10.6 \\
+= 2247.20
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = সমূল চক্রবৃদ্ধি - আসল</p>
+            <p>চক্রবৃদ্ধি সুদ = $2247.20 - 2000 = 247.20$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি 247.20 টাকা চক্রবৃদ্ধি সুদ দেবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. 30000 টাকার বার্ষিক 9% চক্রবৃদ্ধি সুদের হারে 3 বছরের চক্রবৃদ্ধি সুদ নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 30000 টাকা, সুদের হার ($R$) = 9%, সময় ($n$) = 3 বছর।</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle 30000 \left(1 + \frac{9}{100}\right)^3$</p>
+            \[
+\begin{array}{l}
+A = 30000 \left(\frac{109}{100}\right)^3 \\
+= 30000 \times \frac{109}{100} \times \frac{109}{100} \times \frac{109}{100} \\
+= 30 \times 1.09 \times 1.09 \times 109 \\
+= 30 \times 1295.029 \\
+= 38850.87
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = $38850.87 - 30000 = 8850.87$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছরের চক্রবৃদ্ধি সুদ 8850.87 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. বার্ষিক 5% চক্রবৃদ্ধি সুদের হারে 80000 টাকার $2\frac{1}{2}$ বছরের সমূল চক্রবৃদ্ধি কত হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 80000 টাকা, সুদের হার ($R$) = 5%, সময় ($n$) = $2\frac{1}{2}$ বছর।</p>
+            <p>ভগ্নাংশ সময়ের জন্য সমূল চক্রবৃদ্ধির সূত্র: $A = P\left(1 + \frac{R}{100}\right)^2 \times \left(1 + \frac{\frac{1}{2}R}{100}\right)$</p>
+            \[
+\begin{array}{l}
+A = 80000 \left(1 + \frac{5}{100}\right)^2 \times \left(1 + \frac{5 \times \frac{1}{2}}{100}\right) \\
+= 80000 \left(\frac{105}{100}\right)^2 \times \left(1 + \frac{2.5}{100}\right) \\
+= 80000 \left(\frac{21}{20}\right)^2 \times \left(\frac{102.5}{100}\right) \\
+= 80000 \times \frac{441}{400} \times \frac{1025}{1000} \\
+= 200 \times 441 \times 1.025 \\
+= 88200 \times 1.025 \\
+= 90405
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সমূল চক্রবৃদ্ধি 90405 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. ছন্দাদেবী বার্ষিক 8% চক্রবৃদ্ধি সুদের হারে কিছু টাকা 2 বছরের জন্য ধার করেন। চক্রবৃদ্ধি সুদ 2496 টাকা হলে ছন্দাদেবী কত টাকা ধার করেছিলেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, ছন্দাদেবী $P$ টাকা ধার করেছিলেন।</p>
+            <p>সুদের হার ($R$) = 8%, সময় ($n$) = 2 বছর, চক্রবৃদ্ধি সুদ (CI) = 2496 টাকা।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+P\left[\left(1 + \frac{8}{100}\right)^2 - 1\right] = 2496 \\
+P\left[\left(\frac{108}{100}\right)^2 - 1\right] = 2496 \\
+P\left[\frac{11664}{10000} - 1\right] = 2496 \\
+P\left[\frac{11664 - 10000}{10000}\right] = 2496 \\
+P \times \frac{1664}{10000} = 2496 \\
+P = \frac{2496 \times 10000}{1664} \\
+P = 1.5 \times 10000 = 15000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ছন্দাদেবী 15000 টাকা ধার করেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. বার্ষিক 10% চক্রবৃদ্ধির হার সুদে কোন আসলের 3 বছরের চক্রবৃদ্ধি সুদ 2648 হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল = $P$ টাকা।</p>
+            <p>সুদের হার ($R$) = 10%, সময় ($n$) = 3 বছর, চক্রবৃদ্ধি সুদ (CI) = 2648 টাকা।</p>
+            \[
+\begin{array}{l}
+P\left[\left(1 + \frac{10}{100}\right)^3 - 1\right] = 2648 \\
+P\left[\left(\frac{110}{100}\right)^3 - 1\right] = 2648 \\
+P\left[\left(\frac{11}{10}\right)^3 - 1\right] = 2648 \\
+P\left[\frac{1331}{1000} - 1\right] = 2648 \\
+P\left[\frac{1331 - 1000}{1000}\right] = 2648 \\
+P \times \frac{331}{1000} = 2648 \\
+P = \frac{2648 \times 1000}{331} \\
+P = 8 \times 1000 = 8000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় আসল 8000 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. রহমতচাচা বার্ষিক 9% চক্রবৃদ্ধি হার সুদে কিছু টাকা সমবায় ব্যাংকে জমা রেখে 2 বছর পরে সুদে-আসলে 29702.50 টাকা ফেরত পেলেন। রহমতচাচা কত টাকা সমবায় ব্যাংকে জমা রেখেছিলেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, রহমতচাচা সমবায় ব্যাংকে $P$ টাকা জমা রেখেছিলেন।</p>
+            <p>সুদের হার ($R$) = 9%, সময় ($n$) = 2 বছর, সমূল চক্রবৃদ্ধি ($A$) = 29702.50 টাকা।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{9}{100}\right)^2 = 29702.50 \\
+P\left(\frac{109}{100}\right)^2 = 29702.50 \\
+P \times \frac{11881}{10000} = 29702.50 \\
+P = \frac{29702.50 \times 10000}{11881} \\
+P = \frac{297025000}{11881} \\
+P = 25000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি সমবায় ব্যাংকে 25000 টাকা জমা রেখেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. বার্ষিক 8% চক্রবৃদ্ধি হার সুদে কত টাকার 3 বছরের সমূল চক্রবৃদ্ধি 31492.80 টাকা হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল = $P$ টাকা।</p>
+            <p>সুদের হার ($R$) = 8%, সময় ($n$) = 3 বছর, সমূল চক্রবৃদ্ধি ($A$) = 31492.80 টাকা।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{8}{100}\right)^3 = 31492.80 \\
+P\left(\frac{108}{100}\right)^3 = 31492.80 \\
+P\left(\frac{27}{25}\right)^3 = 31492.80 \\
+P \times \frac{19683}{15625} = 31492.80 \\
+P = \frac{31492.80 \times 15625}{19683} \\
+P = 1.6 \times 15625 \\
+P = 25000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 25000 টাকার সমূল চক্রবৃদ্ধি 31492.80 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. বার্ষিক 7.5% সুদের হারে 12000 টাকার 2 বছরের চক্রবৃদ্ধি সুদ ও সরল সুদের অন্তর নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 12000 টাকা, সুদের হার ($R$) = 7.5%, সময় ($n/T$) = 2 বছর।</p>
+            <p><strong>সরল সুদ (SI):</strong></p>
+            \[
+\begin{array}{l}
+\text{SI} = \frac{P \times R \times T}{100} \\
+= \frac{12000 \times 7.5 \times 2}{100} \\
+= 120 \times 15 \\
+= 1800 \text{ টাকা}
+\end{array}
+\]
+            <p><strong>চক্রবৃদ্ধি সুদ (CI):</strong></p>
+            \[
+\begin{array}{l}
+\text{CI} = P\left[\left(1 + \frac{7.5}{100}\right)^2 - 1\right] \\
+= 12000\left[\left(1.075\right)^2 - 1\right] \\
+= 12000[1.155625 - 1] \\
+= 12000 \times 0.155625 \\
+= 1867.50 \text{ টাকা}
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ ও সরল সুদের অন্তর = $1867.50 - 1800 = 67.50$ টাকা।</p>
+            <p>*(বিকল্প সূত্র: 2 বছরের জন্য অন্তর = $P \times (\frac{R}{100})^2 = 12000 \times (\frac{7.5}{100})^2 = 67.50$)*</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চক্রবৃদ্ধি সুদ ও সরল সুদের অন্তর 67.50 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. 10,000 টাকার বার্ষিক 5% সুদের হারে 3 বছরের চক্রবৃদ্ধি সুদ ও সরল সুদের পার্থক্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 10000 টাকা, সুদের হার ($R$) = 5%, সময় ($n/T$) = 3 বছর।</p>
+            <p><strong>সরল সুদ (SI):</strong></p>
+            \[
+\begin{array}{l}
+\text{SI} = \frac{10000 \times 5 \times 3}{100} \\
+= 100 \times 15 = 1500 \text{ টাকা}
+\end{array}
+\]
+            <p><strong>চক্রবৃদ্ধি সুদ (CI):</strong></p>
+            \[
+\begin{array}{l}
+\text{CI} = 10000\left[\left(1 + \frac{5}{100}\right)^3 - 1\right] \\
+= 10000\left[\left(\frac{105}{100}\right)^3 - 1\right] \\
+= 10000\left[\left(1.05\right)^3 - 1\right] \\
+= 10000[1.157625 - 1] \\
+= 10000 \times 0.157625 \\
+= 1576.25 \text{ টাকা}
+\end{array}
+\]
+            <p>পার্থক্য = $1576.25 - 1500 = 76.25$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পার্থক্য 76.25 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. বার্ষিক 9% সুদের হারে কিছু টাকার 2 বছরের চক্রবৃদ্ধি সুদ ও সরল সুদের অন্তর 129.60 টাকা হলে, ওই টাকার পরিমাণ হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল = $P$ টাকা।</p>
+            <p>সুদের হার ($R$) = 9%, সময় ($n$) = 2 বছর।</p>
+            <p>আমরা জানি, 2 বছরের ক্ষেত্রে চক্রবৃদ্ধি সুদ এবং সরল সুদের অন্তর এর সূত্র হলো:</p>
+            $$\text{অন্তর} = P\left(\frac{R}{100}\right)^2$$
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+P\left(\frac{9}{100}\right)^2 = 129.60 \\
+P \times \frac{81}{10000} = 129.60 \\
+P = \frac{129.60 \times 10000}{81} \\
+P = \frac{1296000}{81} \\
+P = 16000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ওই টাকার পরিমাণ 16000 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. যদি বার্ষিক 10% হারে কিছু টাকার 3 বছরের চক্রবৃদ্ধি সুদ ও সরল সুদের অন্তর 930 টাকা হয়, তবে ওই টাকার পরিমাণ কত হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল = $P$ টাকা। সুদের হার ($R$) = 10%, সময় ($n$) = 3 বছর।</p>
+            <p>3 বছরের ক্ষেত্রে চক্রবৃদ্ধি সুদ এবং সরল সুদের অন্তরের সূত্র হলো:</p>
+            $$\text{অন্তর} = P\left(\frac{R}{100}\right)^2 \times \left(3 + \frac{R}{100}\right)$$
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+P\left(\frac{10}{100}\right)^2 \times \left(3 + \frac{10}{100}\right) = 930 \\
+P\left(\frac{1}{10}\right)^2 \times \left(3 + \frac{1}{10}\right) = 930 \\
+P \times \frac{1}{100} \times \frac{31}{10} = 930 \\
+P \times \frac{31}{1000} = 930 \\
+P = \frac{930 \times 1000}{31} \\
+P = 30 \times 1000 = 30000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ওই টাকার পরিমাণ 30000 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. বার্ষিক চক্রবৃদ্ধি সুদের হার যদি প্রথম বছর 7% এবং দ্বিতীয় বছর 8% হয়, তবে 6000 টাকার 2 বছরের চক্রবৃদ্ধি সুদ হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 6000 টাকা।</p>
+            <p>প্রথম বছরের সুদের হার ($R_1$) = 7% এবং দ্বিতীয় বছরের হার ($R_2$) = 8%।</p>
+            <p>ভিন্ন ভিন্ন সুদের হারের ক্ষেত্রে সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R_1}{100}\right)\left(1 + \frac{R_2}{100}\right)$</p>
+            \[
+\begin{array}{l}
+A = 6000\left(1 + \frac{7}{100}\right)\left(1 + \frac{8}{100}\right) \\
+= 6000 \times \frac{107}{100} \times \frac{108}{100} \\
+= 6000 \times 1.07 \times 1.08 \\
+= 6933.60
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = $6933.60 - 6000 = 933.60$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছরের চক্রবৃদ্ধি সুদ 933.60 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. বার্ষিক চক্রবৃদ্ধি সুদের হার যদি প্রথম বছর 5% এবং দ্বিতীয় বছর 6% হয়, তবে 5000 টাকার 2 বছরের চক্রবৃদ্ধি সুদ নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 5000 টাকা।</p>
+            <p>প্রথম বছরের সুদের হার ($R_1$) = 5% এবং দ্বিতীয় বছরের হার ($R_2$) = 6%।</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R_1}{100}\right)\left(1 + \frac{R_2}{100}\right)$</p>
+            \[
+\begin{array}{l}
+A = 5000\left(1 + \frac{5}{100}\right)\left(1 + \frac{6}{100}\right) \\
+= 5000 \times \frac{105}{100} \times \frac{106}{100} \\
+= 50 \times 1.05 \times 106 \\
+= 5565
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = $5565 - 5000 = 565$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছরের চক্রবৃদ্ধি সুদ 565 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. কোনো নির্দিষ্ট পরিমাণ মূলধনের 1 বছরের সরল সুদ 50 টাকা এবং 2 বছরের চক্রবৃদ্ধি সুদ 102 টাকা হলে, মূলধনের পরিমাণ ও বার্ষিক সুদের হার হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, প্রথম বছরে সরল সুদ এবং চক্রবৃদ্ধি সুদ সমান হয়।</p>
+            <p>সুতরাং, ১ম বছরের সরল সুদ = 50 টাকা।</p>
+            <p>যেহেতু 1 বছরের সরল সুদ 50 টাকা, তাই 2 বছরের সরল সুদ = $50 \times 2 = 100$ টাকা।</p>
+            <p>দেওয়া আছে, 2 বছরের চক্রবৃদ্ধি সুদ = 102 টাকা।</p>
+            <p>পার্থক্য = $102 - 100 = 2$ টাকা।</p>
+            <p>এই 2 টাকা পার্থক্যটি আসলে প্রথম বছরের সুদ 50 টাকার উপর 1 বছরের সুদ।</p>
+            <p>অতএব, সুদের হার ($R$) = $\displaystyle \frac{100 \times I}{P \times T} = \frac{100 \times 2}{50 \times 1} = \frac{200}{50} = 4\%$</p>
+            <p>এখন, মূলধন ($P$) = $\displaystyle \frac{100 \times I}{R \times T} = \frac{100 \times 50}{4 \times 1} = 25 \times 50 = 1250$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মূলধনের পরিমাণ 1250 টাকা এবং বার্ষিক সুদের হার 4%।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. কোনো মূলধনের 2 বছরের সুদ ও চক্রবৃদ্ধি সুদ যথাক্রমে 8400 টাকা এবং 8652 টাকা হলে মূলধন ও বার্ষিক সুদের হার হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>2 বছরের সরল সুদ = 8400 টাকা।</p>
+            <p>সুতরাং, 1 বছরের সরল সুদ = $\displaystyle\frac{8400}{2} = 4200$ টাকা।</p>
+            <p>2 বছরের চক্রবৃদ্ধি সুদ = 8652 টাকা।</p>
+            <p>চক্রবৃদ্ধি ও সরল সুদের পার্থক্য = $8652 - 8400 = 252$ টাকা।</p>
+            <p>এই 252 টাকা হলো প্রথম বছরের সুদ 4200 টাকার উপর 1 বছরের অতিরিক্ত সুদ।</p>
+            <p>সুদের হার ($R$) = $\displaystyle \frac{100 \times I}{P \times T} = \frac{100 \times 252}{4200 \times 1} = \frac{25200}{4200} = 6\%$</p>
+            <p>এখন, মূলধন ($P$) = $\displaystyle \frac{100 \times I}{R \times T} = \frac{100 \times 4200}{6 \times 1} = \frac{420000}{6} = 70000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মূলধন 70000 টাকা এবং বার্ষিক সুদের হার 6%।</div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="solution-card">
+        <h4 class="question-title">18. 6 মাস অন্তর দেয় বার্ষিক 8% চক্রবৃদ্ধি হার সুদে 6000 টাকার 1 বছরের চক্রবৃদ্ধি সুদ নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 6000 টাকা। সুদের হার ($R$) = 8%। সময় ($T$) = 1 বছর।</p>
+            <p>যেহেতু 6 মাস অন্তর সুদ দেওয়া হয় (Half-yearly), তাই 1 বছরে পর্বের সংখ্যা ($n$) = $\displaystyle\frac{12}{6} = 2$ টি।</p>
+            <p>প্রতি পর্বে সুদের হার = $\displaystyle\frac{8}{2} = 4\%$</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R/2}{100}\right)^{2T}$</p>
+            \[
+\begin{array}{l}
+A = 6000\left(1 + \frac{4}{100}\right)^2 \\
+= 6000\left(\frac{104}{100}\right)^2 \\
+= 6000 \times 1.04 \times 1.04 \\
+= 6489.60
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = $6489.60 - 6000 = 489.60$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 1 বছরের চক্রবৃদ্ধি সুদ 489.60 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="solution-card">
+        <h4 class="question-title">19. 3 মাস অন্তর দেয় বার্ষিক 10% চক্রবৃদ্ধি হার সুদে 6250 টাকার 9 মাসের চক্রবৃদ্ধি সুদ হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 6250 টাকা। সুদের হার ($R$) = 10%।</p>
+            <p>সময় ($T$) = 9 মাস = $\displaystyle\frac{9}{12}$ বছর = $\displaystyle\frac{3}{4}$ বছর।</p>
+            <p>যেহেতু 3 মাস অন্তর সুদ দেওয়া হয় (Quarterly), তাই বছরে পর্বের সংখ্যা = $\displaystyle\frac{12}{3} = 4$ টি।</p>
+            <p>সমূল চক্রবৃদ্ধি ($A$) = $\displaystyle P\left(1 + \frac{R/4}{100}\right)^{4T}$</p>
+            \[
+\begin{array}{l}
+A = 6250\left(1 + \frac{10/4}{100}\right)^{4 \times \frac{3}{4}} \\
+= 6250\left(1 + \frac{2.5}{100}\right)^3 \\
+= 6250\left(\frac{102.5}{100}\right)^3 \\
+= 6250 \times 1.025 \times 1.025 \times 1.025 \\
+= 6730.56640625 \approx 6730.57
+\end{array}
+\]
+            <p>চক্রবৃদ্ধি সুদ = $6730.57 - 6250 = 480.57$ টাকা (প্রায়)।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চক্রবৃদ্ধি সুদ 480.57 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="solution-card">
+        <h4 class="question-title">20. যদি 60000 টাকার 2 বছরে সমূল চক্রবৃদ্ধি 69984 টাকা হয়, তবে বার্ষিক সুদের হার হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 60000 টাকা, সময় ($n$) = 2 বছর, সমূল চক্রবৃদ্ধি ($A$) = 69984 টাকা।</p>
+            <p>ধরি, সুদের হার = $R\%$।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{R}{100}\right)^n = A \\
+60000\left(1 + \frac{R}{100}\right)^2 = 69984 \\
+\left(1 + \frac{R}{100}\right)^2 = \frac{69984}{60000} \\
+\left(1 + \frac{R}{100}\right)^2 = \frac{11664}{10000} \quad [\text{6 দিয়ে কেটে}]
+\end{array}
+\]
+            <p>উভয়পক্ষে বর্গমূল করে পাই:</p>
+            \[
+\begin{array}{l}
+1 + \frac{R}{100} = \frac{108}{100} \\
+\frac{R}{100} = \frac{108}{100} - 1 \\
+\frac{R}{100} = \frac{8}{100} \\
+R = 8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক সুদের হার 8%।</div>
+        </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="solution-card">
+        <h4 class="question-title">21. বার্ষিক 8% চক্রবৃদ্ধি হার সুদে কত বছরে 40000 টাকার সমূল চক্রবৃদ্ধি 46656 টাকা হবে, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 40000 টাকা, সুদের হার ($R$) = 8%, সমূল চক্রবৃদ্ধি ($A$) = 46656 টাকা।</p>
+            <p>ধরি, সময় = $n$ বছর।</p>
+            \[
+\begin{array}{l}
+P\left(1 + \frac{R}{100}\right)^n = A \\
+40000\left(1 + \frac{8}{100}\right)^n = 46656 \\
+\left(\frac{108}{100}\right)^n = \frac{46656}{40000} \\
+\left(\frac{108}{100}\right)^n = \frac{11664}{10000} \quad [\text{4 দিয়ে কেটে}] \\
+\left(\frac{108}{100}\right)^n = \left(\frac{108}{100}\right)^2
+\end{array}
+\]
+            <p>যেহেতু নিধান (base) সমান, তাই সূচক সমান হবে। অর্থাৎ, $n = 2$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছরে সমূল চক্রবৃদ্ধি 46656 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="solution-card">
+        <h4 class="question-title">22. শতকরা বার্ষিক কত চক্রবৃদ্ধি হার সুদে 10000 টাকার 2 বছরের সমূল চক্রবৃদ্ধি 12100 টাকা হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 10000 টাকা, সময় ($n$) = 2 বছর, সমূল চক্রবৃদ্ধি ($A$) = 12100 টাকা।</p>
+            <p>ধরি, সুদের হার = $R\%$।</p>
+            \[
+\begin{array}{l}
+10000\left(1 + \frac{R}{100}\right)^2 = 12100 \\
+\left(1 + \frac{R}{100}\right)^2 = \frac{12100}{10000} \\
+\left(1 + \frac{R}{100}\right)^2 = \frac{121}{100} \\
+\left(1 + \frac{R}{100}\right)^2 = \left(\frac{11}{10}\right)^2
+\end{array}
+\]
+            <p>বর্গমূল করে পাই:</p>
+            \[
+\begin{array}{l}
+1 + \frac{R}{100} = \frac{11}{10} \\
+\frac{R}{100} = \frac{11}{10} - 1 = \frac{1}{10} \\
+R = \frac{100}{10} = 10
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক চক্রবৃদ্ধি সুদের হার 10%।</div>
+        </div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="solution-card">
+        <h4 class="question-title">23. বার্ষিক 10% চক্রবৃদ্ধি হার সুদে কত বছরে 50000 টাকার সমূল চক্রবৃদ্ধি 60500 টাকা হবে, তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 50000 টাকা, সুদের হার ($R$) = 10%, সমূল চক্রবৃদ্ধি ($A$) = 60500 টাকা।</p>
+            <p>ধরি, সময় = $n$ বছর।</p>
+            \[
+\begin{array}{l}
+50000\left(1 + \frac{10}{100}\right)^n = 60500 \\
+\left(\frac{110}{100}\right)^n = \frac{60500}{50000} \\
+\left(\frac{11}{10}\right)^n = \frac{605}{500} \\
+\left(\frac{11}{10}\right)^n = \frac{121}{100} \quad [\text{5 দিয়ে কেটে}] \\
+\left(\frac{11}{10}\right)^n = \left(\frac{11}{10}\right)^2
+\end{array}
+\]
+            <p>অতএব, $n = 2$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 2 বছরে 60500 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="solution-card">
+        <h4 class="question-title">24. বার্ষিক 10% চক্রবৃদ্ধি হার সুদে কত বছরের 300000 টাকার সমূল চক্রবৃদ্ধি 399300 টাকা হবে, তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 300000 টাকা, সুদের হার ($R$) = 10%, সমূল চক্রবৃদ্ধি ($A$) = 399300 টাকা।</p>
+            <p>ধরি, সময় = $n$ বছর।</p>
+            \[
+\begin{array}{l}
+300000\left(1 + \frac{10}{100}\right)^n = 399300 \\
+\left(\frac{110}{100}\right)^n = \frac{399300}{300000} \\
+\left(\frac{11}{10}\right)^n = \frac{3993}{3000} \\
+\left(\frac{11}{10}\right)^n = \frac{1331}{1000} \quad [\text{3 দিয়ে কেটে}] \\
+\left(\frac{11}{10}\right)^n = \left(\frac{11}{10}\right)^3
+\end{array}
+\]
+            <p>অতএব, $n = 3$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 3 বছরে সমূল চক্রবৃদ্ধি 399300 টাকা হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="solution-card">
+        <h4 class="question-title">25. সুদের পর্ব 6 মাস হলে বার্ষিক 10% চক্রবৃদ্ধি হার সুদে 1600 টাকার $1\frac{1}{2}$ বছরের চক্রবৃদ্ধি সুদ ও সুদ-আসল নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল ($P$) = 1600 টাকা। সুদের হার ($R$) = 10%।</p>
+            <p>সময় ($T$) = $1\frac{1}{2} = 1.5$ বছর।</p>
+            <p>যেহেতু 6 মাস অন্তর সুদ দেওয়া হয়, তাই 1 বছরে পর্বের সংখ্যা = $\displaystyle\frac{12}{6} = 2$ টি।</p>
+            <p>সমূল চক্রবৃদ্ধি (সুদ-আসল) ($A$) = $\displaystyle P\left(1 + \frac{R/2}{100}\right)^{2T}$</p>
+            \[
+\begin{array}{l}
+A = 1600\left(1 + \frac{10/2}{100}\right)^{2 \times 1.5} \\
+= 1600\left(1 + \frac{5}{100}\right)^3 \\
+= 1600\left(\frac{105}{100}\right)^3 \\
+= 1600\left(\frac{21}{20}\right)^3 \\
+= 1600 \times \frac{9261}{8000} \\
+= \frac{9261}{5} \\
+= 1852.20
+\end{array}
+\]
+            <p>সুদ-আসল = 1852.20 টাকা।</p>
+            <p>চক্রবৃদ্ধি সুদ = $1852.20 - 1600 = 252.20$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চক্রবৃদ্ধি সুদ 252.20 টাকা এবং সুদ-আসল 1852.20 টাকা।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

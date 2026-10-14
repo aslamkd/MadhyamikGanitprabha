@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-8</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>লম্ব বৃত্তাকার চোঙ (Right Circular Cylinder)-এর সূত্রসমূহ:</strong><br>
+        যদি চোঙের ভূমির ব্যাসার্ধ $r$ এবং উচ্চতা $h$ হয়, তবে:<br>
+        ১) বক্রতলের ক্ষেত্রফল (Curved Surface Area) = $2\pi rh$<br>
+        ২) সমগ্রতলের ক্ষেত্রফল (Total Surface Area) = $2\pi r(r + h)$<br>
+        ৩) আয়তন বা ঘনফল (Volume) = $\pi r^2 h$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. পাশের চিত্রের ঘনবস্তুটি দেখি ও নীচের প্রশ্নের উত্তর লিখি।<br>(i) ছবির ঘনবস্তুটির $\Box$ টি তল।<br>(ii) ছবির ঘনবস্তুটির $\Box$ টি বক্রতল ও $\Box$ টি সমতল।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ছবির ঘনবস্তুটি হলো একটি লম্ব বৃত্তাকার চোঙ (Cylinder)।</p>
+            <p>একটি নিরেট লম্ব বৃত্তাকার চোঙের মোট 3 টি তল থাকে। এর মধ্যে উপরের ও নীচের তল দুটি হলো সমতল (বৃত্তাকার) এবং মাঝের তলটি হলো বক্রতল।</p>
+            <div class="final-answer"><i class="fas fa-pen-nib me-1 text-accent"></i> উত্তর: (i) 3 টি তল। (ii) 1 টি বক্রতল ও 2 টি সমতল।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. আমার বাড়ির 5টি ঘনবস্তুর নাম লিখি যাদের আকার লম্ব বৃত্তাকার চোঙ।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমাদের বাড়িতে দেখা যায় এমন ৫টি লম্ব বৃত্তাকার চোঙ আকৃতির ঘনবস্তু হলো:</p>
+            <ul>
+                <li>১) জলের পাইপ (Water Pipe)</li>
+                <li>২) গ্যাস সিলিন্ডার (Gas Cylinder)</li>
+                <li>৩) গোলাকার জলের ড্রাম (Water Drum)</li>
+                <li>৪) টিউবলাইট (Tube light)</li>
+                <li>৫) পেন্সিল (মুখ না ছাঁচা অবস্থায়) বা গ্লাস</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. স্টিলের পাতলা চাদর দিয়ে তৈরি ঢাকনাসমেত একটি ড্রামের ব্যাসের দৈর্ঘ্য 28 সেমি.। ড্রামটি তৈরি করতে যদি 2816 বর্গ সেমি. চাদর লাগে, তবে ড্রামটির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, ড্রামের ব্যাস = 28 সেমি। $\therefore$ ব্যাসার্ধ ($r$) = $\displaystyle \frac{28}{2} = 14$ সেমি।</p>
+            <p>ধরি, ড্রামটির উচ্চতা = $h$ সেমি।</p>
+            <p>যেহেতু ড্রামটি ঢাকনাসমেত, তাই মোট চাদরের পরিমাণ এর সমগ্রতলের ক্ষেত্রফলের সমান হবে।</p>
+            <p>সমগ্রতলের ক্ষেত্রফল = $2\pi r(r + h)$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+2\pi r(r + h) = 2816 \\
+2 \times \frac{22}{7} \times 14 \times (14 + h) = 2816 \\
+2 \times 22 \times 2 \times (14 + h) = 2816 \\
+88 \times (14 + h) = 2816 \\
+14 + h = \frac{2816}{88} \\
+14 + h = 32 \\
+h = 32 - 14 = 18
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ড্রামটির উচ্চতা 18 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একটি ঘরের বারান্দায় 5.6 ডেসিমি. ব্যাসের এবং 2.5 মিটার লম্বা দুটি লম্ব বৃত্তাকার পিলার ঢালাই করতে কত ঘন ডেসিমি. মশলা লাগবে হিসাব করে লিখি।<br>প্রতি বর্গ মিটার 125 টাকা হিসাবে পিলার দুটি প্লাস্টার করতে কত খরচ হবে হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>প্রথম অংশ (মশলার আয়তন):</strong></p>
+            <p>পিলারের ব্যাস = 5.6 ডেসিমি। $\therefore$ ব্যাসার্ধ ($r$) = $\displaystyle \frac{5.6}{2} = 2.8$ ডেসিমি।</p>
+            <p>পিলারের উচ্চতা বা লম্ব ($h$) = 2.5 মিটার = 25 ডেসিমি।</p>
+            <p>1টি পিলার ঢালাই করতে মশলা লাগবে (আয়তন) = $\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times (2.8)^2 \times 25 \\
+= \frac{22}{7} \times 7.84 \times 25 \\
+= 22 \times 1.12 \times 25 \\
+= 616 \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+            <p>যেহেতু 2টি পিলার আছে, তাই মোট মশলা লাগবে = $2 \times 616 = 1232$ ঘন ডেসিমি।</p>
+
+            <p><strong>দ্বিতীয় অংশ (প্লাস্টারের খরচ):</strong></p>
+            <p>প্লাস্টার পিলারের শুধুমাত্র বক্রতলে করা হয়। তাই বক্রতলের ক্ষেত্রফল নির্ণয় করতে হবে।</p>
+            <p>যেহেতু খরচ "বর্গ মিটার"-এ দেওয়া আছে, তাই এককগুলি মিটারে নিই:</p>
+            <p>$r = 0.28$ মিটার, $h = 2.5$ মিটার।</p>
+            <p>1টি পিলারের বক্রতলের ক্ষেত্রফল = $2\pi rh$</p>
+            \[
+\begin{array}{l}
+= 2 \times \frac{22}{7} \times 0.28 \times 2.5 \\
+= 2 \times 22 \times 0.04 \times 2.5 \\
+= 44 \times 0.1 \\
+= 4.4 \text{ বর্গ মিটার}
+\end{array}
+\]
+            <p>2টি পিলারের মোট বক্রতলের ক্ষেত্রফল = $2 \times 4.4 = 8.8$ বর্গ মিটার।</p>
+            <p>প্রতি বর্গমিটার প্লাস্টারের খরচ 125 টাকা।</p>
+            <p>মোট খরচ = $8.8 \times 125 = 1100$ টাকা।</p>
+
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 1232 ঘন ডেসিমি. মশলা লাগবে এবং প্লাস্টার করতে 1100 টাকা খরচ হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. 2.8 ডেসিমি. দৈর্ঘ্যের অন্তর্দ্ব্যাসবিশিষ্ট এবং 7.5 ডেসিমি. লম্বা একটি জ্বালানি গ্যাস সিলিন্ডারে 15.015 কিগ্রা. গ্যাস থাকলে, প্রতি ঘন ডেসিমি. গ্যাসের ওজন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গ্যাস সিলিন্ডারের অন্তর্দ্ব্যাস = 2.8 ডেসিমি। $\therefore$ ব্যাসার্ধ ($r$) = $\displaystyle \frac{2.8}{2} = 1.4$ ডেসিমি।</p>
+            <p>উচ্চতা ($h$) = 7.5 ডেসিমি।</p>
+            <p>গ্যাসের মোট আয়তন = $\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times (1.4)^2 \times 7.5 \\
+= \frac{22}{7} \times 1.96 \times 7.5 \\
+= 22 \times 0.28 \times 7.5 \\
+= 46.2 \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+            <p>46.2 ঘন ডেসিমি. গ্যাসের ওজন = 15.015 কিগ্রা = 15015 গ্রাম। (1 কিগ্রা = 1000 গ্রাম)</p>
+            <p>$\therefore$ 1 ঘন ডেসিমি. গ্যাসের ওজন = $\displaystyle \frac{15015}{46.2} = \frac{150150}{462}$ গ্রাম</p>
+            \[
+\begin{array}{l}
+= 325 \text{ গ্রাম}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রতি ঘন ডেসিমি. গ্যাসের ওজন 325 গ্রাম।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. সমান ব্যাস ও সমান উচ্চতাবিশিষ্ট তিনটি জারের প্রথমটির $\frac{2}{3}$ অংশ, দ্বিতীয়টির $\frac{5}{6}$ অংশ এবং তৃতীয়টির $\frac{7}{9}$ অংশ লঘু সালফিউরিক অ্যাসিডে পূর্ণ ছিল। ওই তিনটি জারের অ্যাসিড যদি 2.1 ডেসিমি. দৈর্ঘ্যের ব্যাসের একটি জারে রাখা হয়, তবে জারে অ্যাসিডের উচ্চতা 4.1 ডেসিমি. হয়। প্রথম তিনটি জারের ব্যাসের দৈর্ঘ্য 1.4 ডেসিমি. হলে, তাদের উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম তিনটি জারের ব্যাস = 1.4 ডেসিমি $\implies$ ব্যাসার্ধ ($r$) = 0.7 ডেসিমি।</p>
+            <p>ধরি, তাদের সাধারণ উচ্চতা = $h$ ডেসিমি।</p>
+            <p>প্রতিটি জারের সম্পূর্ণ আয়তন = $\pi r^2 h = \pi \times (0.7)^2 \times h$</p>
+            <p>তিনটি জারে থাকা মোট অ্যাসিডের আয়তন:</p>
+            \[
+\begin{array}{l}
+= \pi(0.7)^2 h \times \left(\frac{2}{3} + \frac{5}{6} + \frac{7}{9}\right) \\
+= \pi \times 0.49 \times h \times \left(\frac{12 + 15 + 14}{18}\right) \\
+= \pi \times 0.49 \times h \times \frac{41}{18} \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+            <p>বড়ো জারের ব্যাস = 2.1 ডেসিমি $\implies$ ব্যাসার্ধ ($R$) = $\displaystyle \frac{2.1}{2} = 1.05$ ডেসিমি।</p>
+            <p>বড়ো জারে অ্যাসিডের উচ্চতা ($H$) = 4.1 ডেসিমি।</p>
+            <p>বড়ো জারে রাখা অ্যাসিডের আয়তন = $\pi R^2 H = \pi \times (1.05)^2 \times 4.1$ ঘন ডেসিমি।</p>
+            <p>শর্তানুসারে, উভয় আয়তন সমান:</p>
+            \[
+\begin{array}{l}
+\pi \times 0.49 \times h \times \frac{41}{18} = \pi \times 1.1025 \times 4.1 \\
+0.49 \times h \times \frac{41}{18} = 1.1025 \times 4.1 \\
+h = \frac{1.1025 \times 4.1 \times 18}{0.49 \times 41} \\
+h = \frac{1.1025 \times 18}{0.49 \times 10} \quad \left[\text{যেহেতু } \frac{4.1}{41} = \frac{1}{10}\right] \\
+h = \frac{1.1025 \times 18}{4.9} \\
+h = \frac{19.845}{4.9} \\
+h = 4.05
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রথম তিনটি জারের উচ্চতা 4.05 ডেসিমি. ছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একমুখ খোলা একটি লম্ব বৃত্তাকার পাত্রের সমগ্রতলের ক্ষেত্রফল 2002 বর্গ সেমি.। পাত্রটির ভূমির ব্যাসের দৈর্ঘ্য 14 সেমি. হলে, পাত্রটিতে কত লিটার জল ধরবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পাত্রটির ব্যাস = 14 সেমি $\implies$ ব্যাসার্ধ ($r$) = $\displaystyle \frac{14}{2} = 7$ সেমি।</p>
+            <p>ধরি, পাত্রটির উচ্চতা = $h$ সেমি।</p>
+            <p>যেহেতু পাত্রটির একমুখ খোলা, তাই এর সমগ্রতলের ক্ষেত্রফল হবে = বক্রতলের ক্ষেত্রফল + একটি ভূমির ক্ষেত্রফল</p>
+            <p>$\implies$ ক্ষেত্রফল = $2\pi rh + \pi r^2$</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+2\pi rh + \pi r^2 = 2002 \\
+2 \times \frac{22}{7} \times 7 \times h + \frac{22}{7} \times 7^2 = 2002 \\
+44h + 154 = 2002 \\
+44h = 2002 - 154 \\
+44h = 1848 \\
+h = \frac{1848}{44} = 42 \text{ সেমি}
+\end{array}
+\]
+            <p>পাত্রটিতে জল ধরবে (আয়তন) = $\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times 7^2 \times 42 \\
+= 22 \times 7 \times 42 \\
+= 6468 \text{ ঘন সেমি}
+\end{array}
+\]
+            <p>আমরা জানি, 1000 ঘন সেমি = 1 লিটার। (বা 1 ঘন ডেসিমি = 1 লিটার)</p>
+            <p>$\therefore$ জল ধরবে = $\displaystyle \frac{6468}{1000} = 6.468$ লিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পাত্রটিতে 6.468 লিটার জল ধরবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. যদি 14 সেমি. ব্যাসের পাইপযুক্ত একটি পাম্পসেট মিনিটে 2500 মিটার জল সেচ করতে পারে, তাহলে ওই পাম্পটি 1 ঘন্টায় কত কিলো লিটার জলসেচ করবে, হিসাব করে লিখি। [1 লিটার = 1 ঘন ডেসিমি.]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>জল কিলো লিটারে (বা ঘন ডেসিমিতে) চাওয়া হয়েছে, তাই সব একক ডেসিমিটারে নিয়ে যাই।</p>
+            <p>ব্যাস = 14 সেমি $\implies$ ব্যাসার্ধ ($r$) = 7 সেমি = 0.7 ডেসিমি।</p>
+            <p>জলের বেগ বা 1 মিনিটের উচ্চতা ($h$) = 2500 মিটার = 25000 ডেসিমি।</p>
+            <p>1 মিনিটে পাম্পটি জল সেচ করে = $\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times (0.7)^2 \times 25000 \\
+= \frac{22}{7} \times 0.49 \times 25000 \\
+= 22 \times 0.07 \times 25000 \\
+= 38500 \text{ ঘন ডেসিমি. বা লিটার}
+\end{array}
+\]
+            <p>1 ঘন্টা = 60 মিনিট।</p>
+            <p>1 ঘন্টায় জল সেচ করবে = $38500 \times 60 = 2310000$ লিটার।</p>
+            <p>যেহেতু 1000 লিটার = 1 কিলো লিটার, তাই:</p>
+            <p>জলসেচের পরিমাণ = $\displaystyle \frac{2310000}{1000} = 2310$ কিলো লিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পাম্পটি 1 ঘন্টায় 2310 কিলো লিটার জলসেচ করবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. 7 সেমি. ব্যাসের একটি লম্বা গ্যাসজারে কিছু জল আছে। ওই জলে যদি 5.6 সেমি. দৈর্ঘ্যের ব্যাসের 5 সেমি. লম্বা একটি নিরেট লোহার লম্ব বৃত্তাকার চোঙাকৃতি টুকরো সম্পূর্ণ ডোবানো হয়, তবে জলতল কতটুকু উপরে উঠবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আর্কিমিডিসের সূত্র অনুযায়ী, কোনো বস্তু জলে ডোবালে তা নিজের আয়তনের সমপরিমাণ জল অপসারিত করে। ফলে জলতল কিছুটা উপরে ওঠে।</p>
+            <p>গ্যাসজারের ব্যাস = 7 সেমি $\implies$ ব্যাসার্ধ ($R$) = 3.5 সেমি।</p>
+            <p>ধরি, জলতল $H$ সেমি উপরে উঠবে।</p>
+            <p>অপসারিত জলের আয়তন = $\pi R^2 H = \pi \times (3.5)^2 \times H$</p>
+            <br>
+            <p>লোহার টুকরোটির (চোঙ) ব্যাস = 5.6 সেমি $\implies$ ব্যাসার্ধ ($r$) = 2.8 সেমি।</p>
+            <p>টুকরোটির দৈর্ঘ্য ($h$) = 5 সেমি।</p>
+            <p>টুকরোটির আয়তন = $\pi r^2 h = \pi \times (2.8)^2 \times 5$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+\pi \times (3.5)^2 \times H = \pi \times (2.8)^2 \times 5 \\
+12.25 \times H = 7.84 \times 5 \\
+12.25 \times H = 39.2 \\
+H = \frac{39.2}{12.25} \\
+H = 3.2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: জলতল 3.2 সেমি উপরে উঠবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি লম্ব চোঙাকৃতি স্তম্ভের বক্রতলের ক্ষেত্রফল 264 বর্গ মিটার এবং আয়তন 924 ঘন মিটার হলে, ওই স্তম্ভের ব্যাসের দৈর্ঘ্য ও উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, স্তম্ভের ব্যাসার্ধ $r$ মিটার এবং উচ্চতা $h$ মিটার।</p>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi rh = 264 \quad \dots \text{(i)}$</p>
+            <p>আয়তন = $\pi r^2 h = 924 \quad \dots \text{(ii)}$</p>
+            <p>(ii) নং সমীকরণকে (i) নং সমীকরণ দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{\pi r^2 h}{2\pi rh} = \frac{924}{264} \\
+\frac{r}{2} = 3.5 \\
+r = 2 \times 3.5 = 7
+\end{array}
+\]
+            <p>অতএব, ব্যাসার্ধ = 7 মিটার। ব্যাস = $2 \times 7 = 14$ মিটার।</p>
+            <p>এখন $r = 7$ মানটি (i) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+2 \times \frac{22}{7} \times 7 \times h = 264 \\
+44 \times h = 264 \\
+h = \frac{264}{44} = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্তম্ভের ব্যাসের দৈর্ঘ্য 14 মিটার এবং উচ্চতা 6 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. 9 মিটার উচ্চতাবিশিষ্ট একটি লম্ব বৃত্তাকার চোঙাকৃতি ট্যাঙ্ক জলপূর্ণ আছে। 6 সেমি. দৈর্ঘ্যের ব্যাসের একটি পাইপ দিয়ে মিনিটে 225 মিটার বেগে জল বের হয়, তাহলে 36 মিনিটে ট্যাঙ্কটির সমস্ত জল বেরিয়ে যায়। ট্যাঙ্কটির ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পাইপের ব্যাস = 6 সেমি $\implies$ ব্যাসার্ধ ($r$) = 3 সেমি = 0.03 মিটার।</p>
+            <p>জলের বেগ ($h$) = 225 মিটার/মিনিট।</p>
+            <p>1 মিনিটে পাইপ দিয়ে নির্গত জলের আয়তন = $\pi r^2 h = \pi \times (0.03)^2 \times 225$</p>
+            <p>36 মিনিটে মোট নির্গত জলের আয়তন = $\pi \times 0.0009 \times 225 \times 36$</p>
+            \[
+\begin{array}{l}
+= \pi \times 0.0009 \times 8100 \\
+= 7.29\pi \text{ ঘন মিটার}
+\end{array}
+\]
+            <p>এই পরিমাণ জলই ট্যাঙ্কটির মোট আয়তন।</p>
+            <p>ধরি, ট্যাঙ্কটির ব্যাসার্ধ $R$ মিটার। উচ্চতা ($H$) = 9 মিটার।</p>
+            <p>ট্যাঙ্কের আয়তন = $\pi R^2 H = \pi \times R^2 \times 9$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+9\pi R^2 = 7.29\pi \\
+9R^2 = 7.29 \\
+R^2 = \frac{7.29}{9} = 0.81 \\
+R = \sqrt{0.81} = 0.9
+\end{array}
+\]
+            <p>ট্যাঙ্কের ব্যাসার্ধ = 0.9 মিটার। ব্যাস = $2 \times 0.9 = 1.8$ মিটার = 180 সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ট্যাঙ্কটির ব্যাসের দৈর্ঘ্য 1.8 মিটার বা 180 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. সমান ঘনত্বের একটি লম্ব বৃত্তাকার কাঠের গুঁড়ির বক্রতলের ক্ষেত্রফল 440 বর্গ ডেসিমি.। এক ঘন ডেসিমি. কাঠের ওজন 1.5 কিগ্রা. এবং গুঁড়িটির ওজন 9.24 কুইন্টাল হলে, গুঁড়িটির ব্যাসের দৈর্ঘ্য ও উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গুঁড়িটির মোট ওজন = 9.24 কুইন্টাল = 924 কিগ্রা। (1 কুইন্টাল = 100 কেজি)</p>
+            <p>1 ঘন ডেসিমি কাঠের ওজন 1.5 কিগ্রা।</p>
+            <p>অতএব, গুঁড়িটির মোট আয়তন = $\displaystyle \frac{924}{1.5} = 616$ ঘন ডেসিমি।</p>
+            <p>ধরি, ব্যাসার্ধ = $r$ ডেসিমি এবং উচ্চতা = $h$ ডেসিমি।</p>
+            <p>আয়তন $\implies \pi r^2 h = 616 \quad \dots \text{(i)}$</p>
+            <p>দেওয়া আছে, বক্রতলের ক্ষেত্রফল $\implies 2\pi rh = 440 \quad \dots \text{(ii)}$</p>
+            <p>(i) নং কে (ii) নং দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{\pi r^2 h}{2\pi rh} = \frac{616}{440} \\
+\frac{r}{2} = 1.4 \\
+r = 2 \times 1.4 = 2.8 \text{ ডেসিমি}
+\end{array}
+\]
+            <p>ব্যাসার্ধ 2.8 ডেসিমি. হলে ব্যাস = $2.8 \times 2 = 5.6$ ডেসিমি।</p>
+            <p>এবার $r$-এর মান (ii) নং সমীকরণে বসাই:</p>
+            \[
+\begin{array}{l}
+2 \times \frac{22}{7} \times 2.8 \times h = 440 \\
+44 \times 0.4 \times h = 440 \\
+17.6 \times h = 440 \\
+h = \frac{440}{17.6} = 25
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গুঁড়িটির ব্যাস 5.6 ডেসিমি. এবং উচ্চতা 25 ডেসিমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. দুই মুখ খোলা একটি লম্ব বৃত্তাকার লোহার পাইপের মুখের বহির্ব্যাসের দৈর্ঘ্য 30 সেমি., অন্তর্ব্যাসের দৈর্ঘ্য 26 সেমি. এবং পাইপটির দৈর্ঘ্য 14.7 মিটার। প্রতি বর্গ ডেসিমি. 2.25 টাকা হিসাবে ওই পাইপটির সমগ্রতলে আলকাতরার প্রলেপ দিতে কত খরচ হবে, হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু খরচ বর্গ ডেসিমিটারে, তাই সব একক ডেসিমিটারে নিতে হবে।</p>
+            <p>বহির্ব্যাস = 30 সেমি $\implies$ বহির্ব্যাসার্ধ ($R$) = 15 সেমি = 1.5 ডেসিমি।</p>
+            <p>অন্তর্ব্যাস = 26 সেমি $\implies$ অন্তর্ব্যাসার্ধ ($r$) = 13 সেমি = 1.3 ডেসিমি।</p>
+            <p>পাইপের দৈর্ঘ্য ($h$) = 14.7 মিটার = 147 ডেসিমি।</p>
+            <p>পাইপটি দুই মুখ খোলা ফাঁপা চোঙ। এর সমগ্রতলে প্রলেপ দিতে হলে বাইরের বক্রতল, ভেতরের বক্রতল এবং দুই মুখের রিং-এর অংশে প্রলেপ দিতে হবে।</p>
+            <p>সমগ্রতলের ক্ষেত্রফল = বাইরের বক্রতল + ভেতরের বক্রতল + $2 \times$ রিং-এর ক্ষেত্রফল</p>
+            \[
+\begin{array}{l}
+\text{ক্ষেত্রফল} = 2\pi Rh + 2\pi rh + 2\pi(R^2 - r^2) \\
+= 2\pi h(R + r) + 2\pi(R + r)(R - r) \\
+= 2\pi(R + r) [h + R - r]
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= 2 \times \frac{22}{7} \times (1.5 + 1.3) \times [147 + 1.5 - 1.3] \\
+= \frac{44}{7} \times 2.8 \times 147.2 \\
+= 44 \times 0.4 \times 147.2 \\
+= 17.6 \times 147.2 \\
+= 2590.72 \text{ বর্গ ডেসিমি.}
+\end{array}
+\]
+            <p>প্রতি বর্গ ডেসিমি. 2.25 টাকা হিসাবে মোট খরচ = $2590.72 \times 2.25 = 5829.12$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আলকাতরার প্রলেপ দিতে মোট 5829.12 টাকা খরচ হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. একটি দুই মুখ খোলা লোহার লম্ব বৃত্তাকার ফাঁপা চোঙের উচ্চতা 2.8 মিটার। চোঙটির অন্তর্ব্যাসের দৈর্ঘ্য 4.6 ডেসিমি. এবং চোঙটি 84.48 ঘন ডেসিমি. লোহা দিয়ে তৈরি হলে, চোঙটির বহির্ব্যাসের দৈর্ঘ্য নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উচ্চতা ($h$) = 2.8 মিটার = 28 ডেসিমি।</p>
+            <p>অন্তর্ব্যাস = 4.6 ডেসিমি $\implies$ অন্তর্ব্যাসার্ধ ($r$) = 2.3 ডেসিমি।</p>
+            <p>ধরি, বহির্ব্যাসার্ধ = $R$ ডেসিমি।</p>
+            <p>ফাঁপা চোঙের লোহার আয়তন = $\pi (R^2 - r^2) h$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+\pi (R^2 - r^2) h = 84.48 \\
+\frac{22}{7} \times (R^2 - 2.3^2) \times 28 = 84.48 \\
+22 \times (R^2 - 5.29) \times 4 = 84.48 \\
+88 \times (R^2 - 5.29) = 84.48 \\
+R^2 - 5.29 = \frac{84.48}{88} \\
+R^2 - 5.29 = 0.96 \\
+R^2 = 0.96 + 5.29 = 6.25 \\
+R = \sqrt{6.25} = 2.5
+\end{array}
+\]
+            <p>বহির্ব্যাসার্ধ 2.5 ডেসিমি.। অতএব, বহির্ব্যাস = $2 \times 2.5 = 5$ ডেসিমি.।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙটির বহির্ব্যাসের দৈর্ঘ্য 5 ডেসিমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. একটি লম্ব বৃত্তাকার চোঙের উচ্চতা উহার ব্যাসার্ধের দ্বিগুণ। যদি উচ্চতা 6 গুণ হতো তবে চোঙটির আয়তন 539 ঘন ডেসিমি বেশি হতো। চোঙটির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চোঙটির ভূমির ব্যাসার্ধ = $r$ ডেসিমি।</p>
+            <p>প্রদত্ত শর্ত অনুযায়ী, প্রকৃত উচ্চতা ($h_1$) = $2r$।</p>
+            <p>প্রকৃত আয়তন = $\pi r^2 h_1 = \pi r^2 (2r) = 2\pi r^3$</p>
+            <br>
+            <p>যদি উচ্চতা 6 গুণ হতো, অর্থাৎ নতুন উচ্চতা ($h_2$) = $6r$ হতো।</p>
+            <p>তাহলে নতুন আয়তন হতো = $\pi r^2 h_2 = \pi r^2 (6r) = 6\pi r^3$</p>
+            <p>শর্তানুসারে, নতুন আয়তন আগের চেয়ে 539 বেশি:</p>
+            \[
+\begin{array}{l}
+6\pi r^3 - 2\pi r^3 = 539 \\
+4\pi r^3 = 539 \\
+4 \times \frac{22}{7} \times r^3 = 539 \\
+\frac{88}{7} \times r^3 = 539 \\
+r^3 = \frac{539 \times 7}{88} \\
+r^3 = \frac{49 \times 7}{8} \quad [\text{11 দিয়ে কেটে}] \\
+r^3 = \frac{343}{8} \\
+r = \sqrt[3]{\frac{343}{8}} = \frac{7}{2} = 3.5
+\end{array}
+\]
+            <p>ব্যাসার্ধ $r = 3.5$ ডেসিমি.। অতএব, উচ্চতা ($h_1$) = $2r = 2 \times 3.5 = 7$ ডেসিমি.।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙটির উচ্চতা 7 ডেসিমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. ফায়ার ব্রিগেডের কোনো একটি দল একটি জলভর্তি লম্ব বৃত্তাকার ট্যাঙ্কারের জল 2 সেমি. দৈর্ঘ্যের ব্যাসের তিনটি হোস পাইপ দিয়ে মিনিটে 420 মিটার বেগে ঢেলে 40 মিনিটে আগুন নেভাল। যদি ট্যাঙ্কারটির ব্যাসের দৈর্ঘ্য 2.8 মিটার এবং দৈর্ঘ্য 6 মিটার হয়, তবে (i) আগুন নেভাতে কত জল খরচ হয়েছে এবং (ii) ট্যাঙ্কারে আর কত জল রয়েছে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>(i) কত জল খরচ হয়েছে:</strong></p>
+            <p>3টি হোস পাইপ ব্যবহার করা হয়েছে। প্রতিটি পাইপের ব্যাস = 2 সেমি $\implies$ ব্যাসার্ধ ($r$) = 1 সেমি = 0.01 মিটার।</p>
+            <p>জলের বেগ ($h$) = 420 মিটার/মিনিট।</p>
+            <p>40 মিনিটে 3টি পাইপ দিয়ে মোট নির্গত জলের আয়তন (খরচ হওয়া জল):</p>
+            \[
+\begin{array}{l}
+V_{\text{out}} = 3 \times (\pi r^2 h \times 40) \\
+= 3 \times \frac{22}{7} \times (0.01)^2 \times 420 \times 40 \\
+= 3 \times \frac{22}{7} \times 0.0001 \times 16800 \\
+= \frac{66}{7} \times 1.68 \\
+= 66 \times 0.24 \\
+= 15.84 \text{ ঘন মিটার}
+\end{array}
+\]
+            <p>1 ঘন মিটার = 1000 লিটার। সুতরাং খরচ হওয়া জল = 15840 লিটার।</p>
+            <br>
+            <p><strong>(ii) ট্যাঙ্কারে আর কত জল রয়েছে:</strong></p>
+            <p>ট্যাঙ্কারের ব্যাস = 2.8 মিটার $\implies$ ব্যাসার্ধ ($R$) = 1.4 মিটার। দৈর্ঘ্য ($H$) = 6 মিটার।</p>
+            <p>ট্যাঙ্কারের মোট আয়তন = $\pi R^2 H = \frac{22}{7} \times (1.4)^2 \times 6$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times 1.96 \times 6 \\
+= 22 \times 0.28 \times 6 \\
+= 36.96 \text{ ঘন মিটার}
+\end{array}
+\]
+            <p>ট্যাঙ্কারে অবশিষ্ট জল = মোট জল - খরচ হওয়া জল = $36.96 - 15.84 = 21.12$ ঘন মিটার।</p>
+            <p>লিটারে প্রকাশ করলে = 21120 লিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: (i) 15.84 ঘন মিটার (বা 15840 লিটার) জল খরচ হয়েছে। (ii) ট্যাঙ্কারে 21.12 ঘন মিটার (বা 21120 লিটার) জল রয়েছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. 17.5 সেমি. ব্যাসের 4টি লম্ব বৃত্তাকার ঢালাই পিলারের চারপাশে 3.5 সেমি. পুরু বালি-সিমেন্টের প্লাস্টার করতে হবে।<br>(i) প্রতিটি পিলার যদি 3 মিটার লম্বা হয়, তবে কত ঘন ডেসিমি. মশলা লাগবে হিসাব করে লিখি।<br>(ii) প্লাস্টারের মশলা তৈরি করতে যদি 4:1 অনুপাতে বালি ও সিমেন্ট মেশাতে হয়, তবে কত ঘন ডেসিমি. সিমেন্টের প্রয়োজন, হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>(i) মশলার আয়তন:</strong></p>
+            <p>যেহেতু আয়তন ঘন ডেসিমিটারে চেয়েছে, তাই সব একক ডেসিমিটারে নিই।</p>
+            <p>পিলারের ব্যাস = 17.5 সেমি $\implies$ ব্যাসার্ধ ($r$) = 8.75 সেমি = 0.875 ডেসিমি।</p>
+            <p>প্লাস্টার 3.5 সেমি পুরু। $\implies$ 0.35 ডেসিমি পুরু।</p>
+            <p>প্লাস্টার সহ পিলারের বাইরের ব্যাসার্ধ ($R$) = $0.875 + 0.35 = 1.225$ ডেসিমি।</p>
+            <p>পিলারের উচ্চতা ($h$) = 3 মিটার = 30 ডেসিমি।</p>
+            <p>1টি পিলারে প্লাস্টারের (মশলার) আয়তন = $\pi (R^2 - r^2) h$</p>
+            \[
+\begin{array}{l}
+R^2 - r^2 = (1.225)^2 - (0.875)^2 \\
+= (1.225 + 0.875)(1.225 - 0.875) \\
+= 2.1 \times 0.35 = 0.735
+\end{array}
+\]
+            <p>1টি পিলারের মশলা = $\frac{22}{7} \times 0.735 \times 30 = 22 \times 0.105 \times 30 = 69.3$ ঘন ডেসিমি।</p>
+            <p>4টি পিলারে মোট মশলা লাগবে = $4 \times 69.3 = 277.2$ ঘন ডেসিমি।</p>
+
+            <p><strong>(ii) সিমেন্টের পরিমাণ:</strong></p>
+            <p>বালি : সিমেন্ট = 4 : 1</p>
+            <p>মোট আনুপাতিক ভাগ = $4 + 1 = 5$।</p>
+            <p>সিমেন্টের পরিমাণ = $\displaystyle 277.2 \times \frac{1}{5} = 55.44$ ঘন ডেসিমি।</p>
+            
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: (i) 277.2 ঘন ডেসিমি. মশলা লাগবে। (ii) 55.44 ঘন ডেসিমি. সিমেন্ট প্রয়োজন।</div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="solution-card">
+        <h4 class="question-title">18. একটি লম্ব বৃত্তাকার ফাঁপা চোঙের বহির্ব্যাসের দৈর্ঘ্য 16 সেমি. এবং অন্তর্ব্যাসের দৈর্ঘ্য 12 সেমি.। চোঙটির উচ্চতা 36 সেমি.। চোঙটিকে গলিয়ে 2 সেমি. দৈর্ঘ্যের ব্যাসবিশিষ্ট এবং 6 সেমি. দৈর্ঘ্যের কতগুলি নিরেট চোঙ তৈরি করা যাবে হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ফাঁপা চোঙের বহির্ব্যাসার্ধ ($R$) = $\displaystyle\frac{16}{2} = 8$ সেমি।</p>
+            <p>অন্তর্ব্যাসার্ধ ($r$) = $\displaystyle\frac{12}{2} = 6$ সেমি। উচ্চতা ($H$) = 36 সেমি।</p>
+            <p>ফাঁপা চোঙের আয়তন = $\pi (R^2 - r^2) H = \pi (8^2 - 6^2) \times 36 = \pi (64 - 36) \times 36 = 28 \times 36 \times \pi$ ঘন সেমি।</p>
+            <br>
+            <p>নতুন নিরেট চোঙের ব্যাসার্ধ ($r_1$) = $\displaystyle\frac{2}{2} = 1$ সেমি। উচ্চতা ($h_1$) = 6 সেমি।</p>
+            <p>1টি নিরেট চোঙের আয়তন = $\pi r_1^2 h_1 = \pi \times 1^2 \times 6 = 6\pi$ ঘন সেমি।</p>
+            <p>চোঙের সংখ্যা = $\displaystyle\frac{\text{ফাঁপা চোঙের আয়তন}}{\text{1টি নিরেট চোঙের আয়তন}}$</p>
+            \[
+\begin{array}{l}
+= \frac{28 \times 36 \times \pi}{6\pi} \\
+= 28 \times 6 = 168
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 168 টি নিরেট চোঙ তৈরি করা যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="solution-card">
+        <h4 class="question-title">19. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) দুটি লম্ব বৃত্তাকার নিরেট চোঙের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত 2:3 এবং উচ্চতার অনুপাত 5:3 হলে, তাদের বক্রতলের ক্ষেত্রফলের অনুপাত:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi rh$</p>
+            <p>অনুপাত = $\displaystyle \frac{2\pi r_1 h_1}{2\pi r_2 h_2} = \left(\frac{r_1}{r_2}\right) \times \left(\frac{h_1}{h_2}\right) = \frac{2}{3} \times \frac{5}{3} = \frac{10}{9}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 10:9</div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি লম্ব বৃত্তাকার নিরেট চোঙের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত 2:3 এবং উচ্চতার অনুপাত 5:3 হলে, তাদের আয়তনের অনুপাত:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আয়তন = $\pi r^2 h$</p>
+            <p>অনুপাত = $\displaystyle \left(\frac{r_1}{r_2}\right)^2 \times \left(\frac{h_1}{h_2}\right) = \left(\frac{2}{3}\right)^2 \times \frac{5}{3} = \frac{4}{9} \times \frac{5}{3} = \frac{20}{27}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 20:27</div>
+        </div>
+
+        <span class="sub-question">(iii) দুটি লম্ব বৃত্তাকার নিরেট চোঙের আয়তন সমান এবং তাদের উচ্চতার অনুপাত 1:2 হলে, তাদের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, $\pi r_1^2 h_1 = \pi r_2^2 h_2 \implies \displaystyle \frac{r_1^2}{r_2^2} = \frac{h_2}{h_1}$</p>
+            <p>দেওয়া আছে $h_1 : h_2 = 1 : 2 \implies h_2 / h_1 = 2/1$</p>
+            <p>$\displaystyle \frac{r_1}{r_2} = \sqrt{\frac{2}{1}} = \frac{\sqrt{2}}{1} = \sqrt{2} : 1$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $\sqrt{2}:1$</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য অর্ধেক এবং উচ্চতা দ্বিগুণ হলে, চোঙটির আয়তন হবে পূর্বের চোঙের আয়তনের:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পূর্বের আয়তন $V = \pi r^2 h$</p>
+            <p>নতুন আয়তন = $\displaystyle \pi \left(\frac{r}{2}\right)^2 (2h) = \pi \frac{r^2}{4} 2h = \frac{1}{2} \pi r^2 h = \frac{1}{2} V$</p>
+            <p>অর্থাৎ, অর্ধেক হবে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) অর্ধেক</div>
+        </div>
+
+        <span class="sub-question">(v) একটি লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য দ্বিগুণ এবং উচ্চতা অর্ধেক করা হলে, বক্রতলের ক্ষেত্রফল পূর্বের চোঙের বক্রতলের ক্ষেত্রফলের:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পূর্বের ক্ষেত্রফল = $2\pi rh$</p>
+            <p>নতুন ক্ষেত্রফল = $\displaystyle 2\pi (2r) \left(\frac{h}{2}\right) = 2\pi rh$</p>
+            <p>অর্থাৎ, সমান থাকবে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) সমান</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি লম্ব চোঙাকৃতি ড্রামের ব্যাসার্ধের দৈর্ঘ্য r সেমি. এবং উচ্চতা h সেমি.। ড্রামের অর্ধেক জলপূর্ণ থাকলে, জলের আয়তন হবে $\pi r^2h$ ঘন সেমি.।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> অর্ধেক জলপূর্ণ থাকলে জলের আয়তন ড্রামের মোট আয়তনের অর্ধেক হবে। অর্থাৎ $\frac{1}{2}\pi r^2h$ হবে।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য 2 একক হলে, চোঙটির যে-কোনো উচ্চতার জন্য চোঙটির আয়তন এবং বক্রতলের ক্ষেত্রফলের সাংখ্যমান সমান হবে।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> আয়তন = $\pi r^2 h = \pi(2)^2 h = 4\pi h$। বক্রতলের ক্ষেত্রফল = $2\pi rh = 2\pi(2)h = 4\pi h$। উভয় মান সমান।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি আয়তক্ষেত্রাকার কাগজের দৈর্ঘ্য l একক এবং প্রস্থ b একক। আয়তক্ষেত্রাকার কাগজটিকে মুড়ে একটি লম্ব বৃত্তাকার চোঙ তৈরি করা হলো যার পরিধি কাগজটির দৈর্ঘ্যের সমান। চোঙটির বক্রতলের ক্ষেত্রফল _________ বর্গ একক।</span>
+        <div class="solution-box">
+            <p>কাগজ মুড়ে চোঙ বানালে কাগজের ক্ষেত্রফলই বক্রতলের ক্ষেত্রফল হয়। ক্ষেত্রফল = দৈর্ঘ্য $\times$ প্রস্থ = $lb$।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $lb$</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার চোঙের ব্যাসের দৈর্ঘ্য 3 সেমি. এবং উচ্চতা 4 সেমি. হলে, চোঙটির ভিতর সর্বাপেক্ষা লম্বা যে দণ্ড রাখা যাবে তার দৈর্ঘ্য _________ সেমি.।</span>
+        <div class="solution-box">
+            <p>সর্বাপেক্ষা লম্বা দণ্ডটি চোঙের কর্ণ বরাবর রাখা যাবে। কর্ণের দৈর্ঘ্য = $\sqrt{\text{ব্যাস}^2 + \text{উচ্চতা}^2} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$ সেমি।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 5</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার চোঙের আয়তন এবং বক্রতলের ক্ষেত্রফলের সাংখ্যমান সমান হলে, চোঙটির ব্যাসের দৈর্ঘ্য _________ একক।</span>
+        <div class="solution-box">
+            <p>$\pi r^2 h = 2\pi rh \implies r = 2$। অতএব, ব্যাস = $2r = 4$ একক।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 4</p>
+        </div>
+    </div>
+
+    <!-- Question 20 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">20. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি লম্ব বৃত্তাকার চোঙাকৃতি স্তম্ভের বক্রতলের ক্ষেত্রফল 264 বর্গ মিটার এবং আয়তন 924 ঘন মিটার হলে, স্তম্ভের ভূমির ব্যাসার্ধের দৈর্ঘ্য কত লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi rh = 264 \implies \pi rh = 132$</p>
+            <p>আয়তন = $\pi r^2 h = 924 \implies r(\pi rh) = 924$</p>
+            <p>$\implies r \times 132 = 924 \implies r = \frac{924}{132} = 7$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসার্ধের দৈর্ঘ্য 7 মিটার।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার চোঙের বক্রতলের ক্ষেত্রফল c বর্গ একক, ভূমির ব্যাসার্ধের দৈর্ঘ্য r একক এবং আয়তন v ঘন একক হলে, $\frac{cr}{v}$ -এর মান কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $c = 2\pi rh$ এবং $v = \pi r^2 h$</p>
+            \[
+\begin{array}{l}
+\frac{cr}{v} = \frac{(2\pi rh) \cdot r}{\pi r^2 h} \\
+= \frac{2\pi r^2 h}{\pi r^2 h} \\
+= 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান 2</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার চোঙের উচ্চতা 14 সেমি. এবং বক্রতলের ক্ষেত্রফল 264 বর্গ সেমি. হলে, চোঙটির আয়তন কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi rh = 264$</p>
+            <p>$2 \times \frac{22}{7} \times r \times 14 = 264 \implies 88r = 264 \implies r = 3$ সেমি।</p>
+            <p>আয়তন = $\pi r^2 h = \frac{22}{7} \times 3^2 \times 14 = 22 \times 9 \times 2 = 396$ ঘন সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙটির আয়তন 396 ঘন সেমি.।</div>
+        </div>
+
+        <span class="sub-question">(iv) দুটি লম্ব বৃত্তাকার চোঙের উচ্চতার অনুপাত 1:2 এবং ভূমির পরিধির অনুপাত 3:4 হলে, তাদের আয়তনের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ভূমির পরিধির অনুপাত = ব্যাসার্ধের অনুপাত। $\therefore r_1 : r_2 = 3 : 4$</p>
+            <p>উচ্চতার অনুপাত $h_1 : h_2 = 1 : 2$</p>
+            <p>আয়তনের অনুপাত = $\displaystyle \frac{\pi r_1^2 h_1}{\pi r_2^2 h_2} = \left(\frac{r_1}{r_2}\right)^2 \times \left(\frac{h_1}{h_2}\right) = \left(\frac{3}{4}\right)^2 \times \frac{1}{2} = \frac{9}{16} \times \frac{1}{2} = \frac{9}{32}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আয়তনের অনুপাত 9:32</div>
+        </div>
+
+        <span class="sub-question">(v) একটি লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য 50% হ্রাস করা হলো এবং উচ্চতা 50% বৃদ্ধি করা হলো। চোঙটির আয়তনের শতকরা কত পরিবর্তন হবে তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রাথমিক ব্যাসার্ধ $r$ এবং উচ্চতা $h$। প্রাথমিক আয়তন $V = \pi r^2 h$</p>
+            <p>নতুন ব্যাসার্ধ = $r - 50\% \text{ of } r = \frac{r}{2}$</p>
+            <p>নতুন উচ্চতা = $h + 50\% \text{ of } h = 1.5h = \frac{3h}{2}$</p>
+            <p>নতুন আয়তন = $\displaystyle \pi \left(\frac{r}{2}\right)^2 \left(\frac{3h}{2}\right) = \pi \frac{r^2}{4} \frac{3h}{2} = \frac{3}{8} \pi r^2 h = \frac{3}{8} V$</p>
+            <p>আয়তন হ্রাস পেয়েছে = $V - \frac{3}{8}V = \frac{5}{8}V$</p>
+            <p>শতকরা হ্রাস = $\displaystyle \frac{\frac{5}{8}V}{V} \times 100\% = \frac{500}{8}\% = 62.5\%$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আয়তন 62.5% হ্রাস পাবে।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>
