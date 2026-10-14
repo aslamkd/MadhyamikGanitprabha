@@ -684,5 +684,193 @@ AD = \frac{12}{5} = 2.4 \text{ সেমি.}
   window.abvrpMc_rerenderMathJax = renderMathJax;
 })();
 </script>
+    <style id="abvrp-overflow-only-fix">
+  .solution-container,
+  .solution-container * {
+    box-sizing: border-box;
+  }
+
+  /* Prevent page-wide horizontal overflow */
+  html,
+  body {
+    max-width: 100%;
+  }
+
+  .solution-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Keep ordinary content typography unchanged */
+  .solution-container p,
+  .solution-container h1,
+  .solution-container h2,
+  .solution-container h3,
+  .solution-container h4,
+  .solution-container h5,
+  .solution-container h6,
+  .solution-container li {
+    overflow-wrap: anywhere;
+  }
+
+  /* Tables retain their existing desktop appearance */
+  .solution-container .stat-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .solution-container .stat-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Only a table that actually overflows is compacted */
+  @media (max-width: 900px) {
+    .solution-container .stat-table-wrapper {
+      overflow-x: hidden;
+    }
+
+    .solution-container .stat-table.is-overflowing {
+      table-layout: fixed;
+      width: 100% !important;
+      font-size: var(--fit-font-size, 12px) !important;
+    }
+
+    .solution-container .stat-table.is-overflowing th,
+    .solution-container .stat-table.is-overflowing td {
+      padding: var(--fit-cell-padding, 4px) !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      min-width: 0;
+      line-height: 1.4;
+    }
+  }
+
+  /* Math equations may scroll locally without resizing other text */
+  .solution-container .MathJax_Display {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    box-sizing: border-box;
+  }
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  var root = document.querySelector('.solution-container');
+  if (!root) return;
+
+  var timer;
+
+  function fitOverflowingTables() {
+    var smallScreen = window.matchMedia(
+      '(max-width: 900px)'
+    ).matches;
+
+    root.querySelectorAll('.stat-table').forEach(function (table) {
+      table.classList.remove('is-overflowing');
+      table.style.removeProperty('--fit-font-size');
+      table.style.removeProperty('--fit-cell-padding');
+
+      if (!smallScreen) return;
+
+      var wrapper = table.closest('.stat-table-wrapper');
+      if (!wrapper) return;
+
+      /* Measure the table's natural width without changing its content */
+      var previousLayout = table.style.tableLayout;
+      var previousWidth = table.style.width;
+
+      table.style.tableLayout = 'auto';
+      table.style.width = 'max-content';
+
+      var available = wrapper.clientWidth;
+      var naturalWidth = table.scrollWidth;
+
+      table.style.tableLayout = previousLayout;
+      table.style.width = previousWidth;
+
+      if (!available || naturalWidth <= available + 1) return;
+
+      /* Only this overflowing table is adjusted */
+      table.classList.add('is-overflowing');
+
+      var rows = table.querySelectorAll('tr');
+      var columns = 1;
+
+      rows.forEach(function (row) {
+        var count = 0;
+        row.querySelectorAll('th, td').forEach(function (cell) {
+          count += Math.max(1, cell.colSpan || 1);
+        });
+        columns = Math.max(columns, count);
+      });
+
+      var font = columns >= 10 ? 8 :
+                 columns >= 7  ? 9 :
+                 columns >= 5  ? 10 : 11;
+
+      var padding = columns >= 7 ? '2px' : '3px';
+
+      table.style.setProperty('--fit-font-size', font + 'px');
+      table.style.setProperty('--fit-cell-padding', padding);
+
+      /* Reduce further only if this table still overflows */
+      requestAnimationFrame(function () {
+        var size = font;
+
+        while (
+          table.scrollWidth > wrapper.clientWidth + 1 &&
+          size > 7
+        ) {
+          size--;
+          table.style.setProperty(
+            '--fit-font-size',
+            size + 'px'
+          );
+        }
+      });
+    });
+  }
+
+  function scheduleFit() {
+    clearTimeout(timer);
+    timer = setTimeout(fitOverflowingTables, 100);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      fitOverflowingTables,
+      { once: true }
+    );
+  } else {
+    fitOverflowingTables();
+  }
+
+  window.addEventListener('resize', scheduleFit);
+  window.addEventListener('orientationchange', scheduleFit);
+
+  if ('ResizeObserver' in window) {
+    var resizeObserver = new ResizeObserver(scheduleFit);
+    resizeObserver.observe(root);
+  }
+
+  if ('MutationObserver' in window) {
+    var mutationObserver = new MutationObserver(scheduleFit);
+    mutationObserver.observe(root, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+})();
+</script>
 </body>
 </html>
