@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-1.4</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. শ্রীধর আচার্যের সূত্র সংক্রান্ত প্রশ্নাবলি:</h4>
+        
+        <span class="sub-question">(i) $4x^2 + (2x - 1)(2x + 1) = 4x(2x - 1)$ -এই সমীকরণটি সমাধানে শ্রীধর আচার্যের সূত্র প্রয়োগ সম্ভব কিনা বুঝে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে প্রথমে সরল করে দেখি এটি দ্বিঘাত সমীকরণ কি না:</p>
+            \[
+\begin{array}{l}
+4x^2 + (4x^2 - 1^2) = 8x^2 - 4x \\
+4x^2 + 4x^2 - 1 = 8x^2 - 4x \\
+8x^2 - 1 = 8x^2 - 4x \\
+8x^2 - 8x^2 + 4x - 1 = 0 \\
+4x - 1 = 0
+\end{array}
+\]
+            <p>সরল করার পর দেখা যাচ্ছে এটি একটি রৈখিক (Linear) সমীকরণ, দ্বিঘাত সমীকরণ নয় (কারণ $x^2$ পদটি কেটে গেছে)। শ্রীধর আচার্যের সূত্র কেবলমাত্র দ্বিঘাত সমীকরণের ক্ষেত্রেই প্রযোজ্য।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: এই সমীকরণটিতে শ্রীধর আচার্যের সূত্র প্রয়োগ সম্ভব নয়।</div>
+        </div>
+
+        <span class="sub-question">(ii) শ্রীধর আচার্যের সূত্রের সাহায্যে আমরা কোন ধরনের সমীকরণের সমাধান করতে পারি বুঝে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শ্রীধর আচার্যের সূত্রের সাহায্যে আমরা শুধুমাত্র <strong>একচলবিশিষ্ট দ্বিঘাত সমীকরণ</strong> (Quadratic equations with one variable) এর সমাধান করতে পারি।</p>
+            <p>যেসকল সমীকরণকে $ax^2 + bx + c = 0$ (যেখানে $a, b, c$ বাস্তব সংখ্যা এবং $a \neq 0$) আকারে প্রকাশ করা যায়, কেবলমাত্র তাদের বীজ এই সূত্রের সাহায্যে নির্ণয় করা যায়।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: একচলবিশিষ্ট দ্বিঘাত সমীকরণ।</div>
+        </div>
+
+        <span class="sub-question">(iii) $5x^2 + 2x - 7 = 0$ এই সমীকরণে শ্রীধর আচার্যের সূত্র প্রয়োগ করে $x = \displaystyle\frac{k \pm 12}{10}$ পাওয়া গেলে $k$-এর মান কী হবে হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত সমীকরণ: $5x^2 + 2x - 7 = 0$</p>
+            <p>এটিকে $ax^2 + bx + c = 0$ -এর সাথে তুলনা করে পাই: $a = 5$, $b = 2$, $c = -7$</p>
+            <p>শ্রীধর আচার্যের সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+= \frac{-2 \pm \sqrt{2^2 - 4 \times 5 \times (-7)}}{2 \times 5} \\
+= \frac{-2 \pm \sqrt{4 + 140}}{10} \\
+= \frac{-2 \pm \sqrt{144}}{10} \\
+= \frac{-2 \pm 12}{10}
+\end{array}
+\]
+            <p>প্রশ্নানুসারে, $x = \displaystyle\frac{k \pm 12}{10}$</p>
+            <p>উভয় সমীকরণ তুলনা করে পাই, $k = -2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $k$-এর মান হবে -2।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নীচের দ্বিঘাত সমীকরণগুলির বাস্তব বীজ থাকলে শ্রীধর আচার্যের সূত্রের সাহায্যে নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i) $3x^2 + 11x - 4 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে $ax^2+bx+c=0$ এর সাথে তুলনা করে পাই: $a=3, b=11, c=-4$</p>
+            <p>নিরূপক (Discriminant), $b^2 - 4ac = (11)^2 - 4(3)(-4) = 121 + 48 = 169 &gt; 0$</p>
+            <p>যেহেতু নিরূপক ধনাত্মক, তাই বাস্তব বীজ আছে। শ্রীধর আচার্যের সূত্র থেকে পাই:</p>
+            \[
+\begin{array}{l}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+= \frac{-11 \pm \sqrt{169}}{2(3)} \\
+= \frac{-11 \pm 13}{6}
+\end{array}
+\]
+            <p>হয় $x = \displaystyle\frac{-11 + 13}{6} = \frac{2}{6} = \frac{1}{3}$</p>
+            <p>অথবা $x = \displaystyle\frac{-11 - 13}{6} = \frac{-24}{6} = -4$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{1}{3}, -4$</div>
+        </div>
+
+        <span class="sub-question">(ii) $(x - 2)(x + 4) + 9 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে সমীকরণটিকে সরল করে $ax^2+bx+c=0$ আকারে নিয়ে আসি:</p>
+            \[
+\begin{array}{l}
+x^2 + 4x - 2x - 8 + 9 = 0 \\
+x^2 + 2x + 1 = 0
+\end{array}
+\]
+            <p>এখানে $a=1, b=2, c=1$</p>
+            <p>নিরূপক $b^2 - 4ac = 2^2 - 4(1)(1) = 4 - 4 = 0$</p>
+            <p>যেহেতু নিরূপক শূন্য, তাই বাস্তব ও সমান বীজ আছে।</p>
+            \[
+\begin{array}{l}
+x = \frac{-2 \pm \sqrt{0}}{2(1)} \\
+= \frac{-2}{2} = -1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: -1, -1</div>
+        </div>
+
+        <span class="sub-question">(iii) $(4x - 3)^2 - 2(x + 3) = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে সরল করি:</p>
+            \[
+\begin{array}{l}
+(16x^2 - 24x + 9) - 2x - 6 = 0 \\
+16x^2 - 26x + 3 = 0
+\end{array}
+\]
+            <p>এখানে $a=16, b=-26, c=3$</p>
+            <p>নিরূপক $b^2 - 4ac = (-26)^2 - 4(16)(3) = 676 - 192 = 484 &gt; 0$</p>
+            <p>বাস্তব বীজ আছে। সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-(-26) \pm \sqrt{484}}{2(16)} \\
+= \frac{26 \pm 22}{32}
+\end{array}
+\]
+            <p>হয় $x = \displaystyle\frac{26 + 22}{32} = \frac{48}{32} = \frac{3}{2}$</p>
+            <p>অথবা $x = \displaystyle\frac{26 - 22}{32} = \frac{4}{32} = \frac{1}{8}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{3}{2}, \frac{1}{8}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $3x^2 + 2x - 1 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a=3, b=2, c=-1$</p>
+            <p>নিরূপক $b^2 - 4ac = 2^2 - 4(3)(-1) = 4 + 12 = 16 &gt; 0$</p>
+            <p>বাস্তব বীজ আছে। সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-2 \pm \sqrt{16}}{2(3)} \\
+= \frac{-2 \pm 4}{6}
+\end{array}
+\]
+            <p>হয় $x = \displaystyle\frac{-2 + 4}{6} = \frac{2}{6} = \frac{1}{3}$</p>
+            <p>অথবা $x = \displaystyle\frac{-2 - 4}{6} = \frac{-6}{6} = -1$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{1}{3}, -1$</div>
+        </div>
+
+        <span class="sub-question">(v) $3x^2 + 2x + 1 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a=3, b=2, c=1$</p>
+            <p>নিরূপক $b^2 - 4ac = 2^2 - 4(3)(1) = 4 - 12 = -8 &lt; 0$</p>
+            <p>যেহেতু নিরূপক ঋণাত্মক, তাই এই সমীকরণের কোনো বাস্তব বীজ নেই।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: সমীকরণটির কোনো বাস্তব বীজ নেই।</div>
+        </div>
+
+        <span class="sub-question">(vi) $10x^2 - x - 3 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a=10, b=-1, c=-3$</p>
+            <p>নিরূপক $b^2 - 4ac = (-1)^2 - 4(10)(-3) = 1 + 120 = 121 &gt; 0$</p>
+            <p>বাস্তব বীজ আছে। সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-(-1) \pm \sqrt{121}}{2(10)} \\
+= \frac{1 \pm 11}{20}
+\end{array}
+\]
+            <p>হয় $x = \displaystyle\frac{1 + 11}{20} = \frac{12}{20} = \frac{3}{5}$</p>
+            <p>অথবা $x = \displaystyle\frac{1 - 11}{20} = \frac{-10}{20} = -\frac{1}{2}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{3}{5}, -\frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(vii) $10x^2 - x + 3 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a=10, b=-1, c=3$</p>
+            <p>নিরূপক $b^2 - 4ac = (-1)^2 - 4(10)(3) = 1 - 120 = -119 &lt; 0$</p>
+            <p>যেহেতু নিরূপক ঋণাত্মক, তাই এই সমীকরণের কোনো বাস্তব বীজ নেই।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: সমীকরণটির কোনো বাস্তব বীজ নেই।</div>
+        </div>
+
+        <span class="sub-question">(viii) $25x^2 - 30x + 7 = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a=25, b=-30, c=7$</p>
+            <p>নিরূপক $b^2 - 4ac = (-30)^2 - 4(25)(7) = 900 - 700 = 200 &gt; 0$</p>
+            <p>বাস্তব বীজ আছে। সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-(-30) \pm \sqrt{200}}{2(25)} \\
+= \frac{30 \pm \sqrt{100 \times 2}}{50} \\
+= \frac{30 \pm 10\sqrt{2}}{50} \\
+= \frac{10(3 \pm \sqrt{2})}{50} \\
+= \frac{3 \pm \sqrt{2}}{5}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{3 + \sqrt{2}}{5}, \frac{3 - \sqrt{2}}{5}$</div>
+        </div>
+
+        <span class="sub-question">(ix) $(4x - 2)^2 + 6x = 25$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে সরল করি:</p>
+            \[
+\begin{array}{l}
+(16x^2 - 16x + 4) + 6x - 25 = 0 \\
+16x^2 - 10x - 21 = 0
+\end{array}
+\]
+            <p>এখানে $a=16, b=-10, c=-21$</p>
+            <p>নিরূপক $b^2 - 4ac = (-10)^2 - 4(16)(-21) = 100 + 1344 = 1444 &gt; 0$</p>
+            <p>বাস্তব বীজ আছে। সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+x = \frac{-(-10) \pm \sqrt{1444}}{2(16)} \\
+= \frac{10 \pm 38}{32}
+\end{array}
+\]
+            <p>হয় $x = \displaystyle\frac{10 + 38}{32} = \frac{48}{32} = \frac{3}{2}$</p>
+            <p>অথবা $x = \displaystyle\frac{10 - 38}{32} = \frac{-28}{32} = -\frac{7}{8}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় বীজদ্বয়: $\displaystyle\frac{3}{2}, -\frac{7}{8}$</div>
+        </div>
+
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. একচলবিশিষ্ট দ্বিঘাত সমীকরণে প্রকাশ করে সমাধান (বাস্তব সমস্যা):</h4>
+
+        <span class="sub-question">(i) সাথি একটি সমকোণী ত্রিভুজ অঙ্কন করেছে যার অতিভুজের দৈর্ঘ্য ক্ষুদ্রতম বাহুর দ্বিগুণ অপেক্ষা 6 সেমি. বেশি। যদি তৃতীয় বাহুর দৈর্ঘ্য অতিভুজের দৈর্ঘ্যের থেকে 2 সেমি. কম হয়, তবে সাথির আঁকা সমকোণী ত্রিভুজের বাহু তিনটির দৈর্ঘ্য হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, সমকোণী ত্রিভুজটির ক্ষুদ্রতম বাহুর দৈর্ঘ্য = $x$ সেমি।</p>
+            <p>শর্তানুসারে, অতিভুজের দৈর্ঘ্য = $(2x + 6)$ সেমি।</p>
+            <p>তৃতীয় বাহুর দৈর্ঘ্য অতিভুজের চেয়ে 2 সেমি কম, অর্থাৎ = $(2x + 6) - 2 = (2x + 4)$ সেমি।</p>
+            <p>পিথাগোরাসের উপপাদ্য অনুযায়ী, $\text{(ভূমি)}^2 + \text{(লম্ব)}^2 = \text{(অতিভুজ)}^2$</p>
+            \[
+\begin{array}{l}
+x^2 + (2x + 4)^2 = (2x + 6)^2 \\
+x^2 + 4x^2 + 16x + 16 = 4x^2 + 24x + 36 \\
+5x^2 + 16x + 16 - 4x^2 - 24x - 36 = 0 \\
+x^2 - 8x - 20 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 - 10x + 2x - 20 = 0 \\
+x(x - 10) + 2(x - 10) = 0 \\
+(x - 10)(x + 2) = 0
+\end{array}
+\]
+            <p>হয় $x = 10$, অথবা $x = -2$। যেহেতু বাহুর দৈর্ঘ্য ঋণাত্মক হতে পারে না, তাই $x = 10$।</p>
+            <p>ক্ষুদ্রতম বাহু = 10 সেমি, তৃতীয় বাহু = $2(10) + 4 = 24$ সেমি, অতিভুজ = $2(10) + 6 = 26$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ত্রিভুজটির বাহু তিনটির দৈর্ঘ্য 10 সেমি, 24 সেমি এবং 26 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি দুই অঙ্কের একটি ধনাত্মক সংখ্যাকে উহার এককের ঘরের অঙ্ক দিয়ে গুণ করলে গুণফল 189 হয় এবং দশকের ঘরের অঙ্ক এককের ঘরের অঙ্কের দ্বিগুণ হয়, তবে এককের ঘরের অঙ্কটি নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, এককের ঘরের অঙ্কটি হলো $x$।</p>
+            <p>শর্তানুসারে, দশকের ঘরের অঙ্কটি হবে $2x$।</p>
+            <p>অতএব, সংখ্যাটি হলো = $10 \times (\text{দশকের অঙ্ক}) + \text{এককের অঙ্ক} = 10(2x) + x = 20x + x = 21x$।</p>
+            <p>প্রশ্নানুসারে, সংখ্যাটিকে এককের অঙ্ক দিয়ে গুণ করলে গুণফল 189 হয়:</p>
+            \[
+\begin{array}{l}
+21x \times x = 189 \\
+21x^2 = 189 \\
+x^2 = \frac{189}{21} \\
+x^2 = 9 \\
+x = \pm 3
+\end{array}
+\]
+            <p>যেহেতু অঙ্কটি ধনাত্মক, তাই $x = 3$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সংখ্যাটির এককের ঘরের অঙ্কটি হলো 3।</div>
+        </div>
+
+        <span class="sub-question">(iii) সালমার গতিবেগ অনিকের গতিবেগের থেকে 1 মি./সেকেন্ড বেশি। 180 মিটার দৌড়াতে গিয়ে সালমা অনিকের থেকে 2 সেকেন্ড আগে পৌঁছায়। অনিকের গতিবেগ প্রতি সেকেন্ডে কত মিটার হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, অনিকের গতিবেগ প্রতি সেকেন্ডে $x$ মিটার।</p>
+            <p>তাহলে, সালমার গতিবেগ হবে প্রতি সেকেন্ডে $(x + 1)$ মিটার।</p>
+            <p>180 মিটার দৌড়াতে অনিকের সময় লাগে = $\displaystyle\frac{180}{x}$ সেকেন্ড।</p>
+            <p>180 মিটার দৌড়াতে সালমার সময় লাগে = $\displaystyle\frac{180}{x+1}$ সেকেন্ড।</p>
+            <p>শর্তানুসারে, সালমার 2 সেকেন্ড সময় কম লাগে:</p>
+            \[
+\begin{array}{l}
+\frac{180}{x} - \frac{180}{x+1} = 2 \\
+180 \left( \frac{(x+1) - x}{x(x+1)} \right) = 2 \\
+180 \left( \frac{1}{x^2+x} \right) = 2 \\
+2(x^2 + x) = 180 \\
+x^2 + x = 90 \\
+x^2 + x - 90 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 + 10x - 9x - 90 = 0 \\
+(x + 10)(x - 9) = 0
+\end{array}
+\]
+            <p>হয় $x = -10$, অথবা $x = 9$। গতিবেগ ঋণাত্মক হয় না, তাই $x = 9$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অনিকের গতিবেগ প্রতি সেকেন্ডে 9 মিটার।</div>
+        </div>
+
+        <span class="sub-question">(iv) আমাদের পাড়ায় একটি বর্গক্ষেত্রাকার পার্ক আছে। ওই পার্কের একটি বাহুর দৈর্ঘ্যের থেকে 5 মিটার বেশি দৈর্ঘ্য বিশিষ্ট ও ওই পার্কের বাহুর দৈর্ঘ্য থেকে 3 মি. কম প্রস্থবিশিষ্ট একটি আয়তক্ষেত্রাকার পার্কের ক্ষেত্রফল ওই বর্গক্ষেত্রাকার পার্কের ক্ষেত্রফলের দ্বিগুণ অপেক্ষা 78 বর্গ মিটার কম হলে বর্গক্ষেত্রাকার পার্কের বাহুর দৈর্ঘ্য হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, বর্গক্ষেত্রাকার পার্কের প্রতিটি বাহুর দৈর্ঘ্য $x$ মিটার।</p>
+            <p>তাহলে, বর্গক্ষেত্রাকার পার্কের ক্ষেত্রফল = $x^2$ বর্গ মিটার।</p>
+            <p>নতুন আয়তক্ষেত্রাকার পার্কের দৈর্ঘ্য = $(x + 5)$ মিটার এবং প্রস্থ = $(x - 3)$ মিটার।</p>
+            <p>আয়তক্ষেত্রাকার পার্কের ক্ষেত্রফল = $(x + 5)(x - 3) = x^2 - 3x + 5x - 15 = x^2 + 2x - 15$ বর্গ মিটার।</p>
+            <p>শর্তানুসারে, আয়তক্ষেত্রাকার পার্কের ক্ষেত্রফল বর্গাকার পার্কের ক্ষেত্রফলের দ্বিগুণ ($2x^2$) অপেক্ষা 78 কম:</p>
+            \[
+\begin{array}{l}
+x^2 + 2x - 15 = 2x^2 - 78 \\
+2x^2 - x^2 - 2x - 78 + 15 = 0 \\
+x^2 - 2x - 63 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 - 9x + 7x - 63 = 0 \\
+x(x - 9) + 7(x - 9) = 0 \\
+(x - 9)(x + 7) = 0
+\end{array}
+\]
+            <p>হয় $x = 9$, অথবা $x = -7$। দৈর্ঘ্য ঋণাত্মক হয় না, তাই $x = 9$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বর্গক্ষেত্রাকার পার্কের বাহুর দৈর্ঘ্য 9 মিটার।</div>
+        </div>
+
+        <span class="sub-question">(v) আমাদের গ্রামে প্রলয়বাবু তার আয়তক্ষেত্রাকার জমিতে লাগানোর জন্য মোট 350টি লঙ্কার চারা কিনলেন। সারি ধরে চারাগাছ লাগাতে গিয়ে দেখলেন যে, প্রতিটি সারিতে সারির সংখ্যা থেকে 24টি করে বেশি গাছ লাগালে আরও 10টি গাছ অতিরিক্ত থাকে। সারির সংখ্যা হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মোট সারির সংখ্যা হলো $x$।</p>
+            <p>শর্তানুসারে, প্রতিটি সারিতে গাছের সংখ্যা = $(x + 24)$।</p>
+            <p>অতএব, মোট লাগানো গাছের সংখ্যা = $x(x + 24)$।</p>
+            <p>তিনি 350 টি চারা কিনেছিলেন এবং 10 টি চারা অবশিষ্ট ছিল। অর্থাৎ, তিনি চারা লাগিয়েছেন = $350 - 10 = 340$ টি।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+x(x + 24) = 340 \\
+x^2 + 24x - 340 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 + 34x - 10x - 340 = 0 \\
+x(x + 34) - 10(x + 34) = 0 \\
+(x + 34)(x - 10) = 0
+\end{array}
+\]
+            <p>হয় $x = 10$, অথবা $x = -34$। যেহেতু সারির সংখ্যা ঋণাত্মক হতে পারে না, তাই $x = 10$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সারির সংখ্যা 10টি।</div>
+        </div>
+
+        <span class="sub-question">(vi) জোসেফ এবং কুন্তল একটি কারখানায় কাজ করে। জোসেফ একটি জিনিস তৈরি করতে কুন্তলের চেয়ে 5 মিনিট কম সময় নেয়। 6 ঘণ্টা কাজ করে জোসেফ, কুন্তলের চেয়ে 6টি জিনিস বেশি তৈরি করে। কুন্তল ওই সময়ে কয়টি জিনিস তৈরি করে হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, কুন্তল একটি জিনিস তৈরি করতে সময় নেয় $x$ মিনিট।</p>
+            <p>তাহলে, জোসেফ একটি জিনিস তৈরি করতে সময় নেয় $(x - 5)$ মিনিট।</p>
+            <p>মোট সময় = 6 ঘণ্টা = $6 \times 60 = 360$ মিনিট।</p>
+            <p>360 মিনিটে কুন্তল জিনিস তৈরি করে = $\displaystyle\frac{360}{x}$ টি।</p>
+            <p>360 মিনিটে জোসেফ জিনিস তৈরি করে = $\displaystyle\frac{360}{x-5}$ টি।</p>
+            <p>শর্তানুসারে, জোসেফ 6টি জিনিস বেশি তৈরি করে:</p>
+            \[
+\begin{array}{l}
+\frac{360}{x-5} - \frac{360}{x} = 6 \\
+360 \left( \frac{x - (x-5)}{x(x-5)} \right) = 6 \\
+360 \left( \frac{5}{x^2-5x} \right) = 6 \\
+\frac{1800}{x^2-5x} = 6 \\
+6(x^2 - 5x) = 1800 \\
+x^2 - 5x = 300 \\
+x^2 - 5x - 300 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 - 20x + 15x - 300 = 0 \\
+x(x - 20) + 15(x - 20) = 0 \\
+(x - 20)(x + 15) = 0
+\end{array}
+\]
+            <p>হয় $x = 20$, অথবা $x = -15$ (ঋণাত্মক সময় অগ্রাহ্য)।</p>
+            <p>অর্থাৎ কুন্তল 1টি জিনিস বানাতে 20 মিনিট সময় নেয়। তাহলে 360 মিনিটে (6 ঘণ্টায়) কুন্তল তৈরি করবে = $\displaystyle\frac{360}{20} = 18$ টি জিনিস।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: কুন্তল ওই সময়ে 18 টি জিনিস তৈরি করবে।</div>
+        </div>
+
+        <span class="sub-question">(vii) স্থিরজলে একটি নৌকার গতিবেগ 8 কিমি/ঘণ্টা। নৌকাটি 5 ঘণ্টায় স্রোতের অনুকূলে 15 কিমি. এবং স্রোতের প্রতিকূলে 22 কিমি. গেলে, স্রোতের বেগ কত ছিল হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, স্রোতের বেগ ঘণ্টায় $x$ কিমি।</p>
+            <p>নৌকার বেগ স্থিরজলে 8 কিমি/ঘণ্টা।</p>
+            <p>অতএব, স্রোতের অনুকূলে বেগ = $(8 + x)$ কিমি/ঘণ্টা।</p>
+            <p>স্রোতের প্রতিকূলে বেগ = $(8 - x)$ কিমি/ঘণ্টা।</p>
+            <p>15 কিমি অনুকূলে যেতে সময় লাগে = $\displaystyle\frac{15}{8+x}$ ঘণ্টা।</p>
+            <p>22 কিমি প্রতিকূলে যেতে সময় লাগে = $\displaystyle\frac{22}{8-x}$ ঘণ্টা।</p>
+            <p>মোট সময় 5 ঘণ্টা, তাই শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{15}{8+x} + \frac{22}{8-x} = 5 \\
+\frac{15(8-x) + 22(8+x)}{(8+x)(8-x)} = 5 \\
+\frac{120 - 15x + 176 + 22x}{64 - x^2} = 5 \\
+\frac{7x + 296}{64 - x^2} = 5 \\
+5(64 - x^2) = 7x + 296 \\
+320 - 5x^2 = 7x + 296 \\
+5x^2 + 7x - 24 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই ($5 \times (-24) = -120$):</p>
+            \[
+\begin{array}{l}
+5x^2 + 15x - 8x - 24 = 0 \\
+5x(x + 3) - 8(x + 3) = 0 \\
+(x + 3)(5x - 8) = 0
+\end{array}
+\]
+            <p>হয় $x = -3$ (বেগ ঋণাত্মক হয় না), অথবা $x = \displaystyle\frac{8}{5} = 1.6$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্রোতের বেগ ছিল ঘণ্টায় 1.6 কিমি।</div>
+        </div>
+
+        <span class="sub-question">(viii) একটি সুপারফাস্ট ট্রেন একটি এক্সপ্রেস ট্রেনের থেকে ঘণ্টায় 15 কিমি. বেশি বেগে যায়। একইসঙ্গে একটি স্টেশন থেকে ছেড়ে 180 কিমি. দূরে অন্য একটি স্টেশনে সুপারফাস্ট ট্রেনটি 1 ঘণ্টা আগে পৌঁছাল। সুপারফাস্ট ট্রেনটির গতিবেগ ঘণ্টায় কত কিমি. ছিল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, এক্সপ্রেস ট্রেনের গতিবেগ ঘণ্টায় $x$ কিমি।</p>
+            <p>তাহলে, সুপারফাস্ট ট্রেনের গতিবেগ ঘণ্টায় $(x + 15)$ কিমি।</p>
+            <p>180 কিমি যেতে এক্সপ্রেস ট্রেনের সময় লাগে = $\displaystyle\frac{180}{x}$ ঘণ্টা।</p>
+            <p>180 কিমি যেতে সুপারফাস্ট ট্রেনের সময় লাগে = $\displaystyle\frac{180}{x+15}$ ঘণ্টা।</p>
+            <p>শর্তানুসারে, সুপারফাস্ট ট্রেনের 1 ঘণ্টা সময় কম লাগে:</p>
+            \[
+\begin{array}{l}
+\frac{180}{x} - \frac{180}{x+15} = 1 \\
+180 \left( \frac{x+15 - x}{x(x+15)} \right) = 1 \\
+180 \left( \frac{15}{x^2+15x} \right) = 1 \\
+x^2 + 15x = 2700 \\
+x^2 + 15x - 2700 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই ($60 \times 45 = 2700$):</p>
+            \[
+\begin{array}{l}
+x^2 + 60x - 45x - 2700 = 0 \\
+x(x + 60) - 45(x + 60) = 0 \\
+(x + 60)(x - 45) = 0
+\end{array}
+\]
+            <p>হয় $x = -60$ (অগ্রাহ্য), অথবা $x = 45$।</p>
+            <p>অতএব, এক্সপ্রেস ট্রেনের বেগ 45 কিমি/ঘণ্টা।</p>
+            <p>সুপারফাস্ট ট্রেনের গতিবেগ = $45 + 15 = 60$ কিমি/ঘণ্টা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সুপারফাস্ট ট্রেনটির গতিবেগ ছিল ঘণ্টায় 60 কিমি।</div>
+        </div>
+
+        <span class="sub-question">(ix) রেহানা বাজারে গিয়ে দেখল প্রতি কিগ্রা. মাছের যা দাম, ডালের দাম তা থেকে প্রতি কিগ্রা. 20 টাকা কম এবং চালের দাম প্রতি কিগ্রা. 40 টাকা কম। রেহানা 240 টাকার মাছ ও 240 টাকার ডাল কিনে মোট যে পরিমাণ মাছ ও ডাল পেল তা 280 টাকায় চাল কেনার পরিমাণের সমান। রেহানা প্রতি কিগ্রা. মাছ কী দামে কিনেছিল হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রতি কিগ্রা. মাছের দাম $x$ টাকা।</p>
+            <p>ডালের দাম প্রতি কিগ্রা. $(x - 20)$ টাকা।</p>
+            <p>চালের দাম প্রতি কিগ্রা. $(x - 40)$ টাকা।</p>
+            <p>240 টাকায় মাছ পাওয়া যায় = $\displaystyle\frac{240}{x}$ কিগ্রা।</p>
+            <p>240 টাকায় ডাল পাওয়া যায় = $\displaystyle\frac{240}{x-20}$ কিগ্রা।</p>
+            <p>280 টাকায় চাল পাওয়া যায় = $\displaystyle\frac{280}{x-40}$ কিগ্রা।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{240}{x} + \frac{240}{x-20} = \frac{280}{x-40}
+\end{array}
+\]
+            <p>উভয়পক্ষকে 40 দিয়ে ভাগ করে সরল করি:</p>
+            \[
+\begin{array}{l}
+\frac{6}{x} + \frac{6}{x-20} = \frac{7}{x-40} \\
+6 \left( \frac{x-20+x}{x(x-20)} \right) = \frac{7}{x-40} \\
+6 \left( \frac{2x-20}{x^2-20x} \right) = \frac{7}{x-40} \\
+\frac{12x-120}{x^2-20x} = \frac{7}{x-40}
+\end{array}
+\]
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+(12x-120)(x-40) = 7(x^2-20x) \\
+12x^2 - 480x - 120x + 4800 = 7x^2 - 140x \\
+12x^2 - 600x + 4800 - 7x^2 + 140x = 0 \\
+5x^2 - 460x + 4800 = 0
+\end{array}
+\]
+            <p>উভয়পক্ষকে 5 দিয়ে ভাগ করি:</p>
+            \[
+\begin{array}{l}
+x^2 - 92x + 960 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করি ($80 \times 12 = 960$):</p>
+            \[
+\begin{array}{l}
+x^2 - 80x - 12x + 960 = 0 \\
+x(x - 80) - 12(x - 80) = 0 \\
+(x - 80)(x - 12) = 0
+\end{array}
+\]
+            <p>হয় $x = 12$, অথবা $x = 80$।</p>
+            <p>যদি $x = 12$ হয়, তবে চালের দাম $(12 - 40) = -28$ টাকা হবে, যা অসম্ভব। তাই $x = 80$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: রেহানা প্রতি কিগ্রা. মাছ 80 টাকায় কিনেছিল।</div>
+        </div>
+
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

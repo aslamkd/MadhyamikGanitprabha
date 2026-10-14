@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-3.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:10px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}.proof-step{padding:0.75rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মূল উপপাদ্য (Core Theorem):</strong> ব্যাস নয় এরূপ কোনো জ্যা-এর উপর বৃত্তের কেন্দ্র থেকে লম্ব অঙ্কন করা হলে, ওই লম্ব জ্যা-টিকে সমদ্বিখণ্ডিত করে। এবং এর বিপরীতক্রমে, কেন্দ্র থেকে কোনো জ্যা-এর মধ্যবিন্দুর সংযোজক সরলরেখা ওই জ্যা-এর উপর লম্ব হয়।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. O কেন্দ্রীয় একটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 5 সেমি. এবং AB একটি জ্যা-এর দৈর্ঘ্য 8 সেমি.। O বিন্দু থেকে AB জ্যা-এর দূরত্ব হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, O কেন্দ্র থেকে AB জ্যা-এর উপর অঙ্কিত লম্ব হলো OP।</p>
+            <p>আমরা জানি, বৃত্তের কেন্দ্র থেকে কোনো জ্যা-এর উপর লম্ব টানলে তা জ্যা-টিকে সমদ্বিখণ্ডিত করে।</p>
+            <p>অতএব, $AP = PB = \displaystyle\frac{AB}{2} = \frac{8}{2} = 4$ সেমি।</p>
+            <p>বৃত্তের ব্যাসার্ধ, $OA = 5$ সেমি।</p>
+            <p>এখন, সমকোণী ত্রিভুজ $\triangle OPA$ থেকে পিথাগোরাসের উপপাদ্য অনুযায়ী পাই:</p>
+            \[
+\begin{array}{l}
+OP^2 + AP^2 = OA^2 \\
+OP^2 + 4^2 = 5^2 \\
+OP^2 + 16 = 25 \\
+OP^2 = 25 - 16 = 9 \\
+OP = \sqrt{9} = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: O বিন্দু থেকে AB জ্যা-এর দূরত্ব 3 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. O কেন্দ্রীয় একটি বৃত্তের ব্যাসের দৈর্ঘ্য 26 সেমি.। O বিন্দু থেকে PQ জ্যা-এর দূরত্ব 5 সেমি.। PQ জ্যা-এর দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বৃত্তের ব্যাসার্ধ (OP) = $\displaystyle\frac{\text{ব্যাস}}{2} = \frac{26}{2} = 13$ সেমি।</p>
+            <p>O কেন্দ্র থেকে PQ জ্যা-এর উপর লম্ব দূরত্ব (OM) = 5 সেমি।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle OMP$ থেকে পাই:</p>
+            \[
+\begin{array}{l}
+PM^2 + OM^2 = OP^2 \\
+PM^2 + 5^2 = 13^2 \\
+PM^2 + 25 = 169 \\
+PM^2 = 169 - 25 = 144 \\
+PM = \sqrt{144} = 12
+\end{array}
+\]
+            <p>যেহেতু লম্ব জ্যা-টিকে সমদ্বিখণ্ডিত করে, তাই সম্পূর্ণ জ্যা PQ = $2 \times PM = 2 \times 12 = 24$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: PQ জ্যা-এর দৈর্ঘ্য 24 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. O কেন্দ্রীয় একটি বৃত্তের PQ জ্যা-এর দৈর্ঘ্য 4 সেমি. এবং O বিন্দু থেকে PQ-এর দূরত্ব 2.1 সেমি.। বৃত্তের ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>জ্যা PQ = 4 সেমি। ধরি O বিন্দু থেকে PQ-এর লম্ব দূরত্ব OM = 2.1 সেমি।</p>
+            <p>যেহেতু লম্ব জ্যা-টিকে সমদ্বিখণ্ডিত করে, তাই $PM = \displaystyle\frac{PQ}{2} = \frac{4}{2} = 2$ সেমি।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle OMP$ থেকে বৃত্তের ব্যাসার্ধ OP-এর মান পাই:</p>
+            \[
+\begin{array}{l}
+OP^2 = PM^2 + OM^2 \\
+OP^2 = 2^2 + (2.1)^2 \\
+OP^2 = 4 + 4.41 = 8.41 \\
+OP = \sqrt{8.41} = 2.9
+\end{array}
+\]
+            <p>অতএব, বৃত্তের ব্যাসার্ধ = 2.9 সেমি।</p>
+            <p>বৃত্তের ব্যাস = $2 \times \text{ব্যাসার্ধ} = 2 \times 2.9 = 5.8$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসের দৈর্ঘ্য 5.8 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. O কেন্দ্রীয় বৃত্তে 6 সেমি. ও 8 সেমি. দৈর্ঘ্যের দুটি জ্যা। যদি ছোটো দৈর্ঘ্যের জ্যাটির বৃত্তের কেন্দ্র থেকে দূরত্ব 4 সেমি. হয়, তাহলে অপর জ্যাটির কেন্দ্র থেকে দূরত্ব কত তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ছোটো জ্যাটির দৈর্ঘ্য = 6 সেমি। এর অর্ধেক দৈর্ঘ্য = $\displaystyle\frac{6}{2} = 3$ সেমি।</p>
+            <p>ছোটো জ্যাটির কেন্দ্র থেকে লম্ব দূরত্ব = 4 সেমি।</p>
+            <p>বৃত্তের ব্যাসার্ধ ($r$) নির্ণয় করতে সমকোণী ত্রিভুজের সূত্র ব্যবহার করি:</p>
+            \[
+\begin{array}{l}
+r^2 = (\text{লম্ব দূরত্ব})^2 + (\text{অর্ধেক জ্যা})^2 \\
+r^2 = 4^2 + 3^2 \\
+r^2 = 16 + 9 = 25 \\
+r = \sqrt{25} = 5 \text{ সেমি}
+\end{array}
+\]
+            <p>এখন, অপর (বড়ো) জ্যাটির দৈর্ঘ্য = 8 সেমি। এর অর্ধেক দৈর্ঘ্য = $\displaystyle\frac{8}{2} = 4$ সেমি।</p>
+            <p>ধরি, এই জ্যাটির কেন্দ্র থেকে লম্ব দূরত্ব $d$।</p>
+            \[
+\begin{array}{l}
+d^2 + 4^2 = r^2 \\
+d^2 + 16 = 25 \\
+d^2 = 25 - 16 = 9 \\
+d = \sqrt{9} = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অপর জ্যাটির কেন্দ্র থেকে দূরত্ব 3 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. যদি কোনো বৃত্তের একটি জ্যা-এর দৈর্ঘ্য 48 সেমি. এবং কেন্দ্র থেকে ওই জ্যা-এর দূরত্ব 7 সেমি. হয়, তবে ওই বৃত্তের কেন্দ্র থেকে যে জ্যা-এর দূরত্ব 20 সেমি., সেই জ্যা-এর দৈর্ঘ্য কত হবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম জ্যা-এর দৈর্ঘ্য = 48 সেমি $\implies$ এর অর্ধেক = 24 সেমি।</p>
+            <p>লম্ব দূরত্ব = 7 সেমি।</p>
+            <p>বৃত্তের ব্যাসার্ধ ($r$) নির্ণয় করি:</p>
+            \[
+\begin{array}{l}
+r^2 = 24^2 + 7^2 \\
+r^2 = 576 + 49 = 625 \\
+r = \sqrt{625} = 25 \text{ সেমি}
+\end{array}
+\]
+            <p>এখন, দ্বিতীয় জ্যা-এর ক্ষেত্রে লম্ব দূরত্ব = 20 সেমি।</p>
+            <p>ধরি, দ্বিতীয় জ্যা-এর অর্ধেক দৈর্ঘ্য $x$।</p>
+            \[
+\begin{array}{l}
+x^2 + 20^2 = r^2 \\
+x^2 + 400 = 625 \\
+x^2 = 625 - 400 = 225 \\
+x = \sqrt{225} = 15
+\end{array}
+\]
+            <p>অতএব, দ্বিতীয় জ্যা-এর সম্পূর্ণ দৈর্ঘ্য = $2 \times x = 2 \times 15 = 30$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় জ্যা-এর দৈর্ঘ্য 30 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. পাশের O কেন্দ্রীয় বৃত্তের ছবিতে OP $\perp$ AB; AB = 6 সেমি. এবং PC = 2 সেমি. হলে, বৃত্তের ব্যাসার্ধের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <!-- Custom Geometry SVG Diagram -->
+            <svg class="geometry-diagram" width="180" height="180" viewBox="0 0 180 180">
+               <circle cx="90" cy="90" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <line x1="30" y1="55" x2="150" y2="55" stroke="#1F2937" stroke-width="2"></line> <!-- Chord AB -->
+               <line x1="90" y1="90" x2="90" y2="20" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line> <!-- Radius OC -->
+               <line x1="90" y1="90" x2="30" y2="55" stroke="#F59E0B" stroke-width="2"></line> <!-- Radius OA -->
+               <circle cx="90" cy="90" r="3" fill="#1F2937"></circle> <!-- Center O -->
+               <circle cx="90" cy="55" r="3" fill="#1F2937"></circle> <!-- Point P -->
+               
+               <text x="15" y="55" font-size="14" font-weight="bold">A</text>
+               <text x="155" y="55" font-size="14" font-weight="bold">B</text>
+               <text x="95" y="105" font-size="14" font-weight="bold">O</text>
+               <text x="98" y="65" font-size="14" font-weight="bold">P</text>
+               <text x="85" y="15" font-size="14" font-weight="bold">C</text>
+            </svg>
+
+            <p>দেওয়া আছে, $OP \perp AB$ এবং $AB = 6$ সেমি।</p>
+            <p>যেহেতু কেন্দ্র থেকে জ্যা-এর উপর লম্ব জ্যা-টিকে সমদ্বিখণ্ডিত করে, তাই $AP = PB = \displaystyle\frac{6}{2} = 3$ সেমি।</p>
+            <p>ধরি, বৃত্তের ব্যাসার্ধ $OA = OC = r$ সেমি।</p>
+            <p>দেওয়া আছে, $PC = 2$ সেমি।</p>
+            <p>চিত্রানুযায়ী, $OP = OC - PC = r - 2$।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle OPA$ থেকে পিথাগোরাসের উপপাদ্য প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+OP^2 + AP^2 = OA^2 \\
+(r - 2)^2 + 3^2 = r^2 \\
+r^2 - 4r + 4 + 9 = r^2 \\
+-4r + 13 = 0 \\
+4r = 13 \\
+r = \frac{13}{4} = 3.25
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 3.25 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি সরলরেখা দুটি এককেন্দ্রীয় বৃত্তের একটিকে A ও B বিন্দুতে এবং অপরটিকে C ও D বিন্দুতে ছেদ করেছে। যুক্তি দিয়ে প্রমাণ করি যে AC = DB.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ধরি, O হলো সমকেন্দ্রিক (Concentric) বৃত্ত দুটির কেন্দ্র। একটি সরলরেখা ভিতরের বৃত্তকে A ও B বিন্দুতে এবং বাইরের বৃত্তকে C ও D বিন্দুতে ছেদ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> প্রমাণ করতে হবে যে, $AC = DB$।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> কেন্দ্র O থেকে জ্যা CD-এর উপর $OM \perp CD$ অঙ্কন করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ভিতরের বৃত্তের ক্ষেত্রে, AB একটি জ্যা এবং $OM \perp AB$।</p>
+                <p>আমরা জানি, কেন্দ্র থেকে জ্যা-এর উপর লম্ব জ্যা-কে সমদ্বিখণ্ডিত করে।</p>
+                <p>$\therefore AM = MB \quad \dots \text{(i)}$</p>
+                <br>
+                <p>একইভাবে বাইরের বৃত্তের ক্ষেত্রে, CD একটি জ্যা এবং $OM \perp CD$।</p>
+                <p>$\therefore CM = MD \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(ii) নং সমীকরণ থেকে (i) নং সমীকরণ বিয়োগ করে পাই:</p>
+                \[
+\begin{array}{l}
+CM - AM = MD - MB \\
+AC = DB \quad \text{[যেহেতু C, A, M সমরেখ এবং M, B, D সমরেখ]}
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. প্রমাণ করি, কোনো বৃত্তের দুটি পরস্পরছেদী জ্যা পরস্পরকে সমদ্বিখণ্ডিত করতে পারে না, যদি না উভয়েই বৃত্তের ব্যাস হয়।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ধরি, O কেন্দ্রীয় বৃত্তের দুটি জ্যা AB এবং CD পরস্পরকে P বিন্দুতে সমদ্বিখণ্ডিত করেছে। (ধরি P বৃত্তের কেন্দ্র নয়)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> প্রমাণ করতে হবে যে, জ্যা দুটি ব্যাস না হলে পরস্পরকে সমদ্বিখণ্ডিত করতে পারে না।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, P যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু P বিন্দু AB জ্যা-এর মধ্যবিন্দু এবং O কেন্দ্র, তাই আমরা জানি কেন্দ্র থেকে জ্যা-এর মধ্যবিন্দুর সংযোজক রেখা ওই জ্যা-এর উপর লম্ব হয়।</p>
+                <p>$\therefore OP \perp AB \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, যেহেতু P বিন্দু CD জ্যা-এরও মধ্যবিন্দু,</p>
+                <p>$\therefore OP \perp CD \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) ও (ii) থেকে দেখা যাচ্ছে যে, একই বিন্দু P-তে OP সরলরেখার উপর AB এবং CD দুটি ভিন্ন সরলরেখা লম্ব। কিন্তু জ্যামিতিক উপপাদ্য অনুযায়ী, একটি সরলরেখার উপর কোনো নির্দিষ্ট বিন্দুতে একটিমাত্র লম্ব অঙ্কন করা সম্ভব।</p>
+                <p>অতএব, আমাদের ধারণা (P কেন্দ্র নয়) ভুল। P বিন্দুকে অবশ্যই বৃত্তের কেন্দ্র O হতে হবে।</p>
+                <p>কেন্দ্রগামী জ্যা-কে ব্যাস বলা হয়। সুতরাং, জ্যা দুটি ব্যাস না হলে পরস্পরকে সমদ্বিখণ্ডিত করতে পারে না।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. X ও Y কেন্দ্রবিশিষ্ট দুটি বৃত্ত পরস্পরকে A ও B বিন্দুতে ছেদ করেছে। XY-এর মধ্যবিন্দু S-এর সঙ্গে A বিন্দু যুক্ত করলাম এবং A বিন্দু দিয়ে SA-এর উপর লম্ব অঙ্কন করলাম যা বৃত্ত দুটিকে P ও Q বিন্দুতে ছেদ করল। প্রমাণ করি যে PA = AQ.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> X ও Y কেন্দ্রবিশিষ্ট বৃত্ত দুটি পরস্পরকে A ও B বিন্দুতে ছেদ করেছে। S হলো XY-এর মধ্যবিন্দু। SA-এর উপর A বিন্দুতে লম্ব PQ টানা হলো যা X ও Y বৃত্তকে যথাক্রমে P ও Q বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $PA = AQ$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> কেন্দ্র X থেকে PQ-এর উপর $XM \perp PQ$ এবং কেন্দ্র Y থেকে PQ-এর উপর $YN \perp PQ$ অঙ্কন করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু $XM \perp PQ$, $SA \perp PQ$ (প্রদত্ত) এবং $YN \perp PQ$,</p>
+                <p>অতএব, $XM \parallel SA \parallel YN$।</p>
+                <p>চতুর্ভুজ XMNY একটি ট্রাপিজিয়াম, যার অসমান্তরাল বাহু XY-এর মধ্যবিন্দু S।</p>
+                <p>ট্রাপিজিয়ামের মধ্যবিন্দু সংক্রান্ত উপপাদ্য অনুযায়ী, S বিন্দু দিয়ে অঙ্কিত সমান্তরাল সরলরেখা (SA) অপর বাহু MN-কেও সমদ্বিখণ্ডিত করবে।</p>
+                <p>$\therefore A$ হলো MN-এর মধ্যবিন্দু। অর্থাৎ, $MA = AN \quad \dots \text{(i)}$</p>
+                <br>
+                <p>এখন, X কেন্দ্রীয় বৃত্তে, PA একটি জ্যা এবং $XM \perp PA$।</p>
+                <p>$\therefore PM = MA$ (লম্ব জ্যা-কে সমদ্বিখণ্ডিত করে)। সুতরাং, $PA = 2MA \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>একইভাবে Y কেন্দ্রীয় বৃত্তে, AQ একটি জ্যা এবং $YN \perp AQ$।</p>
+                <p>$\therefore AN = NQ \implies AQ = 2AN \quad \dots \text{(iii)}$</p>
+                <br>
+                <p>(i), (ii) এবং (iii) থেকে পাই:</p>
+                <p>যেহেতু $MA = AN \implies 2MA = 2AN \implies PA = AQ$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. O কেন্দ্রীয় বৃত্তের 10 সেমি. ও 24 সেমি. দৈর্ঘ্যের দুটি সমান্তরাল জ্যা AB এবং CD কেন্দ্রের বিপরীত পার্শ্বে অবস্থিত। যদি AB ও CD-জ্যা দুটির মধ্যে দূরত্ব 17 সেমি. হয়, তবে হিসাব করে বৃত্তের ব্যাসার্ধের দৈর্ঘ্য লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, বৃত্তের ব্যাসার্ধের দৈর্ঘ্য $r$ সেমি।</p>
+            <p>কেন্দ্র O থেকে AB জ্যা-এর দূরত্ব = $x$ সেমি।</p>
+            <p>যেহেতু জ্যা দুটি সমান্তরাল এবং কেন্দ্রের বিপরীত দিকে অবস্থিত, তাই কেন্দ্র থেকে CD জ্যা-এর দূরত্ব হবে = $(17 - x)$ সেমি।</p>
+            <p>AB জ্যা-এর অর্ধেক = $\displaystyle\frac{10}{2} = 5$ সেমি।</p>
+            <p>CD জ্যা-এর অর্ধেক = $\displaystyle\frac{24}{2} = 12$ সেমি।</p>
+            <p>পিথাগোরাসের সূত্রানুযায়ী, প্রথম জ্যা-এর ক্ষেত্রে:</p>
+            $$r^2 = x^2 + 5^2 \quad \dots \text{(i)}$$
+            <p>দ্বিতীয় জ্যা-এর ক্ষেত্রে:</p>
+            $$r^2 = (17 - x)^2 + 12^2 \quad \dots \text{(ii)}$$
+            <p>উভয় সমীকরণ থেকে $r^2$-এর মান তুলনা করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 + 25 = (17 - x)^2 + 144 \\
+x^2 + 25 = 289 - 34x + x^2 + 144 \\
+25 = 433 - 34x \\
+34x = 433 - 25 \\
+34x = 408 \\
+x = \frac{408}{34} = 12
+\end{array}
+\]
+            <p>এখন $x = 12$ মানটি (i) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+r^2 = 12^2 + 5^2 \\
+r^2 = 144 + 25 = 169 \\
+r = \sqrt{169} = 13
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 13 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. দুটি বৃত্তের কেন্দ্র P এবং Q; বৃত্ত দুটি A এবং B বিন্দুতে ছেদ করে। A বিন্দু দিয়ে PQ সরলরেখাংশের সমান্তরাল সরলরেখা বৃত্ত দুটিকে C ও D বিন্দুতে ছেদ করে। প্রমাণ করি যে, CD = 2PQ.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> P ও Q কেন্দ্রবিশিষ্ট দুটি বৃত্ত A ও B বিন্দুতে ছেদ করে। A বিন্দুগামী একটি সরলরেখা CD, কেন্দ্রদ্বয়ের সংযোজক রেখাংশ PQ-এর সমান্তরাল ($CD \parallel PQ$) এবং এটি বৃত্তদুটিকে C ও D বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $CD = 2PQ$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> কেন্দ্র P থেকে জ্যা CA-এর উপর $PM \perp CA$ এবং কেন্দ্র Q থেকে জ্যা AD-এর উপর $QN \perp AD$ অঙ্কন করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু $PM \perp CD$ এবং $QN \perp CD$ (কারণ C, A, D সমরেখ), তাই $PM \parallel QN$।</p>
+                <p>আবার প্রদত্ত যে, $MN \parallel PQ$ (যেহেতু $CD \parallel PQ$)।</p>
+                <p>সুতরাং, PMNQ চতুর্ভুজটির বিপরীত বাহুগুলি সমান্তরাল এবং কোণগুলি সমকোণ হওয়ায় এটি একটি আয়তক্ষেত্র।</p>
+                <p>$\therefore MN = PQ \quad \dots \text{(i)}$</p>
+                <br>
+                <p>P কেন্দ্রীয় বৃত্তে, CA একটি জ্যা এবং $PM \perp CA$।</p>
+                <p>$\therefore CM = MA \implies CA = 2MA$</p>
+                <p>Q কেন্দ্রীয় বৃত্তে, AD একটি জ্যা এবং $QN \perp AD$।</p>
+                <p>$\therefore AN = ND \implies AD = 2AN$</p>
+                <br>
+                <p>চিত্রানুসারে, সম্পূর্ণ রেখাংশ $CD = CA + AD$</p>
+                \[
+\begin{array}{l}
+CD = 2MA + 2AN \\
+= 2(MA + AN) \\
+= 2(MN)
+\end{array}
+\]
+                <p>সমীকরণ (i) থেকে $MN = PQ$ বসিয়ে পাই:</p>
+                \[
+\begin{array}{l}
+CD = 2PQ
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. একটি বৃত্তের AB ও AC জ্যা দুটি সমান। প্রমাণ করি যে, $\angle BAC$-এর সমদ্বিখণ্ডক কেন্দ্রগামী।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের দুটি জ্যা AB এবং AC এর দৈর্ঘ্য সমান ($AB = AC$)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle BAC$-এর সমদ্বিখণ্ডক বৃত্তের কেন্দ্র O দিয়ে যায়।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, A; O, B এবং O, C যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle OAB$ এবং $\triangle OAC$ এর মধ্যে,</p>
+                <ol>
+                    <li>$AB = AC$ (প্রদত্ত)</li>
+                    <li>$OA$ সাধারণ বাহু (Common side)</li>
+                    <li>$OB = OC$ (একই বৃত্তের ব্যাসার্ধ)</li>
+                </ol>
+                <p>$\therefore \triangle OAB \cong \triangle OAC$ (SSS সর্বসমতার শর্তানুসারে)</p>
+                <p>যেহেতু ত্রিভুজ দুটি সর্বসম, তাই তাদের অনুরূপ কোণগুলি সমান হবে।</p>
+                <p>$\therefore \angle OAB = \angle OAC$</p>
+                <p>এর অর্থ হলো, OA সরলরেখাটি $\angle BAC$ কে সমান দুটি কোণে সমদ্বিখণ্ডিত করেছে। অর্থাৎ, OA হলো $\angle BAC$-এর সমদ্বিখণ্ডক।</p>
+                <p>যেহেতু OA সরলরেখাটি কেন্দ্র O দিয়ে যায়, তাই বলাই যায় $\angle BAC$-এর সমদ্বিখণ্ডক কেন্দ্রগামী।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. একটি বৃত্তের দুটি পরস্পরছেদী জ্যা-এর অন্তর্ভুক্ত কোণের সমদ্বিখণ্ডক যদি কেন্দ্রগামী হয়, তাহলে প্রমাণ করি যে, জ্যা দুটি সমান।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের দুটি জ্যা AB এবং CD পরস্পরকে E বিন্দুতে ছেদ করেছে। তাদের অন্তর্ভুক্ত কোণ $\angle AEC$-এর সমদ্বিখণ্ডক EO কেন্দ্রগামী।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AB = CD$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> কেন্দ্র O থেকে AB-এর উপর $OM \perp AB$ এবং CD-এর উপর $ON \perp CD$ অঙ্কন করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle OME$ এবং $\triangle ONE$ এর মধ্যে,</p>
+                <ol>
+                    <li>$\angle OME = \angle ONE = 90^\circ$ (অঙ্কনানুসারে)</li>
+                    <li>$\angle OEM = \angle OEN$ (প্রদত্ত, যেহেতু EO সমদ্বিখণ্ডক)</li>
+                    <li>$OE$ সাধারণ বাহু (Common hypotenuse)</li>
+                </ol>
+                <p>$\therefore \triangle OME \cong \triangle ONE$ (AAS সর্বসমতা)</p>
+                <p>সর্বসম ত্রিভুজের অনুরূপ বাহু হিসেবে, $OM = ON$।</p>
+                <p>আমরা জানি, কেন্দ্র থেকে সমান দূরবর্তী জ্যা গুলির দৈর্ঘ্য সমান হয়।</p>
+                <p>যেহেতু O কেন্দ্র থেকে AB এবং CD জ্যা দুটির লম্ব দূরত্ব সমান ($OM = ON$), তাই জ্যা দুটি দৈর্ঘ্যে সমান হবে।</p>
+                <p>$\therefore AB = CD$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. প্রমাণ করি, একটি বৃত্তে দুটি জ্যা-এর মধ্যে যে জ্যাটি কেন্দ্রের নিকটবর্তী সেটির দৈর্ঘ্য অপর জ্যা-টির দৈর্ঘ্য অপেক্ষা বৃহত্তর।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের দুটি জ্যা AB এবং CD। কেন্দ্র থেকে AB-এর লম্ব দূরত্ব OM এবং CD-এর লম্ব দূরত্ব ON। প্রদত্ত যে AB জ্যাটি কেন্দ্রের নিকটবর্তী, অর্থাৎ $OM &lt; ON$।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AB &gt; CD$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, A এবং O, C যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>সমকোণী ত্রিভুজ $\triangle OMA$ থেকে পিথাগোরাসের উপপাদ্য অনুযায়ী পাই:</p>
+                $$AM^2 = OA^2 - OM^2 \quad \dots \text{(i)}$$
+                <p>সমকোণী ত্রিভুজ $\triangle ONC$ থেকে পাই:</p>
+                $$CN^2 = OC^2 - ON^2 \quad \dots \text{(ii)}$$
+                <p>যেহেতু OA এবং OC উভয়ই একই বৃত্তের ব্যাসার্ধ ($OA = OC = r$), তাই:</p>
+                $$AM^2 = r^2 - OM^2$$
+                $$CN^2 = r^2 - ON^2$$
+                <p>দেওয়া আছে, $OM &lt; ON$।</p>
+                <p>অতএব, $OM^2 &lt; ON^2 \implies -OM^2 &gt; -ON^2$</p>
+                <p>উভয়পক্ষে $r^2$ যোগ করে পাই:</p>
+                $$r^2 - OM^2 &gt; r^2 - ON^2$$
+                $$AM^2 &gt; CN^2$$
+                $$AM &gt; CN$$
+                <p>উভয়পক্ষকে 2 দিয়ে গুণ করে পাই:</p>
+                $$2AM &gt; 2CN$$
+                <p>যেহেতু লম্ব জ্যা-কে সমদ্বিখণ্ডিত করে, তাই $2AM = AB$ এবং $2CN = CD$।</p>
+                $$AB &gt; CD$$
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. একটি বৃত্তের ভিতর যে-কোনো বিন্দু দিয়ে ক্ষুদ্রতম জ্যা কোনটি হবে তা প্রমাণ করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের ভিতরে P যেকোনো একটি বিন্দু।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> P বিন্দুগামী যে জ্যাটি OP-এর উপর লম্ব, সেটিই হবে P বিন্দুগামী ক্ষুদ্রতম জ্যা।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> P বিন্দু দিয়ে AB একটি জ্যা টানা হলো যা OP-এর উপর লম্ব (অর্থাৎ $OP \perp AB$)। P বিন্দু দিয়ে অপর যেকোনো একটি জ্যা CD অঙ্কন করা হলো। কেন্দ্র O থেকে CD-এর উপর $OM \perp CD$ টানা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>সমকোণী ত্রিভুজ $\triangle OMP$-তে $\angle OMP = 90^\circ$।</p>
+                <p>আমরা জানি, সমকোণী ত্রিভুজের অতিভুজই বৃহত্তম বাহু। তাই অতিভুজ OP-এর দৈর্ঘ্য লম্ব OM-এর দৈর্ঘ্যের চেয়ে বড়ো।</p>
+                <p>$\therefore OP &gt; OM$</p>
+                <p>অর্থাৎ, AB জ্যা-টির কেন্দ্র থেকে দূরত্ব (OP) অপর জ্যা CD-এর কেন্দ্র থেকে দূরত্ব (OM) অপেক্ষা বেশি।</p>
+                <p>উপপাদ্য অনুযায়ী আমরা জানি, যে জ্যা কেন্দ্র থেকে যত দূরে অবস্থিত, তার দৈর্ঘ্য তত ছোটো হয়।</p>
+                <p>যেহেতু AB জ্যা-টি CD জ্যা অপেক্ষা কেন্দ্র থেকে বেশি দূরে অবস্থিত, তাই AB জ্যা-এর দৈর্ঘ্য CD জ্যা অপেক্ষা ছোটো হবে।</p>
+                <p>$\therefore AB &lt; CD$</p>
+                <p>যেহেতু CD যেকোনো জ্যা হতে পারে, তাই OP-এর উপর লম্ব জ্যা AB-ই হলো P বিন্দুগামী ক্ষুদ্রতম জ্যা।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) O কেন্দ্রীয় বৃত্তের AB ও CD জ্যা দুটির দৈর্ঘ্য সমান। $\angle AOB = 60^\circ$ হলে, $\angle COD$-এর মান—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, একই বৃত্তের সমান দৈর্ঘ্যের জ্যা কেন্দ্রে সমান কোণ উৎপন্ন করে। যেহেতু $AB = CD$, তাই $\angle AOB = \angle COD = 60^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $60^\circ$</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 13 সেমি. এবং বৃত্তের একটি জ্যা-এর দৈর্ঘ্য 10 সেমি.। বৃত্তের কেন্দ্র থেকে জ্যা-এর দূরত্ব—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ব্যাসার্ধ ($r$) = 13 সেমি। জ্যা-এর অর্ধেক ($x$) = $\displaystyle\frac{10}{2} = 5$ সেমি।</p>
+            <p>দূরত্ব ($d$) = $\sqrt{r^2 - x^2} = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 12 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(iii) O কেন্দ্রীয় বৃত্তের AB ও CD দুটি সমান দৈর্ঘ্যের জ্যা। O বিন্দু থেকে AB জ্যা-এর দূরত্ব 4 সেমি. হলে, CD জ্যা-এর দূরত্ব—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমান দৈর্ঘ্যের জ্যা কেন্দ্র থেকে সর্বদা সমান দূরত্বে অবস্থান করে। তাই CD জ্যা-এর দূরত্বও 4 সেমি হবে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 4 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(iv) AB ও CD দুটি সমান্তরাল জ্যা-এর প্রত্যেকটির দৈর্ঘ্য 16 সেমি.। বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 10 সেমি. হলে, জ্যা দুটির মধ্যে দূরত্ব—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ব্যাসার্ধ ($r$) = 10 সেমি। জ্যা-এর অর্ধেক ($x$) = $\displaystyle\frac{16}{2} = 8$ সেমি।</p>
+            <p>কেন্দ্র থেকে প্রতিটি জ্যা-এর দূরত্ব = $\sqrt{10^2 - 8^2} = \sqrt{100 - 64} = \sqrt{36} = 6$ সেমি।</p>
+            <p>যেহেতু জ্যা দুটি সমান এবং সমান্তরাল, তারা কেন্দ্রের বিপরীত দিকে অবস্থিত। তাই তাদের মধ্যে দূরত্ব = $6 + 6 = 12$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 12 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(v) দুটি সমকেন্দ্রীয় বৃত্তের কেন্দ্র O; একটি সরলরেখা একটি বৃত্তকে A ও B বিন্দুতে এবং অপর বৃত্তকে C ও D বিন্দুতে ছেদ করে। AC = 5 সেমি. হলে BD-এর দৈর্ঘ্য—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উপপাদ্য (প্রশ্ন ৭-এর প্রমাণ) অনুযায়ী আমরা জানি যে সমকেন্দ্রিক বৃত্তের ক্ষেত্রে এই ধরণের ছেদকে সর্বদা $AC = BD$ হয়।</p>
+            <p>সুতরাং, $BD = 5$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 5 সেমি.</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য / মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) তিনটি সমরেখ বিন্দু দিয়ে যায় এরকম একটি বৃত্ত অঙ্কন করা যায়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> তিনটি সমরেখ (collinear) বিন্দু সর্বদা একটি সরলরেখার উপর থাকে, তাই তাদের দিয়ে বৃত্ত আঁকা অসম্ভব। বৃত্ত আঁকতে অসমরেখ বিন্দু প্রয়োজন।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) ABCDA ও ABCEA বৃত্ত দুটি একই বৃত্ত।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> তিনটি নির্দিষ্ট অসমরেখ বিন্দু (A, B, C) দিয়ে কেবল একটিমাত্র নির্দিষ্ট বৃত্তই অঙ্কন করা সম্ভব। সুতরাং বৃত্ত দুটি একই।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(iii) O কেন্দ্রীয় বৃত্তের AB এবং AC জ্যা দুটি OA ব্যাসার্ধের বিপরীত পার্শ্বে অবস্থিত হলে, $\angle OAB = \angle OAC$</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> জ্যা দুটি বিপরীত পার্শ্বে থাকলেই যে তাদের কোণ সমান হবে এমন কোনো নিশ্চয়তা নেই, যদি না জ্যা দুটির দৈর্ঘ্য সমান ($AB = AC$) হয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) O কেন্দ্রীয় বৃত্তে PQ ও RS জ্যা দুটির দৈর্ঘ্যের অনুপাত 1:1 হলে, $\angle POQ : \angle ROS = $ _________</span>
+        <div class="solution-box">
+            <p>জ্যা দুটির অনুপাত 1:1 অর্থাৎ তারা সমান। সমান জ্যা কেন্দ্রে সমান কোণ উৎপন্ন করে।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 1 : 1</p>
+        </div>
+
+        <span class="sub-question">(ii) বৃত্তের কোনো জ্যা-এর লম্বসমদ্বিখণ্ডক ওই বৃত্তের _________ ।</span>
+        <div class="solution-box">
+            <p>যেকোনো জ্যা-এর লম্বসমদ্বিখণ্ডক সর্বদা বৃত্তের কেন্দ্র দিয়ে যায়।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> কেন্দ্রগামী</p>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) 10 সেমি. দৈর্ঘ্যের ব্যাসার্ধের দুটি সমান বৃত্ত পরস্পরকে ছেদ করে এবং তাদের সাধারণ জ্যা-এর দৈর্ঘ্য 12 সেমি.। বৃত্ত দুটির কেন্দ্রদ্বয়ের মধ্যে দূরত্ব নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, বৃত্ত দুটির কেন্দ্র P এবং Q, এবং সাধারণ জ্যা-টি হলো AB যার দৈর্ঘ্য 12 সেমি।</p>
+            <p>আমরা জানি, কেন্দ্রদ্বয়ের সংযোজক সরলরেখা (PQ) সাধারণ জ্যা-কে লম্বভাবে সমদ্বিখণ্ডিত করে। ধরি ছেদবিন্দু M।</p>
+            <p>অতএব, $AM = \displaystyle\frac{12}{2} = 6$ সেমি। বৃত্তের ব্যাসার্ধ $PA = 10$ সেমি।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle PMA$ থেকে পাই:</p>
+            \[
+\begin{array}{l}
+PM^2 + AM^2 = PA^2 \\
+PM^2 + 6^2 = 10^2 \\
+PM^2 = 100 - 36 = 64 \\
+PM = 8 \text{ সেমি}
+\end{array}
+\]
+            <p>যেহেতু বৃত্ত দুটি সমান, তাই $MQ$-এর দৈর্ঘ্যও $PM$-এর সমান হবে ($MQ = 8$ সেমি)।</p>
+            <p>কেন্দ্রদ্বয়ের দূরত্ব $PQ = PM + MQ = 8 + 8 = 16$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: কেন্দ্রদ্বয়ের মধ্যে দূরত্ব 16 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(ii) 5 সেমি. দৈর্ঘ্যের ব্যাসার্ধের একটি বৃত্তে AB এবং AC দুটি সমান দৈর্ঘ্যের জ্যা। বৃত্তের কেন্দ্র ABC ত্রিভুজের বাইরে অবস্থিত। AB = AC = 6 সেমি. হলে, BC জ্যা-এর দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, O বৃত্তের কেন্দ্র। OA সরলরেখা BC জ্যা-কে M বিন্দুতে লম্বভাবে ছেদ করে।</p>
+            <p>যেহেতু কেন্দ্র O ত্রিভুজ ABC-এর বাইরে অবস্থিত, তাই A এবং O বিন্দু BC জ্যা-এর বিপরীত পার্শ্বে অবস্থিত।</p>
+            <p>ধরি, $AM = y$ সেমি। ব্যাসার্ধ $OA = 5$ সেমি।</p>
+            <p>তাহলে, $OM = 5 - y$ সেমি। (কারণ A-M-O সমরেখ এবং M মাঝখানে)।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle AMB$ থেকে পাই: $BM^2 = AB^2 - AM^2 = 6^2 - y^2 = 36 - y^2$</p>
+            <p>সমকোণী ত্রিভুজ $\triangle OMB$ থেকে পাই (ব্যাসার্ধ $OB = 5$): $BM^2 = OB^2 - OM^2 = 5^2 - (5 - y)^2 = 25 - (25 - 10y + y^2) = 10y - y^2$</p>
+            <p>উভয় সমীকরণ থেকে $BM^2$ তুলনা করে পাই:</p>
+            \[
+\begin{array}{l}
+36 - y^2 = 10y - y^2 \\
+36 = 10y \\
+y = 3.6
+\end{array}
+\]
+            <p>এখন $y = 3.6$ বসিয়ে $BM$ নির্ণয় করি:</p>
+            \[
+\begin{array}{l}
+BM^2 = 36 - (3.6)^2 = 36 - 12.96 = 23.04 \\
+BM = \sqrt{23.04} = 4.8 \text{ সেমি}
+\end{array}
+\]
+            <p>জ্যা $BC = 2 \times BM = 2 \times 4.8 = 9.6$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: BC জ্যা-এর দৈর্ঘ্য 9.6 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(iii) O কেন্দ্রীয় বৃত্তে AB ও CD জ্যা দুটির দৈর্ঘ্য সমান। $\angle AOB = 60^\circ$ এবং CD = 6 সেমি. হলে, বৃত্তের ব্যাসার্ধের দৈর্ঘ্য কত তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু $AB = CD$ এবং $CD = 6$ সেমি, তাই $AB = 6$ সেমি।</p>
+            <p>$\triangle AOB$-এর ক্ষেত্রে, $OA = OB$ (একই বৃত্তের ব্যাসার্ধ)। সুতরাং এটি সমদ্বিবাহু ত্রিভুজ।</p>
+            <p>অতএব, $\angle OAB = \angle OBA$।</p>
+            <p>দেওয়া আছে, শীর্ষকোণ $\angle AOB = 60^\circ$।</p>
+            <p>বাকি দুটি কোণের সমষ্টি = $180^\circ - 60^\circ = 120^\circ$।</p>
+            <p>যেহেতু কোণ দুটি সমান, তাই প্রতিটি কোণ = $\displaystyle\frac{120^\circ}{2} = 60^\circ$।</p>
+            <p>যেহেতু $\triangle AOB$-এর তিনটি কোণই $60^\circ$, তাই এটি একটি সমবাহু ত্রিভুজ।</p>
+            <p>অতএব, $OA = OB = AB = 6$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 6 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(iv) O কেন্দ্রীয় বৃত্তের ভিতর P যে-কোনো একটি বিন্দু। বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 5 সেমি. এবং OP = 3 সেমি. হলে, P বিন্দুগামী যে জ্যাটির দৈর্ঘ্য ন্যূনতম তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা উপপাদ্য (প্রশ্ন ১৫) থেকে জেনেছি, P বিন্দুগামী ক্ষুদ্রতম (ন্যূনতম) জ্যা সেটিই হবে, যা OP রেখাংশের উপর লম্ব।</p>
+            <p>ধরি, ন্যূনতম জ্যাটি হলো AB, যেখানে $OP \perp AB$।</p>
+            <p>অতএব, P হলো AB জ্যা-এর মধ্যবিন্দু। $AP = PB$।</p>
+            <p>সমকোণী ত্রিভুজ $\triangle OPA$ থেকে পাই ($OA = 5, OP = 3$):</p>
+            \[
+\begin{array}{l}
+AP^2 = OA^2 - OP^2 \\
+AP^2 = 5^2 - 3^2 = 25 - 9 = 16 \\
+AP = \sqrt{16} = 4 \text{ সেমি}
+\end{array}
+\]
+            <p>ন্যূনতম জ্যা AB-এর দৈর্ঘ্য = $2 \times AP = 2 \times 4 = 8$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ন্যূনতম জ্যাটির দৈর্ঘ্য 8 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(v) P ও Q কেন্দ্রবিশিষ্ট দুটি বৃত্ত A ও B বিন্দুতে ছেদ করে। A বিন্দু দিয়ে PQ-এর সমান্তরাল সরলরেখা বৃত্তদুটিকে যথাক্রমে C ও D বিন্দুতে ছেদ করে। PQ = 5 সেমি. হলে, CD-এর দৈর্ঘ্য কত তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা আগেই প্রশ্ন ১১-এর উপপাদ্য প্রমাণে দেখেছি যে, এই ধরনের জ্যামিতিক গঠনে সমান্তরাল জ্যা CD-এর দৈর্ঘ্য সর্বদা কেন্দ্রদ্বয়ের দূরত্বের (PQ) দ্বিগুণ হয়।</p>
+            <p>অর্থাৎ, $CD = 2 \times PQ$</p>
+            <p>দেওয়া আছে, $PQ = 5$ সেমি।</p>
+            <p>অতএব, $CD = 2 \times 5 = 10$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: CD-এর দৈর্ঘ্য 10 সেমি।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-5.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>সমানুপাতের মূল সূত্র (Core Formulas):</strong><br>
+        ১) <strong>চতুর্থ সমানুপাতী:</strong> $a, b, c$ এর চতুর্থ সমানুপাতী $x$ হলে, $a:b :: c:x \implies \displaystyle \frac{a}{b} = \frac{c}{x}$<br>
+        ২) <strong>তৃতীয় সমানুপাতী:</strong> $a, b$ এর তৃতীয় সমানুপাতী $x$ হলে, $a:b :: b:x \implies \displaystyle \frac{a}{b} = \frac{b}{x}$<br>
+        ৩) <strong>মধ্যসমানুপাতী:</strong> $a$ ও $b$ এর মধ্যসমানুপাতী $x$ হলে, $\displaystyle x^2 = a \times b \implies x = \sqrt{ab}$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নিম্নলিখিত সমানুপাতে $x$-এর মান নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i) $10 : 35 :: x : 42$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমানুপাতের নিয়মানুসারে আমরা লিখতে পারি:</p>
+            \[
+\begin{array}{l}
+\frac{10}{35} = \frac{x}{42} \\
+35 \times x = 10 \times 42 \\
+x = \frac{10 \times 42}{35} \\
+x = \frac{2 \times 42}{7} \quad [\text{5 দিয়ে কেটে}] \\
+x = 2 \times 6 = 12
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x$-এর মান 12</div>
+        </div>
+
+        <span class="sub-question">(ii) $x : 50 :: 3 : 2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমানুপাতের নিয়মানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{x}{50} = \frac{3}{2} \\
+2x = 50 \times 3 \\
+x = \frac{150}{2} \\
+x = 75
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x$-এর মান 75</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নিম্নলিখিত সংখ্যাগুচ্ছগুলির চতুর্থ সমানুপাতী নির্ণয় করি :</h4>
+
+        <span class="sub-question">(i) $\displaystyle\frac{1}{3}, \frac{1}{4}, \frac{1}{5}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চতুর্থ সমানুপাতীটি হলো $x$।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{1}{3} : \frac{1}{4} &amp;:: \frac{1}{5} : x \\
+\frac{\frac{1}{3}}{\frac{1}{4}} = \frac{\frac{1}{5}}{x} \\
+\frac{1}{3} \times \frac{4}{1} = \frac{1}{5x} \\
+\frac{4}{3} = \frac{1}{5x} \\
+20x = 3 \\
+x = \frac{3}{20}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: নির্ণেয় চতুর্থ সমানুপাতী $\displaystyle\frac{3}{20}$</div>
+        </div>
+
+        <span class="sub-question">(ii) 9.6 কিগ্রা., 7.6 কিগ্রা., 28.8 কিগ্রা.</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চতুর্থ সমানুপাতীটি হলো $x$ কিগ্রা.</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{9.6}{7.6} = \frac{28.8}{x} \\
+9.6 \times x = 7.6 \times 28.8 \\
+x = \frac{7.6 \times 28.8}{9.6}
+\end{array}
+\]
+            <p>যেহেতু $9.6 \times 3 = 28.8$ হয়, তাই 28.8 কে 9.6 দিয়ে কেটে 3 পাব:</p>
+            \[
+\begin{array}{l}
+x = 7.6 \times 3 \\
+x = 22.8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: নির্ণেয় চতুর্থ সমানুপাতী 22.8 কিগ্রা.</div>
+        </div>
+
+        <span class="sub-question">(iii) $x^2y, y^2z, z^2x$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চতুর্থ সমানুপাতীটি হলো $a$। (যেহেতু রাশিতে x আছে, তাই a ধরলাম)</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{x^2y}{y^2z} = \frac{z^2x}{a} \\
+\frac{x^2}{yz} = \frac{z^2x}{a} \\
+a \cdot x^2 = yz \cdot z^2x \\
+a = \frac{yz^3x}{x^2} \\
+a = \frac{yz^3}{x}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: নির্ণেয় চতুর্থ সমানুপাতী $\displaystyle\frac{yz^3}{x}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $(p-q), (p^2-q^2), (p^2-pq+q^2)$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চতুর্থ সমানুপাতীটি হলো $a$।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{p-q}{p^2-q^2} = \frac{p^2-pq+q^2}{a} \\
+\frac{p-q}{(p-q)(p+q)} = \frac{p^2-pq+q^2}{a} \\
+\frac{1}{p+q} = \frac{p^2-pq+q^2}{a} \\
+a = (p+q)(p^2-pq+q^2)
+\end{array}
+\]
+            <p>আমরা জানি, $a^3 + b^3$-এর উৎপাদকের সূত্র হলো $(a+b)(a^2-ab+b^2)$।</p>
+            <p>অতএব, $a = p^3 + q^3$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: নির্ণেয় চতুর্থ সমানুপাতী $p^3 + q^3$</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. নিম্নলিখিত সংখ্যাগুচ্ছগুলির তৃতীয় সমানুপাতী নির্ণয় করি :</h4>
+
+        <span class="sub-question">(i) 5, 10</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তৃতীয় সমানুপাতীটি হলো $x$।</p>
+            <p>ক্রমিক সমানুপাতের নিয়মানুসারে:</p>
+            \[
+\begin{array}{l}
+\frac{5}{10} = \frac{10}{x} \\
+5x = 100 \\
+x = \frac{100}{5} = 20
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় সমানুপাতী 20</div>
+        </div>
+
+        <span class="sub-question">(ii) 0.24, 0.6</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তৃতীয় সমানুপাতীটি হলো $x$।</p>
+            \[
+\begin{array}{l}
+\frac{0.24}{0.6} = \frac{0.6}{x} \\
+0.24x = 0.6 \times 0.6 \\
+0.24x = 0.36 \\
+x = \frac{0.36}{0.24} \\
+x = \frac{36}{24} = \frac{3}{2} = 1.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় সমানুপাতী 1.5</div>
+        </div>
+
+        <span class="sub-question">(iii) $p^3q^2, q^2r$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তৃতীয় সমানুপাতীটি হলো $x$।</p>
+            \[
+\begin{array}{l}
+\frac{p^3q^2}{q^2r} = \frac{q^2r}{x} \\
+x \cdot (p^3q^2) = (q^2r) \times (q^2r) \\
+x \cdot p^3q^2 = q^4r^2 \\
+x = \frac{q^4r^2}{p^3q^2} \\
+x = \frac{q^2r^2}{p^3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় সমানুপাতী $\displaystyle\frac{q^2r^2}{p^3}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $(x-y)^2, (x^2-y^2)^2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তৃতীয় সমানুপাতীটি হলো $a$।</p>
+            \[
+\begin{array}{l}
+\frac{(x-y)^2}{(x^2-y^2)^2} = \frac{(x^2-y^2)^2}{a} \\
+a = \frac{(x^2-y^2)^2 \times (x^2-y^2)^2}{(x-y)^2} \\
+a = \frac{(x^2-y^2)^4}{(x-y)^2}
+\end{array}
+\]
+            <p>আমরা জানি, $(x^2-y^2) = (x+y)(x-y)$।</p>
+            \[
+\begin{array}{l}
+a = \frac{[(x+y)(x-y)]^4}{(x-y)^2} \\
+a = \frac{(x+y)^4(x-y)^4}{(x-y)^2} \\
+a = (x+y)^4(x-y)^2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় সমানুপাতী $(x-y)^2(x+y)^4$</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. নিম্নলিখিত ধনাত্মক সংখ্যাগুচ্ছগুলির মধ্যসমানুপাতী নির্ণয় করি :</h4>
+
+        <span class="sub-question">(i) 5 এবং 80</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মধ্যসমানুপাতীটি হলো $x$।</p>
+            <p>শর্তানুসারে, $\displaystyle\frac{5}{x} = \frac{x}{80}$</p>
+            \[
+\begin{array}{l}
+x^2 = 5 \times 80 \\
+x^2 = 400 \\
+x = \sqrt{400} = 20 \quad [\text{যেহেতু ধনাত্মক মান চাওয়া হয়েছে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: মধ্যসমানুপাতী 20</div>
+        </div>
+
+        <span class="sub-question">(ii) 8.1 এবং 2.5</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মধ্যসমানুপাতীটি হলো $x$।</p>
+            \[
+\begin{array}{l}
+x^2 = 8.1 \times 2.5 \\
+x^2 = \frac{81}{10} \times \frac{25}{10} \\
+x^2 = \frac{2025}{100} \\
+x = \sqrt{\frac{2025}{100}} \\
+x = \frac{45}{10} = 4.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: মধ্যসমানুপাতী 4.5</div>
+        </div>
+
+        <span class="sub-question">(iii) $x^3y$ এবং $xy^3$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মধ্যসমানুপাতীটি হলো $a$।</p>
+            \[
+\begin{array}{l}
+a^2 = (x^3y) \times (xy^3) \\
+a^2 = x^4y^4 \\
+a = \sqrt{x^4y^4} \\
+a = x^2y^2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: মধ্যসমানুপাতী $x^2y^2$</div>
+        </div>
+
+        <span class="sub-question">(iv) $(x-y)^2, (x+y)^2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মধ্যসমানুপাতীটি হলো $a$।</p>
+            \[
+\begin{array}{l}
+a^2 = (x-y)^2 \times (x+y)^2 \\
+a = \sqrt{(x-y)^2(x+y)^2} \\
+a = (x-y)(x+y) \\
+a = x^2 - y^2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: মধ্যসমানুপাতী $(x^2 - y^2)$</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. যদি a:b এবং c:d এই অনুপাত দুটি পরস্পর বিপরীতমুখী সম্পর্ক প্রকাশ করে, তবে তাদের ব্যস্ত অনুপাতগুলি কী সম্পর্ক প্রকাশ করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $a:b$ এবং $c:d$ বিপরীতমুখী (Inverse) সম্পর্ক প্রকাশ করে।</p>
+            <p>$a:b$-এর ব্যস্ত অনুপাত হলো $b:a$।</p>
+            <p>$c:d$-এর ব্যস্ত অনুপাত হলো $d:c$।</p>
+            <p>যেহেতু মূল অনুপাত দুটি পরস্পরের বিপরীতমুখী, তাদের উভয়েরই লব ও হর উল্টে দিলে (ব্যস্ত করলে) নতুন অনুপাত দুটিও পরস্পরের সাপেক্ষে সেই একই বিপরীতমুখী সম্পর্কই বজায় রাখবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তাদের ব্যস্ত অনুপাতগুলিও পরস্পর বিপরীতমুখী সম্পর্ক (Inverse relation) প্রকাশ করবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. তিনটি ক্রমিক সমানুপাতী সংখ্যা দিয়ে কটি ক্রমিক সমানুপাত গঠন করা যাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তিনটি ক্রমিক সমানুপাতী সংখ্যা হলো $a, b, c$।</p>
+            <p>যেহেতু তারা ক্রমিক সমানুপাতী, তাই তাদের সম্পর্কটি হলো: $\displaystyle\frac{a}{b} = \frac{b}{c}$</p>
+            <p>এই সম্পর্কটিকে আমরা দুটি উপায়ে সমানুপাত আকারে লিখতে পারি:</p>
+            <p>১ম উপায়: $a : b :: b : c$</p>
+            <p>এখন, সমীকরণটির উভয়পাশ উল্টে দিলে পাই: $\displaystyle\frac{b}{a} = \frac{c}{b} \implies \frac{c}{b} = \frac{b}{a}$</p>
+            <p>২য় উপায়: $c : b :: b : a$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনটি ক্রমিক সমানুপাতী সংখ্যা দিয়ে ঠিক ২টি ক্রমিক সমানুপাত গঠন করা যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. 5 টি ক্রমিক সমানুপাতী সংখ্যার প্রথমটি 2 এবং দ্বিতীয়টি 6 হলে, পঞ্চমটি নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ক্রমিক সমানুপাতী সংখ্যার ক্ষেত্রে যেকোনো পদকে তার আগের পদ দিয়ে ভাগ করলে সাধারণ অনুপাত পাওয়া যায়।</p>
+            <p>সাধারণ অনুপাত = $\displaystyle\frac{\text{দ্বিতীয় পদ}}{\text{প্রথম পদ}} = \frac{6}{2} = 3$</p>
+            <p>অর্থাৎ, প্রতিটি পদ তার আগের পদের 3 গুণ হবে।</p>
+            <ul>
+                <li>প্রথম পদ = 2</li>
+                <li>দ্বিতীয় পদ = 6</li>
+                <li>তৃতীয় পদ = $6 \times 3 = 18$</li>
+                <li>চতুর্থ পদ = $18 \times 3 = 54$</li>
+                <li>পঞ্চম পদ = $54 \times 3 = 162$</li>
+            </ul>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পঞ্চম সংখ্যাটি হবে 162।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. 6, 15, 20 ও 43-এর প্রত্যেকটির সঙ্গে কত যোগ করলে যোগফলগুলি সমানুপাতী হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রত্যেকটি সংখ্যার সঙ্গে $x$ যোগ করতে হবে।</p>
+            <p>শর্তানুসারে, $(6+x), (15+x), (20+x), (43+x)$ সমানুপাতী হবে।</p>
+            <p>অর্থাৎ, $\displaystyle\frac{6+x}{15+x} = \frac{20+x}{43+x}$</p>
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+(6+x)(43+x) = (15+x)(20+x) \\
+258 + 6x + 43x + x^2 = 300 + 15x + 20x + x^2
+\end{array}
+\]
+            <p>উভয়পক্ষ থেকে $x^2$ বাদ দিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+258 + 49x = 300 + 35x \\
+49x - 35x = 300 - 258 \\
+14x = 42 \\
+x = \frac{42}{14} = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রত্যেকটি সংখ্যার সঙ্গে 3 যোগ করতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. 23, 30, 57 এবং 78-এর প্রত্যেকটি থেকে কত বিয়োগ করলে বিয়োগফলগুলি সমানুপাতী হবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রত্যেকটি সংখ্যা থেকে $x$ বিয়োগ করতে হবে।</p>
+            <p>শর্তানুসারে, $(23-x), (30-x), (57-x), (78-x)$ সমানুপাতী হবে।</p>
+            <p>অর্থাৎ, $\displaystyle\frac{23-x}{30-x} = \frac{57-x}{78-x}$</p>
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+(23-x)(78-x) = (30-x)(57-x) \\
+1794 - 23x - 78x + x^2 = 1710 - 30x - 57x + x^2
+\end{array}
+\]
+            <p>উভয়পক্ষ থেকে $x^2$ বাদ দিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+1794 - 101x = 1710 - 87x \\
+1794 - 1710 = 101x - 87x \\
+84 = 14x \\
+x = \frac{84}{14} = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রত্যেকটি সংখ্যা থেকে 6 বিয়োগ করতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. p, q, r, s-এর প্রত্যেকটির থেকে কত বিয়োগ করলে বিয়োগফলগুলি সমানুপাতী হবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রত্যেকটি রাশি থেকে $x$ বিয়োগ করতে হবে।</p>
+            <p>শর্তানুসারে, $(p-x), (q-x), (r-x), (s-x)$ সমানুপাতী হবে।</p>
+            <p>অর্থাৎ, $\displaystyle\frac{p-x}{q-x} = \frac{r-x}{s-x}$</p>
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+(p-x)(s-x) = (q-x)(r-x) \\
+ps - px - sx + x^2 = qr - qx - rx + x^2
+\end{array}
+\]
+            <p>উভয়পক্ষ থেকে $x^2$ বাদ দিয়ে এবং $x$-যুক্ত পদগুলোকে একদিকে নিয়ে এসে পাই:</p>
+            \[
+\begin{array}{l}
+ps - x(p+s) = qr - x(q+r) \\
+x(q+r) - x(p+s) = qr - ps \\
+x(q + r - p - s) = qr - ps \\
+x = \frac{qr - ps}{q + r - p - s}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় বিয়োগফলটি হবে $\displaystyle\frac{qr - ps}{q + r - p - s}$।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-4</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মূল সূত্র (Core Formulas):</strong><br>
+        <strong>আয়তঘন (Cuboid):</strong> আয়তন = $l \times b \times h$ | সমগ্রতলের ক্ষেত্রফল = $2(lb + bh + hl)$ | কর্ণের দৈর্ঘ্য = $\sqrt{l^2 + b^2 + h^2}$<br>
+        <strong>ঘনক (Cube):</strong> আয়তন = $a^3$ | সমগ্রতলের ক্ষেত্রফল = $6a^2$ | কর্ণের দৈর্ঘ্য = $\sqrt{3}a$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমরা পরিবেশের 4 টি আয়তঘনাকার ও 4 টি ঘনক আকার বস্তুর নাম লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>আয়তঘনাকার বস্তু (Cuboid shaped objects):</strong></p>
+            <ol>
+                <li>ইট (Brick)</li>
+                <li>বই (Book)</li>
+                <li>দেশলাই বাক্স (Matchbox)</li>
+                <li>জ্যামিতি বাক্স (Geometry box)</li>
+            </ol>
+            <p><strong>ঘনক আকার বস্তু (Cube shaped objects):</strong></p>
+            <ol>
+                <li>লুডোর ছক্কা (Dice)</li>
+                <li>রুবিক্স কিউব (Rubik's cube)</li>
+                <li>চিনির কিউব (Sugar cube)</li>
+                <li>আইস কিউব (Ice cube)</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. পাশের আয়তঘনাকার চিত্রের তলগুলি, ধারগুলি ও শীর্ষবিন্দুগুলির নাম লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একটি আয়তঘনের 6টি তল, 12টি ধার এবং 8টি শীর্ষবিন্দু থাকে। প্রদত্ত চিত্রানুযায়ী (A, B, C, D উপরের তলে এবং E, F, G, H নীচের তলে):</p>
+            <p><strong>6টি তল (Faces):</strong></p>
+            <ul>
+                <li>ABCD (উপরের তল)</li>
+                <li>EFGH (নীচের তল)</li>
+                <li>ABFE (সামনের তল)</li>
+                <li>DCGH (পিছনের তল)</li>
+                <li>BCGF (ডানদিকের তল)</li>
+                <li>ADHE (বাঁদিকের তল)</li>
+            </ul>
+            <p><strong>12টি ধার (Edges):</strong></p>
+            <p>AB, BC, CD, DA, EF, FG, GH, HE, AE, BF, CG, DH</p>
+            <p><strong>8টি শীর্ষবিন্দু (Vertices):</strong></p>
+            <p>A, B, C, D, E, F, G, H</p>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. একটি সমকোণী চৌপলাকার ঘরের দৈর্ঘ্য, প্রস্থ ও উচ্চতা যথাক্রমে 5 মি., 4 মি. ও 3 মি. হলে, ওই ঘরে সবচেয়ে লম্বা যে দণ্ড রাখা যাবে তার দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, কোনো ঘরে সবচেয়ে লম্বা যে দণ্ডটি রাখা যায়, সেটি ঘরের কর্ণের সমান হয়।</p>
+            <p>দেওয়া আছে, দৈর্ঘ্য ($l$) = 5 মি., প্রস্থ ($b$) = 4 মি., উচ্চতা ($h$) = 3 মি.</p>
+            <p>ঘরের কর্ণের দৈর্ঘ্য = $\sqrt{l^2 + b^2 + h^2}$</p>
+            \[
+\begin{array}{l}
+= \sqrt{5^2 + 4^2 + 3^2} \\
+= \sqrt{25 + 16 + 9} \\
+= \sqrt{50} \\
+= \sqrt{25 \times 2} \\
+= 5\sqrt{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ওই ঘরে সবচেয়ে লম্বা দণ্ডটির দৈর্ঘ্য হবে $5\sqrt{2}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একটি ঘনকের একটি তলের ক্ষেত্রফল 64 বর্গ মিটার হলে, ঘনকটির আয়তন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, ঘনকের একটি ধারের দৈর্ঘ্য = $a$ মিটার।</p>
+            <p>ঘনকের প্রতিটি তল একটি বর্গক্ষেত্র হয়, তাই একটি তলের ক্ষেত্রফল = $a^2$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+a^2 = 64 \\
+a = \sqrt{64} = 8
+\end{array}
+\]
+            <p>অতএব, ঘনকের ধারের দৈর্ঘ্য 8 মিটার।</p>
+            <p>ঘনকটির আয়তন = $a^3 = 8^3 = 8 \times 8 \times 8 = 512$ ঘন মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘনকটির আয়তন 512 ঘন মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. আমাদের বকুলতলা গ্রামে 2 মিটার চওড়া এবং 8 ডেসিমি. গভীর একটি খাল কাটা হয়েছে। যদি মোট 240 ঘন মিটার মাটি কাটা হয়ে থাকে তবে খালটি কত লম্বা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>খালের চওড়া (প্রস্থ, $b$) = 2 মিটার।</p>
+            <p>খালের গভীরতা (উচ্চতা, $h$) = 8 ডেসিমি = $\displaystyle\frac{8}{10}$ মিটার = 0.8 মিটার।</p>
+            <p>মোট মাটি কাটা হয়েছে (আয়তন) = 240 ঘন মিটার।</p>
+            <p>ধরি, খালটি লম্বা (দৈর্ঘ্য, $l$) = $x$ মিটার।</p>
+            <p>শর্তানুসারে, আয়তন = $l \times b \times h$</p>
+            \[
+\begin{array}{l}
+x \times 2 \times 0.8 = 240 \\
+1.6x = 240 \\
+x = \frac{240}{1.6} \\
+x = \frac{2400}{16} \\
+x = 150
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: খালটি 150 মিটার লম্বা।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. একটি ঘনকের কর্ণের দৈর্ঘ্য $4\sqrt{3}$ সেমি. হলে, ঘনকটির সমগ্রতলের ক্ষেত্রফল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, ঘনকের একটি ধারের দৈর্ঘ্য = $a$ সেমি।</p>
+            <p>আমরা জানি, ঘনকের কর্ণের দৈর্ঘ্য = $a\sqrt{3}$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+a\sqrt{3} = 4\sqrt{3} \\
+a = 4
+\end{array}
+\]
+            <p>অতএব, ধারের দৈর্ঘ্য = 4 সেমি।</p>
+            <p>ঘনকের সমগ্রতলের ক্ষেত্রফল = $6a^2$</p>
+            \[
+\begin{array}{l}
+= 6 \times (4)^2 \\
+= 6 \times 16 \\
+= 96
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘনকটির সমগ্রতলের ক্ষেত্রফল 96 বর্গ সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি ঘনকের ধারগুলির দৈর্ঘ্যের সমষ্টি 60 সেমি. হলে, ঘনকটির ঘনফল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, একটি ঘনকের মোট 12 টি সমান ধার থাকে।</p>
+            <p>ধরি, একটি ধারের দৈর্ঘ্য = $a$ সেমি।</p>
+            <p>শর্তানুসারে, 12 টি ধারের সমষ্টি = 60</p>
+            \[
+\begin{array}{l}
+12a = 60 \\
+a = \frac{60}{12} = 5
+\end{array}
+\]
+            <p>অতএব, ঘনকটির ঘনফল বা আয়তন = $a^3 = 5^3 = 125$ ঘন সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘনকটির ঘনফল 125 ঘন সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. যদি একটি ঘনকের ছয়টি পৃষ্ঠতলের ক্ষেত্রফলের সমষ্টি 216 বর্গ সেমি. হয়, তবে ঘনকটির আয়তন কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ছয়টি পৃষ্ঠতলের ক্ষেত্রফলের সমষ্টি অর্থাৎ সমগ্রতলের ক্ষেত্রফল = $6a^2$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+6a^2 = 216 \\
+a^2 = \frac{216}{6} = 36 \\
+a = \sqrt{36} = 6
+\end{array}
+\]
+            <p>অতএব, ধারের দৈর্ঘ্য = 6 সেমি।</p>
+            <p>ঘনকটির আয়তন = $a^3 = 6^3 = 216$ ঘন সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘনকটির আয়তন 216 ঘন সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. একটি সমকোণী চৌপলের আয়তন 432 ঘন সেমি। তাকে সমান আয়তনবিশিষ্ট দুটি ঘনক-এ পরিণত করা হলে, প্রতিটি ঘনকের প্রত্যেক ধারের দৈর্ঘ্য কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমকোণী চৌপলের মোট আয়তন = 432 ঘন সেমি।</p>
+            <p>একে দুটি সমান আয়তনবিশিষ্ট ঘনকে ভাগ করা হলে, প্রতিটি ঘনকের আয়তন হবে:</p>
+            $$\text{প্রতিটি ঘনকের আয়তন} = \frac{432}{2} = 216 \text{ ঘন সেমি}$$
+            <p>ধরি, নতুন ঘনকের প্রতিটি ধারের দৈর্ঘ্য = $a$ সেমি।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+a^3 = 216 \\
+a = \sqrt[3]{216} \\
+a = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রতিটি ঘনকের ধারের দৈর্ঘ্য 6 সেমি হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি ঘনকের প্রতিটি বাহুকে 50% কমানো হলো। মূল ঘনক ও পরিবর্তিত ঘনকের ঘনফলের অনুপাত কী হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মূল ঘনকের প্রতিটি বাহুর দৈর্ঘ্য = $a$ একক।</p>
+            <p>মূল ঘনকের আয়তন = $a^3$ ঘন একক।</p>
+            <p>বাহুর দৈর্ঘ্য 50% কমানো হলে, নতুন বাহুর দৈর্ঘ্য হবে = $a - (a \times 50\%) = a - \displaystyle\frac{a}{2} = \frac{a}{2}$ একক।</p>
+            <p>পরিবর্তিত ঘনকের ঘনফল বা আয়তন = $\displaystyle\left(\frac{a}{2}\right)^3 = \frac{a^3}{8}$ ঘন একক।</p>
+            <p>অতএব, মূল ঘনক ও পরিবর্তিত ঘনকের ঘনফলের অনুপাত:</p>
+            \[
+\begin{array}{l}
+\text{অনুপাত} = a^3 : \frac{a^3}{8} \\
+= 1 : \frac{1}{8} \\
+= 8 : 1 \quad [\text{উভয়পক্ষকে 8 দিয়ে গুণ করে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মূল ও পরিবর্তিত ঘনকের ঘনফলের অনুপাত 8:1।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. একটি সমকোণী চৌপল আকারের বাক্সের দৈর্ঘ্য, প্রস্থ ও উচ্চতার অনুপাত 3 : 2 : 1 এবং উহার আয়তন 384 ঘন সেমি. হলে, বাক্সটির সমগ্রতলের ক্ষেত্রফল কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, বাক্সটির দৈর্ঘ্য ($l$) = $3x$ সেমি, প্রস্থ ($b$) = $2x$ সেমি এবং উচ্চতা ($h$) = $x$ সেমি।</p>
+            <p>আয়তন = $l \times b \times h = 3x \times 2x \times x = 6x^3$</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+6x^3 = 384 \\
+x^3 = \frac{384}{6} = 64 \\
+x = \sqrt[3]{64} = 4
+\end{array}
+\]
+            <p>অতএব, দৈর্ঘ্য = $3 \times 4 = 12$ সেমি, প্রস্থ = $2 \times 4 = 8$ সেমি, উচ্চতা = 4 সেমি।</p>
+            <p>বাক্সটির সমগ্রতলের ক্ষেত্রফল = $2(lb + bh + hl)$</p>
+            \[
+\begin{array}{l}
+= 2(12 \times 8 + 8 \times 4 + 4 \times 12) \\
+= 2(96 + 32 + 48) \\
+= 2(176) \\
+= 352
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বাক্সটির সমগ্রতলের ক্ষেত্রফল 352 বর্গ সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. একটি চা-এর বাক্সের ভিতরের দৈর্ঘ্য, প্রস্থ ও উচ্চতা যথাক্রমে 7.5 ডেসিমি., 6 ডেসিমি. এবং 5.4 ডেসিমি.। চা ভর্তি বাক্সটির ওজন 52 কিগ্রা. 350 গ্রাম। কিন্তু খালি অবস্থায় বাক্সটির ওজন 3.75 কিগ্রা. হলে, 1 ঘন ডেসিমি. চা-এর ওজন কত হবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বাক্সের ভিতরের আয়তন = $7.5 \times 6 \times 5.4$ ঘন ডেসিমি।</p>
+            \[
+\begin{array}{l}
+= 45 \times 5.4 \\
+= 243 \text{ ঘন ডেসিমি}
+\end{array}
+\]
+            <p>চা ভর্তি বাক্সের ওজন = 52 কিগ্রা 350 গ্রাম = 52.350 কিগ্রা।</p>
+            <p>খালি বাক্সের ওজন = 3.75 কিগ্রা।</p>
+            <p>শুধুমাত্র চায়ের ওজন = $52.350 - 3.75 = 48.6$ কিগ্রা।</p>
+            <p>অতএব, 243 ঘন ডেসিমি চায়ের ওজন = 48.6 কিগ্রা।</p>
+            <p>1 ঘন ডেসিমি চায়ের ওজন = $\displaystyle\frac{48.6}{243}$ কিগ্রা</p>
+            \[
+\begin{array}{l}
+= 0.2 \text{ কিগ্রা} \\
+= 0.2 \times 1000 \text{ গ্রাম} \\
+= 200 \text{ গ্রাম}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 1 ঘন ডেসিমি চা-এর ওজন 200 গ্রাম।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. একটি বর্গাকার ভূমিবিশিষ্ট পিতলের প্লেটের দৈর্ঘ্য x সেমি., বেধ 1 মিলিমি. এবং প্লেটটির ওজন 4725 গ্রাম। যদি 1 ঘন সেমি. পিতলের ওজন 8.4 গ্রাম হয়, তাহলে x-এর মান কত হবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু ভূমি বর্গাকার, তাই দৈর্ঘ্য = প্রস্থ = $x$ সেমি।</p>
+            <p>প্লেটের বেধ (উচ্চতা) = 1 মিলিমি = 0.1 সেমি।</p>
+            <p>প্লেটটির আয়তন = দৈর্ঘ্য $\times$ প্রস্থ $\times$ বেধ = $x \times x \times 0.1 = 0.1x^2$ ঘন সেমি।</p>
+            <p>1 ঘন সেমি পিতলের ওজন 8.4 গ্রাম।</p>
+            <p>সুতরাং, প্লেটটির মোট ওজন = $(0.1x^2 \times 8.4)$ গ্রাম = $0.84x^2$ গ্রাম।</p>
+            <p>শর্তানুসারে, প্লেটের মোট ওজন 4725 গ্রাম:</p>
+            \[
+\begin{array}{l}
+0.84x^2 = 4725 \\
+x^2 = \frac{4725}{0.84} \\
+x^2 = \frac{472500}{84} \\
+x^2 = 5625 \\
+x = \sqrt{5625} = 75
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: x-এর মান হবে 75।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. চাঁদমারির রাস্তাটি উঁচু করতে হবে। তাই রাস্তার দু-পাশে 30 টি সমান গভীর ও সমান মাপের আয়তঘনাকার গর্ত খুঁড়ে সেই মাটি দিয়ে রাস্তাটি উঁচু করা হয়েছে। যদি প্রতিটি গর্তের দৈর্ঘ্য ও প্রস্থ যথাক্রমে 14 মি. এবং 8 মি. হয় এবং রাস্তাটি তৈরি করতে মোট 2520 ঘন মিটার মাটি লেগে থাকে, তবে প্রতিটি গর্তের গভীরতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, প্রতিটি গর্তের গভীরতা = $h$ মিটার।</p>
+            <p>প্রতিটি গর্তের দৈর্ঘ্য = 14 মি. এবং প্রস্থ = 8 মি.</p>
+            <p>একটি গর্ত থেকে প্রাপ্ত মাটির আয়তন = $14 \times 8 \times h = 112h$ ঘন মিটার।</p>
+            <p>30 টি গর্ত থেকে মোট মাটির আয়তন = $30 \times 112h = 3360h$ ঘন মিটার।</p>
+            <p>শর্তানুসারে, মোট মাটির পরিমাণ 2520 ঘন মিটার:</p>
+            \[
+\begin{array}{l}
+3360h = 2520 \\
+h = \frac{2520}{3360} \\
+h = \frac{252}{336} \\
+h = \frac{3}{4} \text{ মিটার}
+\end{array}
+\]
+            <p>$\frac{3}{4}$ মিটার = $0.75$ মিটার = 75 সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রতিটি গর্তের গভীরতা 0.75 মিটার বা 75 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. ঘনকাকৃতি একটি সম্পূর্ণ জলপূর্ণ চৌবাচ্চা থেকে সমান মাপের 64 বালতি জল তুলে নিলে চৌবাচ্চাটির $\displaystyle\frac{1}{3}$ অংশ জলপূর্ণ থাকে। চৌবাচ্চার একটি ধারের দৈর্ঘ্য 1.2 মিটার হলে, প্রতিটি বালতিতে কত লিটার জল ধরে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চৌবাচ্চাটির ধারের দৈর্ঘ্য = 1.2 মিটার = 12 ডেসিমিটার।</p>
+            <p>চৌবাচ্চাটির মোট আয়তন = $12^3 = 12 \times 12 \times 12 = 1728$ ঘন ডেসিমিটার।</p>
+            <p>আমরা জানি, 1 ঘন ডেসিমিটার = 1 লিটার। তাই চৌবাচ্চার মোট ধারণক্ষমতা = 1728 লিটার।</p>
+            <p>জল তুলে নেওয়ার পর $\displaystyle\frac{1}{3}$ অংশ জল অবশিষ্ট থাকে। অর্থাৎ, জল তোলা হয়েছে $1 - \displaystyle\frac{1}{3} = \frac{2}{3}$ অংশ।</p>
+            <p>তোলা জলের পরিমাণ = $1728 \times \displaystyle\frac{2}{3} = 576 \times 2 = 1152$ লিটার।</p>
+            <p>এই 1152 লিটার জল 64 টি বালতিতে তোলা হয়েছে।</p>
+            <p>অতএব, প্রতিটি বালতিতে জল ধরে = $\displaystyle\frac{1152}{64}$ লিটার = 18 লিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রতিটি বালতিতে 18 লিটার জল ধরে।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. এক গ্রোস দেশলাই বাক্সের একটি প্যাকেটের দৈর্ঘ্য, প্রস্থ ও উচ্চতা যথাক্রমে 2.8 ডেসিমি., 1.5 ডেসিমি. ও 0.9 ডেসিমি. হলে, একটি দেশলাই বাক্সের আয়তন কত হবে হিসাব করি। [এক গ্রোস = 12 ডজন] কিন্তু যদি একটি দেশলাই বাক্সের দৈর্ঘ্য 5 সেমি. এবং প্রস্থ 3.5 সেমি. হয়, তবে তার উচ্চতা কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>1 গ্রোস = 12 ডজন = $12 \times 12 = 144$ টি। অর্থাৎ একটি প্যাকেটে 144 টি দেশলাই বাক্স আছে।</p>
+            <p>প্যাকেটের দৈর্ঘ্য = 2.8 ডেসিমি = 28 সেমি।</p>
+            <p>প্যাকেটের প্রস্থ = 1.5 ডেসিমি = 15 সেমি।</p>
+            <p>প্যাকেটের উচ্চতা = 0.9 ডেসিমি = 9 সেমি।</p>
+            <p>প্যাকেটের মোট আয়তন = $28 \times 15 \times 9 = 3780$ ঘন সেমি।</p>
+            <p>অতএব, একটি দেশলাই বাক্সের আয়তন = $\displaystyle\frac{3780}{144} = 26.25$ ঘন সেমি।</p>
+            <hr>
+            <p>এখন, একটি বাক্সের দৈর্ঘ্য = 5 সেমি, প্রস্থ = 3.5 সেমি। ধরি উচ্চতা = $h$ সেমি।</p>
+            <p>আয়তন = $5 \times 3.5 \times h = 17.5h$ ঘন সেমি।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+17.5h = 26.25 \\
+h = \frac{26.25}{17.5} \\
+h = 1.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: একটি দেশলাই বাক্সের আয়তন 26.25 ঘন সেমি এবং এর উচ্চতা 1.5 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. 2.1 মিটার দীর্ঘ, 1.5 মিটার প্রশস্ত একটি আয়তঘনাকার চৌবাচ্চার অর্ধেক জলপূর্ণ আছে। ওই চৌবাচ্চায় আরও 630 লিটার জল ঢাললে জলের গভীরতা কতটা বৃদ্ধি পাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, 1 ঘন ডেসিমিটার = 1 লিটার। তাই সমস্ত মাপ ডেসিমিটারে নিয়ে যাওয়া সুবিধাজনক।</p>
+            <p>চৌবাচ্চার দৈর্ঘ্য = 2.1 মিটার = 21 ডেসিমিটার।</p>
+            <p>চৌবাচ্চার প্রস্থ = 1.5 মিটার = 15 ডেসিমিটার।</p>
+            <p>ধরি, 630 লিটার জল ঢাললে জলের গভীরতা $h$ ডেসিমিটার বৃদ্ধি পাবে।</p>
+            <p>বর্ধিত জলের আয়তন = দৈর্ঘ্য $\times$ প্রস্থ $\times$ উচ্চতা (গভীরতা বৃদ্ধি)</p>
+            <p>বর্ধিত জলের আয়তন = $21 \times 15 \times h = 315h$ ঘন ডেসিমিটার বা লিটার।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+315h = 630 \\
+h = \frac{630}{315} \\
+h = 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: জলের গভীরতা 2 ডেসিমিটার (বা 0.2 মিটার) বৃদ্ধি পাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="solution-card">
+        <h4 class="question-title">18. গ্রামের আয়তক্ষেত্রাকার মাঠের দৈর্ঘ্য ও প্রস্থ যথাক্রমে 20 মিটার এবং 15 মিটার। ওই মাঠের ভিতরে চারটি কোণে পিলার বসানোর জন্য 4 মিটার দৈর্ঘ্যবিশিষ্ট চারটি ঘনকাকৃতি গর্ত কেটে অপসারিত মাটি অবশিষ্ট জমির উপর ছড়িয়ে দেওয়া হলো। মাঠের তলের উচ্চতা কতটা বৃদ্ধি পেল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মাঠের মোট ক্ষেত্রফল = $20 \times 15 = 300$ বর্গ মিটার।</p>
+            <p>4 মিটার দৈর্ঘ্যবিশিষ্ট একটি ঘনকাকৃতি গর্তের ভূমির ক্ষেত্রফল = $4 \times 4 = 16$ বর্গ মিটার।</p>
+            <p>চারটি পিলারের জন্য মোট গর্তের ক্ষেত্রফল = $4 \times 16 = 64$ বর্গ মিটার।</p>
+            <p>মাটি ছড়ানো হবে এমন অবশিষ্ট জমির ক্ষেত্রফল = $300 - 64 = 236$ বর্গ মিটার।</p>
+            <p>একটি গর্ত থেকে কাটা মাটির আয়তন = $4^3 = 64$ ঘন মিটার।</p>
+            <p>চারটি গর্ত থেকে মোট অপসারিত মাটির আয়তন = $4 \times 64 = 256$ ঘন মিটার।</p>
+            <p>ধরি, মাঠের তলের উচ্চতা $h$ মিটার বৃদ্ধি পেল।</p>
+            <p>অবশিষ্ট জমির ক্ষেত্রফল $\times$ উচ্চতা বৃদ্ধি = মোট মাটির আয়তন</p>
+            \[
+\begin{array}{l}
+236 \times h = 256 \\
+h = \frac{256}{236} \\
+h = \frac{64}{59} \\
+h = 1\frac{5}{59}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মাঠের তলের উচ্চতা $1\frac{5}{59}$ মিটার বৃদ্ধি পেল।</div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="solution-card">
+        <h4 class="question-title">19. 48 মিটার লম্বা এবং 31.5 মিটার চওড়া একখণ্ড নীচু জমিকে 6.5 ডেসিমি. উঁচু করার জন্য ঠিক করা হয়েছে পাশের 27 মিটার লম্বা এবং 18.2 মিটার চওড়া একটি জমি গর্ত করে মাটি তোলা হবে। গর্তটি কত মিটার গভীর করতে হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উঁচু করার জন্য প্রয়োজনীয় মাটির আয়তন = (নীচু জমির দৈর্ঘ্য) $\times$ (প্রস্থ) $\times$ (উচ্চতা বৃদ্ধি)</p>
+            <p>উচ্চতা বৃদ্ধি = 6.5 ডেসিমি = 0.65 মিটার।</p>
+            <p>প্রয়োজনীয় মাটির আয়তন = $48 \times 31.5 \times 0.65 = 982.8$ ঘন মিটার।</p>
+            <p>ধরি, গর্তটি $h$ মিটার গভীর করতে হবে।</p>
+            <p>গর্ত থেকে প্রাপ্ত মাটির আয়তন = $27 \times 18.2 \times h = 491.4h$ ঘন মিটার।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+491.4h = 982.8 \\
+h = \frac{982.8}{491.4} \\
+h = 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গর্তটি 2 মিটার গভীর করতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="solution-card">
+        <h4 class="question-title">20. বাড়ির তিনটি কেরোসিন তেলের ড্রামে যথাক্রমে 800 লিটার, 725 লিটার এবং 575 লিটার তেল ছিল। ওই তিনটি ড্রামের তেল একটি আয়তঘনাকার পাত্রে ঢালা হলো এবং এতে পাত্রে তেলের গভীরতা 7 ডেসিমি. হলো। ওই আয়তঘনাকার পাত্রের দৈর্ঘ্য ও প্রস্থের অনুপাত 4 : 3 হলে, পাত্রের দৈর্ঘ্য ও প্রস্থ হিসাব করে লিখি।<br>যদি ওই আয়তঘনাকার পাত্রের গভীরতা 5 ডেসিমিটার হতো, তবে 1620 লিটার তেল ওই পাত্রে রাখা যেত কিনা হিসাব করে দেখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট তেলের আয়তন = $800 + 725 + 575 = 2100$ লিটার (বা ঘন ডেসিমিটার)।</p>
+            <p>পাত্রের তেলের গভীরতা = 7 ডেসিমিটার।</p>
+            <p>ধরি, পাত্রের দৈর্ঘ্য = $4x$ ডেসিমিটার এবং প্রস্থ = $3x$ ডেসিমিটার।</p>
+            <p>পাত্রে রাখা তেলের আয়তন = $4x \times 3x \times 7 = 84x^2$ ঘন ডেসিমিটার।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+84x^2 = 2100 \\
+x^2 = \frac{2100}{84} = 25 \\
+x = \sqrt{25} = 5
+\end{array}
+\]
+            <p>অতএব, পাত্রের দৈর্ঘ্য = $4 \times 5 = 20$ ডেসিমিটার এবং প্রস্থ = $3 \times 5 = 15$ ডেসিমিটার।</p>
+            <hr>
+            <p>দ্বিতীয় অংশের জন্য, যদি পাত্রের গভীরতা 5 ডেসিমিটার হয়, তবে তার সর্বোচ্চ ধারণক্ষমতা হবে:</p>
+            \[
+\begin{array}{l}
+\text{আয়তন} = 20 \times 15 \times 5 \\
+= 300 \times 5 = 1500 \text{ লিটার}
+\end{array}
+\]
+            <p>যেহেতু 1500 লিটার ধারণক্ষমতা 1620 লিটারের চেয়ে কম, তাই 1620 লিটার তেল ওই পাত্রে রাখা যাবে না।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পাত্রের দৈর্ঘ্য 20 ডেসিমি. এবং প্রস্থ 15 ডেসিমি.। 5 ডেসিমি. গভীরতায় 1620 লিটার তেল রাখা যাবে না।</div>
+        </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="solution-card">
+        <h4 class="question-title">21. আমাদের তিনতলা ফ্ল্যাটের তিনটি পরিবারের দৈনিক জলের চাহিদা যথাক্রমে 1200 লিটার, 1050 লিটার এবং 950 লিটার। এই চাহিদা মেটানোর পরও চাহিদার 25% জল মজুত থাকে এমন একটি ট্যাঙ্ক বসানোর জন্য মাত্র 2.5 মি. দীর্ঘ এবং 1.6 মিটার চওড়া একটি জায়গা পাওয়া গেছে। ট্যাঙ্কটি কত মিটার গভীর করতে হবে হিসাব করে লিখি।<br>জায়গাটি যদি প্রস্থের দিকে আরও 4 ডেসিমি. বেশি হতো, তবে ট্যাঙ্কটি কতটা গভীর করতে হতো তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তিনটি পরিবারের মোট দৈনিক চাহিদা = $1200 + 1050 + 950 = 3200$ লিটার।</p>
+            <p>চাহিদা মেটানোর পর 25% জল মজুত থাকে। অর্থাৎ ট্যাঙ্কটির মোট ধারণক্ষমতা হবে চাহিদার 125%।</p>
+            <p>ট্যাঙ্কের মোট ধারণক্ষমতা = $3200 \times \displaystyle\frac{125}{100} = 32 \times 125 = 4000$ লিটার = 4000 ঘন ডেসিমিটার = 4 ঘন মিটার।</p>
+            <p>ট্যাঙ্কটির দৈর্ঘ্য = 2.5 মিটার এবং প্রস্থ = 1.6 মিটার। ধরি গভীরতা = $h_1$ মিটার।</p>
+            \[
+\begin{array}{l}
+2.5 \times 1.6 \times h_1 = 4 \\
+4.0 \times h_1 = 4 \\
+h_1 = 1
+\end{array}
+\]
+            <p>অতএব ট্যাঙ্কটি 1 মিটার গভীর করতে হবে।</p>
+            <hr>
+            <p>দ্বিতীয় অংশের জন্য, জায়গাটি প্রস্থের দিকে 4 ডেসিমি (0.4 মিটার) বেশি হলে নতুন প্রস্থ হবে = $1.6 + 0.4 = 2.0$ মিটার।</p>
+            <p>ধরি নতুন গভীরতা = $h_2$ মিটার।</p>
+            \[
+\begin{array}{l}
+2.5 \times 2.0 \times h_2 = 4 \\
+5.0 \times h_2 = 4 \\
+h_2 = \frac{4}{5} = 0.8
+\end{array}
+\]
+            <p>0.8 মিটার = 8 ডেসিমিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ট্যাঙ্কটি 1 মিটার গভীর করতে হবে। প্রস্থ বাড়লে গভীরতা 0.8 মিটার (বা 8 ডেসিমিটার) করতে হতো।</div>
+        </div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="solution-card">
+        <h4 class="question-title">23. 20 মিটার দীর্ঘ এবং 18.5 মিটার চওড়া একটি আয়তঘনাকার পুকুরে 3.2 মিটার গভীর জল আছে। ঘন্টায় 160 কিলোলিটার জল সেচ করতে পারে এমন একটি পাম্প দিয়ে কতক্ষণে পুকুরটির সমস্ত জল সেচ করা যাবে হিসাব করে লিখি। ওই জল যদি 59.2 মিটার দীর্ঘ এবং 40 মিটার চওড়া একটি আল দেওয়া ধানক্ষেতে ফেলা হয়, তবে সেই জমিতে জলের গভীরতা কত হবে হিসাব করে লিখি। (1 ঘন মিটার = 1 কিলোলিটার)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>প্রথম অংশ:</strong></p>
+            <p>পুকুরের দৈর্ঘ্য = 20 মিটার, প্রস্থ = 18.5 মিটার এবং গভীরতা = 3.2 মিটার।</p>
+            <p>পুকুরে থাকা জলের আয়তন = (দৈর্ঘ্য $\times$ প্রস্থ $\times$ গভীরতা)</p>
+            \[
+\begin{array}{l}
+= 20 \times 18.5 \times 3.2 \text{ ঘন মিটার} \\
+= 370 \times 3.2 \\
+= 1184 \text{ ঘন মিটার}
+\end{array}
+\]
+            <p>যেহেতু 1 ঘন মিটার = 1 কিলোলিটার, তাই জলের পরিমাণ = 1184 কিলোলিটার।</p>
+            <p>পাম্পটি ঘন্টায় 160 কিলোলিটার জল সেচ করতে পারে।</p>
+            <p>সম্পূর্ণ জল সেচ করতে সময় লাগবে = $\displaystyle\frac{1184}{160}$ ঘন্টা = 7.4 ঘন্টা।</p>
+            <p>7.4 ঘন্টা = 7 ঘন্টা + (0.4 $\times$ 60) মিনিট = 7 ঘন্টা 24 মিনিট।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর ১: 7 ঘন্টা 24 মিনিটে সমস্ত জল সেচ করা যাবে।</div>
+            
+            <hr class="my-4">
+            
+            <p><strong>দ্বিতীয় অংশ:</strong></p>
+            <p>ধানক্ষেতের দৈর্ঘ্য = 59.2 মিটার, প্রস্থ = 40 মিটার।</p>
+            <p>ধরি, ধানক্ষেতে জলের গভীরতা হবে $h$ মিটার।</p>
+            <p>শর্তানুসারে, ধানক্ষেতের জলের আয়তন = পুকুরের জলের আয়তন</p>
+            \[
+\begin{array}{l}
+59.2 \times 40 \times h = 1184 \\
+2368 \times h = 1184 \\
+h = \frac{1184}{2368} \\
+h = 0.5 \text{ মিটার}
+\end{array}
+\]
+            <p>0.5 মিটার = 5 ডেসিমিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর ২: জমিতে জলের গভীরতা 5 ডেসিমিটার হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="solution-card">
+        <h4 class="question-title">24. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) একটি সমকোণী চৌপলের বাক্সের ভিতরের আয়তন 440 ঘন সেমি. এবং ভিতরের ভূমিতলের ক্ষেত্রফল 88 বর্গ সেমি., বাক্সটির ভিতরের উচ্চতা—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, আয়তন = ভূমিতলের ক্ষেত্রফল $\times$ উচ্চতা।</p>
+            <p>উচ্চতা = $\displaystyle\frac{\text{আয়তন}}{\text{ভূমিতলের ক্ষেত্রফল}} = \frac{440}{88} = 5$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 5 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি আয়তঘনাকার গর্তের দৈর্ঘ্য 40 মি., প্রস্থ 12 মি. এবং গভীরতা 16 মি.। ওই গর্তের মধ্যে 5 মি. দৈর্ঘ্য, 4 মি. প্রস্থ এবং 2 মি. পুরু তক্তা রাখা যাবে—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তক্তার সংখ্যা = $\displaystyle\frac{\text{গর্তের আয়তন}}{\text{একটি তক্তার আয়তন}} = \frac{40 \times 12 \times 16}{5 \times 4 \times 2}$</p>
+            <p>$= \displaystyle\frac{7680}{40} = 192$ টি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 192 টি</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি ঘনকের পার্শ্বতলের ক্ষেত্রফল 256 বর্গ মিটার। ঘনকটির আয়তন—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ঘনকের 4টি পার্শ্বতল থাকে। ধরি, বাহুর দৈর্ঘ্য $a$।</p>
+            <p>$4a^2 = 256 \implies a^2 = 64 \implies a = \sqrt{64} = 8$ মিটার।</p>
+            <p>আয়তন = $a^3 = 8^3 = 512$ ঘন মিটার।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 512 ঘন মিটার</div>
+        </div>
+
+        <span class="sub-question">(iv) দুটি ঘনকের আয়তনের অনুপাত 1:27 হলে, ঘনক দুটির সমগ্রতলের ক্ষেত্রফলের অনুপাত—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আয়তনের অনুপাত $\displaystyle\frac{a_1^3}{a_2^3} = \frac{1}{27} \implies \frac{a_1}{a_2} = \sqrt[3]{\frac{1}{27}} = \frac{1}{3}$</p>
+            <p>সমগ্রতলের ক্ষেত্রফলের অনুপাত = $\displaystyle\frac{6a_1^2}{6a_2^2} = \left(\frac{1}{3}\right)^2 = \frac{1}{9}$ অর্থাৎ 1:9</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 1:9</div>
+        </div>
+
+        <span class="sub-question">(v) একটি ঘনকের সমগ্রতলের ক্ষেত্রফল S বর্গ একক এবং কর্ণের দৈর্ঘ্য d একক হলে, S এবং d-এর সম্পর্ক—</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি বাহু $a$। $S = 6a^2$ এবং $d = a\sqrt{3}$।</p>
+            <p>$d^2 = 3a^2 \implies 2d^2 = 6a^2$</p>
+            <p>যেহেতু $6a^2 = S$, অতএব, $2d^2 = S$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $S = 2d^2$</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য / মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি ঘনকের প্রতিটি ধারের দৈর্ঘ্য দ্বিগুণ হলে, ঘনকটির আয়তন প্রথম ঘনকের 4 গুণ হবে।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> বাহু $a$ থেকে $2a$ হলে, আয়তন হবে $(2a)^3 = 8a^3$, অর্থাৎ 8 গুণ হবে, 4 গুণ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) বর্ষার সময় 2 হেক্টর জমিতে বৃষ্টিপাত 5 সেমি. উচ্চতার হলে, বৃষ্টির জলের আয়তন 1000 ঘন মিটার। (1 আর = 100 বর্গ মি., 1 হেক্টর = 100 আর)</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> জমির ক্ষেত্রফল = 2 হেক্টর = $2 \times 100 \times 100 = 20000$ বর্গ মিটার।</p>
+            <p>জলের উচ্চতা = 5 সেমি = 0.05 মিটার।</p>
+            <p>আয়তন = $20000 \times 0.05 = 1000$ ঘন মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি সমকোণী চৌপলের কর্ণের সংখ্যা _________ টি।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 4</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি ঘনকের একটি তলের কর্ণের দৈর্ঘ্য = _________ $\times$ একটি ধারের দৈর্ঘ্য।</span>
+        <div class="solution-box">
+            <p>ঘনকের প্রতিটি তল একটি বর্গক্ষেত্র, যার কর্ণ = বাহু $\times \sqrt{2}$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\sqrt{2}$</p>
+        </div>
+
+        <span class="sub-question">(iii) সমকোণী চৌপলের দৈর্ঘ্য, প্রস্থ ও উচ্চতা সমান হলে সেই ঘনবস্তুর বিশেষ নাম _________।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> ঘনক</p>
+        </div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="solution-card">
+        <h4 class="question-title">25. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি আয়তঘনের তলসংখ্যা x, ধারসংখ্যা y, শীর্ষবিন্দু সংখ্যা z এবং কর্ণের সংখ্যা p হলে, $x - y + z + p$ -এর মান কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, আয়তঘনের তলসংখ্যা ($x$) = 6, ধারসংখ্যা ($y$) = 12, শীর্ষবিন্দু সংখ্যা ($z$) = 8 এবং কর্ণের সংখ্যা ($p$) = 4।</p>
+            <p>প্রদত্ত রাশি = $x - y + z + p$</p>
+            <p>$= 6 - 12 + 8 + 4 = 18 - 12 = 6$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান হবে 6</div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি আয়তঘনের মাত্রাগুলির দৈর্ঘ্য যথাক্রমে 4, 6, 4 একক এবং 8, (2h-1), 2 একক। যদি আয়তঘন দুটির আয়তন সমান হয়, তাহলে h এর মান কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম আয়তঘনের আয়তন = $4 \times 6 \times 4 = 96$ ঘন একক।</p>
+            <p>দ্বিতীয় আয়তঘনের আয়তন = $8 \times (2h - 1) \times 2 = 16(2h - 1)$ ঘন একক।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+16(2h - 1) = 96 \\
+2h - 1 = \frac{96}{16} = 6 \\
+2h = 6 + 1 = 7 \\
+h = \frac{7}{2} = 3.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $h$-এর মান 3.5</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি ঘনকের প্রত্যেকটি ধারের দৈর্ঘ্য 50% বৃদ্ধি পেলে, ঘনকটির সমগ্রতলের ক্ষেত্রফল শতকরা কত বৃদ্ধি পাবে তা হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, ঘনকটির প্রাথমিক ধারের দৈর্ঘ্য = $a$ একক।</p>
+            <p>প্রাথমিক সমগ্রতলের ক্ষেত্রফল = $6a^2$ বর্গ একক।</p>
+            <p>ধারের দৈর্ঘ্য 50% বৃদ্ধি পেলে নতুন দৈর্ঘ্য হবে = $a + a \times \displaystyle\frac{50}{100} = a + 0.5a = 1.5a$ একক।</p>
+            <p>নতুন সমগ্রতলের ক্ষেত্রফল = $6 \times (1.5a)^2 = 6 \times 2.25a^2 = 13.5a^2$ বর্গ একক.</p>
+            <p>ক্ষেত্রফল বৃদ্ধি = $13.5a^2 - 6a^2 = 7.5a^2$ বর্গ একক।</p>
+            <p>শতকরা বৃদ্ধি = $\left(\displaystyle\frac{\text{বৃদ্ধি}}{\text{প্রাথমিক ক্ষেত্রফল}}\right) \times 100$</p>
+            <p>$= \displaystyle\frac{7.5a^2}{6a^2} \times 100 = 1.25 \times 100 = 125\%$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সমগ্রতলের ক্ষেত্রফল 125% বৃদ্ধি পাবে।</div>
+        </div>
+
+        <span class="sub-question">(iv) তিনটি নিরেট ঘনক যাদের প্রত্যেকটি ধারের দৈর্ঘ্য যথাক্রমে 3 সেমি., 4 সেমি. এবং 5 সেমি.। ঘনক তিনটিকে গলিয়ে একটি নতুন নিরেট ঘনক তৈরি করা হলো। নতুন ঘনকটির একটি ধারের দৈর্ঘ্য কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তিনটি ঘনকের মোট আয়তন = $(3^3 + 4^3 + 5^3)$ ঘন সেমি</p>
+            <p>$= 27 + 64 + 125 = 216$ ঘন সেমি।</p>
+            <p>ধরি, নতুন ঘনকটির ধারের দৈর্ঘ্য $a$ সেমি।</p>
+            <p>শর্তানুসারে, $a^3 = 216 \implies a = \sqrt[3]{216} = 6$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নতুন ঘনকটির ধারের দৈর্ঘ্য 6 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি ঘরের দুটি সংলগ্ন দেয়ালের দৈর্ঘ্য যথাক্রমে 12 মি. এবং 8 মি.। ঘরটির উচ্চতা 4 মি. হলে, ঘরটির মেঝের ক্ষেত্রফল কত তা হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি সংলগ্ন দেয়ালের দৈর্ঘ্য বলতে ঘরটির মেঝের দৈর্ঘ্য ও প্রস্থকে বোঝানো হয়েছে।</p>
+            <p>অতএব, ঘরের দৈর্ঘ্য = 12 মি. এবং প্রস্থ = 8 মি.</p>
+            <p>মেঝের ক্ষেত্রফল = দৈর্ঘ্য $\times$ প্রস্থ = $12 \times 8 = 96$ বর্গ মিটার। (উচ্চতার এখানে কোনো কাজ নেই)</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘরটির মেঝের ক্ষেত্রফল 96 বর্গ মিটার।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

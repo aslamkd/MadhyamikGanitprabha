@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>সরল সুদের মূল সূত্র (Formula):</strong><br>
+        মোট সুদ ($I$) = $\displaystyle\frac{P \times R \times T}{100}$<br>
+        যেখানে, $P$ = আসল বা মূলধন (Principal), $R$ = শতকরা বার্ষিক সুদের হার (Rate), $T$ = সময় বছরে (Time)।<br>
+        সবৃদ্ধিমূল বা সুদ-আসল ($A$) = $P + I$
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. দুই বন্ধু একসঙ্গে একটি ছোটো ব্যবসা চালাবার জন্য বার্ষিক 12% সরল সুদের হারে একটি ব্যাংক থেকে 15000 টাকা ধার নিলেন। 4 বছর পরে ওই টাকার জন্য তাদের কত টাকা সুদ দিতে হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে,</p>
+            <p>আসল ($P$) = 15000 টাকা</p>
+            <p>বার্ষিক সরল সুদের হার ($R$) = 12%</p>
+            <p>সময় ($T$) = 4 বছর</p>
+            <p>আমরা জানি, মোট সুদ ($I$) = $\displaystyle\frac{P \times R \times T}{100}$</p>
+            \[
+\begin{array}{l}
+I = \frac{15000 \times 12 \times 4}{100} \\
+= 150 \times 12 \times 4 \\
+= 150 \times 48 \\
+= 7200
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 4 বছর পরে তাদের 7200 টাকা সুদ দিতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. 2005 সালের 1 জানুয়ারি থেকে 27 মে পর্যন্ত বার্ষিক 6% সরল সুদের হারে 2000 টাকার সুদ কত হবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 2000 টাকা</p>
+            <p>বার্ষিক সুদের হার ($R$) = 6%</p>
+            <p>সময় নির্ণয়: 2005 সালটি লিপ ইয়ার (Leap year) নয়, তাই ফেব্রুয়ারি মাস 28 দিনের।</p>
+            <p>সাধারণত টাকা জমা দেওয়ার দিন বা তুলে নেওয়ার দিনের যেকোনো একদিনের সুদ পাওয়া যায়। তাই মোট দিনসংখ্যা হলো:</p>
+            <p>জানুয়ারি (31) + ফেব্রুয়ারি (28) + মার্চ (31) + এপ্রিল (30) + মে (26) = 146 দিন।</p>
+            <p>অতএব, সময় ($T$) = $\displaystyle\frac{146}{365}$ বছর = $\displaystyle\frac{2}{5}$ বছর (73 দিয়ে কেটে)।</p>
+            <p>মোট সুদ ($I$) = $\displaystyle\frac{P \times R \times T}{100}$</p>
+            \[
+\begin{array}{l}
+I = \frac{2000 \times 6 \times \frac{2}{5}}{100} \\
+= \frac{20 \times 6 \times 2}{5} \\
+= 4 \times 12 \\
+= 48
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সুদ 48 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. বার্ষিক $8\frac{1}{3}\%$ সরল সুদে 960 টাকার 1 বছর 3 মাসের সবৃদ্ধিমূল কত হবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 960 টাকা</p>
+            <p>সুদের হার ($R$) = $8\frac{1}{3}\% = \displaystyle\frac{25}{3}\%$</p>
+            <p>সময় ($T$) = 1 বছর 3 মাস = 12 মাস + 3 মাস = 15 মাস = $\displaystyle\frac{15}{12}$ বছর = $\displaystyle\frac{5}{4}$ বছর</p>
+            <p>মোট সুদ ($I$) = $\displaystyle\frac{P \times R \times T}{100}$</p>
+            \[
+\begin{array}{l}
+I = \frac{960 \times \frac{25}{3} \times \frac{5}{4}}{100} \\
+= \frac{960 \times 25 \times 5}{100 \times 3 \times 4} \\
+= \frac{960 \times 125}{1200} \\
+= \frac{96 \times 125}{120} \\
+= \frac{4 \times 125}{5} \\
+= 4 \times 25 \\
+= 100
+\end{array}
+\]
+            <p>সবৃদ্ধিমূল বা সুদ-আসল ($A$) = আসল + সুদ = $960 + 100 = 1060$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সবৃদ্ধিমূল 1060 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. উৎপলবাবু তাঁর জমি চাষের জন্য সমবায় ব্যাংক থেকে বার্ষিক 6% সরল সুদের হারে 3200 টাকা 2 বছরের জন্য ধার নিলেন। 2 বছর পরে সুদে-আসলে তাঁকে কত টাকা শোধ করতে হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 3200 টাকা</p>
+            <p>সুদের হার ($R$) = 6%</p>
+            <p>সময় ($T$) = 2 বছর</p>
+            <p>মোট সুদ ($I$) = $\displaystyle\frac{P \times R \times T}{100}$</p>
+            \[
+\begin{array}{l}
+I = \frac{3200 \times 6 \times 2}{100} \\
+= 32 \times 12 \\
+= 384
+\end{array}
+\]
+            <p>সুদে-আসলে তাঁকে মোট শোধ করতে হবে = আসল + সুদ = $3200 + 384 = 3584$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সুদে-আসলে তাঁকে 3584 টাকা শোধ করতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. বার্ষিক 5.25% সরল সুদের হারে শোভাদেবী একটি ব্যাংকে কিছু টাকা জমা রাখেন। 2 বছর পর তিনি সুদ হিসাবে 840 টাকা পেলেন। তিনি কত টাকা জমা রেখেছিলেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে মোট সুদ ($I$) = 840 টাকা</p>
+            <p>সুদের হার ($R$) = 5.25%</p>
+            <p>সময় ($T$) = 2 বছর</p>
+            <p>আমরা জানি, আসল ($P$) = $\displaystyle\frac{100 \times I}{R \times T}$</p>
+            \[
+\begin{array}{l}
+P = \frac{100 \times 840}{5.25 \times 2} \\
+= \frac{84000}{10.50} \\
+= \frac{840000}{105} \\
+= 8000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি ব্যাংকে 8000 টাকা জমা রেখেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. গৌতম একটি মুরগি খামার খোলার জন্য একটি সমবায় ব্যাংক থেকে বার্ষিক 12% সরল সুদের হারে কিছু টাকা ধার নিলেন। প্রত্যেক মাসে তাঁকে 378 টাকা সুদ দিতে হয়। তিনি কত টাকা ধার নিয়েছিলেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে 1 মাসের সুদ ($I$) = 378 টাকা</p>
+            <p>সুদের হার ($R$) = 12%</p>
+            <p>সময় ($T$) = 1 মাস = $\displaystyle\frac{1}{12}$ বছর</p>
+            <p>আসল ($P$) = $\displaystyle\frac{100 \times I}{R \times T}$</p>
+            \[
+\begin{array}{l}
+P = \frac{100 \times 378}{12 \times \frac{1}{12}} \\
+= \frac{37800}{1} \\
+= 37800
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি 37800 টাকা ধার নিয়েছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. বার্ষিক 6% সরল সুদের হারে কোনো টাকা কত বছরে দ্বিগুণ হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল ($P$) = $x$ টাকা।</p>
+            <p>যেহেতু টাকাটি সুদে-আসলে দ্বিগুণ হবে, তাই সুদ-আসল ($A$) = $2x$ টাকা।</p>
+            <p>অতএব, মোট সুদ ($I$) = $2x - x = x$ টাকা।</p>
+            <p>সুদের হার ($R$) = 6%</p>
+            <p>আমরা জানি, সময় ($T$) = $\displaystyle\frac{100 \times I}{P \times R}$</p>
+            \[
+\begin{array}{l}
+T = \frac{100 \times x}{x \times 6} \\
+= \frac{100}{6} = \frac{50}{3} \\
+= 16\frac{2}{3} \text{ বছর}
+\end{array}
+\]
+            <p>$16\frac{2}{3}$ বছর = 16 বছর এবং $(\frac{2}{3} \times 12)$ মাস = 16 বছর 8 মাস।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 16 বছর 8 মাসে টাকাটি দ্বিগুণ হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. মান্নান মিঞা কিছু টাকা ধার করার 6 বছর পর দেখলেন দেয় সরল সুদের পরিমাণ আসলের $\frac{3}{8}$ অংশ হয়ে গেছে। বার্ষিক শতকরা সরল সুদের হার কত ছিল নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল ($P$) = $x$ টাকা।</p>
+            <p>শর্তানুসারে, মোট সুদ ($I$) = $x$ -এর $\displaystyle\frac{3}{8}$ অংশ = $\displaystyle\frac{3x}{8}$ টাকা।</p>
+            <p>সময় ($T$) = 6 বছর।</p>
+            <p>আমরা জানি, সুদের হার ($R$) = $\displaystyle\frac{100 \times I}{P \times T}$</p>
+            \[
+\begin{array}{l}
+R = \frac{100 \times \frac{3x}{8}}{x \times 6} \\
+= \frac{100 \times 3x}{8 \times x \times 6} \\
+= \frac{300}{48} \\
+= \frac{100}{16} = \frac{25}{4} \\
+= 6.25 \text{ বা } 6\frac{1}{4}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক সরল সুদের হার ছিল $6\frac{1}{4}\%$।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. একটি কৃষি সমবায় সমিতি তার সদস্যদের বার্ষিক 4% সরল সুদের হারে কৃষি ঋণ দেয়। কিন্তু ব্যাংক থেকে টাকা ধার করলে বার্ষিক 7.4% হারে সরল সুদ দিতে হয়। একজন কৃষক যদি ব্যাংক থেকে টাকা ধার না করে সমবায় সমিতির সদস্য হয়ে সমিতি থেকে 5000 টাকা কৃষি ঋণ নেন, তবে তাঁর বছরে সুদ বাবদ কত টাকা বাঁচবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 5000 টাকা এবং সময় ($T$) = 1 বছর।</p>
+            <p><strong>ব্যাংকের ক্ষেত্রে:</strong> সুদের হার ($R_1$) = 7.4%</p>
+            \[
+\begin{array}{l}
+\text{ব্যাংকের সুদ} (I_1) = \frac{5000 \times 7.4 \times 1}{100} \\
+= 50 \times 7.4 = 370 \text{ টাকা}
+\end{array}
+\]
+            <p><strong>সমবায় সমিতির ক্ষেত্রে:</strong> সুদের হার ($R_2$) = 4%</p>
+            \[
+\begin{array}{l}
+\text{সমিতির সুদ} (I_2) = \frac{5000 \times 4 \times 1}{100} \\
+= 50 \times 4 = 200 \text{ টাকা}
+\end{array}
+\]
+            <p>সুতরাং, বছরে তাঁর সুদ বাঁচবে = $370 - 200 = 170$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তাঁর বছরে সুদ বাবদ 170 টাকা বাঁচবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. যদি 292 টাকার 1 দিনের সুদ 5 পয়সা হয়, তবে বার্ষিক শতকরা সরল সুদের হার হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 292 টাকা।</p>
+            <p>সময় ($T$) = 1 দিন = $\displaystyle\frac{1}{365}$ বছর।</p>
+            <p>মোট সুদ ($I$) = 5 পয়সা = $\displaystyle\frac{5}{100}$ টাকা।</p>
+            <p>সুদের হার ($R$) = $\displaystyle\frac{100 \times I}{P \times T}$</p>
+            \[
+\begin{array}{l}
+R = \frac{100 \times \frac{5}{100}}{292 \times \frac{1}{365}} \\
+= \frac{5}{\frac{292}{365}} \\
+= 5 \times \frac{365}{292} \\
+= 5 \times \frac{5}{4} \quad [\text{73 দিয়ে কেটে}] \\
+= \frac{25}{4} = 6\frac{1}{4}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক শতকরা সরল সুদের হার $6\frac{1}{4}\%$।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. বার্ষিক 8% হার সরল সুদে কত বছরে 600 টাকার সুদ 168 টাকা হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 600 টাকা, মোট সুদ ($I$) = 168 টাকা, সুদের হার ($R$) = 8%।</p>
+            <p>সময় ($T$) = $\displaystyle\frac{100 \times I}{P \times R}$</p>
+            \[
+\begin{array}{l}
+T = \frac{100 \times 168}{600 \times 8} \\
+= \frac{168}{6 \times 8} \\
+= \frac{168}{48} \\
+= \frac{7}{2} = 3\frac{1}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $3\frac{1}{2}$ বছরে (বা 3 বছর 6 মাসে) টাকাটি 168 টাকা সুদ দেবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. যদি বার্ষিক 10% হার সরল সুদে 800 টাকা ব্যাংকে জমা দিয়ে সুদে আসলে 1200 টাকা ফেরত পাই, তবে ওই টাকা কত সময়ের জন্য ব্যাংকে জমা ছিল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 800 টাকা, সুদ-আসল ($A$) = 1200 টাকা।</p>
+            <p>অতএব, মোট সুদ ($I$) = $1200 - 800 = 400$ টাকা।</p>
+            <p>সুদের হার ($R$) = 10%।</p>
+            <p>সময় ($T$) = $\displaystyle\frac{100 \times I}{P \times R}$</p>
+            \[
+\begin{array}{l}
+T = \frac{100 \times 400}{800 \times 10} \\
+= \frac{40000}{8000} \\
+= 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: টাকাটি 5 বছরের জন্য ব্যাংকে জমা ছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. কোনো মূলধন একই বার্ষিক শতকরা সরল সুদের হারে 7 বছরে সুদে-আসলে 7100 টাকা এবং 4 বছরের সুদে-আসলে 6200 টাকা হলে মূলধন ও বার্ষিক শতকরা সরল সুদের হার নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আসল + 7 বছরের সুদ = 7100 টাকা</p>
+            <p>আসল + 4 বছরের সুদ = 6200 টাকা</p>
+            <p>বিয়োগ করে পাই, 3 বছরের সুদ = $(7100 - 6200)$ = 900 টাকা।</p>
+            <p>অতএব, 1 বছরের সুদ = $\displaystyle\frac{900}{3} = 300$ টাকা।</p>
+            <p>তাহলে, 4 বছরের সুদ = $300 \times 4 = 1200$ টাকা।</p>
+            <p>আসল ($P$) = (আসল + 4 বছরের সুদ) - 4 বছরের সুদ</p>
+            <p>$P = 6200 - 1200 = 5000$ টাকা।</p>
+            <p>এখন, আসল ($P$) = 5000 টাকা, সময় ($T$) = 4 বছর, সুদ ($I$) = 1200 টাকা।</p>
+            <p>সুদের হার ($R$) = $\displaystyle\frac{100 \times I}{P \times T}$</p>
+            \[
+\begin{array}{l}
+R = \frac{100 \times 1200}{5000 \times 4} \\
+= \frac{120000}{20000} \\
+= 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মূলধন 5000 টাকা এবং বার্ষিক সুদের হার 6%।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. একই সময়ে অমল রায় ব্যাংকে এবং পশুপতি ঘোষ পোস্ট অফিসে 2000 টাকা করে জমা রাখেন। 3 বছর পর তারা সুদসহ যথাক্রমে 2360 টাকা ও 2480 টাকা ফেরত পান। ব্যাংক ও পোস্ট অফিসের বার্ষিক শতকরা সরল সুদের হারের অনুপাত কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উভয়ক্ষেত্রেই আসল ($P$) = 2000 টাকা এবং সময় ($T$) = 3 বছর।</p>
+            <p><strong>ব্যাংকের ক্ষেত্রে (অমল রায়):</strong></p>
+            <p>সুদ-আসল = 2360 টাকা, অতএব সুদ ($I_1$) = $2360 - 2000 = 360$ টাকা।</p>
+            <p>ব্যাংকের সুদের হার ($R_1$) = $\displaystyle\frac{100 \times 360}{2000 \times 3} = \frac{36000}{6000} = 6\%$</p>
+            <p><strong>পোস্ট অফিসের ক্ষেত্রে (পশুপতি ঘোষ):</strong></p>
+            <p>সুদ-আসল = 2480 টাকা, অতএব সুদ ($I_2$) = $2480 - 2000 = 480$ টাকা।</p>
+            <p>পোস্ট অফিসের সুদের হার ($R_2$) = $\displaystyle\frac{100 \times 480}{2000 \times 3} = \frac{48000}{6000} = 8\%$</p>
+            <p>উভয় সুদের হারের অনুপাত = $R_1 : R_2 = 6 : 8 = 3 : 4$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাংক ও পোস্ট অফিসের সুদের হারের অনুপাত 3:4।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. একটি তাঁত সমবায় সমিতি যন্ত্রচালিত তাঁত ক্রয় করার সময় 15000 টাকা ধার করে। 5 বছর পর সেই ধার শোধ করতে সমিতিকে 22125 টাকা দিতে হলো। ব্যাংকের বার্ষিক শতকরা সরল সুদের হার নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে আসল ($P$) = 15000 টাকা।</p>
+            <p>সুদ-আসল ($A$) = 22125 টাকা।</p>
+            <p>মোট সুদ ($I$) = $22125 - 15000 = 7125$ টাকা।</p>
+            <p>সময় ($T$) = 5 বছর।</p>
+            <p>সুদের হার ($R$) = $\displaystyle\frac{100 \times I}{P \times T}$</p>
+            \[
+\begin{array}{l}
+R = \frac{100 \times 7125}{15000 \times 5} \\
+= \frac{712500}{75000} \\
+= \frac{7125}{750} \\
+= 9.5 \text{ বা } 9\frac{1}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাংকের বার্ষিক সরল সুদের হার $9.5\%$ বা $9\frac{1}{2}\%$।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. আসলামচাচা কর্মক্ষেত্র থেকে অবসর নেওয়ার সময় 1,00,000 টাকা পেলেন। ওই টাকার কিছুটা ব্যাংকে ও বাকিটা পোস্ট অফিসে জমা রাখেন এবং প্রতি বছর সুদ বাবদ মোট 5400 টাকা পান। ব্যাংকের ও পোস্ট অফিসের বার্ষিক সরল সুদের হার যদি যথাক্রমে 5% ও 6% হয়, তবে তিনি কোথায় কত টাকা জমা রেখেছিলেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তিনি ব্যাংকে জমা রেখেছিলেন $x$ টাকা।</p>
+            <p>তাহলে, পোস্ট অফিসে জমা রেখেছিলেন $(100000 - x)$ টাকা।</p>
+            <p>সময় ($T$) = 1 বছর।</p>
+            <p>ব্যাংকের সুদ ($I_1$) = $\displaystyle\frac{x \times 5 \times 1}{100} = \frac{5x}{100}$ টাকা।</p>
+            <p>পোস্ট অফিসের সুদ ($I_2$) = $\displaystyle\frac{(100000 - x) \times 6 \times 1}{100} = \frac{600000 - 6x}{100}$ টাকা।</p>
+            <p>শর্তানুসারে, মোট সুদ 5400 টাকা:</p>
+            \[
+\begin{array}{l}
+\frac{5x}{100} + \frac{600000 - 6x}{100} = 5400 \\
+\frac{5x + 600000 - 6x}{100} = 5400 \\
+600000 - x = 540000 \\
+x = 600000 - 540000 \\
+x = 60000
+\end{array}
+\]
+            <p>অতএব, ব্যাংকে জমা রেখেছিলেন 60,000 টাকা।</p>
+            <p>পোস্ট অফিসে জমা রেখেছিলেন $(100000 - 60000) = 40,000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি ব্যাংকে 60,000 টাকা এবং পোস্ট অফিসে 40,000 টাকা জমা রেখেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. রেখাদিদি তার সঞ্চিত অর্থের 10000 টাকা দুটি আলাদা ব্যাংকে ভাগ করে একই সময়ে জমা দিলেন। একটি ব্যাংকের বার্ষিক সরল সুদের হার 6% এবং অন্য ব্যাংকটির বার্ষিক সরল সুদের হার 7%; 2 বছর পর তিনি যদি সুদ বাবদ মোট 1280 টাকা পান, তাহলে তিনি কোন ব্যাংকে কত টাকা জমা দিয়েছিলেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তিনি প্রথম ব্যাংকে $x$ টাকা জমা দিয়েছিলেন।</p>
+            <p>তাহলে, দ্বিতীয় ব্যাংকে জমা দিয়েছিলেন $(10000 - x)$ টাকা।</p>
+            <p>সময় ($T$) = 2 বছর।</p>
+            <p>প্রথম ব্যাংকের সুদ = $\displaystyle\frac{x \times 6 \times 2}{100} = \frac{12x}{100}$ টাকা।</p>
+            <p>দ্বিতীয় ব্যাংকের সুদ = $\displaystyle\frac{(10000 - x) \times 7 \times 2}{100} = \frac{140000 - 14x}{100}$ টাকা।</p>
+            <p>শর্তানুসারে, মোট সুদ 1280 টাকা:</p>
+            \[
+\begin{array}{l}
+\frac{12x}{100} + \frac{140000 - 14x}{100} = 1280 \\
+\frac{12x + 140000 - 14x}{100} = 1280 \\
+140000 - 2x = 128000 \\
+2x = 140000 - 128000 \\
+2x = 12000 \\
+x = 6000
+\end{array}
+\]
+            <p>প্রথম ব্যাংকে জমা দিয়েছিলেন 6000 টাকা।</p>
+            <p>দ্বিতীয় ব্যাংকে জমা দিয়েছিলেন $(10000 - 6000) = 4000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি 6% সুদের ব্যাংকে 6000 টাকা এবং 7% সুদের ব্যাংকে 4000 টাকা রেখেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="solution-card">
+        <h4 class="question-title">18. কোনো ব্যাংক বার্ষিক 5% হারে সরল সুদ দেয়। ওই ব্যাংকে দীপু্বাবু বছরের প্রথমে 15000 টাকা জমা দেওয়ার 3 মাস পরে 3000 টাকা তুলে নিলেন এবং টাকা তুলে নেওয়ার 3 মাস পরে আবার তিনি 8000 টাকা জমা দিলেন। ওই বছরের শেষে দীপু্বাবু সুদে-আসলে কত টাকা পাবেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সুদের হার ($R$) = 5%। আমরা হিসাবটি তিনটি পর্বে ভাগ করতে পারি:</p>
+            
+            <p><strong>১ম পর্ব (প্রথম 3 মাস):</strong></p>
+            <p>আসল = 15000 টাকা, সময় = $\displaystyle\frac{3}{12} = \frac{1}{4}$ বছর।</p>
+            <p>সুদ ($I_1$) = $\displaystyle\frac{15000 \times 5 \times 1}{100 \times 4} = \frac{750}{4} = 187.5$ টাকা।</p>
+            
+            <p><strong>২য় পর্ব (পরবর্তী 3 মাস):</strong></p>
+            <p>তিনি 3000 টাকা তুলে নেওয়ায় আসল দাঁড়াল = $(15000 - 3000) = 12000$ টাকা।</p>
+            <p>সময় = $\displaystyle\frac{3}{12} = \frac{1}{4}$ বছর।</p>
+            <p>সুদ ($I_2$) = $\displaystyle\frac{12000 \times 5 \times 1}{100 \times 4} = \frac{600}{4} = 150$ টাকা।</p>
+            
+            <p><strong>৩য় পর্ব (বছরের বাকি 6 মাস):</strong></p>
+            <p>তিনি আবার 8000 টাকা জমা দেওয়ায় আসল দাঁড়াল = $(12000 + 8000) = 20000$ টাকা।</p>
+            <p>সময় = $\displaystyle\frac{6}{12} = \frac{1}{2}$ বছর।</p>
+            <p>সুদ ($I_3$) = $\displaystyle\frac{20000 \times 5 \times 1}{100 \times 2} = \frac{1000}{2} = 500$ টাকা।</p>
+            
+            <p>১ বছরে মোট সুদ = $187.5 + 150 + 500 = 837.5$ টাকা।</p>
+            <p>বছর শেষে তাঁর ব্যাংকে আসল রয়েছে 20000 টাকা।</p>
+            <p>সুদে-আসলে তিনি পাবেন = $20000 + 837.5 = 20837.5$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বছরের শেষে তিনি সুদে-আসলে 20,837.5 টাকা পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="solution-card">
+        <h4 class="question-title">19. রহমতচাচা একটি বাড়ি তৈরি করার জন্য বার্ষিক 12% সরল সুদের হারে 240000 টাকা ব্যাংক থেকে ধার নেন। ধার নেওয়ার এক বছর পর তিনি বাড়িটি প্রতি মাসে 5200 টাকায় ভাড়া দেন। ধার নেওয়ার কত বছর পরে তিনি বাড়িভাড়ার আয় থেকে ব্যাংকের টাকা সুদসহ শোধ করবেন তা হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তিনি ধার নেওয়ার $t$ বছর পর টাকা শোধ করবেন।</p>
+            <p>আসল ($P$) = 240000 টাকা, সুদের হার ($R$) = 12%।</p>
+            <p>$t$ বছরে মোট সুদ = $\displaystyle\frac{240000 \times 12 \times t}{100} = 28800t$ টাকা।</p>
+            <p>তাকে মোট শোধ করতে হবে (আসল + সুদ) = $(240000 + 28800t)$ টাকা।</p>
+            
+            <p>তিনি ধার নেওয়ার 1 বছর পর থেকে বাড়ি ভাড়া দেওয়া শুরু করেন। তাই তিনি মোট ভাড়া পেয়েছেন $(t - 1)$ বছর ধরে।</p>
+            <p>1 বছরে (12 মাস) বাড়িভাড়া পান = $5200 \times 12 = 62400$ টাকা।</p>
+            <p>$(t - 1)$ বছরে মোট বাড়িভাড়ার আয় = $62400(t - 1)$ টাকা।</p>
+            
+            <p>শর্তানুসারে, বাড়িভাড়ার আয় দিয়ে তিনি ব্যাংকের টাকা শোধ করবেন:</p>
+            \[
+\begin{array}{l}
+62400(t - 1) = 240000 + 28800t \\
+62400t - 62400 = 240000 + 28800t \\
+62400t - 28800t = 240000 + 62400 \\
+33600t = 302400 \\
+t = \frac{302400}{33600} \\
+t = 9
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ধার নেওয়ার 9 বছর পর তিনি টাকা শোধ করবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="solution-card">
+        <h4 class="question-title">20. রথীনবাবু তাঁর দুই মেয়ের প্রত্যেকের জন্য ব্যাংকে এমনভাবে টাকা জমা রাখেন যাতে প্রত্যেক মেয়ের বয়স যখন 18 বছর হবে তখন প্রত্যেক মেয়ে 120000 টাকা করে পাবে। ব্যাংকের বার্ষিক সরল সুদের হার 10% এবং মেয়েদের বর্তমান বয়স যথাক্রমে 13 বছর এবং 8 বছর। তিনি প্রত্যেক মেয়ের জন্য ব্যাংকে কত টাকা জমা রেখেছিলেন হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ব্যাংকের সুদের হার ($R$) = 10%।</p>
+            
+            <p><strong>বড়ো মেয়ের ক্ষেত্রে:</strong></p>
+            <p>বর্তমান বয়স 13 বছর। 18 বছর হতে বাকি আছে = $(18 - 13) = 5$ বছর ($T_1$)।</p>
+            <p>ধরি, বড়ো মেয়ের জন্য জমা রেখেছিলেন $x$ টাকা।</p>
+            <p>সুদ-আসল = 120000 টাকা।</p>
+            \[
+\begin{array}{l}
+x + \frac{x \times 10 \times 5}{100} = 120000 \\
+x + \frac{50x}{100} = 120000 \\
+x + \frac{x}{2} = 120000 \\
+\frac{3x}{2} = 120000 \\
+x = \frac{120000 \times 2}{3} = 80000
+\end{array}
+\]
+            <p>বড়ো মেয়ের জন্য জমা রেখেছিলেন 80,000 টাকা।</p>
+
+            <p><strong>ছোটো মেয়ের ক্ষেত্রে:</strong></p>
+            <p>বর্তমান বয়স 8 বছর। 18 বছর হতে বাকি আছে = $(18 - 8) = 10$ বছর ($T_2$)।</p>
+            <p>ধরি, ছোটো মেয়ের জন্য জমা রেখেছিলেন $y$ টাকা।</p>
+            <p>সুদ-আসল = 120000 টাকা।</p>
+            \[
+\begin{array}{l}
+y + \frac{y \times 10 \times 10}{100} = 120000 \\
+y + \frac{100y}{100} = 120000 \\
+y + y = 120000 \\
+2y = 120000 \\
+y = 60000
+\end{array}
+\]
+            <p>ছোটো মেয়ের জন্য জমা রেখেছিলেন 60,000 টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি বড়ো মেয়ের জন্য 80,000 টাকা এবং ছোটো মেয়ের জন্য 60,000 টাকা জমা রেখেছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="solution-card">
+        <h4 class="question-title">21. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) বার্ষিক r% হার সরল সুদে p টাকার t বছরের সুদ I টাকা হলে,</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $I = \displaystyle\frac{prt}{100} \implies 100 \times I = prt \implies prt = 100I$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $prt = 100 \times I$</div>
+        </div>
+
+        <span class="sub-question">(ii) কোনো মূলধন একটি নির্দিষ্ট সরল সুদের হারে 20 বছরে দ্বিগুণ হয়। একই সরল সুদের হারে ওই মূলধন তিনগুণ হবে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>20 বছরে দ্বিগুণ হয়, অর্থাৎ সুদ = আসলের সমান ($I = p$)।</p>
+            <p>সুদের হার ($r$) = $\displaystyle\frac{100 \times p}{p \times 20} = 5\%$</p>
+            <p>তিনগুণ হতে হলে সুদ হতে হবে আসলের দ্বিগুণ ($I = 2p$)।</p>
+            <p>সময় ($t$) = $\displaystyle\frac{100 \times 2p}{p \times 5} = \frac{200}{5} = 40$ বছর।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 40 বছরে</div>
+        </div>
+
+        <span class="sub-question">(iii) কোনো মূলধন 10 বছরে দ্বিগুণ হলে, বার্ষিক সরল সুদের হার</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দ্বিগুণ হওয়ার অর্থ সুদ ($I$) = আসল ($p$)।</p>
+            <p>সুদের হার ($r$) = $\displaystyle\frac{100 \times p}{p \times 10} = 10\%$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 10%</div>
+        </div>
+
+        <span class="sub-question">(iv) x% বার্ষিক সরল সুদের হারে কোনো মূলধনের x বছরে সুদ x টাকা হলে, মূলধনের পরিমাণ</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মূলধন ($P$) = $\displaystyle\frac{100 \times I}{r \times t} = \frac{100 \times x}{x \times x} = \frac{100}{x}$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $\displaystyle\frac{100}{x}$ টাকা</div>
+        </div>
+
+        <span class="sub-question">(v) বার্ষিক r% সরল সুদের হারে কোনো মূলধনের n বছরে মোট সুদ $\displaystyle\frac{pnr}{25}$ টাকা হলে, মূলধনের পরিমাণ</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মূলধন = $\displaystyle\frac{100 \times I}{r \times t} = \frac{100 \times \left(\frac{pnr}{25}\right)}{r \times n} = \frac{4pnr}{nr} = 4p$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $4p$ টাকা</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) যে ব্যক্তি টাকা ধার করেন তাঁকে অধমর্ণ বলে।</span>
+        <div class="solution-box">
+            <p>ঋণদাতা বা যিনি টাকা দেন তাঁকে 'উত্তমর্ণ' বলে এবং যিনি ঋণ নেন বা ধার করেন তাঁকে 'অধমর্ণ' বলে।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) আসল ও শতকরা বার্ষিক সরল সুদের হার একই থাকলে মোট সুদ সময়ের সঙ্গে ব্যস্ত সমানুপাতে থাকে।</span>
+        <div class="solution-box">
+            <p>আমরা জানি $I \propto t$ (যখন $P$ ও $r$ ধ্রুবক)। অর্থাৎ মোট সুদ সময়ের সঙ্গে সরল সমানুপাতে থাকে, ব্যস্ত সমানুপাতে নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) যে ব্যক্তি টাকা ধার দেন তাঁকে _________ বলে।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> উত্তমর্ণ (Creditor)</p>
+        </div>
+
+        <span class="sub-question">(ii) বার্ষিক $\displaystyle\frac{r}{2}\%$ সরল সুদের হারে $2p$ টাকার t বছরের সুদ-আসল (2p + _________) টাকা।</span>
+        <div class="solution-box">
+            <p>সুদ = $\displaystyle\frac{2p \times \frac{r}{2} \times t}{100} = \frac{prt}{100}$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\displaystyle\frac{prt}{100}$</p>
+        </div>
+
+        <span class="sub-question">(iii) 1 বছরে আসল ও সুদ-আসলের অনুপাত 8:9 হলে বার্ষিক সরল সুদের হার _________।</span>
+        <div class="solution-box">
+            <p>ধরি, আসল = $8x$, সুদ-আসল = $9x$। অতএব সুদ = $9x - 8x = x$।</p>
+            <p>সুদের হার = $\displaystyle\frac{100 \times x}{8x \times 1} = \frac{100}{8} = 12.5\% = 12\frac{1}{2}\%$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $12\frac{1}{2}\%$</p>
+        </div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="solution-card">
+        <h4 class="question-title">22. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) কোনো মূলধন বার্ষিক $6\frac{1}{4}\%$ সরল সুদের হারে কত বছরে দ্বিগুণ হবে তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দ্বিগুণ হওয়ার অর্থ সুদ ($I$) = আসল ($P$)।</p>
+            <p>সুদের হার ($r$) = $6\frac{1}{4}\% = \displaystyle\frac{25}{4}\%$</p>
+            <p>সময় ($t$) = $\displaystyle\frac{100 \times P}{P \times \frac{25}{4}} = 100 \times \frac{4}{25} = 4 \times 4 = 16$ বছর।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 16 বছরে দ্বিগুণ হবে।</div>
+        </div>
+
+        <span class="sub-question">(ii) বার্ষিক সরল সুদের হার 4% থেকে $3\frac{3}{4}\%$ হওয়ায় অমলবাবুর বার্ষিক আয় 60 টাকা কম হয়। অমলবাবুর মূলধন নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সুদের হার কমেছে = $4\% - 3\frac{3}{4}\% = 4\% - \displaystyle\frac{15}{4}\% = \frac{16 - 15}{4}\% = \frac{1}{4}\%$</p>
+            <p>আয় (বা সুদ) কমেছে ($I$) = 60 টাকা। সময় ($t$) = 1 বছর।</p>
+            <p>মূলধন ($P$) = $\displaystyle\frac{100 \times I}{r \times t} = \frac{100 \times 60}{\frac{1}{4} \times 1} = 6000 \times 4 = 24000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অমলবাবুর মূলধন 24,000 টাকা।</div>
+        </div>
+
+        <span class="sub-question">(iii) শতকরা বার্ষিক সরল সুদের হার কত হলে কোনো টাকার 4 বছরের সুদ আসলের $\displaystyle\frac{8}{25}$ অংশ হবে তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, আসল ($P$) = $x$ টাকা।</p>
+            <p>শর্তানুসারে, সুদ ($I$) = $\displaystyle\frac{8x}{25}$ টাকা। সময় ($t$) = 4 বছর।</p>
+            <p>সুদের হার ($r$) = $\displaystyle\frac{100 \times \frac{8x}{25}}{x \times 4} = \frac{100 \times 8x}{25 \times 4 \times x} = \frac{800}{100} = 8\%$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক সরল সুদের হার 8% হবে।</div>
+        </div>
+
+        <span class="sub-question">(iv) শতকরা বার্ষিক সরল সুদের হার কত হলে কোনো টাকার 10 বছরের সুদ সুদ-আসলের $\displaystyle\frac{2}{5}$ অংশ হবে তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, সুদ-আসল ($A$) = $5x$ টাকা।</p>
+            <p>তাহলে, সুদ ($I$) = $5x$-এর $\displaystyle\frac{2}{5}$ অংশ = $2x$ টাকা।</p>
+            <p>অতএব, আসল ($P$) = সুদ-আসল - সুদ = $5x - 2x = 3x$ টাকা।</p>
+            <p>সময় ($t$) = 10 বছর।</p>
+            <p>সুদের হার ($r$) = $\displaystyle\frac{100 \times I}{P \times t} = \frac{100 \times 2x}{3x \times 10} = \frac{200}{30} = \frac{20}{3} = 6\frac{2}{3}\%$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বার্ষিক সরল সুদের হার $6\frac{2}{3}\%$ হবে।</div>
+        </div>
+
+        <span class="sub-question">(v) বার্ষিক 5% সরল সুদের হারে কত টাকার মাসিক সুদ 1 টাকা তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে সুদের হার ($r$) = 5%</p>
+            <p>সময় ($t$) = 1 মাস = $\displaystyle\frac{1}{12}$ বছর</p>
+            <p>মোট সুদ ($I$) = 1 টাকা</p>
+            <p>আসল ($P$) = $\displaystyle\frac{100 \times I}{r \times t} = \frac{100 \times 1}{5 \times \frac{1}{12}} = \frac{100 \times 12}{5} = 20 \times 12 = 240$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 240 টাকার মাসিক সুদ 1 টাকা হবে।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

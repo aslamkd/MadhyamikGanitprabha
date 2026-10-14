@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-1.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);& .sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}& .solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}& .solution-box p:last-child{margin-bottom:0px}& .final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}& mjx-container[jax="CHTML"][display="true"]{overflow:auto hidden;max-width:100%;padding:0.5em 0px;margin:1em 0px !important}& mjx-container[jax="CHTML"][display="true"]::-webkit-scrollbar{height:4px}& mjx-container[jax="CHTML"][display="true"]::-webkit-scrollbar-thumb{background-color:rgba(203,213,225,0.5);border-radius:4px}& mjx-container[jax="CHTML"][display="true"]:hover::-webkit-scrollbar-thumb{background-color:rgba(148,163,184,0.8)}@media (max-width:768px){& section.chapters-section>.container{padding-left:4px !important;padding-right:4px !important;max-width:100% !important}& section.chapters-section .row{margin-left:0px !important;margin-right:0px !important}& section.chapters-section .col-lg-8,& section.chapters-section .col-lg-4{padding-left:0px !important;padding-right:0px !important}& .solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}& .solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}& .sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}& .question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}& .sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নীচের প্রতিক্ষেত্রে প্রদত্ত মানগুলি প্রদত্ত দ্বিঘাত সমীকরণের বীজ কিনা যাচাই করে লিখি:</h4>
+        
+        <span class="sub-question">(i) $x^2 + x + 1 = 0$; $1$ ও $-1$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত সমীকরণের বামপক্ষে $x = 1$ বসিয়ে পাই:</p>
+            <p>$$ 1^2 + 1 + 1 = 1 + 1 + 1 = 3 \neq 0 $$</p>
+            <p>আবার, বামপক্ষে $x = -1$ বসিয়ে পাই:</p>
+            <p>$$ (-1)^2 + (-1) + 1 = 1 - 1 + 1 = 1 \neq 0 $$</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: 1 ও -1 প্রদত্ত সমীকরণের বীজ নয়।</div>
+        </div>
+
+        <span class="sub-question">(ii) $8x^2 + 7x = 0$; $0$ ও $-2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণের বামপক্ষে $x = 0$ বসিয়ে পাই:</p>
+            <p>$$ 8(0)^2 + 7(0) = 0 + 0 = 0 $$</p>
+            <p>সুতরাং, 0 সমীকরণটির একটি বীজ।</p>
+            <p>আবার, বামপক্ষে $x = -2$ বসিয়ে পাই:</p>
+            <p>$$ 8(-2)^2 + 7(-2) = 8(4) - 14 = 32 - 14 = 18 \neq 0 $$</p>
+            <div class="final-answer"><i class="fas fa-info-circle me-1 text-primary"></i> উত্তর: 0 প্রদত্ত সমীকরণের বীজ কিন্তু -2 সমীকরণের বীজ নয়।</div>
+        </div>
+
+        <span class="sub-question">(iii) $\displaystyle x + \frac{1}{x} = \frac{13}{6}$; $\displaystyle\frac{5}{6}$ ও $\displaystyle\frac{4}{3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বামপক্ষে $\displaystyle x = \frac{5}{6}$ বসিয়ে পাই:</p>
+            <p>$$ \frac{5}{6} + \frac{1}{\frac{5}{6}} = \frac{5}{6} + \frac{6}{5} = \frac{25+36}{30} = \frac{61}{30} \neq \frac{13}{6} $$</p>
+            <p>বামপক্ষে $\displaystyle x = \frac{4}{3}$ বসিয়ে পাই:</p>
+            <p>$$ \frac{4}{3} + \frac{1}{\frac{4}{3}} = \frac{4}{3} + \frac{3}{4} = \frac{16+9}{12} = \frac{25}{12} \neq \frac{13}{6} $$</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: $\displaystyle\frac{5}{6}$ ও $\displaystyle\frac{4}{3}$ সমীকরণের বীজ নয়।</div>
+        </div>
+
+        <span class="sub-question">(iv) $x^2 - \sqrt{3}x - 6 = 0$; $-\sqrt{3}$ ও $2\sqrt{3}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বামপক্ষে $x = -\sqrt{3}$ বসিয়ে পাই:</p>
+            <p>$$ (-\sqrt{3})^2 - \sqrt{3}(-\sqrt{3}) - 6 = 3 + (\sqrt{3} \times \sqrt{3}) - 6 = 3 + 3 - 6 = 0 $$</p>
+            <p>বামপক্ষে $x = 2\sqrt{3}$ বসিয়ে পাই:</p>
+            <p>$$ (2\sqrt{3})^2 - \sqrt{3}(2\sqrt{3}) - 6 = (4 \times 3) - (2 \times 3) - 6 = 12 - 6 - 6 = 0 $$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $-\sqrt{3}$ এবং $2\sqrt{3}$ উভয়েই প্রদত্ত সমীকরণের বীজ।</div>
+        </div>
+    </div>
+    
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. বীজ নির্ণয় ও যাচাই:</h4>
+         
+         <span class="sub-question">(i) k-এর কোন মানের জন্য $7x^2 + kx - 3 = 0$ দ্বিঘাত সমীকরণের একটি বীজ $\displaystyle\frac{2}{3}$ হবে হিসাব করে লিখি।</span>
+         <div class="solution-box">
+              <span class="sol-badge">সমাধান</span>
+              <p>যেহেতু $\displaystyle x = \frac{2}{3}$ সমীকরণটির একটি বীজ, তাই এটি সমীকরণটিকে সিদ্ধ করবে।</p>
+              <p>সমীকরণে $\displaystyle x = \frac{2}{3}$ বসিয়ে পাই:</p>
+              \[
+\begin{array}{l}
+7\left(\frac{2}{3}\right)^2 + k\left(\frac{2}{3}\right) - 3 = 0 \\
+7\left(\frac{4}{9}\right) + \frac{2k}{3} - 3 = 0 \\
+\frac{28}{9} + \frac{2k}{3} - 3 = 0
+\end{array}
+\]
+              <p>ল.সা.গু. 9 করে পাই:</p>
+              \[
+\begin{array}{l}
+\frac{28 + 6k - 27}{9} = 0 \\
+1 + 6k = 0 \\
+6k = -1 \\
+k = -\frac{1}{6}
+\end{array}
+\]
+              <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k-এর নির্ণেয় মান $-\frac{1}{6}$</div>
+         </div>
+
+         <span class="sub-question">(ii) k-এর কোন মানের জন্য $x^2 + 3ax + k = 0$ দ্বিঘাত সমীকরণের একটি বীজ $-a$ হবে হিসাব করে লিখি।</span>
+         <div class="solution-box">
+              <span class="sol-badge">সমাধান</span>
+              <p>যেহেতু $x = -a$ সমীকরণটির একটি বীজ, তাই এটি সমীকরণটিকে সিদ্ধ করবে।</p>
+              <p>সমীকরণে $x = -a$ বসিয়ে পাই:</p>
+              \[
+\begin{array}{l}
+(-a)^2 + 3a(-a) + k = 0 \\
+a^2 - 3a^2 + k = 0 \\
+-2a^2 + k = 0 \\
+k = 2a^2
+\end{array}
+\]
+              <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k-এর নির্ণেয় মান $2a^2$</div>
+         </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. যদি $ax^2 + 7x + b = 0$ দ্বিঘাত সমীকরণের দুটি বীজ $\displaystyle\frac{2}{3}$ এবং $-3$ হয় তবে a ও b-এর মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+             <span class="sol-badge">সমাধান</span>
+             <p>যেহেতু $\displaystyle x = \frac{2}{3}$ একটি বীজ, সমীকরণে বসিয়ে পাই:</p>
+             \[
+\begin{array}{l}
+a\left(\frac{2}{3}\right)^2 + 7\left(\frac{2}{3}\right) + b = 0 \\
+\frac{4a}{9} + \frac{14}{3} + b = 0 \\
+\frac{4a + 42 + 9b}{9} = 0 \\
+4a + 9b + 42 = 0 \quad \text{------ (১ নং সমীকরণ)}
+\end{array}
+\]
+             <p>আবার, যেহেতু $x = -3$ অপর একটি বীজ, সমীকরণে বসিয়ে পাই:</p>
+             \[
+\begin{array}{l}
+a(-3)^2 + 7(-3) + b = 0 \\
+9a - 21 + b = 0 \\
+b = 21 - 9a \quad \text{------ (২ নং সমীকরণ)}
+\end{array}
+\]
+             <p>(২) নং থেকে b এর মান (১) নং সমীকরণে বসিয়ে পাই:</p>
+             \[
+\begin{array}{l}
+4a + 9(21 - 9a) + 42 = 0 \\
+4a + 189 - 81a + 42 = 0 \\
+-77a + 231 = 0 \\
+77a = 231 \\
+a = \frac{231}{77} = 3
+\end{array}
+\]
+             <p>এবার $a = 3$ মানটি (২) নং সমীকরণে বসিয়ে পাই:</p>
+             \[
+\begin{array}{l}
+b = 21 - 9(3) \\
+b = 21 - 27 = -6
+\end{array}
+\]
+             <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $a = 3$ এবং $b = -6$</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. সমাধান করি:</h4>
+        
+        <span class="sub-question">(i) $3y^2 - 20 = 160 - 2y^2$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+3y^2 + 2y^2 = 160 + 20 \\
+5y^2 = 180 \\
+y^2 = \frac{180}{5} = 36 \\
+y = \pm \sqrt{36} \\
+y = \pm 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $y = 6, -6$</div>
+        </div>
+        
+        <span class="sub-question">(ii) $(2x+1)^2 + (x+1)^2 = 6x + 47$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+(4x^2 + 4x + 1) + (x^2 + 2x + 1) = 6x + 47 \\
+5x^2 + 6x + 2 = 6x + 47 \\
+5x^2 + 6x - 6x = 47 - 2 \\
+5x^2 = 45 \\
+x^2 = 9 \\
+x = \pm 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 3, -3$</div>
+        </div>
+
+        <span class="sub-question">(iii) $(x-7)(x-9) = 195$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x^2 - 9x - 7x + 63 = 195 \\
+x^2 - 16x + 63 - 195 = 0 \\
+x^2 - 16x - 132 = 0 \\
+x^2 - (22 - 6)x - 132 = 0 \\
+x^2 - 22x + 6x - 132 = 0 \\
+x(x - 22) + 6(x - 22) = 0 \\
+(x - 22)(x + 6) = 0
+\end{array}
+\]
+            <p>হয় $x - 22 = 0 \implies x = 22$, অথবা $x + 6 = 0 \implies x = -6$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 22, -6$</div>
+        </div>
+
+        <span class="sub-question">(iv) $\displaystyle 3x - \frac{24}{x} = \frac{x}{3}, x \neq 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{3x^2 - 24}{x} = \frac{x}{3}
+\end{array}
+\]
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+3(3x^2 - 24) = x \cdot x \\
+9x^2 - 72 = x^2 \\
+9x^2 - x^2 = 72 \\
+8x^2 = 72 \\
+x^2 = \frac{72}{8} = 9 \\
+x = \pm 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 3, -3$</div>
+        </div>
+
+        <span class="sub-question">(v) $\displaystyle \frac{x}{3} + \frac{3}{x} = \frac{15}{x}, x \neq 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{x}{3} = \frac{15}{x} - \frac{3}{x} \\
+\frac{x}{3} = \frac{12}{x} \\
+x^2 = 36 \\
+x = \pm 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 6, -6$</div>
+        </div>
+
+        <span class="sub-question">(vi) $\displaystyle 10x - \frac{1}{x} = 3, x \neq 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{10x^2 - 1}{x} = 3 \\
+10x^2 - 1 = 3x \\
+10x^2 - 3x - 1 = 0 \\
+10x^2 - 5x + 2x - 1 = 0 \\
+5x(2x - 1) + 1(2x - 1) = 0 \\
+(2x - 1)(5x + 1) = 0
+\end{array}
+\]
+            <p>হয় $2x - 1 = 0 \implies x = \frac{1}{2}$, অথবা $5x + 1 = 0 \implies x = -\frac{1}{5}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $\displaystyle x = \frac{1}{2}, -\frac{1}{5}$</div>
+        </div>
+
+        <span class="sub-question">(vii) $\displaystyle \frac{2}{x^2} - \frac{5}{x} + 2 = 0, x \neq 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $\displaystyle\frac{1}{x} = a$, তাহলে সমীকরণটি হয়:</p>
+            \[
+\begin{array}{l}
+2a^2 - 5a + 2 = 0 \\
+2a^2 - 4a - a + 2 = 0 \\
+2a(a - 2) - 1(a - 2) = 0 \\
+(a - 2)(2a - 1) = 0
+\end{array}
+\]
+            <p>হয় $a = 2 \implies \frac{1}{x} = 2 \implies x = \frac{1}{2}$</p>
+            <p>অথবা $2a - 1 = 0 \implies a = \frac{1}{2} \implies \frac{1}{x} = \frac{1}{2} \implies x = 2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $\displaystyle x = 2, \frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(viii) $\displaystyle \frac{x-2}{x+2} + 6\left(\frac{x-2}{x-6}\right) = 1, x \neq -2, 6$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উভয় পদ থেকে $(x-2)$ কমন নিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+(x-2) \left[ \frac{1}{x+2} + \frac{6}{x-6} \right] = 1 \\
+(x-2) \left[ \frac{x - 6 + 6(x + 2)}{(x+2)(x-6)} \right] = 1 \\
+(x-2) \left[ \frac{x - 6 + 6x + 12}{x^2 - 4x - 12} \right] = 1 \\
+\frac{(x-2)(7x + 6)}{x^2 - 4x - 12} = 1 \\
+7x^2 + 6x - 14x - 12 = x^2 - 4x - 12 \\
+7x^2 - 8x - 12 = x^2 - 4x - 12 \\
+6x^2 - 4x = 0 \\
+2x(3x - 2) = 0
+\end{array}
+\]
+            <p>হয় $2x = 0 \implies x = 0$, অথবা $3x - 2 = 0 \implies x = \frac{2}{3}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $\displaystyle x = 0, \frac{2}{3}$</div>
+        </div>
+
+        <span class="sub-question">(ix) $\displaystyle \frac{1}{x-3} - \frac{1}{x+5} = \frac{1}{6}, x \neq 3, -5$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{(x+5) - (x-3)}{(x-3)(x+5)} = \frac{1}{6} \\
+\frac{x + 5 - x + 3}{x^2 + 2x - 15} = \frac{1}{6} \\
+\frac{8}{x^2 + 2x - 15} = \frac{1}{6} \\
+x^2 + 2x - 15 = 48 \\
+x^2 + 2x - 63 = 0 \\
+x^2 + 9x - 7x - 63 = 0 \\
+x(x + 9) - 7(x + 9) = 0 \\
+(x + 9)(x - 7) = 0
+\end{array}
+\]
+            <p>হয় $x = -9$, অথবা $x = 7$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 7, -9$</div>
+        </div>
+
+        <span class="sub-question">(x) $\displaystyle \frac{x}{x+1} + \frac{x+1}{x} = 2\frac{1}{12}, x \neq 0, -1$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $\displaystyle\frac{x}{x+1} = a$, তাহলে $\displaystyle\frac{x+1}{x} = \frac{1}{a}$</p>
+            <p>সমীকরণটি হয়:</p>
+            \[
+\begin{array}{l}
+a + \frac{1}{a} = \frac{25}{12} \\
+\frac{a^2 + 1}{a} = \frac{25}{12} \\
+12a^2 + 12 = 25a \\
+12a^2 - 25a + 12 = 0 \\
+12a^2 - 16a - 9a + 12 = 0 \\
+4a(3a - 4) - 3(3a - 4) = 0 \\
+(3a - 4)(4a - 3) = 0
+\end{array}
+\]
+            <p><b>ক্ষেত্র ১:</b> $3a - 4 = 0 \implies a = \frac{4}{3} \implies \frac{x}{x+1} = \frac{4}{3} \implies 3x = 4x + 4 \implies x = -4$</p>
+            <p><b>ক্ষেত্র ২:</b> $4a - 3 = 0 \implies a = \frac{3}{4} \implies \frac{x}{x+1} = \frac{3}{4} \implies 4x = 3x + 3 \implies x = 3$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 3, -4$</div>
+        </div>
+
+        <span class="sub-question">(xi) $\displaystyle \frac{ax+b}{a+bx} = \frac{cx+d}{c+dx} [a \neq b, c \neq d], x \neq -\frac{a}{b}, -\frac{c}{d}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+(ax+b)(c+dx) = (cx+d)(a+bx) \\
+acx + adx^2 + bc + bdx = acx + bcx^2 + ad + bdx
+\end{array}
+\]
+            <p>উভয়দিক থেকে $acx$ এবং $bdx$ বাতিল করে পাই:</p>
+            \[
+\begin{array}{l}
+adx^2 + bc = bcx^2 + ad \\
+adx^2 - bcx^2 = ad - bc \\
+x^2(ad - bc) = (ad - bc)
+\end{array}
+\]
+            <p>যেহেতু $a \neq b$ এবং $c \neq d$, $ad - bc \neq 0$ ধরে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 = 1 \\
+x = \pm 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 1, -1$</div>
+        </div>
+
+        <span class="sub-question">(xii) $\displaystyle (2x+1) + \frac{3}{2x+1} = 4, x \neq -\frac{1}{2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $2x+1 = a$, সমীকরণটি হয়:</p>
+            \[
+\begin{array}{l}
+a + \frac{3}{a} = 4 \\
+\frac{a^2 + 3}{a} = 4 \\
+a^2 - 4a + 3 = 0 \\
+a^2 - 3a - a + 3 = 0 \\
+a(a - 3) - 1(a - 3) = 0 \\
+(a - 3)(a - 1) = 0
+\end{array}
+\]
+            <p>হয় $a = 3 \implies 2x+1 = 3 \implies 2x = 2 \implies x = 1$</p>
+            <p>অথবা $a = 1 \implies 2x+1 = 1 \implies 2x = 0 \implies x = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 1, 0$</div>
+        </div>
+
+        <span class="sub-question">(xiii) $\displaystyle \frac{x+1}{2} + \frac{2}{x+1} = \frac{x+1}{3} + \frac{3}{x+1} - \frac{5}{6}, x \neq -1$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একই রকম পদগুলো একদিকে সাজিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{x+1}{2} - \frac{x+1}{3} = \frac{3}{x+1} - \frac{2}{x+1} - \frac{5}{6} \\
+(x+1)\left(\frac{1}{2} - \frac{1}{3}\right) = \frac{1}{x+1} - \frac{5}{6} \\
+(x+1)\left(\frac{3 - 2}{6}\right) = \frac{1}{x+1} - \frac{5}{6} \\
+\frac{x+1}{6} + \frac{5}{6} = \frac{1}{x+1} \\
+\frac{x+1+5}{6} = \frac{1}{x+1} \\
+\frac{x+6}{6} = \frac{1}{x+1} \\
+(x+6)(x+1) = 6 \\
+x^2 + 7x + 6 = 6 \\
+x^2 + 7x = 0 \\
+x(x + 7) = 0
+\end{array}
+\]
+            <p>হয় $x = 0$, অথবা $x + 7 = 0 \implies x = -7$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 0, -7$</div>
+        </div>
+
+        <span class="sub-question">(xiv) $\displaystyle \frac{12x+17}{3x+1} - \frac{2x+15}{x+7} = 3\frac{1}{5}, x \neq -\frac{1}{3}, -7$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{(12x+17)(x+7) - (2x+15)(3x+1)}{(3x+1)(x+7)} = \frac{16}{5}
+\end{array}
+\]
+            <p>লব গুণ করে পাই: $(12x^2 + 84x + 17x + 119) - (6x^2 + 2x + 45x + 15)$</p>
+            <p>$= 12x^2 + 101x + 119 - 6x^2 - 47x - 15 = 6x^2 + 54x + 104$</p>
+            <p>হর গুণ করে পাই: $3x^2 + 21x + x + 7 = 3x^2 + 22x + 7$</p>
+            <p>তাহলে সমীকরণটি দাঁড়ায়:</p>
+            \[
+\begin{array}{l}
+\frac{6x^2 + 54x + 104}{3x^2 + 22x + 7} = \frac{16}{5}
+\end{array}
+\]
+            <p>লবকে ২ দিয়ে ভাগ করে ছোট করি:</p>
+            \[
+\begin{array}{l}
+\frac{2(3x^2 + 27x + 52)}{3x^2 + 22x + 7} = \frac{16}{5} \\
+\frac{3x^2 + 27x + 52}{3x^2 + 22x + 7} = \frac{8}{5}
+\end{array}
+\]
+            <p>বজ্রগুণন করে পাই:</p>
+            \[
+\begin{array}{l}
+5(3x^2 + 27x + 52) = 8(3x^2 + 22x + 7) \\
+15x^2 + 135x + 260 = 24x^2 + 176x + 56 \\
+24x^2 - 15x^2 + 176x - 135x + 56 - 260 = 0 \\
+9x^2 + 41x - 204 = 0
+\end{array}
+\]
+            <p>শ্রীধর আচার্যের সূত্র প্রয়োগ করে:</p>
+            \[
+\begin{array}{l}
+x = \frac{-41 \pm \sqrt{41^2 - 4 \cdot 9 \cdot (-204)}}{2 \cdot 9} \\
+= \frac{-41 \pm \sqrt{1681 + 7344}}{18} \\
+= \frac{-41 \pm \sqrt{9025}}{18} \\
+= \frac{-41 \pm 95}{18}
+\end{array}
+\]
+            <p>হয় $\displaystyle x = \frac{54}{18} = 3$, অথবা $\displaystyle x = \frac{-136}{18} = -\frac{68}{9} = -7\frac{5}{9}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $\displaystyle x = 3, -7\frac{5}{9}$</div>
+        </div>
+
+        <span class="sub-question">(xv) $\displaystyle \frac{x+3}{x-3} + 6\left(\frac{x-3}{x+3}\right) = 5, x \neq 3, -3$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $\displaystyle\frac{x+3}{x-3} = a$, তাহলে সমীকরণটি হয়:</p>
+            \[
+\begin{array}{l}
+a + \frac{6}{a} = 5 \\
+a^2 - 5a + 6 = 0 \\
+(a - 2)(a - 3) = 0
+\end{array}
+\]
+            <p>হয় $a = 2 \implies \frac{x+3}{x-3} = 2 \implies x+3 = 2x-6 \implies x = 9$</p>
+            <p>অথবা $a = 3 \implies \frac{x+3}{x-3} = 3 \implies x+3 = 3x-9 \implies 2x = 12 \implies x = 6$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 9, 6$</div>
+        </div>
+
+        <span class="sub-question">(xvi) $\displaystyle \frac{1}{a+b+x} = \frac{1}{a} + \frac{1}{b} + \frac{1}{x}, x \neq 0, -(a+b)$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{1}{a+b+x} - \frac{1}{x} = \frac{1}{a} + \frac{1}{b} \\
+\frac{x - (a+b+x)}{x(a+b+x)} = \frac{b+a}{ab} \\
+\frac{x - a - b - x}{ax + bx + x^2} = \frac{a+b}{ab} \\
+\frac{-(a+b)}{x^2 + ax + bx} = \frac{a+b}{ab}
+\end{array}
+\]
+            <p>উভয়পক্ষকে $(a+b)$ দিয়ে ভাগ করে পাই (ধরে নিচ্ছি $a+b \neq 0$):</p>
+            \[
+\begin{array}{l}
+\frac{-1}{x^2 + ax + bx} = \frac{1}{ab} \\
+x^2 + ax + bx = -ab \\
+x^2 + ax + bx + ab = 0 \\
+x(x + a) + b(x + a) = 0 \\
+(x + a)(x + b) = 0
+\end{array}
+\]
+            <p>হয় $x + a = 0 \implies x = -a$, অথবা $x + b = 0 \implies x = -b$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = -a, -b$</div>
+        </div>
+
+        <span class="sub-question">(xvii) $\displaystyle \left(\frac{x+a}{x-a}\right)^2 - 5\left(\frac{x+a}{x-a}\right) + 6 = 0, x \neq a$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $\displaystyle\frac{x+a}{x-a} = p$, তাহলে সমীকরণটি হয়:</p>
+            \[
+\begin{array}{l}
+p^2 - 5p + 6 = 0 \\
+(p - 2)(p - 3) = 0
+\end{array}
+\]
+            <p>হয় $p = 2 \implies \frac{x+a}{x-a} = 2 \implies x+a = 2x-2a \implies x = 3a$</p>
+            <p>অথবা $p = 3 \implies \frac{x+a}{x-a} = 3 \implies x+a = 3x-3a \implies 2x = 4a \implies x = 2a$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 3a, 2a$</div>
+        </div>
+
+        <span class="sub-question">(xviii) $\displaystyle \frac{1}{x} - \frac{1}{x+b} = \frac{1}{a} - \frac{1}{a+b}, x \neq 0, -b$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{x+b-x}{x(x+b)} = \frac{a+b-a}{a(a+b)} \\
+\frac{b}{x^2+bx} = \frac{b}{a^2+ab}
+\end{array}
+\]
+            <p>উভয়পক্ষকে $b$ দিয়ে ভাগ করে ($b \neq 0$ ধরে):</p>
+            \[
+\begin{array}{l}
+x^2 + bx = a^2 + ab \\
+x^2 - a^2 + bx - ab = 0 \\
+(x-a)(x+a) + b(x-a) = 0 \\
+(x-a)(x+a+b) = 0
+\end{array}
+\]
+            <p>হয় $x - a = 0 \implies x = a$, অথবা $x + a + b = 0 \implies x = -(a+b)$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = a, -(a+b)$</div>
+        </div>
+
+        <span class="sub-question">(xix) $\displaystyle \frac{1}{(x-1)(x-2)} + \frac{1}{(x-2)(x-3)} + \frac{1}{(x-3)(x-4)} = \frac{1}{6}, x \neq 1,2,3,4$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পদগুলিকে ভেঙে লিখলে পাই (Telescoping Series):</p>
+            \[
+\begin{array}{l}
+\left(\frac{1}{x-2} - \frac{1}{x-1}\right) + \left(\frac{1}{x-3} - \frac{1}{x-2}\right) + \left(\frac{1}{x-4} - \frac{1}{x-3}\right) = \frac{1}{6}
+\end{array}
+\]
+            <p>মাঝের পদগুলো কেটে যায়, ফলে থাকে:</p>
+            \[
+\begin{array}{l}
+\frac{1}{x-4} - \frac{1}{x-1} = \frac{1}{6} \\
+\frac{x-1 - (x-4)}{(x-4)(x-1)} = \frac{1}{6} \\
+\frac{3}{x^2 - 5x + 4} = \frac{1}{6} \\
+x^2 - 5x + 4 = 18 \\
+x^2 - 5x - 14 = 0 \\
+(x - 7)(x + 2) = 0
+\end{array}
+\]
+            <p>হয় $x - 7 = 0 \implies x = 7$, অথবা $x + 2 = 0 \implies x = -2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = 7, -2$</div>
+        </div>
+
+        <span class="sub-question">(xx) $\displaystyle \frac{a}{x-a} + \frac{b}{x-b} = \frac{2c}{x-c}, x \neq a, b, c$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ডানপক্ষকে ভেঙে দুই দিকে ভাগ করে দিই:</p>
+            \[
+\begin{array}{l}
+\left(\frac{a}{x-a} - \frac{c}{x-c}\right) + \left(\frac{b}{x-b} - \frac{c}{x-c}\right) = 0 \\
+\frac{ax-ac-cx+ac}{(x-a)(x-c)} + \frac{bx-bc-cx+bc}{(x-b)(x-c)} = 0 \\
+\frac{x(a-c)}{(x-a)(x-c)} + \frac{x(b-c)}{(x-b)(x-c)} = 0 \\
+x \cdot \left[ \frac{a-c}{(x-a)(x-c)} + \frac{b-c}{(x-b)(x-c)} \right] = 0
+\end{array}
+\]
+            <p>হয় $x = 0$</p>
+            <p>অথবা, বন্ধনীর ভেতরের অংশ শূন্য: $\displaystyle\frac{a-c}{(x-a)(x-c)} + \frac{b-c}{(x-b)(x-c)} = 0$</p>
+            <p>উভয়পক্ষকে $(x-c)$ দিয়ে গুণ করে পাই (যেহেতু $x \neq c$):</p>
+            \[
+\begin{array}{l}
+\frac{a-c}{x-a} + \frac{b-c}{x-b} = 0 \\
+\frac{a-c}{x-a} = \frac{c-b}{x-b} \\
+(a-c)(x-b) = (c-b)(x-a) \\
+ax - ab - cx + bc = cx - ac - bx + ab \\
+ax + bx - 2cx = 2ab - ac - bc \\
+x(a+b-2c) = 2ab - ac - bc \\
+x = \frac{2ab-ac-bc}{a+b-2c}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $\displaystyle x = 0, \frac{2ab-ac-bc}{a+b-2c}$</div>
+        </div>
+
+        <span class="sub-question">(xxi) $x^2 - (\sqrt{3} + 2)x + 2\sqrt{3} = 0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+x^2 - \sqrt{3}x - 2x + 2\sqrt{3} = 0
+\end{array}
+\]
+            <p>প্রথম দুটি পদ থেকে $x$ এবং শেষের দুটি পদ থেকে $-2$ কমন নিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+x(x - \sqrt{3}) - 2(x - \sqrt{3}) = 0 \\
+(x - \sqrt{3})(x - 2) = 0
+\end{array}
+\]
+            <p>হয় $x - \sqrt{3} = 0 \implies x = \sqrt{3}$, অথবা $x - 2 = 0 \implies x = 2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> নির্ণেয় সমাধান: $x = \sqrt{3}, 2$</div>
+        </div>
+
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

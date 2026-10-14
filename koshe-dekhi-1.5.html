@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-1.5</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নীচের দ্বিঘাত সমীকরণের বীজদ্বয়ের প্রকৃতি লিখি—</h4>
+        <p class="mb-3 text-muted"><i class="fas fa-lightbulb text-warning me-2"></i><strong>নিয়ম:</strong> $ax^2 + bx + c = 0$ সমীকরণের নিরূপক $\Delta = b^2 - 4ac$।<br>
+        যদি $\Delta &gt; 0$ হয়, বীজদ্বয় বাস্তব ও অসমান। যদি $\Delta = 0$ হয়, বাস্তব ও সমান। যদি $\Delta &lt; 0$ হয়, কোনো বাস্তব বীজ নেই।</p>
+
+        <span class="sub-question">(i) $2x^2+7x+3=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a = 2, b = 7, c = 3$</p>
+            <p>নিরূপক ($\Delta$) $= b^2 - 4ac = 7^2 - 4(2)(3) = 49 - 24 = 25$</p>
+            <p>যেহেতু নিরূপক ধনাত্মক ($25 &gt; 0$), তাই বীজদ্বয় বাস্তব এবং অসমান হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বাস্তব ও অসমান।</div>
+        </div>
+
+        <span class="sub-question">(ii) $3x^2-2\sqrt{6}x+2=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a = 3, b = -2\sqrt{6}, c = 2$</p>
+            <p>নিরূপক ($\Delta$) $= (-2\sqrt{6})^2 - 4(3)(2) = (4 \times 6) - 24 = 24 - 24 = 0$</p>
+            <p>যেহেতু নিরূপক শূন্য ($\Delta = 0$), তাই বীজদ্বয় বাস্তব এবং সমান হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বাস্তব ও সমান।</div>
+        </div>
+
+        <span class="sub-question">(iii) $2x^2-7x+9=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a = 2, b = -7, c = 9$</p>
+            <p>নিরূপক ($\Delta$) $= (-7)^2 - 4(2)(9) = 49 - 72 = -23$</p>
+            <p>যেহেতু নিরূপক ঋণাত্মক ($-23 &lt; 0$), তাই সমীকরণটির কোনো বাস্তব বীজ নেই।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: কোনো বাস্তব বীজ নেই।</div>
+        </div>
+
+        <span class="sub-question">(iv) $\displaystyle \frac{2}{5}x^2-\frac{2}{3}x+1=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $\displaystyle a = \frac{2}{5}, b = -\frac{2}{3}, c = 1$</p>
+            <p>নিরূপক ($\Delta$) $= \displaystyle \left(-\frac{2}{3}\right)^2 - 4\left(\frac{2}{5}\right)(1) = \frac{4}{9} - \frac{8}{5}$</p>
+            <p>$\displaystyle = \frac{20 - 72}{45} = -\frac{52}{45}$</p>
+            <p>যেহেতু নিরূপক ঋণাত্মক, তাই সমীকরণটির কোনো বাস্তব বীজ নেই।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: কোনো বাস্তব বীজ নেই।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. k-এর কোন্ মান/মানগুলির জন্য নীচের প্রতিটি দ্বিঘাত সমীকরণের বাস্তব ও সমান বীজ থাকবে হিসাব করে লিখি—</h4>
+        <p class="mb-3 text-muted"><i class="fas fa-lightbulb text-warning me-2"></i><strong>নিয়ম:</strong> বাস্তব ও সমান বীজ থাকার শর্ত হলো নিরূপক ($b^2 - 4ac$) = 0 হতে হবে।</p>
+
+        <span class="sub-question">(i) $49x^2+kx+1=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+k^2 - 4(49)(1) = 0 \\
+k^2 - 196 = 0 \\
+k^2 = 196 \\
+k = \pm \sqrt{196} = \pm 14
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = 14 অথবা -14</div>
+        </div>
+
+        <span class="sub-question">(ii) $3x^2-5x+2k=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+(-5)^2 - 4(3)(2k) = 0 \\
+25 - 24k = 0 \\
+24k = 25 \\
+k = \frac{25}{24}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = $\displaystyle\frac{25}{24}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $9x^2-24x+k=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+(-24)^2 - 4(9)(k) = 0 \\
+576 - 36k = 0 \\
+36k = 576 \\
+k = \frac{576}{36} = 16
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = 16</div>
+        </div>
+
+        <span class="sub-question">(iv) $2x^2+3x+k=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+3^2 - 4(2)(k) = 0 \\
+9 - 8k = 0 \\
+8k = 9 \\
+k = \frac{9}{8}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = $\displaystyle\frac{9}{8}$</div>
+        </div>
+
+        <span class="sub-question">(v) $x^2-2(5+2k)x+3(7+10k)=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে $a = 1$, $b = -2(5+2k)$, $c = 3(7+10k)$</p>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+[-2(5+2k)]^2 - 4(1)[3(7+10k)] = 0 \\
+4(25 + 20k + 4k^2) - 12(7 + 10k) = 0
+\end{array}
+\]
+            <p>উভয়পক্ষকে 4 দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(25 + 20k + 4k^2) - 3(7 + 10k) = 0 \\
+4k^2 + 20k + 25 - 21 - 30k = 0 \\
+4k^2 - 10k + 4 = 0 \\
+2k^2 - 5k + 2 = 0 \quad [\text{2 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+2k^2 - 4k - k + 2 = 0 \\
+2k(k - 2) - 1(k - 2) = 0 \\
+(k - 2)(2k - 1) = 0
+\end{array}
+\]
+            <p>হয় $k = 2$, অথবা $k = \displaystyle\frac{1}{2}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = 2 অথবা $\displaystyle\frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(vi) $(3k+1)x^2+2(k+1)x+k=0$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, নিরূপক = 0</p>
+            \[
+\begin{array}{l}
+[2(k+1)]^2 - 4(3k+1)(k) = 0 \\
+4(k^2 + 2k + 1) - 4(3k^2 + k) = 0
+\end{array}
+\]
+            <p>উভয়পক্ষকে 4 দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(k^2 + 2k + 1) - (3k^2 + k) = 0 \\
+k^2 + 2k + 1 - 3k^2 - k = 0 \\
+-2k^2 + k + 1 = 0 \\
+2k^2 - k - 1 = 0 \quad [\text{(-1) দিয়ে গুণ করে}]
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+2k^2 - 2k + k - 1 = 0 \\
+2k(k - 1) + 1(k - 1) = 0 \\
+(k - 1)(2k + 1) = 0
+\end{array}
+\]
+            <p>হয় $k = 1$, অথবা $k = -\displaystyle\frac{1}{2}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: k = 1 অথবা $-\displaystyle\frac{1}{2}$</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. নীচে প্রদত্ত বীজদ্বয় দ্বারা দ্বিঘাত সমীকরণ গঠন করি—</h4>
+        <p class="mb-3 text-muted"><i class="fas fa-lightbulb text-warning me-2"></i><strong>নিয়ম:</strong> বীজদ্বয় $\alpha$ ও $\beta$ হলে নির্ণেয় সমীকরণ: $x^2 - (\alpha+\beta)x + \alpha\beta = 0$</p>
+
+        <span class="sub-question">(i) 4, 2</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $4 + 2 = 6$</p>
+            <p>বীজদ্বয়ের গুণফল = $4 \times 2 = 8$</p>
+            <p>নির্ণেয় দ্বিঘাত সমীকরণ: $x^2 - (\text{সমষ্টি})x + (\text{গুণফল}) = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x^2 - 6x + 8 = 0$</div>
+        </div>
+
+        <span class="sub-question">(ii) -4, -3</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $-4 + (-3) = -7$</p>
+            <p>বীজদ্বয়ের গুণফল = $(-4) \times (-3) = 12$</p>
+            <p>নির্ণেয় দ্বিঘাত সমীকরণ: $x^2 - (-7)x + 12 = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x^2 + 7x + 12 = 0$</div>
+        </div>
+
+        <span class="sub-question">(iii) -4, 3</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $-4 + 3 = -1$</p>
+            <p>বীজদ্বয়ের গুণফল = $(-4) \times 3 = -12$</p>
+            <p>নির্ণেয় দ্বিঘাত সমীকরণ: $x^2 - (-1)x + (-12) = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x^2 + x - 12 = 0$</div>
+        </div>
+
+        <span class="sub-question">(iv) 5, -3</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $5 + (-3) = 2$</p>
+            <p>বীজদ্বয়ের গুণফল = $5 \times (-3) = -15$</p>
+            <p>নির্ণেয় দ্বিঘাত সমীকরণ: $x^2 - (2)x + (-15) = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x^2 - 2x - 15 = 0$</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. m-এর মান কত হলে, $4x^2+4(3m-1)x+(m+7)=0$ দ্বিঘাত সমীকরণের বীজ দুটি পরস্পর অন্যোন্যক হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, একটি বীজ $\alpha$। যেহেতু বীজ দুটি পরস্পর অন্যোন্যক (reciprocal), তাই অপর বীজটি হবে $\displaystyle\frac{1}{\alpha}$।</p>
+            <p>আমরা জানি, বীজদ্বয়ের গুণফল = $\displaystyle\frac{c}{a}$</p>
+            \[
+\begin{array}{l}
+\alpha \times \frac{1}{\alpha} = \frac{m+7}{4} \\
+1 = \frac{m+7}{4} \\
+m + 7 = 4 \\
+m = 4 - 7 = -3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: m-এর নির্ণেয় মান -3</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. $(b-c)x^2+(c-a)x+(a-b)=0$ দ্বিঘাত সমীকরণের বীজদ্বয় সমান হলে, প্রমাণ করি যে, $2b=a+c$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু সমীকরণটির বীজদ্বয় সমান, তাই নিরূপক = 0 হবে।</p>
+            \[
+\begin{array}{l}
+(c-a)^2 - 4(b-c)(a-b) = 0 \\
+(c^2 - 2ca + a^2) - 4(ab - b^2 - ca + bc) = 0 \\
+c^2 - 2ca + a^2 - 4ab + 4b^2 + 4ca - 4bc = 0 \\
+a^2 + 4b^2 + c^2 - 4ab - 4bc + 2ca = 0
+\end{array}
+\]
+            <p>এটিকে আমরা বর্গের সূত্রে সাজাতে পারি:</p>
+            \[
+\begin{array}{l}
+(a)^2 + (-2b)^2 + (c)^2 + 2(a)(-2b) + 2(-2b)(c) + 2(c)(a) = 0 \\
+^2 = 0 \\
+(a - 2b + c)^2 = 0 \\
+a - 2b + c = 0 \\
+a + c = 2b
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. $(a^2+b^2)x^2-2(ac+bd)x+(c^2+d^2)=0$ দ্বিঘাত সমীকরণের বীজদ্বয় সমান হলে, প্রমাণ করি যে, $\displaystyle\frac{a}{b}=\frac{c}{d}$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয় সমান হওয়ায় নিরূপক = 0।</p>
+            \[
+\begin{array}{l}
+[-2(ac+bd)]^2 - 4(a^2+b^2)(c^2+d^2) = 0 \\
+4(a^2c^2 + 2abcd + b^2d^2) - 4(a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2) = 0
+\end{array}
+\]
+            <p>উভয়পক্ষকে 4 দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(a^2c^2 + 2abcd + b^2d^2) - a^2c^2 - a^2d^2 - b^2c^2 - b^2d^2 = 0 \\
+2abcd - a^2d^2 - b^2c^2 = 0 \\
+-(a^2d^2 - 2abcd + b^2c^2) = 0 \\
+a^2d^2 - 2(ad)(bc) + b^2c^2 = 0 \\
+(ad - bc)^2 = 0 \\
+ad - bc = 0 \\
+ad = bc
+\end{array}
+\]
+            <p>অতএব, $ad = bc \implies \displaystyle\frac{a}{b} = \frac{c}{d}$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. প্রমাণ করি যে, $2(a^2+b^2)x^2+2(a+b)x+1=0$ দ্বিঘাত সমীকরণের কোনো বাস্তব বীজ থাকবে না, যদি $a \neq b$ হয়।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>কোনো বাস্তব বীজ না থাকার শর্ত হলো নিরূপক ঋণাত্মক ( &lt; 0 ) হতে হবে।</p>
+            <p>প্রদত্ত সমীকরণের নিরূপক:</p>
+            \[
+\begin{array}{l}
+\Delta = [2(a+b)]^2 - 4[2(a^2+b^2)](1) \\
+= 4(a^2+2ab+b^2) - 8(a^2+b^2) \\
+= 4a^2 + 8ab + 4b^2 - 8a^2 - 8b^2 \\
+= -4a^2 + 8ab - 4b^2 \\
+= -4(a^2 - 2ab + b^2) \\
+= -4(a - b)^2
+\end{array}
+\]
+            <p>যেহেতু $a \neq b$, তাই $(a - b)$ শূন্য নয় এবং যেকোনো বাস্তব সংখ্যার বর্গ সর্বদা ধনাত্মক হয়, অর্থাৎ $(a - b)^2 &gt; 0$।</p>
+            <p>সুতরাং, $-4(a - b)^2$ সর্বদা ঋণাত্মক ($&lt; 0$) হবে।</p>
+            <p>যেহেতু নিরূপক ঋণাত্মক, তাই সমীকরণটির কোনো বাস্তব বীজ থাকতে পারে না।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. $5x^2+2x-3=0$ দ্বিঘাত সমীকরণের দুটি বীজ $\alpha$ ও $\beta$ হলে মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <p>প্রদত্ত সমীকরণ: $5x^2 + 2x - 3 = 0$</p>
+            <p>বীজদ্বয়ের সমষ্টি: $\alpha + \beta = -\displaystyle\frac{b}{a} = -\frac{2}{5}$</p>
+            <p>বীজদ্বয়ের গুণফল: $\alpha\beta = \displaystyle\frac{c}{a} = -\frac{3}{5}$</p>
+            
+            <hr>
+            <span class="sub-question">(i) $\alpha^2+\beta^2$ -এর মান নির্ণয় করি।</span>
+            <p>আমরা জানি, $a^2 + b^2 = (a+b)^2 - 2ab$</p>
+            \[
+\begin{array}{l}
+\alpha^2 + \beta^2 = (\alpha+\beta)^2 - 2\alpha\beta \\
+= \left(-\frac{2}{5}\right)^2 - 2\left(-\frac{3}{5}\right) \\
+= \frac{4}{25} + \frac{6}{5} \\
+= \frac{4 + 30}{25} = \frac{34}{25} = 1\frac{9}{25}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{34}{25}$</div>
+
+            <hr>
+            <span class="sub-question">(ii) $\alpha^3+\beta^3$ -এর মান নির্ণয় করি।</span>
+            <p>আমরা জানি, $a^3 + b^3 = (a+b)^3 - 3ab(a+b)$</p>
+            \[
+\begin{array}{l}
+\alpha^3 + \beta^3 = (\alpha+\beta)^3 - 3\alpha\beta(\alpha+\beta) \\
+= \left(-\frac{2}{5}\right)^3 - 3\left(-\frac{3}{5}\right)\left(-\frac{2}{5}\right) \\
+= -\frac{8}{125} - \frac{18}{25} \\
+= \frac{-8 - 90}{125} = -\frac{98}{125}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle-\frac{98}{125}$</div>
+
+            <hr>
+            <span class="sub-question">(iii) $\displaystyle\frac{1}{\alpha}+\frac{1}{\beta}$ -এর মান নির্ণয় করি।</span>
+            \[
+\begin{array}{l}
+\frac{1}{\alpha} + \frac{1}{\beta} = \frac{\alpha + \beta}{\alpha\beta} \\
+= \frac{-\frac{2}{5}}{-\frac{3}{5}} = \frac{2}{5} \times \frac{5}{3} = \frac{2}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{2}{3}$</div>
+
+            <hr>
+            <span class="sub-question">(iv) $\displaystyle\frac{\alpha^2}{\beta}+\frac{\beta^2}{\alpha}$ -এর মান নির্ণয় করি।</span>
+            \[
+\begin{array}{l}
+\frac{\alpha^2}{\beta} + \frac{\beta^2}{\alpha} = \frac{\alpha^3 + \beta^3}{\alpha\beta}
+\end{array}
+\]
+            <p>(ii) নং থেকে আমরা পেয়েছি, $\alpha^3 + \beta^3 = -\displaystyle\frac{98}{125}$</p>
+            \[
+\begin{array}{l}
+= \frac{-\frac{98}{125}}{-\frac{3}{5}} = \frac{98}{125} \times \frac{5}{3} \\
+= \frac{98}{25 \times 3} = \frac{98}{75} = 1\frac{23}{75}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{98}{75}$</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. $ax^2+bx+c=0$ সমীকরণটির একটি বীজ অপরটির দ্বিগুণ হলে, দেখাই যে, $2b^2=9ac$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, সমীকরণটির একটি বীজ হলো $\alpha$।</p>
+            <p>শর্তানুসারে, অপর বীজটি হবে $2\alpha$।</p>
+            <p>বীজদ্বয়ের সমষ্টি: $\alpha + 2\alpha = -\displaystyle\frac{b}{a}$</p>
+            \[
+\begin{array}{l}
+3\alpha = -\frac{b}{a} \\
+\alpha = -\frac{b}{3a} \quad \text{--- (i)}
+\end{array}
+\]
+            <p>বীজদ্বয়ের গুণফল: $\alpha \times 2\alpha = \displaystyle\frac{c}{a}$</p>
+            \[
+\begin{array}{l}
+2\alpha^2 = \frac{c}{a} \quad \text{--- (ii)}
+\end{array}
+\]
+            <p>এখন, (i) নং থেকে $\alpha$-এর মান (ii) নং এ বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+2 \left(-\frac{b}{3a}\right)^2 = \frac{c}{a} \\
+2 \left(\frac{b^2}{9a^2}\right) = \frac{c}{a} \\
+\frac{2b^2}{9a^2} = \frac{c}{a} \\
+2b^2 = \frac{c \cdot 9a^2}{a} \\
+2b^2 = 9ac
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. যে সমীকরণের বীজগুলি $x^2+px+1=0$ সমীকরণের বীজগুলির অন্যোন্যক, সেই সমীকরণটি গঠন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $x^2 + px + 1 = 0$ সমীকরণের বীজ দুটি হলো $\alpha$ এবং $\beta$।</p>
+            <p>বীজদ্বয়ের সমষ্টি: $\alpha + \beta = -p$</p>
+            <p>বীজদ্বয়ের গুণফল: $\alpha\beta = 1$</p>
+            <p>নতুন সমীকরণের বীজগুলি হলো $\alpha$ ও $\beta$-এর অন্যোন্যক (reciprocal), অর্থাৎ $\displaystyle\frac{1}{\alpha}$ এবং $\displaystyle\frac{1}{\beta}$।</p>
+            <p>নতুন বীজদ্বয়ের সমষ্টি:</p>
+            \[
+\begin{array}{l}
+\frac{1}{\alpha} + \frac{1}{\beta} = \frac{\alpha + \beta}{\alpha\beta} = \frac{-p}{1} = -p
+\end{array}
+\]
+            <p>নতুন বীজদ্বয়ের গুণফল:</p>
+            \[
+\begin{array}{l}
+\frac{1}{\alpha} \times \frac{1}{\beta} = \frac{1}{\alpha\beta} = \frac{1}{1} = 1
+\end{array}
+\]
+            <p>নির্ণেয় দ্বিঘাত সমীকরণটি হলো:</p>
+            \[
+\begin{array}{l}
+x^2 - (\text{বীজদ্বয়ের সমষ্টি})x + (\text{বীজদ্বয়ের গুণফল}) = 0 \\
+x^2 - (-p)x + 1 = 0 \\
+x^2 + px + 1 = 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সমীকরণটি হলো $x^2 + px + 1 = 0$</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. $x^2+x+1=0$ সমীকরণটির বীজগুলির বর্গ যে সমীকরণের বীজ, সেই সমীকরণটি নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $x^2 + x + 1 = 0$ সমীকরণের বীজ দুটি হলো $\alpha$ এবং $\beta$।</p>
+            <p>$\alpha + \beta = -1$ এবং $\alpha\beta = 1$</p>
+            <p>নির্ণেয় সমীকরণের বীজগুলি হবে $\alpha^2$ এবং $\beta^2$।</p>
+            <p>নতুন বীজদ্বয়ের সমষ্টি:</p>
+            \[
+\begin{array}{l}
+\alpha^2 + \beta^2 = (\alpha + \beta)^2 - 2\alpha\beta \\
+= (-1)^2 - 2(1) \\
+= 1 - 2 = -1
+\end{array}
+\]
+            <p>নতুন বীজদ্বয়ের গুণফল:</p>
+            \[
+\begin{array}{l}
+\alpha^2 \times \beta^2 = (\alpha\beta)^2 \\
+= (1)^2 = 1
+\end{array}
+\]
+            <p>নির্ণেয় দ্বিঘাত সমীকরণটি হলো:</p>
+            \[
+\begin{array}{l}
+x^2 - (\alpha^2 + \beta^2)x + (\alpha^2\beta^2) = 0 \\
+x^2 - (-1)x + 1 = 0 \\
+x^2 + x + 1 = 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সমীকরণটি হলো $x^2 + x + 1 = 0$</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) $x^2-6x+2=0$ সমীকরণের বীজদ্বয়ের সমষ্টি</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $-\displaystyle\frac{x\text{-এর সহগ}}{x^2\text{-এর সহগ}} = -\frac{-6}{1} = 6$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 6</div>
+        </div>
+
+        <span class="sub-question">(ii) $x^2-3x+k=10$ সমীকরণের বীজদ্বয়ের গুণফল -2 হলে, k-এর মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটি হলো $x^2 - 3x + (k - 10) = 0$</p>
+            <p>বীজদ্বয়ের গুণফল = $\displaystyle\frac{c}{a} = \frac{k - 10}{1} = k - 10$</p>
+            <p>শর্তানুসারে, $k - 10 = -2 \implies k = 8$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 8</div>
+        </div>
+
+        <span class="sub-question">(iii) $ax^2+bx+c=0 (a \neq 0)$ সমীকরণের বীজদ্বয় বাস্তব এবং অসমান হলে, $b^2-4ac$ হবে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বাস্তব ও অসমান বীজের শর্ত হলো নিরূপক ধনাত্মক ($&gt;0$) হওয়া।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) $&gt;0$</div>
+        </div>
+
+        <span class="sub-question">(iv) $ax^2+bx+c=0 (a \neq 0)$ সমীকরণের বীজদ্বয় সমান হলে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয় সমান হলে নিরূপক শূন্য হয়।</p>
+            <p>$b^2 - 4ac = 0 \implies 4ac = b^2 \implies c = \displaystyle\frac{b^2}{4a}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $c = \displaystyle\frac{b^2}{4a}$</div>
+        </div>
+
+        <span class="sub-question">(v) $3x^2+8x+2=0$ সমীকরণের বীজদ্বয় $\alpha$ এবং $\beta$ হলে, $\left(\displaystyle\frac{1}{\alpha}+\frac{1}{\beta}\right)$ -এর মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\alpha + \beta = -\displaystyle\frac{8}{3}$ এবং $\alpha\beta = \displaystyle\frac{2}{3}$</p>
+            <p>$\displaystyle\frac{1}{\alpha}+\frac{1}{\beta} = \frac{\alpha+\beta}{\alpha\beta} = \frac{-\frac{8}{3}}{\frac{2}{3}} = -\frac{8}{3} \times \frac{3}{2} = -4$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) -4</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) $x^2+x+1=0$ সমীকরণের বীজদ্বয় বাস্তব।</span>
+        <div class="solution-box">
+            <p>নিরূপক = $1^2 - 4(1)(1) = 1 - 4 = -3 &lt; 0$। নিরূপক ঋণাত্মক হওয়ায় এর বাস্তব বীজ নেই।</p>
+            <div class="final-answer"><i class="fas fa-times me-1"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) $x^2-x+2=0$ সমীকরণের বীজদ্বয় বাস্তব নয়।</span>
+        <div class="solution-box">
+            <p>নিরূপক = $(-1)^2 - 4(1)(2) = 1 - 8 = -7 &lt; 0$। নিরূপক ঋণাত্মক হওয়ায় বীজগুলি অবাস্তব।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) $7x^2-12x+18=0$ সমীকরণের বীজদ্বয়ের সমষ্টি এবং গুণফলের অনুপাত _________</span>
+        <div class="solution-box">
+            <p>সমষ্টি = $\displaystyle\frac{12}{7}$, গুণফল = $\displaystyle\frac{18}{7}$</p>
+            <p>অনুপাত = $\displaystyle\frac{12}{7} : \frac{18}{7} = 12 : 18 = 2 : 3$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 2 : 3</p>
+        </div>
+
+        <span class="sub-question">(ii) $ax^2+bx+c=0 (a \neq 0)$ সমীকরণের বীজদ্বয় পরস্পর অন্যোন্যক হলে, c = _________</span>
+        <div class="solution-box">
+            <p>বীজ দুটি $\alpha, \displaystyle\frac{1}{\alpha}$। গুণফল $\alpha \times \displaystyle\frac{1}{\alpha} = 1 \implies \displaystyle\frac{c}{a} = 1 \implies c = a$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> a</p>
+        </div>
+
+        <span class="sub-question">(iii) $ax^2+bx+c=0 (a \neq 0)$ সমীকরণের বীজদ্বয় পরস্পর অন্যোন্যক এবং বিপরীত (ঋণাত্মক) হলে, a+c = _________</span>
+        <div class="solution-box">
+            <p>বীজ দুটি $\alpha, -\displaystyle\frac{1}{\alpha}$। গুণফল $\alpha \times \left(-\displaystyle\frac{1}{\alpha}\right) = -1 \implies \displaystyle\frac{c}{a} = -1 \implies c = -a \implies a+c = 0$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 0</p>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি দ্বিঘাত সমীকরণের বীজদ্বয়ের সমষ্টি 14 এবং গুণফল 24 হলে, দ্বিঘাত সমীকরণটি লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটি হলো: $x^2 - (\text{বীজদ্বয়ের সমষ্টি})x + (\text{বীজদ্বয়ের গুণফল}) = 0$</p>
+            <p>$x^2 - 14x + 24 = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $x^2 - 14x + 24 = 0$</div>
+        </div>
+
+        <span class="sub-question">(ii) $kx^2+2x+3k=0 (k \neq 0)$ সমীকরণের বীজদ্বয়ের সমষ্টি এবং গুণফল সমান হলে, k-এর মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজদ্বয়ের সমষ্টি = $-\displaystyle\frac{2}{k}$</p>
+            <p>বীজদ্বয়ের গুণফল = $\displaystyle\frac{3k}{k} = 3$</p>
+            <p>শর্তানুসারে, $-\displaystyle\frac{2}{k} = 3 \implies 3k = -2 \implies k = -\frac{2}{3}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: k = $-\displaystyle\frac{2}{3}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $x^2-22x+105=0$ সমীকরণের বীজদ্বয় $\alpha$ এবং $\beta$ হলে, $(\alpha-\beta)$ -এর মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\alpha + \beta = 22$ এবং $\alpha\beta = 105$</p>
+            <p>আমরা জানি, $(\alpha - \beta)^2 = (\alpha + \beta)^2 - 4\alpha\beta$</p>
+            \[
+\begin{array}{l}
+(\alpha - \beta)^2 = (22)^2 - 4(105) \\
+= 484 - 420 \\
+= 64 \\
+\alpha - \beta = \pm \sqrt{64} = \pm 8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\alpha - \beta = \pm 8$</div>
+        </div>
+
+        <span class="sub-question">(iv) $x^2-x=k(2x-1)$ সমীকরণের বীজদ্বয়ের সমষ্টি শূন্য হলে, k-এর মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে সাজিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+x^2 - x = 2kx - k \\
+x^2 - x - 2kx + k = 0 \\
+x^2 - (1 + 2k)x + k = 0
+\end{array}
+\]
+            <p>বীজদ্বয়ের সমষ্টি = $(1 + 2k)$</p>
+            <p>শর্তানুসারে, $1 + 2k = 0 \implies 2k = -1 \implies k = -\displaystyle\frac{1}{2}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: k = $-\displaystyle\frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(v) $x^2+bx+12=0$ এবং $x^2+bx+q=0$ সমীকরণদ্বয়ের একটি বীজ 2 হলে, q-এর মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু 2 হলো প্রথম সমীকরণ $x^2+bx+12=0$-এর একটি বীজ, তাই $x=2$ সমীকরণটিকে সিদ্ধ করবে:</p>
+            \[
+\begin{array}{l}
+2^2 + b(2) + 12 = 0 \\
+4 + 2b + 12 = 0 \\
+2b = -16 \\
+b = -8
+\end{array}
+\]
+            <p>আবার, 2 হলো দ্বিতীয় সমীকরণ $x^2+bx+q=0$-এরও একটি বীজ। তাই এখানেও $x=2$ এবং $b=-8$ বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+2^2 + (-8)(2) + q = 0 \\
+4 - 16 + q = 0 \\
+-12 + q = 0 \\
+q = 12
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: q-এর মান 12</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>
