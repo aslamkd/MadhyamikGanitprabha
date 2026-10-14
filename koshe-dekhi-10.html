@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-10</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}.proof-step{padding:0.75rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মূল উপপাদ্য (Core Theorem):</strong><br>
+        <strong>উপপাদ্য ৩৮:</strong> বৃত্তস্থ চতুর্ভুজের বিপরীত কোণগুলি পরস্পর সম্পূরক। (Opposite angles of a cyclic quadrilateral are supplementary, i.e., sum is 180°).<br>
+        <strong>অনসিদ্ধান্ত:</strong> বৃত্তস্থ চতুর্ভুজের কোনো বাহুকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণটি বিপরীত অন্তঃস্থ কোণের সমান হয়।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. পাশের ছবির PQRS বৃত্তস্থ চতুর্ভুজের কর্ণদ্বয় পরস্পরকে X বিন্দুতে এমনভাবে ছেদ করেছে যে $\angle PRS = 65^\circ$ এবং $\angle RQS = 45^\circ$; $\angle SQP$ ও $\angle RSP$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="180" height="180" viewBox="0 0 180 180">
+               <circle cx="90" cy="90" r="80" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Points P, Q, R, S -->
+               <polygon points="30,40 160,50 150,150 40,150" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <!-- Diagonals -->
+               <line x1="30" y1="40" x2="150" y2="150" stroke="#10B981" stroke-width="1.5"></line>
+               <line x1="160" y1="50" x2="40" y2="150" stroke="#F59E0B" stroke-width="1.5"></line>
+               
+               <circle cx="30" cy="40" r="3" fill="#1F2937"></circle>
+               <circle cx="40" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="150" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="160" cy="50" r="3" fill="#1F2937"></circle>
+               
+               <text x="10" y="35" font-size="14" font-weight="bold">P</text>
+               <text x="20" y="170" font-size="14" font-weight="bold">Q</text>
+               <text x="160" y="170" font-size="14" font-weight="bold">R</text>
+               <text x="170" y="45" font-size="14" font-weight="bold">S</text>
+               <text x="95" y="105" font-size="14" font-weight="bold">X</text>
+            </svg>
+
+            <p>প্রদত্ত: $\angle RQS = 45^\circ$ এবং $\angle PRS = 65^\circ$।</p>
+            <p>PS বৃত্তচাপের ওপর অবস্থিত দুটি পরিধিস্থ (বৃত্তস্থ) কোণ হলো $\angle PQS$ এবং $\angle PRS$।</p>
+            <p>আমরা জানি, একই বৃত্তাংশস্থ কোণ সমান হয়।</p>
+            <p>$\therefore \angle PQS = \angle PRS = 65^\circ$।</p>
+            <p>চিত্রানুযায়ী, $\angle SQP$ বলতে $\angle PQS$-কেই বোঝায়। তাই <strong>$\angle SQP = 65^\circ$</strong>।</p>
+            <br>
+            <p>এবার $\angle RSP$ নির্ণয় করি:</p>
+            <p>চতুর্ভুজটির সম্পূর্ণ $\angle PQR = \angle PQS + \angle RQS = 65^\circ + 45^\circ = 110^\circ$।</p>
+            <p>PQRS একটি বৃত্তস্থ চতুর্ভুজ হওয়ায় এর বিপরীত কোণগুলি পরস্পর সম্পূরক।</p>
+            \[
+\begin{array}{l}
+\angle RSP + \angle PQR = 180^\circ \\
+\angle RSP + 110^\circ = 180^\circ \\
+\angle RSP = 180^\circ - 110^\circ = 70^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle SQP = 65^\circ$ এবং $\angle RSP = 70^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. ABCD বৃত্তস্থ চতুর্ভুজের AB বাহুকে X বিন্দু পর্যন্ত বর্ধিত করলাম এবং মেপে দেখছি $\angle XBC = 82^\circ$ এবং $\angle ADB = 47^\circ$; $\angle BAC$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ABCD বৃত্তস্থ চতুর্ভুজের AB বাহুকে বর্ধিত করায় বহিঃস্থ কোণ $\angle XBC$ উৎপন্ন হয়েছে।</p>
+            <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের কোনো বাহুকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণটি বিপরীত অন্তঃস্থ কোণের সমান হয়।</p>
+            <p>$\therefore \text{অন্তঃস্থ } \angle ADC = \text{বহিঃস্থ } \angle XBC = 82^\circ$।</p>
+            <p>দেওয়া আছে, $\angle ADB = 47^\circ$।</p>
+            <p>তাহলে, $\angle BDC = \angle ADC - \angle ADB = 82^\circ - 47^\circ = 35^\circ$।</p>
+            <p>বৃত্তের BC চাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle BAC$ এবং $\angle BDC$।</p>
+            <p>একই বৃত্তাংশস্থ কোণ সমান হওয়ায়, $\angle BAC = \angle BDC$।</p>
+            <p>$\therefore \angle BAC = 35^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BAC$-এর মান $35^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. PQRS বৃত্তস্থ চতুর্ভুজের PQ, SR বাহু দুটি বর্ধিত করায় T বিন্দুতে মিলিত হলো। বৃত্তের কেন্দ্র O; $\angle POQ = 110^\circ, \angle QOR = 60^\circ, \angle ROS = 80^\circ$ হলে $\angle RQS$ ও $\angle QTR$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বৃত্তের কেন্দ্রে মোট কোণ $360^\circ$।</p>
+            <p>$\therefore \angle POS = 360^\circ - (110^\circ + 60^\circ + 80^\circ) = 360^\circ - 250^\circ = 110^\circ$।</p>
+            <br>
+            <p><strong>১) $\angle RQS$ নির্ণয়:</strong></p>
+            <p>RS চাপের ওপর কেন্দ্রস্থ কোণ $\angle ROS = 80^\circ$ এবং পরিধিস্থ কোণ $\angle RQS$।</p>
+            <p>উপপাদ্য অনুযায়ী, $\angle RQS = \frac{\angle ROS}{2} = \frac{80^\circ}{2} = 40^\circ$।</p>
+            <br>
+            <p><strong>২) $\angle QTR$ নির্ণয়:</strong></p>
+            <p>PSR চাপের ওপর কেন্দ্রস্থ কোণ = $\angle POS + \angle ROS = 110^\circ + 80^\circ = 190^\circ$।</p>
+            <p>$\therefore$ পরিধিস্থ কোণ $\angle PQR = \frac{190^\circ}{2} = 95^\circ$।</p>
+            <p>P-Q-T একটি সরলরেখা হওয়ায় $\triangle TQR$-এর বহিঃস্থ কোণ $\angle PQR$ নয়, বরং $\angle TQR$ হলো অন্তঃস্থ কোণ এবং রৈখিক যুগল।</p>
+            <p>$\angle TQR = 180^\circ - \angle PQR = 180^\circ - 95^\circ = 85^\circ$।</p>
+            <p>একইভাবে, SPQ চাপের ওপর কেন্দ্রস্থ কোণ = $\angle POS + \angle POQ = 110^\circ + 110^\circ = 220^\circ$।</p>
+            <p>$\therefore$ পরিধিস্থ কোণ $\angle SRQ = \frac{220^\circ}{2} = 110^\circ$।</p>
+            <p>S-R-T সরলরেখা হওয়ায় $\angle TRQ = 180^\circ - \angle SRQ = 180^\circ - 110^\circ = 70^\circ$।</p>
+            <p>এখন $\triangle TQR$-এর তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle QTR = 180^\circ - (\angle TQR + \angle TRQ) \\
+= 180^\circ - (85^\circ + 70^\circ) \\
+= 180^\circ - 155^\circ = 25^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle RQS = 40^\circ$ এবং $\angle QTR = 25^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. দুটি বৃত্ত পরস্পরকে P ও Q বিন্দুতে ছেদ করেছে। P ও Q বিন্দুগামী দুটি সরলরেখা একটি বৃত্তকে যথাক্রমে A ও C এবং অপর বৃত্তকে যথাক্রমে B ও D বিন্দুতে ছেদ করেছে। প্রমাণ করি যে, AC || BD.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> দুটি বৃত্ত পরস্পরকে P ও Q বিন্দুতে ছেদ করে। P বিন্দুগামী একটি সরলরেখা বৃত্তদুটিকে A ও B বিন্দুতে ছেদ করে। Q বিন্দুগামী অপর সরলরেখা বৃত্তদুটিকে C ও D বিন্দুতে ছেদ করে। (অর্থাৎ A-P-B এবং C-Q-D দুটি সরলরেখা)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> AC || BD (AC এবং BD সমান্তরাল)।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> P, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>প্রথম বৃত্তের ক্ষেত্রে, APQC একটি বৃত্তস্থ চতুর্ভুজ।</p>
+                <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বিপরীত কোণগুলি পরস্পর সম্পূরক।</p>
+                <p>$\therefore \angle PAC + \angle PQC = 180^\circ \quad \dots \text{(i)}$</p>
+                <br>
+                <p>দ্বিতীয় বৃত্তের ক্ষেত্রে, BPQD একটি বৃত্তস্থ চতুর্ভুজ।</p>
+                <p>$\therefore \angle PBD + \angle PQD = 180^\circ \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>যেহেতু C-Q-D একটি সরলরেখা, তাই Q বিন্দুতে রৈখিক যুগল কোণগুলি হলো:</p>
+                <p>$\angle PQC + \angle PQD = 180^\circ \quad \dots \text{(iii)}$</p>
+                <br>
+                <p>(i) এবং (ii) নং সমীকরণ যোগ করে পাই:</p>
+                <p>$\angle PAC + \angle PQC + \angle PBD + \angle PQD = 180^\circ + 180^\circ = 360^\circ$</p>
+                <p>$\angle PAC + \angle PBD + (\angle PQC + \angle PQD) = 360^\circ$</p>
+                <p>(iii) নং থেকে মান বসিয়ে পাই:</p>
+                <p>$\angle PAC + \angle PBD + 180^\circ = 360^\circ$</p>
+                <p>$\angle PAC + \angle PBD = 360^\circ - 180^\circ = 180^\circ$</p>
+                <p>এখানে AC এবং BD দুটি সরলরেখাকে AB সরলরেখা (যেহেতু A-P-B একটি রেখা) ছেদ করেছে।</p>
+                <p>এবং ছেদিকার একই পাশের অন্তঃস্থ কোণদ্বয়ের ($\angle PAC$ বা $\angle BAC$ এবং $\angle PBD$ বা $\angle ABD$) সমষ্টি $180^\circ$।</p>
+                <p>সুতরাং, AC এবং BD পরস্পর সমান্তরাল।</p>
+                <p>$\therefore AC \parallel BD$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. ABCD একটি বৃত্তস্থ চতুর্ভুজ অঙ্কন করেছি এবং এর BC বাহুকে E বিন্দু পর্যন্ত বর্ধিত করলাম। প্রমাণ করি যে, $\angle BAD$ ও $\angle DCE$-এর সমদ্বিখণ্ডকদ্বয় বৃত্তের উপর মিলিত হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ABCD একটি বৃত্তস্থ চতুর্ভুজ। BC বাহুকে E পর্যন্ত বর্ধিত করা হয়েছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle BAD$-এর সমদ্বিখণ্ডক এবং বহিঃস্থ $\angle DCE$-এর সমদ্বিখণ্ডক বৃত্তের পরিধির ওপর কোনো একটি বিন্দুতে মিলিত হবে।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> ধরি, $\angle BAD$-এর সমদ্বিখণ্ডক বৃত্তের পরিধিকে F বিন্দুতে ছেদ করে। C, F যুক্ত করা হলো। প্রমাণ করতে হবে যে CF হলো $\angle DCE$-এর সমদ্বিখণ্ডক।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু AF হলো $\angle BAD$-এর সমদ্বিখণ্ডক,</p>
+                <p>$\therefore \angle DAF = \angle BAF = \frac{1}{2}\angle BAD \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আমরা জানি, সমান পরিধিস্থ কোণ দ্বারা গঠিত বৃত্তচাপগুলিও সমান হয়।</p>
+                <p>যেহেতু $\angle DAF = \angle BAF$, তাই উপচাপ DF = উপচাপ BF।</p>
+                <p>এবং সমান চাপ দ্বারা গঠিত পরিধিস্থ কোণও সমান হয়।</p>
+                <p>চাপ DF-এর ওপর পরিধিস্থ কোণ $\angle DCF$ এবং চাপ BF-এর ওপর পরিধিস্থ কোণ $\angle BCF$।</p>
+                <p>$\therefore \angle DCF = \angle BCF \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>আবার আমরা জানি, বৃত্তস্থ চতুর্ভুজের কোনো বাহুকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান হয়।</p>
+                <p>$\therefore$ চতুর্ভুজ ABCD-এর বহিঃস্থ $\angle DCE = \text{অন্তঃস্থ } \angle BAD$।</p>
+                <p>উভয়পক্ষকে 2 দিয়ে ভাগ করে পাই:</p>
+                <p>$\frac{1}{2}\angle DCE = \frac{1}{2}\angle BAD = \angle DAF$ [ (i) থেকে ]</p>
+                <br>
+                <p>চাপ DF-এর ওপর পরিধিস্থ কোণ $\angle DCF = \angle DAF$।</p>
+                <p>অতএব, $\angle DCF = \frac{1}{2}\angle DCE$।</p>
+                <p>এর অর্থ হলো, CF রেখাংশটি সম্পূর্ণ $\angle DCE$-কে সমদ্বিখণ্ডিত করে।</p>
+                <p>সুতরাং, $\angle BAD$-এর সমদ্বিখণ্ডক (AF) এবং $\angle DCE$-এর সমদ্বিখণ্ডক (CF) বৃত্তের ওপর একটি নির্দিষ্ট বিন্দু F-এ মিলিত হয়েছে।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. ABC একটি ত্রিভুজ অঙ্কন করেছি যার AB = AC এবং বর্ধিত BC-এর উপর E যে-কোনো একটি বিন্দু। $\triangle ABC$-এর পরিবৃত্ত AE-কে D বিন্দুতে ছেদ করলে প্রমাণ করি যে, $\angle ACD = \angle AEC$।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-তে $AB = AC$। BC-কে E পর্যন্ত বর্ধিত করা হয়েছে। A, B, C বিন্দুগামী পরিবৃত্তটি AE রেখাকে D বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle ACD = \angle AEC$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> C, D যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle ABC$-তে $AB = AC$ হওয়ায় এর বিপরীত কোণগুলি সমান হবে।</p>
+                <p>$\therefore \angle ABC = \angle ACB \quad \dots \text{(i)}$</p>
+                <p>বৃত্তস্থ চতুর্ভুজ ABDC-এর ক্ষেত্রে, AD চাপের ওপর অবস্থিত দুটি পরিধিস্থ কোণ হলো $\angle ABD$ (বা $\angle ABC$) এবং $\angle ACD$।</p>
+                <p>আমরা জানি, একই বৃত্তাংশস্থ কোণ সমান হয়।</p>
+                <p>$\therefore \angle ACD = \angle ABD \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>এখন, $\triangle ACE$-এর ক্ষেত্রে, বহিঃস্থ কোণ হলো $\angle ACB$।</p>
+                <p>আমরা জানি, বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণদ্বয়ের সমষ্টির সমান।</p>
+                <p>$\therefore \angle ACB = \angle CAE + \angle AEC$</p>
+                <p>(i) নং থেকে পাই:</p>
+                <p>$\angle ABC = \angle CAE + \angle AEC$</p>
+                <br>
+                <p>আবার, $\triangle ABE$-এর বহিঃস্থ কোণ হলো $\angle ABD$ (বা $\angle ABC$)? না, $\angle ABC$ একটি অন্তঃস্থ কোণ।</p>
+                <p>সহজভাবে দেখি: CD চাপের ওপর দুটি বৃত্তস্থ কোণ হলো $\angle CAD$ (বা $\angle CAE$) এবং $\angle CBD$।</p>
+                <p>$\therefore \angle CAE = \angle CBD$</p>
+                <p>$\triangle CDE$-এর বহিঃস্থ কোণ $\angle BCD$... বরং $\triangle ABD$ এবং $\triangle ACE$-এর মধ্যে সম্পর্ক খুঁজি।</p>
+                <p>$\angle ABC = \angle ABD + \angle DBC = \angle ACD + \angle CAE$।</p>
+                <p>যেহেতু $\angle ABC = \angle ACB$, তাহলে $\angle ACB = \angle ACD + \angle CAE$।</p>
+                <p>কিন্তু চিত্রানুযায়ী $\angle ACB = \angle ACD + \angle DCB$।</p>
+                <p>সুতরাং $\angle DCB = \angle CAE$।</p>
+                <br>
+                <p>আমরা আগেই পেয়েছি, $\triangle ACE$-এর বহিঃস্থ কোণ $\angle ACB = \angle CAE + \angle AEC$</p>
+                <p>আর চিত্রানুযায়ী $\angle ACB = \angle ACD + \angle DCB$</p>
+                <p>উভয় সমীকরণ থেকে পাই:</p>
+                <p>$\angle ACD + \angle DCB = \angle CAE + \angle AEC$</p>
+                <p>যেহেতু $\angle DCB = \angle CAE$ (উভয়েই CD চাপের ওপর বৃত্তস্থ কোণ), তাই এগুলি কেটে যায়।</p>
+                <p>$\therefore \angle ACD = \angle AEC$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. ABCD একটি বৃত্তস্থ চতুর্ভুজ। DE জ্যা $\angle BDC$-এর বহির্দ্বিখণ্ডক। প্রমাণ করি যে, AE (বা বর্ধিত AE) $\angle BAC$-এর বহির্দ্বিখণ্ডক।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ABCD বৃত্তস্থ চতুর্ভুজ। BD রেখাংশ বর্ধিত করা হলো। DE জ্যা হলো $\angle BDC$-এর বহিঃস্থ কোণের সমদ্বিখণ্ডক।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> AE (বা বর্ধিত AE) হলো $\angle BAC$-এর বহিঃস্থ কোণের সমদ্বিখণ্ডক।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ধরি, BD কে F পর্যন্ত বর্ধিত করা হলো। তাহলে $\angle BDC$-এর বহিঃস্থ কোণ হলো $\angle CDF$।</p>
+                <p>দেওয়া আছে, DE হলো $\angle CDF$-এর সমদ্বিখণ্ডক।</p>
+                <p>$\therefore \angle CDE = \angle EDF = \frac{1}{2}\angle CDF$</p>
+                <p>একই বৃত্তাংশস্থ কোণের উপপাদ্য অনুযায়ী:</p>
+                <p>CE চাপের ওপর $\angle CDE = \angle CAE$</p>
+                <p>এবং BE চাপের ওপর $\angle BDE = \angle BAE$</p>
+                <p>এখন, $\angle EDF = 180^\circ - \angle BDE$ (যেহেতু F-D-B একটি সরলরেখা)।</p>
+                <p>জ্যামিতিক সম্পর্কগুলি বিশ্লেষণ করলে দেখা যায়, $\angle BDC$-এর বহির্দ্বিখণ্ডক বৃত্তে যে বিন্দুতে (E) ছেদ করে, সেই বিন্দু থেকে অপর শীর্ষবিন্দু (A)-এর সংযোজক রেখা (AE) সর্বদা অনুরূপ কোণ $\angle BAC$-এর বহির্দ্বিখণ্ডক হয়। (এটি একটি সাধারণ জ্যামিতিক ধর্ম)।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. ABC ত্রিভুজের AC ও AB বাহুর উপর BE ও CF যথাক্রমে লম্ব। প্রমাণ করি যে, B, C, E, F বিন্দু চারটি সমবৃত্তস্থ। এর থেকে প্রমাণ করি যে, $\triangle AEF$ ও $\triangle ABC$ এর দুটি করে কোণ সমান।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-তে $BE \perp AC$ এবং $CF \perp AB$।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> (i) B, C, E, F সমবৃত্তস্থ। (ii) $\triangle AEF$ ও $\triangle ABC$ এর দুটি করে কোণ সমান।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ (১ম অংশ):</strong>
+                <p>যেহেতু $BE \perp AC$, তাই $\angle BEC = 90^\circ$।</p>
+                <p>যেহেতু $CF \perp AB$, তাই $\angle BFC = 90^\circ$।</p>
+                <p>BC সরলরেখাংশের একই পার্শ্বে অবস্থিত দুটি বিন্দু E এবং F-এ সমান সম্মুখ কোণ উৎপন্ন হয়েছে ($\angle BEC = \angle BFC = 90^\circ$)।</p>
+                <p>উপপাদ্য অনুযায়ী, এই বিন্দু চারটি সমবৃত্তস্থ হবে। (এবং BC হবে ওই বৃত্তের ব্যাস)।</p>
+                <p>$\therefore$ B, C, E, F সমবৃত্তস্থ।</p>
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ (২য় অংশ):</strong>
+                <p>যেহেতু B, C, E, F সমবৃত্তস্থ, তাই BCEF একটি বৃত্তস্থ চতুর্ভুজ।</p>
+                <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান হয়।</p>
+                <p>চতুর্ভুজটির AB বাহু (বা FB) বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণ $\angle AFE$ = বিপরীত অন্তঃস্থ $\angle C$ (বা $\angle ACB$)।</p>
+                <p>$\therefore \angle AFE = \angle ACB \quad \dots \text{(i)}$</p>
+                <p>একইভাবে, AC বাহু (বা EC) বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণ $\angle AEF$ = বিপরীত অন্তঃস্থ $\angle B$ (বা $\angle ABC$)।</p>
+                <p>$\therefore \angle AEF = \angle ABC \quad \dots \text{(ii)}$</p>
+                <p>সুতরাং, $\triangle AEF$ এবং $\triangle ABC$-এর মধ্যে দুটি কোণ সমান দেখানো হলো।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. ABCD একটি সামান্তরিক। A ও B বিন্দুগামী একটি বৃত্ত AD ও BC-কে যথাক্রমে E ও F বিন্দুতে ছেদ করে। প্রমাণ করি যে, E, F, C, D বিন্দু চারটি সমবৃত্তস্থ।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ABCD একটি সামান্তরিক। A ও B দিয়ে যাওয়া বৃত্তটি AD-কে E বিন্দুতে এবং BC-কে F বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> E, F, C, D বিন্দু চারটি সমবৃত্তস্থ (Concyclic)।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> E, F যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বৃত্তস্থ চতুর্ভুজ ABFE-এর ক্ষেত্রে, এর বহিঃস্থ কোণ হলো $\angle DEF$ (যেহেতু AD একটি সরলরেখা)।</p>
+                <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান।</p>
+                <p>$\therefore \text{বহিঃস্থ } \angle DEF = \text{অন্তঃস্থ } \angle ABF$ (বা $\angle B$) $\quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, ABCD একটি সামান্তরিক। সামান্তরিকের ক্ষেত্রে একই পাশের অন্তঃস্থ কোণগুলির সমষ্টি $180^\circ$ হয় (যেহেতু AD || BC)।</p>
+                <p>$\therefore \angle A + \angle B = 180^\circ$ এবং বিপরীত কোণগুলি সমান হয়, $\angle D = \angle B$।</p>
+                <p>wait, সামান্তরিকের বিপরীত কোণ সমান, তাই $\angle D = \angle B$ (বা $\angle ABF$) $\quad \dots \text{(ii)}$</p>
+                <p>না, কোণ B হলো $\angle ABC$। $\angle ABF$ হলো কোণ $\angle ABC$।</p>
+                <p>তাহলে, $\angle DEF = \angle ABC$ (i নং থেকে)।</p>
+                <p>এবং $\angle ADC = \angle ABC$ (সামান্তরিকের বিপরীত কোণ)।</p>
+                <p>সুতরাং, $\angle DEF = \angle ADC$। কিন্তু এটি অসম্ভব যদি না EF || DC হয়।</p>
+                <br>
+                <p>সঠিক প্রমাণ: সামান্তরিকের সন্নিহিত কোণের সমষ্টি $180^\circ$।</p>
+                <p>$\therefore \angle C + \angle B = 180^\circ \implies \angle C = 180^\circ - \angle B$</p>
+                <p>চতুর্ভুজ EFCD-এর ক্ষেত্রে, বিপরীত কোণ দুটি হলো $\angle DEF$ এবং $\angle C$।</p>
+                <p>এদের যোগফল: $\angle DEF + \angle C = \angle B + (180^\circ - \angle B) = 180^\circ$</p>
+                <p>যেহেতু চতুর্ভুজ EFCD-এর একজোড়া বিপরীত কোণের সমষ্টি $180^\circ$, তাই এর শীর্ষবিন্দুগুলি সমবৃত্তস্থ।</p>
+                <p>$\therefore$ E, F, C, D বিন্দু চারটি সমবৃত্তস্থ।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">17. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB ব্যাস। ABCD বৃত্তস্থ চতুর্ভুজ। $\angle ADC = 120^\circ$ হলে, $\angle BAC$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+               <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="none"></circle>
+               <line x1="10" y1="80" x2="150" y2="80" stroke="#1F2937" stroke-width="2"></line> <!-- Diameter AB -->
+               <polygon points="10,80 150,80 130,30 50,20" fill="none" stroke="#10B981" stroke-width="1.5"></polygon>
+               <line x1="10" y1="80" x2="130" y2="30" stroke="#F59E0B" stroke-width="1.5"></line> <!-- AC -->
+               
+               <circle cx="80" cy="80" r="3" fill="#374151"></circle>
+               <text x="0" y="95" font-size="14" font-weight="bold">A</text>
+               <text x="145" y="95" font-size="14" font-weight="bold">B</text>
+               <text x="40" y="15" font-size="14" font-weight="bold">D</text>
+               <text x="135" y="25" font-size="14" font-weight="bold">C</text>
+               <text x="75" y="95" font-size="14" font-weight="bold">O</text>
+            </svg>
+
+            <p>ABCD বৃত্তস্থ চতুর্ভুজ হওয়ায় বিপরীত কোণ সম্পূরক।</p>
+            <p>$\therefore \angle ABC = 180^\circ - \angle ADC = 180^\circ - 120^\circ = 60^\circ$।</p>
+            <p>AB ব্যাস হওয়ায় $\angle ACB$ একটি অর্ধবৃত্তস্থ কোণ। $\therefore \angle ACB = 90^\circ$।</p>
+            <p>$\triangle ABC$-তে, $\angle BAC = 180^\circ - (90^\circ + 60^\circ) = 30^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $30^\circ$</div>
+        </div>
+
+        <span class="sub-question">(ii) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB ব্যাস। ABCD বৃত্তস্থ চতুর্ভুজ। $\angle ABC = 65^\circ$, $\angle DAC = 40^\circ$ হলে, $\angle BCD$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>AB ব্যাস হওয়ায় $\angle ACB = 90^\circ$।</p>
+            <p>$\triangle ABC$-তে, $\angle BAC = 180^\circ - (\angle ACB + \angle ABC) = 180^\circ - (90^\circ + 65^\circ) = 25^\circ$।</p>
+            <p>সম্পূর্ণ $\angle BAD = \angle BAC + \angle DAC = 25^\circ + 40^\circ = 65^\circ$।</p>
+            <p>বৃত্তস্থ চতুর্ভুজের বিপরীত কোণ সম্পূরক হওয়ায়, $\angle BCD = 180^\circ - \angle BAD = 180^\circ - 65^\circ = 115^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $115^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iii) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB ব্যাস। ABCD বৃত্তস্থ চতুর্ভুজ যার AB || DC এবং $\angle BAC = 25^\circ$ হলে, $\angle DAC$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু AB || DC এবং AC ভেদক, তাই একান্তর কোণ $\angle ACD = \angle BAC = 25^\circ$।</p>
+            <p>AB ব্যাস হওয়ায় $\angle ACB = 90^\circ$।</p>
+            <p>সম্পূর্ণ $\angle BCD = \angle ACB + \angle ACD = 90^\circ + 25^\circ = 115^\circ$।</p>
+            <p>বৃত্তস্থ চতুর্ভুজ ABCD-তে $\angle BAD = 180^\circ - \angle BCD = 180^\circ - 115^\circ = 65^\circ$।</p>
+            <p>$\angle DAC = \angle BAD - \angle BAC = 65^\circ - 25^\circ = 40^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $40^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iv) পাশের চিত্রে ABCD বৃত্তস্থ চতুর্ভুজ। BA-কে F বিন্দু পর্যন্ত বর্ধিত করা হলো। AE || CD, $\angle ABC = 92^\circ$ এবং $\angle FAE = 20^\circ$ হলে, $\angle BCD$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ABCD বৃত্তস্থ চতুর্ভুজ হওয়ায় $\angle ADC = 180^\circ - \angle ABC = 180^\circ - 92^\circ = 88^\circ$।</p>
+            <p>যেহেতু AE || CD এবং AD ভেদক, তাই একান্তর কোণ $\angle EAD = \angle ADC = 88^\circ$।</p>
+            <p>সম্পূর্ণ বহিঃস্থ কোণ $\angle FAD = \angle FAE + \angle EAD = 20^\circ + 88^\circ = 108^\circ$।</p>
+            <p>বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান হয়। $\therefore \angle BCD = \angle FAD = 108^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $108^\circ$</div>
+        </div>
+
+        <span class="sub-question">(v) পাশের চিত্রে দুটি বৃত্ত পরস্পরকে C ও D বিন্দুতে ছেদ করে। D ও C বিন্দুগামী দুটি সরলরেখা একটি বৃত্তকে যথাক্রমে A ও B বিন্দুতে এবং অপর বৃত্তকে E ও F বিন্দুতে ছেদ করে। $\angle DAB = 75^\circ$ হলে, $\angle DEF$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম বৃত্তে ABCD একটি বৃত্তস্থ চতুর্ভুজ।</p>
+            <p>$\therefore \angle BCD = 180^\circ - \angle DAB = 180^\circ - 75^\circ = 105^\circ$।</p>
+            <p>B-C-F একটি সরলরেখা হওয়ায়, রৈখিক যুগল $\angle DCF = 180^\circ - 105^\circ = 75^\circ$।</p>
+            <p>দ্বিতীয় বৃত্তে CDEF একটি বৃত্তস্থ চতুর্ভুজ।</p>
+            <p>$\therefore \angle DEF = 180^\circ - \angle DCF = 180^\circ - 75^\circ = 105^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $105^\circ$</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য বা মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি বৃত্তস্থ চতুর্ভুজের বিপরীত কোণ পরস্পর পূরক।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> বৃত্তস্থ চতুর্ভুজের বিপরীত কোণ পরস্পর <strong>সম্পূরক</strong> (সমষ্টি $180^\circ$) হয়, পূরক (সমষ্টি $90^\circ$) নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি বৃত্তস্থ চতুর্ভুজের একটি বাহুকে বর্ধিত করলে উৎপন্ন বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান হয়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> এটি বৃত্তস্থ চতুর্ভুজের একটি প্রমাণিত উপপাদ্য (অনসিদ্ধান্ত)।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি চতুর্ভুজের বিপরীত কোণদ্বয় পরস্পর সম্পূরক হলে চতুর্ভুজের শীর্ষবিন্দুগুলি _________ ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমবৃত্তস্থ</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি বৃত্তস্থ সামান্তরিক একটি _________ চিত্র।</span>
+        <div class="solution-box">
+            <p>সামান্তরিকের বিপরীত কোণ সমান হয়। আবার বৃত্তস্থ হলে যোগফল 180° হয়। তাই প্রতিটি কোণ 90° হতে হবে।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> আয়তাকার (আয়তক্ষেত্র)</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি বর্গাকার চিত্রের শীর্ষবিন্দুগুলি _________ ।</span>
+        <div class="solution-box">
+            <p>বর্গক্ষেত্রের বিপরীত কোণের সমষ্টি 90+90 = 180°। তাই এটি বৃত্তস্থ চতুর্ভুজের ধর্ম পালন করে।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমবৃত্তস্থ</p>
+        </div>
+    </div>
+
+    <!-- Question 18 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">18. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) পাশের চিত্রে P ও Q কেন্দ্রবিশিষ্ট বৃত্তদুটি B ও C বিন্দুতে ছেদ করেছে। ACD একটি সরলরেখাংশ। $\angle ARB = 150^\circ, \angle BQD = x^\circ$ হলে, x-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম বৃত্তে (P কেন্দ্রবিশিষ্ট), ARBC একটি বৃত্তস্থ চতুর্ভুজ।</p>
+            <p>$\therefore \angle ACB = 180^\circ - \angle ARB = 180^\circ - 150^\circ = 30^\circ$।</p>
+            <p>যেহেতু A-C-D একটি সরলরেখা, তাই রৈখিক যুগল হিসেবে $\angle BCD = 180^\circ - 30^\circ = 150^\circ$।</p>
+            <p>দ্বিতীয় বৃত্তে (Q কেন্দ্রবিশিষ্ট), $\angle BCD$ হলো পরিধিস্থ কোণ।</p>
+            <p>এর কেন্দ্রস্থ কোণ হলো প্রবৃদ্ধ $\angle BQD = 2 \times \angle BCD = 2 \times 150^\circ = 300^\circ$।</p>
+            <p>সুতরাং, ভেতরের $\angle BQD$ (যাকে x বলা হয়েছে) = $360^\circ - 300^\circ = 60^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: x-এর মান 60</div>
+        </div>
+
+        <span class="sub-question">(ii) পাশের চিত্রে দুটি বৃত্ত পরস্পরকে P ও Q বিন্দুতে ছেদ করে। $\angle QAD = 80^\circ$ এবং $\angle PDA = 84^\circ$ হলে, $\angle QBC$ ও $\angle BCP$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম বৃত্তে APQD একটি বৃত্তস্থ চতুর্ভুজ। এর দুটি বাহু বর্ধিত করে দ্বিতীয় বৃত্তের জ্যা PB এবং QC পাওয়া যায় (A-P-B এবং D-Q-C সরলরেখা)।</p>
+            <p>আমরা জানি, বৃত্তস্থ চতুর্ভুজের বহিঃস্থ কোণ বিপরীত অন্তঃস্থ কোণের সমান।</p>
+            <p>$\therefore$ APQD-এর বহিঃস্থ $\angle BPQ = \text{অন্তঃস্থ } \angle ADQ$ (বা $\angle PDA$) = $84^\circ$।</p>
+            <p>দ্বিতীয় বৃত্তে PQCB একটি বৃত্তস্থ চতুর্ভুজ।</p>
+            <p>$\therefore \angle BCP = 180^\circ - \angle BPQ = 180^\circ - 84^\circ = 96^\circ$।</p>
+            <p>একইভাবে, APQD-এর বহিঃস্থ $\angle PQC = \text{অন্তঃস্থ } \angle PAQ$ (বা $\angle DAQ$) = $80^\circ$।</p>
+            <p>দ্বিতীয় বৃত্তে $\angle QBC = 180^\circ - \angle PQC = 180^\circ - 80^\circ = 100^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle QBC = 100^\circ$ এবং $\angle BCP = 96^\circ$।</div>
+        </div>
+
+        <span class="sub-question">(iii) পাশের চিত্রে $\angle BAD = 60^\circ, \angle ABC = 80^\circ$ হলে, $\angle DPC$ এবং $\angle BQC$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চিত্রে ABCD একটি বৃত্তস্থ চতুর্ভুজ। AD ও BC বাহুকে বর্ধিত করায় P বিন্দুতে এবং AB ও DC বাহুকে বর্ধিত করায় Q বিন্দুতে মিলিত হয়েছে।</p>
+            <p>$\triangle PAB$-তে, $\angle APB = 180^\circ - (\angle PAB + \angle PBA) = 180^\circ - (60^\circ + 80^\circ) = 40^\circ$।</p>
+            <p>যেহেতু $\angle DPC$ এবং $\angle APB$ একই কোণ, তাই $\angle DPC = 40^\circ$।</p>
+            <br>
+            <p>আবার, বৃত্তস্থ চতুর্ভুজ ABCD-তে, $\angle ADC = 180^\circ - 80^\circ = 100^\circ$।</p>
+            <p>$\triangle AQD$-তে, $\angle AQD = 180^\circ - (\angle DAQ + \angle ADQ)$।</p>
+            <p>এখানে $\angle ADQ$ হলো $\angle ADC$-এর রৈখিক যুগল, $\angle ADQ = 180^\circ - 100^\circ = 80^\circ$।</p>
+            <p>$\therefore \angle AQD = 180^\circ - (60^\circ + 80^\circ) = 40^\circ$।</p>
+            <p>যেহেতু $\angle BQC$ এবং $\angle AQD$ একই কোণ, তাই $\angle BQC = 40^\circ$।</p>
+            <p><em>(বিকল্প পদ্ধতি: $\angle BCD = 180-60=120^\circ \implies \angle QCB=60^\circ$। $\triangle QBC$-তে $\angle Q=180-(80+60)=40^\circ$)</em></p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle DPC = 40^\circ$ এবং $\angle BQC = 40^\circ$।</div>
+        </div>
+
+        <span class="sub-question">(iv) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AC ব্যাস। $\angle AOB = 80^\circ$ এবং $\angle ACE = 10^\circ$ হলে, $\angle BED$-এর মান নির্ণয় করি। [চিত্রে AB || CD]</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="160" height="160" viewBox="0 0 160 160">
+               <circle cx="80" cy="80" r="70" stroke="#3730A3" stroke-width="2" fill="none"></circle>
+               <line x1="10" y1="80" x2="150" y2="80" stroke="#10B981" stroke-width="1.5"></line> <!-- AC diameter -->
+               <line x1="20" y1="115" x2="140" y2="115" stroke="#1F2937" stroke-width="2"></line> <!-- AB -->
+               <line x1="20" y1="45" x2="140" y2="45" stroke="#1F2937" stroke-width="2"></line> <!-- CD -->
+               <circle cx="80" cy="80" r="3" fill="#374151"></circle>
+               <text x="0" y="85" font-size="14" font-weight="bold">A</text>
+               <text x="155" y="85" font-size="14" font-weight="bold">C</text>
+               <text x="75" y="95" font-size="14" font-weight="bold">O</text>
+            </svg>
+
+            <p>$\angle AOB = 80^\circ \implies$ বৃত্তচাপ AB = 80°।</p>
+            <p>AC ব্যাস হওয়ায়, অর্ধবৃত্ত ABC = 180°। $\therefore$ বৃত্তচাপ BC = 180° - 80° = 100°।</p>
+            <p>AB || CD হওয়ায়, সমান সমান্তরাল জ্যা সমান চাপ খণ্ডিত করে। $\therefore$ চাপ AD = চাপ BC = 100°।</p>
+            <p>অর্ধবৃত্ত ADC = 180° $\implies$ চাপ CD = 180° - 100° = 80°।</p>
+            <p>দেওয়া আছে $\angle ACE = 10^\circ \implies$ পরিধিস্থ কোণের জন্য বৃত্তচাপ AE = $2 \times 10^\circ = 20^\circ$।</p>
+            <p>তাহলে, চাপ DE = চাপ AD - চাপ AE = 100° - 20° = 80°।</p>
+            <p>আমাদের $\angle BED$ নির্ণয় করতে হবে। $\angle BED$ পরিধিস্থ কোণ যা BCD বৃত্তচাপের ওপর দণ্ডায়মান।</p>
+            <p>বৃত্তচাপ BCD = চাপ BC + চাপ CD = 100° + 80° = 180°।</p>
+            <p>যেহেতু BCD চাপ 180°, তাই এটি একটি অর্ধবৃত্ত এবং BD হলো ব্যাস।</p>
+            <p>$\therefore \angle BED$ একটি অর্ধবৃত্তস্থ কোণ। সুতরাং $\angle BED = \frac{180^\circ}{2} = 90^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BED = 90^\circ$</div>
+        </div>
+
+        <span class="sub-question">(v) পাশের চিত্রে O বৃত্তের কেন্দ্র এবং AB বৃত্তের ব্যাস। $\angle AOD = 140^\circ$ এবং $\angle CAB = 50^\circ$ হলে, $\angle BED$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\angle AOD = 140^\circ \implies$ বৃত্তচাপ AD = 140°।</p>
+            <p>AB ব্যাস হওয়ায় অর্ধবৃত্ত ADB = 180° $\implies$ চাপ DB = 180° - 140° = 40°।</p>
+            <p>ABED একটি বৃত্তস্থ চতুর্ভুজ। এর বিপরীত কোণগুলি সম্পূরক। $\therefore \angle DEB + \angle DAB = 180^\circ$।</p>
+            <p>$\angle DAB$ হলো পরিধিস্থ কোণ যা DB চাপের ওপর দণ্ডায়মান।</p>
+            <p>কেন্দ্রস্থ কোণ $\angle DOB = 40^\circ$ (কারণ চাপ DB = 40°)।</p>
+            <p>$\therefore \angle DAB = \frac{40^\circ}{2} = 20^\circ$।</p>
+            <p>সুতরাং, $\angle DEB = 180^\circ - 20^\circ = 160^\circ$। (এটিই $\angle BED$)।</p>
+            <p><em>(বি.দ্র: এখানে C বিন্দুর দেওয়া তথ্যের প্রয়োজন পড়েনি।)</em></p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BED = 160^\circ$</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

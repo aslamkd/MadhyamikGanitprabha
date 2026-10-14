@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-12</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:10px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px}.solution-box{padding:0.8rem 0.4rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-book-open text-info me-2"></i> <strong>প্রয়োজনীয় সূত্রাবলি (Important Formulas):</strong><br>
+        ১) গোলকের বক্রতলের বা সমগ্রতলের ক্ষেত্রফল = $4\pi r^2$ বর্গ একক।<br>
+        ২) গোলকের আয়তন বা ঘনফল = $\displaystyle\frac{4}{3}\pi r^3$ ঘন একক।<br>
+        ৩) নিরেট অর্ধগোলকের বক্রতলের ক্ষেত্রফল = $2\pi r^2$ বর্গ একক।<br>
+        ৪) নিরেট অর্ধগোলকের সমগ্রতলের ক্ষেত্রফল = $3\pi r^2$ বর্গ একক।<br>
+        ৫) নিরেট অর্ধগোলকের আয়তন = $\displaystyle\frac{2}{3}\pi r^3$ ঘন একক।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. একটি গোলকের ব্যাসার্ধের দৈর্ঘ্য 10.5 সেমি. হলে, তার সমগ্রতলের ক্ষেত্রফল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="120" viewBox="0 0 120 120">
+              <defs>
+                <radialGradient id="sphereGrad1" cx="30%" cy="30%" r="50%">
+                  <stop offset="0%"></stop>
+                  <stop offset="100%"></stop>
+                </radialGradient>
+              </defs>
+              <circle cx="60" cy="60" r="50" fill="url(#sphereGrad1)"></circle>
+              <ellipse cx="60" cy="60" rx="50" ry="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"></ellipse>
+              <line x1="60" y1="60" x2="110" y2="60" stroke="white" stroke-width="2"></line>
+              <circle cx="60" cy="60" r="2" fill="white"></circle>
+              <text x="80" y="55" fill="white" font-size="12" font-weight="bold">r</text>
+            </svg>
+
+            <p>গোলকের ব্যাসার্ধ ($r$) = 10.5 সেমি।</p>
+            <p>সমগ্রতলের ক্ষেত্রফল = $4\pi r^2$</p>
+            \[
+\begin{array}{l}
+= 4 \times \frac{22}{7} \times (10.5)^2 \\
+= 4 \times \frac{22}{7} \times 110.25 \\
+= 4 \times 22 \times 15.75 \\
+= 88 \times 15.75 \\
+= 1386 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গোলকটির সমগ্রতলের ক্ষেত্রফল 1386 বর্গ সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. একটি চামড়ার বল তৈরি করতে প্রতি বর্গ সেমি. 17.50 টাকা হিসাবে 431.20 টাকা লেগেছে। বলটির ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বলটির সমগ্রতলের ক্ষেত্রফল = $\displaystyle \frac{\text{মোট খরচ}}{\text{প্রতি বর্গ সেমির খরচ}}$</p>
+            \[
+\begin{array}{l}
+= \frac{431.20}{17.50} \\
+= \frac{4312}{175} = 24.64 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p>ধরি, বলটির ব্যাসার্ধ $r$ সেমি।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+4\pi r^2 = 24.64 \\
+4 \times \frac{22}{7} \times r^2 = 24.64 \\
+\frac{88}{7} r^2 = 24.64 \\
+r^2 = \frac{24.64 \times 7}{88} \\
+r^2 = 0.28 \times 7 \\
+r^2 = 1.96 \\
+r = \sqrt{1.96} = 1.4 \text{ সেমি.}
+\end{array}
+\]
+            <p>বলটির ব্যাস = $2r = 2 \times 1.4 = 2.8$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বলটির ব্যাসের দৈর্ঘ্য 2.8 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. স্কুলে শর্টপুট খেলার জন্য যে বলটি ব্যবহার করা হয় তার ব্যাসের দৈর্ঘ্য 7 সেমি. হলে, বলটিতে কত ঘন সেমি. লোহা আছে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লোহার বলের ব্যাস = 7 সেমি। $\therefore$ ব্যাসার্ধ ($r$) = $\displaystyle \frac{7}{2} = 3.5$ সেমি।</p>
+            <p>বলটিতে থাকা লোহার পরিমাণ (আয়তন) = $\displaystyle \frac{4}{3}\pi r^3$</p>
+            \[
+\begin{array}{l}
+= \frac{4}{3} \times \frac{22}{7} \times (3.5)^3 \\
+= \frac{4}{3} \times \frac{22}{7} \times 3.5 \times 3.5 \times 3.5 \\
+= \frac{4 \times 22 \times 0.5 \times 12.25}{3} \\
+= \frac{88 \times 0.5 \times 12.25}{3} \\
+= \frac{44 \times 12.25}{3} \\
+= \frac{539}{3} \\
+= 179\frac{2}{3} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বলটিতে $179\frac{2}{3}$ ঘন সেমি লোহা আছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. 28 সেমি. দৈর্ঘ্যের ব্যাসবিশিষ্ট একটি নিরেট গোলক জলে সম্পূর্ণভাবে নিমজ্জিত করলে যে পরিমাণ জল অপসারিত করবে তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আর্কিমিডিসের নীতি অনুযায়ী, অপসারিত জলের আয়তন গোলকের আয়তনের সমান হবে।</p>
+            <p>গোলকের ব্যাস = 28 সেমি। $\therefore$ ব্যাসার্ধ ($r$) = 14 সেমি।</p>
+            <p>আয়তন = $\displaystyle \frac{4}{3}\pi r^3$</p>
+            \[
+\begin{array}{l}
+= \frac{4}{3} \times \frac{22}{7} \times 14^3 \\
+= \frac{4}{3} \times \frac{22}{7} \times 14 \times 14 \times 14 \\
+= \frac{88 \times 2 \times 196}{3} \\
+= \frac{176 \times 196}{3} \\
+= \frac{34496}{3} \\
+= 11498\frac{2}{3} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অপসারিত জলের পরিমাণ $11498\frac{2}{3}$ ঘন সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. কোনো গোলকাকার গ্যাস বেলুন ফোলাবার সময়ে তার ব্যাসার্ধের দৈর্ঘ্য 7 সেমি. থেকে 21 সেমি. হলে বেলুনটির পূর্বের ও পরের সমগ্রতলের ক্ষেত্রফলের অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বেলুনের প্রাথমিক ব্যাসার্ধ ($r_1$) = 7 সেমি।</p>
+            <p>পরের ব্যাসার্ধ ($r_2$) = 21 সেমি।</p>
+            <p>পূর্বের সমগ্রতলের ক্ষেত্রফল : পরের সমগ্রতলের ক্ষেত্রফল</p>
+            \[
+\begin{array}{l}
+= 4\pi r_1^2 : 4\pi r_2^2 \\
+= r_1^2 : r_2^2 \\
+= 7^2 : 21^2 \\
+= 49 : 441 \\
+= 1 : 9 \quad [\text{49 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ক্ষেত্রফলের অনুপাত 1:9।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. অর্ধগোলাকৃতি একটি বাটি তৈরি করতে $127\frac{2}{7}$ বর্গ সেমি. পাত লেগেছে। বাটিটির মুখের ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="80" viewBox="0 0 120 80">
+              <path d="M10,20 Q10,75 60,75 Q110,75 110,20" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="2"></path>
+              <ellipse cx="60" cy="20" rx="50" ry="10" fill="none" stroke="#10B981" stroke-width="2"></ellipse>
+              <line x1="60" y1="20" x2="110" y2="20" stroke="#3730A3" stroke-width="2" stroke-dasharray="4"></line>
+              <text x="80" y="15" font-size="12" font-weight="bold">r</text>
+            </svg>
+
+            <p>অর্ধগোলাকৃতি বাটিটির ক্ষেত্রে কেবলমাত্র বক্রতলের ওপর পাত থাকে (মুখ খোলা)।</p>
+            <p>ধরি, বাটির ব্যাসার্ধ $r$ সেমি।</p>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi r^2$</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+2\pi r^2 = 127\frac{2}{7} \\
+2 \times \frac{22}{7} \times r^2 = \frac{891}{7} \\
+\frac{44}{7} r^2 = \frac{891}{7} \\
+44 r^2 = 891 \\
+r^2 = \frac{891}{44} \\
+r^2 = \frac{81}{4} \quad [\text{11 দিয়ে কেটে}] \\
+r = \sqrt{\frac{81}{4}} = \frac{9}{2} = 4.5 \text{ সেমি.}
+\end{array}
+\]
+            <p>বাটিটির মুখের ব্যাস = $2r = 2 \times 4.5 = 9$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বাটিটির মুখের ব্যাসের দৈর্ঘ্য 9 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি নিরেট লোহার গোলকের ব্যাসার্ধের দৈর্ঘ্য 2.1 সেমি.। ওই গোলকটিতে কত ঘন সেমি. লোহা আছে তা হিসাব করে লিখি এবং ওই লোহার গোলকের বক্রতলের ক্ষেত্রফল নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গোলকের ব্যাসার্ধ ($r$) = 2.1 সেমি।</p>
+            <p><strong>১) লোহার পরিমাণ (আয়তন):</strong></p>
+            \[
+\begin{array}{l}
+V = \frac{4}{3}\pi r^3 \\
+= \frac{4}{3} \times \frac{22}{7} \times (2.1)^3 \\
+= \frac{4}{3} \times \frac{22}{7} \times 2.1 \times 2.1 \times 2.1 \\
+= 4 \times 22 \times 0.1 \times 2.1 \times 2.1 \\
+= 8.8 \times 4.41 \\
+= 38.808 \text{ ঘন সেমি.}
+\end{array}
+\]
+            <p><strong>২) বক্রতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+S = 4\pi r^2 \\
+= 4 \times \frac{22}{7} \times (2.1)^2 \\
+= 4 \times \frac{22}{7} \times 2.1 \times 2.1 \\
+= 4 \times 22 \times 0.3 \times 2.1 \\
+= 88 \times 0.63 \\
+= 55.44 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গোলকটিতে 38.808 ঘন সেমি. লোহা আছে এবং বক্রতলের ক্ষেত্রফল 55.44 বর্গ সেমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. একটি নিরেট সিসার গোলকের ব্যাসের দৈর্ঘ্য 14 সেমি.। এই গোলকটি গলিয়ে 3.5 সেমি. দৈর্ঘ্যের ব্যাসার্ধের কতগুলি নিরেট গোলক তৈরি করা যাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বড়ো সিসার গোলকের ব্যাস = 14 সেমি $\implies$ ব্যাসার্ধ ($R$) = 7 সেমি।</p>
+            <p>ছোটো তৈরি হওয়া গোলকের ব্যাসার্ধ ($r$) = 3.5 সেমি।</p>
+            <p>আমরা জানি, নতুন তৈরি হওয়া গোলকের সংখ্যা = $\displaystyle \frac{\text{বড়ো গোলকের আয়তন}}{\text{একটি ছোটো গোলকের আয়তন}}$</p>
+            \[
+\begin{array}{l}
+\text{গোলকের সংখ্যা} = \frac{\frac{4}{3}\pi R^3}{\frac{4}{3}\pi r^3} \\
+= \frac{R^3}{r^3} \\
+= \left(\frac{R}{r}\right)^3 \\
+= \left(\frac{7}{3.5}\right)^3 \\
+= 2^3 \\
+= 8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 8 টি নিরেট গোলক তৈরি করা যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. 3 সেমি., 4 সেমি., ও 5 সেমি. দৈর্ঘ্যের ব্যাসার্ধের তিনটি নিরেট তামার গোলক গলিয়ে একটি নিরেট বড়ো গোলক তৈরি করা হলো। বড়ো গোলকটির ব্যাসার্ধের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তিনটি ছোটো গোলকের ব্যাসার্ধ যথাক্রমে $r_1 = 3$ সেমি, $r_2 = 4$ সেমি এবং $r_3 = 5$ সেমি।</p>
+            <p>ধরি, বড়ো গোলকটির ব্যাসার্ধ $R$ সেমি।</p>
+            <p>শর্তানুসারে, বড়ো গোলকের আয়তন = তিনটি ছোটো গোলকের মোট আয়তন</p>
+            \[
+\begin{array}{l}
+\frac{4}{3}\pi R^3 = \frac{4}{3}\pi r_1^3 + \frac{4}{3}\pi r_2^3 + \frac{4}{3}\pi r_3^3 \\
+\frac{4}{3}\pi R^3 = \frac{4}{3}\pi (r_1^3 + r_2^3 + r_3^3) \\
+R^3 = r_1^3 + r_2^3 + r_3^3 \quad [\text{উভয়পক্ষ থেকে } \frac{4}{3}\pi \text{ বাদ দিয়ে}] \\
+R^3 = 3^3 + 4^3 + 5^3 \\
+R^3 = 27 + 64 + 125 \\
+R^3 = 216 \\
+R = \sqrt[3]{216} = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বড়ো গোলকটির ব্যাসার্ধের দৈর্ঘ্য 6 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি অর্ধগোলাকৃতি গম্বুজের ভূমিতলের ব্যাসের দৈর্ঘ্য 42 ডেসিমি.। গম্বুজটির উপরিতল রং করতে প্রতি বর্গ মিটার 35 টাকা হিসাবে কত খরচ পড়বে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গম্বুজের ব্যাস = 42 ডেসিমি. $\implies$ ব্যাসার্ধ ($r$) = 21 ডেসিমি.।</p>
+            <p>যেহেতু খরচ বর্গ মিটারে দেওয়া আছে, তাই ব্যাসার্ধকে মিটারে পরিণত করি:</p>
+            <p>$r = 21$ ডেসিমি. = 2.1 মিটার।</p>
+            <p>গম্বুজের উপরিতল বলতে অর্ধগোলকটির বক্রতল বোঝায়।</p>
+            <p>বক্রতলের ক্ষেত্রফল = $2\pi r^2$</p>
+            \[
+\begin{array}{l}
+= 2 \times \frac{22}{7} \times (2.1)^2 \\
+= 2 \times \frac{22}{7} \times 2.1 \times 2.1 \\
+= 44 \times 0.3 \times 2.1 \\
+= 13.2 \times 2.1 \\
+= 27.72 \text{ বর্গ মিটার}
+\end{array}
+\]
+            <p>প্রতি বর্গ মিটারে রং করার খরচ 35 টাকা।</p>
+            <p>মোট খরচ = $27.72 \times 35 = 970.20$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গম্বুজটির উপরিতল রং করতে মোট 970.20 টাকা খরচ পড়বে।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. একই ধাতুর পাত থেকে তৈরি দুটি ফাঁপা গোলকের ব্যাসের দৈর্ঘ্য যথাক্রমে 21 সেমি. এবং 17.5 সেমি.। গোলকদুটি তৈরি করতে যে পরিমাণ ধাতুর পাত লেগেছে তার অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ফাঁপা গোলক তৈরি করতে ধাতুর পাতের পরিমাণ তাদের সমগ্রতলের ক্ষেত্রফলের সমানুপাতী।</p>
+            <p>প্রথম গোলকের ব্যাস ($d_1$) = 21 সেমি $\implies$ ব্যাসার্ধ ($r_1$) = $\displaystyle\frac{21}{2}$ সেমি।</p>
+            <p>দ্বিতীয় গোলকের ব্যাস ($d_2$) = 17.5 সেমি $\implies$ ব্যাসার্ধ ($r_2$) = $\displaystyle\frac{17.5}{2}$ সেমি।</p>
+            <p>ধাতুর পাতের পরিমাণের অনুপাত = প্রথম গোলকের ক্ষেত্রফল : দ্বিতীয় গোলকের ক্ষেত্রফল</p>
+            \[
+\begin{array}{l}
+= 4\pi r_1^2 : 4\pi r_2^2 \\
+= r_1^2 : r_2^2 \\
+= \left(\frac{21}{2}\right)^2 : \left(\frac{17.5}{2}\right)^2 \\
+= 21^2 : 17.5^2 \\
+= 441 : 306.25
+\end{array}
+\]
+            <p>হিসাবের সুবিধার্থে দশমিক তুলি (উভয়পক্ষকে 100 দিয়ে গুণ করে):</p>
+            \[
+\begin{array}{l}
+= 44100 : 30625 \\
+= 1764 : 1225 \quad [\text{25 দিয়ে ভাগ করে}] \\
+= 36 : 25 \quad [\text{49 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p><em>(বিকল্প সহজ পদ্ধতি: অনুপাত = $(\displaystyle\frac{21}{17.5})^2 = (\frac{210}{175})^2 = (\frac{6}{5})^2 = \frac{36}{25}$)</em></p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ধাতুর পাতের পরিমাণের অনুপাত 36:25।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. একটি ধাতব গোলকের উপরিতল এমনভাবে কেটে নেওয়া হলো যে নতুন গোলকের বক্রতলের ক্ষেত্রফল আগের গোলকের ঠিক অর্ধেক হয়। কেটে নেওয়া অংশের আয়তনের সঙ্গে অবশিষ্ট গোলকের আয়তনের অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, পুরানো (আগের) গোলকটির ব্যাসার্ধ = $R$ এবং নতুন (অবশিষ্ট) গোলকটির ব্যাসার্ধ = $r$।</p>
+            <p>শর্তানুসারে, নতুন গোলকের বক্রতলের ক্ষেত্রফল = আগের গোলকের ক্ষেত্রফলের অর্ধেক।</p>
+            \[
+\begin{array}{l}
+4\pi r^2 = \frac{1}{2} \times 4\pi R^2 \\
+r^2 = \frac{R^2}{2} \\
+r = \frac{R}{\sqrt{2}}
+\end{array}
+\]
+            <p>আগের গোলকটির আয়তন ($V_1$) = $\displaystyle\frac{4}{3}\pi R^3$</p>
+            <p>অবশিষ্ট (নতুন) গোলকের আয়তন ($V_2$) = $\displaystyle\frac{4}{3}\pi r^3 = \frac{4}{3}\pi \left(\frac{R}{\sqrt{2}}\right)^3 = \frac{4}{3}\pi \frac{R^3}{2\sqrt{2}} = \frac{1}{2\sqrt{2}} V_1$</p>
+            <p>কেটে নেওয়া অংশের আয়তন ($V_{\text{cut}}$) = $V_1 - V_2$</p>
+            \[
+\begin{array}{l}
+V_{\text{cut}} = V_1 - \frac{1}{2\sqrt{2}}V_1 \\
+= V_1 \left(1 - \frac{1}{2\sqrt{2}}\right) \\
+= V_1 \left(\frac{2\sqrt{2} - 1}{2\sqrt{2}}\right)
+\end{array}
+\]
+            <p>এখন, কেটে নেওয়া অংশের আয়তন : অবশিষ্ট গোলকের আয়তন</p>
+            \[
+\begin{array}{l}
+= V_{\text{cut}} : V_2 \\
+= V_1 \left(\frac{2\sqrt{2} - 1}{2\sqrt{2}}\right) : \frac{1}{2\sqrt{2}} V_1 \\
+= \left(\frac{2\sqrt{2} - 1}{2\sqrt{2}}\right) : \left(\frac{1}{2\sqrt{2}}\right) \\
+= (2\sqrt{2} - 1) : 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আয়তনের অনুপাত $(2\sqrt{2} - 1) : 1$।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. 14 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি ভূগোলকের অক্ষটির বক্রতলে 0.7 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট দুটি বৃত্তাকার ছিদ্র করা হয়েছে। ভূগোলকটির গোলাকার অংশের ধাতব পাতের ক্ষেত্রফল হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ভূগোলকের ব্যাসার্ধ ($R$) = 14 সেমি।</p>
+            <p>ভূগোলকের সম্পূর্ণ সমগ্রতলের ক্ষেত্রফল = $4\pi R^2$</p>
+            \[
+\begin{array}{l}
+= 4 \times \frac{22}{7} \times 14^2 \\
+= 4 \times \frac{22}{7} \times 196 \\
+= 4 \times 22 \times 28 \\
+= 2464 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p>ছিদ্র দুটির ব্যাসার্ধ ($r$) = 0.7 সেমি।</p>
+            <p>দুটি বৃত্তাকার ছিদ্রের মোট ক্ষেত্রফল = $2 \times \pi r^2$</p>
+            \[
+\begin{array}{l}
+= 2 \times \frac{22}{7} \times (0.7)^2 \\
+= 2 \times \frac{22}{7} \times 0.49 \\
+= 44 \times 0.07 \\
+= 3.08 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p>ভূগোলকটির গোলাকার অংশের ধাতব পাতের ক্ষেত্রফল = সম্পূর্ণ ক্ষেত্রফল - দুটি ছিদ্রের ক্ষেত্রফল</p>
+            \[
+\begin{array}{l}
+= 2464 - 3.08 \\
+= 2460.92 \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ধাতব পাতের ক্ষেত্রফল 2460.92 বর্গ সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. 8 সেমি. দৈর্ঘ্যের ব্যাসার্ধের একটি নিরেট লোহার গোলককে গলিয়ে 1 সেমি. দৈর্ঘ্যের ব্যাসার্ধের কয়টি নিরেট গুলি তৈরি করা যাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বড়ো লোহার গোলকের ব্যাসার্ধ ($R$) = 8 সেমি।</p>
+            <p>বড়ো গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi R^3$</p>
+            <p>ছোটো গুলির ব্যাসার্ধ ($r$) = 1 সেমি।</p>
+            <p>1টি ছোটো গুলির আয়তন = $\displaystyle\frac{4}{3}\pi r^3$</p>
+            <p>নির্ণেয় গুলির সংখ্যা = $\displaystyle\frac{\text{বড়ো গোলকের আয়তন}}{\text{1টি ছোটো গুলির আয়তন}}$</p>
+            \[
+\begin{array}{l}
+= \frac{\frac{4}{3}\pi R^3}{\frac{4}{3}\pi r^3} \\
+= \frac{R^3}{r^3} \\
+= \frac{8^3}{1^3} \\
+= \frac{512}{1} = 512
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 512 টি নিরেট গুলি তৈরি করা যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 (Objective) -->
+    <div class="solution-card">
+        <h4 class="question-title">15. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) 2r একক দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট নিরেট গোলকের আয়তন:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আয়তন = $\displaystyle\frac{4}{3}\pi \times (\text{ব্যাসার্ধ})^3 = \frac{4}{3}\pi(2r)^3 = \frac{4}{3}\pi \cdot 8r^3 = \frac{32\pi r^3}{3}$ ঘন একক।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) $\displaystyle\frac{32\pi r^3}{3}$ ঘন একক</div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি নিরেট গোলকের আয়তনের অনুপাত 1:8 হলে, তাদের বক্রতলের ক্ষেত্রফলের অনুপাত:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আয়তনের অনুপাত $\displaystyle\frac{r_1^3}{r_2^3} = \frac{1}{8} \implies \frac{r_1}{r_2} = \sqrt[3]{\frac{1}{8}} = \frac{1}{2}$</p>
+            <p>বক্রতলের ক্ষেত্রফলের অনুপাত = $\displaystyle\frac{4\pi r_1^2}{4\pi r_2^2} = \left(\frac{r_1}{r_2}\right)^2 = \left(\frac{1}{2}\right)^2 = \frac{1}{4}$ অর্থাৎ 1:4।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 1:4</div>
+        </div>
+
+        <span class="sub-question">(iii) 7 সেমি দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি নিরেট অর্ধগোলকের সমগ্রতলের ক্ষেত্রফল:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>নিরেট অর্ধগোলকের সমগ্রতলের ক্ষেত্রফল = $3\pi r^2$</p>
+            <p>$= 3 \times \pi \times 7^2 = 3 \times 49\pi = 147\pi$ বর্গ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $147\pi$ বর্গ সেমি.</div>
+        </div>
+
+        <span class="sub-question">(iv) দুটি নিরেট গোলকের বক্রতলের ক্ষেত্রফলের অনুপাত 16:9 হলে, তাদের আয়তনের অনুপাত:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ক্ষেত্রফলের অনুপাত $\displaystyle\frac{r_1^2}{r_2^2} = \frac{16}{9} \implies \frac{r_1}{r_2} = \frac{4}{3}$</p>
+            <p>আয়তনের অনুপাত = $\displaystyle\left(\frac{r_1}{r_2}\right)^3 = \left(\frac{4}{3}\right)^3 = \frac{64}{27}$ অর্থাৎ 64:27।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 64:27</div>
+        </div>
+
+        <span class="sub-question">(v) একটি নিরেট গোলকের বক্রতলের ক্ষেত্রফল ও 3 গুণ আয়তনের সাংখ্যমান সমান হলে, গোলকটির ব্যাসার্ধের দৈর্ঘ্য:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, $4\pi r^2 = 3 \times \left(\displaystyle\frac{4}{3}\pi r^3\right)$</p>
+            <p>$4\pi r^2 = 4\pi r^3 \implies r = 1$ একক।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 1 একক</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি নিরেট গোলকের ব্যাসার্ধের দৈর্ঘ্য দ্বিগুণ করলে গোলকটির আয়তন দ্বিগুণ হবে।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> ব্যাসার্ধ $r$ থেকে $2r$ হলে আয়তন হবে $\displaystyle\frac{4}{3}\pi(2r)^3 = 8 \times \frac{4}{3}\pi r^3$। অর্থাৎ আয়তন 8 গুণ হবে, 2 গুণ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি একই ধরনের নিরেট অর্ধগোলক যাদের ভূমিতলের প্রত্যেকের ব্যাসার্ধের দৈর্ঘ্য r একক এবং তা ভূমি বরাবর জোড়া হলে, মিলিত ঘনবস্তুর সমগ্রতলের ক্ষেত্রফল হবে $6\pi r^2$ বর্গ একক।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> দুটি নিরেট অর্ধগোলক ভূমি বরাবর জুড়লে একটি সম্পূর্ণ নিরেট গোলক তৈরি হবে। যার সমগ্রতলের ক্ষেত্রফল হবে $4\pi r^2$ বর্গ একক, $6\pi r^2$ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি তলবিশিষ্ট ঘনবস্তুর নাম _________।</span>
+        <div class="solution-box">
+            <p>গোলকের কেবলমাত্র একটি বক্রতল থাকে।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> গোলক</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি নিরেট অর্ধগোলকের সমতলের সংখ্যা _________।</span>
+        <div class="solution-box">
+            <p>একটি নিরেট অর্ধগোলকের সমতল একটিই থাকে (তার বৃত্তাকার ভূমি)।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 1</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি নিরেট অর্ধগোলকের ব্যাসার্ধের দৈর্ঘ্য 2r একক হলে সমগ্রতলের ক্ষেত্রফল _________ বর্গ একক।</span>
+        <div class="solution-box">
+            <p>সমগ্রতলের ক্ষেত্রফল = $3\pi (\text{ব্যাসার্ধ})^2 = 3\pi (2r)^2 = 3\pi \times 4r^2 = 12\pi r^2$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $12\pi r^2$</p>
+        </div>
+    </div>
+
+    <!-- Question 16 (Short Answer) -->
+    <div class="solution-card">
+        <h4 class="question-title">16. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি নিরেট অর্ধগোলকের আয়তন এবং সমগ্রতলের ক্ষেত্রফলের সাংখ্যমান সমান। অর্ধগোলকটির ব্যাসার্ধের দৈর্ঘ্য কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, অর্ধগোলকের আয়তন = সমগ্রতলের ক্ষেত্রফল</p>
+            \[
+\begin{array}{l}
+\frac{2}{3}\pi r^3 = 3\pi r^2 \\
+\frac{2}{3}r = 3 \quad [\text{উভয়পক্ষ থেকে } \pi r^2 \text{ বাদ দিয়ে}] \\
+2r = 9 \\
+r = 4.5 \text{ একক}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসার্ধের দৈর্ঘ্য 4.5 একক।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি নিরেট গোলকের বক্রতলের ক্ষেত্রফল একটি নিরেট লম্ব বৃত্তাকার চোঙের বক্রতলের ক্ষেত্রফলের সমান। চোঙটির উচ্চতা এবং ব্যাসের দৈর্ঘ্য উভয়ই 12 সেমি.। গোলকটির ব্যাসার্ধের দৈর্ঘ্য কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চোঙের উচ্চতা ($h$) = 12 সেমি এবং ব্যাস = 12 সেমি $\implies$ ব্যাসার্ধ ($R$) = 6 সেমি।</p>
+            <p>চোঙের বক্রতলের ক্ষেত্রফল = $2\pi R h = 2\pi(6)(12) = 144\pi$ বর্গ সেমি।</p>
+            <p>ধরি, গোলকের ব্যাসার্ধ = $r$ সেমি। বক্রতলের ক্ষেত্রফল = $4\pi r^2$।</p>
+            <p>শর্তানুসারে,</p>
+            \[
+\begin{array}{l}
+4\pi r^2 = 144\pi \\
+4r^2 = 144 \\
+r^2 = 36 \\
+r = 6 \text{ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গোলকটির ব্যাসার্ধের দৈর্ঘ্য 6 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি নিরেট অর্ধগোলকের সমগ্রতলের ক্ষেত্রফল এবং একটি নিরেট গোলকের বক্রতলের ক্ষেত্রফল সমান। অর্ধগোলক এবং গোলকের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, অর্ধগোলকের ব্যাসার্ধ $r_1$ এবং গোলকের ব্যাসার্ধ $r_2$।</p>
+            <p>শর্তানুসারে, $3\pi r_1^2 = 4\pi r_2^2$</p>
+            \[
+\begin{array}{l}
+\frac{r_1^2}{r_2^2} = \frac{4}{3} \\
+\frac{r_1}{r_2} = \sqrt{\frac{4}{3}} = \frac{2}{\sqrt{3}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসার্ধের দৈর্ঘ্যের অনুপাত $2 : \sqrt{3}$।</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি নিরেট গোলকের বক্রতলের ক্ষেত্রফল = S এবং আয়তন = V হলে, $S^3/V^2$ এর মান কত তা লিখি। (π এর মান না বসিয়ে)</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $S = 4\pi r^2$ এবং $V = \displaystyle\frac{4}{3}\pi r^3$।</p>
+            <p>প্রদত্ত রাশি:</p>
+            \[
+\begin{array}{l}
+\frac{S^3}{V^2} = \frac{(4\pi r^2)^3}{\left(\frac{4}{3}\pi r^3\right)^2} \\
+= \frac{64\pi^3 r^6}{\frac{16}{9}\pi^2 r^6} \\
+= \frac{64\pi^3 \times 9}{16\pi^2} \\
+= 4\pi \times 9 \\
+= 36\pi
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান $36\pi$।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি গোলকের ব্যাসার্ধের দৈর্ঘ্য 50% বৃদ্ধি করলে বক্রতলের ক্ষেত্রফল শতকরা কত বৃদ্ধি পায় তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি আদি ব্যাসার্ধ $r$। প্রাথমিক ক্ষেত্রফল $S_1 = 4\pi r^2$।</p>
+            <p>নতুন ব্যাসার্ধ $R = r + 50\% \text{ of } r = 1.5r$।</p>
+            <p>নতুন ক্ষেত্রফল $S_2 = 4\pi (1.5r)^2 = 4\pi \times 2.25r^2 = 9\pi r^2$।</p>
+            <p>ক্ষেত্রফল বৃদ্ধি = $S_2 - S_1 = 9\pi r^2 - 4\pi r^2 = 5\pi r^2$।</p>
+            <p>শতকরা বৃদ্ধি = $\displaystyle \frac{\text{বৃদ্ধি}}{\text{প্রাথমিক ক্ষেত্রফল}} \times 100 = \frac{5\pi r^2}{4\pi r^2} \times 100 = \frac{500}{4} = 125\%$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বক্রতলের ক্ষেত্রফল 125% বৃদ্ধি পায়।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

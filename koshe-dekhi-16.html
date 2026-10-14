@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-16</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div class="me-md-4 mb-3 mb-md-0">
+                <svg width="120" height="150" viewBox="0 0 150 180">
+                  <path d="M75,20 L20,130 Q75,160 130,130 Z" fill="#F8FAFC" stroke="#3730A3" stroke-width="2"></path>
+                  <path d="M20,130 Q75,100 130,130" fill="none" stroke="#3730A3" stroke-width="2" stroke-dasharray="4"></path>
+                  <line x1="75" y1="20" x2="75" y2="130" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+                  <line x1="75" y1="130" x2="130" y2="130" stroke="#F59E0B" stroke-width="2"></line>
+                  <text x="60" y="80" font-size="14" font-weight="bold">h</text>
+                  <text x="100" y="145" font-size="14" font-weight="bold">r</text>
+                  <text x="110" y="80" font-size="14" font-weight="bold">l</text>
+                </svg>
+            </div>
+            <div>
+                <i class="fas fa-lightbulb text-info me-2"></i> <strong>লম্ব বৃত্তাকার শঙ্কু (Right Circular Cone)-এর সূত্রাবলি:</strong><br>
+                ব্যাসার্ধ = $r$, উচ্চতা = $h$, তির্যক উচ্চতা = $l$ হলে,<br>
+                ১) $l^2 = h^2 + r^2$<br>
+                ২) পার্শ্বতল বা বক্রতলের ক্ষেত্রফল = $\pi r l$ বর্গ একক<br>
+                ৩) সমগ্রতলের ক্ষেত্রফল = $\pi r(r + l)$ বর্গ একক<br>
+                ৪) আয়তন বা ঘনফল = $\displaystyle\frac{1}{3}\pi r^2 h$ ঘন একক
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমি একটি মুখবদ্ধ লম্ব বৃত্তাকার শঙ্কু তৈরি করেছি যার ভূমির ব্যাসার্ধের দৈর্ঘ্য 15 সেমি. এবং তির্যক উচ্চতা 24 সেমি.। ওই শঙ্কুর পার্শ্বতলের ক্ষেত্রফল ও সমগ্রতলের ক্ষেত্রফল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শঙ্কুর ভূমির ব্যাসার্ধ ($r$) = 15 সেমি.</p>
+            <p>তির্যক উচ্চতা ($l$) = 24 সেমি.</p>
+            <p><strong>পার্শ্বতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+= \pi r l \\
+= \frac{22}{7} \times 15 \times 24 \\
+= \frac{7920}{7} \\
+= 1131\frac{3}{7} \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p><strong>সমগ্রতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+= \pi r (r + l) \\
+= \frac{22}{7} \times 15 \times (15 + 24) \\
+= \frac{22}{7} \times 15 \times 39 \\
+= \frac{12870}{7} \\
+= 1838\frac{4}{7} \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পার্শ্বতলের ক্ষেত্রফল $1131\frac{3}{7}$ বর্গ সেমি এবং সমগ্রতলের ক্ষেত্রফল $1838\frac{4}{7}$ বর্গ সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. শঙ্কুর আয়তন নির্ণয় করি যখন, (i) ভূমির ক্ষেত্রফল 1.54 বর্গ মিটার এবং উচ্চতা 2.4 মিটার, (ii) ভূমির ব্যাসের দৈর্ঘ্য 21 মিটার এবং তির্যক উচ্চতা 17.5 মিটার।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (i)</span>
+            <p>ভূমির ক্ষেত্রফল ($\pi r^2$) = 1.54 বর্গ মিটার।</p>
+            <p>উচ্চতা ($h$) = 2.4 মিটার।</p>
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3} \times \text{ভূমির ক্ষেত্রফল} \times \text{উচ্চতা}$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3} \times 1.54 \times 2.4 \\
+= 1.54 \times 0.8 \\
+= 1.232 \text{ ঘন মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> (i) আয়তন = 1.232 ঘন মিটার।</div>
+
+            <hr>
+
+            <span class="sol-badge">সমাধান (ii)</span>
+            <p>ভূমির ব্যাস = 21 মিটার $\implies$ ব্যাসার্ধ ($r$) = $\displaystyle\frac{21}{2} = 10.5$ মিটার।</p>
+            <p>তির্যক উচ্চতা ($l$) = 17.5 মিটার।</p>
+            <p>আমরা জানি, $l^2 = r^2 + h^2 \implies h = \sqrt{l^2 - r^2}$</p>
+            \[
+\begin{array}{l}
+h = \sqrt{17.5^2 - 10.5^2} \\
+= \sqrt{(17.5 + 10.5)(17.5 - 10.5)} \\
+= \sqrt{28 \times 7} \\
+= \sqrt{196} = 14 \text{ মিটার}
+\end{array}
+\]
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3} \times \frac{22}{7} \times (10.5)^2 \times 14 \\
+= \frac{1}{3} \times 22 \times 110.25 \times 2 \\
+= \frac{44 \times 110.25}{3} \\
+= 44 \times 36.75 \\
+= 1617 \text{ ঘন মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> (ii) আয়তন = 1617 ঘন মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. আমিনা একটি সমকোণী ত্রিভুজ অঙ্কন করেছে যার সমকোণ সংলগ্ন বাহু দুটির দৈর্ঘ্য 15 সেমি. ও 20 সেমি.। 15 সেমি. দীর্ঘ বাহুটিকে অক্ষ ধরে ত্রিভুজটিকে একবার পূর্ণ আবর্তন করলে যে ঘনবস্তু তৈরি হয়, তার পার্শ্বতলের ক্ষেত্রফল, সমগ্রতলের ক্ষেত্রফল এবং আয়তন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>15 সেমি দীর্ঘ বাহুকে অক্ষ ধরে আবর্তন করলে যে শঙ্কুটি তৈরি হবে, তার উচ্চতা ($h$) হবে 15 সেমি এবং ভূমির ব্যাসার্ধ ($r$) হবে 20 সেমি।</p>
+            <p>শঙ্কুর তির্যক উচ্চতা ($l$) = $\sqrt{h^2 + r^2}$</p>
+            \[
+\begin{array}{l}
+l = \sqrt{15^2 + 20^2} \\
+= \sqrt{225 + 400} \\
+= \sqrt{625} = 25 \text{ সেমি.}
+\end{array}
+\]
+            <p><strong>পার্শ্বতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+\pi r l = \frac{22}{7} \times 20 \times 25 \\
+= \frac{11000}{7} = 1571\frac{3}{7} \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p><strong>সমগ্রতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+\pi r (r + l) = \frac{22}{7} \times 20 \times (20 + 25) \\
+= \frac{22}{7} \times 20 \times 45 \\
+= \frac{19800}{7} = 2828\frac{4}{7} \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p><strong>আয়তন:</strong></p>
+            \[
+\begin{array}{l}
+\frac{1}{3}\pi r^2 h = \frac{1}{3} \times \frac{22}{7} \times 20^2 \times 15 \\
+= \frac{22}{7} \times 400 \times 5 \\
+= \frac{44000}{7} = 6285\frac{5}{7} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পার্শ্বতলের ক্ষেত্রফল $1571\frac{3}{7}$ বর্গ সেমি, সমগ্রতলের ক্ষেত্রফল $2828\frac{4}{7}$ বর্গ সেমি এবং আয়তন $6285\frac{5}{7}$ ঘন সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. কোনো শঙ্কুর উচ্চতা ও তির্যক উচ্চতা যথাক্রমে 6 সেমি. ও 10 সেমি. হলে, শঙ্কুটির সমগ্রতলের ক্ষেত্রফল ও আয়তন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উচ্চতা ($h$) = 6 সেমি, তির্যক উচ্চতা ($l$) = 10 সেমি।</p>
+            <p>ব্যাসার্ধ ($r$) = $\sqrt{l^2 - h^2} = \sqrt{10^2 - 6^2} = \sqrt{100 - 36} = \sqrt{64} = 8$ সেমি।</p>
+            <p><strong>সমগ্রতলের ক্ষেত্রফল:</strong></p>
+            \[
+\begin{array}{l}
+\pi r(r + l) = \frac{22}{7} \times 8 \times (8 + 10) \\
+= \frac{22}{7} \times 8 \times 18 \\
+= \frac{3168}{7} = 452\frac{4}{7} \text{ বর্গ সেমি.}
+\end{array}
+\]
+            <p><strong>আয়তন:</strong></p>
+            \[
+\begin{array}{l}
+\frac{1}{3}\pi r^2 h = \frac{1}{3} \times \frac{22}{7} \times 8^2 \times 6 \\
+= \frac{22}{7} \times 64 \times 2 \\
+= \frac{2816}{7} = 402\frac{2}{7} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সমগ্রতলের ক্ষেত্রফল $452\frac{4}{7}$ বর্গ সেমি এবং আয়তন $402\frac{2}{7}$ ঘন সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. কোনো লম্ব বৃত্তাকার শঙ্কুর আয়তন $100\pi$ ঘন সেমি. এবং উচ্চতা 12 সেমি. হলে, শঙ্কুর তির্যক উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উচ্চতা ($h$) = 12 সেমি। ধরি, ব্যাসার্ধ = $r$ সেমি।</p>
+            <p>শর্তানুসারে, আয়তন = $100\pi$</p>
+            \[
+\begin{array}{l}
+\frac{1}{3}\pi r^2 h = 100\pi \\
+\frac{1}{3} \times r^2 \times 12 = 100 \quad [\text{উভয়পক্ষ থেকে } \pi \text{ বাদ দিয়ে}] \\
+4r^2 = 100 \\
+r^2 = \frac{100}{4} = 25 \\
+r = \sqrt{25} = 5 \text{ সেমি.}
+\end{array}
+\]
+            <p>তির্যক উচ্চতা ($l$) = $\sqrt{r^2 + h^2} = \sqrt{5^2 + 12^2} = \sqrt{25 + 144} = \sqrt{169} = 13$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: শঙ্কুটির তির্যক উচ্চতা 13 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. লম্ব বৃত্তাকার শঙ্কু আকৃতির একটি তাঁবু তৈরি করতে 77 বর্গ মিটার ত্রিপল লেগেছে। তাঁবুটির তির্যক উচ্চতা যদি 7 মিটার হয়, তবে তাঁবুটির ভূমিতলের ক্ষেত্রফল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তাঁবু তৈরি করতে যে ত্রিপল লাগে তা হলো তাঁবুর পার্শ্বতলের ক্ষেত্রফল।</p>
+            <p>তির্যক উচ্চতা ($l$) = 7 মিটার। ধরি, ব্যাসার্ধ = $r$ মিটার।</p>
+            <p>পার্শ্বতলের ক্ষেত্রফল = $\pi r l = 77$</p>
+            \[
+\begin{array}{l}
+\frac{22}{7} \times r \times 7 = 77 \\
+22r = 77 \\
+r = \frac{77}{22} = 3.5 \text{ মিটার}
+\end{array}
+\]
+            <p>তাঁবুটির ভূমিতলের ক্ষেত্রফল = $\pi r^2$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times (3.5)^2 \\
+= \frac{22}{7} \times 12.25 \\
+= 22 \times 1.75 \\
+= 38.5 \text{ বর্গ মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তাঁবুটির ভূমিতলের ক্ষেত্রফল 38.5 বর্গ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি লম্ব বৃত্তাকার শঙ্কুর ভূমিতলের ব্যাস 21 মিটার এবং উচ্চতা 14 মিটার। প্রতি বর্গ মিটার 1.50 টাকা হিসাবে পার্শ্বতল রং করতে কত টাকা খরচ পড়বে হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ব্যাস = 21 মিটার $\implies$ ব্যাসার্ধ ($r$) = 10.5 মিটার।</p>
+            <p>উচ্চতা ($h$) = 14 মিটার।</p>
+            <p>তির্যক উচ্চতা ($l$) = $\sqrt{r^2 + h^2} = \sqrt{10.5^2 + 14^2} = \sqrt{110.25 + 196} = \sqrt{306.25} = 17.5$ মিটার।</p>
+            <p>পার্শ্বতলের ক্ষেত্রফল = $\pi r l$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times 10.5 \times 17.5 \\
+= 22 \times 1.5 \times 17.5 \\
+= 33 \times 17.5 \\
+= 577.5 \text{ বর্গ মিটার}
+\end{array}
+\]
+            <p>রং করার মোট খরচ = ক্ষেত্রফল $\times$ প্রতি বর্গ মিটারের খরচ</p>
+            \[
+\begin{array}{l}
+= 577.5 \times 1.50 \\
+= 866.25 \text{ টাকা}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পার্শ্বতল রং করতে মোট 866.25 টাকা খরচ পড়বে।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. নিরেট শঙ্কু আকৃতির একটি কাঠের খেলনার ভূমিতলের ব্যাসের দৈর্ঘ্য 10 সেমি.। খেলনাটির বক্রতলে প্রতি বর্গ সেমি. 2.10 টাকা হিসাবে পালিশ করতে 429 টাকা খরচ পড়ে। খেলনাটির উচ্চতা কত হিসাব করি। খেলনাটি তৈরি করতে কত ঘন সেমি. কাঠ লেগেছে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>খেলনাটির বক্রতলের ক্ষেত্রফল = $\displaystyle\frac{\text{মোট খরচ}}{\text{প্রতি বর্গ সেমি. খরচ}} = \frac{429}{2.10} = \frac{4290}{21} = \frac{1430}{7}$ বর্গ সেমি।</p>
+            <p>ব্যাস = 10 সেমি $\implies$ ব্যাসার্ধ ($r$) = 5 সেমি। ধরি তির্যক উচ্চতা = $l$ সেমি।</p>
+            \[
+\begin{array}{l}
+\pi r l = \frac{1430}{7} \\
+\frac{22}{7} \times 5 \times l = \frac{1430}{7} \\
+110 \times l = 1430 \\
+l = \frac{1430}{110} = 13 \text{ সেমি.}
+\end{array}
+\]
+            <p>খেলনাটির উচ্চতা ($h$) = $\sqrt{l^2 - r^2} = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ সেমি।</p>
+            <p>খেলনাটির আয়তন (কাঠের পরিমাণ) = $\displaystyle\frac{1}{3}\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3} \times \frac{22}{7} \times 5^2 \times 12 \\
+= \frac{22}{7} \times 25 \times 4 \\
+= \frac{2200}{7} = 314\frac{2}{7} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: খেলনাটির উচ্চতা 12 সেমি এবং $314\frac{2}{7}$ ঘন সেমি কাঠ লেগেছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. লম্ব বৃত্তাকার শঙ্কু আকৃতির একটি লোহার পাতের বয়া তৈরি করতে $75\frac{3}{7}$ বর্গ মিটার লোহার পাত লেগেছে। বয়াটির তির্যক উচ্চতা যদি 5 মিটার হয়, তবে বয়াটিতে কত বায়ু আছে এবং বয়াটির উচ্চতা কত হিসাব করে লিখি।<br>ওই বয়াটির চারপাশ রং করতে প্রতি বর্গ মিটার 2.80 টাকা হিসাবে কত খরচ পড়বে নির্ণয় করি। [লোহার পাতের বেধ হিসাবের মধ্যে ধরতে হবে না]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বয়াটি সাধারণত একটি বদ্ধ পাত্র (মুখবন্ধ), তাই লোহার পাত বলতে এর <strong>সমগ্রতলের ক্ষেত্রফল</strong> বোঝানো হয়েছে।</p>
+            <p>সমগ্রতলের ক্ষেত্রফল = $75\frac{3}{7} = \displaystyle\frac{528}{7}$ বর্গ মিটার।</p>
+            <p>তির্যক উচ্চতা ($l$) = 5 মিটার। ধরি, ব্যাসার্ধ = $r$ মিটার।</p>
+            \[
+\begin{array}{l}
+\pi r (r + l) = \frac{528}{7} \\
+\frac{22}{7} r (r + 5) = \frac{528}{7} \\
+r^2 + 5r = \frac{528}{22} \\
+r^2 + 5r = 24 \\
+r^2 + 5r - 24 = 0
+\end{array}
+\]
+            <p>উৎপাদকে বিশ্লেষণ করে পাই:</p>
+            \[
+\begin{array}{l}
+r^2 + 8r - 3r - 24 = 0 \\
+r(r + 8) - 3(r + 8) = 0 \\
+(r + 8)(r - 3) = 0
+\end{array}
+\]
+            <p>হয় $r = -8$ (অসম্ভব), অথবা $r = 3$। $\therefore$ ব্যাসার্ধ = 3 মিটার।</p>
+            <p>উচ্চতা ($h$) = $\sqrt{l^2 - r^2} = \sqrt{5^2 - 3^2} = \sqrt{25 - 9} = \sqrt{16} = 4$ মিটার।</p>
+            <p>বয়াটিতে থাকা বায়ুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3} \times \frac{22}{7} \times 3^2 \times 4 \\
+= \frac{22 \times 3 \times 4}{7} = \frac{264}{7} = 37\frac{5}{7} \text{ ঘন মিটার.}
+\end{array}
+\]
+            <p>বয়াটির চারপাশ (অর্থাৎ বাইরের সমগ্র অংশ) রং করতে খরচ হবে = সমগ্রতলের ক্ষেত্রফল $\times$ 2.80</p>
+            <p>খরচ = $\displaystyle\frac{528}{7} \times 2.80 = 528 \times 0.40 = 211.20$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বয়াটিতে $37\frac{5}{7}$ ঘন মিটার বায়ু আছে, উচ্চতা 4 মিটার এবং রং করতে 211.20 টাকা খরচ পড়বে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. লম্ব বৃত্তাকার শঙ্কু আকৃতির একটি তাঁবুতে 11 জন লোক থাকতে পারে। প্রত্যেক লোকের জন্য ভূমিতে 4 বর্গ মিটার জায়গা লাগে এবং 20 ঘন মিটার বাতাসের প্রয়োজন। ঠিক এই 11 জন লোকের জন্য নির্মিত তাঁবুর উচ্চতা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>11 জন লোকের জন্য ভূমিতে মোট জায়গা লাগে = $11 \times 4 = 44$ বর্গ মিটার।</p>
+            <p>সুতরাং, তাঁবুর ভূমির ক্ষেত্রফল ($\pi r^2$) = 44 বর্গ মিটার।</p>
+            <p>11 জন লোকের জন্য মোট বাতাসের প্রয়োজন = $11 \times 20 = 220$ ঘন মিটার।</p>
+            <p>সুতরাং, তাঁবুর আয়তন ($\frac{1}{3}\pi r^2 h$) = 220 ঘন মিটার।</p>
+            \[
+\begin{array}{l}
+\frac{1}{3} \times (\pi r^2) \times h = 220 \\
+\frac{1}{3} \times 44 \times h = 220 \\
+44h = 660 \\
+h = \frac{660}{44} = 15
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তাঁবুর উচ্চতা 15 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. শোলা দিয়ে তৈরি একটি শঙ্কু আকৃতির মাথার টোপরের ভূমির বাইরের দিকের ব্যাসের দৈর্ঘ্য 21 সেমি.। টোপরটির উপরিভাগ রাংতা দিয়ে মুড়তে প্রতি বর্গ সেমি. 10 পয়সা হিসাবে 57.75 টাকা খরচ পড়ে। টোপরটির উচ্চতা ও তির্যক উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রতি বর্গ সেমি খরচ = 10 পয়সা = 0.10 টাকা।</p>
+            <p>টোপরটির উপরিভাগের ক্ষেত্রফল (পার্শ্বতল) = $\displaystyle\frac{\text{মোট খরচ}}{\text{প্রতি বর্গ সেমির খরচ}} = \frac{57.75}{0.10} = 577.5$ বর্গ সেমি।</p>
+            <p>ভূমির ব্যাস = 21 সেমি $\implies$ ব্যাসার্ধ ($r$) = 10.5 সেমি।</p>
+            <p>ধরি, তির্যক উচ্চতা = $l$ সেমি।</p>
+            \[
+\begin{array}{l}
+\pi r l = 577.5 \\
+\frac{22}{7} \times 10.5 \times l = 577.5 \\
+22 \times 1.5 \times l = 577.5 \\
+33l = 577.5 \\
+l = \frac{577.5}{33} = 17.5 \text{ সেমি.}
+\end{array}
+\]
+            <p>উচ্চতা ($h$) = $\sqrt{l^2 - r^2} = \sqrt{17.5^2 - 10.5^2}$</p>
+            \[
+\begin{array}{l}
+= \sqrt{(17.5 + 10.5)(17.5 - 10.5)} \\
+= \sqrt{28 \times 7} \\
+= \sqrt{196} = 14 \text{ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: টোপরটির উচ্চতা 14 সেমি এবং তির্যক উচ্চতা 17.5 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. গমের একটি স্তূপ লম্ব বৃত্তাকার শঙ্কু আকারে আছে, যার ভূমির ব্যাসের দৈর্ঘ্য 9 মিটার এবং উচ্চতা 3.5 মিটার। মোট গমের আয়তন নির্ণয় করি। গমের ওই স্তূপ ঢাকতে কমপক্ষে কত বর্গ মিটার প্লাস্টিকের চাদর প্রয়োজন হবে হিসাব করে দেখি। [ধরি, $\pi = 3.14$, $\sqrt{130} = 11.4$]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গমের স্তূপের ব্যাস = 9 মিটার $\implies$ ব্যাসার্ধ ($r$) = 4.5 মিটার।</p>
+            <p>উচ্চতা ($h$) = 3.5 মিটার।</p>
+            <p><strong>গমের আয়তন:</strong></p>
+            \[
+\begin{array}{l}
+V = \frac{1}{3}\pi r^2 h \\
+= \frac{1}{3} \times 3.14 \times (4.5)^2 \times 3.5 \\
+= \frac{1}{3} \times 3.14 \times 20.25 \times 3.5 \\
+= 3.14 \times 6.75 \times 3.5 \\
+= 74.1825 \text{ ঘন মিটার}
+\end{array}
+\]
+            <p><strong>প্লাস্টিকের চাদরের ক্ষেত্রফল:</strong></p>
+            <p>স্তূপ ঢাকতে তার পার্শ্বতলের ক্ষেত্রফলের সমান চাদর লাগবে।</p>
+            <p>তির্যক উচ্চতা ($l$) = $\sqrt{r^2 + h^2} = \sqrt{4.5^2 + 3.5^2} = \sqrt{20.25 + 12.25} = \sqrt{32.5}$</p>
+            <p>লক্ষ্য করি, $\sqrt{32.5} = \sqrt{\displaystyle\frac{130}{4}} = \displaystyle\frac{\sqrt{130}}{2} = \frac{11.4}{2} = 5.7$ মিটার।</p>
+            <p>পার্শ্বতলের ক্ষেত্রফল = $\pi r l = 3.14 \times 4.5 \times 5.7 = 80.541$ বর্গ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গমের আয়তন 74.1825 ঘন মিটার এবং কমপক্ষে 80.541 বর্গ মিটার প্লাস্টিকের চাদর লাগবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) একটি লম্ব বৃত্তাকার শঙ্কুর তির্যক উচ্চতা 15 সেমি. এবং ভূমিতলের ব্যাসের দৈর্ঘ্য 16 সেমি. হলে, শঙ্কুটির পার্শ্বতলের ক্ষেত্রফল</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ব্যাসার্ধ ($r$) = $\displaystyle\frac{16}{2} = 8$ সেমি। তির্যক উচ্চতা ($l$) = 15 সেমি।</p>
+            <p>পার্শ্বতলের ক্ষেত্রফল = $\pi r l = \pi \times 8 \times 15 = 120\pi$ বর্গ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $120\pi$ বর্গ সেমি.</div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি লম্ব বৃত্তাকার শঙ্কুর আয়তনের অনুপাত 1:4 এবং তাদের ভূমিতলের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত 4:5 হলে, তাদের উচ্চতার অনুপাত</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\displaystyle\frac{V_1}{V_2} = \frac{\frac{1}{3}\pi r_1^2 h_1}{\frac{1}{3}\pi r_2^2 h_2} = \left(\frac{r_1}{r_2}\right)^2 \times \frac{h_1}{h_2}$</p>
+            <p>$\displaystyle\frac{1}{4} = \left(\frac{4}{5}\right)^2 \times \frac{h_1}{h_2} \implies \frac{1}{4} = \frac{16}{25} \times \frac{h_1}{h_2} \implies \frac{h_1}{h_2} = \frac{1}{4} \times \frac{25}{16} = \frac{25}{64}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 25:64</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার শঙ্কুর ব্যাসার্ধের দৈর্ঘ্য একই রেখে উচ্চতা দ্বিগুণ করলে, শঙ্কুটির আয়তন বৃদ্ধি পায়</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রাথমিক আয়তন $V = \displaystyle\frac{1}{3}\pi r^2 h$</p>
+            <p>নতুন আয়তন $V' = \displaystyle\frac{1}{3}\pi r^2 (2h) = 2V$</p>
+            <p>আয়তন বৃদ্ধি = $2V - V = V$। শতকরা বৃদ্ধি = $\displaystyle\frac{V}{V} \times 100\% = 100\%$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 100%</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি শঙ্কুর ব্যাসার্ধের দৈর্ঘ্য এবং উচ্চতা প্রত্যেকটি দ্বিগুণ হলে, শঙ্কুটির আয়তন হয় পূর্বের শঙ্কুর আয়তনের</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>নতুন আয়তন = $\displaystyle\frac{1}{3}\pi (2r)^2 (2h) = \frac{1}{3}\pi (4r^2) (2h) = 8 \left(\frac{1}{3}\pi r^2 h\right) = 8V$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 8 গুণ</div>
+        </div>
+
+        <span class="sub-question">(v) একটি লম্ব বৃত্তাকার শঙ্কুর ব্যাসার্ধের দৈর্ঘ্য $\displaystyle\frac{r}{2}$ একক এবং তির্যক উচ্চতা $2l$ একক হলে, সমগ্রতলের ক্ষেত্রফল</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমগ্রতলের ক্ষেত্রফল = $\pi \times (\text{নতুন ব্যাসার্ধ}) \times (\text{নতুন ব্যাসার্ধ} + \text{নতুন তির্যক উচ্চতা})$</p>
+            <p>$= \displaystyle\pi \left(\frac{r}{2}\right) \left(\frac{r}{2} + 2l\right) = \pi r \left(\frac{r}{4} + l\right) = \pi r \left(l + \frac{r}{4}\right)$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $\pi r (l + \frac{r}{4})$ বর্গ একক</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি লম্ব বৃত্তাকার শঙ্কুর ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য অর্ধেক এবং উচ্চতা দ্বিগুণ করা হলে শঙ্কুটির আয়তন একই থাকে।</span>
+        <div class="solution-box">
+            <p>নতুন আয়তন = $\displaystyle\frac{1}{3}\pi \left(\frac{r}{2}\right)^2 (2h) = \frac{1}{3}\pi \left(\frac{r^2}{4}\right) 2h = \frac{1}{2} \left(\frac{1}{3}\pi r^2 h\right)$। অর্থাৎ আয়তন অর্ধেক হয়ে যায়, একই থাকে না।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার শঙ্কুর উচ্চতা, ব্যাসার্ধ এবং তির্যক উচ্চতা সর্বদা একটি সমকোণী ত্রিভুজের বাহুত্রয়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> শঙ্কুর ক্ষেত্রে $l^2 = r^2 + h^2$ সর্বদা সত্য, যা পিথাগোরাসের উপপাদ্য মেনে চলে এবং একটি সমকোণী ত্রিভুজ গঠন করে।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) ABC সমকোণী ত্রিভুজের AC অতিভুজ। AB বাহুকে অক্ষ করে ত্রিভুজটির একবার পূর্ণ আবর্তনের জন্য যে লম্ব বৃত্তাকার শঙ্কু উৎপন্ন হয় তার ব্যাসার্ধ _________ ।</span>
+        <div class="solution-box">
+            <p>AB কে অক্ষ ধরলে BC বাহুটি চারদিকে ঘুরে বৃত্তাকার ভূমি তৈরি করবে। তাই ব্যাসার্ধ হবে BC।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> BC</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার শঙ্কুর আয়তন V ঘন একক এবং ভূমিতলের ক্ষেত্রফল A বর্গ একক হলে, উচ্চতা _________ ।</span>
+        <div class="solution-box">
+            <p>আমরা জানি, $V = \displaystyle\frac{1}{3} \times A \times h \implies h = \frac{3V}{A}$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\displaystyle\frac{3V}{A}$</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার চোঙ এবং লম্ব বৃত্তাকার শঙ্কুর ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য সমান এবং তাদের উচ্চতা সমান। তাদের আয়তনের অনুপাত _________ ।</span>
+        <div class="solution-box">
+            <p>চোঙের আয়তন = $\pi r^2 h$, শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h$। অনুপাত = $1 : \displaystyle\frac{1}{3} = 3 : 1$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 3 : 1</p>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি লম্ব বৃত্তাকার শঙ্কুর উচ্চতা 12 সেমি. এবং আয়তন 100$\pi$ ঘন সেমি.। শঙ্কুটির ব্যাসার্ধের দৈর্ঘ্য কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h = 100\pi$</p>
+            <p>$\displaystyle\frac{1}{3} \pi r^2 (12) = 100\pi \implies 4r^2 = 100 \implies r^2 = 25 \implies r = 5$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসার্ধের দৈর্ঘ্য 5 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি লম্ব বৃত্তাকার শঙ্কুর পার্শ্বতলের ক্ষেত্রফল ভূমিতলের ক্ষেত্রফলের $\sqrt{5}$ গুণ। শঙ্কুটির উচ্চতা ও ব্যাসার্ধের দৈর্ঘ্যের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, $\pi r l = \sqrt{5} \times \pi r^2$</p>
+            <p>$\implies l = \sqrt{5} r$</p>
+            <p>উভয়পক্ষ বর্গ করে পাই: $l^2 = 5r^2$</p>
+            <p>আমরা জানি, $l^2 = h^2 + r^2$।</p>
+            \[
+\begin{array}{l}
+h^2 + r^2 = 5r^2 \\
+h^2 = 4r^2 \\
+h = 2r \implies \frac{h}{r} = \frac{2}{1}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: উচ্চতা ও ব্যাসার্ধের অনুপাত 2:1।</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার শঙ্কুর আয়তন V ঘন একক, ভূমিতলের ক্ষেত্রফল A বর্গ একক এবং উচ্চতা H একক হলে, $\displaystyle\frac{AH}{V}$ -এর মান কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, আয়তন $V = \displaystyle\frac{1}{3} \times A \times H$</p>
+            \[
+\begin{array}{l}
+V = \frac{AH}{3} \\
+3V = AH \\
+\frac{AH}{V} = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান 3।</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি লম্ব বৃত্তাকার শঙ্কুর আয়তন V এবং পার্শ্বতলের ক্ষেত্রফল S। শঙ্কুটির উচ্চতা h এবং ব্যাসার্ধের দৈর্ঘ্য r হলে, $\displaystyle\frac{1}{h^2} + \frac{1}{r^2}$ -এর মান কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $S = \pi r l$ এবং $V = \displaystyle\frac{1}{3}\pi r^2 h \implies \pi r^2 h = 3V$</p>
+            <p>প্রদত্ত রাশি: $\displaystyle\frac{1}{h^2} + \frac{1}{r^2} = \frac{r^2 + h^2}{h^2 r^2}$</p>
+            <p>আমরা জানি $r^2 + h^2 = l^2$, তাই: $\displaystyle\frac{l^2}{h^2 r^2}$</p>
+            <p>লব ও হরকে $\pi^2 r^2$ দিয়ে গুণ করি:</p>
+            \[
+\begin{array}{l}
+= \frac{\pi^2 r^2 l^2}{\pi^2 r^4 h^2} \\
+= \frac{(\pi r l)^2}{(\pi r^2 h)^2} \\
+= \frac{S^2}{(3V)^2} \\
+= \frac{S^2}{9V^2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় মান $\displaystyle\frac{S^2}{9V^2}$।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি লম্ব বৃত্তাকার চোঙ এবং লম্ব বৃত্তাকার শঙ্কুর ভূমিতলের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত 3:4 এবং তাদের উচ্চতার অনুপাত 2:3; চোঙ এবং শঙ্কুর আয়তনের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চোঙ এবং শঙ্কুর ব্যাসার্ধের অনুপাত $r_1 : r_2 = 3 : 4 \implies r_1 = 3x, r_2 = 4x$</p>
+            <p>তাদের উচ্চতার অনুপাত $h_1 : h_2 = 2 : 3 \implies h_1 = 2y, h_2 = 3y$</p>
+            <p>আয়তনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+\frac{V_{\text{চোঙ}}}{V_{\text{শঙ্কু}}} = \frac{\pi r_1^2 h_1}{\frac{1}{3} \pi r_2^2 h_2} \\
+= \frac{3 \times (3x)^2 \times (2y)}{(4x)^2 \times (3y)} \\
+= \frac{3 \times 9x^2 \times 2y}{16x^2 \times 3y} \\
+= \frac{54}{48} = \frac{9}{8}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙ ও শঙ্কুর আয়তনের অনুপাত 9:8।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

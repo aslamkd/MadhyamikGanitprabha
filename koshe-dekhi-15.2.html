@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-15.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}.proof-step{padding:0.75rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>উপপাদ্য ৪১ (Theorem 41):</strong><br>
+        বৃত্তের বহিঃস্থ কোনো বিন্দু থেকে যে দুটি স্পর্শক অঙ্কন করা যায়, তাদের <strong>দৈর্ঘ্য সমান</strong> হয় এবং তারা কেন্দ্রে <strong>সমান কোণ</strong> উৎপন্ন করে। এই অনুশীলনীতে এই উপপাদ্যের সর্বাধিক প্রয়োগ হবে।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. 16 সেমি. দৈর্ঘ্যের ব্যাসবিশিষ্ট একটি বৃত্তের কেন্দ্র থেকে 17 সেমি. দূরত্বে অবস্থিত বহিঃস্থ একটি বিন্দু থেকে অঙ্কিত বৃত্তের স্পর্শকের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বৃত্তের ব্যাস = 16 সেমি। $\therefore$ ব্যাসার্ধ ($r$) = $\displaystyle\frac{16}{2} = 8$ সেমি।</p>
+            <p>কেন্দ্র থেকে বহিঃস্থ বিন্দুর দূরত্ব ($d$) = 17 সেমি।</p>
+            <p>আমরা জানি, স্পর্শক, স্পর্শবিন্দুগামী ব্যাসার্ধ এবং কেন্দ্র থেকে বহিঃস্থ বিন্দুর সংযোজক রেখা একটি সমকোণী ত্রিভুজ তৈরি করে, যেখানে কেন্দ্র থেকে দূরত্বটি অতিভুজ হয়।</p>
+            <p>পিথাগোরাসের উপপাদ্য অনুযায়ী, $\text{স্পর্শকের দৈর্ঘ্য} = \sqrt{d^2 - r^2}$</p>
+            \[
+\begin{array}{l}
+\text{স্পর্শক} = \sqrt{17^2 - 8^2} \\
+= \sqrt{289 - 64} \\
+= \sqrt{225} \\
+= 15
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্পর্শকের দৈর্ঘ্য 15 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. একটি বৃত্তের উপর অবস্থিত P ও Q বিন্দু দুটিতে অঙ্কিত স্পর্শক দুটি A বিন্দুতে ছেদ করেছে। $\angle PAQ = 60^\circ$ হলে $\angle APQ$-এর মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বহিঃস্থ বিন্দু A থেকে বৃত্তের উপর দুটি স্পর্শক AP এবং AQ অঙ্কন করা হয়েছে।</p>
+            <p>উপপাদ্য অনুযায়ী, বহিঃস্থ কোনো বিন্দু থেকে অঙ্কিত স্পর্শক দুটির দৈর্ঘ্য সমান হয়।</p>
+            <p>$\therefore AP = AQ$</p>
+            <p>ফলে, $\triangle PAQ$ একটি সমদ্বিবাহু ত্রিভুজ। সমদ্বিবাহু ত্রিভুজের সমান বাহুর বিপরীত কোণগুলিও সমান হয়।</p>
+            <p>$\therefore \angle APQ = \angle AQP$</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$। দেওয়া আছে $\angle PAQ = 60^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle APQ + \angle AQP + \angle PAQ = 180^\circ \\
+2\angle APQ + 60^\circ = 180^\circ \\
+2\angle APQ = 180^\circ - 60^\circ = 120^\circ \\
+\angle APQ = \frac{120^\circ}{2} = 60^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle APQ = 60^\circ$</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. O কেন্দ্রীয় বৃত্তের বহিঃস্থ বিন্দু A থেকে অঙ্কিত দুটি স্পর্শক AP ও AQ বৃত্তকে P ও Q বিন্দুতে স্পর্শ করে। PR একটি ব্যাস হলে, প্রমাণ করি যে, $OA \parallel RQ$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের বহিঃস্থ বিন্দু A থেকে দুটি স্পর্শক AP ও AQ টানা হয়েছে। PR হলো বৃত্তের একটি ব্যাস।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $OA \parallel RQ$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> P, Q এবং R, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বহিঃস্থ বিন্দু A থেকে AP এবং AQ দুটি স্পর্শক হওয়ায়, A ও O-এর সংযোজক সরলরেখা OA, স্পর্শবিন্দু দুটির সংযোজক জ্যা PQ-কে লম্বভাবে সমদ্বিখণ্ডিত করে।</p>
+                <p>$\therefore OA \perp PQ \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, বৃত্তের PR একটি ব্যাস।</p>
+                <p>আমরা জানি, অর্ধবৃত্তস্থ কোণ সমকোণ হয়।</p>
+                <p>যেহেতু PR ব্যাস, তাই পরিধিস্থ কোণ $\angle PQR = 90^\circ$।</p>
+                <p>$\therefore RQ \perp PQ \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) নং সমীকরণ থেকে আমরা দেখতে পাচ্ছি যে, একই সরলরেখা PQ-এর উপর দুটি ভিন্ন সরলরেখা OA এবং RQ লম্বভাবে অবস্থিত।</p>
+                <p>আমরা জানি, একই সরলরেখার উপর অবস্থিত দুটি লম্ব রেখা পরস্পর সমান্তরাল হয়।</p>
+                <p>সুতরাং, $OA \parallel RQ$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. প্রমাণ করি যে, একটি বৃত্তের পরিলিখিত কোনো চতুর্ভুজের যে-কোনো দুটি বিপরীত বাহুর দ্বারা উৎপন্ন কেন্দ্রস্থ সম্মুখ কোণ দুটি পরস্পর সম্পূরক।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের পরিলিখিত চতুর্ভুজটি হলো ABCD। এটি বৃত্তটিকে P, Q, R, S বিন্দুতে স্পর্শ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> বিপরীত বাহুগুলি দ্বারা কেন্দ্রে উৎপন্ন কোণগুলি সম্পূরক, অর্থাৎ $\angle AOB + \angle COD = 180^\circ$ এবং $\angle BOC + \angle AOD = 180^\circ$।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O থেকে স্পর্শবিন্দুগুলি P, Q, R, S যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বহিঃস্থ বিন্দু A থেকে বৃত্তের উপর দুটি স্পর্শক AP এবং AS।</p>
+                <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে অঙ্কিত স্পর্শক দুটি কেন্দ্রে সমান কোণ উৎপন্ন করে।</p>
+                <p>$\therefore \angle AOP = \angle AOS$</p>
+                <p>একইভাবে, অন্যান্য বিন্দু থেকে পাই:</p>
+                <p>$\angle BOP = \angle BOQ$</p>
+                <p>$\angle COQ = \angle COR$</p>
+                <p>$\angle DOR = \angle DOS$</p>
+                <br>
+                <p>আমরা জানি, বৃত্তের কেন্দ্রে উৎপন্ন সম্পূর্ণ কোণ $360^\circ$।</p>
+                <p>$\angle AOP + \angle AOS + \angle BOP + \angle BOQ + \angle COQ + \angle COR + \angle DOR + \angle DOS = 360^\circ$</p>
+                <p>সমান কোণগুলির মান বসিয়ে পাই:</p>
+                <p>$2\angle AOP + 2\angle BOP + 2\angle COR + 2\angle DOR = 360^\circ$</p>
+                <p>$2(\angle AOP + \angle BOP + \angle COR + \angle DOR) = 360^\circ$</p>
+                <p>$\angle AOP + \angle BOP + \angle COR + \angle DOR = 180^\circ$</p>
+                <p>চিত্রানুযায়ী, $(\angle AOP + \angle BOP) = \angle AOB$ এবং $(\angle COR + \angle DOR) = \angle COD$।</p>
+                <p>$\therefore \angle AOB + \angle COD = 180^\circ$</p>
+                <p>একইভাবে প্রমাণ করা যায় যে, $\angle BOC + \angle AOD = 180^\circ$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. প্রমাণ করি যে, বৃত্তের পরিলিখিত সামান্তরিক মাত্রই রম্বস।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ধরি, একটি বৃত্তের পরিলিখিত চতুর্ভুজটি একটি সামান্তরিক ABCD।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> ABCD একটি রম্বস (অর্থাৎ এর চারটি বাহুই সমান)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু ABCD একটি সামান্তরিক, তাই এর বিপরীত বাহুগুলি সমান।</p>
+                <p>$\therefore AB = CD$ এবং $AD = BC \quad \dots \text{(i)}$</p>
+                <p>আমরা জানি, কোনো চতুর্ভুজ যদি একটি বৃত্তে পরিলিখিত হয়, তবে তার বিপরীত বাহুগুলির যোগফল সমান হয়। (এটি একটি সাধারণ উপপাদ্য)।</p>
+                <p>$\therefore AB + CD = AD + BC$</p>
+                <p>(i) নং থেকে মান বসিয়ে পাই:</p>
+                \[
+\begin{array}{l}
+AB + AB = AD + AD \\
+2AB = 2AD \\
+AB = AD
+\end{array}
+\]
+                <p>সামান্তরিকের সন্নিহিত বাহুগুলি ($AB$ এবং $AD$) সমান হয়ে গেল।</p>
+                <p>যে সামান্তরিকের সন্নিহিত বাহু সমান হয়, তাকে রম্বস বলে।</p>
+                <p>সুতরাং, বৃত্তের পরিলিখিত সামান্তরিক মাত্রই রম্বস।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. A ও B কেন্দ্রীয় দুটি বৃত্ত অঙ্কন করেছি যারা পরস্পরকে C বিন্দুতে বহিঃস্পর্শ করেছে। C বিন্দুতে অঙ্কিত স্পর্শকের উপর O একটি বিন্দু এবং OD ও OE যথাক্রমে A ও B কেন্দ্রীয় বৃত্তকে যথাক্রমে D ও E বিন্দুতে স্পর্শ করেছে। $\angle COD = 56^\circ, \angle COE = 40^\circ, \angle ACD = x^\circ$ এবং $\angle BCE = y^\circ$ হলে প্রমাণ করি যে OD = OC = OE এবং $x - y = 8$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="260" height="200" viewBox="0 0 260 200">
+               <circle cx="70" cy="120" r="50" stroke="#3730A3" stroke-width="2" fill="none"></circle> <!-- Circle A -->
+               <circle cx="180" cy="120" r="60" stroke="#10B981" stroke-width="2" fill="none"></circle> <!-- Circle B -->
+               <line x1="20" y1="120" x2="240" y2="120" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Line ACB -->
+               
+               <!-- Tangent through C -->
+               <line x1="120" y1="180" x2="120" y2="20" stroke="#F59E0B" stroke-width="2"></line> <!-- Tangent OC -->
+               
+               <circle cx="70" cy="120" r="3" fill="#374151"></circle>
+               <circle cx="180" cy="120" r="3" fill="#374151"></circle>
+               <circle cx="120" cy="120" r="3" fill="#E11D48"></circle>
+               <circle cx="120" cy="30" r="3" fill="#1F2937"></circle> <!-- Point O -->
+               
+               <text x="65" y="140" font-size="14" font-weight="bold">A</text>
+               <text x="175" y="140" font-size="14" font-weight="bold">B</text>
+               <text x="125" y="140" font-size="14" font-weight="bold" fill="#E11D48">C</text>
+               <text x="105" y="25" font-size="14" font-weight="bold">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রমাণ (প্রথম অংশ: OD = OC = OE):</strong>
+                <p>A কেন্দ্রীয় বৃত্তের ক্ষেত্রে: বহিঃস্থ বিন্দু O থেকে দুটি স্পর্শক হলো OD এবং OC (কারণ C বিন্দুতে অঙ্কিত রেখাটি একটি সাধারণ স্পর্শক)।</p>
+                <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে অঙ্কিত স্পর্শক দুটির দৈর্ঘ্য সমান হয়। $\therefore OD = OC \quad \dots \text{(i)}$</p>
+                <p>B কেন্দ্রীয় বৃত্তের ক্ষেত্রে: বহিঃস্থ বিন্দু O থেকে দুটি স্পর্শক হলো OE এবং OC।</p>
+                <p>একই কারণে, $OE = OC \quad \dots \text{(ii)}$</p>
+                <p>(i) এবং (ii) থেকে পাই, $OD = OC = OE$। (প্রথম অংশ প্রমাণিত)।</p>
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ (দ্বিতীয় অংশ: x - y = 8):</strong>
+                <p>$\triangle OCD$-তে, $OD = OC \implies \angle OCD = \angle ODC$।</p>
+                <p>দেওয়া আছে $\angle COD = 56^\circ$।</p>
+                <p>$\therefore \angle OCD = \displaystyle\frac{180^\circ - 56^\circ}{2} = \frac{124^\circ}{2} = 62^\circ$।</p>
+                <p>যেহেতু AC হলো ব্যাসার্ধ এবং OC হলো স্পর্শক, তাই $\angle ACO = 90^\circ$।</p>
+                <p>চিত্রানুযায়ী, $\angle ACD = \angle ACO - \angle DCO$ (বা $\angle OCD$)</p>
+                <p>$\therefore x^\circ = 90^\circ - 62^\circ = 28^\circ \implies x = 28$।</p>
+                <br>
+                <p>আবার, $\triangle OCE$-তে, $OE = OC \implies \angle OCE = \angle OEC$।</p>
+                <p>দেওয়া আছে $\angle COE = 40^\circ$।</p>
+                <p>$\therefore \angle OCE = \displaystyle\frac{180^\circ - 40^\circ}{2} = \frac{140^\circ}{2} = 70^\circ$।</p>
+                <p>যেহেতু BC ব্যাসার্ধ এবং OC স্পর্শক, তাই $\angle BCO = 90^\circ$।</p>
+                <p>চিত্রানুযায়ী, $\angle BCE = \angle BCO - \angle ECO$ (বা $\angle OCE$)</p>
+                <p>$\therefore y^\circ = 90^\circ - 70^\circ = 20^\circ \implies y = 20$।</p>
+                <br>
+                <p>এখন, $x - y = 28 - 20 = 8$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. A ও B কেন্দ্রবিশিষ্ট দুটি নির্দিষ্ট বৃত্ত পরস্পরকে অন্তঃস্পর্শ করেছে। অপর একটি বৃত্ত, বৃহত্তর বৃত্তটিকে X বিন্দুতে অন্তঃস্পর্শ এবং ক্ষুদ্রতর বৃত্তটিকে Y বিন্দুতে বহিঃস্পর্শ করেছে। O যদি ওই বৃত্তের কেন্দ্র হয়, তবে প্রমাণ করি যে, AO + BO ধ্রুবক হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> A ও B কেন্দ্রবিশিষ্ট দুটি বৃত্ত পরস্পরকে অন্তঃস্পর্শ করে (A বৃহত্তর, B ক্ষুদ্রতর)। O কেন্দ্রবিশিষ্ট অপর একটি বৃত্ত, A-কে X বিন্দুতে অন্তঃস্পর্শ এবং B-কে Y বিন্দুতে বহিঃস্পর্শ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AO + BO = \text{ধ্রুবক (Constant)}$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ধরি, বৃহত্তর বৃত্তের (A কেন্দ্র) ব্যাসার্ধ = $R_A$, ক্ষুদ্রতর বৃত্তের (B কেন্দ্র) ব্যাসার্ধ = $R_B$ এবং O কেন্দ্রবিশিষ্ট বৃত্তের ব্যাসার্ধ = $r$।</p>
+                <p>যেহেতু O বৃত্তটি A বৃত্তকে X বিন্দুতে <strong>অন্তঃস্পর্শ</strong> করেছে, তাই তাদের কেন্দ্রদ্বয়ের দূরত্ব ব্যাসার্ধের অন্তরের সমান হবে:</p>
+                <p>$AO = R_A - r \quad \dots \text{(i)}$</p>
+                <br>
+                <p>যেহেতু O বৃত্তটি B বৃত্তকে Y বিন্দুতে <strong>বহিঃস্পর্শ</strong> করেছে, তাই তাদের কেন্দ্রদ্বয়ের দূরত্ব ব্যাসার্ধের সমষ্টির সমান হবে:</p>
+                <p>$BO = R_B + r \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>এখন (i) এবং (ii) যোগ করে পাই:</p>
+                \[
+\begin{array}{l}
+AO + BO = (R_A - r) + (R_B + r) \\
+AO + BO = R_A + R_B
+\end{array}
+\]
+                <p>যেহেতু A এবং B নির্দিষ্ট বৃত্ত, তাই তাদের ব্যাসার্ধ $R_A$ এবং $R_B$ সর্বদা নির্দিষ্ট বা ধ্রুবক।</p>
+                <p>অতএব, তাদের সমষ্টি $R_A + R_B$ ও একটি ধ্রুবক হবে।</p>
+                <p>$\therefore AO + BO = \text{ধ্রুবক}$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. A ও B কেন্দ্রীয় দুটি বৃত্ত অঙ্কন করেছি যারা পরস্পরকে O বিন্দুতে বহিঃস্পর্শ করেছে। O বিন্দু দিয়ে একটি সরলরেখা অঙ্কন করেছি যা বৃত্ত দুটিকে যথাক্রমে P ও Q বিন্দুতে ছেদ করেছে। প্রমাণ করি যে, $AP \parallel BQ$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> A ও B কেন্দ্রবিশিষ্ট দুটি বৃত্ত পরস্পরকে O বিন্দুতে বহিঃস্পর্শ করেছে। O বিন্দুগামী একটি সরলরেখা (PQ) বৃত্তদুটিকে P ও Q বিন্দুতে ছেদ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AP \parallel BQ$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> A, O; B, O; A, P এবং B, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু দুটি বৃত্ত পরস্পরকে O বিন্দুতে স্পর্শ করেছে, তাই তাদের কেন্দ্রদ্বয় এবং স্পর্শবিন্দু সমরেখ হয়। অর্থাৎ A, O, B একটি সরলরেখা।</p>
+                <p>A কেন্দ্রীয় বৃত্তের ক্ষেত্রে $\triangle AOP$-তে, $AO = AP$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+                <p>$\therefore \angle APO = \angle AOP \quad \dots \text{(i)}$</p>
+                <br>
+                <p>B কেন্দ্রীয় বৃত্তের ক্ষেত্রে $\triangle BOQ$-তে, $BO = BQ$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+                <p>$\therefore \angle BQO = \angle BOQ \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>যেহেতু A-O-B একটি সরলরেখা এবং P-O-Q একটি সরলরেখা, তাই $\angle AOP$ এবং $\angle BOQ$ হলো বিপ্রতীপ কোণ (Vertically opposite angles)।</p>
+                <p>$\therefore \angle AOP = \angle BOQ$</p>
+                <p>সুতরাং (i) এবং (ii) থেকে পাই:</p>
+                <p>$\angle APO = \angle BQO$</p>
+                <p>চিত্রানুসারে, AP এবং BQ দুটি সরলরেখাকে PQ ছেদক ছেদ করায় উৎপন্ন একান্তর কোণ (Alternate interior angles) সমান হয়েছে ($\angle APQ = \angle BQP$)।</p>
+                <p>অতএব, $AP \parallel BQ$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. তিনটি সমান বৃত্ত পরস্পরকে বহিঃস্পর্শ করেছে। প্রমাণ করি যে, ওই বৃত্ত তিনটির কেন্দ্রগুলি একটি সমবাহু ত্রিভুজের শীর্ষবিন্দু।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> ধরি, A, B, C কেন্দ্রবিশিষ্ট তিনটি সমান বৃত্ত পরস্পরকে বহিঃস্পর্শ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\triangle ABC$ একটি সমবাহু ত্রিভুজ।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু তিনটি বৃত্ত সমান, ধরি তাদের প্রত্যেকের ব্যাসার্ধ = $r$।</p>
+                <p>আমরা জানি, দুটি বৃত্ত বহিঃস্পর্শ করলে তাদের কেন্দ্রদ্বয়ের দূরত্ব তাদের ব্যাসার্ধের সমষ্টির সমান হয়।</p>
+                <p>A এবং B বৃত্ত দুটি বহিঃস্পর্শ করেছে।</p>
+                <p>$\therefore AB = r + r = 2r$</p>
+                <p>B এবং C বৃত্ত দুটি বহিঃস্পর্শ করেছে।</p>
+                <p>$\therefore BC = r + r = 2r$</p>
+                <p>C এবং A বৃত্ত দুটি বহিঃস্পর্শ করেছে।</p>
+                <p>$\therefore CA = r + r = 2r$</p>
+                <p>যেহেতু $AB = BC = CA = 2r$, তাই ত্রিভুজ ABC-এর তিনটি বাহুর দৈর্ঘ্য সমান।</p>
+                <p>সুতরাং, কেন্দ্রগুলি যুক্ত করে গঠিত $\triangle ABC$ একটি সমবাহু ত্রিভুজ।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি বৃত্তের বহিঃস্থ কোনো বিন্দু A থেকে অঙ্কিত AB ও AC দুটি স্পর্শক বৃত্তকে B ও C বিন্দুতে স্পর্শ করে। উপচাপ BC-এর উপর অবস্থিত X বিন্দুতে অঙ্কিত স্পর্শক AB ও AC -কে যথাক্রমে D ও E বিন্দুতে ছেদ করে। প্রমাণ করি যে, $\triangle ADE$-এর পরিসীমা = 2 AB.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> বহিঃস্থ বিন্দু A থেকে বৃত্তের উপর দুটি স্পর্শক AB ও AC। উপচাপ BC-এর উপর X বিন্দুতে স্পর্শক টানা হলো, যা AB এবং AC-কে D ও E বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\triangle ADE$-এর পরিসীমা = $2AB$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বহিঃস্থ বিন্দু A থেকে দুটি স্পর্শক AB ও AC। $\therefore AB = AC$</p>
+                <p>বহিঃস্থ বিন্দু D থেকে বৃত্তের উপর দুটি স্পর্শক DB এবং DX। $\therefore DB = DX$</p>
+                <p>বহিঃস্থ বিন্দু E থেকে বৃত্তের উপর দুটি স্পর্শক EC এবং EX। $\therefore EC = EX$</p>
+                <br>
+                <p>এখন, $\triangle ADE$-এর পরিসীমা:</p>
+                \[
+\begin{array}{l}
+= AD + DE + AE \\
+= AD + (DX + EX) + AE \quad [\text{যেহেতু DE = DX + EX}] \\
+= AD + DB + EC + AE \quad [\text{মানগুলি বসিয়ে}] \\
+= (AD + DB) + (AE + EC) \\
+= AB + AC
+\end{array}
+\]
+                <p>যেহেতু $AB = AC$, তাই পরিসীমা = $AB + AB = 2AB$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">11. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) O কেন্দ্রীয় বৃত্তের বহিঃস্থ A বিন্দু থেকে অঙ্কিত স্পর্শক বৃত্তকে B বিন্দুতে স্পর্শ করে। OB = 5 সেমি., AO = 13 সেমি. হলে, AB-এর দৈর্ঘ্য</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle OBA$-তে $\angle OBA = 90^\circ$। পিথাগোরাসের উপপাদ্য অনুযায়ী:</p>
+            <p>$AB = \sqrt{AO^2 - OB^2} = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 12 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(ii) দুটি বৃত্ত পরস্পরকে C বিন্দুতে বহিঃস্পর্শ করে। AB বৃত্ত দুটির একটি সাধারণ স্পর্শক বৃত্ত দুটিকে A ও B বিন্দুতে স্পর্শ করে। $\angle ACB$-এর পরিমাণ</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একটি স্ট্যান্ডার্ড জ্যামিতিক উপপাদ্য অনুসারে, যদি দুটি বৃত্ত বহিঃস্পর্শ করে এবং তাদের একটি সাধারণ স্পর্শক আঁকা হয় যা তাদের A ও B তে স্পর্শ করে, তবে স্পর্শবিন্দু দুটির সাথে সাধারণ স্পর্শবিন্দু C যুক্ত করলে কেন্দ্রে বা C তে সর্বদা একটি সমকোণ উৎপন্ন হয়।</p>
+            <p>সুতরাং, $\angle ACB = 90^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $90^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iii) O কেন্দ্রীয় বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 5 সেমি.। O বিন্দু থেকে 13 সেমি. দূরত্বে P একটি বিন্দু। P বিন্দু থেকে বৃত্তের দুটি স্পর্শকের দৈর্ঘ্য PQ এবং PR; PQOR চতুর্ভুজের ক্ষেত্রফল</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>PQ এর দৈর্ঘ্য = $\sqrt{13^2 - 5^2} = 12$ সেমি।</p>
+            <p>চতুর্ভুজ PQOR দুটি সর্বসম সমকোণী ত্রিভুজ ($\triangle OPQ$ এবং $\triangle OPR$) নিয়ে গঠিত।</p>
+            <p>প্রতিটি ত্রিভুজের ক্ষেত্রফল = $\frac{1}{2} \times \text{ভূমি} \times \text{উচ্চতা} = \frac{1}{2} \times 12 \times 5 = 30$ বর্গ সেমি।</p>
+            <p>চতুর্ভুজের ক্ষেত্রফল = $2 \times 30 = 60$ বর্গ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 60 বর্গ সেমি.</div>
+        </div>
+
+        <span class="sub-question">(iv) দুটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 5 সেমি. ও 3 সেমি.। বৃত্ত দুটি পরস্পরকে বহিঃস্পর্শ করে। বৃত্তদুটির কেন্দ্রদ্বয়ের মধ্যে দূরত্ব</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বহিঃস্পর্শ করলে কেন্দ্রদ্বয়ের দূরত্ব = ব্যাসার্ধের সমষ্টি = $5 + 3 = 8$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 8 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(v) দুটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 3.5 সেমি. ও 2 সেমি.। বৃত্ত দুটি পরস্পরকে অন্তঃস্পর্শ করে। বৃত্ত দুটির কেন্দ্রদ্বয়ের মধ্যে দূরত্ব</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>অন্তঃস্পর্শ করলে কেন্দ্রদ্বয়ের দূরত্ব = ব্যাসার্ধের অন্তর = $3.5 - 2 = 1.5$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 1.5 সেমি.</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি বৃত্তের অন্তঃস্থ একটি বিন্দু P; বৃত্তে অঙ্কিত কোনো স্পর্শক P বিন্দুগামী নয়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> স্পর্শক সর্বদা বৃত্তের পরিধির উপর অবস্থিত বিন্দু দিয়ে যায়, অন্তঃস্থ কোনো বিন্দু দিয়ে স্পর্শক আঁকা সম্ভব নয়।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি বৃত্তে একটি নির্দিষ্ট সরলরেখার সমান্তরাল দুইয়ের অধিক স্পর্শক অঙ্কন করা যায়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> কোনো একটি নির্দিষ্ট সরলরেখার সমান্তরাল বৃত্তে কেবলমাত্র দুটি স্পর্শক আঁকা যায় (ব্যাসের দুই প্রান্তে)। দুইয়ের বেশি নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি সরলরেখা বৃত্তকে দুটি বিন্দুতে ছেদ করলে সরলরেখাটিকে বৃত্তের _________ বলে।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> ছেদক (Secant)</p>
+        </div>
+
+        <span class="sub-question">(ii) দুটি বৃত্ত পরস্পরকে ছেদ বা স্পর্শ না করলে বৃত্তদুটির সর্বাধিক সংখ্যায় _________ টি সাধারণ স্পর্শক অঙ্কন করা যায়।</span>
+        <div class="solution-box">
+            <p>দুটি বৃত্ত যদি একে অপরের থেকে দূরে থাকে, তবে তাদের ২ টি সরল সাধারণ স্পর্শক এবং ২ টি তীর্যক সাধারণ স্পর্শক আঁকা যায়। মোট ৪ টি।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 4</p>
+        </div>
+
+        <span class="sub-question">(iii) দুটি বৃত্ত পরস্পরকে A বিন্দুতে বহিঃস্পর্শ করে। A বিন্দুতে অঙ্কিত বৃত্ত দুটির সাধারণ স্পর্শক হলো _________ সাধারণ স্পর্শক (সরল/তীর্যক)।</span>
+        <div class="solution-box">
+            <p>স্পর্শবিন্দুতে অঙ্কিত সাধারণ স্পর্শকটি দুটি বৃত্তের মাঝখান দিয়ে যায়, তাই এটি তীর্যক সাধারণ স্পর্শক।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> তীর্যক (Transverse)</p>
+        </div>
+    </div>
+
+    <!-- Question 12 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">12. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) পাশের চিত্রে বৃত্তের কেন্দ্র O এবং BOA বৃত্তের ব্যাস। বৃত্তের P বিন্দুতে অঙ্কিত স্পর্শক বর্ধিত BA-কে T বিন্দুতে ছেদ করে। $\angle PBO = 30^\circ$ হলে, $\angle PTA$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="120" viewBox="0 0 220 120">
+               <circle cx="70" cy="60" r="50" stroke="#3730A3" stroke-width="2" fill="none"></circle>
+               <line x1="20" y1="60" x2="200" y2="60" stroke="#1F2937" stroke-width="2"></line> <!-- BOA to T -->
+               <line x1="20" y1="60" x2="105" y2="25" stroke="#10B981" stroke-width="1.5"></line> <!-- BP -->
+               <line x1="70" y1="60" x2="105" y2="25" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line> <!-- OP -->
+               <line x1="105" y1="25" x2="200" y2="60" stroke="#F59E0B" stroke-width="2"></line> <!-- PT tangent -->
+               
+               <circle cx="70" cy="60" r="3" fill="#374151"></circle>
+               <text x="10" y="65" font-size="12" font-weight="bold">B</text>
+               <text x="65" y="75" font-size="12" font-weight="bold">O</text>
+               <text x="120" y="75" font-size="12" font-weight="bold">A</text>
+               <text x="105" y="15" font-size="12" font-weight="bold">P</text>
+               <text x="205" y="65" font-size="12" font-weight="bold">T</text>
+            </svg>
+
+            <p>$\triangle OPB$-তে $OP = OB$ (ব্যাসার্ধ)।</p>
+            <p>$\therefore \angle OPB = \angle PBO = 30^\circ$।</p>
+            <p>$\triangle OPB$-এর বহিঃস্থ কোণ $\angle POA = \angle OPB + \angle PBO = 30^\circ + 30^\circ = 60^\circ$।</p>
+            <p>P বিন্দুতে PT স্পর্শক এবং OP ব্যাসার্ধ হওয়ায়, $OP \perp PT \implies \angle OPT = 90^\circ$।</p>
+            <p>সমকোণী $\triangle OPT$-তে, তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle PTA = 180^\circ - (\angle OPT + \angle POT) \\
+= 180^\circ - (90^\circ + 60^\circ) \\
+= 30^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle PTA = 30^\circ$</div>
+        </div>
+
+        <span class="sub-question">(ii) পাশের চিত্রে ABC ত্রিভুজটি একটি বৃত্তে পরিলিখিত এবং বৃত্তকে P, Q, R বিন্দুতে স্পর্শ করে। যদি AP = 4 সেমি., BP = 6 সেমি., AC = 12 সেমি. এবং BC = x সেমি. হয়, তাহলে x-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে বৃত্তের উপর অঙ্কিত স্পর্শক দুটির দৈর্ঘ্য সমান হয়।</p>
+            <p>A বিন্দু থেকে: $AR = AP = 4$ সেমি।</p>
+            <p>B বিন্দু থেকে: $BQ = BP = 6$ সেমি।</p>
+            <p>দেওয়া আছে, সম্পূর্ণ $AC = 12$ সেমি।</p>
+            <p>$\therefore RC = AC - AR = 12 - 4 = 8$ সেমি।</p>
+            <p>C বিন্দু থেকে: $CQ = RC = 8$ সেমি।</p>
+            <p>এখন, $x = BC = BQ + QC = 6 + 8 = 14$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: x-এর মান 14।</div>
+        </div>
+
+        <span class="sub-question">(iii) পাশের চিত্রে A, B, C কেন্দ্রবিশিষ্ট তিনটি বৃত্ত পরস্পরকে বহিঃস্পর্শ করে। যদি AB = 5 সেমি., BC = 7 সেমি. এবং CA = 6 সেমি. হয়, তাহলে A কেন্দ্রবিশিষ্ট বৃত্তের ব্যাসার্ধের দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, A, B, C বৃত্তের ব্যাসার্ধ যথাক্রমে $r_1, r_2, r_3$।</p>
+            <p>বহিঃস্পর্শ করলে কেন্দ্রদ্বয়ের দূরত্ব ব্যাসার্ধের সমষ্টির সমান হয়।</p>
+            <p>$AB = r_1 + r_2 = 5 \quad \dots \text{(i)}$</p>
+            <p>$BC = r_2 + r_3 = 7 \quad \dots \text{(ii)}$</p>
+            <p>$CA = r_3 + r_1 = 6 \quad \dots \text{(iii)}$</p>
+            <p>তিনটি সমীকরণ যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+2(r_1 + r_2 + r_3) = 5 + 7 + 6 = 18 \\
+r_1 + r_2 + r_3 = 9 \quad \dots \text{(iv)}
+\end{array}
+\]
+            <p>আমাদের $r_1$ (A-এর ব্যাসার্ধ) বের করতে হবে। (iv) থেকে (ii) বিয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+r_1 = (r_1 + r_2 + r_3) - (r_2 + r_3) \\
+= 9 - 7 = 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: A কেন্দ্রবিশিষ্ট বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 2 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(iv) পাশের চিত্রে O কেন্দ্রবিশিষ্ট বৃত্তে বহিঃস্থ বিন্দু C থেকে অঙ্কিত দুটি স্পর্শক বৃত্তকে P ও Q বিন্দুতে স্পর্শ করে। বৃত্তের অপর একটি বিন্দু R-তে অঙ্কিত স্পর্শক CP ও CQ-কে যথাক্রমে A ও B বিন্দুতে ছেদ করে। যদি CP = 11 সেমি. এবং BC = 7 সেমি. হয়, তবে BR-এর দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>C বিন্দু থেকে স্পর্শক: $CQ = CP = 11$ সেমি।</p>
+            <p>দেওয়া আছে $BC = 7$ সেমি।</p>
+            <p>$\therefore BQ = CQ - BC = 11 - 7 = 4$ সেমি।</p>
+            <p>এখন B বিন্দু থেকে বৃত্তের উপর দুটি স্পর্শক হলো BQ এবং BR।</p>
+            <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে অঙ্কিত স্পর্শকদ্বয় সমান হয়।</p>
+            <p>$\therefore BR = BQ = 4$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: BR-এর দৈর্ঘ্য 4 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(v) দুটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 8 সেমি. ও 3 সেমি. এবং তাদের কেন্দ্রদ্বয়ের মধ্যে দূরত্ব 13 সেমি.। বৃত্ত দুটির একটি সরল সাধারণ স্পর্শকের দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সরল সাধারণ স্পর্শকের (Direct Common Tangent) দৈর্ঘ্যের সূত্র হলো:</p>
+            <p>$L = \sqrt{d^2 - (R_1 - R_2)^2}$</p>
+            <p>এখানে কেন্দ্রদ্বয়ের দূরত্ব ($d$) = 13 সেমি, $R_1 = 8$ সেমি, $R_2 = 3$ সেমি।</p>
+            \[
+\begin{array}{l}
+L = \sqrt{13^2 - (8 - 3)^2} \\
+= \sqrt{169 - 5^2} \\
+= \sqrt{169 - 25} \\
+= \sqrt{144} = 12
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সরল সাধারণ স্পর্শকের দৈর্ঘ্য 12 সেমি।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

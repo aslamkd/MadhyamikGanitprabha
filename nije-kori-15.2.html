@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nije-kori-15.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark);font-size:1.05rem}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>স্পর্শক সংক্রান্ত উপপাদ্য (Tangent Theorem Context):</strong><br>
+        বৃত্তের বহিঃস্থ কোনো বিন্দু থেকে বৃত্তের উপর দুটি স্পর্শক অঙ্কন করা হলে, ওই স্পর্শক দুটির দৈর্ঘ্য সমান হয় এবং তারা কেন্দ্রে সমান কোণ উৎপন্ন করে। (এটি পাঠ্যবইয়ের উপপাদ্য ৪১-এর মূল ভিত্তি)।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">(1) প্রমাণ করি যে, বৃত্তের বহিঃস্থ কোনো বিন্দু থেকে অঙ্কিত স্পর্শক দুটির অন্তর্ভুক্ত কোণকে ওই বিন্দু এবং কেন্দ্রের সংযোজক সরলরেখাংশ সমদ্বিখণ্ডিত করে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="260" height="200" viewBox="0 0 260 200">
+               <circle cx="70" cy="100" r="50" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- OP Line -->
+               <line x1="70" y1="100" x2="200" y2="100" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line>
+               <!-- Radii OA, OB -->
+               <line x1="70" y1="100" x2="89" y2="54" stroke="#10B981" stroke-width="2"></line>
+               <line x1="70" y1="100" x2="89" y2="146" stroke="#10B981" stroke-width="2"></line>
+               <!-- Tangents PA, PB -->
+               <line x1="200" y1="100" x2="89" y2="54" stroke="#F59E0B" stroke-width="2"></line>
+               <line x1="200" y1="100" x2="89" y2="146" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="70" cy="100" r="3" fill="#374151"></circle>
+               <circle cx="89" cy="54" r="3" fill="#1F2937"></circle>
+               <circle cx="89" cy="146" r="3" fill="#1F2937"></circle>
+               <circle cx="200" cy="100" r="3" fill="#E11D48"></circle>
+               
+               <text x="50" y="105" font-size="14" font-weight="bold">O</text>
+               <text x="75" y="45" font-size="14" font-weight="bold">A</text>
+               <text x="75" y="165" font-size="14" font-weight="bold">B</text>
+               <text x="210" y="105" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               
+               <!-- Right Angle Markers -->
+               <polyline points="89,62 81,65 81,57" fill="none" stroke="#1F2937" stroke-width="1"></polyline>
+               <polyline points="89,138 81,135 81,143" fill="none" stroke="#1F2937" stroke-width="1"></polyline>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের বহিঃস্থ বিন্দু P থেকে বৃত্তের উপর দুটি স্পর্শক PA এবং PB অঙ্কন করা হয়েছে যারা বৃত্তকে যথাক্রমে A ও B বিন্দুতে স্পর্শ করে। O, P যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> OP সরলরেখাংশ স্পর্শক দুটির অন্তর্ভুক্ত কোণ অর্থাৎ $\angle APB$-কে সমদ্বিখণ্ডিত করে। অর্থাৎ, $\angle APO = \angle BPO$।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, A এবং O, B যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>PA এবং PB হলো স্পর্শক এবং OA এবং OB হলো স্পর্শবিন্দুগামী ব্যাসার্ধ।</p>
+                <p>আমরা জানি, স্পর্শক ও স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব হয়।</p>
+                <p>$\therefore OA \perp PA$ এবং $OB \perp PB$</p>
+                <p>অর্থাৎ, $\angle OAP = \angle OBP = 90^\circ$</p>
+                <p>এখন, সমকোণী ত্রিভুজ $\triangle OAP$ এবং $\triangle OBP$-এর মধ্যে:</p>
+                <ol>
+                    <li>অতিভুজ $OP$ সাধারণ বাহু (Common hypotenuse)।</li>
+                    <li>$OA = OB$ (একই বৃত্তের ব্যাসার্ধ)।</li>
+                </ol>
+                <p>$\therefore \triangle OAP \cong \triangle OBP$ (R-H-S সর্বসমতার শর্তানুসারে)।</p>
+                <p>যেহেতু ত্রিভুজ দুটি সর্বসম, তাই তাদের অনুরূপ কোণগুলি সমান হবে।</p>
+                <p>$\therefore \angle APO = \angle BPO$</p>
+                <p>অর্থাৎ, বিন্দু P এবং কেন্দ্র O-এর সংযোজক সরলরেখাংশ OP, স্পর্শক দুটির অন্তর্ভুক্ত কোণ ($\angle APB$)-কে সমদ্বিখণ্ডিত করে।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">(2) প্রমাণ করি যে, বৃত্তের বহিঃস্থ কোনো বিন্দু থেকে অঙ্কিত স্পর্শক দুটির অন্তর্ভুক্ত কোণের অন্তসমদ্বিখণ্ডক কেন্দ্রগামী হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="260" height="200" viewBox="0 0 260 200">
+               <circle cx="70" cy="100" r="50" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- OP Line / Bisector -->
+               <line x1="20" y1="100" x2="220" y2="100" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Tangents PA, PB -->
+               <line x1="200" y1="100" x2="89" y2="54" stroke="#F59E0B" stroke-width="2"></line>
+               <line x1="200" y1="100" x2="89" y2="146" stroke="#F59E0B" stroke-width="2"></line>
+               <!-- Radii -->
+               <line x1="70" y1="100" x2="89" y2="54" stroke="#1F2937" stroke-width="1.5"></line>
+               <line x1="70" y1="100" x2="89" y2="146" stroke="#1F2937" stroke-width="1.5"></line>
+               
+               <circle cx="70" cy="100" r="4" fill="#E11D48"></circle>
+               <circle cx="89" cy="54" r="3" fill="#1F2937"></circle>
+               <circle cx="89" cy="146" r="3" fill="#1F2937"></circle>
+               <circle cx="200" cy="100" r="3" fill="#374151"></circle>
+               
+               <text x="50" y="115" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+               <text x="75" y="45" font-size="14" font-weight="bold">A</text>
+               <text x="75" y="165" font-size="14" font-weight="bold">B</text>
+               <text x="210" y="105" font-size="14" font-weight="bold">P</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> বৃত্তের বহিঃস্থ বিন্দু P থেকে বৃত্তের উপর দুটি স্পর্শক PA এবং PB অঙ্কন করা হয়েছে। PC হলো $\angle APB$-এর অন্তঃসমদ্বিখণ্ডক।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> সমদ্বিখণ্ডক PC বৃত্তের কেন্দ্রগামী হবে (অর্থাৎ বৃত্তের কেন্দ্র O, PC সরলরেখার উপর অবস্থিত হবে)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ধরি, বৃত্তের কেন্দ্র হলো O।</p>
+                <p>O, P যুক্ত করা হলো।</p>
+                <p>পূর্ববর্তী প্রমাণ (প্রশ্ন ১) থেকে আমরা জানি যে, বৃত্তের বহিঃস্থ কোনো বিন্দু (P) থেকে অঙ্কিত স্পর্শক দুটির অন্তর্ভুক্ত কোণকে বিন্দুটি ও কেন্দ্রের সংযোজক সরলরেখা (OP) সমদ্বিখণ্ডিত করে।</p>
+                <p>অর্থাৎ, OP সরলরেখাটি $\angle APB$-এর সমদ্বিখণ্ডক।</p>
+                <p>কিন্তু প্রদত্ত অনুযায়ী, PC হলো $\angle APB$-এর সমদ্বিখণ্ডক।</p>
+                <p>আমরা জানি, কোনো নির্দিষ্ট কোণের একটিমাত্র অন্তঃসমদ্বিখণ্ডক থাকতে পারে।</p>
+                <p>যেহেতু PC এবং OP উভয়ই একই কোণ $\angle APB$-এর সমদ্বিখণ্ডক, তাই PC এবং OP সরলরেখা দুটি একই বা সমাপতিত (coincident) হবে।</p>
+                <p>এর অর্থ হলো, PC সরলরেখাটি অবশ্যই O বিন্দু দিয়ে যাবে।</p>
+                <p>সুতরাং, স্পর্শক দুটির অন্তর্ভুক্ত কোণের অন্তসমদ্বিখণ্ডক কেন্দ্রগামী হবে।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">(3) প্রমাণ করি যে, বৃত্তের উপরিস্থিত দুটি বিন্দুতে অঙ্কিত স্পর্শক দুটি যদি পরস্পরকে ছেদ করে, তাহলে ছেদবিন্দু থেকে স্পর্শবিন্দু পর্যন্ত অঙ্কিত সরলরেখাংশদ্বয়ের দৈর্ঘ্য সমান হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="260" height="200" viewBox="0 0 260 200">
+               <circle cx="70" cy="100" r="50" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- OP Line -->
+               <line x1="70" y1="100" x2="200" y2="100" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line>
+               <!-- Radii OA, OB -->
+               <line x1="70" y1="100" x2="89" y2="54" stroke="#10B981" stroke-width="2"></line>
+               <line x1="70" y1="100" x2="89" y2="146" stroke="#10B981" stroke-width="2"></line>
+               <!-- Tangents PA, PB -->
+               <line x1="200" y1="100" x2="89" y2="54" stroke="#F59E0B" stroke-width="2"></line>
+               <line x1="200" y1="100" x2="89" y2="146" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="70" cy="100" r="3" fill="#374151"></circle>
+               <circle cx="89" cy="54" r="3" fill="#1F2937"></circle>
+               <circle cx="89" cy="146" r="3" fill="#1F2937"></circle>
+               <circle cx="200" cy="100" r="3" fill="#E11D48"></circle>
+               
+               <text x="50" y="105" font-size="14" font-weight="bold">O</text>
+               <text x="75" y="45" font-size="14" font-weight="bold">A</text>
+               <text x="75" y="165" font-size="14" font-weight="bold">B</text>
+               <text x="210" y="105" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের উপরিস্থিত দুটি বিন্দু A এবং B-তে অঙ্কিত স্পর্শক দুটি পরস্পরকে P বিন্দুতে ছেদ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> ছেদবিন্দু P থেকে স্পর্শবিন্দু A ও B পর্যন্ত সরলরেখাংশ দুটির দৈর্ঘ্য সমান। অর্থাৎ, $PA = PB$।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, A; O, B এবং O, P যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>PA এবং PB হলো স্পর্শক এবং OA এবং OB হলো স্পর্শবিন্দুগামী ব্যাসার্ধ।</p>
+                <p>আমরা জানি, বৃত্তের কোনো বিন্দুতে স্পর্শক এবং স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব হয়।</p>
+                <p>$\therefore OA \perp PA$ এবং $OB \perp PB$</p>
+                <p>সুতরাং, $\angle OAP = 90^\circ$ এবং $\angle OBP = 90^\circ$।</p>
+                <p>এখন, সমকোণী ত্রিভুজ $\triangle OAP$ এবং সমকোণী ত্রিভুজ $\triangle OBP$-এর মধ্যে তুলনা করে পাই:</p>
+                <ol>
+                    <li>$\angle OAP = \angle OBP$ (প্রত্যেকেই এক সমকোণ)</li>
+                    <li>অতিভুজ $OP$ সাধারণ বাহু (Common hypotenuse)।</li>
+                    <li>$OA = OB$ (একই বৃত্তের ব্যাসার্ধ)।</li>
+                </ol>
+                <p>$\therefore \triangle OAP \cong \triangle OBP$ (সমকোণী ত্রিভুজের R-H-S সর্বসমতার শর্তানুসারে)।</p>
+                <p>যেহেতু ত্রিভুজ দুটি সর্বসম, তাই তাদের অনুরূপ বাহুগুলি সমান হবে।</p>
+                <p>$\therefore PA = PB$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

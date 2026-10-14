@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-14</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>অংশীদারি কারবার (Partnership Business) এর নিয়মাবলি:</strong><br>
+        ১) <strong>সরল অংশীদারি কারবার (Simple Partnership):</strong> যখন অংশীদারগণ সমান সময়ের জন্য মূলধন বিনিয়োগ করেন, তখন লাভ বা লোকসান তাদের মূলধনের অনুপাতে বণ্টিত হয়।<br>
+        ২) <strong>মিশ্র অংশীদারি কারবার (Compound Partnership):</strong> যখন অংশীদারগণ ভিন্ন ভিন্ন সময়ের জন্য মূলধন বিনিয়োগ করেন, তখন লাভ বা লোকসান তাদের 'সমতুল্য মূলধন' (মূলধন $\times$ সময়) এর অনুপাতে বণ্টিত হয়।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমি ও আমার বন্ধু মালা দুজনে যথাক্রমে 15000 টাকা ও 25000 টাকা মূলধন নিয়ে একটি ব্যবসা শুরু করলাম। এক বছরে 16,800 টাকা লাভ হলো। হিসাব করে দেখি আমরা কে, কত টাকা লভ্যাংশ পাব?</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমার এবং মালার মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 15000 : 25000 \\
+= 15 : 25 \\
+= 3 : 5
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $3 + 5 = 8$</p>
+            <p>মোট লাভ = 16,800 টাকা।</p>
+            <p>মোট লাভ থেকে আমি পাব = $\displaystyle 16800 \times \frac{3}{8}$</p>
+            \[
+\begin{array}{l}
+= 2100 \times 3 \\
+= 6300 \text{ টাকা}
+\end{array}
+\]
+            <p>মোট লাভ থেকে মালা পাবে = $\displaystyle 16800 \times \frac{5}{8}$</p>
+            \[
+\begin{array}{l}
+= 2100 \times 5 \\
+= 10500 \text{ টাকা}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আমি পাব 6,300 টাকা এবং মালা পাবে 10,500 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. প্রিয়ম, সুপ্রিয়া ও বুলু যথাক্রমে 15000 টাকা, 10000 টাকা এবং 25000 টাকা দিয়ে একটি ছোটো মুদির দোকান খুলল। কিন্তু বৎসরান্তে 3000 টাকা লোকসান হলো। কাকে কত টাকা লোকসানের পরিমাণ দিতে হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রিয়ম, সুপ্রিয়া ও বুলুর মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 15000 : 10000 : 25000 \\
+= 15 : 10 : 25 \\
+= 3 : 2 : 5 \quad [\text{5 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $3 + 2 + 5 = 10$</p>
+            <p>মোট লোকসান = 3000 টাকা।</p>
+            <p>লোকসানের জন্য প্রিয়মকে দিতে হবে = $\displaystyle 3000 \times \frac{3}{10} = 300 \times 3 = 900$ টাকা।</p>
+            <p>লোকসানের জন্য সুপ্রিয়াকে দিতে হবে = $\displaystyle 3000 \times \frac{2}{10} = 300 \times 2 = 600$ টাকা।</p>
+            <p>লোকসানের জন্য বুলুকে দিতে হবে = $\displaystyle 3000 \times \frac{5}{10} = 300 \times 5 = 1500$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রিয়ম 900 টাকা, সুপ্রিয়া 600 টাকা এবং বুলু 1500 টাকা লোকসান দেবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. শোভা ও মাসুদ দুজনে মিলে 2,50,000 টাকার একটি গাড়ি কিনে 2,62,500 টাকায় বিক্রি করলেন। গাড়িটি কেনার সময়ে শোভা মাসুদের $1\frac{1}{2}$ গুণ টাকা দিয়ে থাকলে, কে কত টাকা লভ্যাংশ পাবেন তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = বিক্রয়মূল্য - ক্রয়মূল্য</p>
+            \[
+\begin{array}{l}
+= 2,62,500 - 2,50,000 \\
+= 12,500 \text{ টাকা}
+\end{array}
+\]
+            <p>শর্তানুসারে, শোভা মাসুদের $1\frac{1}{2} = \displaystyle\frac{3}{2}$ গুণ টাকা দিয়েছেন।</p>
+            <p>ধরি, মাসুদ দিয়েছেন $x$ টাকা। তাহলে শোভা দিয়েছেন $\displaystyle\frac{3x}{2}$ টাকা।</p>
+            <p>শোভা ও মাসুদের মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= \frac{3x}{2} : x \\
+= \frac{3}{2} : 1 \\
+= 3 : 2
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $3 + 2 = 5$</p>
+            <p>মোট 12,500 টাকা লাভ থেকে শোভা পাবেন = $\displaystyle 12500 \times \frac{3}{5} = 2500 \times 3 = 7500$ টাকা।</p>
+            <p>মাসুদ পাবেন = $\displaystyle 12500 \times \frac{2}{5} = 2500 \times 2 = 5000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: শোভা পাবেন 7500 টাকা এবং মাসুদ পাবেন 5000 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. তিনবন্ধু যথাক্রমে 5000 টাকা, 6000 টাকা ও 7000 টাকা দিয়ে একটি অংশীদারি ব্যবসা শুরু করার এক বছর পর দেখলেন 1800 টাকা লোকসান হয়েছে। মূলধন ঠিক রাখার জন্য প্রত্যেকে লোকসানের পরিমাণ দিয়ে দেবেন বলে সিদ্ধান্ত করেন। তাদের কাকে কত টাকা দিতে হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তিন বন্ধুর মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 5000 : 6000 : 7000 \\
+= 5 : 6 : 7
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $5 + 6 + 7 = 18$</p>
+            <p>মোট লোকসান = 1800 টাকা।</p>
+            <p>প্রথম বন্ধুকে দিতে হবে = $\displaystyle 1800 \times \frac{5}{18} = 100 \times 5 = 500$ টাকা।</p>
+            <p>দ্বিতীয় বন্ধুকে দিতে হবে = $\displaystyle 1800 \times \frac{6}{18} = 100 \times 6 = 600$ টাকা।</p>
+            <p>তৃতীয় বন্ধুকে দিতে হবে = $\displaystyle 1800 \times \frac{7}{18} = 100 \times 7 = 700$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিন বন্ধুকে যথাক্রমে 500 টাকা, 600 টাকা এবং 700 টাকা দিতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. দীপু, রাবেয়া ও মেঘা যথাক্রমে 6500 টাকা, 5200 টাকা ও 9,100 টাকা মূলধন নিয়ে একটি ছোটো ব্যবসা শুরু করল ও ঠিক একবছর পরে 14,400 টাকা লাভ হলো। ওই লাভের $\frac{2}{3}$ অংশ তারা সমানভাবে এবং বাকি অংশ মূলধনের অনুপাতে ভাগ করে নিলে কে কত টাকা লভ্যাংশ পাবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = 14,400 টাকা।</p>
+            <p>লাভের $\displaystyle\frac{2}{3}$ অংশ = $\displaystyle 14400 \times \frac{2}{3} = 4800 \times 2 = 9600$ টাকা।</p>
+            <p>এই 9600 টাকা তারা তিনজন সমানভাবে ভাগ করবে। অতএব, প্রত্যেকে সমানভাবে পাবে = $\displaystyle\frac{9600}{3} = 3200$ টাকা।</p>
+            <br>
+            <p>বাকি লাভ = $14400 - 9600 = 4800$ টাকা।</p>
+            <p>এই 4800 টাকা তারা মূলধনের অনুপাতে ভাগ করবে।</p>
+            <p>দীপু, রাবেয়া ও মেঘার মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 6500 : 5200 : 9100 \\
+= 65 : 52 : 91 \\
+= 5 : 4 : 7 \quad [\text{13 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $5 + 4 + 7 = 16$</p>
+            <p>এই 4800 টাকা থেকে:</p>
+            <p>দীপু পাবে = $\displaystyle 4800 \times \frac{5}{16} = 300 \times 5 = 1500$ টাকা।</p>
+            <p>রাবেয়া পাবে = $\displaystyle 4800 \times \frac{4}{16} = 300 \times 4 = 1200$ টাকা।</p>
+            <p>মেঘা পাবে = $\displaystyle 4800 \times \frac{7}{16} = 300 \times 7 = 2100$ টাকা।</p>
+            <br>
+            <p><strong>মোট লভ্যাংশ:</strong></p>
+            <p>দীপুর মোট লভ্যাংশ = $3200 + 1500 = 4700$ টাকা।</p>
+            <p>রাবেয়ার মোট লভ্যাংশ = $3200 + 1200 = 4400$ টাকা।</p>
+            <p>মেঘার মোট লভ্যাংশ = $3200 + 2100 = 5300$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দীপু 4700 টাকা, রাবেয়া 4400 টাকা এবং মেঘা 5300 টাকা পাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. তিনবন্ধু যথাক্রমে 8000 টাকা, 10000 টাকা ও 12000 টাকা সংগ্রহ করে এবং ব্যাংক থেকে কিছু টাকা ধার নিয়ে একটি ব্যবসা শুরু করেন। বছরের শেষে তারা দেখলেন 13400 টাকা লাভ হয়েছে। সেই লাভ থেকে ব্যাংকের বছরের কিস্তি 5000 টাকা শোধ দেওয়ার পর বাকি টাকা তারা মূলধনের অনুপাতে ভাগ করে নিলেন। লভ্যাংশ থেকে কে কত টাকা পাবেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = 13,400 টাকা।</p>
+            <p>ব্যাংকের কিস্তি শোধ দেওয়ার পর বাকি লাভ = $13400 - 5000 = 8400$ টাকা।</p>
+            <p>তিন বন্ধুর মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 8000 : 10000 : 12000 \\
+= 8 : 10 : 12 \\
+= 4 : 5 : 6 \quad [\text{2 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $4 + 5 + 6 = 15$</p>
+            <p>বাকি 8400 টাকা থেকে:</p>
+            <p>প্রথম বন্ধু পাবেন = $\displaystyle 8400 \times \frac{4}{15} = 560 \times 4 = 2240$ টাকা।</p>
+            <p>দ্বিতীয় বন্ধু পাবেন = $\displaystyle 8400 \times \frac{5}{15} = 560 \times 5 = 2800$ টাকা।</p>
+            <p>তৃতীয় বন্ধু পাবেন = $\displaystyle 8400 \times \frac{6}{15} = 560 \times 6 = 3360$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিন বন্ধু যথাক্রমে 2240 টাকা, 2800 টাকা এবং 3360 টাকা পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. দুই বছরের মধ্যে টাকা ফেরত দিলে কোনো সুদ দিতে হবে না এই শর্তে তিন বন্ধু একটি সমবায় ব্যাংক থেকে যথাক্রমে 6000 টাকা, 8000 টাকা, ও 5000 টাকা ধার নিয়ে যৌথভাবে চারটি সাইকেল রিকশা ক্রয় করেন। দুই বছর পর হিসাব করে দেখা যায় সমস্ত খরচ-খরচা বাদ দিয়ে মোট 30400 টাকা আয় হয়েছে। তারা সেই আয় মূলধনের অনুপাতে ভাগ করে নেওয়ার পর প্রত্যেকে নিজ নিজ ঋণের টাকা ব্যাংকে ফিরিয়ে দেন। এখন কার হাতে কত টাকা থাকবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তিন বন্ধুর মূলধনের (ধারের) অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 6000 : 8000 : 5000 \\
+= 6 : 8 : 5
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $6 + 8 + 5 = 19$</p>
+            <p>মোট আয় = 30,400 টাকা।</p>
+            <p>আয় থেকে প্রথম বন্ধুর ভাগ = $\displaystyle 30400 \times \frac{6}{19} = 1600 \times 6 = 9600$ টাকা।</p>
+            <p>আয় থেকে দ্বিতীয় বন্ধুর ভাগ = $\displaystyle 30400 \times \frac{8}{19} = 1600 \times 8 = 12800$ টাকা।</p>
+            <p>আয় থেকে তৃতীয় বন্ধুর ভাগ = $\displaystyle 30400 \times \frac{5}{19} = 1600 \times 5 = 8000$ টাকা।</p>
+            <br>
+            <p>ব্যাংকের টাকা (বিনা সুদে) শোধ দেওয়ার পর তাদের হাতে থাকবে:</p>
+            <p>প্রথম বন্ধুর হাতে থাকবে = $9600 - 6000 = 3600$ টাকা।</p>
+            <p>দ্বিতীয় বন্ধুর হাতে থাকবে = $12800 - 8000 = 4800$ টাকা।</p>
+            <p>তৃতীয় বন্ধুর হাতে থাকবে = $8000 - 5000 = 3000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিন বন্ধুর হাতে যথাক্রমে 3600 টাকা, 4800 টাকা এবং 3000 টাকা থাকবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. তিন বন্ধু যথাক্রমে 1,20,000 টাকা, 1,50,000 টাকা ও 1,10,000 টাকা মূলধন নিয়ে একটি বাস ক্রয় করেন। প্রথমজন ড্রাইভার ও বাকি দুজন কন্ডাক্টরের কাজ করেন। তারা ঠিক করেন যে মোট আয়ের $\frac{2}{5}$ অংশ কাজের জন্য 3:2:2 অনুপাতে ভাগ করবেন এবং বাকি টাকা মূলধনের অনুপাতে ভাগ করে নেবেন। কোনো একমাসে যদি 29260 টাকা আয় হয়, তবে কে, কত টাকা পাবেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট আয় = 29,260 টাকা।</p>
+            <p>কাজের জন্য বরাদ্দ আয়ের পরিমাণ = $\displaystyle 29260 \times \frac{2}{5} = 5852 \times 2 = 11704$ টাকা।</p>
+            <p>এই 11,704 টাকা তারা 3:2:2 অনুপাতে ভাগ করবেন। অনুপাতের সমষ্টি = $3 + 2 + 2 = 7$</p>
+            <p>কাজের জন্য প্রথম বন্ধু (ড্রাইভার) পাবেন = $\displaystyle 11704 \times \frac{3}{7} = 1672 \times 3 = 5016$ টাকা।</p>
+            <p>কাজের জন্য দ্বিতীয় বন্ধু (কন্ডাক্টর) পাবেন = $\displaystyle 11704 \times \frac{2}{7} = 1672 \times 2 = 3344$ টাকা।</p>
+            <p>কাজের জন্য তৃতীয় বন্ধু (কন্ডাক্টর) পাবেন = $\displaystyle 11704 \times \frac{2}{7} = 3344$ টাকা।</p>
+            <br>
+            <p>বাকি আয় = $29260 - 11704 = 17556$ টাকা।</p>
+            <p>এই 17,556 টাকা তারা মূলধনের অনুপাতে ভাগ করবেন।</p>
+            <p>মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 120000 : 150000 : 110000 \\
+= 12 : 15 : 11
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $12 + 15 + 11 = 38$</p>
+            <p>মূলধন হিসেবে প্রথম বন্ধু পাবেন = $\displaystyle 17556 \times \frac{12}{38} = 462 \times 12 = 5544$ টাকা।</p>
+            <p>মূলধন হিসেবে দ্বিতীয় বন্ধু পাবেন = $\displaystyle 17556 \times \frac{15}{38} = 462 \times 15 = 6930$ টাকা।</p>
+            <p>মূলধন হিসেবে তৃতীয় বন্ধু পাবেন = $\displaystyle 17556 \times \frac{11}{38} = 462 \times 11 = 5082$ টাকা।</p>
+            <br>
+            <p><strong>মোট প্রাপ্ত টাকা:</strong></p>
+            <p>প্রথম বন্ধু মোট পাবেন = $5016 + 5544 = 10560$ টাকা।</p>
+            <p>দ্বিতীয় বন্ধু মোট পাবেন = $3344 + 6930 = 10274$ টাকা।</p>
+            <p>তৃতীয় বন্ধু মোট পাবেন = $3344 + 5082 = 8426$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তারা যথাক্রমে 10560 টাকা, 10274 টাকা এবং 8426 টাকা পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. বছরের প্রথমে প্রদীপবাবু ও আমিনাবিবি যথাক্রমে 24000 টাকা ও 30000 টাকা নিয়ে ব্যবসা শুরু করেন। পাঁচ মাস পর প্রদীপবাবু আরও 4000 টাকা মূলধন দেন। বছরের শেষে 27716 টাকা লাভ হলে, কে, কত টাকা লভ্যাংশ পাবেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এটি একটি <strong>মিশ্র অংশীদারি কারবার</strong>। তাই আমরা 1 মাস হিসেবে সমতুল্য মূলধন নির্ণয় করব।</p>
+            <p>প্রদীপবাবুর 24000 টাকা খেটেছে প্রথম 5 মাস। পরবর্তী 7 মাস (12 - 5) খেটেছে $(24000 + 4000) = 28000$ টাকা।</p>
+            <p>প্রদীপবাবুর 1 মাস হিসেবে সমতুল্য মূলধন:</p>
+            \[
+\begin{array}{l}
+= (24000 \times 5) + (28000 \times 7) \\
+= 120000 + 196000 \\
+= 316000 \text{ টাকা}
+\end{array}
+\]
+            <p>আমিনাবিবি সারা বছর কোনো টাকা তোলেননি বা দেননি। তাই তার 30000 টাকা 12 মাস খেটেছে।</p>
+            <p>আমিনাবিবির 1 মাস হিসেবে সমতুল্য মূলধন = $30000 \times 12 = 360000$ টাকা।</p>
+            <p>উভয়ের মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 316000 : 360000 \\
+= 316 : 360 \\
+= 79 : 90 \quad [\text{4 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $79 + 90 = 169$</p>
+            <p>মোট লাভ = 27,716 টাকা।</p>
+            <p>প্রদীপবাবু পাবেন = $\displaystyle 27716 \times \frac{79}{169} = 164 \times 79 = 12956$ টাকা।</p>
+            <p>আমিনাবিবি পাবেন = $\displaystyle 27716 \times \frac{90}{169} = 164 \times 90 = 14760$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রদীপবাবু 12956 টাকা এবং আমিনাবিবি 14760 টাকা লভ্যাংশ পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. নিয়ামতচাচা ও করবীদিদি যথাক্রমে 30,000 টাকা ও 50,000 টাকা মূলধন দিয়ে যৌথভাবে একটি ব্যবসা আরম্ভ করলেন। 6 মাস পরে নিয়ামতচাচা আরও 40,000 টাকা লগ্নি করলেন, কিন্তু করবীদিদি ব্যক্তিগত প্রয়োজনে 10,000 টাকা তুলে নিলেন। বছরের শেষে যদি 19,000 টাকা লাভ হয়ে থাকে, তাহলে কে, কত টাকা লাভ পাবেন হিসাব করে দেখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>নিয়ামতচাচার 30,000 টাকা খেটেছে প্রথম 6 মাস। পরবর্তী 6 মাস খেটেছে $(30000 + 40000) = 70000$ টাকা।</p>
+            <p>নিয়ামতচাচার 1 মাস হিসেবে সমতুল্য মূলধন:</p>
+            \[
+\begin{array}{l}
+= (30000 \times 6) + (70000 \times 6) \\
+= 180000 + 420000 \\
+= 600000 \text{ টাকা}
+\end{array}
+\]
+            <p>করবীদিদির 50,000 টাকা খেটেছে প্রথম 6 মাস। পরবর্তী 6 মাস খেটেছে $(50000 - 10000) = 40000$ টাকা।</p>
+            <p>করবীদিদির 1 মাস হিসেবে সমতুল্য মূলধন:</p>
+            \[
+\begin{array}{l}
+= (50000 \times 6) + (40000 \times 6) \\
+= 300000 + 240000 \\
+= 540000 \text{ টাকা}
+\end{array}
+\]
+            <p>উভয়ের মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 600000 : 540000 \\
+= 60 : 54 \\
+= 10 : 9 \quad [\text{6 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের পদগুলির সমষ্টি = $10 + 9 = 19$</p>
+            <p>মোট লাভ = 19,000 টাকা।</p>
+            <p>নিয়ামতচাচা পাবেন = $\displaystyle 19000 \times \frac{10}{19} = 1000 \times 10 = 10000$ টাকা।</p>
+            <p>করবীদিদি পাবেন = $\displaystyle 19000 \times \frac{9}{19} = 1000 \times 9 = 9000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নিয়ামতচাচা 10,000 টাকা এবং করবীদিদি 9,000 টাকা পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. বছরের শুরুতে শ্রীকান্ত ও সৈফুদ্দিন 2,40,000 টাকা ও 3,00,000 টাকা দিয়ে একটি মিনিবাস ক্রয় করে চালাতে থাকেন। চার মাস পর তাদের বন্ধু পিটার 81,000 টাকা নিয়ে তাদের সঙ্গে যোগ দিলে শ্রীকান্ত ও সৈফুদ্দিন তাদের মূলধনের অনুপাতে সেই টাকা তুলে নেন। বছরের শেষে 39150 টাকা লাভ হলে, লভ্যাংশ থেকে কে, কত টাকা পাবেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শুরুতে শ্রীকান্ত ও সৈফুদ্দিনের মূলধনের অনুপাত = $240000 : 300000 = 24 : 30 = 4 : 5$</p>
+            <p>পিটার 4 মাস পর 81,000 টাকা দিলে, শ্রীকান্ত ও সৈফুদ্দিন সেই টাকা নিজেদের মধ্যে $4 : 5$ অনুপাতে তুলে নেন।</p>
+            <p>শ্রীকান্ত তুলে নেন = $\displaystyle 81000 \times \frac{4}{9} = 9000 \times 4 = 36000$ টাকা।</p>
+            <p>সৈফুদ্দিন তুলে নেন = $\displaystyle 81000 \times \frac{5}{9} = 9000 \times 5 = 45000$ টাকা।</p>
+            <br>
+            <p><strong>1 মাস হিসেবে সমতুল্য মূলধন:</strong></p>
+            <p>শ্রীকান্তের মূলধন = $(240000 \times 4) + (240000 - 36000) \times 8$</p>
+            \[
+\begin{array}{l}
+= 960000 + 204000 \times 8 \\
+= 960000 + 1632000 \\
+= 25,92,000 \text{ টাকা}
+\end{array}
+\]
+            <p>সৈফুদ্দিনের মূলধন = $(300000 \times 4) + (300000 - 45000) \times 8$</p>
+            \[
+\begin{array}{l}
+= 1200000 + 255000 \times 8 \\
+= 1200000 + 2040000 \\
+= 32,40,000 \text{ টাকা}
+\end{array}
+\]
+            <p>পিটারের মূলধন (৪ মাস পর যুক্ত হওয়ায় তার টাকা খেটেছে 8 মাস) = $81000 \times 8 = 6,48,000$ টাকা।</p>
+            <br>
+            <p>তাদের মূলধনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+= 2592000 : 3240000 : 648000 \\
+= 2592 : 3240 : 648 \\
+= 324 : 405 : 81 \quad [\text{8 দিয়ে ভাগ করে}] \\
+= 36 : 45 : 9 \quad [\text{9 দিয়ে ভাগ করে}] \\
+= 4 : 5 : 1 \quad [\text{9 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <p>অনুপাতের সমষ্টি = $4 + 5 + 1 = 10$</p>
+            <p>মোট লাভ = 39,150 টাকা।</p>
+            <p>শ্রীকান্ত পাবেন = $\displaystyle 39150 \times \frac{4}{10} = 3915 \times 4 = 15660$ টাকা।</p>
+            <p>সৈফুদ্দিন পাবেন = $\displaystyle 39150 \times \frac{5}{10} = 3915 \times 5 = 19575$ টাকা।</p>
+            <p>পিটার পাবেন = $\displaystyle 39150 \times \frac{1}{10} = 3915$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: শ্রীকান্ত 15660 টাকা, সৈফুদ্দিন 19575 টাকা এবং পিটার 3915 টাকা পাবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. বছরের প্রথমে অরুণ ও অজয় যথাক্রমে 24,000 টাকা ও 30,000 টাকা দিয়ে যৌথভাবে ব্যবসা শুরু করেন। কিন্তু কয়েক মাস পরে অরুণ আরও 12,000 টাকা ওই ব্যবসায় মূলধন দেন। বছরের শেষে ওই ব্যবসায় 14,030 টাকা লাভ হলো এবং অরুণ 7,130 টাকা লভ্যাংশ পেলেন। অরুণ কত মাস পরে ব্যবসায় টাকা দিয়েছিলেন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, অরুণ $x$ মাস পরে আরও 12,000 টাকা ব্যবসায় দিয়েছিলেন।</p>
+            <p>তার মানে, অরুণের 24,000 টাকা খেটেছে প্রথম $x$ মাস এবং পরবর্তী $(12 - x)$ মাস খেটেছে $(24000 + 12000) = 36000$ টাকা।</p>
+            <p>অরুণের 1 মাস হিসেবে সমতুল্য মূলধন:</p>
+            \[
+\begin{array}{l}
+= 24000x + 36000(12 - x) \\
+= 24000x + 432000 - 36000x \\
+= 432000 - 12000x \text{ টাকা}
+\end{array}
+\]
+            <p>অজয়ের 30,000 টাকা পুরো 12 মাস খেটেছে।</p>
+            <p>অজয়ের 1 মাস হিসেবে সমতুল্য মূলধন = $30000 \times 12 = 360000$ টাকা।</p>
+            <p>মোট লাভ = 14,030 টাকা। এর মধ্যে অরুণ পেয়েছেন = 7,130 টাকা।</p>
+            <p>অতএব, অজয় পেয়েছেন = $14030 - 7130 = 6900$ টাকা।</p>
+            <p>আমরা জানি, লভ্যাংশের অনুপাত মূলধনের অনুপাতের সমান হয়।</p>
+            \[
+\begin{array}{l}
+\frac{\text{অরুণের মূলধন}}{\text{অজয়ের মূলধন}} = \frac{\text{অরুণের লভ্যাংশ}}{\text{অজয়ের লভ্যাংশ}} \\
+\frac{432000 - 12000x}{360000} = \frac{7130}{6900} \\
+\frac{12000(36 - x)}{360000} = \frac{713}{690} \\
+\frac{36 - x}{30} = \frac{713}{690} \\
+36 - x = 30 \times \frac{713}{690} \\
+36 - x = \frac{713}{23} \\
+36 - x = 31 \\
+x = 36 - 31 = 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অরুণ 5 মাস পরে ব্যবসায় টাকা দিয়েছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. কুমারটুলির তিনজন মৃৎশিল্পী একটি সমবায় ব্যাংক থেকে যৌথভাবে 100000 টাকা ধার করে মৃৎশিল্পের একটি কারখানা স্থাপন করেন। তারা এই চুক্তি করেন যে প্রতি বছর ব্যাংকের কিস্তি 28100 টাকা দেওয়ার পর বাকি লাভের অর্ধেক কাজের দিনের অনুপাতে এবং বাকি অর্ধেক সমান ভাগে ভাগ করে নেবেন। গত বছর তারা যথাক্রমে 300 দিন, 275 দিন ও 350 দিন কাজ করেছেন এবং মোট লাভ হয়েছে 139100 টাকা। কে, কত টাকা পেয়েছিলেন হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = 139,100 টাকা।</p>
+            <p>ব্যাংকের কিস্তি দেওয়ার পর অবশিষ্ট লাভ = $139100 - 28100 = 111,000$ টাকা।</p>
+            <p>এই লাভের অর্ধেক = $\displaystyle\frac{111000}{2} = 55,500$ টাকা।</p>
+            <p><strong>১ম অংশ (কাজের দিনের অনুপাতে বণ্টন):</strong></p>
+            <p>কাজের দিনের অনুপাত = $300 : 275 : 350 = 12 : 11 : 14$ (25 দিয়ে ভাগ করে)।</p>
+            <p>অনুপাতের সমষ্টি = $12 + 11 + 14 = 37$।</p>
+            <p>55,500 টাকা থেকে:</p>
+            <p>১ম জন পাবেন = $\displaystyle 55500 \times \frac{12}{37} = 1500 \times 12 = 18000$ টাকা।</p>
+            <p>২য় জন পাবেন = $\displaystyle 55500 \times \frac{11}{37} = 1500 \times 11 = 16500$ টাকা।</p>
+            <p>৩য় জন পাবেন = $\displaystyle 55500 \times \frac{14}{37} = 1500 \times 14 = 21000$ টাকা।</p>
+            <br>
+            <p><strong>২য় অংশ (সমান ভাগে বণ্টন):</strong></p>
+            <p>বাকি অর্ধেক অর্থাৎ 55,500 টাকা তারা 3 জন সমানভাবে ভাগ করবেন।</p>
+            <p>প্রত্যেকে পাবেন = $\displaystyle\frac{55500}{3} = 18500$ টাকা।</p>
+            <br>
+            <p><strong>মোট প্রাপ্তি:</strong></p>
+            <p>১ম শিল্পী মোট পাবেন = $18000 + 18500 = 36500$ টাকা।</p>
+            <p>২য় শিল্পী মোট পাবেন = $16500 + 18500 = 35000$ টাকা।</p>
+            <p>৩য় শিল্পী মোট পাবেন = $21000 + 18500 = 39500$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তারা যথাক্রমে 36500 টাকা, 35000 টাকা এবং 39500 টাকা পেয়েছিলেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. দুই বন্ধু যথাক্রমে 40000 টাকা ও 50000 টাকা দিয়ে একটি যৌথ ব্যবসা শুরু করেন। তাদের মধ্যে একটি চুক্তি হয় যে, লাভের 50% নিজেদের মধ্যে সমান ভাগে এবং লাভের অবশিষ্টাংশ মূলধনের অনুপাতে ভাগ হবে। প্রথম বন্ধুর লভ্যাংশের পরিমাণ যদি দ্বিতীয় বন্ধুর লভ্যাংশ অপেক্ষা 800 টাকা কম হয়, তবে প্রথম বন্ধুর লভ্যাংশের পরিমাণ হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মূলধনের অনুপাত = $40000 : 50000 = 4 : 5$। অনুপাতের সমষ্টি = 9।</p>
+            <p>ধরি, মোট লাভ = $P$ টাকা।</p>
+            <p>লাভের 50% অর্থাৎ $\displaystyle\frac{P}{2}$ টাকা সমান ভাগে ভাগ হয়। এক্ষেত্রে প্রত্যেকে পাবেন $\displaystyle\frac{P}{4}$ টাকা করে।</p>
+            <p>অবশিষ্টাংশ $\displaystyle\frac{P}{2}$ টাকা মূলধনের অনুপাতে ভাগ হয়।</p>
+            <p>মূলধনের অনুপাতে প্রথম বন্ধু পাবেন = $\displaystyle\frac{P}{2} \times \frac{4}{9} = \frac{2P}{9}$ টাকা।</p>
+            <p>মূলধনের অনুপাতে দ্বিতীয় বন্ধু পাবেন = $\displaystyle\frac{P}{2} \times \frac{5}{9} = \frac{5P}{18}$ টাকা।</p>
+            <p>প্রথম বন্ধুর মোট লভ্যাংশ = $\left(\displaystyle\frac{P}{4} + \frac{2P}{9}\right)$ টাকা।</p>
+            <p>দ্বিতীয় বন্ধুর মোট লভ্যাংশ = $\left(\displaystyle\frac{P}{4} + \frac{5P}{18}\right)$ টাকা।</p>
+            <p>শর্তানুসারে, দ্বিতীয় বন্ধুর লভ্যাংশ প্রথম বন্ধুর চেয়ে 800 টাকা বেশি:</p>
+            \[
+\begin{array}{l}
+\left(\frac{P}{4} + \frac{5P}{18}\right) - \left(\frac{P}{4} + \frac{2P}{9}\right) = 800 \\
+\frac{5P}{18} - \frac{2P}{9} = 800 \\
+\frac{5P - 4P}{18} = 800 \\
+\frac{P}{18} = 800 \\
+P = 800 \times 18 = 14400 \text{ টাকা}
+\end{array}
+\]
+            <p>প্রথম বন্ধুর মোট লভ্যাংশ = $\displaystyle\frac{14400}{4} + \frac{2 \times 14400}{9} = 3600 + 3200 = 6800$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রথম বন্ধুর লভ্যাংশের পরিমাণ 6800 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. পূজা, উত্তম ও মেহের যথাক্রমে 5000 টাকা, 7000 টাকা ও 10000 টাকা মূলধন নিয়ে অংশীদারি কারবার এই শর্তে শুরু করে যে (i) কারবার চালানোর মাসিক খরচ 125 টাকা, (ii) হিসাবপত্র রাখার জন্য পূজা ও উত্তম প্রত্যেকে মাসিক 200 টাকা পাবে। বছরের শেষে 6960 টাকা লাভ হলে, তা থেকে কে, কত টাকা পাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = 6960 টাকা।</p>
+            <p>কারবার চালানোর জন্য 1 বছরে খরচ = $125 \times 12 = 1500$ টাকা।</p>
+            <p>হিসাব রাখার জন্য পূজা 1 বছরে পাবে = $200 \times 12 = 2400$ টাকা।</p>
+            <p>হিসাব রাখার জন্য উত্তম 1 বছরে পাবে = $200 \times 12 = 2400$ টাকা।</p>
+            <p>মোট নির্দিষ্ট খরচ ও ভাতা = $1500 + 2400 + 2400 = 6300$ টাকা।</p>
+            <p>বণ্টনযোগ্য অবশিষ্ট লাভ = $6960 - 6300 = 660$ টাকা।</p>
+            <br>
+            <p>এই 660 টাকা তারা মূলধনের অনুপাতে ভাগ করবে।</p>
+            <p>মূলধনের অনুপাত = $5000 : 7000 : 10000 = 5 : 7 : 10$। অনুপাতের সমষ্টি = 22।</p>
+            <p>মূলধনের অনুপাতে পূজা পাবে = $\displaystyle 660 \times \frac{5}{22} = 30 \times 5 = 150$ টাকা।</p>
+            <p>মূলধনের অনুপাতে উত্তম পাবে = $\displaystyle 660 \times \frac{7}{22} = 30 \times 7 = 210$ টাকা।</p>
+            <p>মূলধনের অনুপাতে মেহের পাবে = $\displaystyle 660 \times \frac{10}{22} = 30 \times 10 = 300$ টাকা।</p>
+            <br>
+            <p><strong>মোট প্রাপ্তি:</strong></p>
+            <p>পূজা মোট পাবে = $2400 \text{ (ভাতা)} + 150 \text{ (লভ্যাংশ)} = 2550$ টাকা।</p>
+            <p>উত্তম মোট পাবে = $2400 \text{ (ভাতা)} + 210 \text{ (লভ্যাংশ)} = 2610$ টাকা।</p>
+            <p>মেহের মোট পাবে = $300 \text{ (লভ্যাংশ)}$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পূজা 2550 টাকা, উত্তম 2610 টাকা এবং মেহের 300 টাকা পাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) কোনো যৌথ ব্যবসায় তিন বন্ধুর মূলধন যথাক্রমে 200 টাকা, 150 টাকা ও 250 টাকা। একই সময় পরে তাদের লভ্যাংশের অনুপাত হবে:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সময় সমান হলে লভ্যাংশের অনুপাত মূলধনের অনুপাতের সমান হয়।</p>
+            <p>অনুপাত = $200 : 150 : 250 = 20 : 15 : 25 = 4 : 3 : 5$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 4:3:5</div>
+        </div>
+
+        <span class="sub-question">(ii) শুভেন্দু ও নৌসাদ যথাক্রমে 1500 এবং 1000 টাকা দিয়ে একটি ব্যবসা শুরু করে। এক বছর পরে ব্যবসায় 75 টাকা ক্ষতি হলে, শুভেন্দুর ক্ষতি হয়:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মূলধনের অনুপাত = $1500 : 1000 = 3 : 2$। মোট অনুপাত = 5।</p>
+            <p>শুভেন্দুর ক্ষতির পরিমাণ = $\displaystyle 75 \times \frac{3}{5} = 15 \times 3 = 45$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 45 টাকা</div>
+        </div>
+
+        <span class="sub-question">(iii) ফাতিমা, শ্রেয়া এবং স্মিতা তিনজনে মোট 6000 টাকা দিয়ে একটি ব্যবসা শুরু করে। এক বছর পরে ফাতিমা, শ্রেয়া এবং স্মিতা যথাক্রমে লভ্যাংশের 50 টাকা, 100 টাকা এবং 150 টাকা পায়। স্মিতা ওই ব্যবসায় নিয়োজিত করে:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মূলধনের অনুপাত = লভ্যাংশের অনুপাত = $50 : 100 : 150 = 1 : 2 : 3$। মোট অনুপাত = 6।</p>
+            <p>স্মিতার মূলধন = $\displaystyle 6000 \times \frac{3}{6} = 3000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 3000 টাকা</div>
+        </div>
+
+        <span class="sub-question">(iv) অমল এবং বিমল একটি ব্যবসা শুরু করে। অমল 500 টাকা 9 মাসের জন্য এবং বিমল কিছু টাকা 6 মাসের জন্য ব্যবসায় নিয়োজিত করে। ব্যবসায় মোট লাভ হয় 69 টাকা এবং বিমল লাভের 46 টাকা পায়। ব্যবসায় বিমলের মূলধন:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বিমলের লাভ = 46 টাকা। তাহলে অমলের লাভ = $69 - 46 = 23$ টাকা।</p>
+            <p>লভ্যাংশের অনুপাত (অমল : বিমল) = $23 : 46 = 1 : 2$।</p>
+            <p>ধরি, বিমল $x$ টাকা দিয়েছিল। অমলের সমতুল্য মূলধন = $500 \times 9 = 4500$। বিমলের সমতুল্য মূলধন = $6x$।</p>
+            <p>শর্তানুসারে, $\displaystyle\frac{4500}{6x} = \frac{1}{2} \implies 6x = 9000 \implies x = 1500$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 1500 টাকা</div>
+        </div>
+
+        <span class="sub-question">(v) পল্লবী 500 টাকা 9 মাসের জন্য এবং রাজিয়া 600 টাকা 5 মাসের জন্য একটি ব্যবসায় নিয়োজিত করে। লভ্যাংশ তাদের মধ্যে বণ্টিত হবে যে অনুপাতে তা হলো:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমতুল্য মূলধনের অনুপাত = $(500 \times 9) : (600 \times 5) = 4500 : 3000 = 45 : 30 = 3 : 2$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 3:2</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) অংশীদারি ব্যবসায় কমপক্ষে লোকের দরকার 3 জন।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> অংশীদারি কারবার গঠন করতে ন্যূনতম 2 জন লোকের প্রয়োজন হয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি ব্যবসায় রাজু ও আসিফের মূলধনের অনুপাত 5 : 4 এবং রাজু মোট লাভের 80 টাকা পেলে আসিফ পায় 100 টাকা।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> যদি মূলধনের অনুপাত 5:4 হয়, তবে রাজুর লাভ বেশি হওয়ার কথা। কিন্তু এখানে রাজু 80 ও আসিফ 100 বলা হয়েছে, যা 4:5 অনুপাত।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) অংশীদারি কারবার <span class="blank-fill">২ (দুই)</span> ধরনের।</span>
+        <div class="solution-box">
+            <p>অংশীদারি কারবার সাধারণত সরল এবং মিশ্র - এই দুই প্রকারের হয়।</p>
+        </div>
+
+        <span class="sub-question">(ii) অন্য কোনো শর্ত ছাড়া অংশীদারি ব্যবসায় অংশীদারগণ সমান সময়ের জন্য মূলধন নিয়োজিত করলে তাকে <span class="blank-fill">সরল</span> অংশীদারি কারবার বলে।</span>
+        <div class="solution-box"></div>
+
+        <span class="sub-question">(iii) অন্য কোনো শর্ত ছাড়া অংশীদারি ব্যবসায় অংশীদারগণ ভিন্ন ভিন্ন সময়ের জন্য মূলধন নিয়োজিত করলে তাকে <span class="blank-fill">মিশ্র (বা যৌগিক)</span> অংশীদারি কারবার বলে।</span>
+        <div class="solution-box"></div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি অংশীদারি ব্যবসায় সমীর, ইদ্রিশ এবং অ্যান্টনির মূলধনের অনুপাত $\displaystyle\frac{1}{6} : \frac{1}{5} : \frac{1}{4}$; বছরের শেষে ব্যবসায় মোট লাভ 3700 টাকা হলে, অ্যান্টনির লাভ কত হবে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে ভগ্নাংশের অনুপাতকে পূর্ণসংখ্যার অনুপাতে নিয়ে যাই। 6, 5, 4 এর লসাগু = 60।</p>
+            <p>অনুপাত = $\left(\displaystyle\frac{1}{6} \times 60\right) : \left(\frac{1}{5} \times 60\right) : \left(\frac{1}{4} \times 60\right) = 10 : 12 : 15$।</p>
+            <p>অনুপাতের সমষ্টি = $10 + 12 + 15 = 37$।</p>
+            <p>অ্যান্টনির লাভ = $\displaystyle 3700 \times \frac{15}{37} = 100 \times 15 = 1500$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অ্যান্টনির লাভ 1500 টাকা।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি অংশীদারি ব্যবসায় পৃথা ও রাবেয়ার মূলধনের অনুপাত 2 : 3 এবং রাবেয়া ও জেসমিনের মূলধনের অনুপাত 4 : 5 হলে, পৃথা, রাবেয়া ও জেসমিনের মূলধনের অনুপাত কত তা হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>পৃথা : রাবেয়া = $2 : 3$</p>
+            <p>রাবেয়া : জেসমিন = $4 : 5$</p>
+            <p>রাবেয়ার অনুপাত সমান করার জন্য, প্রথম অনুপাতকে 4 দিয়ে এবং দ্বিতীয় অনুপাতকে 3 দিয়ে গুণ করি:</p>
+            <p>পৃথা : রাবেয়া = $8 : 12$</p>
+            <p>রাবেয়া : জেসমিন = $12 : 15$</p>
+            <p>সুতরাং, পৃথা : রাবেয়া : জেসমিন = $8 : 12 : 15$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় অনুপাত 8:12:15।</div>
+        </div>
+
+        <span class="sub-question">(iii) দুজনের একটি অংশীদারি ব্যবসায় মোট লাভ হয় 1500 টাকা। রাজীবের মূলধন 6000 টাকা এবং লাভ 900 টাকা হলে, আফতাবের মূলধন কত তা হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মোট লাভ = 1500 টাকা। রাজীবের লাভ = 900 টাকা।</p>
+            <p>তাহলে, আফতাবের লাভ = $1500 - 900 = 600$ টাকা।</p>
+            <p>লাভের অনুপাত (রাজীব : আফতাব) = $900 : 600 = 3 : 2$।</p>
+            <p>আমরা জানি, লাভের অনুপাত মূলধনের অনুপাতের সমান হয়।</p>
+            <p>ধরি, আফতাবের মূলধন $x$ টাকা।</p>
+            \[
+\begin{array}{l}
+\frac{6000}{x} = \frac{3}{2} \\
+3x = 12000 \\
+x = 4000
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আফতাবের মূলধন 4000 টাকা।</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি অংশীদারি ব্যবসায় তিনজনের মূলধনের অনুপাত 3 : 8 : 5 এবং প্রথম ব্যক্তির লাভ তৃতীয় ব্যক্তির লাভের থেকে 60 টাকা কম হলে, ব্যবসায় মোট কত লাভ হয়েছিল হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, তিনজনের লাভ যথাক্রমে $3x, 8x$ এবং $5x$ টাকা।</p>
+            <p>শর্তানুসারে, প্রথম ব্যক্তির লাভ তৃতীয় ব্যক্তির থেকে 60 টাকা কম:</p>
+            \[
+\begin{array}{l}
+5x - 3x = 60 \\
+2x = 60 \\
+x = 30
+\end{array}
+\]
+            <p>মোট লাভ = $3x + 8x + 5x = 16x$</p>
+            <p>মোট লাভ = $16 \times 30 = 480$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যবসায় মোট 480 টাকা লাভ হয়েছিল।</div>
+        </div>
+
+        <span class="sub-question">(v) জয়ন্ত, অজিত এবং কুণাল মোট 15000 টাকা দিয়ে একটি অংশীদারি ব্যবসা শুরু করে। বছরের শেষে জয়ন্ত, অজিত এবং কুণালের যথাক্রমে লাভ হয় 800 টাকা, 1000 টাকা এবং 1200 টাকা। জয়ন্ত কত টাকা ব্যবসায় নিয়োজিত করে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তাদের লাভের অনুপাত = $800 : 1000 : 1200 = 8 : 10 : 12 = 4 : 5 : 6$।</p>
+            <p>আমরা জানি, লাভের অনুপাত এবং মূলধনের অনুপাত একই হয়।</p>
+            <p>অনুপাতের সমষ্টি = $4 + 5 + 6 = 15$।</p>
+            <p>মোট মূলধন = 15,000 টাকা।</p>
+            <p>জয়ন্তের মূলধন = $\displaystyle 15000 \times \frac{4}{15} = 1000 \times 4 = 4000$ টাকা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: জয়ন্ত ব্যবসায় 4000 টাকা নিয়োজিত করেছিল।</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-18.3</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark);font-size:1.05rem}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>সদৃশকোণী ত্রিভুজ (Equiangular &amp; Similar Triangles):</strong><br>
+        দুটি ত্রিভুজের অনুরূপ কোণগুলি সমান হলে তাদের <strong>সদৃশকোণী ত্রিভুজ</strong> বলে। দুটি ত্রিভুজ সদৃশকোণী হলে তারা পরস্পর <strong>সদৃশ (Similar)</strong> হবে এবং তাদের <strong>অনুরূপ বাহুগুলির অনুপাত সর্বদা সমান</strong> হবে।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নীচের কোন ত্রিভুজ জোড়া সদৃশ হিসাব করে লিখি।</h4>
+        
+        <span class="sub-question">(i) প্রথম জোড়া ত্রিভুজ:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="300" height="150" viewBox="0 0 300 150">
+               <!-- Triangle ABC -->
+               <polygon points="40,20 40,120 120,120" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></polygon>
+               <text x="30" y="15" font-weight="bold">A</text>
+               <text x="25" y="130" font-weight="bold">B</text>
+               <text x="125" y="130" font-weight="bold">C</text>
+               <text x="15" y="70" font-size="12">2 একক</text>
+               <text x="70" y="135" font-size="12">2.5 একক</text>
+               <text x="80" y="60" font-size="12">3 একক</text>
+               
+               <!-- Triangle PQR -->
+               <polygon points="180,20 180,120 280,120" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"></polygon>
+               <text x="170" y="15" font-weight="bold">P</text>
+               <text x="165" y="130" font-weight="bold">Q</text>
+               <text x="285" y="130" font-weight="bold">R</text>
+               <text x="150" y="70" font-size="12">5 একক</text>
+               <text x="220" y="135" font-size="12">4 একক</text>
+               <text x="235" y="60" font-size="12">6 একক</text>
+            </svg>
+
+            <p>$\triangle ABC$-এর বাহুগুলি হলো: $AB = 2, BC = 2.5, CA = 3$</p>
+            <p>$\triangle PQR$-এর বাহুগুলি হলো: $PQ = 5, QR = 4, RP = 6$</p>
+            <p>বাহুগুলির অনুপাত পরীক্ষা করে দেখি:</p>
+            <p>$\displaystyle \frac{AB}{QR} = \frac{2}{4} = \frac{1}{2}$</p>
+            <p>$\displaystyle \frac{BC}{PQ} = \frac{2.5}{5} = \frac{1}{2}$</p>
+            <p>$\displaystyle \frac{CA}{RP} = \frac{3}{6} = \frac{1}{2}$</p>
+            <p>যেহেতু $\displaystyle\frac{AB}{QR} = \frac{BC}{PQ} = \frac{CA}{RP}$, তাই অনুরূপ বাহুগুলি সমানুপাতী।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: হ্যাঁ, এই ত্রিভুজ জোড়াটি সদৃশ ($\triangle ABC \sim \triangle RQP$)।</div>
+        </div>
+
+        <span class="sub-question">(ii) দ্বিতীয় জোড়া ত্রিভুজ:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="300" height="150" viewBox="0 0 300 150">
+               <!-- Triangle ABC -->
+               <polygon points="40,30 20,120 100,120" fill="#FEF3C7" stroke="#E11D48" stroke-width="2"></polygon>
+               <text x="35" y="20" font-weight="bold">A</text>
+               <text x="5" y="130" font-weight="bold">B</text>
+               <text x="105" y="130" font-weight="bold">C</text>
+               <text x="50" y="55" font-size="10" font-weight="bold">80°</text>
+               <text x="5" y="70" font-size="12">2.5 একক</text>
+               <text x="75" y="70" font-size="12">4 একক</text>
+               
+               <!-- Triangle PQR -->
+               <polygon points="220,20 170,120 280,120" fill="#DCFCE7" stroke="#10B981" stroke-width="2"></polygon>
+               <text x="215" y="15" font-weight="bold">P</text>
+               <text x="155" y="130" font-weight="bold">Q</text>
+               <text x="285" y="130" font-weight="bold">R</text>
+               <text x="250" y="115" font-size="10" font-weight="bold">80°</text>
+               <text x="180" y="70" font-size="12">6 একক</text>
+               <text x="260" y="70" font-size="12">5 একক</text>
+            </svg>
+
+            <p>$\triangle ABC$-এর ক্ষেত্রে, অন্তর্ভুক্ত কোণ $\angle A = 80^\circ$ এবং বাহু $AB = 2.5, AC = 4$</p>
+            <p>$\triangle PQR$-এর ক্ষেত্রে, অন্তর্ভুক্ত কোণ $\angle R = 80^\circ$ এবং বাহু $PR = 5, QR = 6$</p>
+            <p>অন্তর্ভুক্ত কোণ সংলগ্ন বাহুগুলির অনুপাত পরীক্ষা করে দেখি:</p>
+            <p>$\displaystyle \frac{AB}{PR} = \frac{2.5}{5} = \frac{1}{2}$</p>
+            <p>$\displaystyle \frac{AC}{QR} = \frac{4}{6} = \frac{2}{3}$</p>
+            <p>যেহেতু $\displaystyle\frac{1}{2} \neq \frac{2}{3}$, তাই অন্তর্ভুক্ত কোণের ধারক বাহুগুলি সমানুপাতী নয়।</p>
+            <div class="final-answer"><i class="fas fa-times-circle me-1 text-danger"></i> উত্তর: এই ত্রিভুজ জোড়াটি সদৃশ নয়।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নীচের ত্রিভুজ জোড়া দেখি ও $\angle A$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="300" height="150" viewBox="0 0 300 150">
+               <!-- Triangle XYZ -->
+               <polygon points="50,20 20,120 100,120" fill="#F8FAFC" stroke="#3730A3" stroke-width="2"></polygon>
+               <text x="45" y="15" font-weight="bold">X</text>
+               <text x="5" y="130" font-weight="bold">Y</text>
+               <text x="105" y="130" font-weight="bold">Z</text>
+               <text x="45" y="45" font-size="10">75°</text>
+               <text x="25" y="115" font-size="10">65°</text>
+               <text x="5" y="70" font-size="12">4.2</text>
+               <text x="50" y="135" font-size="12">7</text>
+               <text x="80" y="70" font-size="12">5.2</text>
+               
+               <!-- Triangle ABC -->
+               <polygon points="210,20 160,120 260,120" fill="#F8FAFC" stroke="#10B981" stroke-width="2"></polygon>
+               <text x="205" y="15" font-weight="bold">C</text>
+               <text x="145" y="130" font-weight="bold">A</text>
+               <text x="265" y="130" font-weight="bold">B</text>
+               <text x="165" y="70" font-size="12">10.4</text>
+               <text x="210" y="135" font-size="12">14</text>
+               <text x="245" y="70" font-size="12">8.4</text>
+            </svg>
+
+            <p>$\triangle XYZ$-এ, $XY = 4.2$, $YZ = 7$, $ZX = 5.2$। কোণগুলি: $\angle X = 75^\circ$, $\angle Y = 65^\circ$।</p>
+            <p>$\triangle ABC$-এ, $AB = 14$, $BC = 8.4$, $CA = 10.4$।</p>
+            <p>অনুরূপ বাহুগুলির অনুপাত নির্ণয় করি:</p>
+            <p>$\displaystyle \frac{AB}{YZ} = \frac{14}{7} = 2$</p>
+            <p>$\displaystyle \frac{BC}{XY} = \frac{8.4}{4.2} = 2$</p>
+            <p>$\displaystyle \frac{CA}{ZX} = \frac{10.4}{5.2} = 2$</p>
+            <p>যেহেতু $\displaystyle\frac{AB}{YZ} = \frac{BC}{XY} = \frac{CA}{ZX} = 2$, তাই S-S-S সদৃশতার শর্তানুসারে $\triangle ABC \sim \triangle ZXY$।</p>
+            <p>সদৃশ ত্রিভুজের অনুরূপ কোণগুলি সমান হয়।</p>
+            <p>এখানে $\angle A$ কোণটি $BC$ বাহুর বিপরীতে অবস্থিত। $BC$-এর অনুরূপ বাহু হলো $XY$।</p>
+            <p>$\triangle XYZ$-এ, $XY$ বাহুর বিপরীত কোণ হলো $\angle Z$।</p>
+            <p>$\therefore \angle A = \angle Z$</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$ হওয়ায়, $\angle Z = 180^\circ - (75^\circ + 65^\circ) = 180^\circ - 140^\circ = 40^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle A$-এর মান $40^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. আমাদের মাঠে 6 সেমি. দৈর্ঘ্যের একটি কাঠির 4 সেমি. দৈর্ঘ্যের ছায়া মাটিতে পড়েছে। ওই একই সময়ে যদি একটি উঁচু টাওয়ারের ছায়ার দৈর্ঘ্য 28 মিটার হয়, তবে টাওয়ারের উচ্চতা কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="180" viewBox="0 0 280 180">
+               <!-- Small Triangle (Stick) -->
+               <polygon points="50,60 50,150 110,150" fill="none" stroke="#F59E0B" stroke-width="2"></polygon>
+               <line x1="50" y1="60" x2="50" y2="150" stroke="#1F2937" stroke-width="3"></line> <!-- Stick -->
+               <line x1="50" y1="150" x2="110" y2="150" stroke="#94A3B8" stroke-width="3"></line> <!-- Shadow -->
+               <text x="25" y="110" font-size="12">6 cm</text>
+               <text x="65" y="165" font-size="12">4 cm</text>
+               <text x="45" y="55" font-weight="bold">A</text>
+               <text x="35" y="155" font-weight="bold">B</text>
+               <text x="115" y="155" font-weight="bold">C</text>
+               
+               <!-- Large Triangle (Tower) -->
+               <polygon points="160,20 160,150 260,150" fill="none" stroke="#10B981" stroke-width="2"></polygon>
+               <line x1="160" y1="20" x2="160" y2="150" stroke="#3730A3" stroke-width="4"></line> <!-- Tower -->
+               <line x1="160" y1="150" x2="260" y2="150" stroke="#94A3B8" stroke-width="3"></line> <!-- Shadow -->
+               <text x="140" y="85" font-size="12">h</text>
+               <text x="195" y="165" font-size="12">28 m</text>
+               <text x="155" y="15" font-weight="bold">P</text>
+               <text x="145" y="155" font-weight="bold">Q</text>
+               <text x="265" y="155" font-weight="bold">R</text>
+            </svg>
+
+            <p>ধরি, কাঠির উচ্চতা $AB = 6$ সেমি এবং ছায়ার দৈর্ঘ্য $BC = 4$ সেমি।</p>
+            <p>টাওয়ারের উচ্চতা $PQ = h$ মিটার এবং ছায়ার দৈর্ঘ্য $QR = 28$ মিটার = 2800 সেমি।</p>
+            <p>যেহেতু একই সময়ে ছায়া পড়ছে, তাই সূর্যের উন্নতি কোণ সমান হবে। অর্থাৎ $\angle C = \angle R$।</p>
+            <p>উভয় ক্ষেত্রে কাঠি এবং টাওয়ার মাটির সঙ্গে লম্বভাবে ($90^\circ$) দণ্ডায়মান। অর্থাৎ $\angle B = \angle Q = 90^\circ$।</p>
+            <p>$\therefore \triangle ABC$ এবং $\triangle PQR$ সদৃশকোণী ও সদৃশ ($\triangle ABC \sim \triangle PQR$)।</p>
+            <p>সদৃশ ত্রিভুজের অনুরূপ বাহুগুলি সমানুপাতী হয়:</p>
+            \[
+\begin{array}{l}
+\frac{PQ}{AB} = \frac{QR}{BC} \\
+\frac{h \text{ মিটার}}{6 \text{ সেমি}} = \frac{28 \text{ মিটার}}{4 \text{ সেমি}}
+\end{array}
+\]
+            <p>আমরা মিটার ও সেমির অনুপাত ব্যবহার করতে পারি কারণ অনুপাতের একক কেটে যায়:</p>
+            \[
+\begin{array}{l}
+\frac{h}{6} = \frac{28}{4} \\
+\frac{h}{6} = 7 \\
+h = 6 \times 7 = 42
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: টাওয়ারের উচ্চতা 42 মিটার হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. প্রমাণ করি যে, কোনো ত্রিভুজের দুটি বাহুর মধ্যবিন্দুর সংযোজক সরলরেখাংশ তৃতীয় বাহুর সমান্তরাল ও অর্ধেক।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ (সদৃশতা প্রয়োগ করে)</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$-এর $AB$ এবং $AC$ বাহুর মধ্যবিন্দু যথাক্রমে $D$ এবং $E$। $D, E$ যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $DE \parallel BC$ এবং $DE = \frac{1}{2} BC$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু D হলো AB-এর মধ্যবিন্দু, $\therefore AD = DB \implies \displaystyle\frac{AD}{AB} = \frac{1}{2}$</p>
+                <p>যেহেতু E হলো AC-এর মধ্যবিন্দু, $\therefore AE = EC \implies \displaystyle\frac{AE}{AC} = \frac{1}{2}$</p>
+                <p>অতএব, $\displaystyle\frac{AD}{AB} = \frac{AE}{AC} = \frac{1}{2}$</p>
+                <p>এখন $\triangle ADE$ এবং $\triangle ABC$-এর মধ্যে:</p>
+                <ol>
+                    <li>$\displaystyle\frac{AD}{AB} = \frac{AE}{AC}$ (উপরে প্রমাণিত)</li>
+                    <li>$\angle A$ সাধারণ কোণ (Common angle)</li>
+                </ol>
+                <p>$\therefore$ S-A-S সদৃশতার শর্তানুসারে, $\triangle ADE \sim \triangle ABC$ (সদৃশ)।</p>
+                <br>
+                <p>যেহেতু ত্রিভুজ দুটি সদৃশ, তাই তাদের অনুরূপ কোণগুলি সমান হবে।</p>
+                <p>$\therefore \angle ADE = \angle ABC$</p>
+                <p>কিন্তু এরা অনুরূপ কোণ (Corresponding angles) এবং AB ভেদক। সুতরাং, $DE \parallel BC$। (প্রথম অংশ প্রমাণিত)</p>
+                <br>
+                <p>আবার, সদৃশ ত্রিভুজের অনুরূপ বাহুগুলি সমানুপাতী হয়:</p>
+                <p>$\displaystyle\frac{DE}{BC} = \frac{AD}{AB} = \frac{1}{2}$</p>
+                <p>$\implies DE = \frac{1}{2} BC$। (দ্বিতীয় অংশ প্রমাণিত)</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. তিনটি সমবিন্দু সরলরেখাকে দুটি সমান্তরাল সরলরেখা যথাক্রমে A, B, C ও X, Y, Z বিন্দুতে ছেদ করেছে, প্রমাণ করি যে, AB : BC = XY : YZ</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O বিন্দুগামী তিনটি সমবিন্দু সরলরেখা OA, OB এবং OC। দুটি সমান্তরাল সরলরেখা $AC \parallel XZ$ এদেরকে যথাক্রমে A, B, C এবং X, Y, Z বিন্দুতে ছেদ করেছে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AB : BC = XY : YZ$ বা $\displaystyle\frac{AB}{BC} = \frac{XY}{YZ}$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু $AC \parallel XZ$, তাই $AB \parallel XY$ এবং $BC \parallel YZ$।</p>
+                <p>$\triangle OAB$ এবং $\triangle OXY$-এর মধ্যে:</p>
+                <p>$AB \parallel XY \implies \angle OAB = \angle OXY$ এবং $\angle OBA = \angle OYX$ (অনুরূপ কোণ)।</p>
+                <p>$\therefore \triangle OAB \sim \triangle OXY$ (সদৃশকোণী)।</p>
+                <p>অতএব, $\displaystyle\frac{AB}{XY} = \frac{OB}{OY} \quad \dots \text{(i)}$</p>
+                <br>
+                <p>একইভাবে, $\triangle OBC$ এবং $\triangle OYZ$-এর মধ্যে:</p>
+                <p>$BC \parallel YZ \implies \angle OBC = \angle OYZ$ এবং $\angle OCB = \angle OZY$ (অনুরূপ কোণ)।</p>
+                <p>$\therefore \triangle OBC \sim \triangle OYZ$ (সদৃশকোণী)।</p>
+                <p>অতএব, $\displaystyle\frac{BC}{YZ} = \frac{OB}{OY} \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) নং সমীকরণ তুলনা করে পাই:</p>
+                \[
+\begin{array}{l}
+\frac{AB}{XY} = \frac{BC}{YZ} \\
+\frac{AB}{BC} = \frac{XY}{YZ} \quad [\text{একান্তর প্রক্রিয়া করে}]
+\end{array}
+\]
+                <p>অর্থাৎ, $AB : BC = XY : YZ$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. PQRS একটি ট্রাপিজিয়াম অঙ্কন করেছি যার PQ || SR ; PR ও QS কর্ণ দুটি O বিন্দুতে পরস্পরকে ছেদ করলে, প্রমাণ করি যে, OP : OR = OQ : OS; যদি SR = 2PQ হয়, তাহলে প্রমাণ করি যে, O বিন্দু কর্ণ দুটির প্রত্যেকটির সমত্রিখণ্ডক বিন্দুর একটি বিন্দু হবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="220" height="150" viewBox="0 0 220 150">
+               <polygon points="60,20 160,20 200,120 20,120" fill="none" stroke="#3730A3" stroke-width="2"></polygon>
+               <!-- Diagonals -->
+               <line x1="60" y1="20" x2="200" y2="120" stroke="#10B981" stroke-width="1.5"></line>
+               <line x1="160" y1="20" x2="20" y2="120" stroke="#10B981" stroke-width="1.5"></line>
+               
+               <circle cx="60" cy="20" r="3" fill="#1F2937"></circle>
+               <circle cx="160" cy="20" r="3" fill="#1F2937"></circle>
+               <circle cx="200" cy="120" r="3" fill="#1F2937"></circle>
+               <circle cx="20" cy="120" r="3" fill="#1F2937"></circle>
+               <circle cx="110" cy="70" r="3" fill="#E11D48"></circle> <!-- Intersection O -->
+               
+               <text x="45" y="15" font-weight="bold">P</text>
+               <text x="165" y="15" font-weight="bold">Q</text>
+               <text x="205" y="135" font-weight="bold">R</text>
+               <text x="5" y="135" font-weight="bold">S</text>
+               <text x="110" y="60" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রমাণ (প্রথম অংশ):</strong>
+                <p>$\triangle OPQ$ এবং $\triangle ORS$-এর মধ্যে:</p>
+                <p>যেহেতু $PQ \parallel SR$, একান্তর কোণ $\angle OPQ = \angle ORS$ এবং একান্তর কোণ $\angle OQP = \angle OSR$।</p>
+                <p>বিপ্রতীপ কোণ $\angle POQ = \angle ROS$।</p>
+                <p>$\therefore \triangle OPQ \sim \triangle ORS$ (সদৃশকোণী)।</p>
+                <p>সদৃশ ত্রিভুজের অনুরূপ বাহুগুলির অনুপাত সমান হয়।</p>
+                <p>$\displaystyle\frac{OP}{OR} = \frac{OQ}{OS} = \frac{PQ}{SR}$</p>
+                <p>অতএব, $OP : OR = OQ : OS$ (প্রথম অংশ প্রমাণিত)।</p>
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ (দ্বিতীয় অংশ):</strong>
+                <p>দেওয়া আছে, $SR = 2PQ \implies \displaystyle\frac{PQ}{SR} = \frac{1}{2}$</p>
+                <p>উপরের প্রমাণ থেকে আমরা পেয়েছি, $\displaystyle\frac{OP}{OR} = \frac{OQ}{OS} = \frac{PQ}{SR}$</p>
+                <p>$\therefore \displaystyle\frac{OP}{OR} = \frac{1}{2} \implies OR = 2OP$</p>
+                <p>সম্পূর্ণ কর্ণ $PR = OP + OR = OP + 2OP = 3OP$</p>
+                <p>$\implies OP = \displaystyle\frac{1}{3} PR$</p>
+                <p>যেহেতু OP হলো সম্পূর্ণ কর্ণ PR-এর এক-তৃতীয়াংশ, তাই O বিন্দুটি PR কর্ণের একটি সমত্রিখণ্ডক বিন্দু।</p>
+                <p>একইভাবে, $\displaystyle\frac{OQ}{OS} = \frac{1}{2} \implies OS = 2OQ \implies QS = 3OQ \implies OQ = \frac{1}{3} QS$।</p>
+                <p>সুতরাং, O বিন্দুটি কর্ণ দুটির প্রত্যেকটির সমত্রিখণ্ডক বিন্দুর একটি বিন্দু।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. PQRS একটি সামান্তরিক। S বিন্দুগামী একটি সরলরেখা PQ এবং বর্ধিত RQ-কে যথাক্রমে X ও Y বিন্দুতে ছেদ করলে, প্রমাণ করি যে, PS : PX = QY : QX = RY : RS.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> PQRS একটি সামান্তরিক। S বিন্দু দিয়ে একটি সরলরেখা টানা হলো যা PQ-কে X বিন্দুতে এবং বর্ধিত RQ-কে Y বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\displaystyle\frac{PS}{PX} = \frac{QY}{QX} = \frac{RY}{RS}$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>যেহেতু PQRS একটি সামান্তরিক, তাই $PS \parallel QR \implies PS \parallel RY$ (কারণ RQ-কেই Y পর্যন্ত বর্ধিত করা হয়েছে)।</p>
+                <p>এখন, $\triangle PXS$ এবং $\triangle QXY$-এর মধ্যে তুলনা করি:</p>
+                <p>$\angle PXS = \angle QXY$ (বিপ্রতীপ কোণ)</p>
+                <p>যেহেতু $PS \parallel RY$ এবং SY ভেদক, তাই একান্তর কোণ $\angle PSX = \angle QYX$।</p>
+                <p>$\therefore \triangle PXS \sim \triangle QXY$ (সদৃশকোণী)।</p>
+                <p>সদৃশ ত্রিভুজের অনুরূপ বাহুগুলির অনুপাত সমান।</p>
+                <p>$\therefore \displaystyle\frac{PS}{QY} = \frac{PX}{QX} \implies \frac{PS}{PX} = \frac{QY}{QX} \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, $\triangle YQX$ এবং $\triangle YRS$-এর মধ্যে তুলনা করি:</p>
+                <p>যেহেতু $PQ \parallel SR$ (সামান্তরিকের বিপরীত বাহু), তাই $QX \parallel SR$।</p>
+                <p>$\angle Y$ সাধারণ কোণ (Common angle)।</p>
+                <p>অনুরূপ কোণ $\angle YQX = \angle YRS$।</p>
+                <p>$\therefore \triangle YQX \sim \triangle YRS$ (সদৃশকোণী)।</p>
+                <p>অনুরূপ বাহুর অনুপাত থেকে পাই:</p>
+                <p>$\displaystyle\frac{QY}{RY} = \frac{QX}{RS} \implies \frac{QY}{QX} = \frac{RY}{RS} \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) নং সমীকরণ থেকে আমরা পাই:</p>
+                <p>$\displaystyle\frac{PS}{PX} = \frac{QY}{QX} = \frac{RY}{RS}$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. দুটি সমকোণী ত্রিভুজ $\triangle ABC$ ও $\triangle PQR$ সদৃশকোণী। তাদের পরিকেন্দ্র যথাক্রমে X ও Y; BC ও QR অনুরূপ বাহু হলে, প্রমাণ করি যে, BX : QY = BC : QR.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$ এবং $\triangle PQR$ হলো সদৃশ সমকোণী ত্রিভুজ। X এবং Y হলো যথাক্রমে তাদের পরিকেন্দ্র। BC এবং QR হলো তাদের অনুরূপ বাহু।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $BX : QY = BC : QR$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>আমরা জানি, সমকোণী ত্রিভুজের পরিকেন্দ্র সর্বদা অতিভুজের মধ্যবিন্দুতে অবস্থান করে।</p>
+                <p>যেহেতু $\triangle ABC$ এবং $\triangle PQR$ সদৃশ সমকোণী ত্রিভুজ এবং BC ও QR অনুরূপ বাহু, তাই তাদের অতিভুজ দুটিও অনুরূপ বাহু হবে।</p>
+                <p>ধরি, $\triangle ABC$-এর অতিভুজ $AC$ এবং $\triangle PQR$-এর অতিভুজ $PR$।</p>
+                <p>X হলো AC-এর মধ্যবিন্দু। পরিকেন্দ্র থেকে শীর্ষবিন্দুর দূরত্ব হলো পরিব্যাসার্ধ। $\therefore BX = \frac{AC}{2}$</p>
+                <p>Y হলো PR-এর মধ্যবিন্দু। $\therefore QY = \frac{PR}{2}$</p>
+                <br>
+                <p>যেহেতু $\triangle ABC \sim \triangle PQR$, তাই তাদের যেকোনো অনুরূপ বাহুর অনুপাত সমান হয়।</p>
+                <p>$\therefore \displaystyle\frac{BC}{QR} = \frac{AC}{PR}$</p>
+                <p>এখন, $\displaystyle\frac{BX}{QY}$ এর অনুপাত নির্ণয় করি:</p>
+                \[
+\begin{array}{l}
+\frac{BX}{QY} = \frac{\frac{AC}{2}}{\frac{PR}{2}} \\
+\frac{BX}{QY} = \frac{AC}{PR}
+\end{array}
+\]
+                <p>যেহেতু $\frac{AC}{PR} = \frac{BC}{QR}$, তাই আমরা লিখতে পারি:</p>
+                <p>$\displaystyle\frac{BX}{QY} = \frac{BC}{QR}$</p>
+                <p>অর্থাৎ, $BX : QY = BC : QR$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. কোনো বৃত্তের PQ ও RS দুটি জ্যা বৃত্তের অভ্যন্তরে X বিন্দুতে পরস্পরকে ছেদ করেছে। P, S ও R, Q যুক্ত করে, প্রমাণ করি যে, $\triangle PXS$ ও $\triangle RXQ$ সদৃশকোণী। এর থেকে প্রমাণ করি যে, PX $\cdot$ XQ = RX $\cdot$ XS</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> বৃত্তের দুটি জ্যা PQ এবং RS পরস্পরকে অভ্যন্তরে X বিন্দুতে ছেদ করেছে। P, S এবং R, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> (i) $\triangle PXS \sim \triangle RXQ$ (সদৃশকোণী) এবং (ii) $PX \cdot XQ = RX \cdot XS$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle PXS$ এবং $\triangle RXQ$-এর মধ্যে তুলনা করি:</p>
+                <ol>
+                    <li>$\angle PXS = \angle RXQ$ (বিপ্রতীপ কোণ)</li>
+                    <li>PR বৃত্তচাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle PSR$ এবং $\angle PQR$।<br>
+                    উপপাদ্য অনুযায়ী একই বৃত্তাংশস্থ কোণ সমান হয়। $\therefore \angle PSR = \angle PQR$ (অর্থাৎ $\angle PSX = \angle RQX$)।</li>
+                    <li>একইভাবে, SQ বৃত্তচাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ $\angle SPQ$ এবং $\angle SRQ$ সমান।<br>
+                    $\therefore \angle SPQ = \angle SRQ$ (অর্থাৎ $\angle SPX = \angle XRQ$)।</li>
+                </ol>
+                <p>যেহেতু $\triangle PXS$ এবং $\triangle RXQ$-এর তিনটি কোণই পরস্পর সমান, তাই ত্রিভুজ দুটি সদৃশকোণী এবং সদৃশ ($\triangle PXS \sim \triangle RXQ$)। (প্রথম অংশ প্রমাণিত)</p>
+                <br>
+                <p>সদৃশ ত্রিভুজের অনুরূপ বাহুগুলি সমানুপাতী হয়।</p>
+                <p>$\therefore \displaystyle\frac{PX}{RX} = \frac{XS}{XQ}$</p>
+                <p>বজ্রগুণন করে পাই:</p>
+                <p>$PX \cdot XQ = RX \cdot XS$ (দ্বিতীয় অংশ প্রমাণিত)</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি সরলরেখার উপর P এবং Q দুটি বিন্দু। P এবং Q বিন্দুতে সরলরেখাটির উপর যথাক্রমে PR এবং QS লম্ব। PS এবং QR পরস্পরকে O বিন্দুতে ছেদ করে। OT, PQ -এর উপর লম্ব। প্রমাণ করি যে, $\displaystyle\frac{1}{OT} = \frac{1}{PR} + \frac{1}{QS}$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="240" height="160" viewBox="0 0 240 160">
+               <line x1="20" y1="140" x2="220" y2="140" stroke="#1F2937" stroke-width="2"></line> <!-- PQ Line -->
+               <line x1="50" y1="140" x2="50" y2="30" stroke="#10B981" stroke-width="2"></line> <!-- PR -->
+               <line x1="190" y1="140" x2="190" y2="60" stroke="#10B981" stroke-width="2"></line> <!-- QS -->
+               <line x1="50" y1="30" x2="190" y2="140" stroke="#F59E0B" stroke-width="1.5"></line> <!-- PS -->
+               <line x1="190" y1="60" x2="50" y2="140" stroke="#F59E0B" stroke-width="1.5"></line> <!-- QR -->
+               <line x1="130" y1="92" x2="130" y2="140" stroke="#E11D48" stroke-width="2"></line> <!-- OT -->
+               
+               <circle cx="50" cy="140" r="3" fill="#1F2937"></circle>
+               <circle cx="190" cy="140" r="3" fill="#1F2937"></circle>
+               <circle cx="50" cy="30" r="3" fill="#1F2937"></circle>
+               <circle cx="190" cy="60" r="3" fill="#1F2937"></circle>
+               <circle cx="130" cy="92" r="3" fill="#E11D48"></circle> <!-- O -->
+               <circle cx="130" cy="140" r="3" fill="#E11D48"></circle> <!-- T -->
+               
+               <text x="35" y="155" font-weight="bold">P</text>
+               <text x="195" y="155" font-weight="bold">Q</text>
+               <text x="35" y="30" font-weight="bold">R</text>
+               <text x="195" y="55" font-weight="bold">S</text>
+               <text x="135" y="85" font-weight="bold" fill="#E11D48">O</text>
+               <text x="125" y="155" font-weight="bold" fill="#E11D48">T</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>দেওয়া আছে $PR \perp PQ$, $QS \perp PQ$ এবং $OT \perp PQ$।</p>
+                <p>যেহেতু তিনটি সরলরেখাই একই সরলরেখা PQ-এর ওপর লম্ব, তাই তারা পরস্পর সমান্তরাল ($PR \parallel OT \parallel QS$)।</p>
+                
+                <p>$\triangle PQS$-এর ক্ষেত্রে, $OT \parallel QS$।</p>
+                <p>সুতরাং, $\triangle PTO \sim \triangle PQS$ (সদৃশ)।</p>
+                <p>অনুরূপ বাহুর অনুপাত থেকে পাই:</p>
+                $$ \frac{OT}{QS} = \frac{PT}{PQ} \quad \dots \text{(i)} $$
+                
+                <p>একইভাবে, $\triangle PQR$-এর ক্ষেত্রে, $OT \parallel PR$।</p>
+                <p>সুতরাং, $\triangle QTO \sim \triangle QPR$ (সদৃশ)।</p>
+                <p>অনুরূপ বাহুর অনুপাত থেকে পাই:</p>
+                $$ \frac{OT}{PR} = \frac{QT}{PQ} \quad \dots \text{(ii)} $$
+                
+                <p>এখন, (i) এবং (ii) নং সমীকরণ যোগ করে পাই:</p>
+                \[
+\begin{array}{l}
+\frac{OT}{QS} + \frac{OT}{PR} = \frac{PT}{PQ} + \frac{QT}{PQ} \\
+OT \left( \frac{1}{QS} + \frac{1}{PR} \right) = \frac{PT + QT}{PQ}
+\end{array}
+\]
+                <p>চিত্রানুযায়ী, $PT + QT = PQ$।</p>
+                \[
+\begin{array}{l}
+OT \left( \frac{1}{QS} + \frac{1}{PR} \right) = \frac{PQ}{PQ} \\
+OT \left( \frac{1}{PR} + \frac{1}{QS} \right) = 1 \\
+\frac{1}{PR} + \frac{1}{QS} = \frac{1}{OT}
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. একটি বৃত্তে অন্তর্লিখিত $\triangle ABC$; বৃত্তের ব্যাস AD এবং AE, BC বাহুর উপর লম্ব যা BC বাহুকে E বিন্দুতে ছেদ করে। প্রমাণ করি যে, $\triangle AEB$ এবং $\triangle ACD$ সদৃশকোণী। এর থেকে প্রমাণ করি যে, AB.AC = AE.AD.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> $\triangle ABC$ একটি বৃত্তে অন্তর্লিখিত। AD হলো বৃত্তের ব্যাস। AE হলো BC-এর ওপর লম্ব ($AE \perp BC$)।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> (i) $\triangle AEB \sim \triangle ACD$ এবং (ii) $AB \cdot AC = AE \cdot AD$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> C, D যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>$\triangle AEB$ এবং $\triangle ACD$-এর মধ্যে তুলনা করি:</p>
+                <ol>
+                    <li>$AE \perp BC$ হওয়ায় $\angle AEB = 90^\circ$।<br>
+                    AD ব্যাস হওয়ায় $\angle ACD$ একটি অর্ধবৃত্তস্থ কোণ, তাই $\angle ACD = 90^\circ$।<br>
+                    $\therefore \angle AEB = \angle ACD = 90^\circ$।</li>
+                    <li>AC বৃত্তচাপের ওপর অবস্থিত দুটি বৃত্তস্থ কোণ হলো $\angle ABC$ (বা $\angle ABE$) এবং $\angle ADC$।<br>
+                    $\therefore \angle ABE = \angle ADC$ (একই বৃত্তাংশস্থ কোণ)।</li>
+                </ol>
+                <p>যেহেতু দুটি কোণ সমান, তাই অবশিষ্ট তৃতীয় কোণটিও সমান হবে ($\angle BAE = \angle CAD$)।</p>
+                <p>সুতরাং, $\triangle AEB$ এবং $\triangle ACD$ সদৃশকোণী ও সদৃশ। (প্রথম অংশ প্রমাণিত)</p>
+                <br>
+                <p>সদৃশ ত্রিভুজের অনুরূপ বাহুগুলির অনুপাত সমান হয়।</p>
+                <p>$\therefore \displaystyle\frac{AB}{AD} = \frac{AE}{AC}$ (যেহেতু $AB$ এবং $AD$ হলো অতিভুজ, এবং $AE$ ও $AC$ হলো সমান কোণের বিপরীত বাহু)</p>
+                <p>বজ্রগুণন করে পাই:</p>
+                <p>$AB \cdot AC = AE \cdot AD$ (দ্বিতীয় অংশ প্রমাণিত)</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

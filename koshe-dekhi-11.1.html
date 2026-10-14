@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-11.1</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.sub-question{font-size:1.1rem;padding-left:0.2rem;padding-right:0.2rem}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>পরিবৃত্ত অঙ্কনের মূল নীতি (Basic Rule of Circumcircle):</strong><br>
+        যেকোনো ত্রিভুজের পরিবৃত্ত (Circumcircle) আঁকতে হলে, ত্রিভুজটির যেকোনো <strong>দুটি বাহুর লম্বসমদ্বিখণ্ডক</strong> (Perpendicular bisector) অঙ্কন করতে হয়। এই দুটি লম্বসমদ্বিখণ্ডক যে বিন্দুতে ছেদ করে, সেটিই হলো <strong>পরিকেন্দ্র (Circumcenter)</strong>। এরপর পরিকেন্দ্র থেকে ত্রিভুজের যেকোনো শীর্ষবিন্দুর দূরত্বকে ব্যাসার্ধ ধরে বৃত্তটি আঁকতে হয়।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নিম্নলিখিত ত্রিভুজগুলি অঙ্কন করি। প্রতিটি ত্রিভুজের পরিবৃত্ত অঙ্কন করে প্রতিক্ষেত্রে পরিকেন্দ্রের অবস্থান লিখি ও পরিব্যাসার্ধের [অর্থাৎ পরিবৃত্তের ব্যাসার্ধের দৈর্ঘ্য] দৈর্ঘ্য মেপে লিখি। [প্রতিক্ষেত্রে কেবলমাত্র অঙ্কন চিহ্ন দিই]</h4>
+        
+        <span class="sub-question">(i) একটি সমবাহু ত্রিভুজ যার প্রতিটি বাহুর দৈর্ঘ্য 6 সেমি.।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <!-- Circle -->
+               <circle cx="100" cy="100" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Triangle -->
+               <polygon points="100,30 39.4,135 160.6,135" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <!-- Perpendicular Bisectors -->
+               <line x1="100" y1="145" x2="100" y2="60" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               <line x1="69.7" y1="82.5" x2="130" y2="117.5" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               <!-- Center and Radius -->
+               <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+               <line x1="100" y1="100" x2="100" y2="30" stroke="#F59E0B" stroke-width="1.5"></line>
+               
+               <text x="95" y="20" font-size="14" font-weight="bold">A</text>
+               <text x="25" y="145" font-size="14" font-weight="bold">B</text>
+               <text x="165" y="145" font-size="14" font-weight="bold">C</text>
+               <text x="105" y="115" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> 6 সেমি বাহুবিশিষ্ট সমবাহু ত্রিভুজ $\triangle ABC$ অঙ্কন করে তার দুটি বাহুর লম্বসমদ্বিখণ্ডক টানা হলো যা O বিন্দুতে মিলিত হয়েছে। O কে কেন্দ্র করে OA ব্যাসার্ধ নিয়ে পরিবৃত্ত অঙ্কন করা হলো।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> সমবাহু ত্রিভুজটি একটি সূক্ষ্মকোণী ত্রিভুজ হওয়ায় পরিকেন্দ্রটি <strong>ত্রিভুজের ভিতরে</strong> অবস্থিত।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> স্কেল দিয়ে মেপে দেখা গেল পরিব্যাসার্ধের দৈর্ঘ্য প্রায় <strong>3.5 সেমি</strong>। (গণনা: $R = \frac{6}{\sqrt{3}} = 2\sqrt{3} \approx 3.46$ সেমি)।</p>
+            </div>
+        </div>
+
+        <span class="sub-question">(ii) একটি সমদ্বিবাহু ত্রিভুজ যার ভূমির দৈর্ঘ্য 5.2 সেমি. এবং সমান বাহুর প্রত্যেকটির দৈর্ঘ্য 7 সেমি.।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> 5.2 সেমি ভূমি ও 7 সেমি সমান বাহুবিশিষ্ট সমদ্বিবাহু ত্রিভুজ অঙ্কন করে তার পরিবৃত্ত অঙ্কন করা হলো।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> ত্রিভুজটি সূক্ষ্মকোণী হওয়ায় পরিকেন্দ্র <strong>ত্রিভুজের ভিতরে</strong> অবস্থিত।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> স্কেল দিয়ে মেপে দেখা গেল পরিব্যাসার্ধের দৈর্ঘ্য প্রায় <strong>3.8 সেমি</strong>।</p>
+            </div>
+        </div>
+
+        <span class="sub-question">(iii) একটি সমকোণী ত্রিভুজ যার সমকোণ সংলগ্ন বাহুদুটির দৈর্ঘ্য 4 সেমি. ও 8 সেমি.।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Right Triangle inside circle, hypotenuse is diameter -->
+               <polygon points="100,30 30,100 170,100" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <line x1="30" y1="100" x2="170" y2="100" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               
+               <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+               
+               <text x="95" y="20" font-size="14" font-weight="bold">A</text>
+               <text x="15" y="105" font-size="14" font-weight="bold">B</text>
+               <text x="175" y="105" font-size="14" font-weight="bold">C</text>
+               <text x="95" y="115" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> একটি সমকোণ এবং সংলগ্ন 4 সেমি ও 8 সেমি বাহু নিয়ে সমকোণী ত্রিভুজ অঙ্কন করা হলো।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> এটি একটি সমকোণী ত্রিভুজ হওয়ায় এর পরিকেন্দ্র সর্বদা <strong>অতিভুজের মধ্যবিন্দুতে</strong> অবস্থিত।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> পিথাগোরাসের উপপাদ্য অনুযায়ী অতিভুজ = $\sqrt{4^2 + 8^2} = \sqrt{80} \approx 8.94$ সেমি। পরিব্যাসার্ধ = অতিভুজের অর্ধেক = $8.94 \div 2 \approx$ <strong>4.5 সেমি</strong>। স্কেল দিয়ে মেপেও প্রায় 4.5 সেমি পাওয়া যাবে।</p>
+            </div>
+        </div>
+
+        <span class="sub-question">(iv) একটি সমকোণী ত্রিভুজ যার অতিভুজের দৈর্ঘ্য 12 সেমি. এবং অপর একটি বাহুর দৈর্ঘ্য 5 সেমি.।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> 12 সেমি অতিভুজ এবং একটি বাহু 5 সেমি নিয়ে সমকোণী ত্রিভুজ অঙ্কন করে পরিবৃত্ত আঁকা হলো।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> সমকোণী ত্রিভুজ হওয়ায় পরিকেন্দ্র <strong>অতিভুজের মধ্যবিন্দুতে</strong> অবস্থিত।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> অতিভুজ 12 সেমি হওয়ায়, পরিব্যাসার্ধ হবে ঠিক তার অর্ধেক। অর্থাৎ <strong>6 সেমি</strong>।</p>
+            </div>
+        </div>
+
+        <span class="sub-question">(v) একটি ত্রিভুজ আঁকি যার একটি বাহুর দৈর্ঘ্য 6.7 সেমি. এবং বাহুসংলগ্ন কোণ দুটির পরিমাণ 75° ও 55°।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> 6.7 সেমি বাহু এবং তার দুই প্রান্তে 75° ও 55° কোণ নিয়ে ত্রিভুজটি আঁকলাম। ত্রিভুজটির তৃতীয় কোণ = $180^\circ - (75^\circ + 55^\circ) = 50^\circ$।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> ত্রিভুজটির তিনটি কোণই সূক্ষ্মকোণ ($&lt; 90^\circ$), তাই এটি একটি সূক্ষ্মকোণী ত্রিভুজ। এর পরিকেন্দ্র <strong>ত্রিভুজের ভিতরে</strong> অবস্থিত।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> স্কেল দিয়ে মেপে দেখা গেল পরিব্যাসার্ধের দৈর্ঘ্য প্রায় <strong>4.4 সেমি</strong>।</p>
+            </div>
+        </div>
+
+        <span class="sub-question">(vi) ABC একটি ত্রিভুজ যার ভূমি BC = 5 সেমি., $\angle ABC = 100^\circ$ এবং AB = 4 সেমি.।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সম্পাদ্য ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <!-- Circle -->
+               <circle cx="100" cy="100" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Obtuse Triangle -->
+               <polygon points="50,140 100,50 160,100" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               
+               <!-- Center Outside -->
+               <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+               <line x1="100" y1="100" x2="100" y2="50" stroke="#F59E0B" stroke-width="1.5"></line>
+               
+               <text x="35" y="150" font-size="14" font-weight="bold">A</text>
+               <text x="95" y="40" font-size="14" font-weight="bold">B</text>
+               <text x="170" y="105" font-size="14" font-weight="bold">C</text>
+               <text x="105" y="115" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>পদ্ধতি:</strong> প্রদত্ত মাপ অনুযায়ী $\angle B = 100^\circ$ নিয়ে একটি ত্রিভুজ আঁকলাম এবং লম্বসমদ্বিখণ্ডকের সাহায্যে পরিবৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>পরিকেন্দ্রের অবস্থান:</strong> যেহেতু ত্রিভুজটির একটি কোণ স্থূলকোণ (100°), তাই এটি স্থূলকোণী ত্রিভুজ। স্থূলকোণী ত্রিভুজের পরিকেন্দ্র সর্বদা <strong>ত্রিভুজের বাইরে</strong> অবস্থিত হয়। (স্থূলকোণের বিপরীত বাহুর বাইরের দিকে)।</p>
+                <p><strong>পরিব্যাসার্ধের দৈর্ঘ্য:</strong> স্কেল দিয়ে মেপে দেখা গেল পরিব্যাসার্ধের দৈর্ঘ্য প্রায় <strong>3.5 সেমি</strong>।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. PQ = 7.5 সেমি. $\angle QPR = 45^\circ$, $\angle PQR = 75^\circ$; PQ = 7.5 সেমি. $\angle QPS = 60^\circ$, $\angle PQS = 60^\circ$; $\Delta PQR$ ও $\Delta PQS$ এমনভাবে অঙ্কন করি যে R ও S বিন্দু যেন PQ-এর একই দিকে অবস্থিত হয়। $\Delta PQR$-এর পরিবৃত্ত অঙ্কন করি এবং এই পরিবৃত্তের সাপেক্ষে S বিন্দুর অবস্থান তার ভিতরে, উপরে, না বাইরে তা লক্ষ করে লিখি ও তার ব্যাখ্যা খুঁজি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Common base PQ -->
+               <line x1="40" y1="135" x2="160" y2="135" stroke="#1F2937" stroke-width="2"></line>
+               <!-- Triangle PQR -->
+               <polygon points="40,135 160,135 135,35" fill="none" stroke="#10B981" stroke-width="1.5"></polygon>
+               <!-- Triangle PQS -->
+               <polygon points="40,135 160,135 100,31" fill="none" stroke="#F59E0B" stroke-width="1.5"></polygon>
+               
+               <circle cx="40" cy="135" r="3" fill="#1F2937"></circle>
+               <circle cx="160" cy="135" r="3" fill="#1F2937"></circle>
+               <circle cx="135" cy="35" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="31" r="3" fill="#E11D48"></circle>
+               
+               <text x="25" y="145" font-size="14" font-weight="bold">P</text>
+               <text x="165" y="145" font-size="14" font-weight="bold">Q</text>
+               <text x="145" y="30" font-size="14" font-weight="bold">R</text>
+               <text x="100" y="20" font-size="14" font-weight="bold" fill="#E11D48">S</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>অঙ্কন প্রণালী:</strong> 7.5 সেমি দৈর্ঘ্যের PQ রেখাংশ নিলাম। PQ এর একই দিকে R বিন্দু পাওয়ার জন্য P-তে 45° এবং Q-তে 75° কোণ আঁকলাম। S বিন্দু পাওয়ার জন্য P এবং Q-তে 60° কোণ আঁকলাম। এরপর $\Delta PQR$-এর পরিবৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>S বিন্দুর অবস্থান:</strong> পরিবৃত্তটি আঁকার পর দেখা গেল যে, বৃত্তটি <strong>S বিন্দু দিয়েও অতিক্রম করছে</strong>। অর্থাৎ, S বিন্দুটি পরিবৃত্তের <strong>উপরে (On the circle)</strong> অবস্থিত।</p>
+                <p><strong>ব্যাখ্যা:</strong><br>
+                $\Delta PQR$-এর ক্ষেত্রে, $\angle PRQ = 180^\circ - (45^\circ + 75^\circ) = 180^\circ - 120^\circ = 60^\circ$।<br>
+                $\Delta PQS$-এর ক্ষেত্রে, $\angle PSQ = 180^\circ - (60^\circ + 60^\circ) = 180^\circ - 120^\circ = 60^\circ$।<br>
+                আমরা জানি, কোনো রেখাংশের (PQ) একই পার্শ্বে অবস্থিত দুটি বিন্দুতে (R ও S) যদি রেখাংশটি সমান কোণ উৎপন্ন করে ($\angle PRQ = \angle PSQ = 60^\circ$), তবে ওই চারটি বিন্দু (P, Q, R, S) সমবৃত্তস্থ হয়।<br>
+                যেহেতু P, Q, R বিন্দু দিয়ে বৃত্তটি যায়, তাই তা অবশ্যই S বিন্দু দিয়েও যাবে।
+                </p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: S বিন্দুটি পরিবৃত্তের উপরে অবস্থিত। কারণ $\angle PRQ = \angle PSQ = 60^\circ$ হওয়ায় বিন্দুগুলি সমবৃত্তস্থ।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. AB = 5 সেমি. $\angle BAC = 30^\circ$, $\angle ABC = 60^\circ$; $\Delta ABC$ ও $\Delta ABD$ এমনভাবে অঙ্কন করি যে, C ও D বিন্দু যেন AB-এর বিপরীত পার্শ্বে অবস্থিত হয়। $\Delta ABC$-এর পরিবৃত্ত অঙ্কন করি এবং ওই পরিবৃত্তের সাপেক্ষে D বিন্দুর অবস্থান লিখি। এছাড়াও অন্য কী কী বৈশিষ্ট্য লক্ষ করছি বুঝে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="80" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Diameter AB -->
+               <line x1="20" y1="100" x2="180" y2="100" stroke="#1F2937" stroke-width="2"></line>
+               
+               <!-- Triangle ABC (Angle C is 90) -->
+               <polygon points="20,100 180,100 100,20" fill="none" stroke="#10B981" stroke-width="1.5"></polygon>
+               <!-- Triangle ABD (Angle D is 90) -->
+               <polygon points="20,100 180,100 100,180" fill="none" stroke="#F59E0B" stroke-width="1.5"></polygon>
+               
+               <circle cx="20" cy="100" r="3" fill="#1F2937"></circle>
+               <circle cx="180" cy="100" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="20" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="180" r="3" fill="#1F2937"></circle>
+               <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+               
+               <text x="5" y="105" font-size="14" font-weight="bold">A</text>
+               <text x="185" y="105" font-size="14" font-weight="bold">B</text>
+               <text x="95" y="12" font-size="14" font-weight="bold">C</text>
+               <text x="95" y="195" font-size="14" font-weight="bold">D</text>
+               <text x="105" y="115" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>অঙ্কন প্রণালী:</strong> AB = 5 সেমি নিলাম। AB-এর একপাশে C বিন্দু পাওয়ার জন্য A-তে 30° এবং B-তে 60° কোণ আঁকলাম। বিপরীত পাশে D বিন্দু পাওয়ার জন্য A-তে 45° এবং B-তে 45° কোণ আঁকলাম (প্রশ্নের অসম্পূর্ণ অংশ থেকে অনুমান করা হলো, কারণ C ও D বিপরীত পাশে অবস্থিত এবং কোণগুলি পূরক)। এরপর $\Delta ABC$-এর পরিবৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>D বিন্দুর অবস্থান:</strong> পরিবৃত্ত অঙ্কন করলে দেখা যাবে, বৃত্তটি <strong>D বিন্দু দিয়েও অতিক্রম করছে</strong>। অর্থাৎ <strong>D বিন্দুটি পরিবৃত্তের ওপর অবস্থিত</strong>।</p>
+                <p><strong>বৈশিষ্ট্যসমূহ:</strong><br>
+                ১) $\Delta ABC$-তে $\angle ACB = 180^\circ - (30^\circ + 60^\circ) = 90^\circ$।<br>
+                ২) $\Delta ABD$-তে $\angle ADB = 180^\circ - (45^\circ + 45^\circ) = 90^\circ$।<br>
+                ৩) যেহেতু C এবং D বিন্দুতে উৎপন্ন কোণগুলি সমকোণ ($90^\circ$), তাই <strong>AB হলো বৃত্তটির ব্যাস</strong>।<br>
+                ৪) বিপরীত কোণগুলির সমষ্টি $\angle C + \angle D = 90^\circ + 90^\circ = 180^\circ$ হওয়ার কারণে ACBD একটি <strong>বৃত্তস্থ চতুর্ভুজ (Cyclic Quadrilateral)</strong>।
+                </p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: D বিন্দুটি পরিবৃত্তের ওপর অবস্থিত। AB হলো বৃত্তের ব্যাস এবং ACBD একটি বৃত্তস্থ চতুর্ভুজ।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. ABCD একটি চতুর্ভুজ অঙ্কন করি যার AB = 4 সেমি., BC = 7 সেমি., CD = 4 সেমি., $\angle ABC = 60^\circ$, $\angle BCD = 60^\circ$; $\Delta ABC$-এর পরিবৃত্ত অঙ্কন করি এবং এর কী কী বৈশিষ্ট্য লক্ষ করছি বুঝে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও পর্যবেক্ষণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Isosceles Trapezoid ABCD -->
+               <polygon points="51,150 149,150 128,60 72,60" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <!-- Triangle ABC -->
+               <line x1="51" y1="150" x2="149" y2="150" stroke="#10B981" stroke-width="1.5"></line> <!-- BC -->
+               <line x1="149" y1="150" x2="72" y2="60" stroke="#10B981" stroke-width="1.5"></line> <!-- CA -->
+               <line x1="72" y1="60" x2="51" y2="150" stroke="#10B981" stroke-width="1.5"></line> <!-- AB -->
+               
+               <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+               
+               <text x="60" y="50" font-size="14" font-weight="bold">A</text>
+               <text x="35" y="165" font-size="14" font-weight="bold">B</text>
+               <text x="155" y="165" font-size="14" font-weight="bold">C</text>
+               <text x="135" y="50" font-size="14" font-weight="bold">D</text>
+               <text x="105" y="105" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>অঙ্কন প্রণালী:</strong> প্রদত্ত মাপ অনুযায়ী স্কেল ও চাঁদার সাহায্যে ABCD চতুর্ভুজটি অঙ্কন করলাম। এখানে $AB = CD = 4$ সেমি এবং ভূমিসংলগ্ন কোণ $\angle B = \angle C = 60^\circ$। এটি একটি <strong>সমদ্বিবাহু ট্রাপিজিয়াম (Isosceles Trapezoid)</strong>। এরপর $\Delta ABC$-এর পরিবৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>পর্যবেক্ষণ ও বৈশিষ্ট্য:</strong><br>
+                ১) $\Delta ABC$-এর পরিবৃত্তটি অঙ্কন করার পর দেখা গেল যে, বৃত্তটি <strong>D বিন্দু দিয়েও অতিক্রম করছে</strong>।<br>
+                ২) এর কারণ হলো, যেকোনো সমদ্বিবাহু ট্রাপিজিয়াম সর্বদা একটি বৃত্তস্থ চতুর্ভুজ হয়।<br>
+                ৩) তাই A, B, C এবং D বিন্দু চারটি সমবৃত্তস্থ (Concyclic)।<br>
+                ৪) চতুর্ভুজটির বিপরীত কোণগুলির সমষ্টি $180^\circ$ হবে ($\angle A + \angle C = 180^\circ$ এবং $\angle B + \angle D = 180^\circ$)।
+                </p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\Delta ABC$-এর পরিবৃত্তটি D বিন্দুগামী হবে এবং চতুর্ভুজটি বৃত্তস্থ।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. একটি আয়তক্ষেত্র PQRS অঙ্কন করি যার PQ = 4 সেমি. এবং QR = 6 সেমি.। আয়তক্ষেত্রের কর্ণদুটি অঙ্কন করি এবং অঙ্কন না করে $\Delta PQR$-এর পরিকেন্দ্র কোথায় হবে এবং পরিব্যাসার্ধের দৈর্ঘ্য কত হবে হিসাব করে লিখি। $\Delta PQR$-এর পরিবৃত্ত অঙ্কন করে যাচাই করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও গণনা</span>
+            
+            <svg class="geometry-diagram" width="220" height="160" viewBox="0 0 220 160">
+               <circle cx="110" cy="80" r="60.8" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Rectangle PQRS -->
+               <polygon points="59.5,46 160.5,46 160.5,114 59.5,114" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <!-- Diagonals -->
+               <line x1="59.5" y1="46" x2="160.5" y2="114" stroke="#10B981" stroke-width="1.5"></line>
+               <line x1="160.5" y1="46" x2="59.5" y2="114" stroke="#10B981" stroke-width="1.5"></line>
+               
+               <circle cx="110" cy="80" r="4" fill="#E11D48"></circle>
+               
+               <text x="45" y="40" font-size="14" font-weight="bold">P</text>
+               <text x="165" y="40" font-size="14" font-weight="bold">Q</text>
+               <text x="165" y="130" font-size="14" font-weight="bold">R</text>
+               <text x="45" y="130" font-size="14" font-weight="bold">S</text>
+               <text x="110" y="70" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>হিসাব (অঙ্কন না করে):</strong></p>
+                <p>PQRS একটি আয়তক্ষেত্র হওয়ায় এর প্রতিটি কোণ সমকোণ ($90^\circ$)। তাই $\Delta PQR$ একটি সমকোণী ত্রিভুজ, যার $\angle PQR = 90^\circ$ এবং PR হলো অতিভুজ।</p>
+                <p>আমরা জানি, সমকোণী ত্রিভুজের পরিকেন্দ্র সর্বদা <strong>অতিভুজের মধ্যবিন্দুতে</strong> অবস্থান করে।</p>
+                <p>পিথাগোরাসের উপপাদ্য অনুযায়ী অতিভুজ PR-এর দৈর্ঘ্য:</p>
+                \[
+\begin{array}{l}
+PR = \sqrt{PQ^2 + QR^2} \\
+= \sqrt{4^2 + 6^2} \\
+= \sqrt{16 + 36} \\
+= \sqrt{52} = 2\sqrt{13} \text{ সেমি.}
+\end{array}
+\]
+                <p>অতএব, পরিব্যাসার্ধের দৈর্ঘ্য = $\displaystyle\frac{\text{অতিভুজ}}{2} = \frac{2\sqrt{13}}{2} = \sqrt{13}$ সেমি. $\approx 3.6$ সেমি.।</p>
+                <p><strong>যাচাই:</strong> $\Delta PQR$-এর পরিবৃত্ত অঙ্কন করলে দেখা যাবে বৃত্তের কেন্দ্রটি (O) আয়তক্ষেত্রের কর্ণদ্বয়ের ছেদবিন্দুতে (যা PR-এর মধ্যবিন্দু) অবস্থিত। এবং বৃত্তটি S বিন্দু দিয়েও যায়।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পরিকেন্দ্র PR-এর মধ্যবিন্দুতে হবে এবং পরিব্যাসার্ধ $\sqrt{13}$ বা $3.6$ সেমি. (প্রায়)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. যে-কোনো বৃত্তাকার চিত্র প্রদত্ত হলে তার কেন্দ্র কীভাবে নির্ণয় করব? পাশের বৃত্তাকার চিত্রের কেন্দ্র নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">কেন্দ্র নির্ণয়ের পদ্ধতি</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <circle cx="100" cy="100" r="70" stroke="#1F2937" stroke-width="2" fill="none"></circle>
+               <!-- Points A, B, C -->
+               <circle cx="40" cy="65" r="4" fill="#3730A3"></circle>
+               <circle cx="160" cy="65" r="4" fill="#3730A3"></circle>
+               <circle cx="100" cy="170" r="4" fill="#3730A3"></circle>
+               
+               <!-- Chords -->
+               <line x1="40" y1="65" x2="100" y2="170" stroke="#10B981" stroke-width="1.5"></line>
+               <line x1="160" y1="65" x2="100" y2="170" stroke="#10B981" stroke-width="1.5"></line>
+               
+               <!-- Perpendicular Bisectors -->
+               <line x1="20" y1="147.5" x2="150" y2="73.2" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4"></line>
+               <line x1="180" y1="147.5" x2="50" y2="73.2" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4"></line>
+               
+               <circle cx="100" cy="100" r="5" fill="#E11D48"></circle>
+               
+               <text x="25" y="55" font-size="14" font-weight="bold">A</text>
+               <text x="105" y="185" font-size="14" font-weight="bold">B</text>
+               <text x="170" y="55" font-size="14" font-weight="bold">C</text>
+               <text x="95" y="90" font-size="14" font-weight="bold" fill="#E11D48">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <p>একটি অজানা কেন্দ্রবিশিষ্ট বৃত্তের কেন্দ্র নির্ণয় করার জন্য জ্যামিতিক ধাপগুলি নিচে দেওয়া হলো:</p>
+                <p><strong>ধাপ ১:</strong> প্রদত্ত বৃত্তের পরিধির ওপর যেকোনো তিনটি অসমরেখ (Non-collinear) বিন্দু A, B এবং C নিলাম।</p>
+                <p><strong>ধাপ ২:</strong> স্কেলের সাহায্যে A, B এবং B, C যুক্ত করে দুটি জ্যা (Chord) AB এবং BC অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> পেনসিল কম্পাসের সাহায্যে জ্যা AB এবং জ্যা BC-এর লম্বসমদ্বিখণ্ডক (Perpendicular bisectors) অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৪:</strong> এই দুটি লম্বসমদ্বিখণ্ডক পরস্পরকে বৃত্তের ভেতরে যে বিন্দুতে ছেদ করবে, ধরি তা O। এই <strong>O বিন্দুই হলো প্রদত্ত বৃত্তের নির্ণেয় কেন্দ্র</strong>।</p>
+                <p><strong>যুক্তি:</strong> আমরা জানি, বৃত্তের যেকোনো জ্যা-এর লম্বসমদ্বিখণ্ডক সর্বদা বৃত্তের কেন্দ্র দিয়ে অতিক্রম করে। তাই দুটি জ্যা-এর লম্বসমদ্বিখণ্ডক যেখানে ছেদ করবে, সেটিই নিশ্চিতভাবে কেন্দ্র হবে।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দুটি জ্যা-এর লম্বসমদ্বিখণ্ডক ছেদ করিয়ে কেন্দ্র নির্ণয় করা হয়।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nije-kori-15.1</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>স্পর্শক সংক্রান্ত উপপাদ্য (Tangent Theorem Idea):</strong><br>
+        বৃত্তের কোনো বিন্দুতে স্পর্শক (Tangent) এবং ওই স্পর্শবিন্দুগামী ব্যাসার্ধ (Radius) পরস্পর <strong>লম্ব</strong> ($90^\circ$) হয়। এই সমকোণী ত্রিভুজে আমরা <strong>পিথাগোরাসের উপপাদ্য</strong> ($\text{অতিভুজ}^2 = \text{লম্ব}^2 + \text{ভূমি}^2$) প্রয়োগ করে সহজেই অজানা বাহুর দৈর্ঘ্য নির্ণয় করতে পারি।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">(1) 5 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি বৃত্তের কেন্দ্র থেকে 13 সেমি. দূরবর্তী কোনো বিন্দু থেকে অঙ্কিত স্পর্শকের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <!-- Custom Geometry SVG Diagram -->
+            <svg class="geometry-diagram" width="220" height="140" viewBox="0 0 220 140">
+               <circle cx="50" cy="70" r="40" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Center O to Tangent Point A -->
+               <line x1="50" y1="70" x2="50" y2="30" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Center O to External Point P -->
+               <line x1="50" y1="70" x2="190" y2="70" stroke="#1F2937" stroke-width="2"></line>
+               <!-- Tangent AP -->
+               <line x1="50" y1="30" x2="190" y2="70" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="50" cy="70" r="3" fill="#374151"></circle>
+               <circle cx="50" cy="30" r="3" fill="#1F2937"></circle>
+               <circle cx="190" cy="70" r="3" fill="#E11D48"></circle>
+               
+               <!-- Right Angle Marker -->
+               <polyline points="50,38 58,40 58,32" fill="none" stroke="#1F2937" stroke-width="1.5"></polyline>
+               
+               <text x="45" y="85" font-size="14" font-weight="bold">O</text>
+               <text x="45" y="20" font-size="14" font-weight="bold">A</text>
+               <text x="195" y="75" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               
+               <!-- Labels -->
+               <text x="20" y="55" font-size="12" font-weight="bold" fill="#10B981">5 cm</text>
+               <text x="105" y="85" font-size="12" font-weight="bold">13 cm</text>
+            </svg>
+
+            <div class="proof-step">
+                <p>ধরি, O কেন্দ্রীয় বৃত্তের ব্যাসার্ধ OA = 5 সেমি।</p>
+                <p>কেন্দ্র থেকে P বিন্দুর দূরত্ব OP = 13 সেমি।</p>
+                <p>P বিন্দু থেকে অঙ্কিত স্পর্শকটি হলো PA।</p>
+                <p>আমরা জানি, বৃত্তের কোনো বিন্দুতে স্পর্শক (PA) এবং স্পর্শবিন্দুগামী ব্যাসার্ধ (OA) পরস্পর লম্ব হয়।</p>
+                <p>$\therefore OA \perp PA \implies \angle OAP = 90^\circ$</p>
+                <p>সমকোণী ত্রিভুজ $\triangle OAP$ -এর ক্ষেত্রে, OP হলো অতিভুজ। পিথাগোরাসের উপপাদ্য অনুযায়ী পাই:</p>
+                \[
+\begin{array}{l}
+PA^2 + OA^2 = OP^2 \\
+PA^2 + 5^2 = 13^2 \\
+PA^2 + 25 = 169 \\
+PA^2 = 169 - 25 \\
+PA^2 = 144 \\
+PA = \sqrt{144} = 12 \text{ সেমি.}
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় স্পর্শকের দৈর্ঘ্য 12 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">(2) O কেন্দ্রীয় বৃত্তের কেন্দ্র থেকে 13 সেমি. দূরত্বে অবস্থিত একটি বিন্দু P থেকে অঙ্কিত স্পর্শকের দৈর্ঘ্য 12 সেমি. হলে, বৃত্তের ব্যাসার্ধের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="140" viewBox="0 0 220 140">
+               <circle cx="50" cy="70" r="40" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Center O to Tangent Point A -->
+               <line x1="50" y1="70" x2="50" y2="30" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Center O to External Point P -->
+               <line x1="50" y1="70" x2="190" y2="70" stroke="#1F2937" stroke-width="2"></line>
+               <!-- Tangent AP -->
+               <line x1="50" y1="30" x2="190" y2="70" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="50" cy="70" r="3" fill="#374151"></circle>
+               <circle cx="50" cy="30" r="3" fill="#1F2937"></circle>
+               <circle cx="190" cy="70" r="3" fill="#E11D48"></circle>
+               
+               <!-- Right Angle Marker -->
+               <polyline points="50,38 58,40 58,32" fill="none" stroke="#1F2937" stroke-width="1.5"></polyline>
+               
+               <text x="45" y="85" font-size="14" font-weight="bold">O</text>
+               <text x="45" y="20" font-size="14" font-weight="bold">A</text>
+               <text x="195" y="75" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               
+               <!-- Labels -->
+               <text x="25" y="55" font-size="12" font-weight="bold" fill="#10B981">r</text>
+               <text x="105" y="85" font-size="12" font-weight="bold">13 cm</text>
+               <text x="120" y="45" font-size="12" font-weight="bold" fill="#F59E0B">12 cm</text>
+            </svg>
+
+            <div class="proof-step">
+                <p>ধরি, বৃত্তের ব্যাসার্ধ OA = $r$ সেমি।</p>
+                <p>কেন্দ্র থেকে P বিন্দুর দূরত্ব OP = 13 সেমি।</p>
+                <p>স্পর্শক PA-এর দৈর্ঘ্য = 12 সেমি।</p>
+                <p>উপপাদ্য অনুযায়ী, স্পর্শক ও স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব।</p>
+                <p>$\therefore \angle OAP = 90^\circ$</p>
+                <p>সমকোণী ত্রিভুজ $\triangle OAP$-তে পিথাগোরাসের উপপাদ্য প্রয়োগ করে পাই:</p>
+                \[
+\begin{array}{l}
+OA^2 + PA^2 = OP^2 \\
+r^2 + 12^2 = 13^2 \\
+r^2 + 144 = 169 \\
+r^2 = 169 - 144 \\
+r^2 = 25 \\
+r = \sqrt{25} = 5 \text{ সেমি.}
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 5 সেমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">(3) যদি O কেন্দ্রীয় বৃত্তের বহিঃস্থ কোনো বিন্দু P থেকে অঙ্কিত স্পর্শকদ্বয় PA ও PB; $\angle AOB = 120^\circ$ হলে, $\angle APB$ এবং $\angle APO$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="200" viewBox="0 0 220 200">
+               <circle cx="80" cy="100" r="60" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               
+               <!-- External Point P -->
+               <circle cx="200" cy="100" r="3" fill="#E11D48"></circle>
+               
+               <!-- Tangent Points A and B for 120 degree center angle (60 up, 60 down) -->
+               <!-- r=60. A = (80 + 60*cos(-60), 100 + 60*sin(-60)) = (110, 48) -->
+               <!-- B = (80 + 60*cos(60), 100 + 60*sin(60)) = (110, 152) -->
+               
+               <!-- Radii -->
+               <line x1="80" y1="100" x2="110" y2="48" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               <line x1="80" y1="100" x2="110" y2="152" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               
+               <!-- Tangents -->
+               <line x1="110" y1="48" x2="200" y2="100" stroke="#F59E0B" stroke-width="2"></line>
+               <line x1="110" y1="152" x2="200" y2="100" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <!-- OP Line -->
+               <line x1="80" y1="100" x2="200" y2="100" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line>
+               
+               <circle cx="80" cy="100" r="3" fill="#374151"></circle>
+               <circle cx="110" cy="48" r="3" fill="#1F2937"></circle>
+               <circle cx="110" cy="152" r="3" fill="#1F2937"></circle>
+               
+               <text x="65" y="105" font-size="14" font-weight="bold">O</text>
+               <text x="105" y="38" font-size="14" font-weight="bold">A</text>
+               <text x="105" y="170" font-size="14" font-weight="bold">B</text>
+               <text x="205" y="105" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               
+               <!-- Arc for angle -->
+               <path d="M 95 74 A 25 25 0 0 1 95 126" fill="none" stroke="#1F2937" stroke-width="1"></path>
+               <text x="95" y="104" font-size="10" font-weight="bold">120°</text>
+            </svg>
+
+            <div class="proof-step">
+                <p>দেওয়া আছে, O কেন্দ্রীয় বৃত্তের বহিঃস্থ বিন্দু P থেকে দুটি স্পর্শক PA এবং PB অঙ্কন করা হয়েছে।</p>
+                <p>$\angle AOB = 120^\circ$।</p>
+                <p>যেহেতু PA ও PB দুটি স্পর্শক এবং OA ও OB স্পর্শবিন্দুগামী ব্যাসার্ধ, তাই:</p>
+                <p>$OA \perp PA \implies \angle OAP = 90^\circ$</p>
+                <p>$OB \perp PB \implies \angle OBP = 90^\circ$</p>
+                
+                <p>এখন, চতুর্ভুজ AOBP-এর চারটি কোণের সমষ্টি $360^\circ$।</p>
+                \[
+\begin{array}{l}
+\angle AOB + \angle OAP + \angle APB + \angle OBP = 360^\circ \\
+120^\circ + 90^\circ + \angle APB + 90^\circ = 360^\circ \\
+300^\circ + \angle APB = 360^\circ \\
+\angle APB = 360^\circ - 300^\circ = 60^\circ
+\end{array}
+\]
+                <p>$\therefore$ সম্পূর্ণ কোণ $\angle APB = 60^\circ$।</p>
+                <br>
+                <p>আবার আমরা জানি, বহিঃস্থ বিন্দু থেকে কেন্দ্র পর্যন্ত অঙ্কিত সরলরেখা (OP) স্পর্শক দুটির মধ্যবর্তী কোণকে সমদ্বিখণ্ডিত করে।</p>
+                <p>অর্থাৎ, OP রেখাংশ $\angle APB$-কে সমদ্বিখণ্ডিত করে।</p>
+                \[
+\begin{array}{l}
+\angle APO = \frac{\angle APB}{2} \\
+\angle APO = \frac{60^\circ}{2} = 30^\circ
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle APB = 60^\circ$ এবং $\angle APO = 30^\circ$।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-17</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark);font-size:1.05rem}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>স্পর্শক অঙ্কনের মূল নীতি (Basic Concept):</strong><br>
+        ১) <strong>বৃত্তের উপরিস্থিত বিন্দুতে:</strong> কেন্দ্র এবং ওই বিন্দু যোগ করে, সেই বিন্দুর ওপর $90^\circ$ (সমকোণ) আঁকলেই স্পর্শক পাওয়া যায়।<br>
+        ২) <strong>বহিঃস্থ বিন্দু থেকে:</strong> কেন্দ্র এবং বহিঃস্থ বিন্দু যোগ করে সরলরেখাটিকে সমদ্বিখণ্ডিত করতে হয়। তারপর সেই মধ্যবিন্দুকে কেন্দ্র করে একটি অর্ধবৃত্ত (বা পূর্ণবৃত্ত) আঁকতে হয় যা মূল বৃত্তকে ছেদ করে। সেই ছেদবিন্দুই হলো নির্ণেয় স্পর্শবিন্দু।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. 3.2 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি বৃত্ত অঙ্কন করি। ওই বৃত্তের উপর অবস্থিত যে-কোনো বিন্দুতে বৃত্তের স্পর্শক অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            
+            <svg class="geometry-diagram" width="220" height="220" viewBox="0 0 220 220">
+               <!-- Circle -->
+               <circle cx="110" cy="110" r="70" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Radius OA -->
+               <line x1="110" y1="110" x2="180" y2="110" stroke="#10B981" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Tangent through A -->
+               <line x1="180" y1="20" x2="180" y2="200" stroke="#F59E0B" stroke-width="2"></line>
+               <!-- Points -->
+               <circle cx="110" cy="110" r="4" fill="#374151"></circle>
+               <circle cx="180" cy="110" r="4" fill="#E11D48"></circle>
+               <!-- Right Angle Marker -->
+               <polyline points="172,110 172,102 180,102" fill="none" stroke="#1F2937" stroke-width="1.5"></polyline>
+               
+               <text x="95" y="115" font-size="14" font-weight="bold">O</text>
+               <text x="190" y="115" font-size="14" font-weight="bold" fill="#E11D48">A</text>
+               <text x="140" y="105" font-size="12" font-weight="bold" fill="#10B981">3.2 cm</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> স্কেলের সাহায্যে 3.2 সেমি. দৈর্ঘ্যের একটি সরলরেখাংশ নিলাম।</p>
+                <p><strong>ধাপ ২:</strong> খাতার মাঝখানে O বিন্দুকে কেন্দ্র করে ওই 3.2 সেমি. ব্যাসার্ধ নিয়ে একটি বৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> বৃত্তের পরিধির উপর যেকোনো একটি বিন্দু A নিলাম এবং স্কেলের সাহায্যে O, A যুক্ত করলাম।</p>
+                <p><strong>ধাপ ৪:</strong> পেনসিল কম্পাসের সাহায্যে A বিন্দুতে OA সরলরেখাংশের উপর একটি লম্ব ($90^\circ$ কোণ) অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৫:</strong> এই লম্ব সরলরেখাটিই হলো বৃত্তটির A বিন্দুতে নির্ণেয় স্পর্শক।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. 3 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট AB একটি সরলরেখাংশ অঙ্কন করে A বিন্দুকে কেন্দ্র করে AB দৈর্ঘ্যের ব্যাসার্ধ নিয়ে একটি বৃত্ত অঙ্কন করি এবং B বিন্দুতে ওই বৃত্তের স্পর্শক অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> স্কেলের সাহায্যে $AB = 3$ সেমি. দৈর্ঘ্যের একটি সরলরেখাংশ অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> A বিন্দুকে কেন্দ্র করে AB-এর সমান (3 সেমি.) ব্যাসার্ধ নিয়ে একটি বৃত্ত অঙ্কন করলাম। এর ফলে B বিন্দুটি বৃত্তের পরিধির উপর অবস্থিত হলো।</p>
+                <p><strong>ধাপ ৩:</strong> পেনসিল কম্পাসের সাহায্যে B বিন্দুতে AB সরলরেখাংশের উপর একটি লম্ব ($90^\circ$ কোণ) অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৪:</strong> লম্ব রেখাটিকে উভয়দিকে বর্ধিত করলাম। এই সরলরেখাটিই হলো B বিন্দুতে নির্ণেয় স্পর্শক।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. 2.5 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি বৃত্ত অঙ্কন করি। ওই বৃত্তের বাইরে এমন একটি বিন্দু নিই, কেন্দ্র থেকে যার দূরত্ব 6.5 সেমি.। ওই বহিঃস্থ বিন্দু থেকে বৃত্তের একটি স্পর্শক অঙ্কন করি এবং স্কেলের সাহায্যে ওই স্পর্শকের দৈর্ঘ্য নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            
+            <svg class="geometry-diagram" width="280" height="200" viewBox="0 0 280 200">
+               <!-- Circle (Radius ~50 for 2.5) -->
+               <circle cx="70" cy="100" r="50" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Center O to External Point P (Distance ~130 for 6.5) -->
+               <line x1="70" y1="100" x2="200" y2="100" stroke="#1F2937" stroke-width="1.5"></line>
+               
+               <!-- Semicircle on OP for finding tangent point -->
+               <!-- Midpoint is (135, 100), radius is 65 -->
+               <path d="M 70 100 A 65 65 0 0 1 200 100" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></path>
+               
+               <!-- Intersection Point A (approx 93, 53) -->
+               <line x1="70" y1="100" x2="93" y2="55" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               <!-- Tangent PA -->
+               <line x1="200" y1="100" x2="93" y2="55" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="70" cy="100" r="4" fill="#374151"></circle>
+               <circle cx="200" cy="100" r="4" fill="#E11D48"></circle>
+               <circle cx="93" cy="55" r="4" fill="#1F2937"></circle>
+               <circle cx="135" cy="100" r="3" fill="#64748B"></circle> <!-- Midpoint M -->
+               
+               <text x="50" y="105" font-size="14" font-weight="bold">O</text>
+               <text x="210" y="105" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               <text x="80" y="45" font-size="14" font-weight="bold">A</text>
+               <text x="130" y="115" font-size="12" font-weight="bold" fill="#64748B">M</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> O বিন্দুকে কেন্দ্র করে 2.5 সেমি. ব্যাসার্ধের একটি বৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> কেন্দ্র O থেকে 6.5 সেমি. দূরে একটি বিন্দু P নিলাম এবং O, P যুক্ত করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> পেনসিল কম্পাসের সাহায্যে OP সরলরেখাংশকে সমদ্বিখণ্ডিত করলাম। ধরি, মধ্যবিন্দুটি হলো M।</p>
+                <p><strong>ধাপ ৪:</strong> M বিন্দুকে কেন্দ্র করে MO (বা MP) ব্যাসার্ধ নিয়ে একটি অর্ধবৃত্ত অঙ্কন করলাম যা মূল বৃত্তটিকে A বিন্দুতে ছেদ করল।</p>
+                <p><strong>ধাপ ৫:</strong> স্কেলের সাহায্যে P, A যুক্ত করলাম এবং বর্ধিত করলাম। এই PA হলো নির্ণেয় স্পর্শক।</p>
+                <p><strong>পরিমাপ:</strong> স্কেলের সাহায্যে মেপে দেখলাম, স্পর্শক PA-এর দৈর্ঘ্য <strong>6 সেমি.</strong>।</p>
+                <p class="small text-muted">(তাত্ত্বিক যাচাই: $\sqrt{6.5^2 - 2.5^2} = \sqrt{42.25 - 6.25} = \sqrt{36} = 6$)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. 2.8 সেমি. দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি বৃত্ত অঙ্কন করি। বৃত্তের কেন্দ্র থেকে 7.5 সেমি. দূরে একটি বিন্দু নিই। ওই বহিঃস্থ বিন্দু থেকে বৃত্তের দুটি স্পর্শক অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            
+            <svg class="geometry-diagram" width="280" height="240" viewBox="0 0 280 240">
+               <circle cx="70" cy="120" r="56" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               <!-- Center O to External Point P -->
+               <line x1="70" y1="120" x2="220" y2="120" stroke="#1F2937" stroke-width="1.5"></line>
+               
+               <!-- Full circle on OP as diameter -->
+               <!-- Midpoint M = (145, 120), radius = 75 -->
+               <circle cx="145" cy="120" r="75" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4" fill="none"></circle>
+               
+               <!-- Intersection Points A and B -->
+               <line x1="70" y1="120" x2="95" y2="70" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               <line x1="70" y1="120" x2="95" y2="170" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line>
+               
+               <!-- Tangents PA and PB -->
+               <line x1="220" y1="120" x2="95" y2="70" stroke="#F59E0B" stroke-width="2"></line>
+               <line x1="220" y1="120" x2="95" y2="170" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="70" cy="120" r="4" fill="#374151"></circle>
+               <circle cx="220" cy="120" r="4" fill="#E11D48"></circle>
+               <circle cx="95" cy="70" r="4" fill="#1F2937"></circle>
+               <circle cx="95" cy="170" r="4" fill="#1F2937"></circle>
+               <circle cx="145" cy="120" r="3" fill="#64748B"></circle> <!-- Midpoint M -->
+               
+               <text x="50" y="125" font-size="14" font-weight="bold">O</text>
+               <text x="230" y="125" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               <text x="80" y="60" font-size="14" font-weight="bold">A</text>
+               <text x="80" y="190" font-size="14" font-weight="bold">B</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> O বিন্দুকে কেন্দ্র করে 2.8 সেমি. ব্যাসার্ধের একটি বৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> কেন্দ্র O থেকে 7.5 সেমি. দূরে একটি বিন্দু P নিলাম এবং O, P যুক্ত করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> পেনসিল কম্পাসের সাহায্যে OP সরলরেখাংশকে লম্বভাবে সমদ্বিখণ্ডিত করলাম। ধরি, মধ্যবিন্দুটি হলো M।</p>
+                <p><strong>ধাপ ৪:</strong> M বিন্দুকে কেন্দ্র করে MO (বা MP) ব্যাসার্ধ নিয়ে একটি <strong>পূর্ণবৃত্ত</strong> অঙ্কন করলাম যা মূল বৃত্তটিকে দুটি বিন্দু A এবং B-তে ছেদ করল।</p>
+                <p><strong>ধাপ ৫:</strong> স্কেলের সাহায্যে P, A এবং P, B যুক্ত করলাম।</p>
+                <p><strong>উপসংহার:</strong> PA এবং PB হলো বহিঃস্থ বিন্দু P থেকে অঙ্কিত নির্ণেয় দুটি স্পর্শক।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. O কেন্দ্রীয় একটি বৃত্তের PQ একটি জ্যা। P ও Q বিন্দুতে বৃত্তের স্পর্শক অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> যেকোনো ব্যাসার্ধের একটি O কেন্দ্রীয় বৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> বৃত্তের উপর যেকোনো দুটি বিন্দু P এবং Q নিয়ে স্কেলের সাহায্যে তাদের যুক্ত করে PQ জ্যা অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> কেন্দ্র O থেকে P বিন্দুর সাথে OP ব্যাসার্ধ এবং Q বিন্দুর সাথে OQ ব্যাসার্ধ অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৪:</strong> পেনসিল কম্পাসের সাহায্যে P বিন্দুতে OP-এর উপর লম্ব ($90^\circ$) অঙ্কন করলাম, যা হলো P বিন্দুতে স্পর্শক।</p>
+                <p><strong>ধাপ ৫:</strong> একইভাবে, Q বিন্দুতে OQ-এর উপর লম্ব ($90^\circ$) অঙ্কন করলাম, যা হলো Q বিন্দুতে স্পর্শক।</p>
+                <p><em>(স্পর্শক দুটি বৃত্তের বাইরে কোনো একটি বিন্দুতে পরস্পরকে ছেদ করবে)।</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. 8 সেমি. দৈর্ঘ্যবিশিষ্ট একটি সরলরেখাংশ XY অঙ্কন করে XY-কে ব্যাস করে একটি বৃত্ত অঙ্কন করি। X ও Y বিন্দুতে বৃত্তের স্পর্শক অঙ্কন করি এবং এই স্পর্শক দুটির মধ্যে কী সম্পর্ক লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী ও সম্পর্ক</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> স্কেলের সাহায্যে $XY = 8$ সেমি. একটি সরলরেখাংশ নিলাম।</p>
+                <p><strong>ধাপ ২:</strong> XY-কে সমদ্বিখণ্ডিত করে মধ্যবিন্দু O নির্ণয় করলাম। O কে কেন্দ্র করে OX (4 সেমি.) ব্যাসার্ধ নিয়ে একটি বৃত্ত অঙ্কন করলাম, যার ব্যাস হলো XY।</p>
+                <p><strong>ধাপ ৩:</strong> X বিন্দুতে XY-এর উপর লম্ব ($90^\circ$) অঙ্কন করলাম, যা হলো X বিন্দুতে স্পর্শক।</p>
+                <p><strong>ধাপ ৪:</strong> একইভাবে, Y বিন্দুতে XY-এর উপর লম্ব ($90^\circ$) অঙ্কন করলাম, যা হলো Y বিন্দুতে স্পর্শক।</p>
+                <p><strong>সম্পর্ক:</strong> যেহেতু স্পর্শক দুটি একই সরলরেখা (XY ব্যাস)-এর উপর লম্ব, তাই জ্যামিতির নিয়ম অনুযায়ী এই <strong>স্পর্শক দুটি পরস্পর সমান্তরাল (Parallel)</strong> হবে।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. যে-কোনো একটি বৃত্ত অঙ্কন করে তার দুটি ব্যাস অঙ্কন করি যারা পরস্পর লম্বভাবে অবস্থিত। ব্যাস দুটির চারটি প্রান্তবিন্দুতে বৃত্তের চারটি স্পর্শক অঙ্কন করি এবং এরফলে যে চতুর্ভুজটি গঠিত হলো তা কী ধরনের চতুর্ভুজ বুঝে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> যেকোনো ব্যাসার্ধের একটি O কেন্দ্রীয় বৃত্ত অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> বৃত্তের দুটি ব্যাস AB এবং CD এমনভাবে অঙ্কন করলাম যেন তারা পরস্পর লম্ব ($AB \perp CD$) হয়। (একটি ব্যাস এঁকে তার উপর কেন্দ্র O-তে লম্ব আঁকলে অপর ব্যাসটি পাওয়া যাবে)।</p>
+                <p><strong>ধাপ ৩:</strong> A, B, C, এবং D বিন্দুতে ব্যাসগুলির ওপর লম্ব অঙ্কন করে চারটি স্পর্শক টানলাম।</p>
+                <p><strong>ধাপ ৪:</strong> এই চারটি স্পর্শক পরস্পরকে ছেদ করে একটি চতুর্ভুজ (ধরি PQRS) গঠন করল।</p>
+                <p><strong>পর্যবেক্ষণ:</strong> যেহেতু ব্যাস দুটি পরস্পর লম্ব এবং তাদের প্রান্তবিন্দুতে স্পর্শকগুলি (যা ব্যাসের ওপর লম্ব) সমান্তরাল রেখাযুগল তৈরি করে, তাই উৎপন্ন চতুর্ভুজটির প্রতিটি কোণ $90^\circ$ হবে এবং প্রতিটি বাহুর দৈর্ঘ্য বৃত্তের ব্যাসের সমান হবে।</p>
+                <p><strong>উপসংহার:</strong> অতএব, গঠিত চতুর্ভুজটি একটি <strong>বর্গক্ষেত্র (Square)</strong>।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. 5 সেমি. দৈর্ঘ্যের বাহুবিশিষ্ট একটি সমবাহু ত্রিভুজ ABC অঙ্কন করে $\triangle ABC$-এর পরিবৃত্ত অঙ্কন করি। ওই পরিবৃত্তের A, B ও C বিন্দুতে স্পর্শক অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> 5 সেমি. বাহু নিয়ে একটি সমবাহু ত্রিভুজ $\triangle ABC$ অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ২:</strong> ত্রিভুজের যেকোনো দুটি বাহুর লম্বসমদ্বিখণ্ডক অঙ্কন করে পরিকেন্দ্র O নির্ণয় করলাম। O কে কেন্দ্র করে OA ব্যাসার্ধ নিয়ে ত্রিভুজটির পরিবৃত্ত আঁকলাম।</p>
+                <p><strong>ধাপ ৩:</strong> পরিবৃত্তের কেন্দ্র O-এর সাথে শীর্ষবিন্দুগুলি (OA, OB, OC) যুক্ত করলাম (এগুলি স্পর্শবিন্দুগামী ব্যাসার্ধ হিসেবে কাজ করবে)।</p>
+                <p><strong>ধাপ ৪:</strong> A বিন্দুতে OA-এর উপর, B বিন্দুতে OB-এর উপর এবং C বিন্দুতে OC-এর উপর লম্ব ($90^\circ$) অঙ্কন করে তিনটি স্পর্শক টানলাম।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. 5 সেমি. দৈর্ঘ্যের বাহুবিশিষ্ট একটি সমবাহু ত্রিভুজ ABC অঙ্কন করে ওই ত্রিভুজের পরিবৃত্ত অঙ্কন করি। A বিন্দুতে ওই বৃত্তের স্পর্শক অঙ্কন করি এবং স্পর্শকের উপর P এমন একটি বিন্দু নিই যাতে AP = 5 সেমি. হয়। P বিন্দু থেকে বৃত্তের অপর স্পর্শকটি অঙ্কন করি এবং এই স্পর্শকটি বৃত্তকে কোন্ বিন্দুতে স্পর্শ করেছে তা লক্ষ করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> 5 সেমি. বাহুবিশিষ্ট সমবাহু ত্রিভুজ $\triangle ABC$ এঁকে তার পরিবৃত্ত অঙ্কন করলাম (পরিকেন্দ্র O নির্ণয় করে)।</p>
+                <p><strong>ধাপ ২:</strong> O, A যুক্ত করে A বিন্দুতে OA-এর উপর লম্ব অঙ্কন করে একটি স্পর্শক টানলাম।</p>
+                <p><strong>ধাপ ৩:</strong> ওই স্পর্শকের উপর কম্পাসের সাহায্যে 5 সেমি. কেটে নিয়ে P বিন্দু নির্ণয় করলাম (অর্থাৎ AP = 5 সেমি.)।</p>
+                <p><strong>ধাপ ৪:</strong> এখন P বিন্দু হলো বৃত্তের বহিঃস্থ বিন্দু। P থেকে বৃত্তের অপর স্পর্শক আঁকতে হলে O, P যুক্ত করে তাকে সমদ্বিখণ্ডিত করে একটি অর্ধবৃত্ত আঁকতে হবে (প্রশ্ন ৩ এর মতো)।</p>
+                <p><strong>পর্যবেক্ষণ:</strong> অপর স্পর্শকটি অঙ্কন করলে দেখা যাবে সেটি বৃত্তটিকে <strong>B (অথবা C) বিন্দুতে</strong> স্পর্শ করছে। কারণ, সমবাহু ত্রিভুজে জ্যা AB = 5 সেমি, এবং স্পর্শক AP = 5 সেমি দেওয়া আছে। জ্যামিতিক প্রতিসাম্য থেকে অপর স্পর্শকটি সরাসরি ত্রিভুজের একটি শীর্ষবিন্দুতেই মিলিত হবে।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. AB একটি সরলরেখাংশের উপর O একটি বিন্দু এবং O বিন্দুতে AB-এর উপর PQ একটি লম্ব অঙ্কন করি। A এবং B বিন্দুকে কেন্দ্র করে যথাক্রমে AO এবং BO দৈর্ঘ্যের ব্যাসার্ধ নিয়ে দুটি বৃত্ত অঙ্কন করি এবং এই বৃত্তদুটির সাপেক্ষে PQ-কে কী বলা হয় লিখি। P বিন্দু থেকে বৃত্ত দুটির অপর স্পর্শক দুটি অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী ও পর্যবেক্ষণ</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> একটি সরলরেখাংশ AB নিলাম এবং তার উপর যেকোনো স্থানে O একটি বিন্দু নিলাম।</p>
+                <p><strong>ধাপ ২:</strong> O বিন্দুতে AB-এর উপর একটি লম্ব PQ অঙ্কন করলাম।</p>
+                <p><strong>ধাপ ৩:</strong> A-কে কেন্দ্র করে AO ব্যাসার্ধ নিয়ে একটি বৃত্ত আঁকলাম। এই বৃত্তটি O বিন্দু দিয়ে যায়।</p>
+                <p><strong>ধাপ ৪:</strong> B-কে কেন্দ্র করে BO ব্যাসার্ধ নিয়ে অপর একটি বৃত্ত আঁকলাম। এই বৃত্তটিও O বিন্দু দিয়ে যায়।</p>
+                <p><strong>পর্যবেক্ষণ:</strong> যেহেতু দুটি বৃত্তই O বিন্দুতে মিলিত হচ্ছে এবং PQ রেখাটি কেন্দ্রদ্বয়ের সংযোজক সরলরেখা AB-এর ওপর লম্ব, তাই PQ রেখাটি দুটি বৃত্তকেই O বিন্দুতে স্পর্শ করে। সুতরাং, PQ-কে বৃত্তদুটির <strong>সাধারণ স্পর্শক (Common Tangent)</strong> বলা হয়। (বিশেষ করে এটি তীর্যক সাধারণ স্পর্শক বা স্পর্শবিন্দুতে সাধারণ স্পর্শক)।</p>
+                <p><strong>ধাপ ৫:</strong> P বিন্দু থেকে A কেন্দ্রীয় বৃত্তের অপর স্পর্শক এবং B কেন্দ্রীয় বৃত্তের অপর স্পর্শক অঙ্কন করতে হবে (বহিঃস্থ বিন্দু থেকে স্পর্শক অঙ্কনের সাধারণ পদ্ধতি প্রয়োগ করে)।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. O কেন্দ্রীয় বৃত্তের উপর P একটি বিন্দু। P বিন্দুতে বৃত্তের স্পর্শক অঙ্কন করি এবং ওই স্পর্শক থেকে বৃত্তের ব্যাসার্ধের দৈর্ঘ্যের সমান করে PQ অংশ কেটে নিই। Q বিন্দু থেকে বৃত্তের অপর স্পর্শক QR অঙ্কন করি এবং চাঁদার সাহায্যে $\angle PQR$ পরিমাপ করে তার মান লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী ও পরিমাপ</span>
+            <div class="proof-step">
+                <p><strong>ধাপ ১:</strong> O কেন্দ্রীয় একটি বৃত্ত অঙ্কন করে তার পরিধির উপর P একটি বিন্দু নিলাম।</p>
+                <p><strong>ধাপ ২:</strong> O, P যুক্ত করে P বিন্দুতে OP-এর উপর লম্ব অঙ্কন করে একটি স্পর্শক টানলাম।</p>
+                <p><strong>ধাপ ৩:</strong> ওই স্পর্শক থেকে বৃত্তের ব্যাসার্ধের (OP) সমান করে PQ অংশ কেটে নিলাম (অর্থাৎ PQ = OP)।</p>
+                <p><strong>ধাপ ৪:</strong> এখন Q হলো বহিঃস্থ বিন্দু। Q থেকে বৃত্তের অপর স্পর্শক QR অঙ্কন করলাম (OQ সমদ্বিখণ্ডিত করে অর্ধবৃত্তের সাহায্যে)।</p>
+                <p><strong>পরিমাপ:</strong> এখানে $\triangle OPQ$-তে $OP = PQ$ এবং $\angle OPQ = 90^\circ$। তাই এটি সমদ্বিবাহু সমকোণী ত্রিভুজ। ফলে $\angle OQP = 45^\circ$।</p>
+                <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে কেন্দ্র পর্যন্ত রেখা (OQ) স্পর্শক দুটির মধ্যবর্তী কোণকে সমদ্বিখণ্ডিত করে।</p>
+                <p>$\therefore \angle PQR = 2 \times \angle OQP = 2 \times 45^\circ = 90^\circ$।</p>
+                <p>চাঁদার সাহায্যে মাপলেও দেখা যাবে $\angle PQR$-এর মান <strong>$90^\circ$</strong>।</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

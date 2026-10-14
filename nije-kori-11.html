@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nije-kori-11</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div class="me-md-4 mb-3 mb-md-0">
+                <svg width="120" height="120" viewBox="0 0 200 200">
+                   <circle cx="100" cy="100" r="80" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+                   <polygon points="100,20 30.7,140 169.3,140" fill="none" stroke="#10B981" stroke-width="2"></polygon>
+                   <circle cx="100" cy="100" r="4" fill="#E11D48"></circle>
+                   <line x1="100" y1="100" x2="100" y2="20" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4"></line>
+                   <line x1="100" y1="100" x2="30.7" y2="140" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4"></line>
+                   <line x1="100" y1="100" x2="169.3" y2="140" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4"></line>
+                   <text x="105" y="115" font-size="16" font-weight="bold" fill="#E11D48">O</text>
+                   <text x="95" y="15" font-size="14" font-weight="bold">A</text>
+                   <text x="15" y="150" font-size="14" font-weight="bold">B</text>
+                   <text x="175" y="150" font-size="14" font-weight="bold">C</text>
+                </svg>
+            </div>
+            <div>
+                <i class="fas fa-lightbulb text-info me-2"></i> <strong>পরিবৃত্তের প্রাথমিক ধারণা:</strong><br>
+                ত্রিভুজের তিনটি শীর্ষবিন্দু দিয়ে অতিক্রমকারী বৃত্তকে পরিবৃত্ত (Circumcircle) বলে। এর কেন্দ্রকে পরিকেন্দ্র (O) এবং ব্যাসার্ধকে পরিব্যাসার্ধ (OA = OB = OC) বলে। ত্রিভুজের বাহুগুলির লম্বসমদ্বিখণ্ডকগুলি এই পরিকেন্দ্রে মিলিত হয়।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. কোনো ত্রিভুজের পরিবৃত্তের সাপেক্ষে ত্রিভুজের বাহুগুলি বৃত্তের <span></span> [ব্যাসার্ধ / জ্যা]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ত্রিভুজের শীর্ষবিন্দুগুলি (A, B, C) বৃত্তের পরিধির উপর অবস্থান করে। আমরা জানি, বৃত্তের পরিধির উপর যেকোনো দুটি বিন্দুর সংযোজক সরলরেখাকে বৃত্তের জ্যা বলা হয়।</p>
+            <p>তাই, পরিবৃত্তের সাপেক্ষে ত্রিভুজের বাহুগুলি (AB, BC, CA) হলো বৃত্তের জ্যা।</p>
+            <div class="final-answer"><i class="fas fa-pen-nib me-1 text-accent"></i> উত্তর: <strong>জ্যা</strong></div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. কোনো বৃত্তের দুটি জ্যা-এর লম্বসমদ্বিখণ্ডকের ছেদবিন্দুই বৃত্তের <span></span></h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>জ্যামিতির সাধারণ উপপাদ্য অনুযায়ী, বৃত্তের যেকোনো জ্যা-এর লম্বসমদ্বিখণ্ডক সর্বদা বৃত্তের কেন্দ্র দিয়ে অতিক্রম করে।</p>
+            <p>যেহেতু দুটি জ্যা-এরই লম্বসমদ্বিখণ্ডক কেন্দ্র দিয়ে যায়, তাই তাদের ছেদবিন্দুটি নিশ্চিতভাবে বৃত্তের কেন্দ্র হবে। ত্রিভুজের ক্ষেত্রে একে পরিকেন্দ্র বলা হয়।</p>
+            <div class="final-answer"><i class="fas fa-pen-nib me-1 text-accent"></i> উত্তর: <strong>কেন্দ্র (বা পরিকেন্দ্র)</strong></div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. ত্রিভুজের বাহুগুলির লম্বসমদ্বিখণ্ডকগুলি যে বিন্দুতে ছেদ করে সেই বিন্দু থেকে শীর্ষবিন্দুগুলির দূরত্ব <span></span></h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ত্রিভুজের বাহুগুলির লম্বসমদ্বিখণ্ডকের ছেদবিন্দুটি হলো পরিকেন্দ্র (Circumcenter)।</p>
+            <p>পরিকেন্দ্র থেকে ত্রিভুজের তিনটি শীর্ষবিন্দুর দূরত্বই হলো ওই পরিবৃত্তের ব্যাসার্ধ (Circumradius)। এবং আমরা জানি, একটি বৃত্তের সমস্ত ব্যাসার্ধ সর্বদা সমান হয়।</p>
+            <div class="final-answer"><i class="fas fa-pen-nib me-1 text-accent"></i> উত্তর: <strong>সমান</strong></div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. ত্রিভুজের বাহুগুলির লম্বসমদ্বিখণ্ডকগুলির ছেদবিন্দু থেকে যে-কোনো শীর্ষবিন্দু পর্যন্ত দূরত্বই ওই ত্রিভুজের পরিবৃত্তের <span></span> [ব্যাস / ব্যাসার্ধ]-এর দৈর্ঘ্য।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লম্বসমদ্বিখণ্ডকের ছেদবিন্দুটি হলো বৃত্তের কেন্দ্র। কেন্দ্র থেকে বৃত্তের পরিধি (অর্থাৎ ত্রিভুজের শীর্ষবিন্দু) পর্যন্ত সরলরৈখিক দূরত্বকে জ্যামিতির ভাষায় ব্যাসার্ধ বলা হয়।</p>
+            <div class="final-answer"><i class="fas fa-pen-nib me-1 text-accent"></i> উত্তর: <strong>ব্যাসার্ধ</strong></div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

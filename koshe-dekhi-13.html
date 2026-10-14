@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-13</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;overflow-x:auto;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.table-container{overflow-x:auto;margin:1rem 0px}.st-table{width:100%;border-collapse:collapse;background:rgb(255,255,255);border-radius:8px;overflow:hidden}.st-table th,.st-table td{border:1px solid rgb(226,232,240);padding:10px;text-align:center}.st-table th{background-color:rgb(248,250,252);font-weight:bold}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>ভেদ (Variation) এর মূল সূত্রাবলি:</strong><br>
+        ১) <strong>সরলভেদ (Direct Variation):</strong> $x \propto y$ হলে $x = ky$ বা $\displaystyle\frac{x}{y} = k$ (যেখানে $k$ হলো অশূন্য ভেদ ধ্রুবক)।<br>
+        ২) <strong>ব্যস্তভেদ (Inverse Variation):</strong> $x \propto \displaystyle\frac{1}{y}$ হলে $x = \displaystyle\frac{k}{y}$ বা $xy = k$ (যেখানে $k$ হলো অশূন্য ভেদ ধ্রুবক)।<br>
+        ৩) <strong>যৌগিক ভেদ (Joint Variation):</strong> $x \propto y$ এবং $x \propto z$ হলে $x \propto yz$ (যখন $y, z$ উভয়ই পরিবর্তনশীল)।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. দুটি A ও B-এর সম্পর্কিত মানগুলি দেওয়া হলো। A ও B-এর মধ্যে কোনো ভেদ সম্পর্ক থাকলে তা নির্ণয় করি ও ভেদ ধ্রুবকের মান লিখি।</h4>
+        <div class="table-container">
+            <table class="st-table">
+                <tbody><tr><th>A</th><td>25</td><td>30</td><td>45</td><td>250</td></tr>
+                <tr><th>B</th><td>10</td><td>12</td><td>18</td><td>100</td></tr>
+            </tbody></table>
+        </div>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত ছক থেকে A এবং B-এর মানগুলির অনুপাত ($\frac{A}{B}$) পরীক্ষা করে দেখি:</p>
+            \[
+\begin{array}{l}
+\frac{25}{10} = \frac{5}{2} \\
+\frac{30}{12} = \frac{5}{2} \\
+\frac{45}{18} = \frac{5}{2} \\
+\frac{250}{100} = \frac{5}{2}
+\end{array}
+\]
+            <p>যেহেতু প্রতি ক্ষেত্রে $\displaystyle\frac{A}{B}$ -এর মান ধ্রুবক (constant), তাই A এবং B <strong>সরলভেদে</strong> আছে।</p>
+            <p>অর্থাৎ, $A \propto B$ বা $A = kB$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: A এবং B সরলভেদে আছে এবং ভেদ ধ্রুবকের মান $\displaystyle\frac{5}{2}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. x ও y দুটি চল এবং তাদের সম্পর্কিত মানগুলি দেওয়া হলো। x ও y-এর মধ্যে কোনো ভেদ সম্পর্ক আছে কিনা বুঝে লিখি।</h4>
+        <div class="table-container">
+            <table class="st-table">
+                <tbody><tr><th>x</th><td>18</td><td>8</td><td>12</td><td>6</td></tr>
+                <tr><th>y</th><td>3</td><td>$\frac{27}{4}$</td><td>$\frac{9}{2}$</td><td>9</td></tr>
+            </tbody></table>
+        </div>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত ছক থেকে x এবং y-এর মানগুলির গুণফল ($xy$) পরীক্ষা করে দেখি:</p>
+            \[
+\begin{array}{l}
+18 \times 3 = 54 \\
+8 \times \frac{27}{4} = 2 \times 27 = 54 \\
+12 \times \frac{9}{2} = 6 \times 9 = 54 \\
+6 \times 9 = 54
+\end{array}
+\]
+            <p>যেহেতু প্রতি ক্ষেত্রে $xy$ -এর মান ধ্রুবক (constant), তাই x এবং y <strong>ব্যস্তভেদে</strong> আছে।</p>
+            <p>অর্থাৎ, $xy = 54 \implies x \propto \displaystyle\frac{1}{y}$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: x এবং y ব্যস্তভেদে আছে এবং ভেদ ধ্রুবকের মান 54।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. ভেদ তত্ত্ব প্রয়োগ করে হিসাব করি:</h4>
+        
+        <span class="sub-question">(i) বিপিনকাকুর ট্যাক্সি 25 মিনিটে 14 কিমি. পথ অতিক্রম করে। একই গতিবেগে ট্যাক্সি চালিয়ে 5 ঘণ্টায় তিনি কতটা পথ যাবেন তা ভেদতত্ত্ব প্রয়োগ করে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, অতিক্রান্ত দূরত্ব = $D$ কিমি এবং সময় = $T$ মিনিট।</p>
+            <p>গতিবেগ স্থির থাকলে দূরত্ব এবং সময় <strong>সরলভেদে</strong> থাকে। অর্থাৎ, $D \propto T \implies D = kT$ (যেখানে $k$ অশূন্য ভেদ ধ্রুবক)।</p>
+            <p>দেওয়া আছে, যখন $T = 25$ মিনিট, তখন $D = 14$ কিমি।</p>
+            \[
+\begin{array}{l}
+14 = k \times 25 \\
+k = \frac{14}{25}
+\end{array}
+\]
+            <p>তাহলে সম্পর্কটি দাঁড়ায়: $D = \displaystyle\frac{14}{25}T$</p>
+            <p>এখন, সময় 5 ঘণ্টা = $5 \times 60 = 300$ মিনিট।</p>
+            <p>যখন $T = 300$ মিনিট, তখন দূরত্ব ($D$):</p>
+            \[
+\begin{array}{l}
+D = \frac{14}{25} \times 300 \\
+= 14 \times 12 \\
+= 168 \text{ কিমি}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনি 5 ঘণ্টায় 168 কিমি পথ যাবেন।</div>
+        </div>
+
+        <span class="sub-question">(ii) আমাদের স্কুলের প্রথম শ্রেণির 24 জন শিশুর মধ্যে একবাক্স সন্দেশ সমান ভাগে ভাগ করে দিলাম এবং প্রত্যেকে 5 টি করে গোটা সন্দেশ পেল। যদি শিশুর সংখ্যা 4 জন কম হতো, তবে প্রত্যেকে কতগুলি গোটা সন্দেশ পেত তা ভেদতত্ত্ব প্রয়োগ করে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, শিশুর সংখ্যা = $C$ এবং প্রত্যেকের প্রাপ্ত সন্দেশের সংখ্যা = $S$।</p>
+            <p>মোট সন্দেশের পরিমাণ ধ্রুবক থাকলে, শিশুর সংখ্যা ও প্রত্যেকের প্রাপ্ত সন্দেশ <strong>ব্যস্তভেদে</strong> থাকে।</p>
+            <p>অর্থাৎ, $S \propto \displaystyle\frac{1}{C} \implies S = \frac{k}{C} \implies SC = k$</p>
+            <p>দেওয়া আছে, যখন $C = 24$, তখন $S = 5$।</p>
+            \[
+\begin{array}{l}
+k = 24 \times 5 = 120
+\end{array}
+\]
+            <p>এখন শিশুর সংখ্যা 4 জন কম হলে, নতুন শিশুর সংখ্যা $C = 24 - 4 = 20$ জন।</p>
+            \[
+\begin{array}{l}
+20 \times S = 120 \\
+S = \frac{120}{20} = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রত্যেকে 6 টি করে সন্দেশ পেত।</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি পুকুর কাটতে 50 জন গ্রামবাসীর 18 দিন সময় লেগেছে। পুকুরটি 15 দিনে কাটতে হলে অতিরিক্ত কতজন লোককে কাজ করতে হবে তা ভেদতত্ত্ব প্রয়োগ করে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, লোকের সংখ্যা = $M$ এবং দিন সংখ্যা = $D$।</p>
+            <p>কাজের পরিমাণ নির্দিষ্ট থাকলে লোকসংখ্যা ও দিনসংখ্যা <strong>ব্যস্তভেদে</strong> থাকে।</p>
+            <p>অর্থাৎ, $M \propto \displaystyle\frac{1}{D} \implies MD = k$</p>
+            <p>দেওয়া আছে, $M = 50$ জন এবং $D = 18$ দিন।</p>
+            \[
+\begin{array}{l}
+k = 50 \times 18 = 900
+\end{array}
+\]
+            <p>এখন কাজটি 15 দিনে শেষ করতে হলে ($D = 15$):</p>
+            \[
+\begin{array}{l}
+M \times 15 = 900 \\
+M = \frac{900}{15} = 60 \text{ জন}
+\end{array}
+\]
+            <p>অর্থাৎ, মোট 60 জন লোক লাগবে।</p>
+            <p>অতিরিক্ত লোক লাগবে = $60 - 50 = 10$ জন।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অতিরিক্ত 10 জন লোককে কাজ করতে হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. মান নির্ণয় ও সম্পর্ক প্রতিষ্ঠা:</h4>
+
+        <span class="sub-question">(i) y, x-এর বর্গমূলের সঙ্গে সরলভেদে আছে এবং y=9 যখন x=9; x-এর মান নির্ণয় করি যখন y=6.</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, $y \propto \sqrt{x} \implies y = k\sqrt{x}$ (যেখানে $k \neq 0$ ভেদ ধ্রুবক)।</p>
+            <p>যখন $x = 9, y = 9$:</p>
+            \[
+\begin{array}{l}
+9 = k\sqrt{9} \\
+9 = 3k \\
+k = 3
+\end{array}
+\]
+            <p>তাহলে সম্পর্কটি দাঁড়ায়: $y = 3\sqrt{x}$</p>
+            <p>এখন $y = 6$ হলে $x$ এর মান:</p>
+            \[
+\begin{array}{l}
+6 = 3\sqrt{x} \\
+\sqrt{x} = \frac{6}{3} = 2 \\
+x = 2^2 = 4
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $x = 4$</div>
+        </div>
+
+        <span class="sub-question">(ii) x, y-এর সঙ্গে সরলভেদে এবং z-এর সঙ্গে ব্যস্ত ভেদে আছে। y=4, z=5 হলে x=3 হয়। আবার y=16, z=30 হলে, x-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যৌগিক ভেদের উপপাদ্য অনুযায়ী, $x \propto \displaystyle\frac{y}{z}$</p>
+            <p>অতএব, $x = k \displaystyle\frac{y}{z}$ (যেখানে $k \neq 0$ ভেদ ধ্রুবক)।</p>
+            <p>যখন $x = 3, y = 4, z = 5$:</p>
+            \[
+\begin{array}{l}
+3 = k \times \frac{4}{5} \\
+k = \frac{3 \times 5}{4} = \frac{15}{4}
+\end{array}
+\]
+            <p>সম্পর্কটি হলো: $x = \displaystyle\frac{15y}{4z}$</p>
+            <p>এখন $y = 16, z = 30$ হলে $x$ এর মান:</p>
+            \[
+\begin{array}{l}
+x = \frac{15 \times 16}{4 \times 30} \\
+= \frac{240}{120} \\
+= 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $x = 2$</div>
+        </div>
+
+        <span class="sub-question">(iii) x, y-এর সঙ্গে সরলভেদে এবং z-এর সঙ্গে ব্যস্তভেদে আছে। y=5 ও z=9 হলে $x=\frac{1}{6}$ হয়। x, y ও z-এর মধ্যে সম্পর্ক নির্ণয় করি এবং y=6 ও $z=\frac{1}{5}$ হলে, x-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শর্তানুসারে, $x \propto \displaystyle\frac{y}{z} \implies x = k \displaystyle\frac{y}{z}$</p>
+            <p>যখন $\displaystyle x = \frac{1}{6}, y = 5, z = 9$:</p>
+            \[
+\begin{array}{l}
+\frac{1}{6} = k \times \frac{5}{9} \\
+k = \frac{1}{6} \times \frac{9}{5} = \frac{9}{30} = \frac{3}{10}
+\end{array}
+\]
+            <p>অতএব, নির্ণেয় সম্পর্কটি হলো: $x = \displaystyle\frac{3y}{10z}$</p>
+            <p>এখন $y = 6$ এবং $\displaystyle z = \frac{1}{5}$ হলে $x$ এর মান:</p>
+            \[
+\begin{array}{l}
+x = \frac{3 \times 6}{10 \times \frac{1}{5}} \\
+= \frac{18}{2} \\
+= 9
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: সম্পর্কটি $x = \frac{3y}{10z}$ এবং $x = 9$</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. প্রমাণ করি:</h4>
+
+        <span class="sub-question">(i) $x \propto y$ হলে, দেখাই যে, $x+y \propto x-y$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x \propto y \implies x = ky$ (যেখানে $k \neq 0$ ধ্রুবক)।</p>
+            <p>তাহলে, $\displaystyle \frac{x}{y} = k$</p>
+            <p>যোগভাগ প্রক্রিয়া (Componendo and Dividendo) প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{x+y}{x-y} = \frac{k+1}{k-1}
+\end{array}
+\]
+            <p>যেহেতু $k$ ধ্রুবক, তাই $\displaystyle\frac{k+1}{k-1}$ সম্পূর্ণ রাশিটিও একটি ধ্রুবক। ধরি এটি $m$।</p>
+            <p>$\displaystyle\frac{x+y}{x-y} = m \implies x+y = m(x-y)$</p>
+            <p>$\therefore x+y \propto x-y$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(ii) $A \propto \displaystyle\frac{1}{C}, C \propto \frac{1}{B}$ হলে, দেখাই যে, $A \propto B$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$A \propto \displaystyle\frac{1}{C} \implies A = \frac{k_1}{C} \quad \text{--- (1)}$</p>
+            <p>$C \propto \displaystyle\frac{1}{B} \implies C = \frac{k_2}{B} \quad \text{--- (2)}$</p>
+            <p>(1) নং সমীকরণে C এর মান (2) নং থেকে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+A = \frac{k_1}{\frac{k_2}{B}} \\
+A = \frac{k_1}{k_2} \times B
+\end{array}
+\]
+            <p>যেহেতু $\displaystyle\frac{k_1}{k_2}$ একটি ধ্রুবক, তাই $A \propto B$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(iii) যদি $a \propto b, b \propto \displaystyle\frac{1}{c}$ এবং $c \propto d$ হয়, তবে a ও d-এর মধ্যে ভেদ সম্পর্ক লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$a \propto b \implies a = k_1 b$</p>
+            <p>$b \propto \displaystyle\frac{1}{c} \implies b = \frac{k_2}{c}$</p>
+            <p>$c \propto d \implies c = k_3 d$</p>
+            <p>এদের পর্যায়ক্রমে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+a = k_1 \left( \frac{k_2}{c} \right) \\
+a = \frac{k_1 k_2}{k_3 d} \\
+a = \left( \frac{k_1 k_2}{k_3} \right) \frac{1}{d}
+\end{array}
+\]
+            <p>যেহেতু ব্র্যাকেটের অংশটি একটি ধ্রুবক, তাই $a \propto \displaystyle\frac{1}{d}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: a এবং d ব্যস্তভেদে আছে ($a \propto \frac{1}{d}$)।</div>
+        </div>
+
+        <span class="sub-question">(iv) $x \propto y, y \propto z$ এবং $z \propto x$ হলে, ভেদ ধ্রুবক তিনটির মধ্যে সম্পর্ক নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = k_1 y$</p>
+            <p>$y = k_2 z$</p>
+            <p>$z = k_3 x$</p>
+            <p>সমীকরণ তিনটি গুণ করে পাই:</p>
+            \[
+\begin{array}{l}
+x \cdot y \cdot z = (k_1 y) \cdot (k_2 z) \cdot (k_3 x) \\
+xyz = k_1 k_2 k_3 (xyz)
+\end{array}
+\]
+            <p>যেহেতু $x, y, z$ অশূন্য, তাই উভয়পক্ষ থেকে $xyz$ কেটে দিলে পাই:</p>
+            \[
+\begin{array}{l}
+1 = k_1 k_2 k_3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: ভেদ ধ্রুবক তিনটির গুণফল 1 হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. $x+y \propto x-y$ হলে, দেখাই যে,</h4>
+        <p class="mb-3 text-muted"><strong>প্রস্তুতি:</strong> $x+y \propto x-y \implies \displaystyle\frac{x+y}{x-y} = k$ (ধ্রুবক)।<br>
+        যোগভাগ প্রক্রিয়া করে পাই: $\displaystyle\frac{x}{y} = \frac{k+1}{k-1} = m$ (ধরি, $m$ একটি নতুন ধ্রুবক)।<br>
+        তাহলে $x = my$। এই মানটি প্রতিটি প্রমাণে ব্যবহার করব।</p>
+
+        <span class="sub-question">(i) $x^2+y^2 \propto xy$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{x^2+y^2}{xy} = \frac{(my)^2 + y^2}{(my)y} \\
+= \frac{m^2y^2 + y^2}{my^2} \\
+= \frac{y^2(m^2 + 1)}{my^2} \\
+= \frac{m^2 + 1}{m}
+\end{array}
+\]
+            <p>যেহেতু $\displaystyle\frac{m^2 + 1}{m}$ একটি ধ্রুবক, তাই $x^2+y^2 \propto xy$।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(ii) $x^3+y^3 \propto x^3-y^3$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{x^3+y^3}{x^3-y^3} = \frac{(my)^3 + y^3}{(my)^3 - y^3} \\
+= \frac{m^3y^3 + y^3}{m^3y^3 - y^3} \\
+= \frac{y^3(m^3 + 1)}{y^3(m^3 - 1)} \\
+= \frac{m^3 + 1}{m^3 - 1}
+\end{array}
+\]
+            <p>যেহেতু $\displaystyle\frac{m^3 + 1}{m^3 - 1}$ একটি ধ্রুবক, তাই $x^3+y^3 \propto x^3-y^3$।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(iii) $ax+by \propto px+qy$ [যেখানে a, b, p, q অশূন্য ধ্রুবক]</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+\frac{ax+by}{px+qy} = \frac{a(my) + by}{p(my) + qy} \\
+= \frac{y(am + b)}{y(pm + q)} \\
+= \frac{am + b}{pm + q}
+\end{array}
+\]
+            <p>যেহেতু $a, b, p, q, m$ সবাই ধ্রুবক, তাই সম্পূর্ণ রাশিটিও ধ্রুবক।</p>
+            <p>$\therefore ax+by \propto px+qy$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. প্রমাণ করি:</h4>
+
+        <span class="sub-question">(i) $a^2+b^2 \propto ab$ হলে, প্রমাণ করি যে, $a+b \propto a-b$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$a^2+b^2 \propto ab \implies a^2+b^2 = k \cdot ab$</p>
+            <p>উভয়পক্ষকে $2ab$ দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{a^2+b^2}{2ab} = \frac{k}{2}
+\end{array}
+\]
+            <p>যোগভাগ প্রক্রিয়া প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{a^2+b^2+2ab}{a^2+b^2-2ab} = \frac{k+2}{k-2} \\
+\frac{(a+b)^2}{(a-b)^2} = \frac{k+2}{k-2} \\
+\frac{a+b}{a-b} = \sqrt{\frac{k+2}{k-2}}
+\end{array}
+\]
+            <p>যেহেতু ডানপক্ষ একটি ধ্রুবক, তাই $a+b \propto a-b$।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(ii) $x^3+y^3 \propto x^3-y^3$ হলে, প্রমাণ করি যে, $x+y \propto x-y$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\displaystyle\frac{x^3+y^3}{x^3-y^3} = k$</p>
+            <p>যোগভাগ প্রক্রিয়া প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{2x^3}{2y^3} = \frac{k+1}{k-1} \\
+\frac{x^3}{y^3} = m \quad \left[\text{ধরি } m = \frac{k+1}{k-1}\right] \\
+\frac{x}{y} = \sqrt[3]{m} = c \text{ (ধ্রুবক)}
+\end{array}
+\]
+            <p>আবার যোগভাগ প্রক্রিয়া প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{x+y}{x-y} = \frac{c+1}{c-1} = \text{ধ্রুবক}
+\end{array}
+\]
+            <p>$\therefore x+y \propto x-y$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. 15 জন কৃষক 5 দিনে 18 বিঘা জমি চাষ করতে পারেন। ভেদতত্ত্ব প্রয়োগ করে 10 জন কৃষক 12 বিঘা জমি কতদিনে চাষ করতে পারবেন তা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, কৃষকের সংখ্যা = $M$, দিনসংখ্যা = $D$ এবং জমির পরিমাণ = $W$।</p>
+            <p>দিনসংখ্যা ($D$), জমির পরিমাণ ($W$) এর সাথে সরলভেদে থাকে (কারণ জমি বেশি হলে দিন বেশি লাগবে)। $\implies D \propto W$</p>
+            <p>দিনসংখ্যা ($D$), কৃষকের সংখ্যা ($M$) এর সাথে ব্যস্তভেদে থাকে (কারণ লোক বেশি হলে দিন কম লাগবে)। $\implies D \propto \displaystyle\frac{1}{M}$</p>
+            <p>যৌগিক ভেদের উপপাদ্য অনুযায়ী:</p>
+            $$ D \propto \frac{W}{M} \implies D = k \frac{W}{M} $$
+            <p>প্রদত্ত: $M_1 = 15$, $D_1 = 5$, $W_1 = 18$।</p>
+            \[
+\begin{array}{l}
+5 = k \frac{18}{15} \\
+5 = k \frac{6}{5} \\
+k = \frac{25}{6}
+\end{array}
+\]
+            <p>তাহলে সম্পর্কটি হলো: $D = \displaystyle\frac{25}{6} \times \frac{W}{M}$</p>
+            <p>এখন, $M_2 = 10$, $W_2 = 12$ হলে $D_2$ বের করতে হবে:</p>
+            \[
+\begin{array}{l}
+D_2 = \frac{25}{6} \times \frac{12}{10} \\
+= \frac{25}{6} \times \frac{6}{5} \\
+= 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 5 দিনে চাষ করতে পারবেন।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. গোলকের আয়তন গোলকের ব্যাসার্ধের ত্রিঘাতের সঙ্গে সরলভেদে আছে। $1\frac{1}{2}, 2,$ এবং $2\frac{1}{2}$ মিটার দৈর্ঘ্যের ব্যাসবিশিষ্ট তিনটি নিরেট গোলককে গলিয়ে একটি নিরেট গোলক বানানো হলো। নতুন গোলকের ব্যাসের দৈর্ঘ্য নির্ণয় করি। (ধরি, গলানোর আগে ও পরে আয়তন একই থাকে)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গোলকের আয়তন ($V$) এবং ব্যাসার্ধ ($r$)। শর্তানুসারে, $V \propto r^3 \implies V = kr^3$।</p>
+            <p>দেওয়া আছে তিনটি গোলকের ব্যাস: $1.5, 2, 2.5$ মিটার।</p>
+            <p>যেহেতু আমরা ব্যাস ($D = 2r$) দিয়েও হিসাব করতে পারি, $V = k(D/2)^3 = k' D^3$। (এখানে $k'$ একটি নতুন ধ্রুবক)।</p>
+            <p>মোট আয়তন = তিনটি গোলকের আয়তনের সমষ্টি:</p>
+            \[
+\begin{array}{l}
+V_{\text{Total}} = V_1 + V_2 + V_3 \\
+= k'(1.5)^3 + k'(2)^3 + k'(2.5)^3 \\
+= k'[ (1.5)^3 + (2)^3 + (2.5)^3 ] \\
+= k'[ 3.375 + 8 + 15.625 ] \\
+= k'[ 27 ]
+\end{array}
+\]
+            <p>ধরি, নতুন গোলকের ব্যাস $D_{new}$। এর আয়তন $V_{new} = k' D_{new}^3$।</p>
+            <p>শর্তানুসারে গলানোর আগে ও পরে আয়তন সমান:</p>
+            \[
+\begin{array}{l}
+k' D_{new}^3 = k' [27] \\
+D_{new}^3 = 27 \\
+D_{new}^3 = 3^3 \\
+D_{new} = 3
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নতুন গোলকের ব্যাসের দৈর্ঘ্য 3 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. y দুটি চলের সমষ্টির সমান, যার একটি x চলের সঙ্গে সরলভেদে এবং অন্যটি x চলের সঙ্গে ব্যস্তভেদে আছে। x=1 হলে y=-1 এবং x=3 হলে y=5; x ও y-এর মধ্যে সম্পর্ক নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $y = A + B$, যেখানে $A \propto x$ এবং $B \propto \displaystyle\frac{1}{x}$।</p>
+            <p>অতএব, $A = k_1 x$ এবং $B = \displaystyle\frac{k_2}{x}$ (যেখানে $k_1, k_2$ অশূন্য ভেদ ধ্রুবক)।</p>
+            <p>তাহলে, $y = k_1 x + \displaystyle\frac{k_2}{x} \quad \dots \text{(i)}$</p>
+            <p>প্রথম শর্ত: $x = 1, y = -1$ বসিয়ে পাই,</p>
+            \[
+\begin{array}{l}
+-1 = k_1(1) + \frac{k_2}{1} \\
+k_1 + k_2 = -1 \quad \dots \text{(ii)}
+\end{array}
+\]
+            <p>দ্বিতীয় শর্ত: $x = 3, y = 5$ বসিয়ে পাই,</p>
+            \[
+\begin{array}{l}
+5 = k_1(3) + \frac{k_2}{3} \\
+15 = 9k_1 + k_2 \quad \dots \text{(iii)} \quad [\text{3 দিয়ে গুণ করে}]
+\end{array}
+\]
+            <p>(iii) নং থেকে (ii) নং সমীকরণ বিয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(9k_1 + k_2) - (k_1 + k_2) = 15 - (-1) \\
+8k_1 = 16 \\
+k_1 = 2
+\end{array}
+\]
+            <p>$k_1$-এর মান (ii) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+2 + k_2 = -1 \\
+k_2 = -3
+\end{array}
+\]
+            <p>সুতরাং, $k_1$ ও $k_2$ এর মান (i) নং সমীকরণে বসিয়ে সম্পর্কটি পাই:</p>
+            $$ y = 2x - \frac{3}{x} $$
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সম্পর্কটি হলো $y = 2x - \displaystyle\frac{3}{x}$</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. $a \propto b, b \propto c$ হলে দেখাই যে, $a^3b^3+b^3c^3+c^3a^3 \propto abc(a^3+b^3+c^3)$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$a \propto b \implies a = m b$</p>
+            <p>$b \propto c \implies b = n c$</p>
+            <p>অতএব, $a = m(nc) = mnc$।</p>
+            <p>আমাদের দেখাতে হবে যে, $\displaystyle\frac{a^3b^3+b^3c^3+c^3a^3}{abc(a^3+b^3+c^3)} =$ ধ্রুবক।</p>
+            <p>মানগুলি বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{(mnc)^3(nc)^3 + (nc)^3c^3 + c^3(mnc)^3}{(mnc)(nc)(c) [ (mnc)^3 + (nc)^3 + c^3 ]} \\
+= \frac{m^3n^6c^6 + n^3c^6 + m^3n^3c^6}{mn^2c^3 [ m^3n^3c^3 + n^3c^3 + c^3 ]} \\
+= \frac{c^6(m^3n^6 + n^3 + m^3n^3)}{mn^2c^3 \cdot c^3 [m^3n^3 + n^3 + 1]} \\
+= \frac{c^6 \cdot n^3(m^3n^3 + 1 + m^3)}{c^6 \cdot mn^2(m^3n^3 + n^3 + 1)} \\
+= \frac{n(m^3n^3 + m^3 + 1)}{m(m^3n^3 + n^3 + 1)}
+\end{array}
+\]
+            <p>যেহেতু $m$ ও $n$ উভয়ই ধ্রুবক, তাই সম্পূর্ণ রাশিটিও একটি ধ্রুবক।</p>
+            <p>$\therefore a^3b^3+b^3c^3+c^3a^3 \propto abc(a^3+b^3+c^3)$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. x ডেসিমিটার গভীর একটি কূপ খনন করার জন্য মোট ব্যয়ের এক অংশ x-এর সঙ্গে সরলভেদে এবং অপর অংশ $x^2$-এর সঙ্গে সরলভেদে পরিবর্তিত হয়। যদি 100 ডেসিমিটার এবং 200 ডেসিমিটার কূপ খনন করার জন্য যথাক্রমে 5000 টাকা এবং 12000 টাকা ব্যয় হয়, তবে 250 ডেসিমিটার গভীর কূপ খননের জন্য কত ব্যয় হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, মোট ব্যয় = $E$ টাকা।</p>
+            <p>শর্তানুসারে, $E = A + B$, যেখানে $A \propto x$ এবং $B \propto x^2$।</p>
+            <p>$\implies A = k_1 x$ এবং $B = k_2 x^2$</p>
+            <p>তাহলে সমীকরণটি হলো: $E = k_1 x + k_2 x^2 \quad \dots \text{(i)}$</p>
+            
+            <p>১ম শর্ত: $x = 100$, $E = 5000$</p>
+            \[
+\begin{array}{l}
+5000 = 100k_1 + 100^2 k_2 \\
+5000 = 100k_1 + 10000k_2 \\
+50 = k_1 + 100k_2 \quad \dots \text{(ii)} \quad [\text{100 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            
+            <p>২য় শর্ত: $x = 200$, $E = 12000$</p>
+            \[
+\begin{array}{l}
+12000 = 200k_1 + 200^2 k_2 \\
+12000 = 200k_1 + 40000k_2 \\
+60 = k_1 + 200k_2 \quad \dots \text{(iii)} \quad [\text{200 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            
+            <p>(iii) নং থেকে (ii) নং বিয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+(k_1 + 200k_2) - (k_1 + 100k_2) = 60 - 50 \\
+100k_2 = 10 \\
+k_2 = \frac{10}{100} = \frac{1}{10}
+\end{array}
+\]
+            
+            <p>$k_2$-এর মান (ii) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+k_1 + 100\left(\frac{1}{10}\right) = 50 \\
+k_1 + 10 = 50 \\
+k_1 = 40
+\end{array}
+\]
+            
+            <p>তাহলে ব্যয়ের সমীকরণটি হলো: $E = 40x + \displaystyle\frac{1}{10}x^2$</p>
+            <p>এখন $x = 250$ হলে মোট ব্যয়:</p>
+            \[
+\begin{array}{l}
+E = 40(250) + \frac{1}{10}(250)^2 \\
+= 10000 + \frac{62500}{10} \\
+= 10000 + 6250 \\
+= 16250
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 250 ডেসিমিটার কূপ খননের জন্য 16250 টাকা ব্যয় হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. চোঙের আয়তন, ভূমির ব্যাসার্ধের দৈর্ঘ্যের বর্গের এবং উচ্চতার সঙ্গে যৌগিক ভেদে আছে। দুটি চোঙের ভূমির ব্যাসার্ধের দৈর্ঘ্যের অনুপাত 2:3 এবং তাদের উচ্চতার অনুপাত 5:4 হলে, ওদের আয়তনের অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, চোঙের আয়তন = $V$, ভূমির ব্যাসার্ধ = $r$, এবং উচ্চতা = $h$।</p>
+            <p>শর্তানুসারে, $V \propto r^2 h \implies V = k r^2 h$ (যেখানে $k$ অশূন্য ভেদ ধ্রুবক)।</p>
+            <p>দুটি চোঙের ক্ষেত্রে ব্যাসার্ধ যথাক্রমে $r_1, r_2$ এবং উচ্চতা $h_1, h_2$।</p>
+            <p>দেওয়া আছে, $\displaystyle\frac{r_1}{r_2} = \frac{2}{3}$ এবং $\displaystyle\frac{h_1}{h_2} = \frac{5}{4}$।</p>
+            <p>আয়তনের অনুপাত:</p>
+            \[
+\begin{array}{l}
+\frac{V_1}{V_2} = \frac{k r_1^2 h_1}{k r_2^2 h_2} \\
+= \left(\frac{r_1}{r_2}\right)^2 \times \left(\frac{h_1}{h_2}\right) \\
+= \left(\frac{2}{3}\right)^2 \times \frac{5}{4} \\
+= \frac{4}{9} \times \frac{5}{4} \\
+= \frac{5}{9}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙ দুটির আয়তনের অনুপাত 5:9।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. পাঁচলা গ্রামের কৃষি সমবায় সমিতি একটি ট্রাক্টর ক্রয় করেছে। আগে সমিতির 2400 বিঘা জমি 25 টি লাঙল দিয়ে চাষ করতে 36 দিন সময় লাগত। এখন অর্ধেক জমি কেবল ট্রাক্টরটি দিয়ে 30 দিনে চাষ করা যায়। একটি ট্রাক্টর কয়টি লাঙলের সমান চাষ করে তা ভেদতত্ত্ব প্রয়োগ করে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, জমির পরিমাণ = $W$, লাঙলের সংখ্যা = $L$, এবং দিনসংখ্যা = $D$।</p>
+            <p>আমরা জানি, কাজের পরিমাণ স্থির থাকলে লাঙলের সংখ্যা দিনসংখ্যার সাথে ব্যস্তভেদে থাকে ($L \propto 1/D$) এবং দিনসংখ্যা স্থির থাকলে লাঙলের সংখ্যা জমির পরিমাণের সাথে সরলভেদে থাকে ($L \propto W$)।</p>
+            <p>যৌগিক ভেদের সূত্রানুযায়ী: $L \propto \displaystyle\frac{W}{D} \implies L = k \displaystyle\frac{W}{D}$</p>
+            
+            <p>প্রদত্ত: $W_1 = 2400$, $L_1 = 25$, $D_1 = 36$।</p>
+            \[
+\begin{array}{l}
+25 = k \frac{2400}{36} \\
+25 = k \frac{200}{3} \\
+k = \frac{25 \times 3}{200} = \frac{75}{200} = \frac{3}{8}
+\end{array}
+\]
+            <p>সম্পর্কটি হলো: $L = \displaystyle\frac{3}{8} \frac{W}{D}$</p>
+            
+            <p>এখন, অর্ধেক জমি অর্থাৎ $W_2 = \displaystyle\frac{2400}{2} = 1200$ বিঘা জমি 1 টি ট্রাক্টর দিয়ে $D_2 = 30$ দিনে চাষ করা হয়।</p>
+            <p>এই কাজটি করতে প্রয়োজনীয় লাঙলের সংখ্যা ($L_2$) বের করি:</p>
+            \[
+\begin{array}{l}
+L_2 = \frac{3}{8} \times \frac{1200}{30} \\
+= \frac{3}{8} \times 40 \\
+= 3 \times 5 = 15
+\end{array}
+\]
+            <p>যেহেতু 1 টি ট্রাক্টর 30 দিনে যে পরিমাণ চাষ করে, সেই একই পরিমাণ চাষ করতে 15 টি লাঙল লাগে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 1 টি ট্রাক্টর 15 টি লাঙলের সমান চাষ করে।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. গোলকের আয়তন তার ব্যাসার্ধের দৈর্ঘ্যের ত্রিঘাতের সঙ্গে সরলভেদে পরিবর্তিত হয় এবং গোলকের পৃষ্ঠতলের ক্ষেত্রফল তার ব্যাসার্ধের দৈর্ঘ্যের বর্গের সঙ্গে সরলভেদে পরিবর্তিত হয়। প্রমাণ করি যে, গোলকের আয়তনের বর্গ তার পৃষ্ঠতলের ক্ষেত্রফলের ঘনের সঙ্গে সরলভেদে থাকবে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, গোলকের আয়তন = $V$, পৃষ্ঠতলের ক্ষেত্রফল = $S$ এবং ব্যাসার্ধ = $r$।</p>
+            <p>প্রথম শর্ত: $V \propto r^3 \implies V = k_1 r^3$ (যেখানে $k_1$ ধ্রুবক)।</p>
+            <p>দ্বিতীয় শর্ত: $S \propto r^2 \implies S = k_2 r^2$ (যেখানে $k_2$ ধ্রুবক)।</p>
+            
+            <p>প্রমাণ করতে হবে: $V^2 \propto S^3$</p>
+            <p>প্রথম সমীকরণকে বর্গ (square) করে পাই:</p>
+            $$ V^2 = (k_1 r^3)^2 = k_1^2 r^6 $$
+            <p>দ্বিতীয় সমীকরণকে ঘন (cube) করে পাই:</p>
+            $$ S^3 = (k_2 r^2)^3 = k_2^3 r^6 $$
+            <p>এখন $V^2$-কে $S^3$ দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{V^2}{S^3} = \frac{k_1^2 r^6}{k_2^3 r^6} \\
+\frac{V^2}{S^3} = \frac{k_1^2}{k_2^3}
+\end{array}
+\]
+            <p>যেহেতু $k_1$ ও $k_2$ ধ্রুবক, তাই $\displaystyle\frac{k_1^2}{k_2^3}$ রাশিটিও একটি ধ্রুবক।</p>
+            <p>অতএব, $V^2 \propto S^3$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) $x \propto \displaystyle\frac{1}{y}$ হলে,</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = \displaystyle\frac{k}{y} \implies xy = k$ (অশূন্য ধ্রুবক)।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) xy = অশূন্য ধ্রুবক</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $x \propto y$ হয়, তখন</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x \propto y \implies x = ky \implies x^n = k^n y^n \implies x^n \propto y^n$। তাই $x^2 \propto y^2$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $x^2 \propto y^2$</div>
+        </div>
+
+        <span class="sub-question">(iii) $x \propto y$ এবং $y=8$ যখন $x=2$; $y=16$ হলে, $x$-এর মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = ky \implies 2 = 8k \implies k = \displaystyle\frac{2}{8} = \frac{1}{4}$।</p>
+            <p>যখন $y=16$, $x = \displaystyle\frac{1}{4} \times 16 = 4$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 4</div>
+        </div>
+
+        <span class="sub-question">(iv) $x \propto y^2$ এবং $y=4$ যখন $x=8$; $x=32$ হলে, $y$-এর ধনাত্মক মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = ky^2 \implies 8 = k(16) \implies k = \displaystyle\frac{1}{2}$।</p>
+            <p>যখন $x=32$, $32 = \displaystyle\frac{1}{2}y^2 \implies y^2 = 64 \implies y = 8$ (ধনাত্মক মান)।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 8</div>
+        </div>
+
+        <span class="sub-question">(v) যদি $y-z \propto \displaystyle\frac{1}{x}$, $z-x \propto \displaystyle\frac{1}{y}$ এবং $x-y \propto \displaystyle\frac{1}{z}$ হয়, তাহলে তিনটি ভেদ ধ্রুবকের সমষ্টি</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$y-z = \displaystyle\frac{k_1}{x} \implies k_1 = xy - xz$</p>
+            <p>$z-x = \displaystyle\frac{k_2}{y} \implies k_2 = yz - xy$</p>
+            <p>$x-y = \displaystyle\frac{k_3}{z} \implies k_3 = xz - yz$</p>
+            <p>সমষ্টি = $(xy - xz) + (yz - xy) + (xz - yz) = 0$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 0</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) $y \propto \displaystyle\frac{1}{x}$ হলে, $\frac{y}{x} =$ অশূন্য ধ্রুবক</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $y \propto \frac{1}{x} \implies xy =$ ধ্রুবক। $\frac{y}{x}$ ধ্রুবক নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) $x \propto z$ এবং $y \propto z$ হলে, $xy \propto z$</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> $x = k_1 z$ এবং $y = k_2 z \implies xy = k_1 k_2 z^2$। সুতরাং $xy \propto z^2$ হবে, $z$ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) $x \propto \displaystyle\frac{1}{y}$ এবং $y \propto \frac{1}{z}$ হলে, x $\propto$ _________</span>
+        <div class="solution-box">
+            <p>$x = \frac{k_1}{y}$ এবং $y = \frac{k_2}{z} \implies x = \frac{k_1}{(k_2/z)} = \left(\frac{k_1}{k_2}\right)z \implies x \propto z$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> z</p>
+        </div>
+
+        <span class="sub-question">(ii) $x \propto y$ হলে, $x^n \propto$ _________</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $y^n$</p>
+        </div>
+
+        <span class="sub-question">(iii) $x \propto y$ এবং $x \propto z$ হলে, $(y+z) \propto$ _________</span>
+        <div class="solution-box">
+            <p>$y \propto x \implies y=k_1 x$. $z \propto x \implies z=k_2 x$. $y+z = (k_1+k_2)x \implies (y+z) \propto x$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> x</p>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) $x \propto y^2$ এবং y=2a যখন x=a; x ও y-এর মধ্যে সম্পর্ক নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = ky^2$। মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+a = k(2a)^2 \\
+a = k(4a^2) \\
+k = \frac{a}{4a^2} = \frac{1}{4a}
+\end{array}
+\]
+            <p>সম্পর্কটি হলো: $x = \displaystyle\frac{1}{4a} y^2 \implies y^2 = 4ax$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $y^2 = 4ax$</div>
+        </div>
+
+        <span class="sub-question">(ii) $x \propto y, y \propto z$ এবং $z \propto x$ হলে, অশূন্য ভেদ ধ্রুবক তিনটির গুণফল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $x = k_1 y, y = k_2 z, z = k_3 x$</p>
+            <p>তিনটি সমীকরণ গুণ করে পাই:</p>
+            \[
+\begin{array}{l}
+xyz = (k_1 k_2 k_3) xyz \\
+1 = k_1 k_2 k_3 \quad [\text{যেহেতু } xyz \neq 0]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ধ্রুবক তিনটির গুণফল 1</div>
+        </div>
+
+        <span class="sub-question">(iii) $x \propto \displaystyle\frac{1}{y}$ এবং $y \propto \frac{1}{z}$ হলে, x, z-এর সঙ্গে সরলভেদে না ব্যস্তভেদে আছে তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = \displaystyle\frac{k_1}{y}$ এবং $y = \frac{k_2}{z}$</p>
+            \[
+\begin{array}{l}
+x = \frac{k_1}{\frac{k_2}{z}} = \left(\frac{k_1}{k_2}\right) z
+\end{array}
+\]
+            <p>যেহেতু $x = \text{ধ্রুবক} \times z$, তাই x ও z সরলভেদে আছে ($x \propto z$)।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সরলভেদে আছে।</div>
+        </div>
+
+        <span class="sub-question">(iv) $x \propto yz$ এবং $y \propto zx$ হলে, দেখাই যে, z একটি অশূন্য ধ্রুবক।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$x = k_1 yz$ এবং $y = k_2 zx$</p>
+            <p>$x$ এর মান দ্বিতীয় সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+y = k_2 z (k_1 yz) \\
+y = k_1 k_2 z^2 y \\
+1 = k_1 k_2 z^2 \quad [\text{যেহেতু } y \neq 0] \\
+z^2 = \frac{1}{k_1 k_2} \\
+z = \pm \frac{1}{\sqrt{k_1 k_2}}
+\end{array}
+\]
+            <p>যেহেতু $k_1, k_2$ ধ্রুবক, তাই $z$ একটি অশূন্য ধ্রুবক।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+
+        <span class="sub-question">(v) যদি $b \propto a^3$ হয় এবং a-এর বৃদ্ধি হয় 2:3 অনুপাতে, তাহলে b-এর বৃদ্ধি কী অনুপাতে হয় তা নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$b \propto a^3 \implies b = ka^3$</p>
+            <p>দেওয়া আছে, $a_1 : a_2 = 2 : 3 \implies \displaystyle\frac{a_1}{a_2} = \frac{2}{3}$</p>
+            <p>b-এর বৃদ্ধির অনুপাত:</p>
+            \[
+\begin{array}{l}
+\frac{b_1}{b_2} = \frac{k a_1^3}{k a_2^3} \\
+= \left(\frac{a_1}{a_2}\right)^3 \\
+= \left(\frac{2}{3}\right)^3 \\
+= \frac{8}{27}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: b-এর বৃদ্ধি 8:27 অনুপাতে হবে।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

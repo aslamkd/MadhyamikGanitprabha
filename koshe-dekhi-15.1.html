@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-15.1</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark)}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.solution-box p{margin-bottom:0.75rem;font-size:1.05rem;word-break:break-word}.solution-box p:last-child{margin-bottom:0px}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;margin-bottom:1rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;margin-top:0.5rem;border-left-width:3px}.sol-badge{margin-bottom:0.5rem;padding:3px 12px;font-size:0.8rem}.question-title{padding:0.75rem 0.5rem;font-size:1.1rem;margin-bottom:1rem;border-radius:6px}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>স্পর্শক সংক্রান্ত মূল উপপাদ্য (Core Theorems):</strong><br>
+        ১) বৃত্তের কোনো বিন্দুতে স্পর্শক এবং ওই স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর <strong>লম্ব</strong> ($90^\circ$) ভাবে অবস্থিত হয়।<br>
+        ২) বৃত্তের বহিঃস্থ কোনো বিন্দু থেকে বৃত্তের উপর দুটি স্পর্শক অঙ্কন করা হলে, তাদের দৈর্ঘ্য সমান হয় এবং তারা কেন্দ্রে সমান কোণ উৎপন্ন করে।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. মাসুম O কেন্দ্রীয় একটি বৃত্ত অঙ্কন করেছে যার AB একটি জ্যা। B বিন্দুতে একটি স্পর্শক অঙ্কন করেছি যা বর্ধিত AO-কে T বিন্দুতে ছেদ করল। $\angle BAT = 21^\circ$ হলে, $\angle BTA$-এর মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, O কেন্দ্রীয় বৃত্তের AB একটি জ্যা এবং B বিন্দুতে স্পর্শক বর্ধিত AO-কে T বিন্দুতে ছেদ করেছে। $\angle BAT = 21^\circ$ (অর্থাৎ $\angle OAB = 21^\circ$)।</p>
+            <p>$\triangle OAB$-এর ক্ষেত্রে, $OA = OB$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+            <p>আমরা জানি, সমদ্বিবাহু ত্রিভুজের সমান বাহুর বিপরীত কোণগুলিও সমান হয়।</p>
+            <p>$\therefore \angle OBA = \angle OAB = 21^\circ$</p>
+            <p>$\triangle OAB$-এর বহিঃস্থ কোণ $\angle TOB$। বহিঃস্থ কোণ = বিপরীত অন্তঃস্থ কোণদ্বয়ের সমষ্টি।</p>
+            \[
+\begin{array}{l}
+\angle TOB = \angle OAB + \angle OBA \\
+\angle TOB = 21^\circ + 21^\circ = 42^\circ
+\end{array}
+\]
+            <p>আবার, আমরা জানি বৃত্তের কোনো বিন্দুতে স্পর্শক এবং স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব হয়।</p>
+            <p>যেহেতু BT স্পর্শক এবং OB ব্যাসার্ধ, তাই $OB \perp BT \implies \angle OBT = 90^\circ$।</p>
+            <p>এখন, সমকোণী ত্রিভুজ $\triangle OBT$-তে, তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle BTA + \angle TOB + \angle OBT = 180^\circ \\
+\angle BTA + 42^\circ + 90^\circ = 180^\circ \\
+\angle BTA + 132^\circ = 180^\circ \\
+\angle BTA = 180^\circ - 132^\circ = 48^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle BTA = 48^\circ$</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. কোনো বৃত্তের XY একটি ব্যাস। বৃত্তটির উপর অবস্থিত A বিন্দুতে PAQ বৃত্তের স্পর্শক। X বিন্দু থেকে বৃত্তের স্পর্শকের উপর অঙ্কিত লম্ব PAQ-কে Z বিন্দুতে ছেদ করেছে। প্রমাণ করি যে, XA, $\angle YXZ$-এর সমদ্বিখণ্ডক।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের XY একটি ব্যাস। বৃত্তের পরিধির ওপর A বিন্দুতে PAQ একটি স্পর্শক। ব্যাসের প্রান্তবিন্দু X থেকে স্পর্শক PAQ-এর ওপর XZ লম্ব টানা হয়েছে, যা PAQ-কে Z বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> XA রেখাটি $\angle YXZ$-এর সমদ্বিখণ্ডক, অর্থাৎ $\angle YXA = \angle AXZ$।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> কেন্দ্র O এবং স্পর্শবিন্দু A যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>PAQ হলো A বিন্দুতে স্পর্শক এবং OA হলো স্পর্শবিন্দুগামী ব্যাসার্ধ।</p>
+                <p>আমরা জানি, স্পর্শক ও স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব হয়।</p>
+                <p>$\therefore OA \perp PAQ$</p>
+                <p>আবার প্রদত্ত যে, $XZ \perp PAQ$</p>
+                <p>যেহেতু একই সরলরেখার ওপর অঙ্কিত দুটি লম্ব পরস্পর সমান্তরাল হয়, তাই $OA \parallel XZ$।</p>
+                <p>এখন, $OA \parallel XZ$ এবং XA হলো তাদের ভেদক (Transversal)।</p>
+                <p>সুতরাং, একান্তর কোণ সমান হবে: $\angle OAX = \angle AXZ \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, $\triangle OAX$-এর ক্ষেত্রে, $OA = OX$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+                <p>যেহেতু বাহু দুটি সমান, তাদের বিপরীত কোণগুলিও সমান হবে:</p>
+                <p>$\angle OAX = \angle OXA$ (বা $\angle YXA$) $\quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) নং সমীকরণ থেকে পাই:</p>
+                <p>$\angle YXA = \angle AXZ$</p>
+                <p>এর অর্থ হলো, XA সরলরেখাটি সম্পূর্ণ $\angle YXZ$-কে সমান দুটি কোণে বিভক্ত করেছে।</p>
+                <p>সুতরাং, XA হলো $\angle YXZ$-এর সমদ্বিখণ্ডক।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. একটি বৃত্ত অঙ্কন করলাম যার PR একটি ব্যাস। P বিন্দুতে একটি স্পর্শক অঙ্কন করলাম এবং এই স্পর্শকের উপরে S এমন একটি বিন্দু নিলাম যাতে PR = PS হয়। RS বৃত্তকে T বিন্দুতে ছেদ করলে, প্রমাণ করি যে, ST = RT = PT.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের PR একটি ব্যাস। P বিন্দুতে অঙ্কিত স্পর্শকের ওপর S একটি বিন্দু, যেখানে $PR = PS$। RS রেখাংশ বৃত্তটিকে T বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $ST = RT = PT$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> P, T যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>PR বৃত্তের ব্যাস হওয়ায় $\angle PTR$ হলো একটি অর্ধবৃত্তস্থ কোণ।</p>
+                <p>আমরা জানি, অর্ধবৃত্তস্থ কোণ সমকোণ হয়। $\therefore \angle PTR = 90^\circ$।</p>
+                <p>যেহেতু S, T, R সমরেখ, তাই রৈখিক যুগল হিসেবে $\angle PTS = 180^\circ - 90^\circ = 90^\circ$।</p>
+                <p>অর্থাৎ $PT \perp RS$।</p>
+                <br>
+                <p>বড়ো ত্রিভুজ $\triangle PRS$-এর ক্ষেত্রে, P বিন্দুতে স্পর্শক এবং PR ব্যাস হওয়ায় $PR \perp PS \implies \angle SPR = 90^\circ$।</p>
+                <p>দেওয়া আছে $PR = PS$। অর্থাৎ $\triangle PRS$ একটি সমদ্বিবাহু সমকোণী ত্রিভুজ।</p>
+                <p>সুতরাং এর অপর দুটি কোণ সমান হবে: $\angle PRS = \angle PSR = \displaystyle\frac{180^\circ - 90^\circ}{2} = 45^\circ$।</p>
+                <br>
+                <p>সমকোণী ত্রিভুজ $\triangle PTR$-তে, $\angle PTR = 90^\circ$ এবং $\angle PRT$ (বা $\angle PRS$) = $45^\circ$।</p>
+                <p>$\therefore \angle TPR = 180^\circ - (90^\circ + 45^\circ) = 45^\circ$।</p>
+                <p>যেহেতু $\triangle PTR$-এ দুটি কোণ সমান ($\angle PRT = \angle TPR = 45^\circ$), তাই এদের বিপরীত বাহুগুলি সমান হবে।</p>
+                <p>$\therefore PT = RT \quad \dots \text{(i)}$</p>
+                <br>
+                <p>একইভাবে, সমকোণী ত্রিভুজ $\triangle PTS$-তে, $\angle PTS = 90^\circ$ এবং $\angle PST$ (বা $\angle PSR$) = $45^\circ$।</p>
+                <p>$\therefore \angle SPT = 180^\circ - (90^\circ + 45^\circ) = 45^\circ$।</p>
+                <p>যেহেতু $\triangle PTS$-এ দুটি কোণ সমান ($\angle PST = \angle SPT = 45^\circ$), তাই বিপরীত বাহুগুলিও সমান হবে।</p>
+                <p>$\therefore PT = ST \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) থেকে পাই:</p>
+                <p>$ST = RT = PT$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একটি O কেন্দ্রীয় বৃত্ত অঙ্কন করি যার দুটি ব্যাসার্ধ OA ও OB পরস্পর লম্বভাবে অবস্থিত। A ও B বিন্দুতে অঙ্কিত স্পর্শকদ্বয় পরস্পরকে T বিন্দুতে ছেদ করলে, প্রমাণ করি যে, AB = OT এবং তারা পরস্পরকে লম্বভাবে সমদ্বিখণ্ডিত করে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="220" height="220" viewBox="0 0 220 220">
+               <!-- Circle -->
+               <circle cx="70" cy="150" r="60" stroke="#3730A3" stroke-width="2" fill="#F8FAFC"></circle>
+               
+               <!-- Radii -->
+               <line x1="70" y1="150" x2="130" y2="150" stroke="#1F2937" stroke-width="2"></line> <!-- OA -->
+               <line x1="70" y1="150" x2="70" y2="90" stroke="#1F2937" stroke-width="2"></line> <!-- OB -->
+               
+               <!-- Tangents to T -->
+               <line x1="130" y1="150" x2="130" y2="90" stroke="#10B981" stroke-width="2"></line> <!-- AT -->
+               <line x1="70" y1="90" x2="130" y2="90" stroke="#10B981" stroke-width="2"></line> <!-- BT -->
+               
+               <!-- Diagonals AB & OT -->
+               <line x1="130" y1="150" x2="70" y2="90" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4"></line>
+               <line x1="70" y1="150" x2="130" y2="90" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4"></line>
+               
+               <circle cx="70" cy="150" r="3" fill="#374151"></circle>
+               <circle cx="130" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="70" cy="90" r="3" fill="#1F2937"></circle>
+               <circle cx="130" cy="90" r="3" fill="#E11D48"></circle>
+               
+               <text x="50" y="165" font-size="14" font-weight="bold">O</text>
+               <text x="140" y="165" font-size="14" font-weight="bold">A</text>
+               <text x="50" y="85" font-size="14" font-weight="bold">B</text>
+               <text x="140" y="85" font-size="14" font-weight="bold" fill="#E11D48">T</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের দুটি ব্যাসার্ধ OA এবং OB পরস্পর লম্ব ($OA \perp OB \implies \angle AOB = 90^\circ$)। A ও B বিন্দুতে অঙ্কিত স্পর্শক দুটি পরস্পরকে T বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $AB = OT$ এবং তারা (AB ও OT কর্ণদ্বয়) পরস্পরকে লম্বভাবে সমদ্বিখণ্ডিত করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>A বিন্দুতে AT স্পর্শক এবং OA স্পর্শবিন্দুগামী ব্যাসার্ধ। $\therefore OA \perp AT \implies \angle OAT = 90^\circ$।</p>
+                <p>একইভাবে B বিন্দুতে BT স্পর্শক এবং OB ব্যাসার্ধ। $\therefore OB \perp BT \implies \angle OBT = 90^\circ$।</p>
+                <p>প্রদত্ত আছে, $OA \perp OB \implies \angle AOB = 90^\circ$।</p>
+                <p>চতুর্ভুজ OATB-এর তিনটি কোণ $90^\circ$। আমরা জানি চতুর্ভুজের চার কোণের সমষ্টি $360^\circ$।</p>
+                <p>$\therefore$ চতুর্থ কোণ $\angle ATB = 360^\circ - (90^\circ + 90^\circ + 90^\circ) = 90^\circ$।</p>
+                <p>যে চতুর্ভুজের প্রতিটি কোণ সমকোণ, তা একটি আয়তক্ষেত্র। সুতরাং, OATB একটি আয়তক্ষেত্র।</p>
+                <p>আবার, $\triangle OATB$-তে সন্নিহিত বাহু $OA = OB$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+                <p>যে আয়তক্ষেত্রের একজোড়া সন্নিহিত বাহু সমান হয়, তা একটি <strong>বর্গক্ষেত্র (Square)</strong>।</p>
+                <p>সুতরাং, OATB একটি বর্গক্ষেত্র।</p>
+                <p>আমরা জানি, বর্গক্ষেত্রের কর্ণদ্বয় (এখানে AB এবং OT) দৈর্ঘ্যে সমান হয় এবং তারা পরস্পরকে সমকোণে সমদ্বিখণ্ডিত করে।</p>
+                <p>অতএব, $AB = OT$ এবং তারা পরস্পরকে লম্বভাবে সমদ্বিখণ্ডিত করে।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. দুটি এককেন্দ্রীয় বৃত্তের বৃহত্তরটির AB ও AC জ্যা দুটি অপর বৃত্তকে যথাক্রমে P ও Q বিন্দুতে স্পর্শ করলে, প্রমাণ করি যে, $PQ = \frac{1}{2}BC$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="200" height="200" viewBox="0 0 200 200">
+               <!-- Concentric Circles -->
+               <circle cx="100" cy="100" r="80" stroke="#3730A3" stroke-width="2" fill="none"></circle>
+               <circle cx="100" cy="100" r="40" stroke="#10B981" stroke-width="2" fill="none"></circle>
+               
+               <!-- Chords AB and AC touching inner circle -->
+               <polygon points="100,20 30.7,140 169.3,140" fill="none" stroke="#1F2937" stroke-width="1.5"></polygon>
+               <!-- PQ Line -->
+               <line x1="65.3" y1="80" x2="134.7" y2="80" stroke="#F59E0B" stroke-width="2"></line>
+               
+               <circle cx="100" cy="100" r="3" fill="#374151"></circle>
+               <circle cx="65.3" cy="80" r="3" fill="#1F2937"></circle>
+               <circle cx="134.7" cy="80" r="3" fill="#1F2937"></circle>
+               
+               <text x="100" y="15" font-size="14" font-weight="bold">A</text>
+               <text x="15" y="150" font-size="14" font-weight="bold">B</text>
+               <text x="175" y="150" font-size="14" font-weight="bold">C</text>
+               <text x="45" y="75" font-size="14" font-weight="bold">P</text>
+               <text x="145" y="75" font-size="14" font-weight="bold">Q</text>
+               <text x="95" y="115" font-size="14" font-weight="bold">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রবিশিষ্ট দুটি সমকেন্দ্রিক বৃত্ত। বৃহত্তর বৃত্তের দুটি জ্যা AB এবং AC ছোটো বৃত্তকে যথাক্রমে P ও Q বিন্দুতে স্পর্শ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $PQ = \frac{1}{2}BC$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, P এবং O, Q যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>ছোটো বৃত্তের ক্ষেত্রে, AB হলো P বিন্দুতে স্পর্শক এবং OP হলো স্পর্শবিন্দুগামী ব্যাসার্ধ।</p>
+                <p>$\therefore OP \perp AB$।</p>
+                <p>এবার বৃহত্তর বৃত্তের কথা বিবেচনা করি। AB হলো বৃহত্তর বৃত্তের একটি জ্যা এবং কেন্দ্র O থেকে তার ওপর $OP \perp AB$।</p>
+                <p>আমরা জানি, কেন্দ্র থেকে জ্যা-এর ওপর অঙ্কিত লম্ব জ্যা-কে সমদ্বিখণ্ডিত করে।</p>
+                <p>সুতরাং, P হলো AB বাহুর মধ্যবিন্দু।</p>
+                <br>
+                <p>একইভাবে, ছোটো বৃত্তে AC স্পর্শক এবং OQ ব্যাসার্ধ হওয়ায় $OQ \perp AC$।</p>
+                <p>বৃহত্তর বৃত্তের AC জ্যা-এর ওপর $OQ \perp AC$ হওয়ায় Q হলো AC বাহুর মধ্যবিন্দু।</p>
+                <br>
+                <p>এখন, $\triangle ABC$-এর ক্ষেত্রে, AB এবং AC বাহুর মধ্যবিন্দু যথাক্রমে P এবং Q।</p>
+                <p>মধ্যবিন্দু সংক্রান্ত উপপাদ্য (Midpoint Theorem) অনুযায়ী, কোনো ত্রিভুজের দুটি বাহুর মধ্যবিন্দুর সংযোজক সরলরেখাংশ তৃতীয় বাহুর সমান্তরাল এবং অর্ধেক হয়।</p>
+                <p>অতএব, $PQ \parallel BC$ এবং $PQ = \frac{1}{2}BC$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. O কেন্দ্রীয় কোনো বৃত্তের উপর অবস্থিত A বিন্দুতে স্পর্শকের উপর X যে-কোনো একটি বিন্দু। X বিন্দু থেকে অঙ্কিত একটি ছেদক বৃত্তকে Y ও Z বিন্দুতে ছেদ করে। YZ-এর মধ্যবিন্দু P হলে, প্রমাণ করি যে, XAPO বা XAOP একটি বৃত্তস্থ চতুর্ভুজ।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের A বিন্দুতে XA একটি স্পর্শক। X বিন্দু থেকে অঙ্কিত একটি ছেদক বৃত্তটিকে Y ও Z বিন্দুতে ছেদ করে (অর্থাৎ XYZ একটি সরলরেখা)। P হলো জ্যা YZ-এর মধ্যবিন্দু।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> চতুর্ভুজ XAOP একটি বৃত্তস্থ চতুর্ভুজ (Cyclic Quadrilateral)।
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, A এবং O, P যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বৃত্তের YZ একটি জ্যা এবং P হলো তার মধ্যবিন্দু।</p>
+                <p>আমরা জানি, বৃত্তের কেন্দ্র এবং কোনো জ্যা-এর মধ্যবিন্দুর সংযোজক সরলরেখা ওই জ্যা-এর ওপর লম্ব হয়।</p>
+                <p>$\therefore OP \perp YZ \implies \angle OPX = 90^\circ \quad \dots \text{(i)}$</p>
+                <br>
+                <p>আবার, বৃত্তের A বিন্দুতে XA একটি স্পর্শক এবং OA হলো স্পর্শবিন্দুগামী ব্যাসার্ধ।</p>
+                <p>স্পর্শক সংক্রান্ত উপপাদ্য অনুযায়ী, স্পর্শক ও স্পর্শবিন্দুগামী ব্যাসার্ধ পরস্পর লম্ব।</p>
+                <p>$\therefore OA \perp XA \implies \angle OAX = 90^\circ \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>চতুর্ভুজ XAOP-এর দুটি বিপরীত কোণ $\angle OAX$ এবং $\angle OPX$ যোগ করে পাই:</p>
+                <p>$\angle OAX + \angle OPX = 90^\circ + 90^\circ = 180^\circ$</p>
+                <p>যেহেতু চতুর্ভুজটির একজোড়া বিপরীত কোণের সমষ্টি দুই সমকোণ বা সম্পূরক ($180^\circ$), তাই চতুর্ভুজটি অবশ্যই বৃত্তস্থ হবে।</p>
+                <p>সুতরাং, XAOP একটি বৃত্তস্থ চতুর্ভুজ।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. O কেন্দ্রীয় কোনো বৃত্তের একটি ব্যাসের উপর P যে-কোনো একটি বিন্দু। ওই ব্যাসের উপর O বিন্দুতে অঙ্কিত লম্ব বৃত্তকে Q বিন্দুতে ছেদ করে। বর্ধিত QP বৃত্তকে R বিন্দুতে ছেদ করে। R বিন্দুতে অঙ্কিত স্পর্শক বর্ধিত OP-কে S বিন্দুতে ছেদ করে। প্রমাণ করি যে, SP=SR.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের ব্যাসের ওপর P একটি বিন্দু। O বিন্দুতে ওই ব্যাসের ওপর লম্ব OQ, যা বৃত্তকে Q বিন্দুতে ছেদ করে। QP-কে বর্ধিত করলে তা বৃত্তকে R বিন্দুতে ছেদ করে। R বিন্দুতে অঙ্কিত স্পর্শক বর্ধিত OP ব্যাসকে S বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $SP = SR$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> O, R যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>OQ এবং OP পরস্পর লম্ব (প্রদত্ত)। $\therefore \angle QOP = 90^\circ$।</p>
+                <p>সমকোণী $\triangle OQP$-এ, $\angle OQP + \angle OPQ = 90^\circ \quad \dots \text{(i)}$</p>
+                <p>বিপ্রতীপ কোণ হিসেবে, $\angle OPQ = \angle SPR$।</p>
+                <p>অতএব, সমীকরণ (i) থেকে পাই: $\angle OQP + \angle SPR = 90^\circ \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>এখন, $\triangle OQR$-এর ক্ষেত্রে, $OQ = OR$ (একই বৃত্তের ব্যাসার্ধ)।</p>
+                <p>সমদ্বিবাহু ত্রিভুজের ধর্ম অনুযায়ী, $\angle OQR = \angle ORQ$।</p>
+                <p>এখানে $\angle OQR$ মানেই $\angle OQP$ (যেহেতু Q, P, R সমরেখ)।</p>
+                <p>$\therefore \angle OQP = \angle ORQ \quad \dots \text{(iii)}$</p>
+                <br>
+                <p>R বিন্দুতে SR স্পর্শক এবং OR স্পর্শবিন্দুগামী ব্যাসার্ধ। $\therefore OR \perp SR \implies \angle ORS = 90^\circ$।</p>
+                <p>চিত্রানুযায়ী, $\angle ORS$ দুটি কোণের সমষ্টি: $\angle ORQ + \angle QRS = 90^\circ$।</p>
+                <p>(iii) নং সমীকরণ থেকে $\angle ORQ$-এর মান বসিয়ে পাই:</p>
+                <p>$\angle OQP + \angle QRS = 90^\circ \quad \dots \text{(iv)}$</p>
+                <br>
+                <p>(ii) এবং (iv) নং সমীকরণ তুলনা করে পাই:</p>
+                <p>$\angle OQP + \angle SPR = \angle OQP + \angle QRS$</p>
+                <p>উভয়পক্ষ থেকে $\angle OQP$ বাদ দিলে থাকে, $\angle SPR = \angle QRS$।</p>
+                <p>যেহেতু Q, P, R সমরেখ, তাই $\angle QRS$ মানেই $\angle PRS$।</p>
+                <p>$\therefore \triangle PRS$-তে, $\angle SPR = \angle PRS$।</p>
+                <p>যে ত্রিভুজের দুটি কোণ সমান, তার বিপরীত বাহুগুলিও সমান হয়।</p>
+                <p>সুতরাং, $SP = SR$।</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. রুমেলা O কেন্দ্রীয় একটি বৃত্ত অঙ্কন করেছে যার QR একটি জ্যা। Q ও R বিন্দুতে দুটি স্পর্শক অঙ্কন করেছি যারা পরস্পরকে P বিন্দুতে ছেদ করেছে। QM বৃত্তের একটি ব্যাস হলে, প্রমাণ করি যে, $\angle QPR = 2 \angle RQM$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            
+            <svg class="geometry-diagram" width="180" height="200" viewBox="0 0 180 200">
+               <circle cx="90" cy="110" r="70" stroke="#3730A3" stroke-width="2" fill="none"></circle>
+               <line x1="90" y1="40" x2="90" y2="180" stroke="#1F2937" stroke-width="2"></line> <!-- Diameter QM -->
+               
+               <!-- Point R -->
+               <line x1="90" y1="40" x2="150" y2="145" stroke="#1F2937" stroke-width="1.5"></line> <!-- QR chord -->
+               <line x1="90" y1="180" x2="150" y2="145" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4"></line> <!-- MR -->
+               
+               <!-- Tangents from P -->
+               <line x1="90" y1="40" x2="10" y2="40" stroke="#F59E0B" stroke-width="2"></line> <!-- PQ tangent -->
+               <line x1="150" y1="145" x2="10" y2="40" stroke="#F59E0B" stroke-width="2"></line> <!-- PR tangent -->
+               
+               <circle cx="90" cy="110" r="3" fill="#374151"></circle>
+               <circle cx="90" cy="40" r="3" fill="#1F2937"></circle>
+               <circle cx="150" cy="145" r="3" fill="#1F2937"></circle>
+               <circle cx="10" cy="40" r="3" fill="#E11D48"></circle>
+               <circle cx="90" cy="180" r="3" fill="#1F2937"></circle>
+               
+               <text x="95" y="30" font-size="14" font-weight="bold">Q</text>
+               <text x="160" y="150" font-size="14" font-weight="bold">R</text>
+               <text x="0" y="35" font-size="14" font-weight="bold" fill="#E11D48">P</text>
+               <text x="95" y="195" font-size="14" font-weight="bold">M</text>
+               <text x="75" y="115" font-size="14" font-weight="bold">O</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> O কেন্দ্রীয় বৃত্তের QR একটি জ্যা। Q এবং R বিন্দুতে অঙ্কিত স্পর্শক দুটি P বিন্দুতে ছেদ করেছে। QM হলো বৃত্তের ব্যাস।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle QPR = 2 \angle RQM$
+            </div>
+            <div class="proof-step">
+                <strong>অঙ্কন:</strong> R, M যুক্ত করা হলো।
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বহিঃস্থ বিন্দু P থেকে বৃত্তের উপর দুটি স্পর্শক PQ এবং PR অঙ্কন করা হয়েছে।</p>
+                <p>আমরা জানি, বহিঃস্থ বিন্দু থেকে অঙ্কিত স্পর্শক দুটির দৈর্ঘ্য সমান হয়। $\therefore PQ = PR$।</p>
+                <p>$\triangle PQR$ একটি সমদ্বিবাহু ত্রিভুজ, সুতরাং $\angle PQR = \angle PRQ \quad \dots \text{(i)}$</p>
+                <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$ হওয়ায়:</p>
+                <p>$\angle QPR = 180^\circ - (\angle PQR + \angle PRQ) = 180^\circ - 2\angle PQR \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>QM বৃত্তের ব্যাস হওয়ায় $\angle QRM$ একটি অর্ধবৃত্তস্থ কোণ। $\therefore \angle QRM = 90^\circ$।</p>
+                <p>সমকোণী $\triangle QRM$-এ, $\angle RQM + \angle RQM = 90^\circ$ (ভুল, $\angle RQM + \angle RMQ = 90^\circ$)। এটা থেকে সরাসরি পাওয়া যাবে না।</p>
+                <br>
+                <p>বিকল্পভাবে, Q বিন্দুতে PQ স্পর্শক এবং QM ব্যাস হওয়ায় $PQ \perp QM$।</p>
+                <p>$\therefore \angle PQM = 90^\circ$।</p>
+                <p>চিত্রানুযায়ী, $\angle PQM$ দুটি কোণের সমষ্টি: $\angle PQR + \angle RQM = 90^\circ$।</p>
+                <p>অতএব, $\angle RQM = 90^\circ - \angle PQR$</p>
+                <p>উভয়পক্ষকে 2 দিয়ে গুণ করে পাই:</p>
+                <p>$2\angle RQM = 180^\circ - 2\angle PQR \quad \dots \text{(iii)}$</p>
+                <br>
+                <p>(ii) এবং (iii) নং সমীকরণ তুলনা করে পাই:</p>
+                <p>$\angle QPR = 2\angle RQM$</p>
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. কোনো বৃত্তের AC ও BD দুটি জ্যা পরস্পরকে O বিন্দুতে ছেদ করেছে। A ও B বিন্দুতে অঙ্কিত স্পর্শক দুটি পরস্পরকে P বিন্দুতে এবং C ও D বিন্দুতে অঙ্কিত স্পর্শক দুটি পরস্পরকে Q বিন্দুতে ছেদ করলে, প্রমাণ করি যে, $\angle P + \angle Q = 2 \angle BOC$.</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <div class="proof-step">
+                <strong>প্রদত্ত:</strong> বৃত্তের দুটি জ্যা AC এবং BD পরস্পরকে O বিন্দুতে ছেদ করে। A ও B বিন্দুতে স্পর্শকদ্বয় P বিন্দুতে এবং C ও D বিন্দুতে স্পর্শকদ্বয় Q বিন্দুতে ছেদ করে।
+            </div>
+            <div class="proof-step">
+                <strong>প্রামাণ্য বিষয়:</strong> $\angle APB + \angle CQD = 2\angle BOC$
+            </div>
+            <div class="proof-step">
+                <strong>প্রমাণ:</strong>
+                <p>বহিঃস্থ বিন্দু P থেকে A ও B তে স্পর্শক থাকায় $PA = PB \implies \triangle PAB$ সমদ্বিবাহু ত্রিভুজ।</p>
+                <p>$\therefore \angle P = 180^\circ - 2\angle PAB$</p>
+                <p>আমরা জানি, স্পর্শক ও জ্যা-এর মধ্যবর্তী কোণ একান্তর বৃত্তাংশস্থ কোণের সমান হয়।</p>
+                <p>AB জ্যা এবং PA স্পর্শক হওয়ায়, $\angle PAB = \angle ACB$ (বা $\angle ADB$)।</p>
+                <p>$\therefore \angle P = 180^\circ - 2\angle ACB \quad \dots \text{(i)}$</p>
+                <br>
+                <p>একইভাবে, Q বিন্দু থেকে স্পর্শক থাকায় $QC = QD \implies \angle Q = 180^\circ - 2\angle QCD$।</p>
+                <p>CD জ্যা এবং QC স্পর্শক হওয়ায়, একান্তর বৃত্তাংশস্থ কোণ হিসেবে $\angle QCD = \angle CBD$ (বা $\angle CAD$)।</p>
+                <p>$\therefore \angle Q = 180^\circ - 2\angle CBD \quad \dots \text{(ii)}$</p>
+                <br>
+                <p>(i) এবং (ii) যোগ করে পাই:</p>
+                $$ \angle P + \angle Q = 360^\circ - 2(\angle ACB + \angle CBD) \quad \dots \text{(iii)} $$
+                <p>এখন, O বিন্দুতে AC এবং BD জ্যা পরস্পরকে ছেদ করেছে। $\triangle OBC$-এর দিকে লক্ষ্য করি।</p>
+                <p>$\triangle OBC$-এর তিনটি কোণের সমষ্টি $180^\circ$।</p>
+                <p>$\angle BOC + \angle OBC + \angle OCB = 180^\circ$</p>
+                <p>এখানে $\angle OBC$ মানেই $\angle CBD$ এবং $\angle OCB$ মানেই $\angle ACB$।</p>
+                <p>$\therefore \angle BOC + \angle CBD + \angle ACB = 180^\circ$</p>
+                <p>$\implies \angle ACB + \angle CBD = 180^\circ - \angle BOC$</p>
+                <br>
+                <p>এই মানটি (iii) নং সমীকরণে বসিয়ে পাই:</p>
+                \[
+\begin{array}{l}
+\angle P + \angle Q = 360^\circ - 2(180^\circ - \angle BOC) \\
+\angle P + \angle Q = 360^\circ - 360^\circ + 2\angle BOC \\
+\angle P + \angle Q = 2\angle BOC
+\end{array}
+\]
+            </div>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> প্রমাণিত (Proved)।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>
