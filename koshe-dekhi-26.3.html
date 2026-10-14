@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-26.3</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.stat-table-wrapper{overflow-x:auto;margin:1.5rem 0px;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid rgb(226,232,240)}.stat-table{width:100%;border-collapse:collapse;background-color:rgb(255,255,255);text-align:center}.stat-table th{background-color:rgb(238,242,255);color:var(--primary-dark);font-weight:700;padding:12px;border:1px solid rgb(203,213,225);white-space:nowrap}.stat-table td{padding:10px;border:1px solid rgb(226,232,240);color:rgb(71,85,105)}.ogive-graph-wrapper{background:rgb(255,255,255);padding:20px;border-radius:12px;border:1px solid rgb(229,231,235);box-shadow:var(--shadow-sm);margin:1.5rem auto;overflow-x:auto;text-align:center}.ogive-graph{max-width:100%;height:auto}.grid-line{stroke:rgb(226,232,240);stroke-width:1}.axis-line{stroke:rgb(51,65,85);stroke-width:2}.axis-label{fill:rgb(71,85,105);font-size:12px;font-family:sans-serif}.plot-line{fill:none;stroke:rgb(225,29,72);stroke-width:2.5}.plot-point{fill:rgb(225,29,72);r:4}.plot-line-alt{fill:none;stroke:rgb(59,130,246);stroke-width:2.5}.plot-point-alt{fill:rgb(59,130,246);r:4}.guide-line{fill:none;stroke:rgb(16,185,129);stroke-width:2;stroke-dasharray:5,5}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-chart-line text-info me-2"></i> <strong>ওজাইভ (Ogive) অঙ্কনের মূল নিয়ম:</strong><br>
+        ১) <strong>ক্ষুদ্রতর সূচক (Less than type):</strong> শ্রেণির উচ্চসীমাগুলিকে (Upper limits) X-অক্ষে এবং ক্ষুদ্রতর সূচক ক্রমযৌগিক পরিসংখ্যাকে Y-অক্ষে বসাতে হয়। গ্রাফটি <em>নিচ থেকে উপরের</em> দিকে ওঠে।<br>
+        ২) <strong>বৃহত্তর সূচক (Greater than type):</strong> শ্রেণির নিম্নসীমাগুলিকে (Lower limits) X-অক্ষে এবং বৃহত্তর সূচক ক্রমযৌগিক পরিসংখ্যাকে Y-অক্ষে বসাতে হয়। গ্রাফটি <em>উপর থেকে নিচের</em> দিকে নামে।<br>
+        ৩) গ্রাফ থেকে মধ্যমা নির্ণয় করতে হলে Y-অক্ষে $\frac{N}{2}$ বিন্দু থেকে X-অক্ষের সমান্তরাল রেখা টেনে ওজাইভ-এ ছেদ করতে হয়, সেখান থেকে X-অক্ষের ওপর লম্ব টানলে প্রাপ্ত বিন্দুই <strong>মধ্যমা (Median)</strong>।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমাদের গ্রামের 100 টি দোকানের দৈনিক লাভের (টাকায়) পরিমাণের ছকটি দেওয়া হলো। প্রদত্ত তথ্যের ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক) তালিকা তৈরি করে ছক কাগজে ওজাইভ অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও গ্রাফ</span>
+            <p>প্রথমে ক্ষুদ্রতর সূচক ক্রমযৌগিক পরিসংখ্যা (Less than type cumulative frequency) বিভাজন তালিকা তৈরি করি:</p>
+            
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>লাভ (টাকায়) [শ্রেণি]</th>
+                            <th>দোকানের সংখ্যা ($f$)</th>
+                            <th>উচ্চসীমা (x-স্থানাঙ্ক)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক) (y-স্থানাঙ্ক)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 50</td><td>10</td><td>50-এর কম</td><td>10</td></tr>
+                        <tr><td>50 - 100</td><td>16</td><td>100-এর কম</td><td>$10 + 16 = 26$</td></tr>
+                        <tr><td>100 - 150</td><td>28</td><td>150-এর কম</td><td>$26 + 28 = 54$</td></tr>
+                        <tr><td>150 - 200</td><td>22</td><td>200-এর কম</td><td>$54 + 22 = 76$</td></tr>
+                        <tr><td>200 - 250</td><td>18</td><td>250-এর কম</td><td>$76 + 18 = 94$</td></tr>
+                        <tr><td>250 - 300</td><td>6</td><td>300-এর কম</td><td>$94 + 6 = 100$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>ছক কাগজে x-অক্ষ বরাবর 1টি ক্ষুদ্রতম বর্গক্ষেত্রের বাহু = 5 একক (অর্থাৎ 50 এর জন্য 10 ঘর) এবং y-অক্ষ বরাবর 1টি ক্ষুদ্রতম বর্গক্ষেত্রের বাহু = 1 একক ধরে বিন্দুগুলি স্থাপন করব।</p>
+            <p><strong>বিন্দুগুলি হলো:</strong> (50, 10), (100, 26), (150, 54), (200, 76), (250, 94), (300, 100)।</p>
+
+            <div class="ogive-graph-wrapper">
+                <svg class="ogive-graph" viewBox="-20 -20 400 280" width="100%" height="400">
+                    <!-- Grid Lines -->
+                    <g class="grid">
+                        <!-- Y grid lines (every 20 units) -->
+                        <line x1="40" y1="220" x2="340" y2="220" class="grid-line"></line>
+                        <line x1="40" y1="180" x2="340" y2="180" class="grid-line"></line>
+                        <line x1="40" y1="140" x2="340" y2="140" class="grid-line"></line>
+                        <line x1="40" y1="100" x2="340" y2="100" class="grid-line"></line>
+                        <line x1="40" y1="60" x2="340" y2="60" class="grid-line"></line>
+                        <line x1="40" y1="20" x2="340" y2="20" class="grid-line"></line>
+                        <!-- X grid lines (every 50 units) -->
+                        <line x1="90" y1="20" x2="90" y2="220" class="grid-line"></line>
+                        <line x1="140" y1="20" x2="140" y2="220" class="grid-line"></line>
+                        <line x1="190" y1="20" x2="190" y2="220" class="grid-line"></line>
+                        <line x1="240" y1="20" x2="240" y2="220" class="grid-line"></line>
+                        <line x1="290" y1="20" x2="290" y2="220" class="grid-line"></line>
+                        <line x1="340" y1="20" x2="340" y2="220" class="grid-line"></line>
+                    </g>
+                    
+                    <!-- Axes -->
+                    <line x1="40" y1="220" x2="360" y2="220" class="axis-line" marker-end="url(#arrow)"></line>
+                    <line x1="40" y1="220" x2="40" y2="0" class="axis-line" marker-end="url(#arrow)"></line>
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#334155"></path>
+                        </marker>
+                    </defs>
+
+                    <!-- Axis Labels -->
+                    <text x="360" y="235" class="axis-label" font-weight="bold">X (লাভ)</text>
+                    <text x="5" y="10" class="axis-label" font-weight="bold">Y (CF)</text>
+                    
+                    <!-- X Axis Ticks (Scale: 1 unit = 1px) -->
+                    <text x="40" y="235" class="axis-label" text-anchor="middle">0</text>
+                    <text x="90" y="235" class="axis-label" text-anchor="middle">50</text>
+                    <text x="140" y="235" class="axis-label" text-anchor="middle">100</text>
+                    <text x="190" y="235" class="axis-label" text-anchor="middle">150</text>
+                    <text x="240" y="235" class="axis-label" text-anchor="middle">200</text>
+                    <text x="290" y="235" class="axis-label" text-anchor="middle">250</text>
+                    <text x="340" y="235" class="axis-label" text-anchor="middle">300</text>
+
+                    <!-- Y Axis Ticks (Scale: 1 unit = 2px -> 20 units = 40px) -->
+                    <text x="35" y="184" class="axis-label" text-anchor="end">20</text>
+                    <text x="35" y="144" class="axis-label" text-anchor="end">40</text>
+                    <text x="35" y="104" class="axis-label" text-anchor="end">60</text>
+                    <text x="35" y="64" class="axis-label" text-anchor="end">80</text>
+                    <text x="35" y="24" class="axis-label" text-anchor="end">100</text>
+
+                    <!-- Plotting Ogive -->
+                    <!-- Points: X mapped to 40 + X, Y mapped to 220 - 2*Y -->
+                    <!-- (50, 10) -> (90, 200) -->
+                    <!-- (100, 26) -> (140, 168) -->
+                    <!-- (150, 54) -> (190, 112) -->
+                    <!-- (200, 76) -> (240, 68) -->
+                    <!-- (250, 94) -> (290, 32) -->
+                    <!-- (300, 100) -> (340, 20) -->
+                    <polyline points="40,220 90,200 140,168 190,112 240,68 290,32 340,20" class="plot-line"></polyline>
+                    
+                    <circle cx="90" cy="200" class="plot-point"></circle>
+                    <circle cx="140" cy="168" class="plot-point"></circle>
+                    <circle cx="190" cy="112" class="plot-point"></circle>
+                    <circle cx="240" cy="68" class="plot-point"></circle>
+                    <circle cx="290" cy="32" class="plot-point"></circle>
+                    <circle cx="340" cy="20" class="plot-point"></circle>
+                    
+                    <!-- Optional: Add origin point -->
+                    <circle cx="40" cy="220" r="3" fill="#64748B"></circle>
+                </svg>
+            </div>
+            <p class="text-center text-muted small">ক্ষুদ্রতর সূচক ওজাইভ (Less than Ogive)</p>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নিবেদিতাদের ক্লাসের 35 জন শিক্ষার্থীর ওজনের তথ্য দেওয়া হলো (38-এর কম, 40-এর কম... আকারে)। প্রদত্ত তথ্যের ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক) তালিকা তৈরি করে ছক কাগজে ওজাইভ অঙ্কন করি এবং লেখচিত্র থেকে মধ্যমা নির্ণয় করি। সূত্রের সাহায্যে মধ্যমা নির্ণয় করে যাচাই করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান, গ্রাফ ও যাচাই</span>
+            <p>প্রদত্ত তালিকাটি ইতিমধ্যেই ক্ষুদ্রতর সূচক ক্রমযৌগিক পরিসংখ্যা আকারে আছে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>ওজন (উচ্চসীমা)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                            <th>সাধারণ শ্রেণি-সীমানা</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>38-এর কম</td><td>0</td><td>36 - 38</td><td>0</td></tr>
+                        <tr><td>40-এর কম</td><td>4</td><td>38 - 40</td><td>$4 - 0 = 4$</td></tr>
+                        <tr><td>42-এর কম</td><td>6</td><td>40 - 42</td><td>$6 - 4 = 2$</td></tr>
+                        <tr><td>44-এর কম</td><td>9</td><td>42 - 44</td><td>$9 - 6 = 3$</td></tr>
+                        <tr><td>46-এর কম</td><td>12</td><td>44 - 46</td><td>$12 - 9 = 3$</td></tr>
+                        <tr class="highlight-row"><td>48-এর কম</td><td>28</td><td>46 - 48</td><td>$28 - 12 = 16$</td></tr>
+                        <tr><td>50-এর কম</td><td>32</td><td>48 - 50</td><td>$32 - 28 = 4$</td></tr>
+                        <tr><td>52-এর কম</td><td>35</td><td>50 - 52</td><td>$35 - 32 = 3$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>বিন্দুগুলি:</strong> (38, 0), (40, 4), (42, 6), (44, 9), (46, 12), (48, 28), (50, 32), (52, 35)।</p>
+
+            <div class="ogive-graph-wrapper">
+                <svg class="ogive-graph" viewBox="-20 -20 400 280" width="100%" height="400">
+                    <!-- Grid Lines -->
+                    <g class="grid">
+                        <line x1="40" y1="220" x2="340" y2="220" class="grid-line"></line>
+                        <line x1="40" y1="170" x2="340" y2="170" class="grid-line"></line>
+                        <line x1="40" y1="120" x2="340" y2="120" class="grid-line"></line>
+                        <line x1="40" y1="70" x2="340" y2="70" class="grid-line"></line>
+                        <line x1="40" y1="20" x2="340" y2="20" class="grid-line"></line>
+                        
+                        <line x1="80" y1="20" x2="80" y2="220" class="grid-line"></line>
+                        <line x1="120" y1="20" x2="120" y2="220" class="grid-line"></line>
+                        <line x1="160" y1="20" x2="160" y2="220" class="grid-line"></line>
+                        <line x1="200" y1="20" x2="200" y2="220" class="grid-line"></line>
+                        <line x1="240" y1="20" x2="240" y2="220" class="grid-line"></line>
+                        <line x1="280" y1="20" x2="280" y2="220" class="grid-line"></line>
+                        <line x1="320" y1="20" x2="320" y2="220" class="grid-line"></line>
+                    </g>
+                    
+                    <line x1="40" y1="220" x2="360" y2="220" class="axis-line" marker-end="url(#arrow)"></line>
+                    <line x1="40" y1="220" x2="40" y2="0" class="axis-line" marker-end="url(#arrow)"></line>
+
+                    <!-- Axis Labels -->
+                    <text x="360" y="235" class="axis-label" font-weight="bold">X (ওজন)</text>
+                    <text x="5" y="10" class="axis-label" font-weight="bold">Y (CF)</text>
+                    
+                    <!-- X Axis Ticks (Broken Axis trick, start at 38. Scale: 2 units = 40px -> 1 unit = 20px) -->
+                    <!-- Kink -->
+                    <polyline points="35,225 45,215 35,225" fill="none" stroke="#334155" stroke-width="2"></polyline>
+                    <text x="40" y="235" class="axis-label" text-anchor="middle">38</text>
+                    <text x="80" y="235" class="axis-label" text-anchor="middle">40</text>
+                    <text x="120" y="235" class="axis-label" text-anchor="middle">42</text>
+                    <text x="160" y="235" class="axis-label" text-anchor="middle">44</text>
+                    <text x="200" y="235" class="axis-label" text-anchor="middle">46</text>
+                    <text x="240" y="235" class="axis-label" text-anchor="middle">48</text>
+                    <text x="280" y="235" class="axis-label" text-anchor="middle">50</text>
+                    <text x="320" y="235" class="axis-label" text-anchor="middle">52</text>
+
+                    <!-- Y Axis Ticks (Scale: 10 units = 50px -> 1 unit = 5px) -->
+                    <text x="35" y="174" class="axis-label" text-anchor="end">10</text>
+                    <text x="35" y="124" class="axis-label" text-anchor="end">20</text>
+                    <text x="35" y="74" class="axis-label" text-anchor="end">30</text>
+                    <text x="35" y="24" class="axis-label" text-anchor="end">40</text>
+
+                    <!-- Plotting Ogive -->
+                    <!-- Points: X mapped to 40 + (X-38)*20, Y mapped to 220 - Y*5 -->
+                    <!-- (38, 0) -> (40, 220) -->
+                    <!-- (40, 4) -> (80, 200) -->
+                    <!-- (42, 6) -> (120, 190) -->
+                    <!-- (44, 9) -> (160, 175) -->
+                    <!-- (46, 12) -> (200, 160) -->
+                    <!-- (48, 28) -> (240, 80) -->
+                    <!-- (50, 32) -> (280, 60) -->
+                    <!-- (52, 35) -> (320, 45) -->
+                    <polyline points="40,220 80,200 120,190 160,175 200,160 240,80 280,60 320,45" class="plot-line"></polyline>
+                    
+                    <circle cx="40" cy="220" class="plot-point"></circle>
+                    <circle cx="80" cy="200" class="plot-point"></circle>
+                    <circle cx="120" cy="190" class="plot-point"></circle>
+                    <circle cx="160" cy="175" class="plot-point"></circle>
+                    <circle cx="200" cy="160" class="plot-point"></circle>
+                    <circle cx="240" cy="80" class="plot-point"></circle>
+                    <circle cx="280" cy="60" class="plot-point"></circle>
+                    <circle cx="320" cy="45" class="plot-point"></circle>
+                    
+                    <!-- Median finding -->
+                    <!-- N=35, N/2 = 17.5. Y=17.5 -> 220 - 17.5*5 = 132.5 -->
+                    <line x1="40" y1="132.5" x2="213.75" y2="132.5" class="guide-line"></line>
+                    <line x1="213.75" y1="132.5" x2="213.75" y2="220" class="guide-line"></line>
+                    <text x="35" y="136" font-size="12" fill="#10B981" font-weight="bold" text-anchor="end">17.5</text>
+                    <text x="213.75" y="235" font-size="12" fill="#10B981" font-weight="bold" text-anchor="middle">46.69</text>
+                </svg>
+            </div>
+            
+            <p><strong>লেখচিত্র থেকে মধ্যমা নির্ণয়:</strong></p>
+            <p>মোট পরিসংখ্যা $N = 35$, অতএব $\frac{N}{2} = 17.5$।</p>
+            <p>y-অক্ষে 17.5 বিন্দু থেকে x-অক্ষের সমান্তরাল একটি রেখা টানলাম যা ওজাইভকে একটি বিন্দুতে ছেদ করে। সেই ছেদবিন্দু থেকে x-অক্ষের উপর লম্ব টানলে তা x-অক্ষকে প্রায় <strong>46.69</strong> বিন্দুতে ছেদ করে। তাই লেখচিত্র থেকে প্রাপ্ত মধ্যমা $\approx 46.69$।</p>
+            
+            <hr class="my-4">
+            
+            <p><strong>সূত্রের সাহায্যে যাচাই:</strong></p>
+            <p>আমাদের সাধারণ সারণি অনুযায়ী, $\frac{N}{2} = 17.5$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যার ঘরে 17.5 এর ঠিক বড় মান হলো 28। তাই <strong>মধ্যমা শ্রেণি হলো 46 - 48</strong>।</p>
+            <p>এখানে $l = 46$, $cf = 12$, $f = 16$, $h = 2$।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 46 + \left( \frac{17.5 - 12}{16} \right) \times 2 \\
+= 46 + \frac{5.5}{16} \times 2 \\
+= 46 + \frac{5.5}{8} \\
+= 46 + 0.6875 \\
+= 46.6875 \approx 46.69
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> সূত্রের মান এবং লেখচিত্রের মান প্রায় সমান। মধ্যমা $\approx 46.69$ কিগ্রা।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. প্রদত্ত তথ্যের ক্রমযৌগিক পরিসংখ্যা (বৃহত্তর সূচক) তালিকা তৈরি করে ছক কাগজে ওজাইভ অঙ্কন করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান ও গ্রাফ</span>
+            <p>এখানে <strong>বৃহত্তর সূচক (Greater than type)</strong> ক্রমযৌগিক পরিসংখ্যা ছক তৈরি করতে হবে। বৃহত্তর সূচকের ক্ষেত্রে শ্রেণির নিম্নসীমাগুলি (Lower limits) নিতে হয়।</p>
+            
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>নিম্নসীমা (x-স্থানাঙ্ক)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা (বৃহত্তর সূচক) (y-স্থানাঙ্ক)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 5</td><td>4</td><td>0 বা 0-এর বেশি</td><td>$4+10+15+8+3+5 = 45$</td></tr>
+                        <tr><td>5 - 10</td><td>10</td><td>5 বা 5-এর বেশি</td><td>$45 - 4 = 41$</td></tr>
+                        <tr><td>10 - 15</td><td>15</td><td>10 বা 10-এর বেশি</td><td>$41 - 10 = 31$</td></tr>
+                        <tr><td>15 - 20</td><td>8</td><td>15 বা 15-এর বেশি</td><td>$31 - 15 = 16$</td></tr>
+                        <tr><td>20 - 25</td><td>3</td><td>20 বা 20-এর বেশি</td><td>$16 - 8 = 8$</td></tr>
+                        <tr><td>25 - 30</td><td>5</td><td>25 বা 25-এর বেশি</td><td>$8 - 3 = 5$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>বিন্দুগুলি হলো:</strong> (0, 45), (5, 41), (10, 31), (15, 16), (20, 8), (25, 5)।</p>
+
+            <div class="ogive-graph-wrapper">
+                <svg class="ogive-graph" viewBox="-20 -20 400 280" width="100%" height="400">
+                    <!-- Grid Lines -->
+                    <g class="grid">
+                        <line x1="40" y1="220" x2="340" y2="220" class="grid-line"></line>
+                        <line x1="40" y1="180" x2="340" y2="180" class="grid-line"></line>
+                        <line x1="40" y1="140" x2="340" y2="140" class="grid-line"></line>
+                        <line x1="40" y1="100" x2="340" y2="100" class="grid-line"></line>
+                        <line x1="40" y1="60" x2="340" y2="60" class="grid-line"></line>
+                        <line x1="40" y1="20" x2="340" y2="20" class="grid-line"></line>
+                        
+                        <line x1="90" y1="20" x2="90" y2="220" class="grid-line"></line>
+                        <line x1="140" y1="20" x2="140" y2="220" class="grid-line"></line>
+                        <line x1="190" y1="20" x2="190" y2="220" class="grid-line"></line>
+                        <line x1="240" y1="20" x2="240" y2="220" class="grid-line"></line>
+                        <line x1="290" y1="20" x2="290" y2="220" class="grid-line"></line>
+                        <line x1="340" y1="20" x2="340" y2="220" class="grid-line"></line>
+                    </g>
+                    
+                    <line x1="40" y1="220" x2="360" y2="220" class="axis-line" marker-end="url(#arrow)"></line>
+                    <line x1="40" y1="220" x2="40" y2="0" class="axis-line" marker-end="url(#arrow)"></line>
+
+                    <!-- Axis Labels -->
+                    <text x="360" y="235" class="axis-label" font-weight="bold">X (শ্রেণি)</text>
+                    <text x="5" y="10" class="axis-label" font-weight="bold">Y (CF)</text>
+                    
+                    <!-- X Axis Ticks (Scale: 5 units = 50px -> 1 unit = 10px) -->
+                    <text x="40" y="235" class="axis-label" text-anchor="middle">0</text>
+                    <text x="90" y="235" class="axis-label" text-anchor="middle">5</text>
+                    <text x="140" y="235" class="axis-label" text-anchor="middle">10</text>
+                    <text x="190" y="235" class="axis-label" text-anchor="middle">15</text>
+                    <text x="240" y="235" class="axis-label" text-anchor="middle">20</text>
+                    <text x="290" y="235" class="axis-label" text-anchor="middle">25</text>
+                    <text x="340" y="235" class="axis-label" text-anchor="middle">30</text>
+
+                    <!-- Y Axis Ticks (Scale: 10 units = 40px -> 1 unit = 4px) -->
+                    <text x="35" y="184" class="axis-label" text-anchor="end">10</text>
+                    <text x="35" y="144" class="axis-label" text-anchor="end">20</text>
+                    <text x="35" y="104" class="axis-label" text-anchor="end">30</text>
+                    <text x="35" y="64" class="axis-label" text-anchor="end">40</text>
+                    <text x="35" y="24" class="axis-label" text-anchor="end">50</text>
+
+                    <!-- Plotting Greater Than Ogive -->
+                    <!-- Points: X mapped to 40 + X*10, Y mapped to 220 - Y*4 -->
+                    <!-- (0, 45) -> (40, 40) -->
+                    <!-- (5, 41) -> (90, 56) -->
+                    <!-- (10, 31) -> (140, 96) -->
+                    <!-- (15, 16) -> (190, 156) -->
+                    <!-- (20, 8) -> (240, 188) -->
+                    <!-- (25, 5) -> (290, 200) -->
+                    <polyline points="40,40 90,56 140,96 190,156 240,188 290,200" class="plot-line-alt"></polyline>
+                    
+                    <circle cx="40" cy="40" class="plot-point-alt"></circle>
+                    <circle cx="90" cy="56" class="plot-point-alt"></circle>
+                    <circle cx="140" cy="96" class="plot-point-alt"></circle>
+                    <circle cx="190" cy="156" class="plot-point-alt"></circle>
+                    <circle cx="240" cy="188" class="plot-point-alt"></circle>
+                    <circle cx="290" cy="200" class="plot-point-alt"></circle>
+                </svg>
+            </div>
+            <p class="text-center text-muted small">বৃহত্তর সূচক ওজাইভ (Greater than Ogive)</p>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. প্রদত্ত তথ্যের একই অক্ষ বরাবর ক্ষুদ্রতর সূচক ওজাইভ ও বৃহত্তর সূচক ওজাইভ ছক কাগজে অঙ্কন করে মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">উভয় ওজাইভ ও মধ্যমা নির্ণয়</span>
+            <p>প্রথমে দুটি সারণি তৈরি করি:</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="fw-bold mb-2">ক্ষুদ্রতর সূচক (Less Than)</p>
+                    <table class="stat-table mb-3">
+                        <thead><tr><th>শ্রেণি (উচ্চসীমা)</th><th>$cf$ (ক্ষুদ্রতর)</th></tr></thead>
+                        <tbody>
+                            <tr><td>120-এর কম</td><td>12</td></tr>
+                            <tr><td>140-এর কম</td><td>$12+14=26$</td></tr>
+                            <tr><td>160-এর কম</td><td>$26+8=34$</td></tr>
+                            <tr><td>180-এর কম</td><td>$34+6=40$</td></tr>
+                            <tr><td>200-এর কম</td><td>$40+10=50$</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <p class="fw-bold mb-2">বৃহত্তর সূচক (Greater Than)</p>
+                    <table class="stat-table mb-3">
+                        <thead><tr><th>শ্রেণি (নিম্নসীমা)</th><th>$cf$ (বৃহত্তর)</th></tr></thead>
+                        <tbody>
+                            <tr><td>100 বা বেশি</td><td>50</td></tr>
+                            <tr><td>120 বা বেশি</td><td>$50-12=38$</td></tr>
+                            <tr><td>140 বা বেশি</td><td>$38-14=24$</td></tr>
+                            <tr><td>160 বা বেশি</td><td>$24-8=16$</td></tr>
+                            <tr><td>180 বা বেশি</td><td>$16-6=10$</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p><strong>বিন্দুগুলি:</strong><br>
+            ক্ষুদ্রতর সূচকের জন্য: (120, 12), (140, 26), (160, 34), (180, 40), (200, 50)<br>
+            বৃহত্তর সূচকের জন্য: (100, 50), (120, 38), (140, 24), (160, 16), (180, 10)</p>
+
+            <div class="ogive-graph-wrapper">
+                <svg class="ogive-graph" viewBox="-20 -20 400 280" width="100%" height="400">
+                    <!-- Grid Lines -->
+                    <g class="grid">
+                        <line x1="40" y1="220" x2="340" y2="220" class="grid-line"></line>
+                        <line x1="40" y1="180" x2="340" y2="180" class="grid-line"></line>
+                        <line x1="40" y1="140" x2="340" y2="140" class="grid-line"></line>
+                        <line x1="40" y1="100" x2="340" y2="100" class="grid-line"></line>
+                        <line x1="40" y1="60" x2="340" y2="60" class="grid-line"></line>
+                        <line x1="40" y1="20" x2="340" y2="20" class="grid-line"></line>
+                        
+                        <line x1="40" y1="20" x2="40" y2="220" class="grid-line"></line>
+                        <line x1="100" y1="20" x2="100" y2="220" class="grid-line"></line>
+                        <line x1="160" y1="20" x2="160" y2="220" class="grid-line"></line>
+                        <line x1="220" y1="20" x2="220" y2="220" class="grid-line"></line>
+                        <line x1="280" y1="20" x2="280" y2="220" class="grid-line"></line>
+                        <line x1="340" y1="20" x2="340" y2="220" class="grid-line"></line>
+                    </g>
+                    
+                    <line x1="40" y1="220" x2="360" y2="220" class="axis-line" marker-end="url(#arrow)"></line>
+                    <line x1="40" y1="220" x2="40" y2="0" class="axis-line" marker-end="url(#arrow)"></line>
+
+                    <!-- Axis Labels -->
+                    <text x="360" y="235" class="axis-label" font-weight="bold">X (শ্রেণি)</text>
+                    <text x="5" y="10" class="axis-label" font-weight="bold">Y (CF)</text>
+                    
+                    <!-- X Axis Ticks (Broken Axis, start at 100. Scale: 20 units = 60px -> 1 unit = 3px) -->
+                    <polyline points="35,225 45,215 35,225" fill="none" stroke="#334155" stroke-width="2"></polyline>
+                    <text x="40" y="235" class="axis-label" text-anchor="middle">100</text>
+                    <text x="100" y="235" class="axis-label" text-anchor="middle">120</text>
+                    <text x="160" y="235" class="axis-label" text-anchor="middle">140</text>
+                    <text x="220" y="235" class="axis-label" text-anchor="middle">160</text>
+                    <text x="280" y="235" class="axis-label" text-anchor="middle">180</text>
+                    <text x="340" y="235" class="axis-label" text-anchor="middle">200</text>
+
+                    <!-- Y Axis Ticks (Scale: 10 units = 40px -> 1 unit = 4px) -->
+                    <text x="35" y="184" class="axis-label" text-anchor="end">10</text>
+                    <text x="35" y="144" class="axis-label" text-anchor="end">20</text>
+                    <text x="35" y="104" class="axis-label" text-anchor="end">30</text>
+                    <text x="35" y="64" class="axis-label" text-anchor="end">40</text>
+                    <text x="35" y="24" class="axis-label" text-anchor="end">50</text>
+
+                    <!-- Plotting Less Than Ogive (Red) -->
+                    <!-- Points: X mapped to 40 + (X-100)*3, Y mapped to 220 - Y*4 -->
+                    <!-- (120, 12) -> (100, 172) -->
+                    <!-- (140, 26) -> (160, 116) -->
+                    <!-- (160, 34) -> (220, 84) -->
+                    <!-- (180, 40) -> (280, 60) -->
+                    <!-- (200, 50) -> (340, 20) -->
+                    <polyline points="100,172 160,116 220,84 280,60 340,20" class="plot-line"></polyline>
+                    
+                    <circle cx="100" cy="172" class="plot-point"></circle>
+                    <circle cx="160" cy="116" class="plot-point"></circle>
+                    <circle cx="220" cy="84" class="plot-point"></circle>
+                    <circle cx="280" cy="60" class="plot-point"></circle>
+                    <circle cx="340" cy="20" class="plot-point"></circle>
+
+                    <!-- Plotting Greater Than Ogive (Blue) -->
+                    <!-- (100, 50) -> (40, 20) -->
+                    <!-- (120, 38) -> (100, 68) -->
+                    <!-- (140, 24) -> (160, 124) -->
+                    <!-- (160, 16) -> (220, 156) -->
+                    <!-- (180, 10) -> (280, 180) -->
+                    <polyline points="40,20 100,68 160,124 220,156 280,180" class="plot-line-alt"></polyline>
+                    
+                    <circle cx="40" cy="20" class="plot-point-alt"></circle>
+                    <circle cx="100" cy="68" class="plot-point-alt"></circle>
+                    <circle cx="160" cy="124" class="plot-point-alt"></circle>
+                    <circle cx="220" cy="156" class="plot-point-alt"></circle>
+                    <circle cx="280" cy="180" class="plot-point-alt"></circle>
+
+                    <!-- Intersection and Median -->
+                    <!-- Exact Intersection X = 138.57 -> mapped to 40 + 38.57*3 = 155.71 -->
+                    <!-- Exact Intersection Y = 25 -> mapped to 220 - 25*4 = 120 -->
+                    <line x1="40" y1="120" x2="155.71" y2="120" class="guide-line"></line>
+                    <line x1="155.71" y1="120" x2="155.71" y2="220" class="guide-line"></line>
+                    <text x="165" y="115" font-size="14" font-weight="bold" fill="#374151">P</text>
+                    <text x="35" y="124" font-size="12" fill="#10B981" font-weight="bold" text-anchor="end">N/2=25</text>
+                    <text x="155.71" y="235" font-size="12" fill="#10B981" font-weight="bold" text-anchor="middle">138.57</text>
+                </svg>
+            </div>
+            
+            <p><strong>লেখচিত্র থেকে মধ্যমা নির্ণয়:</strong></p>
+            <p>ক্ষুদ্রতর সূচক ওজাইভ (লাল রেখা) এবং বৃহত্তর সূচক ওজাইভ (নীল রেখা) পরস্পরকে P বিন্দুতে ছেদ করেছে।</p>
+            <p>P বিন্দু থেকে x-অক্ষের ওপর লম্ব টানলে তা x-অক্ষকে 138.57 (প্রায়) বিন্দুতে ছেদ করে।</p>
+            <p>সুতরাং, <strong>দুটি ওজাইভের ছেদবিন্দুর ভুজ (x-coordinate)-ই হলো নির্ণেয় মধ্যমা</strong>।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা $\approx 138.57$।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

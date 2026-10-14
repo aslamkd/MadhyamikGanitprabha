@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-21</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.proof-step{background:rgb(255,255,255);border:1px solid rgb(229,231,235);padding:1rem;border-radius:8px;margin-bottom:1rem}.proof-step strong{color:var(--primary-dark);font-size:1.05rem}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}.proof-step{padding:0.75rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মধ্যসমানুপাতী নির্ণয়ের জ্যামিতিক নীতি:</strong><br>
+        যদি দুটি রেখাংশ $a$ এবং $b$ দেওয়া থাকে, তবে তাদের মধ্যসমানুপাতী $x$ হবে $x = \sqrt{ab}$।<br>
+        <strong>অঙ্কন পদ্ধতি:</strong> একটি সরলরেখাংশের উপর পরপর $a$ এবং $b$ দৈর্ঘ্যের দুটি অংশ (যেমন AB এবং BC) কেটে নিতে হয়। এরপর সম্পূর্ণ রেখাংশ AC-কে ব্যাস করে একটি অর্ধবৃত্ত অঙ্কন করতে হয়। সাধারণ বিন্দু B-তে AC-এর ওপর লম্ব টানলে তা অর্ধবৃত্তকে যে বিন্দুতে (ধরি D) ছেদ করে, সেই লম্বের দৈর্ঘ্যই (BD) হবে নির্ণেয় মধ্যসমানুপাতী।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নিম্নলিখিত দৈর্ঘ্যের সরলরেখাংশগুলির মধ্যসমানুপাতী অঙ্কন করি এবং প্রতিক্ষেত্রে স্কেলের সাহায্যে মধ্যসমানুপাতীগুলির মান নির্ণয় করি :</h4>
+        
+        <div class="solution-box">
+            <span class="sol-badge">সাধারণ অঙ্কন পদ্ধতি</span>
+            
+            <svg class="geometry-diagram" width="300" height="200" viewBox="0 0 300 200">
+               <!-- Base Line AC -->
+               <line x1="30" y1="150" x2="270" y2="150" stroke="#1F2937" stroke-width="2"></line>
+               
+               <!-- Semicircle on AC (Midpoint O) -->
+               <!-- Let A=(50,150), C=(250,150), O=(150,150), r=100 -->
+               <path d="M 50 150 A 100 100 0 0 1 250 150" fill="none" stroke="#3730A3" stroke-width="2"></path>
+               
+               <!-- Point B where a and b meet (Let a=120, b=80 -> B=(170,150)) -->
+               <circle cx="50" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="170" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="250" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="150" cy="150" r="3" fill="#64748B"></circle> <!-- Center O -->
+               
+               <!-- Perpendicular BD (mean proportional) -->
+               <!-- D is on semicircle at x=170. Equation: (x-150)^2 + y^2 = 100^2 -> 20^2 + y^2 = 10000 -> y^2 = 9600 -> y = 97.98. Coordinate cy = 150 - 97.98 = 52.02 -->
+               <line x1="170" y1="150" x2="170" y2="52" stroke="#E11D48" stroke-width="2.5"></line>
+               <circle cx="170" cy="52" r="3" fill="#E11D48"></circle>
+               
+               <!-- Construction Arcs for perpendicular bisector of AC -->
+               <path d="M 140 180 A 40 40 0 0 0 160 180" fill="none" stroke="#94A3B8" stroke-width="1.5"></path>
+               <path d="M 140 30 A 40 40 0 0 0 160 30" fill="none" stroke="#94A3B8" stroke-width="1.5"></path>
+               <line x1="150" y1="35" x2="150" y2="185" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4"></line>
+               
+               <!-- Construction arcs for 90 deg at B -->
+               <path d="M 150 150 A 20 20 0 0 1 190 150" fill="none" stroke="#94A3B8" stroke-width="1.5"></path>
+               
+               <text x="45" y="165" font-weight="bold">A</text>
+               <text x="165" y="165" font-weight="bold">B</text>
+               <text x="245" y="165" font-weight="bold">C</text>
+               <text x="145" y="165" font-weight="bold" fill="#64748B">O</text>
+               <text x="165" y="45" font-weight="bold" fill="#E11D48">D</text>
+               
+               <text x="100" y="145" font-size="12">a</text>
+               <text x="210" y="145" font-size="12">b</text>
+               <text x="175" y="105" font-size="12" font-weight="bold" fill="#E11D48">√ab</text>
+            </svg>
+
+            <div class="proof-step">
+                <strong>সাধারণ ধাপসমূহ (সমস্ত অংকের জন্য প্রযোজ্য):</strong>
+                <ol>
+                    <li>প্রদত্ত দুটি দৈর্ঘ্য (ধরি $a$ এবং $b$) স্কেলের সাহায্যে একটি সরলরেখার ওপর পরপর কেটে নিতে হবে। এর ফলে একটি সম্পূর্ণ রেখাংশ AC তৈরি হবে যার দৈর্ঘ্য $(a+b)$। মাঝখানের ছেদবিন্দুটি হলো B।</li>
+                    <li>পেনসিল কম্পাসের সাহায্যে AC রেখাংশকে সমদ্বিখণ্ডিত করে এর মধ্যবিন্দু O নির্ণয় করতে হবে।</li>
+                    <li>O বিন্দুকে কেন্দ্র করে OA বা OC ব্যাসার্ধ নিয়ে একটি অর্ধবৃত্ত অঙ্কন করতে হবে।</li>
+                    <li>B বিন্দুতে AC সরলরেখাংশের ওপর একটি লম্ব অঙ্কন করতে হবে যা অর্ধবৃত্তকে D বিন্দুতে ছেদ করবে।</li>
+                    <li>এই <strong>BD লম্বটিই হলো নির্ণেয় মধ্যসমানুপাতী</strong>। এরপর স্কেলের সাহায্যে BD-এর দৈর্ঘ্য মেপে লিখতে হবে।</li>
+                </ol>
+            </div>
+        </div>
+
+        <span class="sub-question">(i) 5 সেমি., 2.5 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{5 \times 2.5} = \sqrt{12.5} \approx 3.53$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 3.5 সেমি.</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) 4 সেমি., 3 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{4 \times 3} = \sqrt{12} \approx 3.46$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 3.5 সেমি.</strong></div>
+        </div>
+
+        <span class="sub-question">(iii) 7.5 সেমি., 4 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{7.5 \times 4} = \sqrt{30} \approx 5.48$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 5.5 সেমি.</strong></div>
+        </div>
+
+        <span class="sub-question">(iv) 10 সেমি., 4 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{10 \times 4} = \sqrt{40} \approx 6.32$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 6.3 সেমি.</strong></div>
+        </div>
+
+        <span class="sub-question">(v) 9 সেমি., 5 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{9 \times 5} = \sqrt{45} \approx 6.71$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 6.7 সেমি.</strong></div>
+        </div>
+
+        <span class="sub-question">(vi) 12 সেমি., 3 সেমি.</span>
+        <div class="solution-box">
+            <p><strong>তাত্ত্বিক মান:</strong> $\sqrt{12 \times 3} = \sqrt{36} = 6$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>ঠিক 6 সেমি.</strong></div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. জ্যামিতিক উপায়ে নিম্নলিখিত সংখ্যাগুলির বর্গমূল নির্ণয় করি :</h4>
+        <div class="solution-box">
+            <span class="sol-badge">নিয়ম</span>
+            <p>কোনো সংখ্যা $x$-এর বর্গমূল ($\sqrt{x}$) জ্যামিতিক উপায়ে নির্ণয় করতে হলে, সংখ্যাটিকে দুটি সুবিধাজনক উৎপাদকে ভাঙতে হয় (যেমন $x = a \times b$)। এরপর $a$ এবং $b$ দৈর্ঘ্যের দুটি রেখাংশ নিয়ে 1 নম্বর প্রশ্নের মতো তাদের <strong>মধ্যসমানুপাতী</strong> নির্ণয় করলেই ওই মধ্যসমানুপাতীর দৈর্ঘ্যই হবে $\sqrt{x}$-এর মান।</p>
+        </div>
+
+        <span class="sub-question">(i) $\sqrt{7}$</span>
+        <div class="solution-box">
+            <p>7 কে ভাঙলে পাই $7 = 7 \times 1$।</p>
+            <p>অতএব, 7 সেমি. ও 1 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 2.64 সেমি.</strong> (যেহেতু $\sqrt{7} \approx 2.64$)</div>
+        </div>
+
+        <span class="sub-question">(ii) $\sqrt{18}$</span>
+        <div class="solution-box">
+            <p>18 কে ভাঙলে পাই $18 = 6 \times 3$ (অথবা $9 \times 2$)।</p>
+            <p>অতএব, 6 সেমি. ও 3 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 4.24 সেমি.</strong> (যেহেতু $\sqrt{18} \approx 4.24$)</div>
+        </div>
+
+        <span class="sub-question">(iii) $\sqrt{24}$</span>
+        <div class="solution-box">
+            <p>24 কে ভাঙলে পাই $24 = 6 \times 4$ (অথবা $8 \times 3$)।</p>
+            <p>অতএব, 6 সেমি. ও 4 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 4.9 সেমি.</strong> (যেহেতু $\sqrt{24} \approx 4.89$)</div>
+        </div>
+
+        <span class="sub-question">(iv) $\sqrt{28}$</span>
+        <div class="solution-box">
+            <p>28 কে ভাঙলে পাই $28 = 7 \times 4$।</p>
+            <p>অতএব, 7 সেমি. ও 4 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 5.3 সেমি.</strong> (যেহেতু $\sqrt{28} \approx 5.29$)</div>
+        </div>
+
+        <span class="sub-question">(v) $\sqrt{13}$</span>
+        <div class="solution-box">
+            <p>13 কে ভাঙলে পাই $13 = 6.5 \times 2$।</p>
+            <p>অতএব, 6.5 সেমি. ও 2 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 3.6 সেমি.</strong> (যেহেতু $\sqrt{13} \approx 3.6$)</div>
+        </div>
+
+        <span class="sub-question">(vi) $\sqrt{29}$</span>
+        <div class="solution-box">
+            <p>29 কে ভাঙলে পাই $29 = 5.8 \times 5$।</p>
+            <p>অতএব, 5.8 সেমি. ও 5 সেমি. রেখাংশ নিয়ে মধ্যসমানুপাতী অঙ্কন করতে হবে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> স্কেলে মাপা মান: <strong>প্রায় 5.4 সেমি.</strong> (যেহেতু $\sqrt{29} \approx 5.38$)</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. নিম্নলিখিত দৈর্ঘ্যের বাহুবিশিষ্ট বর্গাকার চিত্র অঙ্কন করি :</h4>
+        <div class="solution-box">
+            <span class="sol-badge">অঙ্কন প্রণালী</span>
+            <p><strong>ধাপসমূহ:</strong> প্রথমে রুট (Square root) এর ভিতরের সংখ্যাটিকে সুবিধাজনক দুটি উৎপাদকে ভেঙে নিতে হবে। তারপর সেই দুটি দৈর্ঘ্যের <strong>মধ্যসমানুপাতী</strong> নির্ণয় করতে হবে। যে মধ্যসমানুপাতীটি (লম্বটি) পাওয়া যাবে, সেটিকেই <strong>বাহু ধরে একটি বর্গক্ষেত্র</strong> অঙ্কন করতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(i) $\sqrt{14}$ সেমি.</span>
+        <div class="solution-box">
+            <p>14 কে ভাঙলে পাই: $14 = 7 \times 2$।</p>
+            <p>7 সেমি ও 2 সেমি এর মধ্যসমানুপাতী অঙ্কন করতে হবে। মধ্যসমানুপাতীটির দৈর্ঘ্য হবে $\sqrt{14}$ সেমি.। ওই লম্বটিকে বাহু ধরে একটি বর্গক্ষেত্র আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(ii) $\sqrt{22}$ সেমি.</span>
+        <div class="solution-box">
+            <p>22 কে ভাঙলে পাই: $22 = 5.5 \times 4$ (অথবা $11 \times 2$)।</p>
+            <p>5.5 সেমি ও 4 সেমি এর মধ্যসমানুপাতী অঙ্কন করে, তাকে বাহু ধরে বর্গক্ষেত্রটি আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(iii) $\sqrt{31}$ সেমি.</span>
+        <div class="solution-box">
+            <p>31 কে ভাঙলে পাই: $31 = 6.2 \times 5$।</p>
+            <p>6.2 সেমি ও 5 সেমি এর মধ্যসমানুপাতী অঙ্কন করে, তাকে বাহু ধরে বর্গক্ষেত্রটি আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(iv) $\sqrt{33}$ সেমি.</span>
+        <div class="solution-box">
+            <p>33 কে ভাঙলে পাই: $33 = 11 \times 3$ (অথবা $6.6 \times 5$)।</p>
+            <p>6.6 সেমি ও 5 সেমি এর মধ্যসমানুপাতী অঙ্কন করে, তাকে বাহু ধরে বর্গক্ষেত্রটি আঁকতে হবে।</p>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. নিম্নলিখিত দৈর্ঘ্যের বাহুবিশিষ্ট আয়তক্ষেত্রগুলির সমান ক্ষেত্রফলবিশিষ্ট বর্গক্ষেত্রগুলি অঙ্কন করি :</h4>
+        
+        <div class="solution-box">
+            <span class="sol-badge">সাধারণ অঙ্কন পদ্ধতি</span>
+            
+            <svg class="geometry-diagram" width="300" height="220" viewBox="0 0 300 220">
+               <!-- Rectangle (e.g. 8x4 visually represented) -->
+               <polygon points="50,150 170,150 170,90 50,90" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"></polygon>
+               
+               <!-- Extended base line -->
+               <line x1="170" y1="150" x2="230" y2="150" stroke="#1F2937" stroke-width="2"></line>
+               <!-- Width dropped to base (arc showing 60 height goes to 60 length) -->
+               <path d="M 170 90 A 60 60 0 0 1 230 150" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></path>
+               
+               <!-- Semicircle on extended base (Length = 120+60 = 180. Center at 50+90 = 140) -->
+               <path d="M 50 150 A 90 90 0 0 1 230 150" fill="none" stroke="#3730A3" stroke-width="2"></path>
+               
+               <!-- Perpendicular (Mean proportional) -->
+               <line x1="170" y1="150" x2="170" y2="65.1" stroke="#E11D48" stroke-width="2.5"></line> <!-- height is sqrt(120*60) approx 84.8 -->
+               
+               <!-- Square built on perpendicular -->
+               <polygon points="170,150 170,65.1 254.9,65.1 254.9,150" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></polygon>
+               
+               <circle cx="50" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="170" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="230" cy="150" r="3" fill="#1F2937"></circle>
+               <circle cx="170" cy="65.1" r="3" fill="#E11D48"></circle>
+               
+               <text x="35" y="165" font-weight="bold">A</text>
+               <text x="165" y="165" font-weight="bold">B</text>
+               <text x="235" y="165" font-weight="bold">C</text>
+               <text x="155" y="55" font-weight="bold" fill="#E11D48">D</text>
+               
+               <text x="100" y="165" font-size="12">দৈর্ঘ্য (a)</text>
+               <text x="180" y="165" font-size="12">প্রস্থ (b)</text>
+               <text x="110" y="120" font-size="14" font-weight="bold" fill="#0EA5E9">আয়তক্ষেত্র</text>
+               <text x="210" y="110" font-size="14" font-weight="bold" fill="#F59E0B">বর্গক্ষেত্র</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>নীতি (Concept):</strong> আয়তক্ষেত্রের ক্ষেত্রফল = $\text{দৈর্ঘ্য} \times \text{প্রস্থ} = ab$। সমান ক্ষেত্রফল বিশিষ্ট বর্গক্ষেত্রের ক্ষেত্রফল = $a \times b$ হতে হবে। অর্থাৎ বর্গক্ষেত্রের একটি বাহু হবে $\sqrt{ab}$। তাই, আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থের <strong>মধ্যসমানুপাতী</strong> নির্ণয় করলেই বর্গক্ষেত্রের বাহু পাওয়া যাবে।</p>
+                <p><strong>ধাপসমূহ:</strong></p>
+                <ol>
+                    <li>প্রদত্ত দৈর্ঘ্য ও প্রস্থ বিশিষ্ট একটি আয়তক্ষেত্র অঙ্কন করতে হবে।</li>
+                    <li>আয়তক্ষেত্রটির ভূমিকে বর্ধিত করে কম্পাসের সাহায্যে প্রস্থের সমান মাপ নিয়ে ভূমির ওপর কেটে নিতে হবে।</li>
+                    <li>এবার নতুন পাওয়া সম্পূর্ণ সরলরেখাটির (দৈর্ঘ্য + প্রস্থ) মধ্যবিন্দু নির্ণয় করে একটি অর্ধবৃত্ত আঁকতে হবে।</li>
+                    <li>আয়তক্ষেত্রের প্রস্থ যে রেখাটি বরাবর ছিল, তাকে উপরের দিকে বর্ধিত করলে তা অর্ধবৃত্তকে ছেদ করবে। এই ছেদ করা লম্বটিই হলো মধ্যসমানুপাতী (বর্গক্ষেত্রের বাহু)।</li>
+                    <li>ওই লম্বটিকে বাহু ধরে একটি বর্গক্ষেত্র সম্পূর্ণ করতে হবে।</li>
+                </ol>
+            </div>
+        </div>
+
+        <span class="sub-question">(i) 8 সেমি., 6 সেমি.</span>
+        <div class="solution-box">
+            <p>8 সেমি ও 6 সেমি বাহুবিশিষ্ট আয়তক্ষেত্র এঁকে, তার দৈর্ঘ্য ও প্রস্থের মধ্যসমানুপাতী $\sqrt{8 \times 6} = \sqrt{48} \approx 6.92$ সেমি. বের করে বর্গক্ষেত্র আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(ii) 6 সেমি., 4 সেমি.</span>
+        <div class="solution-box">
+            <p>6 সেমি ও 4 সেমি এর মধ্যসমানুপাতী $\sqrt{24} \approx 4.89$ সেমি. বের করে তাকে বাহু ধরে বর্গক্ষেত্র আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(iii) 4.2 সেমি., 3.5 সেমি.</span>
+        <div class="solution-box">
+            <p>4.2 সেমি ও 3.5 সেমি এর মধ্যসমানুপাতী $\sqrt{14.7} \approx 3.83$ সেমি. বের করে তাকে বাহু ধরে বর্গক্ষেত্র আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(iv) 7.9 সেমি., 4.1 সেমি.</span>
+        <div class="solution-box">
+            <p>7.9 সেমি ও 4.1 সেমি এর মধ্যসমানুপাতী $\sqrt{32.39} \approx 5.69$ সেমি. বের করে তাকে বাহু ধরে বর্গক্ষেত্র আঁকতে হবে।</p>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. নিম্নলিখিত ত্রিভুজগুলির সমান ক্ষেত্রফলবিশিষ্ট বর্গক্ষেত্রগুলি অঙ্কন করি :</h4>
+        
+        <div class="solution-box">
+            <span class="sol-badge">সাধারণ অঙ্কন পদ্ধতি</span>
+            
+            <svg class="geometry-diagram" width="300" height="220" viewBox="0 0 300 220">
+               <!-- Triangle -->
+               <polygon points="50,150 150,150 90,60" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></polygon>
+               <line x1="90" y1="60" x2="90" y2="150" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Altitude -->
+               
+               <!-- Rectangle (Base and half altitude) Altitude is 90, half is 45. Base is 100 -->
+               <polygon points="50,150 150,150 150,105 50,105" fill="none" stroke="#0EA5E9" stroke-width="2"></polygon>
+               
+               <!-- Extended base line for mean proportional (Adding 45 to 150 = 195) -->
+               <line x1="150" y1="150" x2="195" y2="150" stroke="#1F2937" stroke-width="2"></line>
+               <path d="M 150 105 A 45 45 0 0 1 195 150" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></path>
+               
+               <!-- Semicircle on extended base (Length = 145. Center at 50+72.5 = 122.5) -->
+               <path d="M 50 150 A 72.5 72.5 0 0 1 195 150" fill="none" stroke="#3730A3" stroke-width="2"></path>
+               
+               <!-- Perpendicular (Mean proportional) sqrt(100*45) approx 67 -->
+               <line x1="150" y1="150" x2="150" y2="83" stroke="#E11D48" stroke-width="2.5"></line> 
+               
+               <!-- Square built on perpendicular -->
+               <polygon points="150,150 150,83 217,83 217,150" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></polygon>
+               
+               <text x="90" y="50" font-weight="bold">A</text>
+               <text x="35" y="165" font-weight="bold">B</text>
+               <text x="145" y="165" font-weight="bold">C</text>
+               
+               <text x="75" y="130" font-size="12" fill="#3730A3" font-weight="bold">ত্রিভুজ</text>
+               <text x="175" y="130" font-size="12" fill="#F59E0B" font-weight="bold">বর্গক্ষেত্র</text>
+            </svg>
+
+            <div class="proof-step">
+                <p><strong>নীতি (Concept):</strong> ত্রিভুজের ক্ষেত্রফল = $\displaystyle\frac{1}{2} \times \text{ভূমি} \times \text{উচ্চতা}$। একটি আয়তক্ষেত্রের ক্ষেত্রফল যদি এর সমান হতে হয়, তবে আয়তক্ষেত্রের দৈর্ঘ্য হবে ত্রিভুজের <strong>ভূমি</strong>-এর সমান এবং প্রস্থ হবে ত্রিভুজের <strong>উচ্চতার অর্ধেক</strong> ($\displaystyle\frac{\text{উচ্চতা}}{2}$)।</p>
+                <p><strong>ধাপসমূহ:</strong></p>
+                <ol>
+                    <li>প্রথমে প্রদত্ত মাপ অনুযায়ী ত্রিভুজটি অঙ্কন করতে হবে।</li>
+                    <li>ত্রিভুজের শীর্ষবিন্দু থেকে ভূমির ওপর লম্ব (উচ্চতা) অঙ্কন করতে হবে।</li>
+                    <li>ওই লম্বটিকে বা উচ্চতাকে সমদ্বিখণ্ডিত করতে হবে, যাতে উচ্চতার অর্ধেক পাওয়া যায়।</li>
+                    <li>ত্রিভুজের ভূমির সমান্তরাল করে ওই মধ্যবিন্দু দিয়ে একটি রেখা টানতে হবে এবং ত্রিভুজের ভূমির সমান দৈর্ঘ্যের একটি <strong>আয়তক্ষেত্র</strong> গঠন করতে হবে (যার প্রস্থ উচ্চতার অর্ধেক)।</li>
+                    <li>এরপর আগের প্রশ্ন (Question 4)-এর মতো আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থের মধ্যসমানুপাতী নির্ণয় করে সেই লম্বটিকে বাহু ধরে <strong>বর্গক্ষেত্র</strong> অঙ্কন করতে হবে।</li>
+                </ol>
+            </div>
+        </div>
+
+        <span class="sub-question">(i) ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য যথাক্রমে 10 সেমি., 7 সেমি. ও 5 সেমি.।</span>
+        <div class="solution-box">
+            <p>10 সেমি বাহুকে ভূমি করে ত্রিভুজটি আঁকতে হবে। তারপর উপরের পদ্ধতি অনুসরণ করে প্রথমে সমক্ষেত্রফল বিশিষ্ট আয়তক্ষেত্র এবং পরে বর্গক্ষেত্র অঙ্কন করতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(ii) একটি সমদ্বিবাহু ত্রিভুজ যার ভূমির দৈর্ঘ্য 7 সেমি. এবং সমান বাহুদুটির প্রত্যেকটির দৈর্ঘ্য 5 সেমি.।</span>
+        <div class="solution-box">
+            <p>7 সেমি বাহুকে ভূমি ধরে এবং দুই দিক থেকে 5 সেমি ব্যাসার্ধের চাপ কেটে সমদ্বিবাহু ত্রিভুজটি আঁকতে হবে। তারপর তার উচ্চতা বের করে অর্ধেক করে আয়তক্ষেত্র এবং পরিশেষে বর্গক্ষেত্রটি আঁকতে হবে।</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি সমবাহু ত্রিভুজ যার বাহুর দৈর্ঘ্য 6 সেমি.।</span>
+        <div class="solution-box">
+            <p>6 সেমি বাহুবিশিষ্ট সমবাহু ত্রিভুজ এঁকে, তার উচ্চতা নির্ণয় করে (যার তাত্ত্বিক মান $3\sqrt{3}$), উচ্চতার অর্ধেক নিয়ে আয়তক্ষেত্র বানাতে হবে এবং সেই আয়তক্ষেত্রের দৈর্ঘ্য ও প্রস্থের মধ্যসমানুপাতী দিয়ে বর্গক্ষেত্র অঙ্কন করতে হবে।</p>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

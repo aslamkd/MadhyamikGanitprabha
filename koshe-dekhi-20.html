@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-20</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>কোণ পরিমাপের নিয়মাবলি (Rules of Angle Measurement):</strong><br>
+        ১) <strong>ষষ্টিক পদ্ধতি (Sexagesimal System):</strong> $1^\circ$ (ডিগ্রি) = $60'$ (মিনিট), $1'$ (মিনিট) = $60''$ (সেকেন্ড)।<br>
+        ২) <strong>বৃত্তীয় পদ্ধতি (Circular System):</strong> কোণের পরিমাপ রেডিয়ানে ($^c$) করা হয়।<br>
+        ৩) সম্পর্ক: $180^\circ = \pi^c$<br>
+        ৪) বৃত্তচাপ, ব্যাসার্ধ ও কেন্দ্রস্থ কোণের সম্পর্ক: $S = r\theta$ (যেখানে $\theta$ বৃত্তীয় মানে অর্থাৎ রেডিয়ানে প্রকাশিত)।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. নিম্নলিখিতগুলিকে ডিগ্রি, মিনিট ও সেকেন্ডে প্রকাশ করি:</h4>
+        
+        <span class="sub-question">(i) 832'</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $60'$ = $1^\circ$।</p>
+            \[
+\begin{array}{l}
+832' = (832 \div 60)^\circ \\
+\text{ভাগফল } = 13, \text{ ভাগশেষ } = 52
+\end{array}
+\]
+            <p>অতএব, $832' = 13^\circ 52'$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $13^\circ 52'$</div>
+        </div>
+
+        <span class="sub-question">(ii) 6312"</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $60''$ = $1'$।</p>
+            \[
+\begin{array}{l}
+6312'' = (6312 \div 60)' \\
+\text{ভাগফল } = 105, \text{ ভাগশেষ } = 12
+\end{array}
+\]
+            <p>অতএব, $6312'' = 105' 12''$</p>
+            <p>আবার, $105'$ কে ডিগ্রিতে প্রকাশ করলে:</p>
+            \[
+\begin{array}{l}
+105' = (105 \div 60)^\circ \\
+\text{ভাগফল } = 1, \text{ ভাগশেষ } = 45
+\end{array}
+\]
+            <p>সুতরাং, $105' = 1^\circ 45'$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $1^\circ 45' 12''$</div>
+        </div>
+
+        <span class="sub-question">(iii) 375"</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $60''$ = $1'$।</p>
+            \[
+\begin{array}{l}
+375'' = (375 \div 60)' \\
+\text{ভাগফল } = 6, \text{ ভাগশেষ } = 15
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $6' 15''$</div>
+        </div>
+
+        <span class="sub-question">(iv) $27\frac{1}{12}^\circ$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$27\frac{1}{12}^\circ = 27^\circ + \left(\displaystyle\frac{1}{12}\right)^\circ$</p>
+            <p>আমরা জানি, $1^\circ = 60'$।</p>
+            \[
+\begin{array}{l}
+\left(\frac{1}{12}\right)^\circ = \left(\frac{1}{12} \times 60\right)' \\
+= 5'
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $27^\circ 5'$</div>
+        </div>
+
+        <span class="sub-question">(v) $72.04^\circ$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$72.04^\circ = 72^\circ + 0.04^\circ$</p>
+            <p>$0.04^\circ = (0.04 \times 60)' = 2.4'$</p>
+            <p>$2.4' = 2' + 0.4'$</p>
+            <p>$0.4' = (0.4 \times 60)'' = 24''$</p>
+            <p>অতএব, $72.04^\circ = 72^\circ + 2' + 24''$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $72^\circ 2' 24''$</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নিম্নলিখিতগুলির বৃত্তীয় মান নির্ণয় করি:</h4>
+        <p class="mb-3 text-muted"><strong>নিয়ম:</strong> $180^\circ = \pi^c \implies 1^\circ = \displaystyle\frac{\pi}{180}$ রেডিয়ান।</p>
+
+        <span class="sub-question">(i) 60°</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+60^\circ = 60 \times \frac{\pi}{180} \\
+= \frac{\pi}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{\pi}{3}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(ii) 135°</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+135^\circ = 135 \times \frac{\pi}{180} \\
+= \frac{135\pi}{180} \\
+= \frac{3\pi}{4} \quad [\text{45 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{3\pi}{4}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(iii) -150°</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+-150^\circ = -150 \times \frac{\pi}{180} \\
+= -\frac{150\pi}{180} \\
+= -\frac{5\pi}{6} \quad [\text{30 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $-\displaystyle\frac{5\pi}{6}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(iv) 72°</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+72^\circ = 72 \times \frac{\pi}{180} \\
+= \frac{72\pi}{180} \\
+= \frac{2\pi}{5} \quad [\text{36 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{2\pi}{5}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(v) 22°30'</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে মিনিটকে ডিগ্রিতে প্রকাশ করি:</p>
+            \[
+\begin{array}{l}
+22^\circ 30' = 22^\circ + \left(\frac{30}{60}\right)^\circ \\
+= 22^\circ + \frac{1}{2}^\circ \\
+= 22.5^\circ \text{ বা } \frac{45}{2}^\circ
+\end{array}
+\]
+            <p>এখন বৃত্তীয় মানে প্রকাশ করি:</p>
+            \[
+\begin{array}{l}
+\frac{45}{2}^\circ = \frac{45}{2} \times \frac{\pi}{180} \\
+= \frac{45\pi}{360} \\
+= \frac{\pi}{8} \quad [\text{45 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{\pi}{8}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(vi) -62°30'</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            \[
+\begin{array}{l}
+-62^\circ 30' = -\left(62 + \frac{30}{60}\right)^\circ \\
+= -\left(62 + \frac{1}{2}\right)^\circ \\
+= -\frac{125}{2}^\circ
+\end{array}
+\]
+            <p>বৃত্তীয় মানে:</p>
+            \[
+\begin{array}{l}
+-\frac{125}{2}^\circ = -\frac{125}{2} \times \frac{\pi}{180} \\
+= -\frac{125\pi}{360} \\
+= -\frac{25\pi}{72} \quad [\text{5 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $-\displaystyle\frac{25\pi}{72}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(vii) 52°52'30"</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে সম্পূর্ণ মানটিকে ডিগ্রিতে প্রকাশ করি:</p>
+            \[
+\begin{array}{l}
+30'' = \left(\frac{30}{60}\right)' = 0.5' \\
+52' + 0.5' = 52.5' \\
+52.5' = \left(\frac{52.5}{60}\right)^\circ = \left(\frac{525}{600}\right)^\circ = \left(\frac{21}{24}\right)^\circ = \frac{7}{8}^\circ \\
+52^\circ + \frac{7}{8}^\circ = \frac{416 + 7}{8}^\circ = \frac{423}{8}^\circ
+\end{array}
+\]
+            <p>বৃত্তীয় মানে:</p>
+            \[
+\begin{array}{l}
+\frac{423}{8}^\circ = \frac{423}{8} \times \frac{\pi}{180} \\
+= \frac{423\pi}{1440} \\
+= \frac{47\pi}{160} \quad [\text{9 দিয়ে কেটে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{47\pi}{160}$ রেডিয়ান।</div>
+        </div>
+
+        <span class="sub-question">(viii) 40°16'24"</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে মানটিকে ডিগ্রিতে প্রকাশ করি:</p>
+            \[
+\begin{array}{l}
+24'' = \left(\frac{24}{60}\right)' = \frac{2}{5}' = 0.4' \\
+16' + 0.4' = 16.4' \\
+16.4' = \left(\frac{16.4}{60}\right)^\circ = \left(\frac{164}{600}\right)^\circ = \frac{41}{150}^\circ \\
+40^\circ + \frac{41}{150}^\circ = \frac{6000 + 41}{150}^\circ = \frac{6041}{150}^\circ
+\end{array}
+\]
+            <p>বৃত্তীয় মানে:</p>
+            \[
+\begin{array}{l}
+\frac{6041}{150}^\circ = \frac{6041}{150} \times \frac{\pi}{180} \\
+= \frac{6041\pi}{27000}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: $\displaystyle\frac{6041\pi}{27000}$ রেডিয়ান।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. $\triangle ABC$-এর AC = BC এবং BC বাহুকে D পর্যন্ত বর্ধিত করলাম। যদি $\angle ACD=144^\circ$ হয়, তবে ABC ত্রিভুজের প্রতিটি কোণের বৃত্তীয় মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, বহিঃস্থ কোণ $\angle ACD = 144^\circ$।</p>
+            <p>আমরা জানি, একটি সরলরেখার ওপর উৎপন্ন কোণ $180^\circ$।</p>
+            <p>$\therefore$ অন্তঃস্থ $\angle ACB = 180^\circ - \angle ACD = 180^\circ - 144^\circ = 36^\circ$।</p>
+            <br>
+            <p>$\triangle ABC$-তে $AC = BC$ (সমদ্বিবাহু ত্রিভুজ)।</p>
+            <p>সুতরাং, সমান বাহুর বিপরীত কোণগুলিও সমান হবে: $\angle CAB = \angle CBA$।</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle CAB + \angle CBA + \angle ACB = 180^\circ \\
+2\angle CAB + 36^\circ = 180^\circ \\
+2\angle CAB = 180^\circ - 36^\circ = 144^\circ \\
+\angle CAB = \frac{144^\circ}{2} = 72^\circ
+\end{array}
+\]
+            <p>অতএব, ত্রিভুজটির কোণ তিনটি হলো: $36^\circ, 72^\circ$ এবং $72^\circ$।</p>
+            <p><strong>বৃত্তীয় মান:</strong></p>
+            <p>$\angle ACB = 36^\circ = 36 \times \displaystyle\frac{\pi}{180} = \frac{\pi}{5}$ রেডিয়ান।</p>
+            <p>$\angle CAB = \angle CBA = 72^\circ = 72 \times \displaystyle\frac{\pi}{180} = \frac{2\pi}{5}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: কোণগুলির বৃত্তীয় মান যথাক্রমে $\displaystyle\frac{\pi}{5}, \frac{2\pi}{5}$ এবং $\displaystyle\frac{2\pi}{5}$ রেডিয়ান।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একটি সমকোণী ত্রিভুজের সূক্ষ্মকোণ দুটির অন্তর $\displaystyle\frac{2\pi}{5}$ হলে, ষষ্ঠিক পদ্ধতিতে ওই কোণদ্বয়ের মান লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, সমকোণী ত্রিভুজের একটি কোণ $90^\circ$। অপর সূক্ষ্মকোণ দুটির সমষ্টি = $180^\circ - 90^\circ = 90^\circ$।</p>
+            <p>ধরি, সূক্ষ্মকোণ দুটি হলো $x^\circ$ এবং $y^\circ$ ($x &gt; y$)।</p>
+            <p>তাহলে, $x + y = 90^\circ \quad \dots \text{(i)}$</p>
+            <p>শর্তানুসারে, কোণ দুটির অন্তর = $\displaystyle\frac{2\pi}{5}$ রেডিয়ান।</p>
+            <p>ডিগ্রিতে প্রকাশ করলে: $\displaystyle\frac{2\pi}{5} \times \frac{180^\circ}{\pi} = 2 \times 36^\circ = 72^\circ$।</p>
+            <p>$\therefore x - y = 72^\circ \quad \dots \text{(ii)}$</p>
+            <p>(i) এবং (ii) নং সমীকরণ যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+2x = 90^\circ + 72^\circ \\
+2x = 162^\circ \\
+x = \frac{162^\circ}{2} = 81^\circ
+\end{array}
+\]
+            <p>$x$-এর মান (i) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+81^\circ + y = 90^\circ \\
+y = 90^\circ - 81^\circ = 9^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: কোণদ্বয়ের মান $81^\circ$ এবং $9^\circ$।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. একটি ত্রিভুজের একটি কোণের পরিমাপ 65° এবং দ্বিতীয়টির পরিমাপ $\displaystyle\frac{\pi}{12}$ ; তৃতীয় কোণটির ষষ্ঠিক ও বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম কোণ = $65^\circ$</p>
+            <p>দ্বিতীয় কোণের ষষ্ঠিক মান = $\displaystyle\frac{\pi}{12} = \frac{180^\circ}{12} = 15^\circ$</p>
+            <p>দুটি কোণের সমষ্টি = $65^\circ + 15^\circ = 80^\circ$</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$।</p>
+            <p>অতএব, তৃতীয় কোণের ষষ্ঠিক মান = $180^\circ - 80^\circ = 100^\circ$</p>
+            <p>তৃতীয় কোণের বৃত্তীয় মান = $100 \times \displaystyle\frac{\pi}{180} = \frac{100\pi}{180} = \frac{5\pi}{9}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় কোণের ষষ্ঠিক মান $100^\circ$ এবং বৃত্তীয় মান $\displaystyle\frac{5\pi}{9}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. দুটি কোণের সমষ্টি 135° এবং তাদের অন্তর $\displaystyle\frac{\pi}{12}$ হলে, কোণ দুটির ষষ্ঠিক ও বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, কোণ দুটি $x^\circ$ এবং $y^\circ$ ($x &gt; y$)।</p>
+            <p>তাদের সমষ্টি: $x + y = 135^\circ \quad \dots \text{(i)}$</p>
+            <p>তাদের অন্তর: $\displaystyle\frac{\pi}{12} = \frac{180^\circ}{12} = 15^\circ$</p>
+            <p>$\therefore x - y = 15^\circ \quad \dots \text{(ii)}$</p>
+            <p>(i) এবং (ii) নং সমীকরণ যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+2x = 135^\circ + 15^\circ = 150^\circ \\
+x = 75^\circ
+\end{array}
+\]
+            <p>$x$-এর মান (i) নং এ বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+75^\circ + y = 135^\circ \\
+y = 135^\circ - 75^\circ = 60^\circ
+\end{array}
+\]
+            <p><strong>কোণ দুটির বৃত্তীয় মান:</strong></p>
+            <p>প্রথম কোণ = $75^\circ = 75 \times \displaystyle\frac{\pi}{180} = \frac{5\pi}{12}$ রেডিয়ান।</p>
+            <p>দ্বিতীয় কোণ = $60^\circ = 60 \times \displaystyle\frac{\pi}{180} = \frac{\pi}{3}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ষষ্ঠিক মান $75^\circ, 60^\circ$ এবং বৃত্তীয় মান $\displaystyle\frac{5\pi}{12}, \frac{\pi}{3}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. একটি ত্রিভুজের কোণ তিনটির অনুপাত 2:3:4 হলে, ত্রিভুজটির বৃহত্তম কোণটির বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, ত্রিভুজের কোণ তিনটি হলো $2x, 3x$ এবং $4x$।</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+2x + 3x + 4x = 180^\circ \\
+9x = 180^\circ \\
+x = \frac{180^\circ}{9} = 20^\circ
+\end{array}
+\]
+            <p>ত্রিভুজটির বৃহত্তম কোণ = $4x = 4 \times 20^\circ = 80^\circ$।</p>
+            <p>বৃহত্তম কোণটির বৃত্তীয় মান = $80 \times \displaystyle\frac{\pi}{180} = \frac{80\pi}{180} = \frac{4\pi}{9}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃহত্তম কোণটির বৃত্তীয় মান $\displaystyle\frac{4\pi}{9}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. একটি বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 28 সেমি.। এই বৃত্তে 5.5 সেমি. দৈর্ঘ্যের বৃত্তচাপ দ্বারা ধৃত কেন্দ্রীয় কোণটির বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, বৃত্তচাপ ($S$), ব্যাসার্ধ ($r$) এবং কেন্দ্রীয় কোণের বৃত্তীয় মান ($\theta$) -এর মধ্যে সম্পর্কটি হলো: $S = r\theta$</p>
+            <p>দেওয়া আছে, ব্যাসার্ধ ($r$) = 28 সেমি এবং বৃত্তচাপ ($S$) = 5.5 সেমি।</p>
+            \[
+\begin{array}{l}
+\theta = \frac{S}{r} \\
+= \frac{5.5}{28} \\
+= \frac{55}{280} \\
+= \frac{11}{56} \text{ রেডিয়ান}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: কেন্দ্রীয় কোণটির বৃত্তীয় মান $\displaystyle\frac{11}{56}$ রেডিয়ান।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. একটি বৃত্তের অসমান দৈর্ঘ্যের দুটি চাপ কেন্দ্রে যে কোণ ধারণ করে আছে তার অনুপাত 5:2 এবং দ্বিতীয় কোণটির ষষ্ঠিক মান 30° হলে, প্রথম কোণটির ষষ্ঠিক মান ও বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, বৃত্তের কোনো বৃত্তচাপ দ্বারা কেন্দ্রে উৎপন্ন কোণ ওই চাপের দৈর্ঘ্যের সাথে সমানুপাতী।</p>
+            <p>সুতরাং, কোণ দুটির অনুপাত = 5:2।</p>
+            <p>ধরি, প্রথম কোণটি $5x$ এবং দ্বিতীয় কোণটি $2x$।</p>
+            <p>দেওয়া আছে, দ্বিতীয় কোণটির মান = $30^\circ$।</p>
+            \[
+\begin{array}{l}
+2x = 30^\circ \\
+x = 15^\circ
+\end{array}
+\]
+            <p>অতএব, প্রথম কোণটির ষষ্ঠিক মান = $5x = 5 \times 15^\circ = 75^\circ$।</p>
+            <p>প্রথম কোণটির বৃত্তীয় মান = $75 \times \displaystyle\frac{\pi}{180} = \frac{75\pi}{180} = \frac{5\pi}{12}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রথম কোণটির ষষ্ঠিক মান $75^\circ$ এবং বৃত্তীয় মান $\displaystyle\frac{5\pi}{12}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি ঘূর্ণায়মান রশ্মি $-5\frac{1}{12}\pi$ কোণ উৎপন্ন করেছে। রশ্মিটি কোনদিকে কতবার পূর্ণ আবর্তন করেছে এবং তারপরে আরও কত ডিগ্রি কোণ উৎপন্ন করেছে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উৎপন্ন কোণ = $-5\frac{1}{12}\pi = -\displaystyle\frac{61\pi}{12}$ রেডিয়ান।</p>
+            <p>যেহেতু কোণটি ঋণাত্মক (Negative), তাই রশ্মিটি <strong>ঘড়ির কাঁটার দিকে (Clockwise)</strong> আবর্তন করেছে।</p>
+            <p>আমরা জানি, 1 বার পূর্ণ আবর্তন মানে $360^\circ$ বা $2\pi$ রেডিয়ান কোণ উৎপন্ন করা।</p>
+            <p>কোণটিকে পূর্ণ আবর্তনের আকারে ভাঙি:</p>
+            \[
+\begin{array}{l}
+-\frac{61\pi}{12} = -5\pi - \frac{\pi}{12} \\
+= -4\pi - \pi - \frac{\pi}{12} \\
+= -2(2\pi) - \frac{12\pi + \pi}{12} \\
+= -2(2\pi) - \frac{13\pi}{12}
+\end{array}
+\]
+            <p>এখানে $-2(2\pi)$ এর অর্থ হলো রশ্মিটি 2 বার পূর্ণ আবর্তন করেছে।</p>
+            <p>তারপর আরও $-\displaystyle\frac{13\pi}{12}$ কোণ উৎপন্ন করেছে।</p>
+            <p>এই অতিরিক্ত কোণটিকে ডিগ্রিতে প্রকাশ করি:</p>
+            \[
+\begin{array}{l}
+\frac{13\pi}{12} \text{ রেডিয়ান} = \frac{13}{12} \times 180^\circ \\
+= 13 \times 15^\circ \\
+= 195^\circ
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: রশ্মিটি ঘড়ির কাঁটার দিকে 2 বার পূর্ণ আবর্তন করেছে এবং তারপরে আরও $195^\circ$ কোণ উৎপন্ন করেছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. ABC একটি সমদ্বিবাহু ত্রিভুজ অঙ্কন করেছি যার সমান বাহুদ্বয়ের অন্তর্ভুক্ত কোণ $\angle ABC = 45^\circ$; $\angle ABC$-এর সমদ্বিখণ্ডক AC বাহুকে D বিন্দুতে ছেদ করেছে। $\angle ABD, \angle BAD, \angle CBD$ এবং $\angle BCD$-এর বৃত্তীয় মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle ABC$ সমদ্বিবাহু এবং সমান বাহুদ্বয়ের অন্তর্ভুক্ত কোণ $\angle ABC = 45^\circ$। অর্থাৎ, $AB = BC$।</p>
+            <p>যেহেতু $AB = BC$, তাই তাদের বিপরীত কোণগুলিও সমান হবে: $\angle BAC = \angle BCA$।</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$।</p>
+            \[
+\begin{array}{l}
+\angle BAC + \angle BCA + \angle ABC = 180^\circ \\
+2\angle BAC + 45^\circ = 180^\circ \\
+2\angle BAC = 135^\circ \\
+\angle BAC = 67.5^\circ
+\end{array}
+\]
+            <p>অতএব, $\angle BAD = \angle BAC = 67.5^\circ$ এবং $\angle BCD = \angle BCA = 67.5^\circ$।</p>
+            <p>দেওয়া আছে, BD হলো $\angle ABC$-এর সমদ্বিখণ্ডক।</p>
+            <p>$\therefore \angle ABD = \angle CBD = \displaystyle\frac{45^\circ}{2} = 22.5^\circ$।</p>
+            <br>
+            <p><strong>কোণগুলির বৃত্তীয় মান:</strong></p>
+            <p>1) $\angle ABD = 22.5^\circ = 22.5 \times \displaystyle\frac{\pi}{180} = \frac{225\pi}{1800} = \frac{\pi}{8}$</p>
+            <p>2) $\angle BAD = 67.5^\circ = 67.5 \times \displaystyle\frac{\pi}{180} = \frac{675\pi}{1800} = \frac{3\pi}{8}$</p>
+            <p>3) $\angle CBD = 22.5^\circ = \displaystyle\frac{\pi}{8}$</p>
+            <p>4) $\angle BCD = 67.5^\circ = \displaystyle\frac{3\pi}{8}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তীয় মানগুলি যথাক্রমে $\displaystyle\frac{\pi}{8}, \frac{3\pi}{8}, \frac{\pi}{8}, \frac{3\pi}{8}$ রেডিয়ান।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. ABC সমবাহু ত্রিভুজের BC ভূমিকে E বিন্দু পর্যন্ত এমনভাবে বর্ধিত করলাম যেন CE = BC হয়। A, E যুক্ত করে ACE ত্রিভুজের কোণগুলির বৃত্তীয় মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle ABC$ সমবাহু হওয়ায় এর প্রতিটি কোণ $60^\circ$ এবং প্রতিটি বাহু সমান ($AB = BC = CA$)।</p>
+            <p>$\therefore \angle ACB = 60^\circ$।</p>
+            <p>B-C-E একটি সরলরেখা। অতএব, $\angle ACE = 180^\circ - \angle ACB = 180^\circ - 60^\circ = 120^\circ$।</p>
+            <br>
+            <p>প্রদত্ত শর্তানুসারে, $CE = BC$।</p>
+            <p>আবার সমবাহু ত্রিভুজ হওয়ায় $AC = BC$।</p>
+            <p>সুতরাং, $AC = CE$।</p>
+            <p>$\triangle ACE$-এর দুটি বাহু $AC$ এবং $CE$ সমান হওয়ায় এটি একটি সমদ্বিবাহু ত্রিভুজ।</p>
+            <p>$\therefore \angle CAE = \angle CEA$।</p>
+            <p>$\triangle ACE$-এর তিন কোণের সমষ্টি $180^\circ$:</p>
+            \[
+\begin{array}{l}
+\angle CAE + \angle CEA + \angle ACE = 180^\circ \\
+2\angle CAE + 120^\circ = 180^\circ \\
+2\angle CAE = 60^\circ \\
+\angle CAE = 30^\circ
+\end{array}
+\]
+            <p>অতএব, $\angle CAE = 30^\circ$ এবং $\angle CEA = 30^\circ$।</p>
+            <br>
+            <p><strong>কোণগুলির বৃত্তীয় মান:</strong></p>
+            <p>$\angle ACE = 120^\circ = 120 \times \displaystyle\frac{\pi}{180} = \frac{2\pi}{3}$</p>
+            <p>$\angle CAE = 30^\circ = 30 \times \displaystyle\frac{\pi}{180} = \frac{\pi}{6}$</p>
+            <p>$\angle CEA = 30^\circ = \displaystyle\frac{\pi}{6}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\triangle ACE$-এর কোণগুলির বৃত্তীয় মান $\displaystyle\frac{2\pi}{3}, \frac{\pi}{6}$ এবং $\displaystyle\frac{\pi}{6}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. কোনো চতুর্ভুজের তিনটি কোণের পরিমাপ যথাক্রমে $\displaystyle\frac{\pi}{3}, \frac{5\pi}{6}$ ও 90° হলে, চতুর্থ কোণটির ষষ্ঠিক ও বৃত্তীয় মান হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথম কোণ = $\displaystyle\frac{\pi}{3} = \frac{180^\circ}{3} = 60^\circ$</p>
+            <p>দ্বিতীয় কোণ = $\displaystyle\frac{5\pi}{6} = \frac{5 \times 180^\circ}{6} = 150^\circ$</p>
+            <p>তৃতীয় কোণ = $90^\circ$</p>
+            <p>আমরা জানি, চতুর্ভুজের চারটি কোণের সমষ্টি $360^\circ$।</p>
+            <p>তিনটি কোণের সমষ্টি = $60^\circ + 150^\circ + 90^\circ = 300^\circ$</p>
+            <p>অতএব, চতুর্থ কোণটির ষষ্ঠিক মান = $360^\circ - 300^\circ = 60^\circ$।</p>
+            <p>চতুর্থ কোণটির বৃত্তীয় মান = $60 \times \displaystyle\frac{\pi}{180} = \frac{\pi}{3}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চতুর্থ কোণটির ষষ্ঠিক মান 60° এবং বৃত্তীয় মান $\displaystyle\frac{\pi}{3}$।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">14. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) একটি ঘড়ির মিনিটের কাঁটার প্রান্তবিন্দু 1 ঘণ্টায় আবর্তন করে</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ঘড়ির মিনিটের কাঁটা 1 ঘণ্টায় একবার পূর্ণ আবর্তন করে। ঘড়ির কাঁটার দিকে (Clockwise) আবর্তন করলে কোণ ঋণাত্মক হয়, অর্থাৎ $-360^\circ$ বা $-2\pi$ রেডিয়ান। তবে এখানে শুধু আবর্তনের পরিমাণের কথা বলা হলে তা $2\pi$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $2\pi$ রেডিয়ান</div>
+        </div>
+
+        <span class="sub-question">(ii) $\displaystyle\frac{\pi}{6}$ রেডিয়ান সমান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\displaystyle\frac{\pi}{6} = \frac{180^\circ}{6} = 30^\circ$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $30^\circ$</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি সুষম ষড়ভুজের প্রতিটি অন্তঃকোণের বৃত্তীয় মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সুষম ষড়ভুজের (Hexagon) অন্তঃকোণের সূত্র = $\displaystyle\frac{(n-2) \times 180^\circ}{n}$</p>
+            <p>$n=6$ বসালে, অন্তঃকোণ = $\displaystyle\frac{4 \times 180^\circ}{6} = 120^\circ$</p>
+            <p>$120^\circ$ কে বৃত্তীয় মানে প্রকাশ করলে = $120 \times \displaystyle\frac{\pi}{180} = \frac{2\pi}{3}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $\displaystyle\frac{2\pi}{3}$</div>
+        </div>
+
+        <span class="sub-question">(iv) $s = r\theta$ সম্পর্কে $\theta$-এর পরিমাপ করা হয়</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এই সূত্রে $\theta$ সর্বদা বৃত্তীয় পদ্ধতিতে (Circular measure/Radians) পরিমাপ করা হয়।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) বৃত্তীয় পদ্ধতিতে</div>
+        </div>
+
+        <span class="sub-question">(v) ABCD বৃত্তস্থ চতুর্ভুজের $\angle A = 120^\circ$ হলে, $\angle C$-এর বৃত্তীয় মান</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বৃত্তস্থ চতুর্ভুজের বিপরীত কোণগুলি সম্পূরক হয়। $\therefore \angle A + \angle C = 180^\circ$।</p>
+            <p>$\angle C = 180^\circ - 120^\circ = 60^\circ$।</p>
+            <p>$60^\circ$-এর বৃত্তীয় মান = $\displaystyle\frac{\pi}{3}$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) $\displaystyle\frac{\pi}{3}$</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) একটি রশ্মির প্রান্তবিন্দুকে কেন্দ্র করে রশ্মিটির ঘড়ির কাঁটার বিপরীত দিকে ঘোরার জন্য উৎপন্ন কোণটি ধনাত্মক।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> ঘড়ির কাঁটার বিপরীত দিকে (Anti-clockwise) ঘুরলে ধনাত্মক (Positive) কোণ এবং ঘড়ির কাঁটার দিকে (Clockwise) ঘুরলে ঋণাত্মক (Negative) কোণ উৎপন্ন হয়।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি রশ্মির প্রান্তবিন্দুকে কেন্দ্র করে রশ্মিটির ঘড়ির কাঁটার দিকে দু-বার পূর্ণ আবর্তনের জন্য 720° কোণ উৎপন্ন হয়।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> ঘড়ির কাঁটার দিকে ঘুরলে কোণ ঋণাত্মক হয়। দু-বার পূর্ণ আবর্তনের ফলে $-720^\circ$ কোণ উৎপন্ন হবে, $+720^\circ$ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) $\pi$ রেডিয়ান একটি <span class="blank-fill">_________</span> কোণ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> ধ্রুবক (Constant)</p>
+        </div>
+
+        <span class="sub-question">(ii) ষষ্টিক পদ্ধতিতে 1 রেডিয়ান সমান <span class="blank-fill">_________</span> (প্রায়)।</span>
+        <div class="solution-box">
+            <p>$\displaystyle 1^c = \frac{180^\circ}{\pi} \approx \frac{180^\circ}{22/7} = \frac{1260^\circ}{22} \approx 57^\circ 16' 22''$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $57^\circ 16' 22''$</p>
+        </div>
+
+        <span class="sub-question">(iii) $\displaystyle\frac{3\pi}{8}$ পরিমাপের কোণটির সম্পূরক কোণের বৃত্তীয় মান <span class="blank-fill">_________</span> ।</span>
+        <div class="solution-box">
+            <p>দুটি সম্পূরক কোণের সমষ্টি $180^\circ$ বা $\pi$ রেডিয়ান।</p>
+            <p>অতএব, সম্পূরক কোণ = $\pi - \displaystyle\frac{3\pi}{8} = \frac{8\pi - 3\pi}{8} = \frac{5\pi}{8}$</p>
+            <p><em>(বিঃদ্রঃ যদি প্রশ্নে পূরক কোণ থাকতো তবে $\frac{\pi}{2} - \frac{3\pi}{8} = \frac{\pi}{8}$ হতো। এখানে সম্পূরক বলা আছে, তাই $\frac{5\pi}{8}$ হবে)।</em></p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\displaystyle\frac{5\pi}{8}$</p>
+        </div>
+    </div>
+
+    <!-- Question 15 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">15. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি কোণের ডিগ্রিতে মান D এবং ওই কোণের রেডিয়ানে মান R হলে, $\displaystyle\frac{R}{D}$ -এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $180^\circ = \pi^c \implies 1^\circ = \displaystyle\frac{\pi}{180}$ রেডিয়ান।</p>
+            <p>অতএব, $D$ ডিগ্রি = $D \times \displaystyle\frac{\pi}{180}$ রেডিয়ান।</p>
+            <p>প্রশ্নানুসারে, রেডিয়ানে মান $R = \displaystyle\frac{D\pi}{180}$</p>
+            \[
+\begin{array}{l}
+\frac{R}{D} = \frac{\pi}{180}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{R}{D}$ -এর মান $\displaystyle\frac{\pi}{180}$।</div>
+        </div>
+
+        <span class="sub-question">(ii) 63°35'15" পরিমাপের কোণটির পূরক কোণের মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি কোণ পূরক হলে তাদের সমষ্টি $90^\circ$ হয়।</p>
+            <p>আমরা $90^\circ$ কে লিখতে পারি $89^\circ 59' 60''$ হিসেবে।</p>
+            <p>পূরক কোণ = $89^\circ 59' 60'' - 63^\circ 35' 15''$</p>
+            \[
+\begin{array}{l}
+&amp; 89^\circ \; 59' \; 60'' \\
+-\;&amp; 63^\circ \; 35' \; 15'' \\
+\hline
+            &amp; 26^\circ \; 24' \; 45''
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পূরক কোণটি হলো $26^\circ 24' 45''$।</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি ত্রিভুজের দুটি কোণের পরিমাপ 65°56'55" এবং 64°3'5" হলে, তৃতীয় কোণটির বৃত্তীয় মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে প্রদত্ত দুটি কোণ যোগ করি:</p>
+            \[
+\begin{array}{l}
+&amp; 65^\circ \; 56' \; 55'' \\
++\;&amp; 64^\circ \;\; 3' \;\; 5'' \\
+\hline
+            &amp; 129^\circ \; 59' \; 60''
+\end{array}
+\]
+            <p>আমরা জানি, $60'' = 1'$। তাই $59' + 1' = 60'$।</p>
+            <p>আবার, $60' = 1^\circ$। তাই $129^\circ + 1^\circ = 130^\circ$।</p>
+            <p>দুটি কোণের সমষ্টি = $130^\circ$।</p>
+            <p>ত্রিভুজের তিন কোণের সমষ্টি $180^\circ$ হওয়ায়, তৃতীয় কোণ = $180^\circ - 130^\circ = 50^\circ$।</p>
+            <p>বৃত্তীয় মান = $50 \times \displaystyle\frac{\pi}{180} = \frac{5\pi}{18}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তৃতীয় কোণটির বৃত্তীয় মান $\displaystyle\frac{5\pi}{18}$।</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি বৃত্তে 220 সেমি. দৈর্ঘ্যের বৃত্তচাপ বৃত্তের কেন্দ্রে 63° পরিমাপের কোণ উৎপন্ন করলে, বৃত্তের ব্যাসার্ধের দৈর্ঘ্য নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে বৃত্তচাপ ($S$) = 220 সেমি।</p>
+            <p>কেন্দ্রীয় কোণ = $63^\circ$। একে বৃত্তীয় মানে (রেডিয়ানে) প্রকাশ করি:</p>
+            <p>$\theta = 63 \times \displaystyle\frac{\pi}{180} = \frac{7\pi}{20}$ রেডিয়ান।</p>
+            <p>আমরা জানি, $S = r\theta$ (যেখানে r হলো ব্যাসার্ধ)</p>
+            \[
+\begin{array}{l}
+220 = r \times \frac{7\pi}{20} \\
+220 = r \times \frac{7}{20} \times \frac{22}{7} \\
+220 = r \times \frac{22}{20} \\
+r = \frac{220 \times 20}{22} \\
+r = 10 \times 20 = 200
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বৃত্তের ব্যাসার্ধের দৈর্ঘ্য 200 সেমি.।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি ঘড়ির ঘণ্টার কাঁটার প্রান্তবিন্দু 1 ঘণ্টা আবর্তনে যে পরিমাণ কোণ উৎপন্ন করে তার বৃত্তীয় মান লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ঘড়ির ঘণ্টার কাঁটা 12 ঘণ্টায় একবার পূর্ণ আবর্তন করে। অর্থাৎ 12 ঘণ্টায় $360^\circ$ বা $2\pi$ কোণ অতিক্রম করে।</p>
+            <p>অতএব, 1 ঘণ্টায় ঘণ্টার কাঁটা কোণ উৎপন্ন করে = $\displaystyle\frac{360^\circ}{12} = 30^\circ$।</p>
+            <p>যেহেতু ঘড়ির কাঁটা সর্বদা ঘড়ির কাঁটার দিকে (Clockwise) ঘোরে, তাই উৎপন্ন কোণ ঋণাত্মক হবে।</p>
+            <p>কোণ = $-30^\circ$।</p>
+            <p>বৃত্তীয় মানে = $-30 \times \displaystyle\frac{\pi}{180} = -\frac{\pi}{6}$ রেডিয়ান।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: উৎপন্ন কোণের বৃত্তীয় মান $-\displaystyle\frac{\pi}{6}$।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

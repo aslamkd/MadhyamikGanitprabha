@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-25</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>উচ্চতা ও দূরত্বের অংকের মূল সূত্র (Heights &amp; Distances):</strong><br>
+        ১) <strong>উন্নতি কোণ (Angle of Elevation):</strong> যখন দর্শক নিচের কোনো বিন্দু থেকে উপরের কোনো বস্তু দেখেন।<br>
+        ২) <strong>অবনতি কোণ (Angle of Depression):</strong> যখন দর্শক উপরের কোনো বিন্দু থেকে নিচের কোনো বস্তু দেখেন।<br>
+        সব অংকেই আমরা সমকোণী ত্রিভুজ কল্পনা করে $\tan \theta = \displaystyle\frac{\text{লম্ব}}{\text{ভূমি}}$, $\sin \theta = \displaystyle\frac{\text{লম্ব}}{\text{অতিভুজ}}$ বা $\cos \theta = \displaystyle\frac{\text{ভূমি}}{\text{অতিভুজ}}$ সূত্র প্রয়োগ করব।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. একটি নারকেল গাছের গোড়া থেকে অনুভূমিক তলে 20 মিটার দূরের একটি বিন্দুর সাপেক্ষে গাছটির অগ্রভাগের উন্নতি কোণ যদি 60° হয়, তাহলে গাছটির উচ্চতা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="200" height="150" viewBox="0 0 200 150">
+               <polygon points="30,120 150,120 150,20" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></polygon>
+               <line x1="150" y1="20" x2="150" y2="120" stroke="#10B981" stroke-width="4"></line> <!-- Tree -->
+               <polyline points="140,120 140,110 150,110" fill="none" stroke="#1F2937" stroke-width="1.5"></polyline>
+               
+               <text x="15" y="135" font-weight="bold">C</text>
+               <text x="155" y="135" font-weight="bold">B</text>
+               <text x="155" y="15" font-weight="bold">A</text>
+               
+               <text x="80" y="140" font-size="12">20 মি.</text>
+               <text x="160" y="75" font-size="12" fill="#10B981">h</text>
+               
+               <path d="M 55 120 A 25 25 0 0 0 49 104" fill="none" stroke="#E11D48" stroke-width="2"></path>
+               <text x="60" y="115" font-size="10" font-weight="bold" fill="#E11D48">60°</text>
+            </svg>
+
+            <p>ধরি, নারকেল গাছটির উচ্চতা $AB = h$ মিটার।</p>
+            <p>গাছের গোড়া B থেকে C বিন্দুর দূরত্ব $BC = 20$ মিটার।</p>
+            <p>C বিন্দুতে গাছের অগ্রভাগ A-এর উন্নতি কোণ $\angle ACB = 60^\circ$।</p>
+            <p>সমকোণী $\triangle ABC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan \angle ACB = \frac{\text{লম্ব}}{\text{ভূমি}} = \frac{AB}{BC} \\
+\tan 60^\circ = \frac{h}{20} \\
+\sqrt{3} = \frac{h}{20} \\
+h = 20\sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নারকেল গাছটির উচ্চতা $20\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. সূর্যের উন্নতি কোণ যখন 30° তখন একটি স্তম্ভের ছায়ার দৈর্ঘ্য 9 মিটার হয়। স্তম্ভটির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="200" height="150" viewBox="0 0 200 150">
+               <polygon points="30,120 150,120 150,50" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></polygon>
+               <line x1="150" y1="50" x2="150" y2="120" stroke="#F59E0B" stroke-width="4"></line> <!-- Pillar -->
+               <line x1="30" y1="120" x2="150" y2="120" stroke="#94A3B8" stroke-width="4"></line> <!-- Shadow -->
+               
+               <text x="15" y="135" font-weight="bold">C</text>
+               <text x="155" y="135" font-weight="bold">B</text>
+               <text x="155" y="45" font-weight="bold">A</text>
+               
+               <text x="80" y="140" font-size="12">9 মি.</text>
+               <text x="160" y="90" font-size="12" fill="#F59E0B">h</text>
+               
+               <path d="M 60 120 A 30 30 0 0 0 55 106" fill="none" stroke="#E11D48" stroke-width="2"></path>
+               <text x="65" y="115" font-size="10" font-weight="bold" fill="#E11D48">30°</text>
+            </svg>
+
+            <p>ধরি, স্তম্ভটির উচ্চতা $AB = h$ মিটার।</p>
+            <p>স্তম্ভের ছায়ার দৈর্ঘ্য $BC = 9$ মিটার।</p>
+            <p>সূর্যের উন্নতি কোণ $\angle ACB = 30^\circ$।</p>
+            <p>সমকোণী $\triangle ABC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan \angle ACB = \frac{AB}{BC} \\
+\tan 30^\circ = \frac{h}{9} \\
+\frac{1}{\sqrt{3}} = \frac{h}{9} \\
+h\sqrt{3} = 9 \\
+h = \frac{9}{\sqrt{3}} = \frac{9\sqrt{3}}{3} = 3\sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্তম্ভটির উচ্চতা $3\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. 150 মি. লম্বা সুতো দিয়ে একটি মাঠে থেকে ঘুড়ি ওড়ানো হয়েছে। ঘুড়িটি যদি অনুভূমিক রেখার সঙ্গে 60° কোণ করে উড়তে থাকে, তাহলে ঘুড়িটি মাঠ থেকে কত উঁচুতে রয়েছে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="200" height="150" viewBox="0 0 200 150">
+               <polygon points="30,120 150,120 150,20" fill="none" stroke="#3730A3" stroke-width="2"></polygon>
+               <line x1="30" y1="120" x2="150" y2="20" stroke="#10B981" stroke-width="2"></line> <!-- Thread -->
+               <line x1="150" y1="20" x2="150" y2="120" stroke="#E11D48" stroke-width="2" stroke-dasharray="4"></line> <!-- Height -->
+               
+               <circle cx="150" cy="20" r="4" fill="#E11D48"></circle> <!-- Kite -->
+               
+               <text x="15" y="135" font-weight="bold">A</text>
+               <text x="155" y="135" font-weight="bold">B</text>
+               <text x="155" y="15" font-weight="bold">C</text>
+               
+               <text x="65" y="60" font-size="12" fill="#10B981" transform="rotate(-40, 90, 70)">150 মি.</text>
+               <text x="160" y="75" font-size="12" fill="#E11D48">h</text>
+               
+               <path d="M 55 120 A 25 25 0 0 0 49 104" fill="none" stroke="#F59E0B" stroke-width="2"></path>
+               <text x="60" y="115" font-size="10" font-weight="bold" fill="#F59E0B">60°</text>
+            </svg>
+
+            <p>ধরি, সুতোর দৈর্ঘ্য $AC = 150$ মিটার এবং ঘুড়িটির মাটি থেকে লম্ব উচ্চতা $BC = h$ মিটার।</p>
+            <p>উন্নতি কোণ $\angle CAB = 60^\circ$।</p>
+            <p>সমকোণী $\triangle ABC$-তে লম্ব এবং অতিভুজ সম্পর্কিত সূত্র $\sin$ ব্যবহার করব:</p>
+            \[
+\begin{array}{l}
+\sin \angle CAB = \frac{\text{লম্ব}}{\text{অতিভুজ}} = \frac{BC}{AC} \\
+\sin 60^\circ = \frac{h}{150} \\
+\frac{\sqrt{3}}{2} = \frac{h}{150} \\
+2h = 150\sqrt{3} \\
+h = \frac{150\sqrt{3}}{2} = 75\sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ঘুড়িটি মাঠ থেকে $75\sqrt{3}$ মিটার উঁচুতে রয়েছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একটি নদীর একটি পাড়ের একটি তালগাছের সোজাসুজি অপর পাড়ে একটি খুঁটি পুঁতলাম। এবার নদীর পাড় ধরে ওই খুঁটি থেকে $7\sqrt{3}$ মিটার সরে গিয়ে দেখছি নদীর পাড়ের পরিপ্রেক্ষিতে গাছটির পাদদেশ 60° কোণে রয়েছে। নদীটি কত মিটার চওড়া নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="200" height="150" viewBox="0 0 200 150">
+               <polygon points="40,120 160,120 160,40" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"></polygon>
+               <line x1="40" y1="120" x2="160" y2="120" stroke="#1F2937" stroke-width="2"></line> <!-- River bank distance -->
+               <line x1="160" y1="120" x2="160" y2="40" stroke="#0EA5E9" stroke-width="3"></line> <!-- River width -->
+               
+               <text x="25" y="130" font-weight="bold">C</text>
+               <text x="165" y="135" font-weight="bold">B (খুঁটি)</text>
+               <text x="165" y="30" font-weight="bold">A (গাছ)</text>
+               
+               <text x="90" y="135" font-size="12">$7\sqrt{3}$ মি.</text>
+               <text x="170" y="85" font-size="12">w</text>
+               
+               <path d="M 65 120 A 25 25 0 0 0 58 108" fill="none" stroke="#E11D48" stroke-width="2"></path>
+               <text x="70" y="115" font-size="10" font-weight="bold" fill="#E11D48">60°</text>
+            </svg>
+
+            <p>ধরি, নদীর চওড়া $AB = w$ মিটার।</p>
+            <p>খুঁটি B থেকে C বিন্দুর দূরত্ব $BC = 7\sqrt{3}$ মিটার।</p>
+            <p>C বিন্দু থেকে গাছটির (A বিন্দুর) উন্নতি কোণ $\angle ACB = 60^\circ$।</p>
+            <p>সমকোণী $\triangle ABC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan \angle ACB = \frac{AB}{BC} \\
+\tan 60^\circ = \frac{w}{7\sqrt{3}} \\
+\sqrt{3} = \frac{w}{7\sqrt{3}} \\
+w = \sqrt{3} \times 7\sqrt{3} \\
+w = 7 \times 3 = 21
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নদীটি 21 মিটার চওড়া।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. ঝড়ে একটি টেলিগ্রাফপোস্ট মাটি থেকে কিছু উপরে মচকে যাওয়ায় তার অগ্রভাগ গোড়া থেকে $8\sqrt{3}$ মিটার দূরে মাটি স্পর্শ করেছে এবং অনুভূমিক রেখার সঙ্গে 30° কোণ উৎপন্ন করেছে। পোস্টটি মাটি থেকে কত উপরে মচকে ছিল এবং পোস্টটির উচ্চতা কত ছিল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="180" viewBox="0 0 220 180">
+               <!-- Full original pole -->
+               <line x1="160" y1="20" x2="160" y2="150" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Broken part falling down -->
+               <polygon points="30,150 160,150 160,80" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></polygon>
+               <line x1="160" y1="80" x2="160" y2="150" stroke="#3730A3" stroke-width="4"></line> <!-- Standing part -->
+               <line x1="160" y1="80" x2="30" y2="150" stroke="#F59E0B" stroke-width="3"></line> <!-- Broken fallen part -->
+               
+               <text x="15" y="160" font-weight="bold">C</text>
+               <text x="165" y="160" font-weight="bold">B</text>
+               <text x="165" y="75" font-weight="bold">D</text>
+               <text x="165" y="15" font-weight="bold">A</text>
+               
+               <text x="80" y="165" font-size="12">$8\sqrt{3}$</text>
+               <text x="170" y="120" font-size="12">h</text>
+               <text x="90" y="105" font-size="12" transform="rotate(28, 90, 105)">l</text>
+               
+               <path d="M 60 150 A 30 30 0 0 0 56 136" fill="none" stroke="#E11D48" stroke-width="2"></path>
+               <text x="65" y="145" font-size="10" font-weight="bold" fill="#E11D48">30°</text>
+            </svg>
+
+            <p>ধরি, পোস্টটির সম্পূর্ণ উচ্চতা $AB$। পোস্টটি $D$ বিন্দুতে মচকে গেছে।</p>
+            <p>মচকানো অংশ $AD$ মাটিতে $C$ বিন্দুতে স্পর্শ করেছে। সুতরাং $AD = CD$ (ধরি $l$)।</p>
+            <p>দণ্ডায়মান অংশ $BD = h$ মিটার।</p>
+            <p>গোড়া থেকে অগ্রভাগের দূরত্ব $BC = 8\sqrt{3}$ মিটার এবং উৎপন্ন কোণ $\angle DCB = 30^\circ$।</p>
+            
+            <p><strong>১) কত উপরে মচকে ছিল ($h$):</strong></p>
+            <p>সমকোণী $\triangle DBC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{BD}{BC} \\
+\frac{1}{\sqrt{3}} = \frac{h}{8\sqrt{3}} \\
+h = \frac{8\sqrt{3}}{\sqrt{3}} = 8 \text{ মিটার}
+\end{array}
+\]
+            <p>অর্থাৎ, পোস্টটি মাটি থেকে 8 মিটার উপরে মচকে ছিল。</p>
+
+            <p><strong>২) পোস্টটির সম্পূর্ণ উচ্চতা:</strong></p>
+            <p>এখন $CD$ (বা $l$) এর দৈর্ঘ্য বের করব:</p>
+            \[
+\begin{array}{l}
+\cos 30^\circ = \frac{BC}{CD} \\
+\frac{\sqrt{3}}{2} = \frac{8\sqrt{3}}{l} \\
+l\sqrt{3} = 16\sqrt{3} \\
+l = 16 \text{ মিটার}
+\end{array}
+\]
+            <p>পোস্টটির সম্পূর্ণ উচ্চতা = $AB = AD + BD = l + h = 16 + 8 = 24$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পোস্টটি 8 মিটার উপরে মচকে ছিল এবং তার সম্পূর্ণ উচ্চতা 24 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. আমাদের পাড়ায় রাস্তার দু-পাশে পরস্পর বিপরীত দিকে দুটি বাড়ি আছে। প্রথম বাড়ির দেয়ালের গোড়া থেকে 6 মিটার দূরে একটি মই-এর গোড়া রেখে যদি মইটিকে দেয়ালে ঠেকানো যায়, তবে তা অনুভূমিক রেখার সঙ্গে 30° কোণ উৎপন্ন করে। কিন্তু মইটিকে যদি একই জায়গায় রেখে দ্বিতীয় বাড়ির দেয়ালে লাগানো যায়, তাহলে অনুভূমিক রেখার সঙ্গে 60° কোণ উৎপন্ন করে।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <!-- Houses -->
+               <line x1="30" y1="20" x2="30" y2="130" stroke="#3730A3" stroke-width="4"></line> <!-- House 1 -->
+               <line x1="250" y1="20" x2="250" y2="130" stroke="#10B981" stroke-width="4"></line> <!-- House 2 -->
+               <!-- Road -->
+               <line x1="30" y1="130" x2="250" y2="130" stroke="#1F2937" stroke-width="2"></line>
+               <!-- Ladder positions -->
+               <line x1="110" y1="130" x2="30" y2="83.8" stroke="#F59E0B" stroke-width="2"></line> <!-- Ladder to House 1 (30 deg) -->
+               <line x1="110" y1="130" x2="250" y2="49.2" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4"></line> <!-- Ladder to House 2 (60 deg) -->
+               
+               <circle cx="110" cy="130" r="3" fill="#1F2937"></circle>
+               
+               <text x="15" y="145" font-weight="bold">A</text>
+               <text x="255" y="145" font-weight="bold">C</text>
+               <text x="105" y="145" font-weight="bold">P</text>
+               <text x="15" y="80" font-weight="bold">B</text>
+               <text x="255" y="45" font-weight="bold">D</text>
+               
+               <text x="60" y="145" font-size="12">6 মি.</text>
+               <text x="170" y="145" font-size="12">y</text>
+               
+               <!-- Angles -->
+               <path d="M 85 130 A 25 25 0 0 1 88 117" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="70" y="125" font-size="10" fill="#E11D48">30°</text>
+               <path d="M 130 130 A 20 20 0 0 0 120 112" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="135" y="125" font-size="10" fill="#E11D48">60°</text>
+            </svg>
+
+            <p>ধরি, মইটির গোড়া রাস্তার উপর P বিন্দুতে আছে। প্রথম বাড়ি AB এবং দ্বিতীয় বাড়ি CD।</p>
+            <p>প্রথম ক্ষেত্রে, মইটি PB এবং দ্বিতীয় ক্ষেত্রে মইটি PD। মইয়ের দৈর্ঘ্য $PB = PD = l$ মিটার।</p>
+            <p>দেওয়া আছে, প্রথম বাড়ির গোড়া থেকে মইয়ের দূরত্ব $AP = 6$ মিটার এবং $\angle BPA = 30^\circ$।</p>
+            <p>দ্বিতীয় বাড়ির ক্ষেত্রে, $\angle DPC = 60^\circ$।</p>
+            
+            <p><strong>(i) মইটির দৈর্ঘ্য:</strong></p>
+            <p>সমকোণী $\triangle PAB$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\cos 30^\circ = \frac{AP}{PB} \\
+\frac{\sqrt{3}}{2} = \frac{6}{l} \\
+l\sqrt{3} = 12 \\
+l = \frac{12}{\sqrt{3}} = \frac{12\sqrt{3}}{3} = 4\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p><i class="fas fa-arrow-right text-accent me-1"></i> উত্তর (i): মইটির দৈর্ঘ্য $4\sqrt{3}$ মিটার।</p>
+
+            <p><strong>(ii) দ্বিতীয় বাড়ির দেয়ালের গোড়া থেকে মইটির গোড়ার দূরত্ব:</strong></p>
+            <p>সমকোণী $\triangle PCD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\cos 60^\circ = \frac{PC}{PD} \\
+\frac{1}{2} = \frac{PC}{4\sqrt{3}} \\
+PC = \frac{4\sqrt{3}}{2} = 2\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p><i class="fas fa-arrow-right text-accent me-1"></i> উত্তর (ii): দূরত্ব $2\sqrt{3}$ মিটার।</p>
+
+            <p><strong>(iii) রাস্তাটি কত চওড়া:</strong></p>
+            <p>রাস্তার চওড়া = $AC = AP + PC = 6 + 2\sqrt{3}$ মিটার।</p>
+            <p><i class="fas fa-arrow-right text-accent me-1"></i> উত্তর (iii): রাস্তাটি $(6 + 2\sqrt{3})$ মিটার চওড়া।</p>
+
+            <p><strong>(iv) দ্বিতীয় বাড়ির কত উঁচুতে মইটির অগ্রভাগ স্পর্শ করবে:</strong></p>
+            <p>সমকোণী $\triangle PCD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\sin 60^\circ = \frac{CD}{PD} \\
+\frac{\sqrt{3}}{2} = \frac{CD}{4\sqrt{3}} \\
+2 \times CD = 4\sqrt{3} \times \sqrt{3} \\
+2 \times CD = 12 \\
+CD = 6 \text{ মিটার}
+\end{array}
+\]
+            <p><i class="fas fa-arrow-right text-accent me-1"></i> উত্তর (iv): দ্বিতীয় বাড়ির 6 মিটার উঁচুতে স্পর্শ করবে।</p>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. যদি একটি চিমনির গোড়ার সঙ্গে সমতলে অবস্থিত একটি বিন্দুর সাপেক্ষে চিমনির চূড়ার উন্নতি কোণ 60° হয় এবং সেই বিন্দু ও চিমনির গোড়ার সঙ্গে একই সরলরেখায় অবস্থিত ওই বিন্দু থেকে আরও 24 মিটার দূরের অপর একটি বিন্দুর সাপেক্ষে চিমনির চূড়ার উন্নতি কোণ 30° হয়, তাহলে চিমনির উচ্চতা হিসাব করে লিখি। [$\sqrt{3}$ এর আসন্ন মান 1.732 ধরে তিন দশমিক স্থান পর্যন্ত আসন্ন মান নির্ণয় করি]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <polygon points="20,130 140,130 140,30" fill="none" stroke="#3730A3" stroke-width="1.5"></polygon>
+               <line x1="20" y1="130" x2="220" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="220" y1="130" x2="220" y2="20" stroke="#E11D48" stroke-width="4"></line> <!-- Chimney -->
+               <line x1="140" y1="130" x2="220" y2="20" stroke="#10B981" stroke-width="1.5"></line> <!-- Line 1 -->
+               <line x1="40" y1="130" x2="220" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Line 2 -->
+               
+               <text x="30" y="145" font-weight="bold">D</text>
+               <text x="135" y="145" font-weight="bold">C</text>
+               <text x="225" y="145" font-weight="bold">B</text>
+               <text x="225" y="15" font-weight="bold">A</text>
+               
+               <text x="80" y="145" font-size="12">24 মি.</text>
+               <text x="175" y="145" font-size="12">x</text>
+               <text x="235" y="80" font-size="12" fill="#E11D48">h</text>
+               
+               <path d="M 125 130 A 15 15 0 0 1 129 118" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="110" y="125" font-size="10">60°</text>
+               <path d="M 65 130 A 25 25 0 0 1 68 120" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="50" y="125" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, চিমনির উচ্চতা $AB = h$ মিটার। প্রথম বিন্দু C এবং দ্বিতীয় বিন্দু D।</p>
+            <p>দেওয়া আছে, $CD = 24$ মিটার, $\angle ACB = 60^\circ$ এবং $\angle ADB = 30^\circ$।</p>
+            <p>ধরি, $BC = x$ মিটার। তাহলে $DB = x + 24$ মিটার।</p>
+            
+            <p>সমকোণী $\triangle ABC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{AB}{BC} \\
+\sqrt{3} = \frac{h}{x} \implies x = \frac{h}{\sqrt{3}} \quad \dots \text{(i)}
+\end{array}
+\]
+            
+            <p>সমকোণী $\triangle ABD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{AB}{DB} \\
+\frac{1}{\sqrt{3}} = \frac{h}{x + 24} \\
+x + 24 = h\sqrt{3}
+\end{array}
+\]
+            <p>(i) নং থেকে $x$-এর মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{h}{\sqrt{3}} + 24 = h\sqrt{3} \\
+h\sqrt{3} - \frac{h}{\sqrt{3}} = 24 \\
+\frac{3h - h}{\sqrt{3}} = 24 \\
+\frac{2h}{\sqrt{3}} = 24 \\
+2h = 24\sqrt{3} \\
+h = 12\sqrt{3}
+\end{array}
+\]
+            <p>$\sqrt{3} = 1.732$ বসিয়ে পাই:</p>
+            <p>$h = 12 \times 1.732 = 20.784$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চিমনির উচ্চতা 20.784 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. সূর্যের উন্নতি কোণ 45° থেকে বৃদ্ধি পেয়ে 60° হলে, একটি খুঁটির ছায়ার দৈর্ঘ্য 3 মিটার কমে যায়। খুঁটিটির উচ্চতা নির্ণয় করি। [$\sqrt{3} = 1.732$ ধরে তিন দশমিক স্থান পর্যন্ত আসন্ন মান নির্ণয় করি]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="150" viewBox="0 0 220 150">
+               <line x1="20" y1="120" x2="200" y2="120" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="180" y1="120" x2="180" y2="30" stroke="#3B82F6" stroke-width="4"></line> <!-- Pole -->
+               
+               <line x1="110" y1="120" x2="180" y2="30" stroke="#10B981" stroke-width="1.5"></line> <!-- 60 deg line -->
+               <line x1="40" y1="120" x2="180" y2="30" stroke="#F59E0B" stroke-width="1.5"></line> <!-- 45 deg line -->
+               
+               <text x="30" y="135" font-weight="bold">C</text>
+               <text x="100" y="135" font-weight="bold">D</text>
+               <text x="175" y="135" font-weight="bold">B</text>
+               <text x="175" y="20" font-weight="bold">A</text>
+               
+               <text x="65" y="135" font-size="12">3 মি.</text>
+               <text x="140" y="135" font-size="12">y</text>
+               <text x="190" y="80" font-size="12" fill="#3B82F6">h</text>
+               
+               <path d="M 60 120 A 20 20 0 0 0 54 110" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="45" y="115" font-size="10">45°</text>
+               
+               <path d="M 125 120 A 15 15 0 0 0 120 108" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="115" y="115" font-size="10">60°</text>
+            </svg>
+
+            <p>ধরি, খুঁটির উচ্চতা $h$ মিটার। প্রথমে ছায়ার দৈর্ঘ্য ছিল $BD + 3$ মিটার এবং কোণ ছিল $45^\circ$।</p>
+            <p>পরে কোণ $60^\circ$ হওয়ায় ছায়ার দৈর্ঘ্য হলো $BD = y$ মিটার।</p>
+            
+            <p>প্রথম সমকোণী ত্রিভুজ $\triangle ABC$ (উন্নতি কোণ $45^\circ$) থেকে পাই:</p>
+            \[
+\begin{array}{l}
+\tan 45^\circ = \frac{h}{y + 3} \\
+1 = \frac{h}{y + 3} \implies y + 3 = h \implies y = h - 3 \quad \dots \text{(i)}
+\end{array}
+\]
+            
+            <p>দ্বিতীয় সমকোণী ত্রিভুজ $\triangle ABD$ (উন্নতি কোণ $60^\circ$) থেকে পাই:</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h}{y} \\
+\sqrt{3} = \frac{h}{h - 3} \quad [\text{(i) থেকে } y=h-3 \text{ বসিয়ে}] \\
+h\sqrt{3} - 3\sqrt{3} = h \\
+h\sqrt{3} - h = 3\sqrt{3} \\
+h(\sqrt{3} - 1) = 3\sqrt{3} \\
+h = \frac{3\sqrt{3}}{\sqrt{3} - 1}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করে পাই:</p>
+            \[
+\begin{array}{l}
+h = \frac{3\sqrt{3}(\sqrt{3} + 1)}{(\sqrt{3} - 1)(\sqrt{3} + 1)} \\
+= \frac{9 + 3\sqrt{3}}{3 - 1} = \frac{9 + 3\sqrt{3}}{2}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+h = \frac{9 + 3(1.732)}{2} \\
+= \frac{9 + 5.196}{2} \\
+= \frac{14.196}{2} = 7.098 \text{ মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: খুঁটিটির উচ্চতা 7.098 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. $9\sqrt{3}$ মিটার উঁচু তিনতলা বাড়ির ছাদ থেকে দেখলে 30 মিটার দূরে অবস্থিত একটি কারখানার চিমনির উন্নতি কোণ 30° হয়। চিমনির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="180" viewBox="0 0 220 180">
+               <line x1="30" y1="150" x2="190" y2="150" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="50" y1="150" x2="50" y2="80" stroke="#3B82F6" stroke-width="4"></line> <!-- Building -->
+               <line x1="170" y1="150" x2="170" y2="20" stroke="#E11D48" stroke-width="4"></line> <!-- Chimney -->
+               
+               <line x1="50" y1="80" x2="170" y2="80" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal line -->
+               <line x1="50" y1="80" x2="170" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Line of sight -->
+               
+               <text x="35" y="165" font-weight="bold">B</text>
+               <text x="35" y="80" font-weight="bold">A</text>
+               <text x="175" y="165" font-weight="bold">D</text>
+               <text x="175" y="20" font-weight="bold">C</text>
+               <text x="175" y="85" font-weight="bold">E</text>
+               
+               <text x="5" y="120" font-size="12">$9\sqrt{3}$</text>
+               <text x="100" y="165" font-size="12">30 মি.</text>
+               
+               <path d="M 80 80 A 30 30 0 0 0 76 68" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="85" y="75" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, বাড়ির উচ্চতা $AB = 9\sqrt{3}$ মিটার। চিমনির উচ্চতা $CD$।</p>
+            <p>বাড়ির ছাদ A থেকে চিমনির চূড়া C এর উন্নতি কোণ $\angle CAE = 30^\circ$ (যেখানে AE হলো অনুভূমিক রেখা, যা BD এর সমান্তরাল)।</p>
+            <p>দেওয়া আছে, বাড়ি ও চিমনির দূরত্ব $BD = 30$ মিটার। $\therefore AE = 30$ মিটার।</p>
+            <p>এবং $ED = AB = 9\sqrt{3}$ মিটার।</p>
+            <p>সমকোণী $\triangle ACE$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan \angle CAE = \frac{CE}{AE} \\
+\tan 30^\circ = \frac{CE}{30} \\
+\frac{1}{\sqrt{3}} = \frac{CE}{30} \\
+CE = \frac{30}{\sqrt{3}} = \frac{30\sqrt{3}}{3} = 10\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>চিমনির মোট উচ্চতা = $CD = CE + ED$</p>
+            \[
+\begin{array}{l}
+CD = 10\sqrt{3} + 9\sqrt{3} \\
+= 19\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চিমনির উচ্চতা $19\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. একটি লাইট হাউস থেকে তার সঙ্গে একই সরলরেখায় অবস্থিত দুটি জাহাজের মাস্তুলের গোড়ার অবনতি কোণ যদি যথাক্রমে 60° ও 30° হয় এবং কাছের জাহাজের মাস্তুল যদি লাইট হাউস থেকে 150 মিটার দূরত্বে থাকে, তাহলে দূরের জাহাজের মাস্তুল লাইট হাউস থেকে কত দূরত্বে রয়েছে এবং লাইট হাউসটির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="160" viewBox="0 0 280 160">
+               <line x1="20" y1="130" x2="250" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- Water -->
+               <line x1="220" y1="130" x2="220" y2="30" stroke="#6366F1" stroke-width="4"></line> <!-- Lighthouse -->
+               
+               <line x1="220" y1="30" x2="150" y2="130" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Line to C -->
+               <line x1="220" y1="30" x2="50" y2="130" stroke="#10B981" stroke-width="1.5"></line> <!-- Line to D -->
+               <line x1="220" y1="30" x2="20" y2="30" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal -->
+               
+               <text x="225" y="145" font-weight="bold">B</text>
+               <text x="225" y="25" font-weight="bold">A</text>
+               <text x="145" y="145" font-weight="bold">C</text>
+               <text x="45" y="145" font-weight="bold">D</text>
+               
+               <text x="230" y="80" font-size="12" fill="#6366F1">h</text>
+               <text x="180" y="145" font-size="12">150 মি.</text>
+               
+               <path d="M 165 130 A 15 15 0 0 1 160 115" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="165" y="120" font-size="10">60°</text>
+               <path d="M 70 130 A 20 20 0 0 1 65 120" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="75" y="120" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, লাইট হাউসের উচ্চতা $AB = h$ মিটার (A চূড়া, B গোড়া)।</p>
+            <p>কাছের জাহাজ C এবং দূরের জাহাজ D। অবনতি কোণগুলির একান্তর কোণ হিসেবে উন্নতি কোণ হবে $\angle ACB = 60^\circ$ এবং $\angle ADB = 30^\circ$।</p>
+            <p>দেওয়া আছে, কাছের জাহাজের দূরত্ব $BC = 150$ মিটার।</p>
+            <p><strong>১) লাইট হাউসের উচ্চতা:</strong></p>
+            <p>সমকোণী $\triangle ABC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{AB}{BC} \\
+\sqrt{3} = \frac{h}{150} \\
+h = 150\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p><strong>২) দূরের জাহাজের দূরত্ব:</strong></p>
+            <p>ধরি, দূরের জাহাজের দূরত্ব $BD = x$ মিটার।</p>
+            <p>সমকোণী $\triangle ABD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{AB}{BD} \\
+\frac{1}{\sqrt{3}} = \frac{150\sqrt{3}}{x} \\
+x = 150\sqrt{3} \times \sqrt{3} \\
+x = 150 \times 3 = 450 \text{ মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: লাইট হাউসের উচ্চতা $150\sqrt{3}$ মিটার এবং দূরের জাহাজটি 450 মিটার দূরে রয়েছে।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. একটি পাঁচতলা বাড়ির ছাদের কোনো বিন্দু থেকে দেখলে মনুমেন্টের চূড়ার উন্নতি কোণ ও গোড়ার অবনতি কোণ যথাক্রমে 60° ও 30° ; বাড়িটির উচ্চতা 16 মিটার হলে, মনুমেন্টের উচ্চতা এবং বাড়িটি মনুমেন্ট থেকে কত দূরে অবস্থিত হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="200" viewBox="0 0 220 200">
+               <line x1="30" y1="180" x2="190" y2="180" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="50" y1="180" x2="50" y2="100" stroke="#3B82F6" stroke-width="4"></line> <!-- Building -->
+               <line x1="170" y1="180" x2="170" y2="20" stroke="#10B981" stroke-width="4"></line> <!-- Monument -->
+               
+               <line x1="50" y1="100" x2="170" y2="100" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal -->
+               <line x1="50" y1="100" x2="170" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Elev -->
+               <line x1="50" y1="100" x2="170" y2="180" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Depr -->
+               
+               <text x="35" y="195" font-weight="bold">B</text>
+               <text x="35" y="100" font-weight="bold">A</text>
+               <text x="175" y="195" font-weight="bold">D</text>
+               <text x="175" y="20" font-weight="bold">C</text>
+               <text x="175" y="105" font-weight="bold">E</text>
+               
+               <text x="25" y="145" font-size="12">16</text>
+            </svg>
+
+            <p>ধরি, বাড়িটির উচ্চতা $AB = 16$ মিটার এবং মনুমেন্টের উচ্চতা $CD$।</p>
+            <p>A বিন্দু থেকে মনুমেন্টের চূড়া C এর উন্নতি কোণ $\angle CAE = 60^\circ$ (যেখানে AE অনুভূমিক রেখা)।</p>
+            <p>A বিন্দু থেকে মনুমেন্টের গোড়া D এর অবনতি কোণ $\angle EAD = 30^\circ$। একান্তর কোণ হিসেবে $\angle ADB = 30^\circ$।</p>
+            <p>চিত্রানুযায়ী $ED = AB = 16$ মিটার এবং $AE = BD$ (বাড়ি ও মনুমেন্টের দূরত্ব)।</p>
+            
+            <p><strong>১) দূরত্ব নির্ণয়:</strong></p>
+            <p>সমকোণী $\triangle ABD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{AB}{BD} \\
+\frac{1}{\sqrt{3}} = \frac{16}{BD} \\
+BD = 16\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>সুতরাং, বাড়ি ও মনুমেন্টের দূরত্ব $16\sqrt{3}$ মিটার। ($\therefore AE = 16\sqrt{3}$)</p>
+
+            <p><strong>২) মনুমেন্টের উচ্চতা নির্ণয়:</strong></p>
+            <p>সমকোণী $\triangle ACE$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{CE}{AE} \\
+\sqrt{3} = \frac{CE}{16\sqrt{3}} \\
+CE = 16\sqrt{3} \times \sqrt{3} \\
+CE = 16 \times 3 = 48 \text{ মিটার}
+\end{array}
+\]
+            <p>মনুমেন্টের মোট উচ্চতা = $CD = CE + ED = 48 + 16 = 64$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মনুমেন্টের উচ্চতা 64 মিটার এবং দূরত্ব $16\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. 250 মিটার লম্বা সুতো দিয়ে একটি ঘুড়ি ওড়াচ্ছি। সুতোটি যখন অনুভূমিক রেখার সঙ্গে 60° কোণ করে থাকে এবং সুতোটি যখন অনুভূমিক রেখার সঙ্গে 45° কোণ করে তখন প্রতিক্ষেত্রে ঘুড়িটি আমার থেকে কত উপরে থাকবে হিসাব করে লিখি। এদের মধ্যে কোন ক্ষেত্রে ঘুড়িটি বেশি উঁচুতে থাকবে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="160" viewBox="0 0 220 160">
+               <line x1="20" y1="140" x2="200" y2="140" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="160" y1="140" x2="160" y2="20" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4"></line> <!-- Vertical line -->
+               
+               <line x1="40" y1="140" x2="160" y2="20" stroke="#10B981" stroke-width="2"></line> <!-- 60 deg hypotenuse -->
+               <line x1="40" y1="140" x2="160" y2="60" stroke="#F59E0B" stroke-width="2"></line> <!-- 45 deg hypotenuse -->
+               
+               <circle cx="160" cy="20" r="4" fill="#10B981"></circle> <!-- Kite at 60 -->
+               <circle cx="160" cy="60" r="4" fill="#F59E0B"></circle> <!-- Kite at 45 -->
+               <circle cx="40" cy="140" r="3" fill="#1F2937"></circle>
+               
+               <text x="30" y="155" font-weight="bold">O</text>
+               <text x="165" y="155" font-weight="bold">M</text>
+               <text x="170" y="25" font-weight="bold">K1</text>
+               <text x="170" y="65" font-weight="bold">K2</text>
+               
+               <text x="80" y="70" font-size="12" transform="rotate(-45, 80, 70)">250 মি.</text>
+               
+               <path d="M 65 140 A 25 25 0 0 0 60 120" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="70" y="130" font-size="10">60°</text>
+               <path d="M 75 140 A 35 35 0 0 0 70 120" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="80" y="135" font-size="10">45°</text>
+            </svg>
+
+            <p>সুতোর দৈর্ঘ্য (অতিভুজ) সর্বদা = 250 মিটার।</p>
+            <p><strong>প্রথম ক্ষেত্র ($60^\circ$ কোণে):</strong></p>
+            <p>উচ্চতা ধরি $h_1$।</p>
+            \[
+\begin{array}{l}
+\sin 60^\circ = \frac{h_1}{250} \\
+\frac{\sqrt{3}}{2} = \frac{h_1}{250} \\
+h_1 = \frac{250\sqrt{3}}{2} = 125\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>$125\sqrt{3} \approx 125 \times 1.732 = 216.5$ মিটার।</p>
+
+            <p><strong>দ্বিতীয় ক্ষেত্র ($45^\circ$ কোণে):</strong></p>
+            <p>উচ্চতা ধরি $h_2$।</p>
+            \[
+\begin{array}{l}
+\sin 45^\circ = \frac{h_2}{250} \\
+\frac{1}{\sqrt{2}} = \frac{h_2}{250} \\
+h_2 = \frac{250}{\sqrt{2}} = \frac{250\sqrt{2}}{2} = 125\sqrt{2} \text{ মিটার}
+\end{array}
+\]
+            <p>$125\sqrt{2} \approx 125 \times 1.414 = 176.75$ মিটার।</p>
+            <p>যেহেতু $\sqrt{3} &gt; \sqrt{2}$, তাই $125\sqrt{3} &gt; 125\sqrt{2}$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রথম ক্ষেত্রে ঘুড়িটি $125\sqrt{3}$ মিটার এবং দ্বিতীয় ক্ষেত্রে $125\sqrt{2}$ মিটার উঁচুতে থাকবে। 60° কোণের ক্ষেত্রে ঘুড়িটি বেশি উঁচুতে থাকবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. উড়োজাহাজের একজন যাত্রী কোনো এক সময় তাঁর এক পাশে হাওড়া স্টেশনটি এবং ঠিক বিপরীত পাশে শহিদ মিনারটি যথাক্রমে 60° ও 30° অবনতি কোণে দেখতে পান। ওই সময়ে উড়োজাহাজটি যদি $545\sqrt{3}$ মিটার উঁচুতে থাকে, তাহলে হাওড়া স্টেশন ও শহিদ মিনারের দূরত্ব নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <line x1="20" y1="130" x2="260" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="140" y1="130" x2="140" y2="30" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4"></line> <!-- Height -->
+               
+               <line x1="140" y1="30" x2="40" y2="130" stroke="#E11D48" stroke-width="2"></line> <!-- To Howrah -->
+               <line x1="140" y1="30" x2="240" y2="130" stroke="#10B981" stroke-width="2"></line> <!-- To Minar -->
+               
+               <line x1="20" y1="30" x2="260" y2="30" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal flight line -->
+               
+               <circle cx="140" cy="30" r="4" fill="#3B82F6"></circle> <!-- Plane -->
+               <circle cx="40" cy="130" r="4" fill="#1F2937"></circle>
+               <circle cx="240" cy="130" r="4" fill="#1F2937"></circle>
+               
+               <text x="135" y="20" font-weight="bold">A</text>
+               <text x="30" y="145" font-weight="bold">B</text>
+               <text x="235" y="145" font-weight="bold">C</text>
+               <text x="135" y="145" font-weight="bold">D</text>
+               
+               <text x="145" y="80" font-size="12">$545\sqrt{3}$</text>
+               
+               <path d="M 60 130 A 20 20 0 0 0 54 116" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="65" y="125" font-size="10">60°</text>
+               <path d="M 215 130 A 25 25 0 0 1 220 120" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="200" y="125" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, উড়োজাহাজের অবস্থান A। এর লম্ব উচ্চতা $AD = 545\sqrt{3}$ মিটার।</p>
+            <p>মাটিতে D বিন্দুর একপাশে হাওড়া স্টেশন (B) এবং অপর পাশে শহিদ মিনার (C)।</p>
+            <p>A বিন্দু থেকে B-এর অবনতি কোণ 60° (একান্তর কোণ $\angle ABD = 60^\circ$)।</p>
+            <p>A বিন্দু থেকে C-এর অবনতি কোণ 30° (একান্তর কোণ $\angle ACD = 30^\circ$)।</p>
+            
+            <p>সমকোণী $\triangle ABD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{AD}{BD} \\
+\sqrt{3} = \frac{545\sqrt{3}}{BD} \\
+BD = 545 \text{ মিটার}
+\end{array}
+\]
+            
+            <p>সমকোণী $\triangle ACD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{AD}{CD} \\
+\frac{1}{\sqrt{3}} = \frac{545\sqrt{3}}{CD} \\
+CD = 545\sqrt{3} \times \sqrt{3} = 545 \times 3 = 1635 \text{ মিটার}
+\end{array}
+\]
+            <p>মোট দূরত্ব = $BC = BD + CD = 545 + 1635 = 2180$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: হাওড়া স্টেশন ও শহিদ মিনারের মধ্যে দূরত্ব 2180 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. একটি তিনতলা বাড়ির ছাদে 3.3 মিটার দৈর্ঘ্যের একটি পতাকা আছে। রাস্তার কোনো এক স্থান থেকে দেখলে পতাকা দণ্ডটির চূড়া ও পাদদেশের উন্নতি কোণ যথাক্রমে 50° ও 45° হয়। তিনতলা বাড়িটির উচ্চতা হিসাব করে লিখি। [ধরি, $\tan 50^\circ = 1.192$]</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="180" viewBox="0 0 220 180">
+               <line x1="20" y1="150" x2="200" y2="150" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="160" y1="150" x2="160" y2="70" stroke="#3B82F6" stroke-width="4"></line> <!-- Building -->
+               <line x1="160" y1="70" x2="160" y2="30" stroke="#E11D48" stroke-width="3"></line> <!-- Flag -->
+               
+               <line x1="40" y1="150" x2="160" y2="70" stroke="#10B981" stroke-width="1.5"></line> <!-- To base -->
+               <line x1="40" y1="150" x2="160" y2="30" stroke="#F59E0B" stroke-width="1.5"></line> <!-- To top -->
+               
+               <text x="30" y="165" font-weight="bold">P</text>
+               <text x="165" y="165" font-weight="bold">A</text>
+               <text x="165" y="75" font-weight="bold">B</text>
+               <text x="165" y="25" font-weight="bold">C</text>
+               
+               <text x="175" y="55" font-size="12">3.3মি.</text>
+               <text x="175" y="115" font-size="12" fill="#3B82F6">h</text>
+               
+               <path d="M 60 150 A 20 20 0 0 0 54 135" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="65" y="145" font-size="10">45°</text>
+               <path d="M 70 150 A 30 30 0 0 0 62 125" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="75" y="130" font-size="10">50°</text>
+            </svg>
+
+            <p>ধরি, বাড়িটির উচ্চতা $AB = h$ মিটার। পতাকাদণ্ড $BC = 3.3$ মিটার।</p>
+            <p>রাস্তার একটি বিন্দু P থেকে দেখলে, পতাকার পাদদেশ (B)-এর উন্নতি কোণ $\angle APB = 45^\circ$ এবং চূড়া (C)-এর উন্নতি কোণ $\angle APC = 50^\circ$।</p>
+            <p>ধরি, বাড়ি থেকে বিন্দুর দূরত্ব $AP = x$ মিটার।</p>
+            
+            <p>সমকোণী $\triangle PAB$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 45^\circ = \frac{AB}{AP} \\
+1 = \frac{h}{x} \implies x = h \quad \dots \text{(i)}
+\end{array}
+\]
+            
+            <p>সমকোণী $\triangle PAC$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 50^\circ = \frac{AC}{AP} \\
+1.192 = \frac{h + 3.3}{x} \\
+1.192 = \frac{h + 3.3}{h} \quad [\text{(i) থেকে } x=h \text{ বসিয়ে}] \\
+1.192h = h + 3.3 \\
+1.192h - h = 3.3 \\
+0.192h = 3.3 \\
+h = \frac{3.3}{0.192} \\
+h = \frac{3300}{192} = 17.1875
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: তিনতলা বাড়িটির উচ্চতা 17.1875 মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. দুটি স্তম্ভের উচ্চতা যথাক্রমে 180 মিটার ও 60 মিটার। দ্বিতীয় স্তম্ভটির গোড়া থেকে প্রথমটির চূড়ার উন্নতি কোণ 60° হলে, প্রথমটির গোড়া থেকে দ্বিতীয়টির চূড়ার উন্নতি কোণ হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="180" viewBox="0 0 220 180">
+               <line x1="20" y1="150" x2="200" y2="150" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="50" y1="150" x2="50" y2="20" stroke="#3B82F6" stroke-width="4"></line> <!-- Pillar 1 -->
+               <line x1="170" y1="150" x2="170" y2="100" stroke="#10B981" stroke-width="4"></line> <!-- Pillar 2 -->
+               
+               <line x1="170" y1="150" x2="50" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Elev to P1 -->
+               <line x1="50" y1="150" x2="170" y2="100" stroke="#E11D48" stroke-width="1.5"></line> <!-- Elev to P2 -->
+               
+               <text x="35" y="165" font-weight="bold">B</text>
+               <text x="35" y="25" font-weight="bold">A</text>
+               <text x="175" y="165" font-weight="bold">D</text>
+               <text x="175" y="100" font-weight="bold">C</text>
+               
+               <text x="15" y="90" font-size="12">180মি.</text>
+               <text x="180" y="130" font-size="12">60মি.</text>
+               
+               <path d="M 150 150 A 20 20 0 0 1 155 133" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="145" y="125" font-size="10">60°</text>
+               
+               <path d="M 70 150 A 20 20 0 0 0 65 142" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="75" y="145" font-size="10">θ</text>
+            </svg>
+
+            <p>ধরি, প্রথম স্তম্ভ $AB = 180$ মি. এবং দ্বিতীয় স্তম্ভ $CD = 60$ মি.।</p>
+            <p>স্তম্ভ দুটির মধ্যবর্তী দূরত্ব $BD = x$ মিটার।</p>
+            <p>দ্বিতীয় স্তম্ভের গোড়া (D) থেকে প্রথমটির চূড়া (A)-এর উন্নতি কোণ $\angle ADB = 60^\circ$।</p>
+            <p>সমকোণী $\triangle ABD$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{AB}{BD} \\
+\sqrt{3} = \frac{180}{x} \\
+x = \frac{180}{\sqrt{3}} = \frac{180\sqrt{3}}{3} = 60\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>এখন, প্রথমটির গোড়া (B) থেকে দ্বিতীয়টির চূড়া (C)-এর উন্নতি কোণ ধরি $\theta$ ($\angle CBD = \theta$)।</p>
+            <p>সমকোণী $\triangle CDB$ থেকে পাই,</p>
+            \[
+\begin{array}{l}
+\tan \theta = \frac{CD}{BD} \\
+\tan \theta = \frac{60}{60\sqrt{3}} \\
+\tan \theta = \frac{1}{\sqrt{3}}
+\end{array}
+\]
+            <p>আমরা জানি $\tan 30^\circ = \displaystyle\frac{1}{\sqrt{3}}$, তাই $\theta = 30^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় উন্নতি কোণ 30°।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. সূর্যের উন্নতি কোণ 45° হলে, কোনো সমতলে অবস্থিত একটি স্তম্ভের ছায়ার দৈর্ঘ্য যা হয়, উন্নতি কোণ 30° হলে, ছায়ার দৈর্ঘ্য তার চেয়ে 60 মিটার বেশি হয়। স্তম্ভটির উচ্চতা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <line x1="20" y1="120" x2="250" y2="120" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="220" y1="120" x2="220" y2="30" stroke="#3B82F6" stroke-width="4"></line> <!-- Pole -->
+               
+               <line x1="130" y1="120" x2="220" y2="30" stroke="#10B981" stroke-width="1.5"></line> <!-- 45 deg line -->
+               <line x1="40" y1="120" x2="220" y2="30" stroke="#F59E0B" stroke-width="1.5"></line> <!-- 30 deg line -->
+               
+               <text x="30" y="135" font-weight="bold">D</text>
+               <text x="120" y="135" font-weight="bold">C</text>
+               <text x="225" y="135" font-weight="bold">B</text>
+               <text x="225" y="20" font-weight="bold">A</text>
+               
+               <text x="80" y="135" font-size="12">60 মি.</text>
+               <text x="170" y="135" font-size="12">x</text>
+               <text x="235" y="80" font-size="12" fill="#3B82F6">h</text>
+               
+               <path d="M 115 120 A 15 15 0 0 1 118 108" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="100" y="115" font-size="10">45°</text>
+               
+               <path d="M 65 120 A 25 25 0 0 1 68 110" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="50" y="110" font-size="10">30°</text>
+            </svg>
+
+            <p>এই সমস্যাটি অনেকটা 8 নং প্রশ্নের মতোই।</p>
+            <p>ধরি, স্তম্ভের উচ্চতা $h$ মিটার। 45° কোণের ক্ষেত্রে ছায়ার দৈর্ঘ্য $x$ মিটার।</p>
+            <p>30° কোণের ক্ষেত্রে ছায়ার দৈর্ঘ্য হবে $(x + 60)$ মিটার।</p>
+            <p>প্রথম ক্ষেত্রে:</p>
+            \[
+\begin{array}{l}
+\tan 45^\circ = \frac{h}{x} \\
+1 = \frac{h}{x} \implies x = h \quad \dots \text{(i)}
+\end{array}
+\]
+            <p>দ্বিতীয় ক্ষেত্রে:</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{h}{x + 60} \\
+\frac{1}{\sqrt{3}} = \frac{h}{h + 60} \quad [\text{(i) থেকে } x=h] \\
+h\sqrt{3} = h + 60 \\
+h\sqrt{3} - h = 60 \\
+h(\sqrt{3} - 1) = 60 \\
+h = \frac{60}{\sqrt{3} - 1}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করে পাই:</p>
+            \[
+\begin{array}{l}
+h = \frac{60(\sqrt{3} + 1)}{(\sqrt{3} - 1)(\sqrt{3} + 1)} \\
+= \frac{60(\sqrt{3} + 1)}{3 - 1} = \frac{60(\sqrt{3} + 1)}{2} = 30(\sqrt{3} + 1)
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্তম্ভটির উচ্চতা $30(\sqrt{3} + 1)$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="solution-card">
+        <h4 class="question-title">17. একটি চিমনির সঙ্গে একই সমতলে অবস্থিত অনুভূমিক সরলরেখায় কোনো এক বিন্দু থেকে চিমনির দিকে 50 মিটার এগিয়ে যাওয়ায় তার চূড়ার উন্নতি কোণ 30° থেকে 60° হলো। চিমনির উচ্চতা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <line x1="20" y1="130" x2="250" y2="130" stroke="#1F2937" stroke-width="2"></line>
+               <line x1="220" y1="130" x2="220" y2="20" stroke="#E11D48" stroke-width="4"></line> <!-- Chimney -->
+               
+               <line x1="140" y1="130" x2="220" y2="20" stroke="#10B981" stroke-width="1.5"></line> <!-- 60 deg line -->
+               <line x1="40" y1="130" x2="220" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- 30 deg line -->
+               
+               <text x="30" y="145" font-weight="bold">D</text>
+               <text x="135" y="145" font-weight="bold">C</text>
+               <text x="225" y="145" font-weight="bold">B</text>
+               <text x="225" y="15" font-weight="bold">A</text>
+               
+               <text x="80" y="145" font-size="12">50 মি.</text>
+               <text x="175" y="145" font-size="12">x</text>
+               <text x="235" y="80" font-size="12" fill="#E11D48">h</text>
+               
+               <path d="M 125 130 A 15 15 0 0 1 129 118" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="110" y="125" font-size="10">60°</text>
+               <path d="M 65 130 A 25 25 0 0 1 68 120" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="50" y="125" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, চিমনির উচ্চতা $h$ মিটার।</p>
+            <p>প্রথম বিন্দু থেকে দূরত্ব $(x + 50)$ মিটার এবং কোণ $30^\circ$।</p>
+            <p>50 মিটার এগিয়ে এলে নতুন দূরত্ব $x$ মিটার এবং কোণ $60^\circ$।</p>
+            <p>দ্বিতীয় অবস্থান থেকে:</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h}{x} \\
+\sqrt{3} = \frac{h}{x} \implies x = \frac{h}{\sqrt{3}} \quad \dots \text{(i)}
+\end{array}
+\]
+            <p>প্রথম অবস্থান থেকে:</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{h}{x + 50} \\
+\frac{1}{\sqrt{3}} = \frac{h}{\frac{h}{\sqrt{3}} + 50} \\
+\frac{h}{\sqrt{3}} + 50 = h\sqrt{3} \\
+50 = h\sqrt{3} - \frac{h}{\sqrt{3}} \\
+50 = \frac{3h - h}{\sqrt{3}} \\
+50 = \frac{2h}{\sqrt{3}} \\
+2h = 50\sqrt{3} \\
+h = 25\sqrt{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চিমনির উচ্চতা $25\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="solution-card">
+        <h4 class="question-title">18. 126 ডেসিমি. উঁচু একটি উলম্ব খুঁটি মাটি থেকে কিছু উপরে দুমড়ে গিয়ে উপরের অংশ কাত হয়ে পড়ায় তার অগ্রভাগ মাটি স্পর্শ করে ভূমির সঙ্গে 30° কোণ উৎপন্ন করেছে। খুঁটিটি কত উপরে দুমড়ে গিয়েছিল এবং তার অগ্রভাগ গোড়া থেকে কত দূরে মাটি স্পর্শ করেছিল হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="180" viewBox="0 0 220 180">
+               <!-- Full original pole -->
+               <line x1="160" y1="20" x2="160" y2="150" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4"></line>
+               <!-- Broken part falling down -->
+               <polygon points="30,150 160,150 160,80" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></polygon>
+               <line x1="160" y1="80" x2="160" y2="150" stroke="#3730A3" stroke-width="4"></line> <!-- Standing part -->
+               <line x1="160" y1="80" x2="30" y2="150" stroke="#F59E0B" stroke-width="3"></line> <!-- Broken fallen part -->
+               
+               <text x="15" y="160" font-weight="bold">C</text>
+               <text x="165" y="160" font-weight="bold">B</text>
+               <text x="165" y="75" font-weight="bold">D</text>
+               <text x="165" y="15" font-weight="bold">A</text>
+               
+               <text x="80" y="165" font-size="12">x</text>
+               <text x="170" y="120" font-size="12">h</text>
+               <text x="90" y="105" font-size="12" transform="rotate(28, 90, 105)">l</text>
+               
+               <path d="M 60 150 A 30 30 0 0 0 56 136" fill="none" stroke="#E11D48" stroke-width="2"></path>
+               <text x="65" y="145" font-size="10" font-weight="bold" fill="#E11D48">30°</text>
+            </svg>
+
+            <p>খুঁটির মোট উচ্চতা = 126 ডেসিমি.</p>
+            <p>ধরি, খুঁটিটি $h$ ডেসিমি. উচ্চতায় ভেঙেছিল এবং ভাঙা অংশের দৈর্ঘ্য $l$ ডেসিমি.।</p>
+            <p>শর্তানুসারে, $l + h = 126 \implies l = 126 - h$</p>
+            <p>মাটির সাথে উৎপন্ন কোণ 30°। এখানে $h$ হলো লম্ব এবং $l$ হলো অতিভুজ।</p>
+            \[
+\begin{array}{l}
+\sin 30^\circ = \frac{h}{l} \\
+\frac{1}{2} = \frac{h}{126 - h} \\
+126 - h = 2h \\
+3h = 126 \\
+h = 42 \text{ ডেসিমি.}
+\end{array}
+\]
+            <p>খুঁটিটি 42 ডেসিমি. উপরে দুমড়ে গিয়েছিল।</p>
+            <p>এখন, ভাঙা অংশটির দৈর্ঘ্য $l = 126 - 42 = 84$ ডেসিমি।</p>
+            <p>অগ্রভাগ গোড়া থেকে কত দূরে মাটি স্পর্শ করেছিল (ভূমি) বের করব:</p>
+            \[
+\begin{array}{l}
+\cos 30^\circ = \frac{\text{ভূমি}}{l} \\
+\frac{\sqrt{3}}{2} = \frac{\text{ভূমি}}{84} \\
+\text{ভূমি} = \frac{84\sqrt{3}}{2} = 42\sqrt{3} \text{ ডেসিমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: খুঁটিটি 42 ডেসিমি. উপরে দুমড়েছিল এবং তার অগ্রভাগ $42\sqrt{3}$ ডেসিমি. দূরে মাটি স্পর্শ করেছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="solution-card">
+        <h4 class="question-title">19. মাঠের মাঝখানে দাঁড়িয়ে মোহিত একটি উড়ন্ত পাখিকে প্রথমে উত্তরদিকে 30° উন্নতি কোণে এবং 2 মিনিট পরে দক্ষিণদিকে 60° উন্নতি কোণে দেখতে পেল। পাখিটি যদি একই সরলরেখা বরাবর $50\sqrt{3}$ মিটার উঁচুতে উড়ে থাকে, তবে তার গতিবেগ কিলোমিটার প্রতি ঘন্টায় নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="160" viewBox="0 0 280 160">
+               <line x1="20" y1="130" x2="260" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="140" y1="130" x2="140" y2="30" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4"></line> <!-- Height -->
+               
+               <line x1="140" y1="130" x2="40" y2="30" stroke="#E11D48" stroke-width="1.5"></line> <!-- Elev North -->
+               <line x1="140" y1="130" x2="240" y2="30" stroke="#10B981" stroke-width="1.5"></line> <!-- Elev South -->
+               
+               <line x1="20" y1="30" x2="260" y2="30" stroke="#3B82F6" stroke-width="2"></line> <!-- Flight path -->
+               
+               <circle cx="140" cy="130" r="4" fill="#374151"></circle> <!-- Mohit -->
+               <circle cx="40" cy="30" r="4" fill="#E11D48"></circle> <!-- Bird North -->
+               <circle cx="240" cy="30" r="4" fill="#10B981"></circle> <!-- Bird South -->
+               
+               <text x="145" y="145" font-weight="bold">M</text>
+               <text x="30" y="25" font-weight="bold">N</text>
+               <text x="245" y="25" font-weight="bold">S</text>
+               <text x="145" y="25" font-weight="bold">P</text>
+               
+               <text x="150" y="80" font-size="12">$50\sqrt{3}$</text>
+               
+               <path d="M 120 130 A 20 20 0 0 1 125 115" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="100" y="125" font-size="10">30°</text>
+               <path d="M 160 130 A 20 20 0 0 0 150 112" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="165" y="125" font-size="10">60°</text>
+            </svg>
+
+            <p>ধরি, মোহিতের অবস্থান M। পাখির উচ্চতা $h = 50\sqrt{3}$ মিটার।</p>
+            <p>প্রথম অবস্থানে (উত্তরদিকে), উন্নতি কোণ 30°। অনুভূমিক দূরত্ব $d_1$ হলে:</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{h}{d_1} \\
+\frac{1}{\sqrt{3}} = \frac{50\sqrt{3}}{d_1} \\
+d_1 = 50\sqrt{3} \times \sqrt{3} = 150 \text{ মিটার}
+\end{array}
+\]
+            <p>দ্বিতীয় অবস্থানে (দক্ষিণদিকে), উন্নতি কোণ 60°। অনুভূমিক দূরত্ব $d_2$ হলে:</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h}{d_2} \\
+\sqrt{3} = \frac{50\sqrt{3}}{d_2} \\
+d_2 = 50 \text{ মিটার}
+\end{array}
+\]
+            <p>পাখিটির মোট অতিক্রান্ত দূরত্ব = $d_1 + d_2 = 150 + 50 = 200$ মিটার।</p>
+            <p>সময় লেগেছে = 2 মিনিট।</p>
+            <p>গতিবেগ = $\displaystyle\frac{200 \text{ মিটার}}{2 \text{ মিনিট}} = 100 \text{ মিটার/মিনিট}$।</p>
+            <p>কিলোমিটার প্রতি ঘন্টায় গতিবেগ = $\displaystyle\frac{100 \times 60}{1000} = 6$ কিমি/ঘণ্টা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পাখির গতিবেগ 6 কিমি/ঘণ্টা।</div>
+        </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="solution-card">
+        <h4 class="question-title">20. $5\sqrt{3}$ মিটার উঁচু একটি রেলওয়ে ওভারব্রিজে দাঁড়িয়ে অমিতাদিদি প্রথমে একটি ট্রেনের ইঞ্জিনকে ব্রিজের এপারে 30° অবনতি কোণে দেখলেন। কিন্তু 2 সেকেন্ড পরই ওই ইঞ্জিনকে ব্রিজের ওপারে 45° অবনতি কোণে দেখলেন। ট্রেনটির গতিবেগ মিটার প্রতি সেকেন্ডে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="160" viewBox="0 0 280 160">
+               <line x1="20" y1="130" x2="260" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="140" y1="130" x2="140" y2="30" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4"></line> <!-- Bridge Height -->
+               
+               <line x1="140" y1="30" x2="40" y2="130" stroke="#E11D48" stroke-width="1.5"></line> <!-- Depr 30 -->
+               <line x1="140" y1="30" x2="210" y2="130" stroke="#10B981" stroke-width="1.5"></line> <!-- Depr 45 -->
+               
+               <line x1="20" y1="30" x2="260" y2="30" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal -->
+               
+               <circle cx="140" cy="30" r="4" fill="#374151"></circle> <!-- Amitadidi -->
+               <circle cx="40" cy="130" r="4" fill="#E11D48"></circle> <!-- Engine T1 -->
+               <circle cx="210" cy="130" r="4" fill="#10B981"></circle> <!-- Engine T2 -->
+               
+               <text x="145" y="25" font-weight="bold">A</text>
+               <text x="30" y="145" font-weight="bold">E1</text>
+               <text x="215" y="145" font-weight="bold">E2</text>
+               <text x="145" y="145" font-weight="bold">P</text>
+               
+               <text x="145" y="80" font-size="12">$5\sqrt{3}$</text>
+               
+               <path d="M 110 30 A 30 30 0 0 0 114 45" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="95" y="45" font-size="10">30°</text>
+               <path d="M 170 30 A 30 30 0 0 1 164 50" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="175" y="45" font-size="10">45°</text>
+            </svg>
+
+            <p>ব্রিজের উচ্চতা $h = 5\sqrt{3}$ মিটার।</p>
+            <p>প্রথম অবস্থানে (এপারে), অবনতি কোণ 30° (উন্নতি কোণ হিসেবে $30^\circ$)। অনুভূমিক দূরত্ব $d_1$ হলে:</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{h}{d_1} \\
+\frac{1}{\sqrt{3}} = \frac{5\sqrt{3}}{d_1} \\
+d_1 = 5 \times 3 = 15 \text{ মিটার}
+\end{array}
+\]
+            <p>দ্বিতীয় অবস্থানে (ওপারে), অবনতি কোণ 45° (উন্নতি কোণ হিসেবে $45^\circ$)। অনুভূমিক দূরত্ব $d_2$ হলে:</p>
+            \[
+\begin{array}{l}
+\tan 45^\circ = \frac{h}{d_2} \\
+1 = \frac{5\sqrt{3}}{d_2} \\
+d_2 = 5\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>ট্রেনটির 2 সেকেন্ডে অতিক্রান্ত দূরত্ব = $d_1 + d_2 = 15 + 5\sqrt{3}$ মিটার।</p>
+            <p>গতিবেগ = $\displaystyle\frac{\text{অতিক্রান্ত দূরত্ব}}{\text{সময়}} = \frac{15 + 5\sqrt{3}}{2}$ মিটার/সেকেন্ড।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ট্রেনের গতিবেগ $\displaystyle\frac{15 + 5\sqrt{3}}{2}$ মিটার/সেকেন্ড।</div>
+        </div>
+    </div>
+
+    <!-- Question 21 -->
+    <div class="solution-card">
+        <h4 class="question-title">21. একটি নদীর পাড়ের সঙ্গে লম্বভাবে একটি সেতু আছে। সেতুটির একটি পাড়ের প্রান্ত থেকে নদীর পাড় ধরে কিছু দূর গেলে সেতুর অপর প্রান্তটি 45° কোণে দেখা যায় এবং পাড় ধরে আরও 400 মিটার দূরে সরে গেলে সেই প্রান্তটি 30° কোণে দেখা যায়। সেতুটির দৈর্ঘ্য নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="280" height="150" viewBox="0 0 280 150">
+               <line x1="20" y1="130" x2="260" y2="130" stroke="#1F2937" stroke-width="2"></line> <!-- River Bank -->
+               <line x1="220" y1="130" x2="220" y2="30" stroke="#3B82F6" stroke-width="4"></line> <!-- Bridge Width -->
+               
+               <line x1="130" y1="130" x2="220" y2="30" stroke="#10B981" stroke-width="1.5"></line> <!-- 45 deg view -->
+               <line x1="40" y1="130" x2="220" y2="30" stroke="#F59E0B" stroke-width="1.5"></line> <!-- 30 deg view -->
+               
+               <text x="30" y="145" font-weight="bold">C</text>
+               <text x="125" y="145" font-weight="bold">B</text>
+               <text x="225" y="145" font-weight="bold">A</text>
+               <text x="225" y="20" font-weight="bold">P</text>
+               
+               <text x="80" y="145" font-size="12">400 মি.</text>
+               <text x="175" y="145" font-size="12">x</text>
+               <text x="235" y="80" font-size="12" fill="#3B82F6">w</text>
+               
+               <path d="M 115 130 A 15 15 0 0 1 119 118" fill="none" stroke="#10B981" stroke-width="1.5"></path>
+               <text x="100" y="125" font-size="10">45°</text>
+               <path d="M 65 130 A 25 25 0 0 1 68 120" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="50" y="125" font-size="10">30°</text>
+            </svg>
+
+            <p>ধরি, সেতুর দৈর্ঘ্য $w$ মিটার। প্রথম বিন্দুর দূরত্ব $x$ মিটার।</p>
+            <p>প্রথম ক্ষেত্রে (45° কোণ):</p>
+            \[
+\begin{array}{l}
+\tan 45^\circ = \frac{w}{x} \\
+1 = \frac{w}{x} \implies x = w
+\end{array}
+\]
+            <p>দ্বিতীয় ক্ষেত্রে (আরও 400 মিটার দূরে, অর্থাৎ দূরত্ব $x + 400$):</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{w}{x + 400} \\
+\frac{1}{\sqrt{3}} = \frac{w}{w + 400} \quad [\text{যেহেতু } x = w] \\
+w\sqrt{3} = w + 400 \\
+w\sqrt{3} - w = 400 \\
+w(\sqrt{3} - 1) = 400 \\
+w = \frac{400}{\sqrt{3} - 1}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করে পাই:</p>
+            \[
+\begin{array}{l}
+w = \frac{400(\sqrt{3} + 1)}{(\sqrt{3} - 1)(\sqrt{3} + 1)} \\
+= \frac{400(\sqrt{3} + 1)}{2} = 200(\sqrt{3} + 1)
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সেতুটির দৈর্ঘ্য $200(\sqrt{3} + 1)$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="solution-card">
+        <h4 class="question-title">22. একটি পার্কের একপ্রান্তে অবস্থিত 15 মিটার উঁচু একটি বাড়ির ছাদ থেকে পার্কের অপর পারে অবস্থিত একটি ইটভাটার চিমনির পাদদেশ ও অগ্রভাগ যথাক্রমে 30° অবনতি কোণ ও 60° উন্নতি কোণে দেখা যায়। ইটভাটার চিমনির উচ্চতা এবং ইটভাটা ও বাড়ির মধ্যে দূরত্ব নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="220" height="200" viewBox="0 0 220 200">
+               <line x1="30" y1="180" x2="190" y2="180" stroke="#1F2937" stroke-width="2"></line> <!-- Ground -->
+               <line x1="50" y1="180" x2="50" y2="120" stroke="#3B82F6" stroke-width="4"></line> <!-- Building -->
+               <line x1="170" y1="180" x2="170" y2="20" stroke="#10B981" stroke-width="4"></line> <!-- Chimney -->
+               
+               <line x1="50" y1="120" x2="170" y2="120" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4"></line> <!-- Horizontal -->
+               <line x1="50" y1="120" x2="170" y2="20" stroke="#F59E0B" stroke-width="1.5"></line> <!-- Elev to top -->
+               <line x1="50" y1="120" x2="170" y2="180" stroke="#E11D48" stroke-width="1.5"></line> <!-- Depr to base -->
+               
+               <text x="35" y="195" font-weight="bold">B</text>
+               <text x="35" y="120" font-weight="bold">A</text>
+               <text x="175" y="195" font-weight="bold">D</text>
+               <text x="175" y="20" font-weight="bold">C</text>
+               <text x="175" y="125" font-weight="bold">E</text>
+               
+               <text x="25" y="155" font-size="12">15</text>
+               <text x="100" y="195" font-size="12">d</text>
+            </svg>
+
+            <p>বাড়ির উচ্চতা $h_1 = 15$ মিটার। ধরি, বাড়ি ও চিমনির দূরত্ব $d$ মিটার।</p>
+            <p>বাড়ির ছাদ থেকে চিমনির পাদদেশের অবনতি কোণ 30°।</p>
+            \[
+\begin{array}{l}
+\tan 30^\circ = \frac{h_1}{d} \\
+\frac{1}{\sqrt{3}} = \frac{15}{d} \\
+d = 15\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <p>বাড়ির ছাদ থেকে চিমনির অগ্রভাগের উন্নতি কোণ 60°। ছাদের স্তর থেকে চিমনির বাকি উপরের অংশের উচ্চতা ধরি $h_2$।</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h_2}{d} \\
+\sqrt{3} = \frac{h_2}{15\sqrt{3}} \\
+h_2 = 15\sqrt{3} \times \sqrt{3} = 45 \text{ মিটার}
+\end{array}
+\]
+            <p>চিমনির মোট উচ্চতা = $h_1 + h_2 = 15 + 45 = 60$ মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চিমনির উচ্চতা 60 মিটার এবং দূরত্ব $15\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="solution-card">
+        <h4 class="question-title">23. একটি উড়োজাহাজ থেকে রাস্তায় পরপর দুটি কিলোমিটার ফলকের অবনতি কোণ যথাক্রমে 60° ও 30° হলে, উড়োজাহাজটির উচ্চতা নির্ণয় করি, (i) যখন ফলক দুটি উড়োজাহাজের বিপরীত পাশে অবস্থিত, (ii) যখন ফলক দুটি উড়োজাহাজের একই পাশে অবস্থিত।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3 text-center">
+                    <p class="fw-bold mb-1">(i) বিপরীত পাশে অবস্থিত</p>
+                    <svg class="geometry-diagram" width="180" height="150" viewBox="0 0 180 150">
+                       <line x1="10" y1="130" x2="170" y2="130" stroke="#1F2937" stroke-width="2"></line>
+                       <line x1="90" y1="130" x2="90" y2="30" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4"></line>
+                       <line x1="90" y1="30" x2="30" y2="130" stroke="#E11D48" stroke-width="1.5"></line>
+                       <line x1="90" y1="30" x2="150" y2="130" stroke="#10B981" stroke-width="1.5"></line>
+                       <circle cx="90" cy="30" r="3" fill="#3B82F6"></circle>
+                       <text x="95" y="25" font-weight="bold">P</text>
+                       <text x="20" y="145" font-weight="bold">A</text>
+                       <text x="145" y="145" font-weight="bold">B</text>
+                       <text x="60" y="145" font-size="10">x</text>
+                       <text x="115" y="145" font-size="10">1000-x</text>
+                    </svg>
+                </div>
+                <div class="col-md-6 mb-3 text-center">
+                    <p class="fw-bold mb-1">(ii) একই পাশে অবস্থিত</p>
+                    <svg class="geometry-diagram" width="180" height="150" viewBox="0 0 180 150">
+                       <line x1="10" y1="130" x2="170" y2="130" stroke="#1F2937" stroke-width="2"></line>
+                       <line x1="150" y1="130" x2="150" y2="30" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4"></line>
+                       <line x1="150" y1="30" x2="90" y2="130" stroke="#E11D48" stroke-width="1.5"></line>
+                       <line x1="150" y1="30" x2="30" y2="130" stroke="#10B981" stroke-width="1.5"></line>
+                       <circle cx="150" cy="30" r="3" fill="#3B82F6"></circle>
+                       <text x="155" y="25" font-weight="bold">P</text>
+                       <text x="85" y="145" font-weight="bold">A</text>
+                       <text x="25" y="145" font-weight="bold">B</text>
+                       <text x="115" y="145" font-size="10">x</text>
+                       <text x="60" y="145" font-size="10">1000</text>
+                    </svg>
+                </div>
+            </div>
+
+            <p>পরপর দুটি কিলোমিটার ফলকের দূরত্ব = 1 কিলোমিটার = 1000 মিটার।</p>
+            <p>ধরি, উড়োজাহাজের উচ্চতা $h$ মিটার।</p>
+            
+            <p><strong>(i) বিপরীত পাশে অবস্থিত হলে:</strong></p>
+            <p>ধরি, প্রথম ফলকের দূরত্ব $x$ এবং দ্বিতীয়টির $(1000 - x)$।</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h}{x} \implies x = \frac{h}{\sqrt{3}} \\
+\tan 30^\circ = \frac{h}{1000 - x} \implies 1000 - x = h\sqrt{3}
+\end{array}
+\]
+            <p>যোগ করে পাই: $x + 1000 - x = \displaystyle\frac{h}{\sqrt{3}} + h\sqrt{3}$</p>
+            \[
+\begin{array}{l}
+1000 = \frac{h + 3h}{\sqrt{3}} = \frac{4h}{\sqrt{3}} \\
+4h = 1000\sqrt{3} \\
+h = 250\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+
+            <p><strong>(ii) একই পাশে অবস্থিত হলে:</strong></p>
+            <p>ধরি, কাছের ফলকের দূরত্ব $x$ এবং দূরেরটির $(x + 1000)$।</p>
+            \[
+\begin{array}{l}
+\tan 60^\circ = \frac{h}{x} \implies x = \frac{h}{\sqrt{3}} \\
+\tan 30^\circ = \frac{h}{x + 1000} \implies x + 1000 = h\sqrt{3}
+\end{array}
+\]
+            <p>বিয়োগ করে পাই: $(x + 1000) - x = h\sqrt{3} - \displaystyle\frac{h}{\sqrt{3}}$</p>
+            \[
+\begin{array}{l}
+1000 = \frac{3h - h}{\sqrt{3}} = \frac{2h}{\sqrt{3}} \\
+2h = 1000\sqrt{3} \\
+h = 500\sqrt{3} \text{ মিটার}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: (i) $250\sqrt{3}$ মিটার (ii) $500\sqrt{3}$ মিটার।</div>
+        </div>
+    </div>
+
+    <!-- Question 24 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">24. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) মাঠের উপর একটি বিন্দু থেকে মোবাইল টাওয়ারের চূড়ার উন্নতি কোণ 60° এবং টাওয়ারের গোড়া থেকে ওই বিন্দুর দূরত্ব 10 মিটার। টাওয়ারের উচ্চতা:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="120" viewBox="0 0 120 120">
+               <polygon points="20,100 100,100 100,20" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></polygon>
+               <text x="50" y="115" font-size="10">10 মি.</text>
+               <text x="105" y="65" font-size="10" fill="#10B981">h</text>
+               <path d="M 40 100 A 20 20 0 0 0 35 85" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="45" y="90" font-size="8">60°</text>
+            </svg>
+
+            <p>$\tan 60^\circ = \displaystyle\frac{h}{10} \implies \sqrt{3} = \frac{h}{10} \implies h = 10\sqrt{3}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) $10\sqrt{3}$ মিটার</div>
+        </div>
+
+        <span class="sub-question">(ii) চিত্রে $\theta$-এর মান: (উচ্চতা 5মি., ভূমি $5\sqrt{3}$মি.)</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="140" height="100" viewBox="0 0 140 100">
+               <polygon points="20,80 110,80 110,30" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <text x="55" y="95" font-size="10">$5\sqrt{3}$ মি.</text>
+               <text x="115" y="55" font-size="10">5 মি.</text>
+               <path d="M 40 80 A 20 20 0 0 0 35 70" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="42" y="75" font-size="10">θ</text>
+            </svg>
+
+            <p>$\tan \theta = \displaystyle\frac{5}{5\sqrt{3}} = \frac{1}{\sqrt{3}} \implies \theta = 30^\circ$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 30°</div>
+        </div>
+
+        <span class="sub-question">(iii) তিনতলা বাড়ির ছাদ থেকে মাটিতে পড়ে থাকা একটি বাক্সকে যত কোণে দেখলে বাড়ির উচ্চতা ও বাড়ি থেকে বাক্সটির দূরত্ব সমান হয় তা হলো:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="120" viewBox="0 0 120 120">
+               <polygon points="20,100 100,100 100,20" fill="none" stroke="#10B981" stroke-width="2"></polygon>
+               <text x="55" y="115" font-size="10">x</text>
+               <text x="105" y="65" font-size="10">x</text>
+               <path d="M 40 100 A 20 20 0 0 0 35 85" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="45" y="90" font-size="8">θ</text>
+            </svg>
+
+            <p>লম্ব = ভূমি হলে $\tan \theta = 1 \implies \theta = 45^\circ$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 45°</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি টাওয়ারের উচ্চতা $100\sqrt{3}$ মিটার। টাওয়ারের পাদবিন্দু থেকে 100 মিটার দূরে একটি বিন্দু থেকে টাওয়ারের চূড়ার উন্নতি কোণ:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="150" viewBox="0 0 120 150">
+               <polygon points="20,130 100,130 100,30" fill="none" stroke="#3B82F6" stroke-width="2"></polygon>
+               <text x="50" y="145" font-size="10">100 মি.</text>
+               <text x="105" y="80" font-size="10">$100\sqrt{3}$</text>
+               <path d="M 40 130 A 20 20 0 0 0 35 110" fill="none" stroke="#F59E0B" stroke-width="1.5"></path>
+               <text x="45" y="115" font-size="8">θ</text>
+            </svg>
+
+            <p>$\tan \theta = \displaystyle\frac{100\sqrt{3}}{100} = \sqrt{3} \implies \theta = 60^\circ$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 60°</div>
+        </div>
+
+        <span class="sub-question">(v) একটি পোস্টের ভূমিতলে ছায়ার দৈর্ঘ্য পোস্টের উচ্চতার $\sqrt{3}$ গুণ হলে, সূর্যের উন্নতি কোণ:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="150" height="100" viewBox="0 0 150 100">
+               <polygon points="20,80 120,80 120,30" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <text x="60" y="95" font-size="10">$h\sqrt{3}$</text>
+               <text x="125" y="55" font-size="10">h</text>
+               <path d="M 40 80 A 20 20 0 0 0 35 70" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="45" y="75" font-size="8">θ</text>
+            </svg>
+
+            <p>$\tan \theta = \displaystyle\frac{h}{h\sqrt{3}} = \frac{1}{\sqrt{3}} \implies \theta = 30^\circ$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 30°</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) সত্য বা মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) $\triangle ABC$ এর $\angle B=90^\circ$, AB=BC হলে, $\angle C=60^\circ$</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> সমকোণী সমদ্বিবাহু ত্রিভুজে লম্ব ও ভূমি সমান হলে অপর কোণগুলি 45° হয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) সূর্যের উন্নতি কোণ 30° থেকে বৃদ্ধি পেয়ে 60° হলে, একটি পোস্টের ছায়ার দৈর্ঘ্য <span class="blank-fill">_________</span> পায়।</span>
+        <div class="solution-box">
+            <p>সূর্য যত ওপরে উঠবে (উন্নতি কোণ বাড়বে), ছায়া তত ছোট হবে।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> হ্রাস</p>
+        </div>
+
+        <span class="sub-question">(ii) সূর্যের উন্নতি কোণ 45° হলে, একটি পোস্টের দৈর্ঘ্য ও তার ছায়ার দৈর্ঘ্য <span class="blank-fill">_________</span> হবে।</span>
+        <div class="solution-box">
+            <p>$\tan 45^\circ = 1$, তাই লম্ব = ভূমি।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান</p>
+        </div>
+    </div>
+
+    <!-- Question 25 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">25. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি ঘুড়ির উন্নতি কোণ 60° এবং সুতোর দৈর্ঘ্য $20\sqrt{3}$ মিটার হলে, ঘুড়িটি মাটি থেকে কত উচ্চতায় আছে হিসাব করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="160" height="150" viewBox="0 0 160 150">
+               <polygon points="30,130 130,130 130,30" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <line x1="30" y1="130" x2="130" y2="30" stroke="#10B981" stroke-width="2"></line> <!-- Hypotenuse -->
+               <text x="60" y="70" font-size="10" transform="rotate(-45, 60, 70)">$20\sqrt{3}$ মি.</text>
+               <text x="135" y="85" font-size="10" fill="#E11D48">h</text>
+               <path d="M 50 130 A 20 20 0 0 0 45 115" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="52" y="120" font-size="8">60°</text>
+            </svg>
+
+            <p>$\sin 60^\circ = \displaystyle\frac{h}{20\sqrt{3}} \implies \frac{\sqrt{3}}{2} = \frac{h}{20\sqrt{3}} \implies h = \frac{20\sqrt{3} \times \sqrt{3}}{2} = 30$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 30 মিটার।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি সমকোণী ত্রিভুজাকারক্ষেত্র ABC-এর অতিভুজ AC-এর দৈর্ঘ্য 100 মিটার এবং $AB=50\sqrt{3}$ মিটার হলে, $\angle C$ এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="160" height="120" viewBox="0 0 160 120">
+               <polygon points="30,100 130,100 130,20" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></polygon>
+               <text x="15" y="110" font-weight="bold">C</text>
+               <text x="135" y="110" font-weight="bold">B</text>
+               <text x="135" y="15" font-weight="bold">A</text>
+               
+               <text x="65" y="55" font-size="10" transform="rotate(-38, 65, 55)">100 মি.</text>
+               <text x="135" y="65" font-size="10">$50\sqrt{3}$</text>
+               
+               <path d="M 50 100 A 20 20 0 0 0 46 88" fill="none" stroke="#1F2937" stroke-width="1.5"></path>
+               <text x="52" y="95" font-size="8">C</text>
+            </svg>
+
+            <p>$\sin C = \displaystyle\frac{AB}{AC} = \frac{50\sqrt{3}}{100} = \frac{\sqrt{3}}{2} \implies \angle C = 60^\circ$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\angle C = 60^\circ$।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি স্তম্ভের ছায়ার দৈর্ঘ্য এবং স্তম্ভের উচ্চতার অনুপাত $\sqrt{3} : 1$ হলে, সূর্যের উন্নতি কোণ নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="150" height="120" viewBox="0 0 150 120">
+               <polygon points="20,100 120,100 120,40" fill="none" stroke="#1F2937" stroke-width="2"></polygon>
+               <text x="60" y="115" font-size="10">$\sqrt{3}x$</text>
+               <text x="125" y="75" font-size="10">1x</text>
+               <path d="M 40 100 A 20 20 0 0 0 35 90" fill="none" stroke="#E11D48" stroke-width="1.5"></path>
+               <text x="45" y="95" font-size="8">θ</text>
+            </svg>
+
+            <p>$\tan \theta = \displaystyle\frac{\text{উচ্চতা}}{\text{ছায়ার দৈর্ঘ্য}} = \frac{1}{\sqrt{3}} \implies \theta = 30^\circ$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 30°।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

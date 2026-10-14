@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-26.1</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.stat-table-wrapper{overflow-x:auto;margin:1.5rem 0px;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid rgb(226,232,240)}.stat-table{width:100%;border-collapse:collapse;background-color:rgb(255,255,255);text-align:center}.stat-table th{background-color:rgb(238,242,255);color:var(--primary-dark);font-weight:700;padding:12px;border:1px solid rgb(203,213,225);white-space:nowrap}.stat-table td{padding:10px;border:1px solid rgb(226,232,240);color:rgb(71,85,105)}.stat-table .total-row{background-color:rgb(241,245,249);font-weight:700;color:rgb(31,41,55)}.stat-table .total-row td{border-top:2px solid rgb(148,163,184)}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>যৌগিক গড় (Mean) নির্ণয়ের তিনটি পদ্ধতি:</strong><br>
+        ১) <strong>প্রত্যক্ষ পদ্ধতি (Direct Method):</strong> $\bar{x} = \displaystyle\frac{\sum f_i x_i}{\sum f_i}$<br>
+        ২) <strong>কল্পিত গড় পদ্ধতি (Assumed Mean Method):</strong> $\bar{x} = a + \displaystyle\frac{\sum f_i d_i}{\sum f_i}$ (যেখানে $d_i = x_i - a$)<br>
+        ৩) <strong>ক্রম-বিচ্যুতি পদ্ধতি (Step-Deviation Method):</strong> $\bar{x} = a + \left( \displaystyle\frac{\sum f_i u_i}{\sum f_i} \right) \times h$ (যেখানে $u_i = \displaystyle\frac{x_i - a}{h}$)
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমি আমার 40 জন বন্ধুর বয়স নীচের ছকে লিখেছি। আমি আমার বন্ধুদের গড় বয়স প্রত্যক্ষ পদ্ধতিতে নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রত্যক্ষ পদ্ধতি (Direct Method)</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>বয়স ($x_i$)</th>
+                            <th>বন্ধুর সংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>15</td><td>4</td><td>60</td></tr>
+                        <tr><td>16</td><td>7</td><td>112</td></tr>
+                        <tr><td>17</td><td>10</td><td>170</td></tr>
+                        <tr><td>18</td><td>10</td><td>180</td></tr>
+                        <tr><td>19</td><td>5</td><td>95</td></tr>
+                        <tr><td>20</td><td>4</td><td>80</td></tr>
+                        <tr class="total-row">
+                            <td>মোট</td>
+                            <td>$\sum f_i = 40$</td>
+                            <td>$\sum f_i x_i = 697$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>প্রত্যক্ষ পদ্ধতিতে গড় বয়স ($\bar{x}$) = $\displaystyle\frac{\sum f_i x_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = \frac{697}{40} \\
+= 17.425
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বন্ধুদের গড় বয়স 17.425 বছর।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. গ্রামের 50 টি পরিবারের সদস্য সংখ্যা নীচের তালিকায় লিখেছি। ওই 50 টি পরিবারের গড় সদস্য সংখ্যা কল্পিত গড় পদ্ধতিতে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">কল্পিত গড় পদ্ধতি (Assumed Mean Method)</span>
+            <p>ধরি, কল্পিত গড় ($a$) = 4</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>সদস্য সংখ্যা ($x_i$)</th>
+                            <th>পরিবারের সংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 4$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2</td><td>6</td><td>$-2$</td><td>$-12$</td></tr>
+                        <tr><td>3</td><td>8</td><td>$-1$</td><td>$-8$</td></tr>
+                        <tr><td>4 ($= a$)</td><td>14</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>5</td><td>15</td><td>$1$</td><td>$15$</td></tr>
+                        <tr><td>6</td><td>4</td><td>$2$</td><td>$8$</td></tr>
+                        <tr><td>7</td><td>3</td><td>$3$</td><td>$9$</td></tr>
+                        <tr class="total-row">
+                            <td>মোট</td>
+                            <td>$\sum f_i = 50$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = 12$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 15 + 8 + 9 - 12 - 8 = 32 - 20 = 12$)</p>
+            <p>কল্পিত গড় পদ্ধতিতে গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 4 + \frac{12}{50} \\
+= 4 + \frac{24}{100} \\
+= 4 + 0.24 \\
+= 4.24
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় সদস্য সংখ্যা 4.24 জন।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. যদি নীচের প্রদত্ত তথ্যের যৌগিক গড় 20.6 হয়, তবে a-এর মান নির্ণয় করি :</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>চল ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10</td><td>3</td><td>30</td></tr>
+                        <tr><td>15</td><td>10</td><td>150</td></tr>
+                        <tr><td>$a$</td><td>25</td><td>$25a$</td></tr>
+                        <tr><td>25</td><td>7</td><td>175</td></tr>
+                        <tr><td>35</td><td>5</td><td>175</td></tr>
+                        <tr class="total-row">
+                            <td>মোট</td>
+                            <td>$\sum f_i = 50$</td>
+                            <td>$\sum f_i x_i = 530 + 25a$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>দেওয়া আছে, যৌগিক গড় = 20.6</p>
+            \[
+\begin{array}{l}
+\frac{\sum f_i x_i}{\sum f_i} = 20.6 \\
+\frac{530 + 25a}{50} = 20.6 \\
+530 + 25a = 20.6 \times 50 \\
+530 + 25a = 1030 \\
+25a = 1030 - 530 \\
+25a = 500 \\
+a = \frac{500}{25} = 20
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: a-এর মান 20।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. যদি নীচের প্রদত্ত তথ্যের যৌগিক গড় 15 হয়, তবে p-এর মান হিসাব করে লিখি :</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>চল ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>5</td><td>6</td><td>30</td></tr>
+                        <tr><td>10</td><td>$p$</td><td>$10p$</td></tr>
+                        <tr><td>15</td><td>6</td><td>90</td></tr>
+                        <tr><td>20</td><td>10</td><td>200</td></tr>
+                        <tr><td>25</td><td>5</td><td>125</td></tr>
+                        <tr class="total-row">
+                            <td>মোট</td>
+                            <td>$\sum f_i = 27 + p$</td>
+                            <td>$\sum f_i x_i = 445 + 10p$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>দেওয়া আছে, যৌগিক গড় = 15</p>
+            \[
+\begin{array}{l}
+\frac{\sum f_i x_i}{\sum f_i} = 15 \\
+\frac{445 + 10p}{27 + p} = 15 \\
+445 + 10p = 15(27 + p) \\
+445 + 10p = 405 + 15p \\
+10p - 15p = 405 - 445 \\
+-5p = -40 \\
+p = \frac{40}{5} = 8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: p-এর মান 8।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. রহমতচাচা তার 50 টি বাক্সে বিভিন্ন সংখ্যায় আম ভরে পাইকারি বাজারে নিয়ে যাবেন। কতগুলি বাক্সে কতগুলি আম রাখলেন তার তথ্য নীচের ছকে লিখলাম। আমি ওই 50টি বাক্সে গড় আমের সংখ্যা হিসাব করে লিখি। (যে-কোনো পদ্ধতিতে)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">ক্রম-বিচ্যুতি পদ্ধতি (Step-Deviation)</span>
+            <p>শ্রেণি দৈর্ঘ্য ($h$) = 2। ধরি, কল্পিত গড় ($a$) = 55</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>আমের সংখ্যা (শ্রেণি)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>বাক্সের সংখ্যা ($f_i$)</th>
+                            <th>$u_i = \frac{x_i - 55}{2}$</th>
+                            <th>$f_i u_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>50 - 52</td><td>51</td><td>6</td><td>$-2$</td><td>$-12$</td></tr>
+                        <tr><td>52 - 54</td><td>53</td><td>14</td><td>$-1$</td><td>$-14$</td></tr>
+                        <tr><td>54 - 56</td><td>55 ($= a$)</td><td>16</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>56 - 58</td><td>57</td><td>9</td><td>$1$</td><td>$9$</td></tr>
+                        <tr><td>58 - 60</td><td>59</td><td>5</td><td>$2$</td><td>$10$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 50$</td>
+                            <td></td>
+                            <td>$\sum f_i u_i = -7$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i u_i = 19 - 26 = -7$)</p>
+            <p>গড় ($\bar{x}$) = $a + \left( \displaystyle\frac{\sum f_i u_i}{\sum f_i} \right) \times h$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 55 + \left(\frac{-7}{50}\right) \times 2 \\
+= 55 - \frac{14}{50} \\
+= 55 - 0.28 \\
+= 54.72
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বাক্সে গড় আমের সংখ্যা 54.72 টি।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. মহিদুল পাড়ার হাসপাতালের 100 জন রোগীর বয়স নীচের ছকে লিখল। ওই 100 জন রোগীর গড় বয়স হিসাব করে লিখি। (যে-কোনো পদ্ধতিতে)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">কল্পিত গড় পদ্ধতি (Assumed Mean)</span>
+            <p>ধরি, কল্পিত গড় ($a$) = 45</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>বয়স (শ্রেণি)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>রোগীর সংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 45$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10 - 20</td><td>15</td><td>12</td><td>$-30$</td><td>$-360$</td></tr>
+                        <tr><td>20 - 30</td><td>25</td><td>8</td><td>$-20$</td><td>$-160$</td></tr>
+                        <tr><td>30 - 40</td><td>35</td><td>22</td><td>$-10$</td><td>$-220$</td></tr>
+                        <tr><td>40 - 50</td><td>45 ($= a$)</td><td>20</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>50 - 60</td><td>55</td><td>18</td><td>$10$</td><td>$180$</td></tr>
+                        <tr><td>60 - 70</td><td>65</td><td>20</td><td>$20$</td><td>$400$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 100$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = -160$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 580 - 740 = -160$)</p>
+            <p>গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 45 + \left(\frac{-160}{100}\right) \\
+= 45 - 1.6 \\
+= 43.4
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: রোগীদের গড় বয়স 43.4 বছর।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. প্রত্যক্ষ পদ্ধতিতে নীচের তথ্যের গড় নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i)</span>
+        <div class="solution-box">
+            <span class="sol-badge">প্রত্যক্ষ পদ্ধতি</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 10</td><td>5</td><td>4</td><td>20</td></tr>
+                        <tr><td>10 - 20</td><td>15</td><td>6</td><td>90</td></tr>
+                        <tr><td>20 - 30</td><td>25</td><td>10</td><td>250</td></tr>
+                        <tr><td>30 - 40</td><td>35</td><td>6</td><td>210</td></tr>
+                        <tr><td>40 - 50</td><td>45</td><td>4</td><td>180</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 30$</td>
+                            <td>$\sum f_i x_i = 750$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>গড় ($\bar{x}$) = $\displaystyle\frac{\sum f_i x_i}{\sum f_i} = \frac{750}{30} = 25$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় = 25</div>
+        </div>
+
+        <span class="sub-question">(ii)</span>
+        <div class="solution-box">
+            <span class="sol-badge">প্রত্যক্ষ পদ্ধতি</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10 - 20</td><td>15</td><td>10</td><td>150</td></tr>
+                        <tr><td>20 - 30</td><td>25</td><td>16</td><td>400</td></tr>
+                        <tr><td>30 - 40</td><td>35</td><td>20</td><td>700</td></tr>
+                        <tr><td>40 - 50</td><td>45</td><td>30</td><td>1350</td></tr>
+                        <tr><td>50 - 60</td><td>55</td><td>13</td><td>715</td></tr>
+                        <tr><td>60 - 70</td><td>65</td><td>11</td><td>715</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 100$</td>
+                            <td>$\sum f_i x_i = 4030$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>গড় ($\bar{x}$) = $\displaystyle\frac{\sum f_i x_i}{\sum f_i} = \frac{4030}{100} = 40.3$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় = 40.3</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. কল্পিত গড় পদ্ধতিতে নীচের তথ্যের গড় নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i)</span>
+        <div class="solution-box">
+            <span class="sol-badge">কল্পিত গড় পদ্ধতি</span>
+            <p>ধরি, কল্পিত গড় ($a$) = 100</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 100$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 40</td><td>20</td><td>12</td><td>$-80$</td><td>$-960$</td></tr>
+                        <tr><td>40 - 80</td><td>60</td><td>20</td><td>$-40$</td><td>$-800$</td></tr>
+                        <tr><td>80 - 120</td><td>100 ($= a$)</td><td>25</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>120 - 160</td><td>140</td><td>20</td><td>$40$</td><td>$800$</td></tr>
+                        <tr><td>160 - 200</td><td>180</td><td>13</td><td>$80$</td><td>$1040$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 90$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = 80$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 1840 - 1760 = 80$)</p>
+            <p>গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i} = 100 + \frac{80}{90} = 100 + \frac{8}{9} = 100 + 0.888... \approx 100.89$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় $\approx 100.89$</div>
+        </div>
+
+        <span class="sub-question">(ii)</span>
+        <div class="solution-box">
+            <span class="sol-badge">কল্পিত গড় পদ্ধতি</span>
+            <p>ধরি, কল্পিত গড় ($a$) = 50</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 50$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>25 - 35</td><td>30</td><td>4</td><td>$-20$</td><td>$-80$</td></tr>
+                        <tr><td>35 - 45</td><td>40</td><td>10</td><td>$-10$</td><td>$-100$</td></tr>
+                        <tr><td>45 - 55</td><td>50 ($= a$)</td><td>8</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>55 - 65</td><td>60</td><td>12</td><td>$10$</td><td>$120$</td></tr>
+                        <tr><td>65 - 75</td><td>70</td><td>6</td><td>$20$</td><td>$120$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 40$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = 60$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 240 - 180 = 60$)</p>
+            <p>গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i} = 50 + \frac{60}{40} = 50 + 1.5 = 51.5$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় = 51.5</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. ক্রম-বিচ্যুতি পদ্ধতিতে নীচের তথ্যের গড় নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i)</span>
+        <div class="solution-box">
+            <span class="sol-badge">ক্রম-বিচ্যুতি পদ্ধতি</span>
+            <p>শ্রেণি দৈর্ঘ্য ($h$) = 30। ধরি, কল্পিত গড় ($a$) = 75</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$u_i = \frac{x_i - 75}{30}$</th>
+                            <th>$f_i u_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 30</td><td>15</td><td>12</td><td>$-2$</td><td>$-24$</td></tr>
+                        <tr><td>30 - 60</td><td>45</td><td>15</td><td>$-1$</td><td>$-15$</td></tr>
+                        <tr><td>60 - 90</td><td>75 ($= a$)</td><td>20</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>90 - 120</td><td>105</td><td>25</td><td>$1$</td><td>$25$</td></tr>
+                        <tr><td>120 - 150</td><td>135</td><td>8</td><td>$2$</td><td>$16$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 80$</td>
+                            <td></td>
+                            <td>$\sum f_i u_i = 2$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i u_i = 41 - 39 = 2$)</p>
+            <p>গড় ($\bar{x}$) = $a + \left( \displaystyle\frac{\sum f_i u_i}{\sum f_i} \right) \times h$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 75 + \left(\frac{2}{80}\right) \times 30 \\
+= 75 + \frac{60}{80} \\
+= 75 + \frac{3}{4} = 75 + 0.75 = 75.75
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় = 75.75</div>
+        </div>
+
+        <span class="sub-question">(ii)</span>
+        <div class="solution-box">
+            <span class="sol-badge">ক্রম-বিচ্যুতি পদ্ধতি</span>
+            <p>শ্রেণি দৈর্ঘ্য ($h$) = 14। ধরি, কল্পিত গড় ($a$) = 35</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$u_i = \frac{x_i - 35}{14}$</th>
+                            <th>$f_i u_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 14</td><td>7</td><td>7</td><td>$-2$</td><td>$-14$</td></tr>
+                        <tr><td>14 - 28</td><td>21</td><td>21</td><td>$-1$</td><td>$-21$</td></tr>
+                        <tr><td>28 - 42</td><td>35 ($= a$)</td><td>35</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>42 - 56</td><td>49</td><td>11</td><td>$1$</td><td>$11$</td></tr>
+                        <tr><td>56 - 70</td><td>63</td><td>16</td><td>$2$</td><td>$32$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 90$</td>
+                            <td></td>
+                            <td>$\sum f_i u_i = 8$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i u_i = 43 - 35 = 8$)</p>
+            <p>গড় ($\bar{x}$) = $a + \left( \displaystyle\frac{\sum f_i u_i}{\sum f_i} \right) \times h$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 35 + \left(\frac{8}{90}\right) \times 14 \\
+= 35 + \frac{112}{90} \\
+= 35 + 1.244... \approx 36.24
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গড় $\approx 36.24$</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. যদি নীচের পরিসংখ্যা বিভাজন তালিকার নম্বরের যৌগিক গড় 24 হয়, তবে p-এর মান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রত্যক্ষ পদ্ধতি</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা (নম্বর)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>ছাত্র সংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 10</td><td>5</td><td>15</td><td>75</td></tr>
+                        <tr><td>10 - 20</td><td>15</td><td>20</td><td>300</td></tr>
+                        <tr><td>20 - 30</td><td>25</td><td>35</td><td>875</td></tr>
+                        <tr><td>30 - 40</td><td>35</td><td>$p$</td><td>$35p$</td></tr>
+                        <tr><td>40 - 50</td><td>45</td><td>10</td><td>450</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 80 + p$</td>
+                            <td>$\sum f_i x_i = 1700 + 35p$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>দেওয়া আছে, যৌগিক গড় = 24</p>
+            \[
+\begin{array}{l}
+\frac{\sum f_i x_i}{\sum f_i} = 24 \\
+\frac{1700 + 35p}{80 + p} = 24 \\
+1700 + 35p = 24(80 + p) \\
+1700 + 35p = 1920 + 24p \\
+35p - 24p = 1920 - 1700 \\
+11p = 220 \\
+p = \frac{220}{11} = 20
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: p-এর মান 20।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. আলোচনা সভায় উপস্থিত ব্যক্তিদের বয়সের তালিকা দেখি ও গড় বয়স নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (শ্রেণি-সীমানা পরিবর্তন)</span>
+            <p>এখানে শ্রেণিগুলি অন্তর্ভুক্ত (Inclusive) পদ্ধতিতে দেওয়া আছে (যেমন 30-34, 35-39)। গড় নির্ণয়ের জন্য শ্রেণি মধ্যক ($x_i$) প্রয়োজন, যা অন্তর্ভুক্ত ও বহির্ভুক্ত উভয় পদ্ধতিতেই একই থাকে।</p>
+            <p>শ্রেণি মধ্যক ($x_i$) = $\displaystyle\frac{\text{উচ্চসীমা} + \text{নিম্নসীমা}}{2}$</p>
+            <p>ধরি, কল্পিত গড় ($a$) = 42</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>বয়স (বছর)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>রোগীর সংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 42$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>30 - 34</td><td>32</td><td>10</td><td>$-10$</td><td>$-100$</td></tr>
+                        <tr><td>35 - 39</td><td>37</td><td>12</td><td>$-5$</td><td>$-60$</td></tr>
+                        <tr><td>40 - 44</td><td>42 ($= a$)</td><td>15</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>45 - 49</td><td>47</td><td>6</td><td>$5$</td><td>$30$</td></tr>
+                        <tr><td>50 - 54</td><td>52</td><td>4</td><td>$10$</td><td>$40$</td></tr>
+                        <tr><td>55 - 59</td><td>57</td><td>3</td><td>$15$</td><td>$45$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 50$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = -45$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 115 - 160 = -45$)</p>
+            <p>গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 42 + \left(\frac{-45}{50}\right) \\
+= 42 - \frac{9}{10} \\
+= 42 - 0.9 \\
+= 41.1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: উপস্থিত ব্যক্তিদের গড় বয়স 41.1 বছর।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. নীচের তথ্যের গড় নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">কল্পিত গড় পদ্ধতি</span>
+            <p>এখানেও শ্রেণিগুলি অন্তর্ভুক্ত (Inclusive) পদ্ধতিতে আছে। শ্রেণি মধ্যক ($x_i$) বের করে নিই। ধরি, $a = 39.5$</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমা</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <th>$d_i = x_i - 39.5$</th>
+                            <th>$f_i d_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>5 - 14</td><td>9.5</td><td>3</td><td>$-30$</td><td>$-90$</td></tr>
+                        <tr><td>15 - 24</td><td>19.5</td><td>6</td><td>$-20$</td><td>$-120$</td></tr>
+                        <tr><td>25 - 34</td><td>29.5</td><td>18</td><td>$-10$</td><td>$-180$</td></tr>
+                        <tr><td>35 - 44</td><td>39.5 ($= a$)</td><td>20</td><td>$0$</td><td>$0$</td></tr>
+                        <tr><td>45 - 54</td><td>49.5</td><td>10</td><td>$10$</td><td>$100$</td></tr>
+                        <tr><td>55 - 64</td><td>59.5</td><td>3</td><td>$20$</td><td>$60$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 60$</td>
+                            <td></td>
+                            <td>$\sum f_i d_i = -230$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>($\sum f_i d_i = 160 - 390 = -230$)</p>
+            <p>গড় ($\bar{x}$) = $a + \displaystyle\frac{\sum f_i d_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 39.5 + \left(\frac{-230}{60}\right) \\
+= 39.5 - \frac{23}{6} \\
+= 39.5 - 3.833... \\
+\approx 35.67
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রদত্ত তথ্যের গড় $\approx 35.67$।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. ছাত্রীদের প্রাপ্ত নম্বরের গড় নির্ণয় করি যদি তাদের প্রাপ্ত নম্বরের ক্রমযৌগিক পরিসংখ্যা নিম্নরূপ হয়:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সাধারণ পরিসংখ্যা সারণি তৈরি</span>
+            <p>এখানে "ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক)" দেওয়া আছে। প্রথমে এটিকে সাধারণ শ্রেণিতে রূপান্তর করতে হবে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>ছাত্রী সংখ্যা (CF)</th>
+                            <th>সাধারণ পরিসংখ্যা ($f_i$)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 10</td><td>5</td><td>5</td><td>5</td><td>25</td></tr>
+                        <tr><td>10 - 20</td><td>9</td><td>$9 - 5 = 4$</td><td>15</td><td>60</td></tr>
+                        <tr><td>20 - 30</td><td>17</td><td>$17 - 9 = 8$</td><td>25</td><td>200</td></tr>
+                        <tr><td>30 - 40</td><td>29</td><td>$29 - 17 = 12$</td><td>35</td><td>420</td></tr>
+                        <tr><td>40 - 50</td><td>45</td><td>$45 - 29 = 16$</td><td>45</td><td>720</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 45$</td>
+                            <td></td>
+                            <td>$\sum f_i x_i = 1425$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>গড় ($\bar{x}$) = $\displaystyle\frac{\sum f_i x_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = \frac{1425}{45} \\
+= \frac{285}{9} \quad [\text{5 দিয়ে কেটে}] \\
+= \frac{95}{3} \quad [\text{3 দিয়ে কেটে}] \\
+= 31.666... \approx 31.67
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ছাত্রীদের প্রাপ্ত নম্বরের গড় $\approx 31.67$।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. নীচের তালিকার 64 জন ছাত্রের প্রাপ্ত নম্বরের গড় নির্ণয় করি। (শ্রেণিগুলি: 1-4, 4-9, 9-16, 16-17)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রত্যক্ষ পদ্ধতি (অসমান শ্রেণি)</span>
+            <p>যেহেতু প্রত্যেকটি শ্রেণির শ্রেণি দৈর্ঘ্য (h) সমান নয়, তাই ক্রম-বিচ্যুতি পদ্ধতি ব্যবহার করা যাবে না। প্রত্যক্ষ বা কল্পিত গড় পদ্ধতি ব্যবহার করতে হবে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা (নম্বর)</th>
+                            <th>শ্রেণি মধ্যক ($x_i$)</th>
+                            <th>ছাত্র সংখ্যা ($f_i$)</th>
+                            <th>$f_i x_i$</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1 - 4</td><td>$\frac{1+4}{2} = 2.5$</td><td>6</td><td>$6 \times 2.5 = 15$</td></tr>
+                        <tr><td>4 - 9</td><td>$\frac{4+9}{2} = 6.5$</td><td>12</td><td>$12 \times 6.5 = 78$</td></tr>
+                        <tr><td>9 - 16</td><td>$\frac{9+16}{2} = 12.5$</td><td>26</td><td>$26 \times 12.5 = 325$</td></tr>
+                        <tr><td>16 - 17</td><td>$\frac{16+17}{2} = 16.5$</td><td>20</td><td>$20 \times 16.5 = 330$</td></tr>
+                        <tr class="total-row">
+                            <td colspan="2">মোট</td>
+                            <td>$\sum f_i = 64$</td>
+                            <td>$\sum f_i x_i = 748$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>গড় ($\bar{x}$) = $\displaystyle\frac{\sum f_i x_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+\bar{x} = \frac{748}{64} \\
+= 11.6875
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ছাত্রদের প্রাপ্ত নম্বরের গড় 11.6875।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

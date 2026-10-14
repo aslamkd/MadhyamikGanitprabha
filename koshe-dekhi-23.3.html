@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-23.3</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <!-- Study Tip -->
+    <div class="alert alert-warning shadow-sm rounded-4 mb-4">
+        <h5 class="fw-bold"><i class="fas fa-magic me-2"></i>ছাত্রছাত্রীদের জন্য বিশেষ টিপস (যাদুকরী সূত্র):</h5>
+        এই অধ্যায়ের সমস্ত অংক খুব সহজেই সমাধান করা যায় যদি তুমি মাত্র ৩টি "ত্রিকোণমিতিক অভেদাবলি" (Identities) মুখস্থ রাখতে পারো:<br>
+        ১) $\sin^2\theta + \cos^2\theta = 1$<br>
+        ২) $\sec^2\theta - \tan^2\theta = 1$<br>
+        ৩) $\text{cosec}^2\theta - \cot^2\theta = 1$<br>
+        এছাড়া মনে রাখবে, বীজগণিতের $(a+b)^2$ বা $(a^2-b^2)$ সূত্রগুলো এখানে বারবার কাজে লাগবে!
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. মান নির্ণয় করো:</h4>
+
+        <span class="sub-question">(i) $\sin\theta = \displaystyle\frac{4}{5}$ হলে, $\displaystyle\frac{\text{cosec}\theta}{1+\cot\theta}$ -এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $\sin\theta = \displaystyle\frac{4}{5}$।</p>
+            <p>আমরা জানি, $\text{cosec}\theta = \displaystyle\frac{1}{\sin\theta} = \frac{5}{4}$</p>
+            <p>এবার $\cot\theta$ এর মান বের করতে হবে। আমরা জানি $\cos^2\theta = 1 - \sin^2\theta$</p>
+            \[
+\begin{array}{l}
+\cos\theta = \sqrt{1 - \left(\frac{4}{5}\right)^2} = \sqrt{1 - \frac{16}{25}} = \sqrt{\frac{9}{25}} = \frac{3}{5}
+\end{array}
+\]
+            <p>তাহলে, $\cot\theta = \displaystyle\frac{\cos\theta}{\sin\theta} = \frac{\frac{3}{5}}{\frac{4}{5}} = \frac{3}{4}$</p>
+            <p>প্রদত্ত রাশিতে মানগুলো বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{\text{cosec}\theta}{1+\cot\theta} = \frac{\frac{5}{4}}{1 + \frac{3}{4}} \\
+= \frac{\frac{5}{4}}{\frac{7}{4}} = \frac{5}{4} \times \frac{4}{7} = \frac{5}{7}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় মান $\displaystyle\frac{5}{7}$।</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $\tan\theta = \displaystyle\frac{3}{4}$ হয়, তবে দেখাই যে $\displaystyle\sqrt{\frac{1-\sin\theta}{1+\sin\theta}} = \frac{1}{2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $\tan\theta = \displaystyle\frac{3}{4}$।</p>
+            <p>আমরা জানি, $\sec^2\theta = 1 + \tan^2\theta$</p>
+            \[
+\begin{array}{l}
+\sec\theta = \sqrt{1 + \left(\frac{3}{4}\right)^2} = \sqrt{1 + \frac{9}{16}} = \sqrt{\frac{25}{16}} = \frac{5}{4}
+\end{array}
+\]
+            <p>যেহেতু $\cos\theta = \displaystyle\frac{1}{\sec\theta}$, তাই $\cos\theta = \displaystyle\frac{4}{5}$</p>
+            <p>এখন, $\sin\theta = \tan\theta \times \cos\theta = \displaystyle\frac{3}{4} \times \frac{4}{5} = \frac{3}{5}$</p>
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\sqrt{\frac{1-\sin\theta}{1+\sin\theta}} = \sqrt{\frac{1 - \frac{3}{5}}{1 + \frac{3}{5}}} \\
+= \sqrt{\frac{\frac{2}{5}}{\frac{8}{5}}} \\
+= \sqrt{\frac{2}{8}} = \sqrt{\frac{1}{4}} = \frac{1}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)</div>
+        </div>
+
+        <span class="sub-question">(iii) $\tan\theta = 1$ হলে, $\displaystyle\frac{8\sin\theta + 5\cos\theta}{\sin^3\theta - 2\cos^3\theta + 7\cos\theta}$ -এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $\tan\theta = 1$। আমরা জানি $\tan 45^\circ = 1$, তাই $\theta = 45^\circ$।</p>
+            <p>সুতরাং, $\sin\theta = \sin 45^\circ = \displaystyle\frac{1}{\sqrt{2}}$ এবং $\cos\theta = \cos 45^\circ = \displaystyle\frac{1}{\sqrt{2}}$</p>
+            <p>প্রদত্ত রাশিতে মান বসিয়ে পাই:</p>
+            <p><strong>লব (Numerator):</strong></p>
+            \[
+\begin{array}{l}
+8\sin\theta + 5\cos\theta = 8\left(\frac{1}{\sqrt{2}}\right) + 5\left(\frac{1}{\sqrt{2}}\right) \\
+= \frac{13}{\sqrt{2}}
+\end{array}
+\]
+            <p><strong>হর (Denominator):</strong></p>
+            \[
+\begin{array}{l}
+\sin^3\theta - 2\cos^3\theta + 7\cos\theta = \left(\frac{1}{\sqrt{2}}\right)^3 - 2\left(\frac{1}{\sqrt{2}}\right)^3 + 7\left(\frac{1}{\sqrt{2}}\right) \\
+= \frac{1}{2\sqrt{2}} - 2\left(\frac{1}{2\sqrt{2}}\right) + \frac{7}{\sqrt{2}} \\
+= \frac{1}{2\sqrt{2}} - \frac{2}{2\sqrt{2}} + \frac{14}{2\sqrt{2}} \quad [\text{হর সমান করে}] \\
+= \frac{1 - 2 + 14}{2\sqrt{2}} \\
+= \frac{13}{2\sqrt{2}}
+\end{array}
+\]
+            <p><strong>সম্পূর্ণ রাশিটি:</strong></p>
+            \[
+\begin{array}{l}
+\frac{\text{লব}}{\text{হর}} = \frac{\frac{13}{\sqrt{2}}}{\frac{13}{2\sqrt{2}}} \\
+= \frac{13}{\sqrt{2}} \times \frac{2\sqrt{2}}{13} \\
+= 2
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় মান 2।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. ত্রিকোণমিতিক অনুপাত পরিবর্তন:</h4>
+
+        <span class="sub-question">(i) $\text{cosec}\theta$ এবং $\tan\theta$ কে $\sin\theta$ এর মাধ্যমে প্রকাশ করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\text{cosec}\theta$ হলো $\sin\theta$ এর অনন্যোক।</p>
+            <p>$\therefore \text{cosec}\theta = \displaystyle\frac{1}{\sin\theta}$</p>
+            <p>আবার, আমরা জানি $\tan\theta = \displaystyle\frac{\sin\theta}{\cos\theta}$</p>
+            <p>যেহেতু $\sin^2\theta + \cos^2\theta = 1$, তাই $\cos\theta = \sqrt{1 - \sin^2\theta}$</p>
+            <p>$\therefore \tan\theta = \displaystyle\frac{\sin\theta}{\sqrt{1 - \sin^2\theta}}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\text{cosec}\theta = \displaystyle\frac{1}{\sin\theta}$ এবং $\tan\theta = \displaystyle\frac{\sin\theta}{\sqrt{1 - \sin^2\theta}}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $\text{cosec}\theta$ এবং $\tan\theta$ কে $\cos\theta$ এর মাধ্যমে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sin\theta = \sqrt{1 - \cos^2\theta}$</p>
+            <p>$\therefore \text{cosec}\theta = \displaystyle\frac{1}{\sin\theta} = \frac{1}{\sqrt{1 - \cos^2\theta}}$</p>
+            <p>এবং $\tan\theta = \displaystyle\frac{\sin\theta}{\cos\theta} = \frac{\sqrt{1 - \cos^2\theta}}{\cos\theta}$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\text{cosec}\theta = \displaystyle\frac{1}{\sqrt{1-\cos^2\theta}}$ এবং $\tan\theta = \displaystyle\frac{\sqrt{1-\cos^2\theta}}{\cos\theta}$</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. মান নির্ণয় করি:</h4>
+        <p class="text-muted"><i class="fas fa-info-circle me-1"></i> এই ধরণের অংকে বীজগণিতের সূত্র যেমন $(a-b)(a+b) = a^2-b^2$ বা $(a+b)^2$ খুব বেশি ব্যবহার হয়।</p>
+
+        <span class="sub-question">(i) $\sec\theta + \tan\theta = 2$ হলে, $(\sec\theta - \tan\theta)$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sec^2\theta - \tan^2\theta = 1$</p>
+            <p>সূত্র প্রয়োগ করে পাই: $(\sec\theta + \tan\theta)(\sec\theta - \tan\theta) = 1$</p>
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+2 \times (\sec\theta - \tan\theta) = 1 \\
+\sec\theta - \tan\theta = \frac{1}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(ii) $\text{cosec}\theta - \cot\theta = \sqrt{2} - 1$ হলে, $(\text{cosec}\theta + \cot\theta)$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\text{cosec}^2\theta - \cot^2\theta = 1$</p>
+            <p>$(\text{cosec}\theta + \cot\theta)(\text{cosec}\theta - \cot\theta) = 1$</p>
+            <p>মান বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+(\text{cosec}\theta + \cot\theta) \times (\sqrt{2} - 1) = 1 \\
+\text{cosec}\theta + \cot\theta = \frac{1}{\sqrt{2} - 1}
+\end{array}
+\]
+            <p>হরের করণী নিরসন করে পাই:</p>
+            \[
+\begin{array}{l}
+= \frac{\sqrt{2} + 1}{(\sqrt{2} - 1)(\sqrt{2} + 1)} \\
+= \frac{\sqrt{2} + 1}{2 - 1} = \sqrt{2} + 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sqrt{2} + 1$</div>
+        </div>
+
+        <span class="sub-question">(iii) $\sin\theta + \cos\theta = 1$ হলে, $\sin\theta \times \cos\theta$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $\sin\theta + \cos\theta = 1$</p>
+            <p>উভয়পক্ষকে বর্গ করে পাই:</p>
+            \[
+\begin{array}{l}
+(\sin\theta + \cos\theta)^2 = 1^2 \\
+\sin^2\theta + \cos^2\theta + 2\sin\theta\cos\theta = 1
+\end{array}
+\]
+            <p>আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$</p>
+            \[
+\begin{array}{l}
+1 + 2\sin\theta\cos\theta = 1 \\
+2\sin\theta\cos\theta = 1 - 1 = 0 \\
+\sin\theta\cos\theta = 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+
+        <span class="sub-question">(iv) $\tan\theta + \cot\theta = 2$ হলে, $(\tan\theta - \cot\theta)$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজগণিতের সূত্রানুযায়ী, $(a - b)^2 = (a + b)^2 - 4ab$</p>
+            \[
+\begin{array}{l}
+(\tan\theta - \cot\theta)^2 = (\tan\theta + \cot\theta)^2 - 4\tan\theta\cot\theta
+\end{array}
+\]
+            <p>আমরা জানি, $\tan\theta \times \cot\theta = 1$</p>
+            \[
+\begin{array}{l}
+(\tan\theta - \cot\theta)^2 = (2)^2 - 4(1) \\
+= 4 - 4 = 0 \\
+\tan\theta - \cot\theta = 0
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 0</div>
+        </div>
+
+        <span class="sub-question">(v) $\sin\theta - \cos\theta = \displaystyle\frac{7}{13}$ হলে, $\sin\theta + \cos\theta$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজগণিতের সূত্রানুযায়ী, $(a + b)^2 + (a - b)^2 = 2(a^2 + b^2)$</p>
+            <p>অর্থাৎ, $(\sin\theta + \cos\theta)^2 + (\sin\theta - \cos\theta)^2 = 2(\sin^2\theta + \cos^2\theta)$</p>
+            <p>আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$</p>
+            \[
+\begin{array}{l}
+(\sin\theta + \cos\theta)^2 + \left(\frac{7}{13}\right)^2 = 2(1) \\
+(\sin\theta + \cos\theta)^2 + \frac{49}{169} = 2 \\
+(\sin\theta + \cos\theta)^2 = 2 - \frac{49}{169} \\
+= \frac{338 - 49}{169} = \frac{289}{169} \\
+\sin\theta + \cos\theta = \pm\sqrt{\frac{289}{169}} = \pm\frac{17}{13}
+\end{array}
+\]
+            <p>যেহেতু সাধারণত ধনাত্মক মান নেওয়া হয়, তাই $\sin\theta + \cos\theta = \displaystyle\frac{17}{13}$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{17}{13}$</div>
+        </div>
+
+        <span class="sub-question">(vi) $\sin\theta\cos\theta = \displaystyle\frac{1}{2}$ হলে, $(\sin\theta + \cos\theta)$ -এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $(\sin\theta + \cos\theta)^2 = \sin^2\theta + \cos^2\theta + 2\sin\theta\cos\theta$</p>
+            \[
+\begin{array}{l}
+= 1 + 2\left(\frac{1}{2}\right) \\
+= 1 + 1 = 2
+\end{array}
+\]
+            <p>অতএব, $\sin\theta + \cos\theta = \pm\sqrt{2}$</p>
+            <p>যেহেতু ধনাত্মক মান সাধারণত গ্রহণ করা হয়, তাই উত্তর হবে $\sqrt{2}$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sqrt{2}$ (বা $\pm\sqrt{2}$)</div>
+        </div>
+
+        <span class="sub-question">(vii) $\sec\theta - \tan\theta = \displaystyle\frac{1}{\sqrt{3}}$ হলে, $\sec\theta$ এবং $\tan\theta$ উভয়ের মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sec^2\theta - \tan^2\theta = 1$</p>
+            <p>$(\sec\theta - \tan\theta)(\sec\theta + \tan\theta) = 1$</p>
+            <p>$\displaystyle\frac{1}{\sqrt{3}} \times (\sec\theta + \tan\theta) = 1 \implies \sec\theta + \tan\theta = \sqrt{3} \quad \dots \text{(i)}$</p>
+            <p>দেওয়া আছে, $\sec\theta - \tan\theta = \displaystyle\frac{1}{\sqrt{3}} \quad \dots \text{(ii)}$</p>
+            <p>(i) এবং (ii) যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+2\sec\theta = \sqrt{3} + \frac{1}{\sqrt{3}} \\
+2\sec\theta = \frac{3 + 1}{\sqrt{3}} = \frac{4}{\sqrt{3}} \\
+\sec\theta = \frac{2}{\sqrt{3}}
+\end{array}
+\]
+            <p>$\sec\theta$-এর মান (i) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{2}{\sqrt{3}} + \tan\theta = \sqrt{3} \\
+\tan\theta = \sqrt{3} - \frac{2}{\sqrt{3}} \\
+\tan\theta = \frac{3 - 2}{\sqrt{3}} = \frac{1}{\sqrt{3}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sec\theta = \displaystyle\frac{2}{\sqrt{3}}$ এবং $\tan\theta = \displaystyle\frac{1}{\sqrt{3}}$</div>
+        </div>
+
+        <span class="sub-question">(viii) $\text{cosec}\theta + \cot\theta = \sqrt{3}$ হলে, $\text{cosec}\theta$ এবং $\cot\theta$ উভয়ের মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>একইভাবে, $\text{cosec}^2\theta - \cot^2\theta = 1 \implies (\text{cosec}\theta + \cot\theta)(\text{cosec}\theta - \cot\theta) = 1$</p>
+            <p>$\sqrt{3} \times (\text{cosec}\theta - \cot\theta) = 1 \implies \text{cosec}\theta - \cot\theta = \displaystyle\frac{1}{\sqrt{3}} \quad \dots \text{(i)}$</p>
+            <p>দেওয়া আছে, $\text{cosec}\theta + \cot\theta = \sqrt{3} \quad \dots \text{(ii)}$</p>
+            <p>(i) এবং (ii) যোগ করে পাই:</p>
+            \[
+\begin{array}{l}
+2\text{cosec}\theta = \frac{1}{\sqrt{3}} + \sqrt{3} = \frac{1 + 3}{\sqrt{3}} = \frac{4}{\sqrt{3}} \\
+\text{cosec}\theta = \frac{2}{\sqrt{3}}
+\end{array}
+\]
+            <p>মানটি (ii)-এ বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{2}{\sqrt{3}} + \cot\theta = \sqrt{3} \implies \cot\theta = \sqrt{3} - \frac{2}{\sqrt{3}} = \frac{1}{\sqrt{3}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\text{cosec}\theta = \displaystyle\frac{2}{\sqrt{3}}$ এবং $\cot\theta = \displaystyle\frac{1}{\sqrt{3}}$</div>
+        </div>
+
+        <span class="sub-question">(ix) $\displaystyle\frac{\sin\theta+\cos\theta}{\sin\theta-\cos\theta} = 7$ হলে, $\tan\theta$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লব ও হরকে $\cos\theta$ দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{\frac{\sin\theta}{\cos\theta} + \frac{\cos\theta}{\cos\theta}}{\frac{\sin\theta}{\cos\theta} - \frac{\cos\theta}{\cos\theta}} = 7 \\
+\frac{\tan\theta + 1}{\tan\theta - 1} = 7
+\end{array}
+\]
+            <p>বজ্রগুণন করি:</p>
+            \[
+\begin{array}{l}
+7(\tan\theta - 1) = \tan\theta + 1 \\
+7\tan\theta - 7 = \tan\theta + 1 \\
+6\tan\theta = 8 \\
+\tan\theta = \frac{8}{6} = \frac{4}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\tan\theta = \displaystyle\frac{4}{3}$</div>
+        </div>
+
+        <span class="sub-question">(x) $\displaystyle\frac{\text{cosec}\theta+\sin\theta}{\text{cosec}\theta-\sin\theta} = \frac{5}{2}$ হলে, $\sin\theta$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যোগভাগ প্রক্রিয়া (Componendo and Dividendo) প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{(\text{cosec}\theta+\sin\theta) + (\text{cosec}\theta-\sin\theta)}{(\text{cosec}\theta+\sin\theta) - (\text{cosec}\theta-\sin\theta)} = \frac{5+2}{5-2} \\
+\frac{2\text{cosec}\theta}{2\sin\theta} = \frac{7}{3} \\
+\frac{\text{cosec}\theta}{\sin\theta} = \frac{7}{3}
+\end{array}
+\]
+            <p>আমরা জানি, $\text{cosec}\theta = \displaystyle\frac{1}{\sin\theta}$</p>
+            \[
+\begin{array}{l}
+\frac{\frac{1}{\sin\theta}}{\sin\theta} = \frac{7}{3} \\
+\frac{1}{\sin^2\theta} = \frac{7}{3} \\
+\sin^2\theta = \frac{3}{7} \\
+\sin\theta = \sqrt{\frac{3}{7}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sin\theta = \displaystyle\sqrt{\frac{3}{7}}$</div>
+        </div>
+
+        <span class="sub-question">(xi) $\sec\theta + \cos\theta = \displaystyle\frac{5}{2}$ হলে, $(\sec\theta - \cos\theta)$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $(a - b)^2 = (a + b)^2 - 4ab$</p>
+            \[
+\begin{array}{l}
+(\sec\theta - \cos\theta)^2 = (\sec\theta + \cos\theta)^2 - 4\sec\theta\cos\theta
+\end{array}
+\]
+            <p>যেহেতু $\sec\theta \times \cos\theta = 1$,</p>
+            \[
+\begin{array}{l}
+(\sec\theta - \cos\theta)^2 = \left(\frac{5}{2}\right)^2 - 4(1) \\
+= \frac{25}{4} - 4 \\
+= \frac{25 - 16}{4} = \frac{9}{4} \\
+\sec\theta - \cos\theta = \pm\sqrt{\frac{9}{4}} = \pm\frac{3}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{3}{2}$ (বা $\pm\frac{3}{2}$)</div>
+        </div>
+
+        <span class="sub-question">(xii) $5\sin^2\theta + 4\cos^2\theta = \displaystyle\frac{9}{2}$ সম্পর্কটি থেকে $\tan\theta$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সমীকরণটিকে সাজিয়ে লিখি: $5\sin^2\theta$ কে $4\sin^2\theta + \sin^2\theta$ হিসেবে ভাঙি।</p>
+            \[
+\begin{array}{l}
+\sin^2\theta + 4\sin^2\theta + 4\cos^2\theta = \frac{9}{2} \\
+\sin^2\theta + 4(\sin^2\theta + \cos^2\theta) = 4.5 \\
+\sin^2\theta + 4(1) = 4.5 \\
+\sin^2\theta = 4.5 - 4 = 0.5 \\
+\sin^2\theta = \frac{1}{2} \\
+\sin\theta = \frac{1}{\sqrt{2}}
+\end{array}
+\]
+            <p>আমরা জানি, $\sin 45^\circ = \displaystyle\frac{1}{\sqrt{2}}$, তাই $\theta = 45^\circ$।</p>
+            <p>$\therefore \tan\theta = \tan 45^\circ = 1$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\tan\theta = 1$</div>
+        </div>
+
+        <span class="sub-question">(xiii) $\tan^2\theta + \cot^2\theta = \displaystyle\frac{10}{3}$ হলে, $\tan\theta + \cot\theta$ এবং $\tan\theta - \cot\theta$-এর মান নির্ণয় করি এবং সেখান থেকে $\tan\theta$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $(a+b)^2 = a^2+b^2+2ab$</p>
+            \[
+\begin{array}{l}
+(\tan\theta + \cot\theta)^2 = \tan^2\theta + \cot^2\theta + 2\tan\theta\cot\theta \\
+= \frac{10}{3} + 2(1) = \frac{16}{3} \\
+\tan\theta + \cot\theta = \frac{4}{\sqrt{3}} \quad \dots \text{(i)}
+\end{array}
+\]
+            <p>আবার, $(a-b)^2 = a^2+b^2-2ab$</p>
+            \[
+\begin{array}{l}
+(\tan\theta - \cot\theta)^2 = \tan^2\theta + \cot^2\theta - 2\tan\theta\cot\theta \\
+= \frac{10}{3} - 2 = \frac{4}{3} \\
+\tan\theta - \cot\theta = \pm\frac{2}{\sqrt{3}} \quad \dots \text{(ii)}
+\end{array}
+\]
+            <p>(i) এবং (ii) যোগ করে পাই (ধনাত্মক মান ধরে):</p>
+            \[
+\begin{array}{l}
+2\tan\theta = \frac{4}{\sqrt{3}} + \frac{2}{\sqrt{3}} = \frac{6}{\sqrt{3}} = 2\sqrt{3} \\
+\tan\theta = \sqrt{3}
+\end{array}
+\]
+            <p>(অথবা ঋণাত্মক মান ধরলে $\tan\theta = \displaystyle\frac{1}{\sqrt{3}}$ পাওয়া যাবে)।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\tan\theta + \cot\theta = \displaystyle\frac{4}{\sqrt{3}}$, $\tan\theta - \cot\theta = \displaystyle\frac{2}{\sqrt{3}}$, এবং $\tan\theta = \sqrt{3}$।</div>
+        </div>
+
+        <span class="sub-question">(xiv) $\sec^2\theta + \tan^2\theta = \displaystyle\frac{13}{12}$ হলে, $(\sec^4\theta - \tan^4\theta)$-এর মান হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $a^2 - b^2 = (a+b)(a-b)$</p>
+            \[
+\begin{array}{l}
+\sec^4\theta - \tan^4\theta = (\sec^2\theta)^2 - (\tan^2\theta)^2 \\
+= (\sec^2\theta + \tan^2\theta)(\sec^2\theta - \tan^2\theta)
+\end{array}
+\]
+            <p>এখানে প্রথম অংশের মান দেওয়া আছে $\displaystyle\frac{13}{12}$ এবং আমরা জানি দ্বিতীয় অংশের মান $\sec^2\theta - \tan^2\theta = 1$।</p>
+            \[
+\begin{array}{l}
+= \left(\frac{13}{12}\right) \times 1 \\
+= \frac{13}{12}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় মান $\displaystyle\frac{13}{12}$</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. জ্যামিতি ও ত্রিকোণমিতি মিশ্রিত প্রমাণ:</h4>
+
+        <span class="sub-question">(i) PQR ত্রিভুজে $\angle Q$ সমকোণ। $PR = \sqrt{5}$ একক এবং $PQ - RQ = 1$ একক হলে, $\cos P - \cos R$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle PQR$-তে $\angle Q = 90^\circ$। অতিভুজ $PR = \sqrt{5}$।</p>
+            <p>$\angle P$-এর সাপেক্ষে, ভূমি = $PQ$, অতিভুজ = $PR$। $\therefore \cos P = \displaystyle\frac{PQ}{PR}$।</p>
+            <p>$\angle R$-এর সাপেক্ষে, ভূমি = $RQ$, অতিভুজ = $PR$। $\therefore \cos R = \displaystyle\frac{RQ}{PR}$।</p>
+            <p>প্রদত্ত রাশি:</p>
+            \[
+\begin{array}{l}
+\cos P - \cos R = \frac{PQ}{PR} - \frac{RQ}{PR} \\
+= \frac{PQ - RQ}{PR}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই: $PQ - RQ = 1$ এবং $PR = \sqrt{5}$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{\sqrt{5}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{1}{\sqrt{5}}$</div>
+        </div>
+
+        <span class="sub-question">(ii) XYZ ত্রিভুজে $\angle Y$ সমকোণ। $XY = 2\sqrt{3}$ একক এবং $XZ - YZ = 2$ একক হলে, $(\sec X - \tan X)$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\triangle XYZ$-তে $\angle Y = 90^\circ$। অতিভুজ $XZ$।</p>
+            <p>$\angle X$-এর সাপেক্ষে, লম্ব = $YZ$, ভূমি = $XY = 2\sqrt{3}$, অতিভুজ = $XZ$।</p>
+            <p>$\sec X = \displaystyle\frac{XZ}{XY}$ এবং $\tan X = \displaystyle\frac{YZ}{XY}$।</p>
+            <p>প্রদত্ত রাশি:</p>
+            \[
+\begin{array}{l}
+\sec X - \tan X = \frac{XZ}{XY} - \frac{YZ}{XY} \\
+= \frac{XZ - YZ}{XY}
+\end{array}
+\]
+            <p>মান বসিয়ে পাই: $XZ - YZ = 2$ এবং $XY = 2\sqrt{3}$</p>
+            \[
+\begin{array}{l}
+= \frac{2}{2\sqrt{3}} \\
+= \frac{1}{\sqrt{3}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\displaystyle\frac{1}{\sqrt{3}}$</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. সম্পর্কগুলি থেকে '$\theta$' অপনয়ন করি (Eliminate $\theta$):</h4>
+
+        <span class="sub-question">(i) $x = 2\sin\theta, \quad y = 3\cos\theta$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$</p>
+            <p>প্রদত্ত সম্পর্ক থেকে পাই: $\sin\theta = \displaystyle\frac{x}{2}$ এবং $\cos\theta = \displaystyle\frac{y}{3}$</p>
+            <p>মানগুলি সূত্রে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\left(\frac{x}{2}\right)^2 + \left(\frac{y}{3}\right)^2 = 1 \\
+\frac{x^2}{4} + \frac{y^2}{9} = 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> এটিই নির্ণেয় সম্পর্ক।</div>
+        </div>
+
+        <span class="sub-question">(ii) $5x = 3\sec\theta, \quad y = 3\tan\theta$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sec^2\theta - \tan^2\theta = 1$</p>
+            <p>প্রদত্ত সম্পর্ক থেকে পাই: $\sec\theta = \displaystyle\frac{5x}{3}$ এবং $\tan\theta = \displaystyle\frac{y}{3}$</p>
+            <p>মানগুলি সূত্রে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+\left(\frac{5x}{3}\right)^2 - \left(\frac{y}{3}\right)^2 = 1 \\
+\frac{25x^2}{9} - \frac{y^2}{9} = 1 \\
+25x^2 - y^2 = 9
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> এটিই নির্ণেয় সম্পর্ক।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. প্রমাণ ও মান নির্ণয়:</h4>
+
+        <span class="sub-question">(i) যদি $\sin\alpha = \displaystyle\frac{5}{13}$ হয়, তাহলে দেখাই যে $\tan\alpha + \sec\alpha = 1.5$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\sin\alpha = \displaystyle\frac{5}{13} \implies \cos\alpha = \sqrt{1 - \left(\frac{5}{13}\right)^2} = \sqrt{1 - \frac{25}{169}} = \sqrt{\frac{144}{169}} = \frac{12}{13}$</p>
+            <p>$\tan\alpha = \displaystyle\frac{\sin\alpha}{\cos\alpha} = \frac{\frac{5}{13}}{\frac{12}{13}} = \frac{5}{12}$</p>
+            <p>$\sec\alpha = \displaystyle\frac{1}{\cos\alpha} = \frac{13}{12}$</p>
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\tan\alpha + \sec\alpha = \frac{5}{12} + \frac{13}{12} \\
+= \frac{18}{12} = \frac{3}{2} = 1.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $\tan A = \displaystyle\frac{n}{m}$ হয়, তাহলে $\sin A$ ও $\sec A$ উভয়ের মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sec^2 A = 1 + \tan^2 A$</p>
+            \[
+\begin{array}{l}
+\sec A = \sqrt{1 + \left(\frac{n}{m}\right)^2} \\
+= \sqrt{1 + \frac{n^2}{m^2}} \\
+= \sqrt{\frac{m^2+n^2}{m^2}} \\
+= \frac{\sqrt{m^2+n^2}}{m}
+\end{array}
+\]
+            <p>এখন, $\sin A = \tan A \times \cos A = \tan A \times \displaystyle\frac{1}{\sec A}$</p>
+            \[
+\begin{array}{l}
+= \frac{n}{m} \times \frac{m}{\sqrt{m^2+n^2}} \\
+= \frac{n}{\sqrt{m^2+n^2}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\sin A = \displaystyle\frac{n}{\sqrt{m^2+n^2}}$ এবং $\sec A = \displaystyle\frac{\sqrt{m^2+n^2}}{m}$</div>
+        </div>
+
+        <span class="sub-question">(iii) যদি $\cos\theta = \displaystyle\frac{x}{\sqrt{x^2+y^2}}$ হয়, তাহলে দেখাই যে, $x\sin\theta = y\cos\theta$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\sin\theta = \sqrt{1 - \cos^2\theta}$</p>
+            \[
+\begin{array}{l}
+= \sqrt{1 - \frac{x^2}{x^2+y^2}} \\
+= \sqrt{\frac{x^2+y^2-x^2}{x^2+y^2}} \\
+= \sqrt{\frac{y^2}{x^2+y^2}} = \frac{y}{\sqrt{x^2+y^2}}
+\end{array}
+\]
+            <p><strong>বামপক্ষ (L.H.S):</strong> $x\sin\theta = x \times \displaystyle\frac{y}{\sqrt{x^2+y^2}} = \frac{xy}{\sqrt{x^2+y^2}}$</p>
+            <p><strong>ডানপক্ষ (R.H.S):</strong> $y\cos\theta = y \times \displaystyle\frac{x}{\sqrt{x^2+y^2}} = \frac{xy}{\sqrt{x^2+y^2}}$</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+
+        <span class="sub-question">(iv) যদি $\sin\alpha = \displaystyle\frac{a^2-b^2}{a^2+b^2}$ হয়, তাহলে দেখাই যে, $\cot\alpha = \displaystyle\frac{2ab}{a^2-b^2}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\cos\alpha = \sqrt{1 - \sin^2\alpha}$</p>
+            \[
+\begin{array}{l}
+= \sqrt{1 - \left(\frac{a^2-b^2}{a^2+b^2}\right)^2} \\
+= \sqrt{\frac{(a^2+b^2)^2 - (a^2-b^2)^2}{(a^2+b^2)^2}}
+\end{array}
+\]
+            <p>লবে $(A+B)^2 - (A-B)^2 = 4AB$ সূত্র প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+= \sqrt{\frac{4a^2b^2}{(a^2+b^2)^2}} = \frac{2ab}{a^2+b^2}
+\end{array}
+\]
+            <p><strong>বামপক্ষ (L.H.S):</strong> $\cot\alpha = \displaystyle\frac{\cos\alpha}{\sin\alpha}$</p>
+            \[
+\begin{array}{l}
+= \frac{\frac{2ab}{a^2+b^2}}{\frac{a^2-b^2}{a^2+b^2}} \\
+= \frac{2ab}{a^2-b^2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+
+        <span class="sub-question">(v) যদি $\displaystyle\frac{\sin\theta}{x} = \frac{\cos\theta}{y}$ হয়, তাহলে দেখাই যে, $\sin\theta - \cos\theta = \displaystyle\frac{x-y}{\sqrt{x^2+y^2}}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, $\displaystyle\frac{\sin\theta}{x} = \frac{\cos\theta}{y} = k \implies \sin\theta = kx, \cos\theta = ky$</p>
+            <p>আমরা জানি, $\sin^2\theta + \cos^2\theta = 1$</p>
+            \[
+\begin{array}{l}
+(kx)^2 + (ky)^2 = 1 \\
+k^2(x^2 + y^2) = 1 \\
+k = \frac{1}{\sqrt{x^2+y^2}}
+\end{array}
+\]
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\sin\theta - \cos\theta = kx - ky \\
+= k(x - y) \\
+= \frac{1}{\sqrt{x^2+y^2}} (x - y) \\
+= \frac{x-y}{\sqrt{x^2+y^2}}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+
+        <span class="sub-question">(vi) যদি $(1+4x^2)\cos A = 4x$ হয়, তাহলে দেখাই যে, $\text{cosec} A + \cot A = \displaystyle\frac{1+2x}{1-2x}$</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, $\cos A = \displaystyle\frac{4x}{1+4x^2}$</p>
+            <p>$\sin A = \sqrt{1 - \cos^2 A}$</p>
+            \[
+\begin{array}{l}
+= \sqrt{1 - \left(\frac{4x}{1+4x^2}\right)^2} \\
+= \sqrt{\frac{(1+4x^2)^2 - (4x)^2}{(1+4x^2)^2}} \\
+= \frac{\sqrt{(1)^2 + 2(1)(4x^2) + (4x^2)^2 - 16x^2}}{1+4x^2} \\
+= \frac{\sqrt{1 - 8x^2 + 16x^4}}{1+4x^2} \\
+= \frac{\sqrt{(1 - 4x^2)^2}}{1+4x^2} = \frac{1-4x^2}{1+4x^2}
+\end{array}
+\]
+            <p><strong>বামপক্ষ (L.H.S):</strong> $\text{cosec} A + \cot A = \displaystyle\frac{1}{\sin A} + \frac{\cos A}{\sin A} = \frac{1 + \cos A}{\sin A}$</p>
+            \[
+\begin{array}{l}
+= \frac{1 + \frac{4x}{1+4x^2}}{\frac{1-4x^2}{1+4x^2}} \\
+= \frac{\frac{1+4x^2+4x}{1+4x^2}}{\frac{1-4x^2}{1+4x^2}} \\
+= \frac{1+4x+4x^2}{1-4x^2} \\
+= \frac{(1+2x)^2}{(1-2x)(1+2x)} \\
+= \frac{1+2x}{1-2x}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. যদি $x = a\sin\theta$ এবং $y = b\tan\theta$ হয়, তাহলে প্রমাণ করি যে, $\displaystyle\frac{a^2}{x^2} - \frac{b^2}{y^2} = 1$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <p>দেওয়া আছে, $x = a\sin\theta \implies \displaystyle\frac{a}{x} = \frac{1}{\sin\theta} = \text{cosec}\theta$</p>
+            <p>এবং $y = b\tan\theta \implies \displaystyle\frac{b}{y} = \frac{1}{\tan\theta} = \cot\theta$</p>
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\frac{a^2}{x^2} - \frac{b^2}{y^2} = \left(\frac{a}{x}\right)^2 - \left(\frac{b}{y}\right)^2 \\
+= \text{cosec}^2\theta - \cot^2\theta
+\end{array}
+\]
+            <p>আমরা জানি, $\text{cosec}^2\theta - \cot^2\theta = 1$।</p>
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. যদি $\sin\theta + \sin^2\theta = 1$ হয়, তাহলে প্রমাণ করি যে, $\cos^2\theta + \cos^4\theta = 1$</h4>
+        <div class="solution-box">
+            <span class="sol-badge">প্রমাণ</span>
+            <p>দেওয়া আছে, $\sin\theta + \sin^2\theta = 1$</p>
+            \[
+\begin{array}{l}
+\sin\theta = 1 - \sin^2\theta
+\end{array}
+\]
+            <p>আমরা জানি, $1 - \sin^2\theta = \cos^2\theta$।</p>
+            <p>$\therefore \sin\theta = \cos^2\theta$</p>
+            <p>উভয়পক্ষকে বর্গ করে পাই: $\sin^2\theta = \cos^4\theta$</p>
+            <p><strong>বামপক্ষ (L.H.S):</strong></p>
+            \[
+\begin{array}{l}
+\cos^2\theta + \cos^4\theta = \cos^2\theta + \sin^2\theta \quad [\text{মান বসিয়ে}] \\
+= 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-double me-1"></i> বামপক্ষ = ডানপক্ষ (প্রমাণিত)।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) যদি $3x = \text{cosec}\alpha$ এবং $\displaystyle\frac{3}{x} = \cot\alpha$ হয়, তাহলে $3\left(x^2 - \displaystyle\frac{1}{x^2}\right)$ -এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\text{cosec}^2\alpha - \cot^2\alpha = 1$</p>
+            \[
+\begin{array}{l}
+(3x)^2 - \left(\frac{3}{x}\right)^2 = 1 \\
+9x^2 - \frac{9}{x^2} = 1 \\
+9\left(x^2 - \frac{1}{x^2}\right) = 1 \\
+3 \times 3\left(x^2 - \frac{1}{x^2}\right) = 1 \\
+3\left(x^2 - \frac{1}{x^2}\right) = \frac{1}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) $\displaystyle\frac{1}{3}$</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $2x = \sec A$ এবং $\displaystyle\frac{2}{x} = \tan A$ হয়, তাহলে $2\left(x^2 - \displaystyle\frac{1}{x^2}\right)$ -এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sec^2 A - \tan^2 A = 1$</p>
+            \[
+\begin{array}{l}
+(2x)^2 - \left(\frac{2}{x}\right)^2 = 1 \\
+4\left(x^2 - \frac{1}{x^2}\right) = 1 \\
+2 \times 2\left(x^2 - \frac{1}{x^2}\right) = 1 \\
+2\left(x^2 - \frac{1}{x^2}\right) = \frac{1}{2}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) $\displaystyle\frac{1}{2}$</div>
+        </div>
+
+        <span class="sub-question">(iii) $\tan\alpha + \cot\alpha = 2$ হলে, $(\tan^{13}\alpha + \cot^{13}\alpha)$ -এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\tan\alpha + \displaystyle\frac{1}{\tan\alpha} = 2 \implies \frac{\tan^2\alpha+1}{\tan\alpha} = 2 \implies \tan^2\alpha - 2\tan\alpha + 1 = 0 \implies (\tan\alpha - 1)^2 = 0 \implies \tan\alpha = 1$।</p>
+            <p>যেহেতু $\tan\alpha = 1$, তাই $\cot\alpha = 1$।</p>
+            <p>$1^{13} + 1^{13} = 1 + 1 = 2$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 2</div>
+        </div>
+
+        <span class="sub-question">(iv) যদি $\sin\theta - \cos\theta = 0$ ($0^\circ \le \theta \le 90^\circ$) এবং $\sec\theta + \text{cosec}\theta = x$ হয়, তাহলে $x$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\sin\theta = \cos\theta \implies \tan\theta = 1 \implies \theta = 45^\circ$।</p>
+            <p>$x = \sec 45^\circ + \text{cosec} 45^\circ = \sqrt{2} + \sqrt{2} = 2\sqrt{2}$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $2\sqrt{2}$</div>
+        </div>
+
+        <span class="sub-question">(v) $2\cos 3\theta = 1$ হলে, $\theta$-এর মান:</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>$\cos 3\theta = \displaystyle\frac{1}{2}$</p>
+            <p>আমরা জানি $\cos 60^\circ = \displaystyle\frac{1}{2}$, তাই $3\theta = 60^\circ \implies \theta = 20^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (c) 20°</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) যদি $0^\circ \le \alpha &lt; 90^\circ$ হয়, তাহলে $(\sec^2\alpha + \cos^2\alpha)$-এর সর্বনিম্ন মান 2।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> ধরি $\sec\alpha = x$, তাহলে $\cos\alpha = 1/x$।</p>
+            <p>$x^2 + \frac{1}{x^2} = \left(x - \frac{1}{x}\right)^2 + 2$। কোনো সংখ্যার বর্গ সর্বদা $\ge 0$ হয়। তাই সর্বনিম্ন মান $0 + 2 = 2$।</p>
+            <div class="final-answer"><i class="fas fa-check me-1"></i> <strong>সত্য (True)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) $(\cos 0^\circ \times \cos 1^\circ \times \cos 2^\circ \times \dots \times \cos 90^\circ)$ -এর মান 1।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> গুণফলের শেষে $\cos 90^\circ$ আছে যার মান 0। তাই সম্পূর্ণ গুণফল 0 হবে, 1 নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) $\left( \displaystyle\frac{4}{\sec^2\theta} + \frac{1}{1+\cot^2\theta} + 3\sin^2\theta \right)$ -এর মান <span class="blank-fill">_________</span>।</span>
+        <div class="solution-box">
+            <p>$= 4\cos^2\theta + \frac{1}{\text{cosec}^2\theta} + 3\sin^2\theta = 4\cos^2\theta + \sin^2\theta + 3\sin^2\theta = 4(\cos^2\theta + \sin^2\theta) = 4(1) = 4$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> 4</p>
+        </div>
+
+        <span class="sub-question">(ii) $\sin(\theta - 30^\circ) = \displaystyle\frac{1}{2}$ হলে, $\cos\theta$ -এর মান <span class="blank-fill">_________</span>।</span>
+        <div class="solution-box">
+            <p>$\sin(\theta - 30^\circ) = \sin 30^\circ \implies \theta - 30^\circ = 30^\circ \implies \theta = 60^\circ$। $\cos 60^\circ = \frac{1}{2}$।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\displaystyle\frac{1}{2}$</p>
+        </div>
+
+        <span class="sub-question">(iii) $\cos^2\theta - \sin^2\theta = \displaystyle\frac{1}{2}$ হলে, $\cos^4\theta - \sin^4\theta$ -এর মান <span class="blank-fill">_________</span>।</span>
+        <div class="solution-box">
+            <p>$\cos^4\theta - \sin^4\theta = (\cos^2\theta - \sin^2\theta)(\cos^2\theta + \sin^2\theta) = (\frac{1}{2}) \times 1 = \frac{1}{2}$</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $\displaystyle\frac{1}{2}$</p>
+        </div>
+    </div>
+
+    <!-- Question 10 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">10. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) যদি $r\cos\theta = 2\sqrt{3}, r\sin\theta = 2$ এবং $0^\circ &lt; \theta &lt; 90^\circ$ হয়, তাহলে $r$ এবং $\theta$ উভয়ের মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দ্বিতীয় সমীকরণকে প্রথম সমীকরণ দিয়ে ভাগ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{r\sin\theta}{r\cos\theta} = \frac{2}{2\sqrt{3}} \\
+\tan\theta = \frac{1}{\sqrt{3}} \\
+\tan\theta = \tan 30^\circ \implies \theta = 30^\circ
+\end{array}
+\]
+            <p>$\theta = 30^\circ$ মানটি $r\sin\theta = 2$ সমীকরণে বসাই:</p>
+            \[
+\begin{array}{l}
+r\sin 30^\circ = 2 \\
+r \times \frac{1}{2} = 2 \\
+r = 4
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\theta = 30^\circ$ এবং $r = 4$।</div>
+        </div>
+
+        <span class="sub-question">(ii) যদি $\sin A + \sin B = 2$ হয়, যেখানে $0^\circ \le A \le 90^\circ$ এবং $0^\circ \le B \le 90^\circ$, তাহলে $(\cos A + \cos B)$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\sin$-এর সর্বোচ্চ মান 1 হতে পারে।</p>
+            <p>যেহেতু $\sin A + \sin B = 2$, তাই একমাত্র তখনই এটি সম্ভব যখন উভয়ের মান সর্বোচ্চ অর্থাৎ 1 হয়।</p>
+            <p>$\therefore \sin A = 1 \implies A = 90^\circ$</p>
+            <p>এবং $\sin B = 1 \implies B = 90^\circ$</p>
+            <p>প্রদত্ত রাশি: $\cos A + \cos B = \cos 90^\circ + \cos 90^\circ = 0 + 0 = 0$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান 0</div>
+        </div>
+
+        <span class="sub-question">(iii) যদি $0^\circ &lt; \theta &lt; 90^\circ$ হয়, তাহলে $(9\tan^2\theta + 4\cot^2\theta)$-এর সর্বনিম্ন মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বীজগণিতের সূত্র $a^2 + b^2 = (a-b)^2 + 2ab$ প্রয়োগ করে পাই:</p>
+            \[
+\begin{array}{l}
+9\tan^2\theta + 4\cot^2\theta = (3\tan\theta)^2 + (2\cot\theta)^2 \\
+= (3\tan\theta - 2\cot\theta)^2 + 2(3\tan\theta)(2\cot\theta) \\
+= (3\tan\theta - 2\cot\theta)^2 + 12(\tan\theta \cdot \cot\theta) \\
+= (3\tan\theta - 2\cot\theta)^2 + 12
+\end{array}
+\]
+            <p>আমরা জানি, যেকোনো বাস্তব সংখ্যার বর্গ সর্বদা শূন্য বা ধনাত্মক হয়। তাই $(3\tan\theta - 2\cot\theta)^2 \ge 0$।</p>
+            <p>অতএব, রাশিটির সর্বনিম্ন মান হবে $0 + 12 = 12$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সর্বনিম্ন মান 12</div>
+        </div>
+
+        <span class="sub-question">(iv) $(\sin^6\alpha + \cos^6\alpha + 3\sin^2\alpha \cos^2\alpha)$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা $a^3 + b^3 = (a+b)^3 - 3ab(a+b)$ সূত্রটি ব্যবহার করব।</p>
+            \[
+\begin{array}{l}
+= (\sin^2\alpha)^3 + (\cos^2\alpha)^3 + 3\sin^2\alpha \cos^2\alpha \\
+= [(\sin^2\alpha + \cos^2\alpha)^3 - 3\sin^2\alpha\cos^2\alpha(\sin^2\alpha + \cos^2\alpha)] + 3\sin^2\alpha \cos^2\alpha \\
+= [1^3 - 3\sin^2\alpha\cos^2\alpha(1)] + 3\sin^2\alpha \cos^2\alpha \\
+= 1 - 3\sin^2\alpha\cos^2\alpha + 3\sin^2\alpha \cos^2\alpha \\
+= 1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মান 1</div>
+        </div>
+
+        <span class="sub-question">(v) যদি $\text{cosec}^2\theta = 2\cot\theta$ এবং $0^\circ &lt; \theta &lt; 90^\circ$ হয়, তাহলে $\theta$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, $\text{cosec}^2\theta = 1 + \cot^2\theta$</p>
+            \[
+\begin{array}{l}
+1 + \cot^2\theta = 2\cot\theta \\
+\cot^2\theta - 2\cot\theta + 1 = 0 \\
+(\cot\theta - 1)^2 = 0 \\
+\cot\theta - 1 = 0 \\
+\cot\theta = 1
+\end{array}
+\]
+            <p>যেহেতু $\cot 45^\circ = 1$, তাই $\theta = 45^\circ$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\theta$-এর মান 45°</div>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

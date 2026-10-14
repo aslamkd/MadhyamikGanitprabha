@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-26.4</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.stat-table-wrapper{overflow-x:auto;margin:1.5rem 0px;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid rgb(226,232,240)}.stat-table{width:100%;border-collapse:collapse;background-color:rgb(255,255,255);text-align:center}.stat-table th{background-color:rgb(238,242,255);color:var(--primary-dark);font-weight:700;padding:12px;border:1px solid rgb(203,213,225);white-space:nowrap}.stat-table td{padding:10px;border:1px solid rgb(226,232,240);color:rgb(71,85,105)}.stat-table .highlight-row{background-color:rgb(254,243,199);font-weight:bold}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>সংখ্যাগুরুমান (Mode) নির্ণয়ের সূত্রাবলি:</strong><br>
+        ১) <strong>অবিন্যস্ত তথ্যের ক্ষেত্রে:</strong> যে সংখ্যাটি পরিসংখ্যায় সবচেয়ে বেশি বার আছে (সর্বাধিকবার উপস্থিত), সেটিই হলো সংখ্যাগুরুমান। কোনো তথ্যে একাধিক সংখ্যাগুরুমান থাকতে পারে।<br>
+        ২) <strong>বিন্যস্ত তথ্যের (Grouped Data) ক্ষেত্রে:</strong> প্রথমে সবচেয়ে বেশি পরিসংখ্যা বিশিষ্ট <strong>সংখ্যাগুরুমান শ্রেণি (Modal Class)</strong> বের করতে হবে।<br>
+        সংখ্যাগুরুমান (Mode) = $\displaystyle l + \left[ \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right] \times h$<br>
+        যেখানে $l$ = সংখ্যাগুরুমান শ্রেণির নিম্নসীমা, $f_1$ = সংখ্যাগুরুমান শ্রেণির পরিসংখ্যা, $f_0$ = ঠিক আগের শ্রেণির পরিসংখ্যা, $f_2$ = ঠিক পরের শ্রেণির পরিসংখ্যা, $h$ = শ্রেণির দৈর্ঘ্য।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আমাদের 16 জন বন্ধুর প্রতিদিন স্কুলে যাতায়াত ও অন্যান্য খরচের জন্য প্রাপ্ত টাকার পরিমাণ: 15, 16, 17, 18, 17, 19, 17, 15, 15, 10, 17, 16, 15, 16, 18, 11. আমাদের বন্ধুদের প্রতিদিন পাওয়া অর্থের সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত তথ্যগুলিকে মানের ঊর্ধ্বক্রমে সাজিয়ে পরিসংখ্যা ছক তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>টাকার পরিমাণ</th>
+                            <th>10</th><th>11</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>বন্ধুর সংখ্যা (পরিসংখ্যা)</th>
+                            <td>1</td><td>1</td><td class="highlight-row">4</td><td>3</td><td class="highlight-row">4</td><td>2</td><td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>উপরের তালিকা থেকে দেখতে পাচ্ছি যে, 15 টাকা এবং 17 টাকা উভয়েরই পরিসংখ্যা সর্বাধিক (4 বার করে)।</p>
+            <p>যেহেতু দুটি মানের পরিসংখ্যাই সর্বাধিক এবং সমান, তাই এই তথ্যের দুটি সংখ্যাগুরুমান আছে।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সংখ্যাগুরুমান 15 টাকা এবং 17 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. নীচে আমাদের শ্রেণির কিছু ছাত্রছাত্রীদের উচ্চতা (সেমি.) হলো, 131, 130, 130, 132, 131, 133, 131, 134, 131, 132, 132, 131, 133, 130, 132, 130, 133, 135, 131, 135, 131, 135, 130, 132, 135, 134, 133. ছাত্রছাত্রীদের উচ্চতার সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তথ্যগুলি গুনে একটি পরিসংখ্যা বিভাজন তালিকা তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>উচ্চতা (সেমি.)</th>
+                            <th>130</th><th>131</th><th>132</th><th>133</th><th>134</th><th>135</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>ছাত্রছাত্রীর সংখ্যা</th>
+                            <td>5</td><td class="highlight-row">7</td><td>5</td><td>4</td><td>2</td><td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>তালিকা থেকে স্পষ্টভাবে দেখা যাচ্ছে, সবচেয়ে বেশি সংখ্যক ছাত্রছাত্রীর (7 জন) উচ্চতা হলো 131 সেমি.।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ছাত্রছাত্রীদের উচ্চতার সংখ্যাগুরুমান 131 সেমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. নীচের তথ্যের সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        
+        <span class="sub-question">(i) 8, 5, 4, 6, 7, 4, 4, 3, 5, 4, 5, 4, 4, 5, 5, 4, 3, 3, 5, 4, 6, 5, 4, 5, 4, 2, 3, 4</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তথ্যগুলিকে গুনে পরিসংখ্যা ছকে সাজাই:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>মান</th>
+                            <th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>পরিসংখ্যা</th>
+                            <td>1</td><td>4</td><td class="highlight-row">11</td><td>8</td><td>2</td><td>1</td><td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>এখানে 4 সংখ্যাটি সবচেয়ে বেশি বার (11 বার) আছে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: সংখ্যাগুরুমান হলো 4।</div>
+        </div>
+
+        <span class="sub-question">(ii) 15, 11, 10, 8, 15, 18, 17, 15, 10, 19, 10, 11, 10, 8, 19, 15, 10, 18, 15, 3, 16, 14, 17, 2</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তথ্যগুলিকে গুনে পরিসংখ্যা ছকে সাজাই:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>মান</th>
+                            <th>2</th><th>3</th><th>8</th><th>10</th><th>11</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>পরিসংখ্যা</th>
+                            <td>1</td><td>1</td><td>2</td><td class="highlight-row">5</td><td>2</td><td>1</td><td class="highlight-row">5</td><td>1</td><td>2</td><td>2</td><td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>এখানে 10 এবং 15 উভয় সংখ্যাটিই সর্বাধিক বার (5 বার করে) আছে।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: সংখ্যাগুরুমান হলো 10 এবং 15।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. আমাদের পাড়ার একটি জুতোর দোকানে একটি বিশেষ কোম্পানির জুতো বিক্রির পরিসংখ্যা বিভাজন তালিকা হলো, সাইজ: 2(3), 3(4), 4(5), 5(3), 6(5), 7(4), 8(3), 9(2)। উপরের পরিসংখ্যা বিভাজনের সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>সাইজ ($x_i$)</th>
+                            <th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>পরিসংখ্যা ($f_i$)</th>
+                            <td>3</td><td>4</td><td class="highlight-row">5</td><td>3</td><td class="highlight-row">5</td><td>4</td><td>3</td><td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>উপরের ছক থেকে দেখতে পাচ্ছি যে, জুতোর 4 নম্বর সাইজ এবং 6 নম্বর সাইজ উভয়েরই বিক্রির পরিসংখ্যা সবচেয়ে বেশি (5 জোড়া করে)।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় সংখ্যাগুরুমান 4 এবং 6।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. একটি প্রবেশিকা পরীক্ষায় পরীক্ষার্থীর বয়সের পরিসংখ্যা বিভাজন ছক থেকে সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (সূত্রের সাহায্যে)</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>বয়স (বছরে)</th>
+                            <th>পরীক্ষার্থীর সংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>16 - 18</td><td>45</td></tr>
+                        <tr class="highlight-row"><td>18 - 20</td><td>75</td></tr>
+                        <tr><td>20 - 22</td><td>38</td></tr>
+                        <tr><td>22 - 24</td><td>22</td></tr>
+                        <tr><td>24 - 26</td><td>20</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>সারণি থেকে দেখা যাচ্ছে, সর্বাধিক পরিসংখ্যা হলো 75, যা <strong>18 - 20</strong> শ্রেণির অন্তর্গত।</p>
+            <p>অতএব, <strong>সংখ্যাগুরুমান শ্রেণি (Modal Class) = 18 - 20</strong>।</p>
+            <p>এখানে,</p>
+            <ul>
+                <li>$l$ (নিম্নসীমা) = 18</li>
+                <li>$f_1$ (সংখ্যাগুরুমান শ্রেণির পরিসংখ্যা) = 75</li>
+                <li>$f_0$ (আগের শ্রেণির পরিসংখ্যা) = 45</li>
+                <li>$f_2$ (পরের শ্রেণির পরিসংখ্যা) = 38</li>
+                <li>$h$ (শ্রেণির দৈর্ঘ্য) = 2</li>
+            </ul>
+            <p>সংখ্যাগুরুমান নির্ণয়ের সূত্র:</p>
+            \[
+\begin{array}{l}
+\text{Mode} = l + \left( \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right) \times h \\
+= 18 + \left( \frac{75 - 45}{2(75) - 45 - 38} \right) \times 2 \\
+= 18 + \left( \frac{30}{150 - 83} \right) \times 2 \\
+= 18 + \frac{30}{67} \times 2 \\
+= 18 + \frac{60}{67} \\
+= 18 + 0.8955... \\
+\approx 18.9
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বয়সের সংখ্যাগুরুমান প্রায় 18.9 বছর।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. শ্রেণির একটি পর্যায়ক্রমিক পরীক্ষায় 80 জন ছাত্রছাত্রীর প্রাপ্ত নম্বরের পরিসংখ্যা বিভাজন তালিকা দেখি ও সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>নম্বর</th>
+                            <th>ছাত্রছাত্রীর সংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 5</td><td>2</td></tr>
+                        <tr><td>5 - 10</td><td>6</td></tr>
+                        <tr><td>10 - 15</td><td>10</td></tr>
+                        <tr><td>15 - 20</td><td>16</td></tr>
+                        <tr class="highlight-row"><td>20 - 25</td><td>22</td></tr>
+                        <tr><td>25 - 30</td><td>11</td></tr>
+                        <tr><td>30 - 35</td><td>8</td></tr>
+                        <tr><td>35 - 40</td><td>5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>সবচেয়ে বেশি পরিসংখ্যা হলো 22, যা <strong>20 - 25</strong> শ্রেণির অন্তর্গত।</p>
+            <p>অতএব, <strong>সংখ্যাগুরুমান শ্রেণি = 20 - 25</strong>।</p>
+            <p>এখানে, $l = 20, f_1 = 22, f_0 = 16, f_2 = 11, h = 5$।</p>
+            \[
+\begin{array}{l}
+\text{Mode} = l + \left( \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right) \times h \\
+= 20 + \left( \frac{22 - 16}{2(22) - 16 - 11} \right) \times 5 \\
+= 20 + \left( \frac{6}{44 - 27} \right) \times 5 \\
+= 20 + \frac{6}{17} \times 5 \\
+= 20 + \frac{30}{17} \\
+= 20 + 1.764... \\
+\approx 21.76
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রাপ্ত নম্বরের সংখ্যাগুরুমান প্রায় 21.76।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. নীচের পরিসংখ্যা বিভাজনের সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 5</td><td>5</td></tr>
+                        <tr><td>5 - 10</td><td>12</td></tr>
+                        <tr><td>10 - 15</td><td>18</td></tr>
+                        <tr class="highlight-row"><td>15 - 20</td><td>28</td></tr>
+                        <tr><td>20 - 25</td><td>17</td></tr>
+                        <tr><td>25 - 30</td><td>12</td></tr>
+                        <tr><td>30 - 35</td><td>8</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>সবচেয়ে বেশি পরিসংখ্যা হলো 28, যা <strong>15 - 20</strong> শ্রেণির অন্তর্গত।</p>
+            <p>অতএব, <strong>সংখ্যাগুরুমান শ্রেণি = 15 - 20</strong>।</p>
+            <p>এখানে, $l = 15, f_1 = 28, f_0 = 18, f_2 = 17, h = 5$।</p>
+            \[
+\begin{array}{l}
+\text{Mode} = l + \left( \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right) \times h \\
+= 15 + \left( \frac{28 - 18}{2(28) - 18 - 17} \right) \times 5 \\
+= 15 + \left( \frac{10}{56 - 35} \right) \times 5 \\
+= 15 + \frac{10}{21} \times 5 \\
+= 15 + \frac{50}{21} \\
+= 15 + 2.380... \\
+\approx 17.38
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সংখ্যাগুরুমান প্রায় 17.38।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. নীচের পরিসংখ্যা বিভাজনের সংখ্যাগুরুমান নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (শ্রেণি সীমানা পরিবর্তন)</span>
+            <p>এখানে শ্রেণিগুলি (45-54, 55-64...) <strong>অবিচ্ছিন্ন নয় (Discontinuous)</strong>। তাই প্রথমে 0.5 বিয়োগ এবং যোগ করে এদের <strong>শ্রেণি-সীমানায় (Continuous Class Boundaries)</strong> রূপান্তর করতে হবে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি</th>
+                            <th>শ্রেণি-সীমানা (Continuous)</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>45 - 54</td><td>44.5 - 54.5</td><td>8</td></tr>
+                        <tr><td>55 - 64</td><td>54.5 - 64.5</td><td>13</td></tr>
+                        <tr><td>65 - 74</td><td>64.5 - 74.5</td><td>19</td></tr>
+                        <tr class="highlight-row"><td>75 - 84</td><td>74.5 - 84.5</td><td>32</td></tr>
+                        <tr><td>85 - 94</td><td>84.5 - 94.5</td><td>12</td></tr>
+                        <tr><td>95 - 104</td><td>94.5 - 104.5</td><td>6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>সবচেয়ে বেশি পরিসংখ্যা হলো 32, যা <strong>74.5 - 84.5</strong> শ্রেণির অন্তর্গত।</p>
+            <p>অতএব, <strong>সংখ্যাগুরুমান শ্রেণি = 74.5 - 84.5</strong>।</p>
+            <p>এখানে, $l = 74.5, f_1 = 32, f_0 = 19, f_2 = 12, h = 10$ (যেহেতু $84.5 - 74.5 = 10$)।</p>
+            \[
+\begin{array}{l}
+\text{Mode} = l + \left( \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right) \times h \\
+= 74.5 + \left( \frac{32 - 19}{2(32) - 19 - 12} \right) \times 10 \\
+= 74.5 + \left( \frac{13}{64 - 31} \right) \times 10 \\
+= 74.5 + \frac{13}{33} \times 10 \\
+= 74.5 + \frac{130}{33} \\
+= 74.5 + 3.939... \\
+\approx 78.44
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সংখ্যাগুরুমান প্রায় 78.44।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">9. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) একটি পরিসংখ্যা বিভাজনের মধ্যমা যে লেখচিত্রের সাহায্যে পাওয়া যায় তা হলো-</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>মধ্যমা (Median) সর্বদা ওজাইভ (Ogive) অঙ্কন করে নির্ণয় করা হয়।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) ওজাইভ</div>
+        </div>
+
+        <span class="sub-question">(ii) 6, 7, x, 8, y, 14 সংখ্যাগুলির গড় 9 হলে-</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গড় = পদের সমষ্টি / পদসংখ্যা</p>
+            \[
+\begin{array}{l}
+\frac{6 + 7 + x + 8 + y + 14}{6} = 9 \\
+\frac{35 + x + y}{6} = 9 \\
+35 + x + y = 54 \\
+x + y = 54 - 35 = 19
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) x+y=19</div>
+        </div>
+
+        <span class="sub-question">(iii) 30, 34, 35, 36, 37, 38, 39, 40 তথ্যে 35 না থাকলে মধ্যমা বৃদ্ধি পায়-</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত তথ্য: 30, 34, 35, 36, 37, 38, 39, 40 (মোট পদ = 8)।<br>
+            প্রাথমিক মধ্যমা = $\displaystyle\frac{36+37}{2} = 36.5$</p>
+            <p>35 না থাকলে তথ্য: 30, 34, 36, 37, 38, 39, 40 (মোট পদ = 7)।<br>
+            নতুন মধ্যমা = 4-র্থ পদ = 37</p>
+            <p>মধ্যমা বৃদ্ধি = $37 - 36.5 = 0.5$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) 0.5</div>
+        </div>
+
+        <span class="sub-question">(iv) 16, 15, 17, 16, 15, x, 19, 17, 14 তথ্যের সংখ্যাগুরুমান 15 হলে x-এর মান-</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে 15 আছে 2 বার, 16 আছে 2 বার, 17 আছে 2 বার। 15-কে সংখ্যাগুরুমান হতে হলে, 15-কে সর্বাধিক বার থাকতে হবে। অর্থাৎ, x-এর মান অবশ্যই 15 হতে হবে যাতে 15-এর পরিসংখ্যা 3 হয়ে যায়।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 15</div>
+        </div>
+
+        <span class="sub-question">(v) ঊর্ধ্বক্রমানুসারে সাজানো 8, 9, 12, 17, x+2, x+4, 30, 31, 34, 39 তথ্যের মধ্যমা 24 হলে, x-এর মান-</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এখানে পদসংখ্যা ($n$) = 10 (যুগ্ম)।<br>
+            মধ্যমা = $\displaystyle\frac{\text{5-ম পদ} + \text{6-ষ্ঠ পদ}}{2}$</p>
+            \[
+\begin{array}{l}
+24 = \frac{(x+2) + (x+4)}{2} \\
+24 = \frac{2x + 6}{2} \\
+24 = x + 3 \\
+x = 21
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 21</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) 2, 3, 9, 10, 9, 3, 9 তথ্যের সংখ্যাগুরুমান 10।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> তথ্যে 9 সর্বাধিক 3 বার আছে। তাই সংখ্যাগুরুমান 9 হবে, 10 নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) 3, 14, 18, 20, 5 তথ্যের মধ্যমা 18।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> ঊর্ধ্বক্রমে সাজালে: 3, 5, 14, 18, 20। এদের মাঝের পদ (মধ্যমা) হলো 14, 18 নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) যৌগিক গড়, মধ্যমা, সংখ্যাগুরুমান হলো _________ প্রবণতার মাপক।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> মধ্যগামিতা (Central tendency)</p>
+        </div>
+
+        <span class="sub-question">(ii) $x_1, x_2, \dots, x_n$ এর গড় $\bar{x}$ হলে, $ax_1, ax_2, \dots, ax_n$ এর গড় _________ , যেখানে $a \neq 0$।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> $a\bar{x}$</p>
+        </div>
+
+        <span class="sub-question">(iii) ক্রম-বিচ্যুতি পদ্ধতিতে বিন্যস্ত রাশিতথ্যের যৌগিক গড় নির্ণয়ের সময় সকল শ্রেণির শ্রেণি-দৈর্ঘ্য _________।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান</p>
+        </div>
+    </div>
+
+    <!-- Question 10 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">10. সংক্ষিপ্ত উত্তরভিত্তিক প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি পরিসংখ্যা বিভাজন ছকের (65-85, 85-105, 105-125...) মধ্যমা শ্রেণির ঊর্ধ্ব শ্রেণি-সীমানা এবং সংখ্যাগুরুমান শ্রেণির নিম্ন শ্রেণি-সীমানার অন্তরফল নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে সারণিটি দেখি: 65-85 (4), 85-105 (15), 105-125 (3), 125-145 (20), 145-165 (14), 165-185 (7), 185-205 (14)।</p>
+            <p><strong>মধ্যমা শ্রেণি:</strong> মোট পরিসংখ্যা ($N$) = $4 + 15 + 3 + 20 + 14 + 7 + 14 = 77$।<br>
+            $\displaystyle\frac{N}{2} = 38.5$।<br>
+            ক্রমযৌগিক পরিসংখ্যা (CF) হিসাব করলে: 4, 19, 22, 42...<br>
+            38.5 এর ঠিক বড়ো CF হলো 42, যা <strong>125 - 145</strong> শ্রেণির।<br>
+            $\therefore$ মধ্যমা শ্রেণির ঊর্ধ্ব শ্রেণি-সীমানা = 145।</p>
+            
+            <p><strong>সংখ্যাগুরুমান শ্রেণি:</strong> সর্বাধিক পরিসংখ্যা হলো 20, যা <strong>125 - 145</strong> শ্রেণির।<br>
+            $\therefore$ সংখ্যাগুরুমান শ্রেণির নিম্ন শ্রেণি-সীমানা = 125।</p>
+            
+            <p>অন্তরফল = $145 - 125 = 20$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: অন্তরফল 20।</div>
+        </div>
+
+        <span class="sub-question">(ii) 150 জন অ্যাথলিট 100 মিটার হার্ডল রেস যত সেকেন্ডে সম্পূর্ণ করে তার একটি পরিসংখ্যা বিভাজন ছক নীচে দেওয়া আছে। 14.6 সেকেন্ডের কম সময়ে কতজন অ্যাথলিট 100 মিটার দৌড় সম্পন্ন করে নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সারণি: 13.8-14 (2), 14-14.2 (4), 14.2-14.4 (5), 14.4-14.6 (71), 14.6-14.8 (48), 14.8-15 (20)।</p>
+            <p>14.6 সেকেন্ডের কম সময় বলতে 13.8 থেকে 14.6 পর্যন্ত সবকটি শ্রেণির পরিসংখ্যার যোগফলকে বোঝায়।</p>
+            <p>মোট অ্যাথলিট = $2 + 4 + 5 + 71 = 82$ জন।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 82 জন অ্যাথলিট।</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি পরিসংখ্যা বিভাজনের গড় 8.1, $\sum f_ix_i = 132+5k$ এবং $\sum f_i = 20$ হলে, k-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>আমরা জানি, গড় = $\displaystyle\frac{\sum f_ix_i}{\sum f_i}$</p>
+            \[
+\begin{array}{l}
+8.1 = \frac{132+5k}{20} \\
+8.1 \times 20 = 132 + 5k \\
+162 = 132 + 5k \\
+162 - 132 = 5k \\
+30 = 5k \\
+k = \frac{30}{5} = 6
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: k-এর মান 6।</div>
+        </div>
+
+        <span class="sub-question">(iv) যদি $u_i = \displaystyle\frac{x_i - 25}{10}, \sum f_iu_i = 20$ এবং $\sum f_i = 100$ হয়, তাহলে $\bar{x}$-এর মান নির্ণয় করি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ক্রম-বিচ্যুতি পদ্ধতির সূত্র: $u_i = \displaystyle\frac{x_i - a}{h}$ এর সাথে তুলনা করে পাই, কল্পিত গড় $a = 25$ এবং শ্রেণি দৈর্ঘ্য $h = 10$।</p>
+            <p>গড় ($\bar{x}$) = $a + \left( \displaystyle\frac{\sum f_iu_i}{\sum f_i} \right) \times h$</p>
+            \[
+\begin{array}{l}
+\bar{x} = 25 + \left(\frac{20}{100}\right) \times 10 \\
+= 25 + \left(\frac{1}{5}\right) \times 10 \\
+= 25 + 2 \\
+= 27
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: $\bar{x}$-এর মান 27।</div>
+        </div>
+
+        <span class="sub-question">(v) নম্বর: 10-এর কম (3), 20-এর কম (12), 30-এর কম (27), 40-এর কম (57), 50-এর কম (75), 60-এর কম (80)। উপরের পরিসংখ্যা বিভাজন ছক থেকে সংখ্যাগুরুমান শ্রেণিটি লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রদত্ত সারণিটি ক্ষুদ্রতর সূচক ক্রমযৌগিক পরিসংখ্যা (CF) আকারে দেওয়া আছে। প্রথমে এটিকে সাধারণ পরিসংখ্যা সারণিতে রূপান্তর করতে হবে।</p>
+            <ul>
+                <li>0 - 10 : 3</li>
+                <li>10 - 20 : $12 - 3 = 9$</li>
+                <li>20 - 30 : $27 - 12 = 15$</li>
+                <li>30 - 40 : $57 - 27 = 30$</li>
+                <li>40 - 50 : $75 - 57 = 18$</li>
+                <li>50 - 60 : $80 - 75 = 5$</li>
+            </ul>
+            <p>দেখা যাচ্ছে, সর্বাধিক পরিসংখ্যা হলো 30, যা <strong>30 - 40</strong> শ্রেণির অন্তর্গত।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: সংখ্যাগুরুমান শ্রেণিটি হলো 30 - 40।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

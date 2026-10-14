@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-26.2</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.stat-table-wrapper{overflow-x:auto;margin:1.5rem 0px;border-radius:8px;box-shadow:var(--shadow-sm);border:1px solid rgb(226,232,240)}.stat-table{width:100%;border-collapse:collapse;background-color:rgb(255,255,255);text-align:center}.stat-table th{background-color:rgb(238,242,255);color:var(--primary-dark);font-weight:700;padding:12px;border:1px solid rgb(203,213,225);white-space:nowrap}.stat-table td{padding:10px;border:1px solid rgb(226,232,240);color:rgb(71,85,105)}.stat-table .highlight-row{background-color:rgb(254,243,199);font-weight:bold}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-lightbulb text-info me-2"></i> <strong>মধ্যমা (Median) নির্ণয়ের সূত্রাবলি:</strong><br>
+        ১) <strong>অবিন্যস্ত তথ্যের ক্ষেত্রে:</strong> প্রথমে তথ্যগুলিকে মানের ঊর্ধ্বক্রমে (ছোট থেকে বড়) সাজাতে হবে।<br>
+        - $n$ অযুগ্ম (Odd) হলে: মধ্যমা = $\displaystyle \left(\frac{n+1}{2}\right)$-তম পদের মান।<br>
+        - $n$ যুগ্ম (Even) হলে: মধ্যমা = $\displaystyle \frac{\left(\frac{n}{2}\right)\text{-তম পদ} + \left(\frac{n}{2} + 1\right)\text{-তম পদ}}{2}$<br>
+        ২) <strong>বিন্যস্ত তথ্যের (Grouped Data) ক্ষেত্রে:</strong> মধ্যমা = $\displaystyle l + \left[ \frac{\frac{n}{2} - cf}{f} \right] \times h$<br>
+        যেখানে $l$ = মধ্যমা শ্রেণির নিম্নসীমা, $n$ = মোট পরিসংখ্যা, $cf$ = মধ্যমা শ্রেণির ঠিক আগের শ্রেণির ক্রমযৌগিক পরিসংখ্যা, $f$ = মধ্যমা শ্রেণির পরিসংখ্যা, $h$ = মধ্যমা শ্রেণির দৈর্ঘ্য।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. মধুবাবুর দোকানের গত সপ্তাহের প্রতিদিনের বিক্রয়লব্ধ অর্থ (টাকায়) হলো, 107, 210, 92, 52, 113, 75, 195; বিক্রয়লব্ধ অর্থের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তথ্যগুলিকে মানের ঊর্ধ্বক্রমে (ছোট থেকে বড়) সাজিয়ে পাই:</p>
+            <p>52, 75, 92, 107, 113, 195, 210</p>
+            <p>এখানে মোট পদসংখ্যা ($n$) = 7, যা একটি <strong>অযুগ্ম (Odd)</strong> সংখ্যা।</p>
+            <p>অতএব, মধ্যমা = $\displaystyle\left(\frac{n+1}{2}\right)$-তম পদের মান</p>
+            \[
+\begin{array}{l}
+= \left(\frac{7+1}{2}\right)\text{-তম পদ} \\
+= \frac{8}{2}\text{-তম পদ} \\
+= \text{4-র্থ পদ}
+\end{array}
+\]
+            <p>সাজানো তথ্যের 4-র্থ পদটি হলো 107।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: বিক্রয়লব্ধ অর্থের মধ্যমা 107 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. কিছু পশুর বয়স (বছরে) হলো, 6, 10, 5, 4, 9, 11, 20, 18; বয়সের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>তথ্যগুলিকে মানের ঊর্ধ্বক্রমে সাজিয়ে পাই:</p>
+            <p>4, 5, 6, 9, 10, 11, 18, 20</p>
+            <p>এখানে মোট পদসংখ্যা ($n$) = 8, যা একটি <strong>যুগ্ম (Even)</strong> সংখ্যা।</p>
+            <p>অতএব, মধ্যমা = $\displaystyle\frac{\left(\frac{n}{2}\right)\text{-তম পদ} + \left(\frac{n}{2} + 1\right)\text{-তম পদ}}{2}$</p>
+            \[
+\begin{array}{l}
+= \frac{\left(\frac{8}{2}\right)\text{-তম পদ} + \left(\frac{8}{2} + 1\right)\text{-তম পদ}}{2} \\
+= \frac{\text{4-র্থ পদ} + \text{5-ম পদ}}{2}
+\end{array}
+\]
+            <p>সাজানো তথ্যের 4-র্থ পদ হলো 9 এবং 5-ম পদ হলো 10।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = \frac{9 + 10}{2} = \frac{19}{2} = 9.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: পশুর বয়সের মধ্যমা 9.5 বছর।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. 14 জন ছাত্রের প্রাপ্ত নম্বর হলো, 42, 51, 56, 45, 62, 59, 50, 52, 55, 64, 45, 54, 58, 60; প্রাপ্ত নম্বরের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>নম্বরগুলিকে মানের ঊর্ধ্বক্রমে সাজিয়ে পাই:</p>
+            <p>42, 45, 45, 50, 51, 52, 54, 55, 56, 58, 59, 60, 62, 64</p>
+            <p>এখানে মোট পদসংখ্যা ($n$) = 14, যা একটি <strong>যুগ্ম</strong> সংখ্যা।</p>
+            <p>অতএব, মধ্যমা = $\displaystyle\frac{\text{7-ম পদ} + \text{8-ম পদ}}{2}$</p>
+            <p>সাজানো তথ্যের 7-ম পদ হলো 54 এবং 8-ম পদ হলো 55।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = \frac{54 + 55}{2} = \frac{109}{2} = 54.5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: প্রাপ্ত নম্বরের মধ্যমা 54.5।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. আজ পাড়ার ক্রিকেট খেলায় আমাদের স্কোর হলো, 7, 9, 10, 11, 11, 8, 7, 7, 10, 6, 9, 7, 9, 9, 6, 6, 8, 8, 9, 8, 7, 8; ক্রিকেট খেলায় আমাদের স্কোরের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>স্কোরগুলিকে মানের ঊর্ধ্বক্রমে সাজিয়ে পাই:</p>
+            <p>6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 10, 10, 11, 11</p>
+            <p>এখানে মোট পদসংখ্যা ($n$) = 22, যা একটি <strong>যুগ্ম</strong> সংখ্যা।</p>
+            <p>অতএব, মধ্যমা = $\displaystyle\frac{\left(\frac{22}{2}\right)\text{-তম পদ} + \left(\frac{22}{2} + 1\right)\text{-তম পদ}}{2} = \frac{\text{11-তম পদ} + \text{12-তম পদ}}{2}$</p>
+            <p>সাজানো তথ্যের 11-তম পদ হলো 8 এবং 12-তম পদ হলো 8।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = \frac{8 + 8}{2} = \frac{16}{2} = 8
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: স্কোরের মধ্যমা 8।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. নীচের 70 জন ছাত্রের ওজনের পরিসংখ্যা বিভাজন ছক থেকে ওজনের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এটি একটি অবিচ্ছিন্ন (Discrete) পরিসংখ্যা বিভাজন। প্রথমে আমাদের ক্রমযৌগিক পরিসংখ্যা (Cumulative Frequency বা $cf$) ছক তৈরি করতে হবে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>ওজন ($x$)</th>
+                            <th>ছাত্র সংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক) ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>43</td><td>4</td><td>4</td></tr>
+                        <tr><td>44</td><td>6</td><td>$4 + 6 = 10$</td></tr>
+                        <tr><td>45</td><td>8</td><td>$10 + 8 = 18$</td></tr>
+                        <tr><td>46</td><td>14</td><td>$18 + 14 = 32$</td></tr>
+                        <tr><td>47</td><td>12</td><td>$32 + 12 = 44$</td></tr>
+                        <tr><td>48</td><td>10</td><td>$44 + 10 = 54$</td></tr>
+                        <tr><td>49</td><td>11</td><td>$54 + 11 = 65$</td></tr>
+                        <tr><td>50</td><td>5</td><td>$65 + 5 = 70$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>এখানে মোট পরিসংখ্যা ($N$) = 70, যা একটি যুগ্ম সংখ্যা।</p>
+            <p>$\displaystyle\frac{N}{2} = \frac{70}{2} = 35$</p>
+            <p>মধ্যমা হবে 35-তম এবং 36-তম পদের গড়। ক্রমযৌগিক পরিসংখ্যার সারণি থেকে দেখতে পাচ্ছি, 33 থেকে 44 পর্যন্ত পদের মান হলো 47।</p>
+            <p>অতএব, 35-তম পদ = 47 এবং 36-তম পদ = 47।</p>
+            <p>$\text{মধ্যমা} = \displaystyle\frac{47 + 47}{2} = 47$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ওজনের মধ্যমা 47 কিগ্রা।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. নলের ব্যাসের দৈর্ঘ্যের (মিমি.) পরিসংখ্যা বিভাজন ছক থেকে ব্যাসের দৈর্ঘ্যের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এটিও একটি অবিচ্ছিন্ন পরিসংখ্যা বিভাজন। ক্রমযৌগিক পরিসংখ্যা (ক্ষুদ্রতর সূচক) ছক তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>ব্যাসের দৈর্ঘ্য ($x$)</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>18</td><td>3</td><td>3</td></tr>
+                        <tr><td>19</td><td>4</td><td>$3 + 4 = 7$</td></tr>
+                        <tr><td>20</td><td>10</td><td>$7 + 10 = 17$</td></tr>
+                        <tr><td>21</td><td>15</td><td>$17 + 15 = 32$</td></tr>
+                        <tr><td>22</td><td>25</td><td>$32 + 25 = 57$</td></tr>
+                        <tr><td>23</td><td>13</td><td>$57 + 13 = 70$</td></tr>
+                        <tr><td>24</td><td>6</td><td>$70 + 6 = 76$</td></tr>
+                        <tr><td>25</td><td>4</td><td>$76 + 4 = 80$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>এখানে মোট পরিসংখ্যা ($N$) = 80, যা একটি যুগ্ম সংখ্যা।</p>
+            <p>$\displaystyle\frac{N}{2} = \frac{80}{2} = 40$</p>
+            <p>ক্রমযৌগিক পরিসংখ্যার সারণি থেকে দেখতে পাচ্ছি, $cf$ এর মান ঠিক 40 এর বেশি হলো 57।</p>
+            <p>এর অর্থ হলো, 33-তম থেকে 57-তম সকল পদের মান 22।</p>
+            <p>অতএব, 40-তম এবং 41-তম উভয় পদের মানই 22।</p>
+            <p>$\text{মধ্যমা} = 22$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসের দৈর্ঘ্যের মধ্যমা 22 মিমি।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. মধ্যমা নির্ণয় করি: (x এবং f দেওয়া আছে)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>অবিচ্ছিন্ন তথ্যের জন্য ক্রমযৌগিক পরিসংখ্যা সারণি তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>$x$</th>
+                            <th>$f$</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>7</td><td>7</td></tr>
+                        <tr><td>1</td><td>44</td><td>$7 + 44 = 51$</td></tr>
+                        <tr><td>2</td><td>35</td><td>$51 + 35 = 86$</td></tr>
+                        <tr><td>3</td><td>16</td><td>$86 + 16 = 102$</td></tr>
+                        <tr><td>4</td><td>9</td><td>$102 + 9 = 111$</td></tr>
+                        <tr><td>5</td><td>4</td><td>$111 + 4 = 115$</td></tr>
+                        <tr><td>6</td><td>1</td><td>$115 + 1 = 116$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা ($N$) = 116 (যুগ্ম)।</p>
+            <p>$\displaystyle\frac{N}{2} = \frac{116}{2} = 58$</p>
+            <p>সারণি থেকে দেখা যায়, $cf$ এর মান 58 এর ঠিক বেশি হলো 86। এর সংশ্লিষ্ট $x$ এর মান হলো 2।</p>
+            <p>$\text{মধ্যমা} = 2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা 2।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. আমাদের 40 জন শিক্ষার্থীর প্রতি সপ্তাহে টিফিন খরচের (টাকায়) পরিসংখ্যা বিভাজন থেকে টিফিন খরচের মধ্যমা নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>এটি একটি শ্রেণিবদ্ধ (Grouped) পরিসংখ্যা বিভাজন। প্রথমে ক্রমযৌগিক পরিসংখ্যা সারণি তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>টিফিন খরচ (টাকায়)</th>
+                            <th>শিক্ষার্থী সংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>35 - 40</td><td>3</td><td>3</td></tr>
+                        <tr><td>40 - 45</td><td>5</td><td>8</td></tr>
+                        <tr><td>45 - 50</td><td>6</td><td>14</td></tr>
+                        <tr class="highlight-row"><td>50 - 55</td><td>9</td><td>23</td></tr>
+                        <tr><td>55 - 60</td><td>7</td><td>30</td></tr>
+                        <tr><td>60 - 65</td><td>8</td><td>38</td></tr>
+                        <tr><td>65 - 70</td><td>2</td><td>40</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $N = 40$।</p>
+            <p>$\displaystyle\frac{N}{2} = \frac{40}{2} = 20$</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 20-এর ঠিক বড়ো মানটি হলো 23, যার সংশ্লিষ্ট শ্রেণি হলো <strong>50 - 55</strong>।</p>
+            <p>অতএব, মধ্যমা শ্রেণি (Median Class) হলো 50 - 55।</p>
+            <p>এখানে,</p>
+            <ul>
+                <li>$l$ (মধ্যমা শ্রেণির নিম্নসীমা) = 50</li>
+                <li>$n$ = 40</li>
+                <li>$cf$ (মধ্যমা শ্রেণির ঠিক আগের শ্রেণির ক্রমযৌগিক পরিসংখ্যা) = 14</li>
+                <li>$f$ (মধ্যমা শ্রেণির পরিসংখ্যা) = 9</li>
+                <li>$h$ (শ্রেণি দৈর্ঘ্য) = 5</li>
+            </ul>
+            <p>মধ্যমা নির্ণয়ের সূত্র:</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 50 + \left( \frac{20 - 14}{9} \right) \times 5 \\
+= 50 + \left( \frac{6}{9} \right) \times 5 \\
+= 50 + \left( \frac{2}{3} \right) \times 5 \\
+= 50 + \frac{10}{3} \\
+= 50 + 3.33... \\
+\approx 53.33
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: টিফিন খরচের মধ্যমা প্রায় 53.33 টাকা।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. নীচের তথ্য থেকে ছাত্রদের উচ্চতার মধ্যমা নির্ণয় করি:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>উচ্চতা (সেমি.)</th>
+                            <th>ছাত্রদের সংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>135 - 140</td><td>6</td><td>6</td></tr>
+                        <tr><td>140 - 145</td><td>10</td><td>16</td></tr>
+                        <tr><td>145 - 150</td><td>19</td><td>35</td></tr>
+                        <tr class="highlight-row"><td>150 - 155</td><td>22</td><td>57</td></tr>
+                        <tr><td>155 - 160</td><td>20</td><td>77</td></tr>
+                        <tr><td>160 - 165</td><td>16</td><td>93</td></tr>
+                        <tr><td>165 - 170</td><td>7</td><td>100</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $n = 100$। $\displaystyle\frac{n}{2} = 50$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 50-এর ঠিক বড়ো মান 57, তাই মধ্যমা শ্রেণি হলো <strong>150 - 155</strong>।</p>
+            <p>এখানে $l = 150$, $cf = 35$, $f = 22$, $h = 5$।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 150 + \left( \frac{50 - 35}{22} \right) \times 5 \\
+= 150 + \frac{15}{22} \times 5 \\
+= 150 + \frac{75}{22} \\
+= 150 + 3.409... \\
+\approx 153.41
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ছাত্রদের উচ্চতার মধ্যমা প্রায় 153.41 সেমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. নীচের পরিসংখ্যা বিভাজন থেকে তথ্যটির মধ্যমা নির্ণয় করি:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 10</td><td>4</td><td>4</td></tr>
+                        <tr><td>10 - 20</td><td>7</td><td>11</td></tr>
+                        <tr><td>20 - 30</td><td>10</td><td>21</td></tr>
+                        <tr class="highlight-row"><td>30 - 40</td><td>15</td><td>36</td></tr>
+                        <tr><td>40 - 50</td><td>10</td><td>46</td></tr>
+                        <tr><td>50 - 60</td><td>8</td><td>54</td></tr>
+                        <tr><td>60 - 70</td><td>5</td><td>59</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $n = 59$। $\displaystyle\frac{n}{2} = 29.5$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 29.5-এর ঠিক বড়ো মান 36, তাই মধ্যমা শ্রেণি হলো <strong>30 - 40</strong>।</p>
+            <p>এখানে $l = 30$, $cf = 21$, $f = 15$, $h = 10$।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 30 + \left( \frac{29.5 - 21}{15} \right) \times 10 \\
+= 30 + \frac{8.5 \times 10}{15} \\
+= 30 + \frac{85}{15} \\
+= 30 + \frac{17}{3} \\
+= 30 + 5.666... \\
+\approx 35.67
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা প্রায় 35.67।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. নীচের তথ্যের মধ্যমা নির্ণয় করি:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>5 - 10</td><td>5</td><td>5</td></tr>
+                        <tr><td>10 - 15</td><td>6</td><td>11</td></tr>
+                        <tr class="highlight-row"><td>15 - 20</td><td>15</td><td>26</td></tr>
+                        <tr><td>20 - 25</td><td>10</td><td>36</td></tr>
+                        <tr><td>25 - 30</td><td>5</td><td>41</td></tr>
+                        <tr><td>30 - 35</td><td>4</td><td>45</td></tr>
+                        <tr><td>35 - 40</td><td>3</td><td>48</td></tr>
+                        <tr><td>40 - 45</td><td>2</td><td>50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $n = 50$। $\displaystyle\frac{n}{2} = 25$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 25-এর ঠিক বড়ো মান 26, তাই মধ্যমা শ্রেণি হলো <strong>15 - 20</strong>।</p>
+            <p>এখানে $l = 15$, $cf = 11$, $f = 15$, $h = 5$ (যেহেতু $20-15 = 5$)।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 15 + \left( \frac{25 - 11}{15} \right) \times 5 \\
+= 15 + \frac{14}{15} \times 5 \\
+= 15 + \frac{14}{3} \\
+= 15 + 4.666... \\
+\approx 19.67
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা প্রায় 19.67।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. নীচের তথ্যের মধ্যমা নির্ণয় করি:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (শ্রেণি সীমানা পরিবর্তন)</span>
+            <p>এখানে শ্রেণিগুলি (1-5, 6-10...) <strong>অবিচ্ছিন্ন নয় (Discontinuous)</strong>। তাই প্রথমে আমাদের 0.5 বিয়োগ এবং যোগ করে এদের <strong>শ্রেণি-সীমানায় (Continuous Class Boundaries)</strong> রূপান্তর করতে হবে।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি</th>
+                            <th>শ্রেণি-সীমানা (Continuous)</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1 - 5</td><td>0.5 - 5.5</td><td>2</td><td>2</td></tr>
+                        <tr><td>6 - 10</td><td>5.5 - 10.5</td><td>3</td><td>5</td></tr>
+                        <tr><td>11 - 15</td><td>10.5 - 15.5</td><td>6</td><td>11</td></tr>
+                        <tr class="highlight-row"><td>16 - 20</td><td>15.5 - 20.5</td><td>7</td><td>18</td></tr>
+                        <tr><td>21 - 25</td><td>20.5 - 25.5</td><td>5</td><td>23</td></tr>
+                        <tr><td>26 - 30</td><td>25.5 - 30.5</td><td>4</td><td>27</td></tr>
+                        <tr><td>31 - 35</td><td>30.5 - 35.5</td><td>3</td><td>30</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $n = 30$। $\displaystyle\frac{n}{2} = 15$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 15-এর ঠিক বড়ো মান 18, তাই মধ্যমা শ্রেণি হলো <strong>15.5 - 20.5</strong>।</p>
+            <p>এখানে $l = 15.5$, $cf = 11$, $f = 7$, $h = 5$ (যেহেতু $20.5 - 15.5 = 5$)।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 15.5 + \left( \frac{15 - 11}{7} \right) \times 5 \\
+= 15.5 + \frac{4 \times 5}{7} \\
+= 15.5 + \frac{20}{7} \\
+= 15.5 + 2.857... \\
+\approx 18.36
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা প্রায় 18.36।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. নীচের তথ্যের মধ্যমা নির্ণয় করি:</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (শ্রেণি সীমানা পরিবর্তন)</span>
+            <p>এখানেও শ্রেণিগুলি (51-60, 61-70...) অবিচ্ছিন্ন নয়। 0.5 যোগ-বিয়োগ করে শ্রেণি-সীমানায় রূপান্তর করি।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি</th>
+                            <th>শ্রেণি-সীমানা (Continuous)</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>51 - 60</td><td>50.5 - 60.5</td><td>4</td><td>4</td></tr>
+                        <tr><td>61 - 70</td><td>60.5 - 70.5</td><td>10</td><td>14</td></tr>
+                        <tr><td>71 - 80</td><td>70.5 - 80.5</td><td>15</td><td>29</td></tr>
+                        <tr class="highlight-row"><td>81 - 90</td><td>80.5 - 90.5</td><td>20</td><td>49</td></tr>
+                        <tr><td>91 - 100</td><td>90.5 - 100.5</td><td>15</td><td>64</td></tr>
+                        <tr><td>101 - 110</td><td>100.5 - 110.5</td><td>4</td><td>68</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $n = 68$। $\displaystyle\frac{n}{2} = 34$।</p>
+            <p>ক্রমযৌগিক পরিসংখ্যা 34-এর ঠিক বড়ো মান 49, তাই মধ্যমা শ্রেণি হলো <strong>80.5 - 90.5</strong>।</p>
+            <p>এখানে $l = 80.5$, $cf = 29$, $f = 20$, $h = 10$।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 80.5 + \left( \frac{34 - 29}{20} \right) \times 10 \\
+= 80.5 + \frac{5 \times 10}{20} \\
+= 80.5 + 2.5 \\
+= 83
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মধ্যমা 83।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. নীচের তথ্যের মধ্যমা নির্ণয় করি: (নম্বর 10-এর কম, 20-এর কম...)</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান (ক্রমযৌগিক সারণি থেকে)</span>
+            <p>এখানে প্রদত্ত সারণিটি "ক্ষুদ্রতর সূচক ক্রমযৌগিক পরিসংখ্যা" (Less than type CF)। আমাদের সাধারণ শ্রেণিতে রূপান্তর করে $f$ বের করতে হবে, কিন্তু মধ্যমা নির্ণয়ের জন্য মূলত $cf$ সারণিই দরকার।</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>নম্বর</th>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>ছাত্রীদের সংখ্যা (CF)</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10-এর কম</td><td>0 - 10</td><td>12</td><td>12</td></tr>
+                        <tr><td>20-এর কম</td><td>10 - 20</td><td>22</td><td>$22 - 12 = 10$</td></tr>
+                        <tr><td>30-এর কম</td><td>20 - 30</td><td>40</td><td>$40 - 22 = 18$</td></tr>
+                        <tr class="highlight-row"><td>40-এর কম</td><td>30 - 40</td><td>60</td><td>$60 - 40 = 20$</td></tr>
+                        <tr><td>50-এর কম</td><td>40 - 50</td><td>72</td><td>$72 - 60 = 12$</td></tr>
+                        <tr><td>60-এর কম</td><td>50 - 60</td><td>87</td><td>$87 - 72 = 15$</td></tr>
+                        <tr><td>70-এর কম</td><td>60 - 70</td><td>102</td><td>$102 - 87 = 15$</td></tr>
+                        <tr><td>80-এর কম</td><td>70 - 80</td><td>111</td><td>$111 - 102 = 9$</td></tr>
+                        <tr><td>90-এর কম</td><td>80 - 90</td><td>120</td><td>$120 - 111 = 9$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>মোট পরিসংখ্যা $N = 120$। $\displaystyle\frac{N}{2} = 60$।</p>
+            <p>এখানে $\frac{N}{2}$ এর মান (60) ঠিক একটি ক্রমযৌগিক পরিসংখ্যার সাথে মিলে গেছে।</p>
+            <p>যেহেতু $cf = 60$, এটি 30-40 শ্রেণির শেষ সীমানায় অবস্থিত। তবুও সূত্র দিয়ে যাচাই করে দেখি:</p>
+            <p>মধ্যমা শ্রেণি হলো <strong>30 - 40</strong> (যেহেতু এই শ্রেণিতেই 60-তম পদটি পূর্ণ হয়)।</p>
+            <p>এখানে $l = 30$, $cf$ (আগের শ্রেণির) = 40, $f = 20$, $h = 10$।</p>
+            \[
+\begin{array}{l}
+\text{মধ্যমা} = l + \left( \frac{\frac{n}{2} - cf}{f} \right) \times h \\
+= 30 + \left( \frac{60 - 40}{20} \right) \times 10 \\
+= 30 + \frac{20}{20} \times 10 \\
+= 30 + 1 \times 10 \\
+= 40
+\end{array}
+\]
+            <p><em>(বি.দ্র: যখন N/2 সরাসরি কোনো CF এর সাথে মিলে যায়, তখন সেই শ্রেণির উচ্চসীমা-ই মধ্যমা হয়।)</em></p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নম্বরের মধ্যমা 40।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. নীচের তথ্যের মধ্যমা 32 হলে, x ও y-এর মান নির্ণয় করি যখন পরিসংখ্যার সমষ্টি 100;</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>প্রথমে প্রদত্ত তথ্যের একটি ক্রমযৌগিক পরিসংখ্যা ছক তৈরি করি:</p>
+            <div class="stat-table-wrapper">
+                <table class="stat-table">
+                    <thead>
+                        <tr>
+                            <th>শ্রেণি-সীমানা</th>
+                            <th>পরিসংখ্যা ($f$)</th>
+                            <th>ক্রমযৌগিক পরিসংখ্যা ($cf$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0 - 10</td><td>10</td><td>10</td></tr>
+                        <tr><td>10 - 20</td><td>$x$</td><td>$10 + x$</td></tr>
+                        <tr><td>20 - 30</td><td>25</td><td>$35 + x$</td></tr>
+                        <tr class="highlight-row"><td>30 - 40</td><td>30</td><td>$65 + x$</td></tr>
+                        <tr><td>40 - 50</td><td>$y$</td><td>$65 + x + y$</td></tr>
+                        <tr><td>50 - 60</td><td>10</td><td>$75 + x + y$</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>প্রশ্নানুসারে, মোট পরিসংখ্যা ($n$) = 100।</p>
+            \[
+\begin{array}{l}
+75 + x + y = 100 \\
+x + y = 100 - 75 \\
+x + y = 25 \quad \dots \text{(i)}
+\end{array}
+\]
+            <p>দেওয়া আছে, মধ্যমা = 32। যেহেতু 32 মানটি 30 থেকে 40 এর মধ্যে অবস্থিত, তাই <strong>মধ্যমা শ্রেণি হলো 30 - 40</strong>।</p>
+            <p>এখানে $l = 30$, $n = 100 \implies \frac{n}{2} = 50$, $f = 30$, $h = 10$ এবং মধ্যমা শ্রেণির আগের $cf = 35 + x$।</p>
+            <p>মধ্যমার সূত্রানুযায়ী:</p>
+            \[
+\begin{array}{l}
+32 = 30 + \left( \frac{50 - (35 + x)}{30} \right) \times 10 \\
+32 - 30 = \frac{50 - 35 - x}{3} \\
+2 = \frac{15 - x}{3} \\
+6 = 15 - x \\
+x = 15 - 6 = 9
+\end{array}
+\]
+            <p>এখন $x = 9$ মানটি (i) নং সমীকরণে বসিয়ে পাই:</p>
+            \[
+\begin{array}{l}
+9 + y = 25 \\
+y = 25 - 9 = 16
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: x-এর মান 9 এবং y-এর মান 16।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>

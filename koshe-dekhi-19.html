@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>koshe-dekhi-19</title>
+<style>.solution-container{font-family:"Tiro Bangla","Noto Serif Bengali",serif;color:var(--text-color);line-height:1.7}.solution-card{background-color:var(--bg-white);padding:2rem;border-radius:var(--border-radius);margin-bottom:2rem;box-shadow:var(--shadow-md);border-top:5px solid var(--primary-color);transition:var(--transition)}.question-title{font-weight:700;color:var(--primary-dark);background:rgb(238,242,255);padding:1rem 1.25rem;border-radius:10px;margin-bottom:1.5rem;font-size:1.25rem;line-height:1.6;border-left:4px solid var(--primary-color)}.sub-question{font-weight:700;color:rgb(55,65,81);margin-top:1.5rem;margin-bottom:0.5rem;display:block;font-size:1.15rem;padding-bottom:0.5rem}.solution-box{background:linear-gradient(145deg,rgb(248,250,252),rgb(241,245,249));padding:1.5rem;border-radius:12px;border-left:4px solid var(--secondary-color);margin-top:1rem;overflow-x:auto}.sol-badge{display:inline-block;background:var(--secondary-color);color:white;padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;letter-spacing:0.5px;box-shadow:var(--shadow-sm);margin-bottom:1rem}.final-answer{font-weight:700;color:rgb(4,120,87);background:rgb(209,250,229);padding:0.75rem 1rem;border-radius:8px;display:inline-block;margin-top:0.5rem;border:1px dashed rgb(52,211,153)}.geometry-diagram{display:block;margin:1.5rem auto;background:rgb(255,255,255);border-radius:8px;padding:15px;box-shadow:var(--shadow-sm);border:1px solid rgb(229,231,235);max-width:100%}.blank-fill{font-weight:bold;color:rgb(190,24,93);border-bottom:1px dashed rgb(190,24,93);padding:0px 5px}@media (max-width:768px){.solution-card{padding:1rem 0.4rem;border-radius:8px;border-left-width:4px}.solution-box{padding:0.8rem 0.4rem;border-left-width:3px}.question-title{font-size:1.1rem;padding:0.75rem 0.5rem}}.text-accent{color:rgb(56,189,248);font-size:0.8rem;margin-right:0.5rem;transition:transform 0.3s}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}.sol-badge{display:inline-block;background:#2563eb;color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:700;letter-spacing:.5px;box-shadow:0 1px 2px rgba(0,0,0,.12);margin-bottom:1rem}.solution-container .MathJax_Display{overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;padding-bottom:6px;box-sizing:border-box;line-height:normal}.solution-container{overflow-x:hidden}#MathJax_Message{display:none!important}span.MathJax{pointer-events:none}</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js", "cancel.js"] },
+    tex2jax: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["$$", "$$"], ["\\[", "\\]"]], processEscapes: true, skipTags: ["script", "noscript", "style", "textarea", "pre", "code"] },
+    "HTML-CSS": { availableFonts: ["TeX"], preferredFont: "TeX", webFont: "TeX", mtextFontInherit: true, linebreaks: { automatic: false, width: "container" } },
+    showMathMenu: false, messageStyle: "none", skipStartupTypeset: true
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="solution-container">
+    <div class="alert alert-info shadow-sm rounded-4 mb-4">
+        <i class="fas fa-cubes text-info me-2"></i> <strong>বিভিন্ন ঘনবস্তু সংক্রান্ত নিয়ম:</strong><br>
+        এই অধ্যায়ে আয়তঘন, লম্ব বৃত্তাকার চোঙ, গোলক এবং শঙ্কুর আয়তন ও ক্ষেত্রফলের সমন্বিত সমস্যা সমাধান করতে হবে।<br>
+        <strong>মূল নীতি:</strong> কোনো কঠিন বস্তুকে গলিয়ে অন্য বস্তু তৈরি করলে, উভয় ক্ষেত্রে <strong>আয়তন সর্বদা সমান</strong> থাকে (অপচয় না হলে)।
+    </div>
+
+    <!-- Question 1 -->
+    <div class="solution-card">
+        <h4 class="question-title">1. আনোয়ারদের বাড়ির সামনে একটি নিরেট লোহার স্তম্ভ আছে যার নীচের অংশ লম্ব বৃত্তাকার চোঙ আকৃতির এবং উপরের অংশ শঙ্কু আকৃতির। এদের ভূমিতলের ব্যাসের দৈর্ঘ্য 20 সেমি., চোঙাকৃতি অংশের উচ্চতা 2.8 মিটার এবং শঙ্কু আকৃতি অংশের উচ্চতা 42 সেমি.। 1 ঘন সেমি. লোহার ওজন 7.5 গ্রাম হলে, লোহার স্তম্ভের ওজন কত হবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            
+            <svg class="geometry-diagram" width="120" height="220" viewBox="0 0 120 220">
+               <!-- Cylinder Part -->
+               <path d="M40,70 L40,190 Q60,200 80,190 L80,70 Z" fill="#EEF2FF" stroke="#3730A3" stroke-width="2"></path>
+               <!-- Cone Part -->
+               <path d="M40,70 L80,70 L60,20 Z" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="2"></path>
+               <!-- Base details -->
+               <line x1="40" y1="190" x2="80" y2="190" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line>
+               <line x1="40" y1="70" x2="80" y2="70" stroke="#1F2937" stroke-width="1.5" stroke-dasharray="4"></line>
+               <text x="85" y="130" font-size="12">2.8m</text>
+               <text x="85" y="50" font-size="12">42cm</text>
+            </svg>
+
+            <p>স্তম্ভটির ব্যাস = 20 সেমি. $\implies$ ব্যাসার্ধ ($r$) = $\displaystyle\frac{20}{2} = 10$ সেমি.</p>
+            <p><strong>চোঙাকৃতি অংশের ক্ষেত্রে:</strong></p>
+            <p>উচ্চতা ($h_1$) = 2.8 মিটার = $2.8 \times 100 = 280$ সেমি.</p>
+            <p>আয়তন = $\pi r^2 h_1 = \pi \times (10)^2 \times 280 = 28000\pi$ ঘন সেমি.</p>
+            <br>
+            <p><strong>শঙ্কু আকৃতির অংশের ক্ষেত্রে:</strong></p>
+            <p>উচ্চতা ($h_2$) = 42 সেমি.</p>
+            <p>আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h_2 = \frac{1}{3} \times \pi \times (10)^2 \times 42 = 1400\pi$ ঘন সেমি.</p>
+            <br>
+            <p><strong>স্তম্ভটির মোট আয়তন:</strong></p>
+            \[
+\begin{array}{l}
+= 28000\pi + 1400\pi \\
+= 29400\pi \text{ ঘন সেমি.} \\
+= 29400 \times \frac{22}{7} \\
+= 4200 \times 22 \\
+= 92400 \text{ ঘন সেমি.}
+\end{array}
+\]
+            <p>1 ঘন সেমি. লোহার ওজন = 7.5 গ্রাম।</p>
+            <p>স্তম্ভটির মোট ওজন = $92400 \times 7.5 = 693000$ গ্রাম।</p>
+            <p>1000 গ্রাম = 1 কিগ্রা। অতএব, ওজন = $\displaystyle\frac{693000}{1000} = 693$ কিগ্রা।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: লোহার স্তম্ভের ওজন 693 কিগ্রা. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="solution-card">
+        <h4 class="question-title">2. একটি নিরেট লম্ব বৃত্তাকার শঙ্কুর উচ্চতা 20 সেমি. এবং তির্যক উচ্চতা 25 সেমি.। শঙ্কুটির সমান আয়তনবিশিষ্ট একটি নিরেট লম্ব বৃত্তাকার চোঙের উচ্চতা 15 সেমি. হলে, চোঙটির ভূমিতলের ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>শঙ্কুর ক্ষেত্রে:</strong></p>
+            <p>উচ্চতা ($h$) = 20 সেমি, তির্যক উচ্চতা ($l$) = 25 সেমি।</p>
+            <p>ব্যাসার্ধ ($r$) = $\sqrt{l^2 - h^2} = \sqrt{25^2 - 20^2} = \sqrt{625 - 400} = \sqrt{225} = 15$ সেমি।</p>
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h = \frac{1}{3} \times \pi \times 15^2 \times 20 = \frac{1}{3} \times \pi \times 225 \times 20 = 1500\pi$ ঘন সেমি।</p>
+            <br>
+            <p><strong>চোঙের ক্ষেত্রে:</strong></p>
+            <p>ধরি, চোঙটির ব্যাসার্ধ = $R$ সেমি। উচ্চতা ($H$) = 15 সেমি।</p>
+            <p>চোঙের আয়তন = $\pi R^2 H = \pi R^2 \times 15$</p>
+            <p>শর্তানুসারে, উভয় আয়তন সমান:</p>
+            \[
+\begin{array}{l}
+15\pi R^2 = 1500\pi \\
+R^2 = \frac{1500}{15} \\
+R^2 = 100 \\
+R = \sqrt{100} = 10 \text{ সেমি.}
+\end{array}
+\]
+            <p>ব্যাসার্ধ $R = 10$ সেমি. হলে, ব্যাস = $2 \times 10 = 20$ সেমি.</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙটির ভূমিতলের ব্যাসের দৈর্ঘ্য 20 সেমি.।</div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="solution-card">
+        <h4 class="question-title">3. 24 সেমি. দৈর্ঘ্যের ব্যাসবিশিষ্ট একটি লম্ব বৃত্তাকার চোঙাকৃতি পাত্রে কিছু জল আছে। 6 সেমি. দৈর্ঘ্যের ভূমিতলের ব্যাস ও 4 সেমি. উচ্চতাবিশিষ্ট 60 টি নিরেট শঙ্কু আকৃতির লোহার টুকরো ওই জলে সম্পূর্ণভাবে নিমজ্জিত করলে, জলতলের উচ্চতা কতটা বৃদ্ধি পাবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শঙ্কু আকৃতির 1 টি লোহার টুকরোর আয়তন:</p>
+            <p>ব্যাস = 6 সেমি $\implies$ ব্যাসার্ধ ($r_1$) = 3 সেমি। উচ্চতা ($h_1$) = 4 সেমি।</p>
+            <p>আয়তন = $\displaystyle\frac{1}{3}\pi r_1^2 h_1 = \frac{1}{3} \times \pi \times 3^2 \times 4 = 12\pi$ ঘন সেমি।</p>
+            <p>60 টি টুকরোর মোট আয়তন = $60 \times 12\pi = 720\pi$ ঘন সেমি।</p>
+            <br>
+            <p>আর্কিমিডিসের সূত্র অনুযায়ী, অপসারিত বা বৃদ্ধি পাওয়া জলের আয়তন এই 60টি টুকরোর আয়তনের সমান হবে।</p>
+            <p>চোঙাকৃতি পাত্রের ব্যাস = 24 সেমি $\implies$ ব্যাসার্ধ ($R$) = 12 সেমি।</p>
+            <p>ধরি, জলতল $H$ সেমি. বৃদ্ধি পাবে।</p>
+            <p>বৃদ্ধি পাওয়া জলের আয়তন (চোঙাকৃতি অংশ) = $\pi R^2 H = \pi \times 12^2 \times H = 144\pi H$</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+144\pi H = 720\pi \\
+H = \frac{720}{144} \\
+H = 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: জলতলের উচ্চতা 5 সেমি. বৃদ্ধি পাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="solution-card">
+        <h4 class="question-title">4. একই দৈর্ঘ্যের ভূমিতলের ব্যাসার্ধ এবং একই উচ্চতাবিশিষ্ট একটি নিরেট শঙ্কু ও একটি নিরেট লম্ব বৃত্তাকার চোঙের বক্রতলের ক্ষেত্রফলের অনুপাত 5:8 হলে, উহাদের ভূমির ব্যাসার্ধের দৈর্ঘ্য ও উচ্চতার অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, শঙ্কু এবং চোঙ উভয়েরই ভূমির ব্যাসার্ধ = $r$ এবং উচ্চতা = $h$।</p>
+            <p>শঙ্কুর বক্রতলের ক্ষেত্রফল = $\pi r l = \pi r \sqrt{r^2 + h^2}$</p>
+            <p>চোঙের বক্রতলের (পার্শ্বতল) ক্ষেত্রফল = $2\pi r h$</p>
+            <p>শর্তানুসারে, এদের অনুপাত 5:8</p>
+            \[
+\begin{array}{l}
+\frac{\pi r \sqrt{r^2 + h^2}}{2\pi r h} = \frac{5}{8} \\
+\frac{\sqrt{r^2 + h^2}}{2h} = \frac{5}{8} \\
+\frac{\sqrt{r^2 + h^2}}{h} = \frac{5}{4} \quad [\text{2 দিয়ে গুণ করে}]
+\end{array}
+\]
+            <p>উভয়পক্ষকে বর্গ করে পাই:</p>
+            \[
+\begin{array}{l}
+\frac{r^2 + h^2}{h^2} = \frac{25}{16} \\
+\frac{r^2}{h^2} + 1 = \frac{25}{16} \\
+\frac{r^2}{h^2} = \frac{25}{16} - 1 = \frac{9}{16} \\
+\frac{r}{h} = \sqrt{\frac{9}{16}} = \frac{3}{4}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ভূমির ব্যাসার্ধ ও উচ্চতার অনুপাত 3:4 হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="solution-card">
+        <h4 class="question-title">5. 8 সেমি. দৈর্ঘ্যের ব্যাসার্ধের একটি নিরেট লোহার গোলককে গলিয়ে 1 সেমি. দৈর্ঘ্যের ব্যাসের কয়টি নিরেট গুলি পাওয়া যাবে হিসাব করে দেখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>বড়ো লোহার গোলকের ব্যাসার্ধ ($R$) = 8 সেমি।</p>
+            <p>বড়ো গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi R^3 = \frac{4}{3}\pi (8)^3 = \frac{4}{3}\pi \times 512$</p>
+            <br>
+            <p>ছোটো গুলির ব্যাস = 1 সেমি. $\implies$ ব্যাসার্ধ ($r$) = 0.5 সেমি বা $\displaystyle\frac{1}{2}$ সেমি।</p>
+            <p>1 টি ছোটো গুলির আয়তন = $\displaystyle\frac{4}{3}\pi r^3 = \frac{4}{3}\pi \left(\frac{1}{2}\right)^3 = \frac{4}{3}\pi \times \frac{1}{8}$</p>
+            <br>
+            <p>গুলির সংখ্যা = $\displaystyle\frac{\text{বড়ো গোলকের আয়তন}}{\text{1টি গুলির আয়তন}}$</p>
+            \[
+\begin{array}{l}
+= \frac{\frac{4}{3}\pi \times 512}{\frac{4}{3}\pi \times \frac{1}{8}} \\
+= \frac{512}{\frac{1}{8}} \\
+= 512 \times 8 \\
+= 4096
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: মোট 4096 টি নিরেট গুলি পাওয়া যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="solution-card">
+        <h4 class="question-title">6. একটি নিরেট লম্ব বৃত্তাকার লোহার দণ্ডের ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য 32 সেমি. এবং দৈর্ঘ্য 35 সেমি.। দণ্ডটি গলিয়ে 8 সেমি. দৈর্ঘ্যের ব্যাসার্ধ ও 28 সেমি. উচ্চতাবিশিষ্ট কতগুলি নিরেট শঙ্কু তৈরি করা যাবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>লোহার দণ্ডটি চোঙ আকৃতির।</p>
+            <p>ব্যাসার্ধ ($R$) = 32 সেমি, দৈর্ঘ্য বা উচ্চতা ($H$) = 35 সেমি।</p>
+            <p>লোহার দণ্ডের আয়তন = $\pi R^2 H = \pi \times (32)^2 \times 35$ ঘন সেমি।</p>
+            <br>
+            <p>একটি নিরেট শঙ্কুর ক্ষেত্রে:</p>
+            <p>ব্যাসার্ধ ($r$) = 8 সেমি, উচ্চতা ($h$) = 28 সেমি।</p>
+            <p>একটি শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h = \frac{1}{3}\pi \times (8)^2 \times 28$ ঘন সেমি।</p>
+            <br>
+            <p>শঙ্কুর সংখ্যা = $\displaystyle\frac{\text{লোহার দণ্ডের আয়তন}}{\text{একটি শঙ্কুর আয়তন}}$</p>
+            \[
+\begin{array}{l}
+= \frac{\pi \times 32 \times 32 \times 35}{\frac{1}{3}\pi \times 8 \times 8 \times 28} \\
+= \frac{32 \times 32 \times 35 \times 3}{8 \times 8 \times 28} \\
+= \frac{4 \times 4 \times 35 \times 3}{28} \quad [\text{8 দিয়ে কেটে}] \\
+= \frac{16 \times 35 \times 3}{28} \\
+= \frac{16 \times 5 \times 3}{4} \quad [\text{7 দিয়ে কেটে}] \\
+= 4 \times 5 \times 3 \\
+= 60
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 60 টি নিরেট শঙ্কু তৈরি করা যাবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="solution-card">
+        <h4 class="question-title">7. 4.2 ডেসিমি. দৈর্ঘ্যের ধারবিশিষ্ট একটি নিরেট কাঠের ঘনক থেকে সবচেয়ে কম কাঠ নষ্ট করে যে নিরেট লম্ব বৃত্তাকার শঙ্কু পাওয়া যাবে তার আয়তন নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ঘনকের ধার (edge) = 4.2 ডেসিমি.</p>
+            <p>ঘনক থেকে সবচেয়ে বড়ো যে শঙ্কু কেটে নেওয়া যাবে, তার ভূমির ব্যাস হবে ঘনকের ধারের সমান এবং উচ্চতাও হবে ঘনকের ধারের সমান।</p>
+            <p>অতএব, শঙ্কুর ভূমির ব্যাস = 4.2 ডেসিমি. $\implies$ ব্যাসার্ধ ($r$) = 2.1 ডেসিমি.</p>
+            <p>শঙ্কুর উচ্চতা ($h$) = 4.2 ডেসিমি.</p>
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3} \times \frac{22}{7} \times 2.1 \times 2.1 \times 4.2 \\
+= \frac{22}{21} \times 2.1 \times 2.1 \times 4.2 \\
+= 22 \times 0.1 \times 2.1 \times 4.2 \\
+= 2.2 \times 2.1 \times 4.2 \\
+= 4.62 \times 4.2 \\
+= 19.404 \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নির্ণেয় শঙ্কুটির আয়তন 19.404 ঘন ডেসিমি. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="solution-card">
+        <h4 class="question-title">8. একটি নিরেট গোলক ও একটি নিরেট লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য সমান ও তাদের ঘনফলও সমান হলে, চোঙটির ব্যাসার্ধের দৈর্ঘ্য ও উচ্চতার অনুপাত হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, গোলক এবং চোঙ উভয়েরই ব্যাসার্ধ = $r$। চোঙের উচ্চতা = $h$।</p>
+            <p>গোলকের ঘনফল (আয়তন) = $\displaystyle\frac{4}{3}\pi r^3$</p>
+            <p>চোঙের ঘনফল (আয়তন) = $\pi r^2 h$</p>
+            <p>শর্তানুসারে, উভয়ের ঘনফল সমান:</p>
+            \[
+\begin{array}{l}
+\frac{4}{3}\pi r^3 = \pi r^2 h \\
+\frac{4}{3} r = h \quad [\text{উভয়পক্ষ থেকে } \pi r^2 \text{ বাদ দিয়ে}] \\
+4r = 3h \\
+\frac{r}{h} = \frac{3}{4}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: চোঙটির ব্যাসার্ধ ও উচ্চতার অনুপাত 3:4 হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="solution-card">
+        <h4 class="question-title">9. 6.6 ডেসিমি. দীর্ঘ, 4.2 ডেসিমি. প্রশস্ত এবং 1.4 ডেসিমি. পুরু একটি তামার নিরেট আয়তঘনাকার টুকরো গলিয়ে 2.1 ডেসিমি. দৈর্ঘ্যের ব্যাসের কয়টি নিরেট গোলক ঢালাই করা যাবে এবং প্রতিটি গোলকে কত ঘন ডেসিমি. ধাতু থাকবে হিসাব করে দেখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p><strong>১ম অংশ (প্রতিটি গোলকে ধাতুর পরিমাণ):</strong></p>
+            <p>গোলকের ব্যাস = 2.1 ডেসিমি. $\implies$ ব্যাসার্ধ ($r$) = 1.05 ডেসিমি.</p>
+            <p>1 টি গোলকের আয়তন (ধাতুর পরিমাণ) = $\displaystyle\frac{4}{3}\pi r^3$</p>
+            \[
+\begin{array}{l}
+= \frac{4}{3} \times \frac{22}{7} \times (1.05)^3 \\
+= \frac{88}{21} \times 1.157625 \\
+= 4.851 \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+
+            <p><strong>২য় অংশ (গোলকের সংখ্যা):</strong></p>
+            <p>আয়তঘনাকার টুকরোর আয়তন = $6.6 \times 4.2 \times 1.4$ ঘন ডেসিমি.</p>
+            <p>গোলকের সংখ্যা = $\displaystyle\frac{\text{আয়তঘনের আয়তন}}{\text{1টি গোলকের আয়তন}}$</p>
+            <p>হিসাবের সুবিধার্থে দশমিক তুলি:</p>
+            \[
+\begin{array}{l}
+= \frac{6.6 \times 4.2 \times 1.4}{\frac{4}{3} \times \frac{22}{7} \times 1.05 \times 1.05 \times 1.05} \\
+= \frac{\frac{66}{10} \times \frac{42}{10} \times \frac{14}{10}}{\frac{88}{21} \times \frac{105}{100} \times \frac{105}{100} \times \frac{105}{100}} \\
+= \frac{66 \times 42 \times 14 \times 21 \times 1000000}{1000 \times 88 \times 105 \times 105 \times 105}
+\end{array}
+\]
+            <p>সহজভাবে, $6.6 \times 4.2 \times 1.4 = 38.808$</p>
+            <p>সংখ্যা = $\displaystyle\frac{38.808}{4.851} = 8$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: 8 টি গোলক ঢালাই করা যাবে এবং প্রতিটি গোলকে 4.851 ঘন ডেসিমি. ধাতু থাকবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="solution-card">
+        <h4 class="question-title">10. 4.2 সেমি. দৈর্ঘ্যের ব্যাসার্ধের একটি সোনার নিরেট গোলক পিটিয়ে 2.8 সেমি. দৈর্ঘ্যের ব্যাসের একটি নিরেট লম্ব বৃত্তাকার দণ্ড তৈরি করা হলে, দণ্ডটির দৈর্ঘ্য নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>সোনার গোলকের ব্যাসার্ধ ($R$) = 4.2 সেমি।</p>
+            <p>গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi R^3 = \frac{4}{3}\pi (4.2)^3$</p>
+            <br>
+            <p>লম্ব বৃত্তাকার দণ্ডটি (চোঙ) তৈরি হলো। এর ব্যাস = 2.8 সেমি $\implies$ ব্যাসার্ধ ($r$) = 1.4 সেমি।</p>
+            <p>ধরি, দণ্ডটির দৈর্ঘ্য বা উচ্চতা = $h$ সেমি।</p>
+            <p>দণ্ডের আয়তন = $\pi r^2 h = \pi (1.4)^2 h$</p>
+            <p>যেহেতু গোলকটিকে পিটিয়ে দণ্ড তৈরি করা হয়েছে, তাই আয়তন সমান হবে:</p>
+            \[
+\begin{array}{l}
+\pi (1.4)^2 h = \frac{4}{3}\pi (4.2)^3 \\
+1.96 \times h = \frac{4}{3} \times 74.088 \\
+1.96 \times h = 98.784 \\
+h = \frac{98.784}{1.96} \\
+h = 50.4
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দণ্ডটির দৈর্ঘ্য 50.4 সেমি. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="solution-card">
+        <h4 class="question-title">11. 6 ডেসিমি. দৈর্ঘ্যের ব্যাসের একটি নিরেট রৌপ্য গোলক গলিয়ে 1 ডেসিমি. লম্বা একটি নিরেট লম্ব বৃত্তাকার দণ্ড তৈরি করা হলে, দণ্ডটির ব্যাসের দৈর্ঘ্য হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>রৌপ্য গোলকের ব্যাস = 6 ডেসিমি $\implies$ ব্যাসার্ধ ($R$) = 3 ডেসিমি।</p>
+            <p>গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi R^3 = \frac{4}{3}\pi (3)^3 = \frac{4}{3}\pi \times 27 = 36\pi$ ঘন ডেসিমি।</p>
+            <br>
+            <p>দণ্ডটির (চোঙ) দৈর্ঘ্য ($h$) = 1 ডেসিমি। ধরি, ব্যাসার্ধ = $r$ ডেসিমি।</p>
+            <p>দণ্ডটির আয়তন = $\pi r^2 h = \pi r^2 \times 1 = \pi r^2$ ঘন ডেসিমি।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+\pi r^2 = 36\pi \\
+r^2 = 36 \\
+r = \sqrt{36} = 6 \text{ ডেসিমি.}
+\end{array}
+\]
+            <p>ব্যাসার্ধ = 6 ডেসিমি. হলে, দণ্ডটির ব্যাস = $2 \times 6 = 12$ ডেসিমি.</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দণ্ডটির ব্যাসের দৈর্ঘ্য 12 ডেসিমি. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="solution-card">
+        <h4 class="question-title">12. একটি নিরেট লম্ব বৃত্তাকার দণ্ডের প্রস্থচ্ছেদের ব্যাসার্ধের দৈর্ঘ্য 3.2 ডেসিমি.। সেই দণ্ডটি গলিয়ে 21 টি নিরেট গোলক তৈরি করা হলো। গোলকগুলির ব্যাসার্ধের দৈর্ঘ্য যদি 8 সেমি. হয়, তবে দণ্ডটির দৈর্ঘ্য কত ছিল তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু গোলকের ব্যাসার্ধ সেমিতে আছে, তাই সব একক সেমিতে নিয়ে যাই।</p>
+            <p>দণ্ডের ব্যাসার্ধ ($R$) = 3.2 ডেসিমি. = 32 সেমি.</p>
+            <p>ধরি, দণ্ডটির দৈর্ঘ্য = $H$ সেমি.</p>
+            <p>দণ্ডটির আয়তন = $\pi R^2 H = \pi \times (32)^2 \times H = 1024\pi H$ ঘন সেমি.</p>
+            <br>
+            <p>1 টি গোলকের ব্যাসার্ধ ($r$) = 8 সেমি.</p>
+            <p>1 টি গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi r^3 = \frac{4}{3}\pi \times (8)^3 = \frac{4}{3}\pi \times 512$</p>
+            <p>21 টি গোলকের মোট আয়তন = $21 \times \displaystyle\frac{4}{3}\pi \times 512 = 7 \times 4\pi \times 512 = 28\pi \times 512 = 14336\pi$ ঘন সেমি.</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+1024\pi H = 14336\pi \\
+1024 H = 14336 \\
+H = \frac{14336}{1024} \\
+H = 14 \text{ সেমি.}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দণ্ডটির দৈর্ঘ্য 14 সেমি. ছিল।</div>
+        </div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="solution-card">
+        <h4 class="question-title">13. 21 ডেসিমি. দীর্ঘ, 11 ডেসিমি. প্রশস্ত এবং 6 ডেসিমি. গভীর একটি চৌবাচ্চা অর্ধেক জলপূর্ণ আছে। এখন সেই চৌবাচ্চায় যদি 21 সেমি. দৈর্ঘ্যের ব্যাসের 100 টি লোহার গোলক সম্পূর্ণ ডুবিয়ে দেওয়া হয়, তবে জলতল কত ডেসিমি. উঠবে তা হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু উত্তর ডেসিমিটারে চেয়েছে, তাই গোলকের ব্যাস ডেসিমিটারে নিই।</p>
+            <p>গোলকের ব্যাস = 21 সেমি. = 2.1 ডেসিমি. $\implies$ ব্যাসার্ধ ($r$) = 1.05 ডেসিমি.</p>
+            <p>100 টি গোলকের মোট আয়তন = $100 \times \displaystyle\frac{4}{3}\pi r^3$</p>
+            \[
+\begin{array}{l}
+= 100 \times \frac{4}{3} \times \frac{22}{7} \times (1.05)^3 \\
+= \frac{400}{3} \times \frac{22}{7} \times 1.157625 \\
+= \frac{8800}{21} \times 1.157625 \\
+= 485.1 \text{ ঘন ডেসিমি.}
+\end{array}
+\]
+            <br>
+            <p>ধরি, জলতল $h$ ডেসিমি. উঠবে।</p>
+            <p>বৃদ্ধি পাওয়া জলের আয়তন (আয়তঘনাকার) = দৈর্ঘ্য $\times$ প্রস্থ $\times$ উচ্চতা বৃদ্ধি</p>
+            <p>$= 21 \times 11 \times h = 231h$ ঘন ডেসিমি.</p>
+            <p>আর্কিমিডিসের সূত্র অনুযায়ী, বৃদ্ধি পাওয়া জলের আয়তন = অপসারিত 100টি গোলকের আয়তন</p>
+            \[
+\begin{array}{l}
+231h = 485.1 \\
+h = \frac{485.1}{231} \\
+h = 2.1
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: জলতল 2.1 ডেসিমি. উঠবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="solution-card">
+        <h4 class="question-title">14. সমান ভূমিতলের ব্যাস এবং সমান উচ্চতাবিশিষ্ট একটি নিরেট শঙ্কু, একটি নিরেট অর্ধগোলক এবং একটি নিরেট চোঙের আয়তনের অনুপাত নির্ণয় করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দেওয়া আছে, তিনটি ঘনবস্তুর ভূমিতলের ব্যাস সমান, অর্থাৎ ব্যাসার্ধ সমান। ধরি, ব্যাসার্ধ = $r$।</p>
+            <p>উচ্চতাও সমান। নিরেট অর্ধগোলকের উচ্চতা তার ব্যাসার্ধের সমান হয়, অর্থাৎ $h = r$।</p>
+            <p>সুতরাং, তিনটি ঘনবস্তুর ক্ষেত্রেই উচ্চতা $h = r$ হবে।</p>
+            <p><strong>শঙ্কুর আয়তন</strong> = $\displaystyle\frac{1}{3}\pi r^2 h = \frac{1}{3}\pi r^2 (r) = \frac{1}{3}\pi r^3$</p>
+            <p><strong>অর্ধগোলকের আয়তন</strong> = $\displaystyle\frac{2}{3}\pi r^3$</p>
+            <p><strong>চোঙের আয়তন</strong> = $\pi r^2 h = \pi r^2 (r) = \pi r^3$</p>
+            <p>আয়তনের অনুপাত (শঙ্কু : অর্ধগোলক : চোঙ) :</p>
+            \[
+\begin{array}{l}
+= \frac{1}{3}\pi r^3 : \frac{2}{3}\pi r^3 : \pi r^3 \\
+= \frac{1}{3} : \frac{2}{3} : 1 \quad [\text{উভয়পক্ষকে } \pi r^3 \text{ দিয়ে ভাগ করে}] \\
+= 1 : 2 : 3 \quad [\text{3 দিয়ে গুণ করে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আয়তনের অনুপাত 1:2:3 হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="solution-card">
+        <h4 class="question-title">15. 1 সেমি. পুরু সিসার পাতের তৈরি একটি ফাঁপা গোলকের বাইরের ব্যাসার্ধের দৈর্ঘ্য 6 সেমি.। গোলকটি গলিয়ে 2 সেমি. দৈর্ঘ্যের ব্যাসার্ধের একটি নিরেট লম্ব বৃত্তাকার দণ্ড তৈরি করা হলে, দণ্ডটির দৈর্ঘ্য কত হবে হিসাব করে লিখি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ফাঁপা গোলকের বাইরের ব্যাসার্ধ ($R$) = 6 সেমি.</p>
+            <p>যেহেতু গোলকটি 1 সেমি. পুরু, তাই এর ভেতরের ব্যাসার্ধ ($r$) = $6 - 1 = 5$ সেমি.</p>
+            <p>ফাঁপা গোলকটির ধাতুর আয়তন = $\displaystyle\frac{4}{3}\pi (R^3 - r^3)$</p>
+            \[
+\begin{array}{l}
+= \frac{4}{3}\pi (6^3 - 5^3) \\
+= \frac{4}{3}\pi (216 - 125) \\
+= \frac{4}{3}\pi \times 91 \\
+= \frac{364\pi}{3} \text{ ঘন সেমি.}
+\end{array}
+\]
+            <p>দণ্ডটির (চোঙ) ব্যাসার্ধ ($r_1$) = 2 সেমি.। ধরি, দৈর্ঘ্য = $h$ সেমি.</p>
+            <p>দণ্ডটির আয়তন = $\pi r_1^2 h = \pi \times 2^2 \times h = 4\pi h$ ঘন সেমি.</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+4\pi h = \frac{364\pi}{3} \\
+4h = \frac{364}{3} \\
+h = \frac{364}{12} \\
+h = \frac{91}{3} = 30\frac{1}{3}
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: দণ্ডটির দৈর্ঘ্য $30\frac{1}{3}$ সেমি. হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="solution-card">
+        <h4 class="question-title">16. 2 মিটার লম্বা একটি আয়তঘনাকার কাঠের লগের প্রস্থচ্ছেদ বর্গাকার এবং তার প্রতিটি বাহুর দৈর্ঘ্য 14 ডেসিমি.। সবচেয়ে কম কাঠ নষ্ট করে ওই লগটিকে যদি একটি লম্ব বৃত্তাকার গুঁড়িতে পরিণত করা যায়, তবে তাতে কত ঘন মিটার কাঠ থাকবে এবং কত ঘন মিটার কাঠ নষ্ট হবে হিসাব করি।</h4>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু আয়তন ঘন মিটারে চেয়েছে, সব একক মিটারে নিই।</p>
+            <p>কাঠের লগের দৈর্ঘ্য ($h$) = 2 মিটার।</p>
+            <p>বর্গাকার প্রস্থচ্ছেদের বাহু = 14 ডেসিমি. = 1.4 মিটার।</p>
+            <p>আয়তঘনাকার কাঠের মোট আয়তন = দৈর্ঘ্য $\times$ প্রস্থ $\times$ উচ্চতা = $1.4 \times 1.4 \times 2 = 3.92$ ঘন মিটার।</p>
+            <br>
+            <p>সবচেয়ে কম কাঠ নষ্ট করে লম্ব বৃত্তাকার গুঁড়ি (Cylinder) বানালে, চোঙটির ভূমির ব্যাস হবে বর্গক্ষেত্রের বাহুর সমান।</p>
+            <p>অর্থাৎ, চোঙটির ব্যাস = 1.4 মিটার $\implies$ ব্যাসার্ধ ($r$) = 0.7 মিটার।</p>
+            <p>চোঙটির দৈর্ঘ্য ($h$) = 2 মিটার।</p>
+            <p>চোঙটির আয়তন (অর্থাৎ প্রাপ্ত কাঠের আয়তন) = $\pi r^2 h$</p>
+            \[
+\begin{array}{l}
+= \frac{22}{7} \times 0.7 \times 0.7 \times 2 \\
+= 22 \times 0.1 \times 0.7 \times 2 \\
+= 2.2 \times 1.4 \\
+= 3.08 \text{ ঘন মিটার.}
+\end{array}
+\]
+            <p>নষ্ট হওয়া কাঠের পরিমাণ = (মোট আয়তন) - (চোঙের আয়তন)</p>
+            <p>$= 3.92 - 3.08 = 0.84$ ঘন মিটার।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গুঁড়িতে 3.08 ঘন মিটার কাঠ থাকবে এবং 0.84 ঘন মিটার কাঠ নষ্ট হবে।</div>
+        </div>
+    </div>
+
+    <!-- Question 17 (VSA) -->
+    <div class="solution-card">
+        <h4 class="question-title">17. অতিসংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (V.S.A.)</h4>
+        
+        <h5 class="sub-question text-primary">(A) বহুবিকল্পীয় প্রশ্ন (M.C.Q.)</h5>
+
+        <span class="sub-question">(i) r একক দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি নিরেট গোলককে গলিয়ে r একক উচ্চতার একটি নিরেট লম্ব বৃত্তাকার শঙ্কু তৈরি করা হলো। শঙ্কুটির ভূমির ব্যাসার্ধের দৈর্ঘ্য</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi r^3$</p>
+            <p>ধরি, শঙ্কুর ব্যাসার্ধ R। শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi R^2 (r)$</p>
+            <p>শর্তানুসারে: $\displaystyle\frac{1}{3}\pi R^2 r = \frac{4}{3}\pi r^3 \implies R^2 = 4r^2 \implies R = 2r$</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) 2r একক</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি নিরেট লম্ব বৃত্তাকার শঙ্কুকে গলিয়ে একই দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি নিরেট লম্ব বৃত্তাকার চোঙ তৈরি করা হলো যার উচ্চতা 5 সেমি.। শঙ্কুটির উচ্চতা</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ধরি, শঙ্কুর উচ্চতা $H$ এবং ব্যাসার্ধ $r$। চোঙের ব্যাসার্ধ $r$ এবং উচ্চতা 5।</p>
+            <p>শঙ্কুর আয়তন = চোঙের আয়তন</p>
+            <p>$\displaystyle\frac{1}{3}\pi r^2 H = \pi r^2 \times 5 \implies \frac{H}{3} = 5 \implies H = 15$ সেমি।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 15 সেমি.</div>
+        </div>
+
+        <span class="sub-question">(iii) একটি লম্ব বৃত্তাকার চোঙের ব্যাসার্ধের দৈর্ঘ্য r একক এবং উচ্চতা 2r একক। চোঙটির মধ্যে সর্ববৃহৎ যে গোলকটি রাখা যাবে তার ব্যাসের দৈর্ঘ্য</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>চোঙের ব্যাস = $2r$ এবং উচ্চতা = $2r$। এর ভিতরে যে গোলকটি সবচেয়ে বড়ো আঁটা যাবে, তার ব্যাস হবে চোঙের ব্যাস বা উচ্চতার সমান, অর্থাৎ $2r$।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (b) 2r একক</div>
+        </div>
+
+        <span class="sub-question">(iv) r একক দৈর্ঘ্যের ব্যাসার্ধবিশিষ্ট একটি নিরেট অর্ধগোলক থেকে সর্ববৃহৎ যে নিরেট শঙ্কু কেটে নেওয়া যাবে তার আয়তন</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>অর্ধগোলক থেকে সর্ববৃহৎ শঙ্কু কাটলে, শঙ্কুর ব্যাসার্ধ হবে $r$ এবং উচ্চতাও হবে অর্ধগোলকের ব্যাসার্ধের সমান অর্থাৎ $r$।</p>
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h = \frac{1}{3}\pi r^2 (r) = \frac{\pi}{3} r^3$ বা $\displaystyle\frac{\pi r^3}{3}$ ঘন একক।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (d) $\displaystyle\frac{\pi r^3}{3}$ ঘন একক</div>
+        </div>
+
+        <span class="sub-question">(v) x একক দৈর্ঘ্যের ধারবিশিষ্ট একটি নিরেট ঘনক থেকে সর্ববৃহৎ একটি নিরেট গোলক কেটে নেওয়া হলে, গোলকের ব্যাসের দৈর্ঘ্য</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>ঘনকের ভেতর সর্ববৃহৎ গোলক রাখলে, গোলকের ব্যাস ঘনকের ধারের (edge) সমান হয়। অর্থাৎ ব্যাস = x একক।</p>
+            <div class="final-answer"><i class="fas fa-arrow-right me-1"></i> উত্তর: (a) x একক</div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(B) নীচের বিবৃতিগুলি সত্য না মিথ্যা লিখি:</h5>
+        
+        <span class="sub-question">(i) দুটি একই ধরনের নিরেট অর্ধগোলক যাদের ভূমিতলের প্রত্যেকের ব্যাসার্ধের দৈর্ঘ্য r একক এবং তা ভূমি বরাবর জোড়া হলে, মিলিত ঘনবস্তুর সমগ্রতলের ক্ষেত্রফল হবে $6\pi r^2$ বর্গ একক।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> দুটি নিরেট অর্ধগোলক ভূমি বরাবর জুড়লে একটি সম্পূর্ণ নিরেট গোলক তৈরি হবে। যার সমগ্রতলের ক্ষেত্রফল হবে $4\pi r^2$ বর্গ একক, $6\pi r^2$ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <span class="sub-question">(ii) একটি নিরেট লম্ব বৃত্তাকার শঙ্কুর ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য r একক এবং উচ্চতা h একক এবং তির্যক উচ্চতা l একক। শঙ্কুটির ভূমিতলকে একটি নিরেট লম্ব বৃত্তাকার চোঙের ভূমিতল বরাবর জুড়ে দেওয়া হলো। যদি চোঙের ও শঙ্কুর ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য এবং উচ্চতা একই হয় তবে মিলিত ঘনবস্তুর সমগ্রতলের ক্ষেত্রফল $(\pi rl + 2\pi rh + 2\pi r^2)$ বর্গ একক।</span>
+        <div class="solution-box">
+            <p><strong>যুক্তি:</strong> মিলিত ঘনবস্তুটির সমগ্রতলের ক্ষেত্রফল হবে: শঙ্কুর বক্রতল ($\pi rl$) + চোঙের বক্রতল ($2\pi rh$) + চোঙের নিচের ভূমিতল ($\pi r^2$)। চোঙের উপরের তলটি শঙ্কুর সাথে ঢাকা পড়ে যাবে। তাই ক্ষেত্রফল হবে $(\pi rl + 2\pi rh + \pi r^2)$ বর্গ একক, $2\pi r^2$ নয়।</p>
+            <div class="final-answer"><i class="fas fa-times me-1 text-danger"></i> <strong>মিথ্যা (False)</strong></div>
+        </div>
+
+        <h5 class="sub-question text-primary mt-4">(C) শূন্যস্থান পূরণ করি:</h5>
+
+        <span class="sub-question">(i) একটি নিরেট লম্ব বৃত্তাকার চোঙ ও দুটি অর্ধগোলকের ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য সমান। দুটি অর্ধগোলককে চোঙটির দুটি সমতলে আটকে দেওয়া হলে নতুন ঘনবস্তুর সমগ্রতলের ক্ষেত্রফল = একটি অর্ধগোলকের বক্রতলের ক্ষেত্রফল + <span class="blank-fill">_________</span> বক্রতলের ক্ষেত্রফল + অপর অর্ধগোলকটির বক্রতলের ক্ষেত্রফল।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> চোঙটির</p>
+        </div>
+
+        <span class="sub-question">(ii) একমুখ কাটা একটি পেনসিলের আকার শঙ্কু ও <span class="blank-fill">_________</span> সমন্বয়।</span>
+        <div class="solution-box">
+            <p>একমুখ কাটা পেন্সিলের ছুঁচলো দিকটা শঙ্কু এবং বাকি লম্বা দিকটা লম্ব বৃত্তাকার চোঙ।</p>
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> চোঙের (বা লম্ব বৃত্তাকার চোঙের)</p>
+        </div>
+
+        <span class="sub-question">(iii) একটি নিরেট গোলককে গলিয়ে একটি নিরেট লম্ব বৃত্তাকার চোঙ তৈরি করা হলো। গোলক ও চোঙের আয়তন <span class="blank-fill">_________</span> ।</span>
+        <div class="solution-box">
+            <p><i class="fas fa-pen-nib me-2 text-accent"></i><strong>উত্তর:</strong> সমান (equal)</p>
+        </div>
+    </div>
+
+    <!-- Question 18 (S.A.) -->
+    <div class="solution-card">
+        <h4 class="question-title">18. সংক্ষিপ্ত উত্তরধর্মী প্রশ্ন (S.A.)</h4>
+
+        <span class="sub-question">(i) একটি নিরেট লম্ব বৃত্তাকার শঙ্কুকে গলিয়ে একটি নিরেট লম্ব বৃত্তাকার চোঙ তৈরি করা হলো। উভয়ের ব্যাসার্ধের দৈর্ঘ্য সমান। যদি শঙ্কুর উচ্চতা 15 সেমি. হয়, তাহলে নিরেট চোঙের উচ্চতা কত হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উভয়ের ব্যাসার্ধ = $r$। শঙ্কুর উচ্চতা ($h_1$) = 15 সেমি। ধরি, চোঙের উচ্চতা = $h_2$।</p>
+            <p>শর্তানুসারে, চোঙের আয়তন = শঙ্কুর আয়তন</p>
+            \[
+\begin{array}{l}
+\pi r^2 h_2 = \frac{1}{3}\pi r^2 h_1 \\
+h_2 = \frac{1}{3} \times 15 \\
+h_2 = 5
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: নিরেট চোঙের উচ্চতা 5 সেমি।</div>
+        </div>
+
+        <span class="sub-question">(ii) একটি নিরেট লম্ব বৃত্তাকার শঙ্কু এবং একটি নিরেট গোলকের ব্যাসার্ধের দৈর্ঘ্য সমান এবং আয়তন সমান। গোলকের ব্যাসের দৈর্ঘ্য এবং শঙ্কুর উচ্চতা অনুপাত কত তা হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>উভয়ের ব্যাসার্ধ = $r$। শঙ্কুর উচ্চতা = $h$।</p>
+            <p>শর্তানুসারে, গোলকের আয়তন = শঙ্কুর আয়তন</p>
+            \[
+\begin{array}{l}
+\frac{4}{3}\pi r^3 = \frac{1}{3}\pi r^2 h \\
+4r = h
+\end{array}
+\]
+            <p>আমাদের গোলকের ব্যাস ($2r$) এবং শঙ্কুর উচ্চতা ($h$) এর অনুপাত বের করতে হবে।</p>
+            <p>$\text{ব্যাস} : \text{উচ্চতা} = 2r : h = 2r : 4r = 2 : 4 = 1 : 2$</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: গোলকের ব্যাস ও শঙ্কুর উচ্চতার অনুপাত 1:2।</div>
+        </div>
+
+        <span class="sub-question">(iii) সমান দৈর্ঘ্যের ব্যাস এবং সমান উচ্চতাবিশিষ্ট নিরেট লম্ব বৃত্তাকার চোঙ, নিরেট লম্ব বৃত্তাকার শঙ্কু এবং নিরেট গোলকের আয়তনের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>যেহেতু নিরেট গোলকের উচ্চতা তার ব্যাসের সমান ($2r$), তাই বলা যায় সবার উচ্চতা $h = 2r$।</p>
+            <p>ব্যাসার্ধ সবার $r$।</p>
+            <p>চোঙের আয়তন = $\pi r^2 h = \pi r^2 (2r) = 2\pi r^3$</p>
+            <p>শঙ্কুর আয়তন = $\displaystyle\frac{1}{3}\pi r^2 h = \frac{1}{3}\pi r^2 (2r) = \frac{2}{3}\pi r^3$</p>
+            <p>গোলকের আয়তন = $\displaystyle\frac{4}{3}\pi r^3$</p>
+            <p>আয়তনের অনুপাত (চোঙ : শঙ্কু : গোলক) :</p>
+            \[
+\begin{array}{l}
+= 2\pi r^3 : \frac{2}{3}\pi r^3 : \frac{4}{3}\pi r^3 \\
+= 2 : \frac{2}{3} : \frac{4}{3} \quad [\text{উভয়পক্ষকে } \pi r^3 \text{ দিয়ে ভাগ করে}] \\
+= 6 : 2 : 4 \quad [\text{3 দিয়ে গুণ করে}] \\
+= 3 : 1 : 2 \quad [\text{2 দিয়ে ভাগ করে}]
+\end{array}
+\]
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: আয়তনের অনুপাত 3:1:2 হবে।</div>
+        </div>
+
+        <span class="sub-question">(iv) একটি ঘনবস্তুর নীচের অংশ অর্ধগোলক আকারের এবং উপরের অংশ লম্ব বৃত্তাকার শঙ্কু আকারের। যদি দুটি অংশের তলের ক্ষেত্রফল সমান হয়, তাহলে ব্যাসার্ধের দৈর্ঘ্য এবং শঙ্কুর উচ্চতার অনুপাত হিসাব করে লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>দুটি অংশের তলের ক্ষেত্রফল সমান অর্থাৎ অর্ধগোলকের বক্রতলের ক্ষেত্রফল = শঙ্কুর বক্রতলের (পার্শ্বতল) ক্ষেত্রফল।</p>
+            <p>ব্যাসার্ধ = $r$, শঙ্কুর উচ্চতা = $h$, তির্যক উচ্চতা = $l$।</p>
+            <p>শর্তানুসারে:</p>
+            \[
+\begin{array}{l}
+2\pi r^2 = \pi r l \\
+2r = l
+\end{array}
+\]
+            <p>আমরা জানি, $l^2 = h^2 + r^2$।</p>
+            \[
+\begin{array}{l}
+(2r)^2 = h^2 + r^2 \\
+4r^2 = h^2 + r^2 \\
+h^2 = 3r^2 \\
+h = r\sqrt{3}
+\end{array}
+\]
+            <p>ব্যাসার্ধ ও উচ্চতার অনুপাত = $r : h = r : r\sqrt{3} = 1 : \sqrt{3}$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: ব্যাসার্ধ ও উচ্চতার অনুপাত $1 : \sqrt{3}$।</div>
+        </div>
+
+        <span class="sub-question">(v) একটি নিরেট লম্ব বৃত্তাকার শঙ্কুর, ভূমিতলের ব্যাসার্ধের দৈর্ঘ্য একটি নিরেট গোলকের ব্যাসার্ধের দৈর্ঘ্যের সমান। গোলকের আয়তন শঙ্কুর আয়তনের দ্বিগুণ হলে, শঙ্কুর উচ্চতা এবং ভূমিতলের ব্যাসার্ধের দৈর্ঘ্যের অনুপাত কত তা লিখি।</span>
+        <div class="solution-box">
+            <span class="sol-badge">সমাধান</span>
+            <p>শঙ্কু এবং গোলকের উভয়ের ব্যাসার্ধ = $r$। ধরি, শঙ্কুর উচ্চতা = $h$।</p>
+            <p>শর্তানুসারে, গোলকের আয়তন = $2 \times$ শঙ্কুর আয়তন</p>
+            \[
+\begin{array}{l}
+\frac{4}{3}\pi r^3 = 2 \times \left( \frac{1}{3}\pi r^2 h \right) \\
+4r = 2h \quad [\text{উভয়পক্ষ থেকে } \frac{1}{3}\pi r^2 \text{ বাদ দিয়ে}] \\
+2r = h \\
+\frac{h}{r} = \frac{2}{1}
+\end{array}
+\]
+            <p>শঙ্কুর উচ্চতা ও ব্যাসার্ধের অনুপাত = $h : r = 2 : 1$।</p>
+            <div class="final-answer"><i class="fas fa-check-circle me-1"></i> উত্তর: শঙ্কুর উচ্চতা ও ব্যাসার্ধের অনুপাত 2:1।</div>
+        </div>
+    </div>
+
+</div>
+<script>
+(function () {
+  function renderMathJax() {
+    if (!window.MathJax || !MathJax.Hub) return;
+    var target = document.querySelector(".solution-container") || document.body;
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, target]);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderMathJax, { once: true });
+  else renderMathJax();
+  window.abvrpMc_rerenderMathJax = renderMathJax;
+})();
+</script>
+</body>
+</html>
